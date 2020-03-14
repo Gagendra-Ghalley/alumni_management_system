@@ -1,0 +1,313 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bpas",
+				"bpas_user_profiles"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"ex",
+				"explode"
+			],
+			[
+				"dat",
+				"data1"
+			],
+			[
+				"depC",
+				"dep_Code"
+			],
+			[
+				"dep",
+				"dep_code"
+			],
+			[
+				"si",
+				"sizeof"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"base",
+				"base_url"
+			],
+			[
+				"btn",
+				"btn-danger"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"col",
+				"col-xs-12"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"first",
+				"first_name"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/controllers/UsermanagementController.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/userManagement/edit.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/models/Staff_model.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/track1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/base/sidebar.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/userManagement/acknowledgemntwithoutheaderfooter.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/initiatemessage.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/controllers/UserManagement",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/add_Dak.php",
+		"/Users/sonam/Desktop/Dispatch&las/las03-12-3-19/application/views/base/sidebar.php",
+		"/Users/sonam/Desktop/Dispatch&las/las03-12-3-19/application/controllers/UserManagement.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/base/sidebar.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/controllers/Settings.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/add_dispatch.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/controllers/Messages.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/userManagement/add_dispatch.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/userManagement/dak.php",
+		"/Users/sonam/Desktop/Dispatch&las/las01-9-2-19/application/controllers/UserManagement.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/views/base/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/config/database.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las03/application/config/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/add_dispatch.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/edit.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/userManagement/edit.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/controllers/UserManagement.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/base/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/sequence.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/controllers/Settings.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/division/dashboard.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/division/navheader.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/userManagement/acknowledgemntwithoutheaderfooter.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/addfile.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/controllers/ATD.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/models/Staff_model.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/template.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/config/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las/application/config/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/config/database.php",
+		"/Users/sonam/Documents/htdocs/moea/application/controllers/Auth.php",
+		"/Users/sonam/Documents/htdocs/moea/application/controllers/admin/Database.php",
+		"/Users/sonam/Documents/htdocs/moea/application/controllers/admin/Dashboard.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las/application/views/division/requestleave.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las01/application/views/template/includeheader.php",
+		"/Users/sonam/Desktop/las/system/core/CodeIgniter.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/moea/application/controllers/admin/Database.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/moea/application/controllers/Auth_original.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/moea/system/core/CodeIgniter.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/moea/application/core/MY_Controller.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/moea/application/config/database.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las1/application/views/login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/login/system/core/CodeIgniter.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/login/system/core/Config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/ods/forwardDispatch.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las/system/core/CodeIgniter.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/login/application/core/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/login/application/models/Crud_model.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/login/application/controllers/Crud.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/login/application/controllers/Login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/ods/index.php",
+		"/Volumes/ICT_SON/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/home/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/includes/userClass.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/includes/process.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/includes/generalClass.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/auth/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/ods/ods_dashboard.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/inc/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/ods/changeStatusDispatch.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/includes/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/user/addUser.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/inc/sidebar.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/system/editRole.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/ods/dLetterAction.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las/application/controllers/Settings.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/las/application/models/Messages_model.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/inc/inc_footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/inc/breadcrumb.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/inc/app_setting.php",
+		"/Users/sonam/Downloads/moea-3.sql",
+		"/Users/sonam/Downloads/moea (1).sql",
+		"/Users/sonam/Downloads/moea.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/code/application/config/autoload.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/code/application/models/Post.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/code/application/controllers/Post.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/includes/menuModel.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/ods/dispatchLetter.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/ods/changeStatus.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/odss/ods/selectOfficial.php"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "",
+	"project": "UsermanagementController.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
