@@ -50,6 +50,7 @@
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Detail</a>
                                 </li>
                                 <li class="nav-item" class="bg-primary" >
+                                    
                                     <a href="<?php echo base_url()?>index.php/Settings/Editprofile/">Edit Profile</a>
                         
                              

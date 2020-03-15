@@ -1,22 +1,6 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CST Alumni Management System</title>
-<link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-<link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-<link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-<link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> -->
-<link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-<link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
-<link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
-<link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
-<link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
-<link href="<?php echo base_url();?>assets/css1/cubeportfolio.min.css" rel="stylesheet">
-<link href="<?php echo base_url();?>assets/css1/slider.css" rel="stylesheet">
-<link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
-<link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
-<link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
+ <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/bootstrap.min1.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 <div id="page-wrapper">
