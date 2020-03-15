@@ -101,6 +101,112 @@ class Settings extends CI_Controller {
         // $this->db->update('w_request', $data);
         
 	 }
+
+
+	 public function event_validate(){
+
+$this->form_validation->set_rules('cid','CID','required|trim|callback_validate_credentials2');
+		
+		
+				
+		if($this->form_validation->run()){
+		
+			$cid=$this->input->post('cid');
+			
+				$data = array (
+				'cid' => $cid,
+				
+				
+				
+			);
+			
+			$this->session->set_userdata($data);
+			
+			$cid=$this->input->post('cid'); 
+	 	  		
+  		
+	 		
+	 			// $d2['s']=$this->sm->register($cid);
+	 			// $d=implode(" ", $d2);
+				
+		
+				$dat['event']='Y';
+			$this->db->where('relatedUserId', $cid);
+  			$this->db->update('bpas_logins',$dat);
+
+  			
+
+  			$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully Joined the event</span> <br /><br /><br />
+			 	<a href="'.base_url().'index.php/Settings/dashboard/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
+		              </button>
+		            </a>';
+		        
+			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
+		       
+					}
+
+		
+		else {
+			
+		 	
+  			$data1['message']='<br /><br /><br /><span class="alert alert-info">You cannot do it twice</span> <br /><br /><br />
+			 	<a href="'.base_url().'index.php/Settings/dashboard/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
+		              </button>
+		            </a>';
+		        
+			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
+		 }
+
+
+}
+
+public function validate_credentials2(){
+		
+		
+		$cid=$this->input->post('cid');
+		$result=$this->sm->can_log_in2($cid);
+		
+		
+		switch($result){
+			
+			case 1 : return true;
+					break;
+			// case 2 : $this->form_validation->set_message ('validate_credentials2','You need to login from your registered PC/Phone');
+			// 		return false;
+			// 		break;
+			// case 3 : $this->form_validation->set_message ('validate_credentials2','Both your mac addresses are null');
+			// $data = array (
+			// 	'device'=> 0,
+			// 	'logged_in' => 2,
+			// 	'macstatus'=>$mac
+							
+			// );
+			// $this->session->set_userdata($data);
+			// return false;
+			// 		break;
+			// case 4 : $this->form_validation->set_message ('validate_credentials2','One of your mac addresses is null');
+			// $data = array (
+			// 	'device'=>1,
+			// 	'logged_in' => 2,
+			// 	'macstatus' => $mac
+				
+				
+			// );
+			// $this->session->set_userdata($data);
+			// return false;
+			// 	break;
+				
+			case 5 : $this->form_validation->set_message ('validate_credentials2','You cannot do it twice');
+			return false;
+				break;
+		} 
+		
+		
+		
+	}
+	
 		
 	
 	public function agencyFromParent() {
@@ -427,6 +533,13 @@ function addDak($param="")
 		$query = "SELECT * FROM st_message WHERE RecieverId LIKE '%".$this->session->userdata('cid')."%' AND ReadStatus='N'";
 		$data['messages']=$this->db->query($query)->result_array();
 		$this->load->view('template',$data); 
+ 	}
+
+ 	public function dashboard(){
+ 		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('division/dashboard',$data);
+		$this->load->view('template/includefooter');
  	}
 /* Sonam Tshering*/
  	public function absent(){

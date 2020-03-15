@@ -124,6 +124,68 @@ class Staff_model extends CI_Model {
 			}
 			
 		}
+
+
+
+			public function can_log_in2($cid){
+		
+			
+		    // $default="0000";
+		    $this->db->where('relatedUserId',$this->input->post('cid'));
+		    $this->db->where('event','N');
+			$result=$this->db->get('bpas_logins');
+			// if($result->num_rows()!=1){
+
+			// 	echo "<script> alert('You have not registered')</script>";
+
+			// 	return 6;
+
+			// }
+			//$cid=$this->input->post('cid');
+			//$passwordmd=md5($this->input->post('password'));
+			//$query="SELECT * FROM `bpas_logins` WHERE `relatedUserId` = '".$cid."' AND `password`='".$passwordmd."'";
+			//$result=$this->db->query($query);
+			if($result->num_rows()==1){
+				// foreach($result->result() as $row){
+				// if($row->mac1==$mac || $row->mac2==$mac){
+				// 	//$this->sessionInitiate();
+					return 1;
+					
+					
+				}
+
+				
+				
+			// 	else if(($row->mac1!=$mac || $row->mac2!=$mac)&&($row->mac1!=$default && $row->mac2!=$default)){
+					
+			// 		return 2;
+					
+					
+			// 	}
+				
+			// 	else if($row->mac1==$default && $row->mac2==$default) {
+					
+			// 		return 3;
+					
+			// 	}
+				
+			// 	else if($row->mac1=$default || $row->mac2==$default) {
+					
+					
+			// 		return 4;
+			// 	}
+				
+			// }
+				
+			// }
+
+			else {
+				
+
+				return 5;
+			}
+			
+		}
 	
 	public function sessionInitiate() {
 		
