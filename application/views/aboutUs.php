@@ -71,16 +71,7 @@
 	<!-- Begin breadcrumbs-->
 	<div class="du-page-header du-breadcrumbs">		
 		<div class="container">
-			<div class="row">
-				<div class="col-md-7 col-sm-7 col-xs-12 text-left du-title">
-					<div class="du-breadcrumb-title"><h3>About Us</h3></div>				
-				</div>
-				<div class="col-md-5 col-sm-5 col-xs-12 text-right du-breadcrumb">
-					<div class="breadcrumbs">
-						About page
-					</div>
-				</div>				
-			</div>
+			
 		</div>		
 	</div>
 	<!-- End breadcrumbs-->
@@ -91,7 +82,7 @@
 		<div class="du-about">
 
 			<!-- Begin choose us -->
-			<section class="choose-us ptb-50">
+			<section class="du-teacher du-section-ash ptb-50 common">
 
 				<div class="container">
 					<div class="row">
