@@ -75,10 +75,10 @@
 		
 	}
 
-	public function faculty1(){
+	public function faculty(){
 		
 		
-			$this->load->view('faculty1');
+			$this->load->view('faculty');
 		}
 
 	public function aboutUs(){
