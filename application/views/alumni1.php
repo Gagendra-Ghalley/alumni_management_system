@@ -44,7 +44,7 @@
                             <div class="col-md-8" >
                                 <ul class="flexy-menu orange" >
                                     <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/alumni/"><i class="icon-heart"></i>Home</a></li>
-                                    <li><a href="about.html"><i class="icon-cogs"></i>About us</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/faculty1/"><i class="icon-th"></i>Faculty</a></li>

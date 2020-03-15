@@ -81,6 +81,12 @@
 			$this->load->view('faculty1');
 		}
 
+	public function aboutUs(){
+		
+		
+			$this->load->view('aboutUs');
+		}
+
 //  public function registration(){//cst_team
 
 	 	
