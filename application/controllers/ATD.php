@@ -39,7 +39,7 @@
 	public function login(){
 
 			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
-       	$this->load->view('alumni',$data);
+       	$this->load->view('alumni1',$data);
 		
 	}
 
@@ -165,7 +165,7 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
   			
 
   			$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully registered</span> <br /><br /><br />
-			 	<a href="'.base_url().'index.php/Settings/view_ods_dashboard/"> <button type="button" class="btn btn-warning">
+			 	<a href="'.base_url().'index.php/ATD/login/"> <button type="button" class="btn btn-warning">
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
