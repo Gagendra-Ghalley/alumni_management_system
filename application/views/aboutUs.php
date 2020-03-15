@@ -108,7 +108,7 @@
 						<div class="du-choose-us pt-20">
 							<div class="row">
 								<div class="col-md-6 wow fadeInLeft">
-									<img class="img-responsive" src="img/choose-us.jpg" alt="image">
+									<img class="img-responsive" src="<?php echo base_url();?>assets/img1/slider1.png" alt="image">
 								</div>
 								<div class="col-md-6 wow fadeInRight">
 									<p>
