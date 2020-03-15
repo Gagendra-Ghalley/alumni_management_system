@@ -258,7 +258,7 @@
 
     <div class="du-current-news center">
         <div class="container">
-            <h2 class="center">Upcoming Events:</h2>
+            <h2 class="center"></h2>
 
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
