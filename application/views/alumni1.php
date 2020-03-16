@@ -47,7 +47,7 @@
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty1/"><i class="icon-th"></i>Faculty</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
@@ -264,12 +264,40 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
                     <div  class="bg-primary" >
                         <div class="badge"  class="bg-primary">
-                            22 <span>jun</span>
-                            <strong>6 <img src="img/page1_icon4.png" alt=""></strong>
+                             <span> <button style="height:70px;width:75px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button></span>
+
+                            <br> 
+                            <table>
+      <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                        <p><font size="4" color="white"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members are interested");?></font></p>
                         </div>
                         <div class="du-date-short-des">
 
-                            <h2 class="wow fadeInUp">College foundation day:</h2>
+                            <h3><font color="white">College foundation day</font></h3>
 
                         </div>
                     </div>
