@@ -23,9 +23,9 @@
      <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
      <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
 
-<!-- 
+
     <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <header class="clearfix">
         <nav class="navbar-fixed-top" role="navigation">
@@ -43,7 +43,7 @@
                             </div>
                             <div class="col-md-8" >
                                 <ul class="flexy-menu orange" >
-                                    <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/alumni/"><i class="icon-heart"></i>Home</a></li>
+                                    <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
@@ -258,7 +258,7 @@
 
     <div class="du-current-news center">
         <div class="container">
-            <h2 class="center">Upcoming Events </h2>
+            <h2 class="center">Events </h2>
 
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">

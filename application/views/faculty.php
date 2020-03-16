@@ -52,10 +52,10 @@
           </div>
           <div class="col-md-8">
             <ul class="flexy-menu orange">
-              <li><a href="<?php echo base_url();?>index.php/ATD/Login/"> <i class="icon-heart"></i>Home</a></li>
-              <li><a href="about.html"><i class="icon-cogs"></i>About us</a></li>
-               <li class="active"><a href="<?php echo base_url();?>index.php/ATD/event/"><i class="icon-th"></i>Event</a></li>
-              <li><a href="faculty.html"><i class="icon-th"></i>Faculty</a></li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
+               <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Event</a></li>
+              <li  class="active"><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
               <li ><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
               <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
               
@@ -309,11 +309,19 @@
 
 
 <!--footer-->
-<footer>
-    <div class="container">
-        Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-    </div>
-</footer>
+  <div class="bg-primary" class="du-newsletter">
+            <div class="container">
+
+               
+
+                <div class="col-md-6">
+
+                    <p>@Alumni Management System</p>
+
+                </div>
+
+            </div>
+        </div>
 
 
 

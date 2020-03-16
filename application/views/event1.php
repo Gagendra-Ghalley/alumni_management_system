@@ -38,32 +38,34 @@
 <header class="clearfix">
 	 <nav class="navbar-fixed-top" role="navigation">
           
-<div class="bg-primary" class="box" > 
+	<div class="bg-primary" class="box" > 
     <div class="container">
     
-      <div class="header-element clearfix"> 
-        <div class="row">
-          <div class="col-md-4">
-          	<h1 class="navbar-brand navbar-brand_"><a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
-            
-            <!-- <h1 style="position:relative;right:5%;"><font size="4">CST Alumni Management System</font></h1> -->
-          </div>
-          <div class="col-md-8">
-            <ul class="flexy-menu orange">
-              <li><a href="<?php echo base_url();?>index.php/ATD/Login/"> <i class="icon-heart"></i>Home</a></li>
-              <li><a href="about.html"><i class="icon-cogs"></i>About us</a></li>
-               <li class="active"><a href="<?php echo base_url();?>index.php/ATD/event/"><i class="icon-th"></i>Event</a></li>
-              <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"></i>Faculty</a></li>
-              <li ><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
-              <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
-              
-               <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
-            </ul>
-          </div>
+      <div class="header-element clearfix">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1 class="navbar-brand navbar-brand_">
+          		<a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
+
+                            </div>
+                            <div class="col-md-8" >
+                                <ul class="flexy-menu orange" >
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
+                                    <li  class="active"><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
+                                    </li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+
+                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
         </div>
       </div>
-    </div>      
-  </div>
+ 
 </nav>
   
 </header>
@@ -214,42 +216,7 @@
 		</div><!-- /.du-event -->
 	</div><!-- /.du-subpage content -->
 	<!-- End Evnet -->
-	 <div class="bg-primary" class="du-newsletter">
-            <div class="container">
-
-                <div class="col-md-6">
-                    <h2 class="wow fadeInUp">newsletter sign up</h2>
-                    <p class="wow fadeInUp">Enter your email address to get the latest alumni news,spceial events and alumni activites delivered right into your inbox</p>
-
-                    <form id="newsletter" accept-charset="utf-8">
-                        <div class="success">Your subscribe request has been sent!</div>
-                        <label class="email">
-                            <input type="email" value="Enter Your E-mail:">
-                            <span class="error">*This is not a valid email address.</span>
-                        </label>
-                        <br>
-                        <a href="#" data-type="submit">Subscribe</a>
-                    </form>
-
-                </div>
-
-                <div class="col-md-6">
-
-                    <form id="newsletter" accept-charset="utf-8">
-                        <h2>contact us</h2>
-                        <p>02-325252
-                            <br> Rinchending,phuntsholing.Bhutan
-                            <br> CST_alumni@gmail.com
-                        </p>
-
-
-
-                    </form>
-
-                </div>
-
-            </div>
-            <div class="bg-primary" class="du-newsletter">
+	  <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
@@ -262,10 +229,6 @@
 
             </div>
         </div>
-
-        </div>
-
-
 
 
 
