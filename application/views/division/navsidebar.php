@@ -68,7 +68,7 @@
                     </li>
 
                      <li>
-                        <a href="<?php echo base_url()?>index.php/Settings/membersearch/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Member Search</a>
+                        <a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Member Search</a>
                     </li>
                    
                    

@@ -962,7 +962,10 @@ public function reciept()
 
 		public	function viewmember1(){
   			$name=$this->input->post('name');
-  			$department=$this->input->post('department');
+  			// $department=$this->input->post('department');
+
+  			 $department= $_POST['f1'];
+  		
 		
   	// 	$issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
 
