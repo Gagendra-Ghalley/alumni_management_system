@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-md-8" >
                                 <ul class="flexy-menu orange" >
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/alumni/"><i class="icon-heart"></i>Home</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li class="active"><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
@@ -160,56 +160,7 @@
 			<section class="choose-us ptb-50">
 
 				<div class="container">
-					<!-- <div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 text-center">
-							<h2>Why Choose Us?</h2>
-							<p>Morbi condimentum, nunc non ornare dignissim, tellus eros molestie turpis, eu vehicula metus quam
-								ac tellus aenean cursus massa in nulla suscipit lacinia in at eros.</p>
-								
-						</div>
-					</div> -->
 					
-					<!-- <section class="about-section-1">
-					
-						<div class="du-choose-us pt-20">
-							<div class="row">
-								<div class="col-md-6 wow fadeInLeft">
-									<img class="img-responsive" src="<?php echo base_url();?>assets/img1/aboutus.jpg" alt="image">
-								</div>
-								<div class="col-md-6 wow fadeInRight">
-									<p>
-										Aenean cursus fermentum euismod. Cras sodales nibh sed egestas adipiscing. Vestibulum sit amet eros sapien. Vestibulum quis dapibus sem. Fusce a lacinia nisl. Mauris sagittis egestas justo. Praesent tempus quis nibh nec imperdiet.
-									</p>
-									<div class="row pt-20">
-										<div class="col-md-6">
-											<ul class="du-choose-list">
-												<li><a href="#">Lorem ipsum dolor sit adipiscing</a></li>
-												<li><a href="#">Sus ut felis orci sed triste</a></li>
-												<li><a href="#">Tristique diama phare tralibero</a></li>
-											</ul>
-											
-										</div>
-										<div class="col-md-6">
-											<ul class="du-choose-list">
-												<li><a href="#">Adipiscing elitsus ut  felis orcise</a></li>
-												<li><a href="#">Fermentuma lorem ipsum dolor</a></li>
-												<li><a href="#">Tristique diama phare tralibero</a></li>
-											</ul>
-											
-										</div>
-										<div class="col-md-12">
-											<a class="btn-default du-common-property" href="#">View All Features</a>
-										</div>
-										
-									</div>
-								</div>
-							</div>						
-						</div>
-
-					</section>				
-					
-				</div>
-			</section> -->
 
 
 			<section class="du-contact du-section-ash ptb-50 common">

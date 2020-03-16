@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-md-8" >
                                 <ul class="flexy-menu orange" >
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/alumni/"><i class="icon-heart"></i>Home</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li  class="active"><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
@@ -216,42 +216,7 @@
 		</div><!-- /.du-event -->
 	</div><!-- /.du-subpage content -->
 	<!-- End Evnet -->
-	 <div class="bg-primary" class="du-newsletter">
-            <div class="container">
-
-                <div class="col-md-6">
-                    <h2 class="wow fadeInUp">newsletter sign up</h2>
-                    <p class="wow fadeInUp">Enter your email address to get the latest alumni news,spceial events and alumni activites delivered right into your inbox</p>
-
-                    <form id="newsletter" accept-charset="utf-8">
-                        <div class="success">Your subscribe request has been sent!</div>
-                        <label class="email">
-                            <input type="email" value="Enter Your E-mail:">
-                            <span class="error">*This is not a valid email address.</span>
-                        </label>
-                        <br>
-                        <a href="#" data-type="submit">Subscribe</a>
-                    </form>
-
-                </div>
-
-                <div class="col-md-6">
-
-                    <form id="newsletter" accept-charset="utf-8">
-                        <h2>contact us</h2>
-                        <p>02-325252
-                            <br> Rinchending,phuntsholing.Bhutan
-                            <br> CST_alumni@gmail.com
-                        </p>
-
-
-
-                    </form>
-
-                </div>
-
-            </div>
-            <div class="bg-primary" class="du-newsletter">
+	  <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
@@ -264,10 +229,6 @@
 
             </div>
         </div>
-
-        </div>
-
-
 
 
 

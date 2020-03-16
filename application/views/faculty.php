@@ -309,11 +309,19 @@
 
 
 <!--footer-->
-<footer>
-    <div class="container">
-        Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-    </div>
-</footer>
+  <div class="bg-primary" class="du-newsletter">
+            <div class="container">
+
+               
+
+                <div class="col-md-6">
+
+                    <p>@Alumni Management System</p>
+
+                </div>
+
+            </div>
+        </div>
 
 
 
