@@ -244,9 +244,29 @@ public function validate_credentials1(){
 			return false;
 				break;
 				
-			case 5 : $this->form_validation->set_message ('validate_credentials1','*You are not alumni of this college');
+
+				case 5 : 
+
+			$this->db->where('relatedUserId',$this->input->post('cid'));
+		    $this->db->where('status1','approved');
+		   	$result = $this->db->get('bpas_logins');
+
+		   	if($result->num_rows()==1){
+				foreach($result->result() as $row){
+				$this->form_validation->set_message ('validate_credentials1','*You are already registered ');
+			}
+		}
+		else{
+			$this->form_validation->set_message ('validate_credentials1','*You are not alumni of the college ');
+
+		}
 			return false;
 				break;
+
+
+			// case 6 : $this->form_validation->set_message ('validate_credentials1','*You are not alumni of this college');
+			// return false;
+			// 	break;
 		} 
 		
 		
