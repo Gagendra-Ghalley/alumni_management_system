@@ -47,14 +47,46 @@
                             <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
                                 <div>
                                     <div class="badge">
-                                        22 <span>jun</span>
-                                        <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
+                                      <span>  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
+                
+                           
+                                <?php foreach($user->result() as $row){?>
+                                
+                                <input type="hidden"  name="cid" value="<?php echo $row->cid;?>">
+                           <input type="submit" style="height:70px;width:75px;font-size:16px;font-family:Times New Roman;" class="btn btn-info btn-lg" data-animation="animated zoomInUp" value="Join Us" >
+                           <?php } ?>
+                         
+                </form>  <table>
+      <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                        <p style="font-family:Times New Roman;"><font size="4" color="white"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members are interested");?></font></p>
+
+                                </span>
                                     </div>
                                     <div class="du-date-short-des">
 
-                                        
+                                            <h3 style="font-family:Times New Roman;"><font color="white">College Rimdro</font></h3>
                                        
-                                        <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -159,9 +191,14 @@
         </div><!-- /.du-event -->
     </div><!-- /.du-subpage content -->
 
-      <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
-                <input type="text" name="cid">
-                 <input type="submit" value="Join Us" class="btn-default du-common-property">
+     <!--  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
+                
+                <div class="alert alert-info">
+                        <?php foreach($user->result() as $row){?>
+                        
+                        <input type="text"  name="cid" value="<?php echo $row->cid;?>"><?php } ?>
+                   <input type="submit" value="Join Us" class="btn-default du-common-property">
+                  </div>
                 </form> 
            
     <table>
@@ -187,7 +224,7 @@
                                         $a="+";
                                         echo ($count1.=$a);
                                         echo ("\nMembers");?></button>
-
+ -->
 
             <div class="row">
                 <div class="col-lg-8">

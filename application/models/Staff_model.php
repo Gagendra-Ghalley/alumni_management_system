@@ -612,6 +612,20 @@ class Staff_model extends CI_Model {
 		
 	}
 
+	public function getprofilei($cid){
+		
+		$profile = $this->db->query("SELECT CONCAT(p.FirstName, ' ',p.MiddleName, ' ', p.LastName) AS Name, bl.profile, p.cid, p.DateOfBirth,p.Grade, p.email,p.telephone,p.Mobile,p.roleId,p.EmpNo,a.name AS Agency,ap.name AS ParentAgency,amp.name AS MainParentAgency, mp.Description AS PositionTitle FROM bpas_user_profiles p 
+									LEFT JOIN bpas_logins bl ON bl.relatedUserId=p.cid
+									LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID
+									LEFT JOIN bpas_master_agencyparent ap ON ap.AgencyParentID=p.AgencyParentID
+									LEFT JOIN bpas_master_agencymainparent amp ON amp.AgencyMainParentID=p.AgencyMainParentID
+									LEFT JOIN masterposition mp ON mp.PositionID = p.PositionTitle 
+									WHERE p.cid='".$cid."'");
+									
+		return $profile;
+		
+	}
+
 	public function getprofile1($cid){
 
 		$profile = $this->db->query("SELECT CONCAT(p.FirstName, ' ',p.MiddleName, ' ', p.LastName) AS Name, bl.profile, p.cid, p.DateOfBirth,p.Grade, p.email,p.telephone,p.Mobile,p.roleId,p.EmpNo,a.name AS Agency,ap.name AS ParentAgency,amp.name AS MainParentAgency, mp.Description AS PositionTitle FROM bpas_user_profiles p 

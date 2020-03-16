@@ -537,6 +537,8 @@ function addDak($param="")
 
  	public function dashboard(){
  		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+ 		$cid=$this->session->userdata('cid');
+		$data['user']=$this->sm->getprofilei($cid);
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('division/dashboard',$data);
 		$this->load->view('template/includefooter');
@@ -932,6 +934,17 @@ public function reciept()
 		$this->load->view('profile',$data);
 		$this->load->view('template/includefooter');
 		
+		
+	}
+
+	public function profilei(){
+		
+		$cid=$this->session->userdata('cid');
+		$data['user']=$this->sm->getprofilei($cid);
+		
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('profile',$data);
+		$this->load->view('template/includefooter');
 		
 	}
 

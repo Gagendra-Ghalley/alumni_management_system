@@ -49,7 +49,7 @@
 
 	public function login1(){
 		
-			
+		
 		
 		if($this->session->userdata('logged_in')!='1'){
 			$this->load->view('login');
@@ -547,6 +547,8 @@ public	function viewmember2(){
 				
 			}  elseif($role=='4'||$role=='9'){//Division Heads
 				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+				$cid=$this->session->userdata('cid');
+				$data['user']=$this->sm->getprofilei($cid);
 				$data['leavecount']=$this->atd->leaveCountAll();
 				$data['latecount']=$this->atd->lateCount();
 				$data['notused']=$this->atd->notUsedAll();
