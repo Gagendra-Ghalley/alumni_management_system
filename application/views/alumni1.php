@@ -51,7 +51,7 @@
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
-                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Member search</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -258,7 +258,7 @@
 
     <div class="du-current-news center">
         <div class="container">
-            <h2 class="center">Upcoming Events </h2>
+            <h2 class="center">Events </h2>
 
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
