@@ -361,7 +361,10 @@ public function validate_credentials1(){
 
 public	function viewmember2(){
   			$name=$this->input->post('name');
-  			$department=$this->input->post('department');
+  			// $department=$this->input->post('department');
+
+  			 $department= $_POST['f1'];
+  		
 		
   	// 	$issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
 
@@ -403,7 +406,7 @@ public	function viewmember2(){
 
 
 	   }
-	
+
 	public function validate_credentials(){
 		
 		

@@ -53,11 +53,11 @@
               <li><a href="<?php echo base_url();?>index.php/ATD/Login/"> <i class="icon-heart"></i>Home</a></li>
               <li><a href="about.html"><i class="icon-cogs"></i>About us</a></li>
                <li class="active"><a href="<?php echo base_url();?>index.php/ATD/event/"><i class="icon-th"></i>Event</a></li>
-              <li><a href="faculty.html"><i class="icon-th"></i>Faculty</a></li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"></i>Faculty</a></li>
               <li ><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
               <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
               
-              <li><a href="contact.html"><i class="icon-envelope"></i>Contact</a></li>
+               <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
             </ul>
           </div>
         </div>

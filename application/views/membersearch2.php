@@ -41,10 +41,33 @@
             <label class="col-sm-3 col-md-4 col-lg-2 control-label"> Depart ment</label>
             
             <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
+                
+
+         <!--        <select id="f">
+  <option value="volvo">Civil</option>
+  <option value="saab">Information Technology</option>
+  <option value="opel">Electrical</option>
+  <option value="audi">Electronics and Communication</option>
+</select>
+   -->
+
+
+                
+
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
-                    <input name="department" id="cidNum"  form="f" placeholder=" Enter Department" type="text" required />
-                </div>
+                   
+
+                    <select name="f1" form="f">
+                        <option value="" form="f">Select Department</option>
+  <option value="Civil" >Civil</option>
+  <option value="Information Technology" >Information Technology</option>
+  <option value="Electrical" >Electrical</option>
+  <option value="Electronics and Communication" >Electronics and Communication</option>
+</select>
+
+              <!--       <input name="department" id="cidNum"  form="f" placeholder=" Enter Department" type="text" required /> -->
+                </div> 
             </div>
         </div>
         

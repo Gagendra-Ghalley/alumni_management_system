@@ -93,15 +93,15 @@
 					   </div>
                             <div class="col-md-8" >
                                 <ul class="flexy-menu orange" >
-                                    <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/alumni/"><i class="icon-heart"></i>Home</a></li>
+                                    <li ><a href="<?php echo base_url();?>index.php/ATD/alumni/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
+                                    <li class="active"><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
-                                    <li><a href="contact.html"><i class="icon-envelope"></i>Donate</a></li>
+                                     <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
                             </div>
 				</div>
@@ -125,7 +125,7 @@
 				</div>
 				<div class="col-md-5 col-sm-5 col-xs-12 text-right du-breadcrumb">
 					<div class="breadcrumbs">
-						Faculty page
+					
 					</div>
 				</div>				
 			</div>
@@ -144,11 +144,15 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
-							<h2 class="text-left">All Faculty</h2>
+						
 							<div class="du-faculty-name">
 								<ul class="du-choose-list">
 									<li><a href="#civil-engineering"><strong>Faculty of Civil Engineering</strong></a></li>
 									<li><a href="#electronic-engineering"><strong>Faculty of Electrical and Electronic Engineering</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
 									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
 								</ul>
 							</div>
