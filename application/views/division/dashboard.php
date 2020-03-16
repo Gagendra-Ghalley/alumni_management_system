@@ -21,10 +21,7 @@
                 </div>
                 
             </div>
-             <div class="clockwrapper">
-                <div id="clock"></div>,
-                <?php echo date('D d/M/Y');?>
-            </div>
+            
 <div class="col-lg-12">
 <div class="du-subpage-content">
 
