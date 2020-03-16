@@ -77,10 +77,10 @@
 		
 	}
 
-	public function faculty1(){
+	public function faculty(){
 		
 		
-			$this->load->view('faculty1');
+			$this->load->view('faculty');
 		}
 
 	public function aboutUs(){
@@ -349,7 +349,60 @@ public function validate_credentials1(){
 
 	
 	
-	
+	public function membersearch1(){
+ 	
+		
+		// $this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('membersearch3');
+		$this->load->view('template/includefooter');
+		
+		
+	}
+
+public	function viewmember2(){
+  			$name=$this->input->post('name');
+  			$department=$this->input->post('department');
+		
+  	// 	$issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
+
+ 		
+			// $data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
+		  
+
+
+  			// $issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
+
+
+  			// $issuance1= $this->db->query("SELECT department FROM bpas_user_profiles where department='".$department."'")->row()->department;
+
+ 						//OR
+
+  	$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row();//to see if there is record or not in db
+  			
+
+
+  			if(sizeof($issuance)>0) 
+		  {
+
+	 	$data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
+		  
+		  $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('department' => $department))->result_array();
+		  
+
+
+
+		 // $this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('viewmember1',$data,$data1);
+		$this->load->view('template/includefooter');
+	}
+	 else{
+	  	 $data['message']="There is no record of Alumni";
+	 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data);
+	 // 
+	   }
+
+
+	   }
 	
 	public function validate_credentials(){
 		
