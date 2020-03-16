@@ -41,27 +41,28 @@
 <div class="bg-primary" class="box" > 
     <div class="container">
     
-      <div class="header-element clearfix"> 
-        <div class="row">
-          <div class="col-md-4">
-          	<h1 class="navbar-brand navbar-brand_"><a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
-            
-            <!-- <h1 style="position:relative;right:5%;"><font size="4">CST Alumni Management System</font></h1> -->
-          </div>
-          <div class="col-md-8">
-            <ul class="flexy-menu orange">
-              <li><a href="<?php echo base_url();?>index.php/ATD/Login/"> <i class="icon-heart"></i>Home</a></li>
-              <li><a href="about.html"><i class="icon-cogs"></i>About us</a></li>
-               <li class="active"><a href="<?php echo base_url();?>index.php/ATD/event/"><i class="icon-th"></i>Event</a></li>
-              <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"></i>Faculty</a></li>
-              <li ><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
-              <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
-              
-               <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div class="header-element clearfix">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1 class="navbar-brand navbar-brand_">
+          		<a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
+
+                            </div>
+                            <div class="col-md-8" >
+                                <ul class="flexy-menu orange" >
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/alumni/"><i class="icon-heart"></i>Home</a></li>
+                                    <li class="active"><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
+                                    </li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+
+                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
     </div>      
   </div>
 </nav>
