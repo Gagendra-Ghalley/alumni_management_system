@@ -345,7 +345,7 @@
                             <div class="du-caption">
                                 <br>
                                 <h2 class="title" style="text-align: center;">Membership</h2>
-                                <p>"Stay connected with the College by telling us the best way to get in touch "</p>
+                                <p>"Stay connected with the College by telling us the best way to get in touch "</p><br>
                                 <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn-default du-common-property" style="text-align: center;">Read More</a>
                             </div>
 
@@ -382,7 +382,7 @@
                             <div class="du-caption">
                                 <br>
                                 <h2 class="title" style="text-align: center;">Events</h2>
-                                <p>"Stay connected with college by telling us the best way to get in touch" </p>
+                                <p>"Stay connected with college by telling us the best way to get in touch" </p><br>
                                 <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn-default du-common-property">Read More</a>
                             </div>
 
@@ -432,97 +432,6 @@
 
     <div class="dream-university">
 
-        <!--Begin feature-->
-        <!-- <div class="du-feature"> 
-		<div class="container"> 
-			<div class="row">
-
-				<div class="col-lg-4 col-md-4 col-sm-4">
-					<div class="du-feature-box maxheight wow fadeIn">
-						<div class="badge"><img src="img/page1_icon1.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">About us</p>
-								<p>whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success </p>
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4">
-					<div class="du-feature-box maxheight wow fadeIn">
-						<div class="badge"><img src="img/page1_icon1.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">Membership</p>
-								<p>"Stay connected with the College by telling us the best way to get in touch "</p><br><br><br>
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-4">
-					<div class="du-feature-box maxheight wow fadeIn">
-						<div class="badge"><img src="img/page1_icon1.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption"> 
-								<p class="title">Donate</p>
-								<p>"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-
-								<p> </p>
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4">
-					<div class="du-feature-box maxheight wow fadeIn">
-						<div class="badge"><img src="img/page1_icon1.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">Events</p>
-								<p>"Stay connected with college by telling us the best way to get in touch" </p><br><br><br>
-								<a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.1s">
-					<div class="du-feature-box maxheight">
-						<div class="badge"><img src="img/page1_icon2.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">Faculty</p>
-								<p>"Support student abd our community>Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.2s">
-					<div class="du-feature-box maxheight">
-						<div class="badge"><img src="img/page1_icon3.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">Profile</p>
-								<p>"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div> -->
-        <!-- End feature -->
-
-        <!--Begin newsletter -->
         <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
