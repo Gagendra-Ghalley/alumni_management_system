@@ -71,6 +71,7 @@ class Staff_model extends CI_Model {
 			
 		    $this->db->where('relatedUserId',$this->input->post('cid'));
 		   	$result = $this->db->get('bpas_logins');
+		   	//$this->db->where('status1', $pending);
 
 			// if($result->num_rows()!=1){
 
@@ -124,7 +125,6 @@ class Staff_model extends CI_Model {
 			}
 			
 		}
-
 
 
 			public function can_log_in2($cid){

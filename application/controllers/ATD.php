@@ -167,14 +167,16 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
   			
 
   			$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully registered</span> <br /><br /><br />
-			 	<a href="'.base_url().'index.php/ATD/login/"> <button type="button" class="btn btn-warning">
+			 	<a href="'.base_url().'index.php/Settings/view_ods_dashboard/"> <button type="button" class="btn btn-warning">
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
 		        
 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
 		       
-					}   
+					}
+
+
 
 		// 	elseif($this->session->userdata('logged_in')==2){
 		// 	$cid=$this->input->post('cid');
@@ -190,73 +192,19 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 			
 		// } 
 		
-		// else {
+		else {
 			
-		// 	$this->register();
-		// }
+			
+			
+			 if($this->session->userdata('logged_in')!='1'){
+				$this->load->view('registration');
+
+		}
 
 
 }
 
-
-
-// public function membersearch($param1=""){
-
-// 	$cid_no=$param1;
-// 	$department=$this->input->post('department'); 
-  	
-
-  			
-			
-// 		//=$this->db->get_where('w_request',array('cid_no'=> $cid_no))->row()->cid_no;
-// 				$search= $this->db->query("SELECT FirstName,MiddleName,LastName,department FROM bpas_user_profiles where FirstName='".$cid_no."' AND department='".$department."'")->row();
-				
-// 				// $issuance= $this->db->query("SELECT * FROM w_request where cid_no='".$app_no."' OR application_no='".$app_no."'")->row();
-			
-
-// 			// elseif($app_no==$param2){
-
-// 			// 	$issuance2= $this->db->query("SELECT * FROM w_request where application_no='".$app_no."'")->row();
-// 			// }
-
-			
-// 			//$dat[]=$this->ag->getseq();
-//   		//$d=implode(" " ,$issuance);
-//   		//die($d);
-
-// 			//die($issuance);
-// 			//$issuance = $this->db->get_where('w_request', array('cid_no' => $cid_no))->row();
-
-//   		// 
-
-			
-
-
-// 		  if(sizeof($search)>0) 
-// 		  {
-
-	 
-// 		$data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $cid_no))->result_array();
-// 		 $this->load->view('membersearch',$data); 
-// 		}
-		
-		 
-	 
-	  
-// 	  else{
-// 	  	 $data['message']="There is no such record ";
-// 	 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data);
-// 	 // 
-// 	   }
-
-//   		}
-
-  		
-
-
-
-
-
+}
 
 public function validate_credentials1(){
 		
@@ -267,6 +215,7 @@ public function validate_credentials1(){
 		
 		
 		switch($result){
+
 			
 			case 1 : return true;
 					break;
@@ -295,7 +244,7 @@ public function validate_credentials1(){
 			return false;
 				break;
 				
-			case 5 : $this->form_validation->set_message ('validate_credentials1','You are not alumni of this college');
+			case 5 : $this->form_validation->set_message ('validate_credentials1','*You are not alumni of this college');
 			return false;
 				break;
 		} 
@@ -303,7 +252,7 @@ public function validate_credentials1(){
 		
 		
 	}
-
+	
 	
 	
 	public function login_validate(){
