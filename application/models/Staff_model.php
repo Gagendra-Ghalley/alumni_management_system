@@ -66,11 +66,14 @@ class Staff_model extends CI_Model {
 			
 		}
 
-		public function can_log_in1($mac){
+		
+public function can_log_in1($mac){
 		
 			
 		    $this->db->where('relatedUserId',$this->input->post('cid'));
+		    $this->db->where('status1','pending');
 		   	$result = $this->db->get('bpas_logins');
+		   	//$this->db->where('status1', $pending);
 
 			// if($result->num_rows()!=1){
 
@@ -85,7 +88,7 @@ class Staff_model extends CI_Model {
 			//$result=$this->db->query($query);
 			if($result->num_rows()==1){
 				foreach($result->result() as $row){
-				if($row->mac1==$mac || $row->mac2==$mac){
+					if($row->mac1==$mac || $row->mac2==$mac){
 					//$this->sessionInitiate();
 					return 1;
 					
@@ -112,6 +115,9 @@ class Staff_model extends CI_Model {
 					
 					return 4;
 				}
+
+				 
+			
 				
 			}
 				
@@ -124,8 +130,6 @@ class Staff_model extends CI_Model {
 			}
 			
 		}
-
-
 
 			public function can_log_in2($cid){
 		
