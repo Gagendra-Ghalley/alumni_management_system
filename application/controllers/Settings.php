@@ -1005,6 +1005,9 @@ public function reciept()
 
 	   }
 
+
+
+	   
 	public function updateContact() {
 		
 		$tel=$this->input->post('tel');
