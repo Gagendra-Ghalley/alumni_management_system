@@ -112,16 +112,44 @@
 			                <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
 			                    <div>
 			                        <div class="badge">
-			                            22 <span>jun</span>
-			                            <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
+			                            <span> <button style="height:70px;width:75px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a></button></span>
+                                    <br>
+
+			                          
+                            <table>
+      <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                        <p><font size="4" color="white"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members are interested");?></font></p>
 			                        </div>
 			                        <div class="du-date-short-des">
-			                            <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
+			                        	<h3><font color="white">College Rimdro</font></h3>
+			                           <!--  <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit</p> -->
 			                        </div>
 			                    </div>
 			                </div>
 			                <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></a>
+			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height:240px" alt=""></a>
 			                </div>
 			            </div>
 

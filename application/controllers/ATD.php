@@ -31,7 +31,10 @@
 	public function index(){
 
 			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
+			$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
+       
+			
 		
 	}
 	
@@ -39,6 +42,7 @@
 	public function login(){
 
 			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
+			$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
 		
 	}
@@ -68,10 +72,8 @@
 	}
 
 	public function event1(){
-		
-		
-			$this->load->view('event1');
-			
+		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+			$this->load->view('event1',$data);
 		
 	}
 
