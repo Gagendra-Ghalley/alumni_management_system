@@ -259,37 +259,10 @@
 
 
     <div class="du-current-news center">
-         
-
-           <div class="Wall">
-   <div class="calendar">
-     
-     <div class="frame">
-       <div class="left screw">
-         <div class="line"></div>
-         <div class="shine"></div>
-       </div> 
-       <div class="right screw">
-         <div class="rerotate line"></div>
-         <div class="shine"></div>
-       </div>
-       <div class="year">
-         <h1 id="yearCaption">1990</h1>
-       </div>
-     </div>
-     
-     <div class="content">
-       <h2 id="monthCaption">May</h2>
-       <h1 id="dayCaption">28</h1>
-     </div>
-     
-     <div class="over"></div>
-  </div>
-</div>
-
+        
                
         <div class="container">
-            <h2 class="center" style="color:#428af5">Events </h2>
+            <h2 class="center" style="color:#428af5">Upcoming Events </h2>
 
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
