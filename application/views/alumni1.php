@@ -6,10 +6,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
+
+
+
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> -->
+    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> 
+
+    
+       <link href="<?php echo base_url();?>assets/footer1.css" rel="stylesheet">
+     <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
+     <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
+     <link href="<?php echo base_url();?>assets/footer4.css" rel="stylesheet"> 
+
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +32,7 @@
      <link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
      <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
-     
+  
 
 
     <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
@@ -307,7 +317,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12" data-wow-delay="0.2s">
-                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 240px;width:750px" alt=""></a>
+                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 240px;width:1000px" alt=""></a>
 
                 </div>
                 </figure>
@@ -437,49 +447,65 @@
 
     
 
-    <div class="dream-university">
+    <div class="agile-contact" id="contact">
+    <div class="left-contact">
 
-        <div class="bg-primary" class="du-newsletter">
-            <div class="container">
-
-                <div class="col-md-6">
-                    <h2 class="wow fadeInUp">newsletter sign up</h2>
-                    <p class="wow fadeInUp">Enter your email address to get the latest alumni news,spceial events and alumni activites delivered right into your inbox</p>
-
-                    <form id="newsletter" accept-charset="utf-8">
-                        <div class="success">Your subscribe request has been sent!</div>
-                        <label class="email">
-                            <input type="email" value="Enter Your E-mail:">
-                            <span class="error">*This is not a valid email address.</span>
-                        </label>
-                        <br>
-                        <a href="#" data-type="submit">Subscribe</a>
-                    </form>
-
-                </div>
-
-                <div class="col-md-6">
-
-                    <form id="newsletter" accept-charset="utf-8">
-                        <h2>contact us</h2>
-                        <p>02-325252
-                            <br> Rinchending,phuntsholing.Bhutan
-                            <br> CST_alumni@gmail.com
-                        </p>
-
-
-
-                    </form>
-
-                </div>
-
-            </div>
+            <h6>contact us</h6>
+            <ul>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="0216506.cst@rub.edu.bt">Alumni management system</a></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>+77777777</li>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>college of science and technology</li>
+            </ul>
+    
+    </div>
+    <div class="right-contact">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/place/College+of+Science+and+Technology/@26.8502058,89.3918037,17z/data=!3m1!4b1!4m5!3m4!1s0x39e3cb2c210e611d:0x44c5cb2cd32b18d4!8m2!3d26.8502058!4d89.3939924?hl=en-US" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <form action="#" method="post">
+                <input placeholder="Name" name="Name" class="name" type="text" required=""><br>
+                <input placeholder="E-mail" name="Name" class="name" type="text" required=""><br>
+                <textarea placeholder="Message"></textarea><br>
+                <input type="submit" value="send message">
+            </form>
         </div>
     </div>
+    <div class="clearfix"></div>
+</div>
+<!--//contact-->
+<!--//main-content-->
 
-    <div id="preloader">
-        <div id="status"></div>
+<!--footer-->
+<div class="bg-primary"  >
+    <
+    <div class="container" >
+        <div class="left-w3">
+            <a href="#"></a>
+        </div>
+        <div class="right-social">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+        </div>
+        <div class="clearfix"></div>
+        <div class="footer-nav">
+            <ul>
+                <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
+                                    </li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+
+                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Member search</a></li>
+            </ul>
+        </div>
+        <div class="copyright-agile">
+            <p>&copy; 2020 Alumni Management system | Design by <p>College Of science And Technology</p></a></p>
+        </div>
     </div>
+</div>
+
     <!--end PRELOAD-->
 
     <!-- Main jQuery & other 3rd party Library -->
