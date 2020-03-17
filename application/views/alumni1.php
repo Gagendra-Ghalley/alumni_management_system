@@ -349,7 +349,7 @@
                             <div class="du-caption">
                                 <br>
                                 <h2 class="title" style="color:#428af5;text-align: center;">Membership</h2>
-                                <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with the College by telling us the best way to get in touch "</p><br>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with the College by telling us the best way to get in touch and do suggest the best way be connect with eachother"</p><br>
 
                                 <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
@@ -365,7 +365,7 @@
                             <div class="du-caption">
                                 <br>
                                 <h2 class="title" style="color:#428af5;text-align: center;">Donates</h2>
-                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p><br>
                                 <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                                 
                             </div>
@@ -388,7 +388,7 @@
                             <div class="du-caption">
                                 <br>
                                 <h2 class="title" style="color:#428af5;text-align: center;">Events</h2>
-                                <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with college by telling us the best way to get in touch" </p><br>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with college by telling us the best way to get in touch and do suggest the best way be connect" </p>
                                 
                                 <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
@@ -404,7 +404,7 @@
                             <div class="du-caption">
                                 <br>
                                 <h2 class="title" style="color:#428af5;text-align: center;">Faculty</h2>
-                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community>Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
                                 <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
