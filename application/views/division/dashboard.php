@@ -47,7 +47,7 @@
                                 <?php foreach($user->result() as $row){?>
                                 
                                 <input type="hidden"  name="cid" value="<?php echo $row->cid;?>">
-                           <input type="submit" style="height:70px;width:75px;font-size:16px;font-family:Times New Roman;" class="btn btn-info btn-lg" data-animation="animated zoomInUp" value="Join Us" >
+                           <input type="submit" style="height:70px;width:75px;font-size:16px;font-family:Times New Roman;" class="btn btn-info btn-lg" data-animation="animated zoomInUp" value="Join Now" >
                            <?php } ?>
                          
                 </form>  <table>
