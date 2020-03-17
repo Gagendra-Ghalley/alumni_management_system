@@ -43,7 +43,7 @@
 
                             </div>
                             <div class="col-md-8" >
-                                <ul class="flexy-menu orange" >
+                                <ul style="font-style: bold" class="flexy-menu orange" >
                                     <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
@@ -289,7 +289,7 @@
 
                
         <div class="container">
-            <h2 class="center">Events </h2>
+            <h2 class="center" style="color:#428af5">Events </h2>
 
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
@@ -339,7 +339,7 @@
                 </div>
                 </figure>
             </div>
-            <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn-default du-common-property"> more events</a>
+            
 
         </div>
     </div>
@@ -360,9 +360,9 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">About us</h2>
-                                <p>whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success </p>
-                                <a href="#" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h2 class="title" style="color:#428af5;text-align: center;">About us</h2>
+                                <p style="font-family:georgia; color:black; font-size: 16px">"whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success" </p>
+                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -375,9 +375,10 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Membership</h2>
-                                <p>"Stay connected with the College by telling us the best way to get in touch "</p><br>
-                                <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h2 class="title" style="color:#428af5;text-align: center;">Membership</h2>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with the College by telling us the best way to get in touch "</p><br>
+
+                                <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -390,9 +391,10 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Donates</h2>
-                                <p>"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h2 class="title" style="color:#428af5;text-align: center;">Donates</h2>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
+                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
+                                
                             </div>
 
                         </div>
@@ -412,9 +414,10 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Events</h2>
-                                <p>"Stay connected with college by telling us the best way to get in touch" </p><br>
-                                <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn-default du-common-property">Read More</a>
+                                <h2 class="title" style="color:#428af5;text-align: center;">Events</h2>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with college by telling us the best way to get in touch" </p><br>
+                                
+                                <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -427,9 +430,9 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Faculty</h2>
-                                <p>"Support student abd our community>Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h2 class="title" style="color:#428af5;text-align: center;">Faculty</h2>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community>Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
+                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -442,9 +445,9 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Profile</h2>
-                                <p>"Support student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h2 class="title" style="color:#428af5;text-align: center;">Profile</h2>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
+                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
