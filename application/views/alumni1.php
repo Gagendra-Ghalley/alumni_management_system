@@ -22,6 +22,7 @@
      <link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
      <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
+     
 
 
     <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
@@ -256,7 +257,37 @@
 
     </div>
 
+
     <div class="du-current-news center">
+         
+
+           <div class="Wall">
+   <div class="calendar">
+     
+     <div class="frame">
+       <div class="left screw">
+         <div class="line"></div>
+         <div class="shine"></div>
+       </div> 
+       <div class="right screw">
+         <div class="rerotate line"></div>
+         <div class="shine"></div>
+       </div>
+       <div class="year">
+         <h1 id="yearCaption">1990</h1>
+       </div>
+     </div>
+     
+     <div class="content">
+       <h2 id="monthCaption">May</h2>
+       <h1 id="dayCaption">28</h1>
+     </div>
+     
+     <div class="over"></div>
+  </div>
+</div>
+
+               
         <div class="container">
             <h2 class="center">Events </h2>
 
@@ -502,6 +533,7 @@
     <!-- Custom script -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
+ 
 
 </body>
 
