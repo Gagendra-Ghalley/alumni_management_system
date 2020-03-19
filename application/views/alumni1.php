@@ -15,10 +15,10 @@
     <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> 
 
     
-       <link href="<?php echo base_url();?>assets/footer1.css" rel="stylesheet">
+      
      <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
-     <link href="<?php echo base_url();?>assets/footer4.css" rel="stylesheet"> 
+    
 
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
@@ -48,8 +48,8 @@
                     <div class="header-element clearfix">
                         <div class="row">
                             <div class="col-md-4">
-                                <h1 class="navbar-brand navbar-brand_">
-          		<a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
+                                <h1 class="navbar-brand">
+          		<a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive"  src="<?php echo base_url();?>assets/img/cstlogo2.png" style="height: 51px;width: 51px";></a></h1>
 
                             </div>
                             <div class="col-md-8" >
@@ -62,7 +62,7 @@
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
-                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Member search</a></li>
+                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -75,6 +75,9 @@
 </head>
 <br>
 <br>
+<br>
+
+
 
 <body>
     <div class="du-banner-area">
@@ -316,8 +319,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12" data-wow-delay="0.2s">
-                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 240px;width:1000px" alt=""></a>
+                <div class="col-lg-8 col-md-12 col-sm-12" data-wow-delay="0.2s">
+                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 260px;width:1000px" alt=""></a>
 
                 </div>
                 </figure>
@@ -488,21 +491,19 @@
         </div>
         <div class="clearfix"></div>
         <div class="footer-nav">
-            <ul>
-                <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
-                                    </li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+             <div class="container">
 
-                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Member search</a></li>
-            </ul>
+               
+
+                <div class="col-md-6">
+
+                    <p>&copy; 2020 Alumni Management system | Design by <p>College Of science And Technology</p></a></p>
+
+                </div>
+
+            </div>
         </div>
-        <div class="copyright-agile">
-            <p>&copy; 2020 Alumni Management system | Design by <p>College Of science And Technology</p></a></p>
-        </div>
+       
     </div>
 </div>
 
