@@ -531,6 +531,11 @@
 
 
     <!-- Main jQuery & other 3rd party Library -->
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/move-top.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js1/easing.js"></script>
+	<script src="<?php echo base_url();?>assets/js1/jquery-1.11.1.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js1/modernizr.custom.js"></script>
+
      <script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>

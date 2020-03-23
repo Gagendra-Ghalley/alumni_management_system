@@ -24,6 +24,9 @@
   <!-- Testimonial CSS -->
   <link href="<?php echo base_url();?>assets/css1/cubeportfolio.min.css" rel="stylesheet">
   
+     <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
+     <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
+  
   
   <!-- Font  -->
   <!-- <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
@@ -71,28 +74,22 @@
 </header>
 
 <!--  page-wrapper -->
-<div id="page-wrapper" style="width: 900px;height: 900px" >
+<div class="container">
+<div id="page-wrapper"  style="width: 900px; " >
 
-    <div class="row">
-        <!-- Page Header -->
-        <div class="col-lg-12">
-            <h1 class="page-header">Profile</h1>
-        </div>
-        <!--End Page Header -->
-    </div>
-
-    <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/ATD/viewmember2" method="post" style="background-color: white; width:550px;padding:10px">
+    <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/ATD/viewmember2" method="post">
     </form>
 
-    <div class="row profile" style="height: 400px">
-        <div class="col-md-10" style="margin-top: 70px;margin-left: 100px">
+    
+        <div class="col-md-12 bg-success" style="margin-top: 70px;height: 300px">
 
-            <fieldset>
-                <legend class="title"> Search Alumni </legend>
+            <fieldset >
+                <h3 class="title"> Search Alumni </h3>
+                <br>
                 <div class="form-group" >
                     <label class="col-sm-3 col-md-4 col-lg-2 control-label"> Name</label>
 
-                    <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
+                    <div class="col-md-10 selectContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
                             <input name="name" id="cidNum" placeholder=" Enter Name" form="f" type="text" required />
@@ -108,7 +105,7 @@
 
                     <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
 
-                        <div class="input-group">
+                        <div class="input-group col-md-10">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
 
                             <select name="f1" form="f">
@@ -141,6 +138,7 @@
 
         </div>
 
+    
     </div>
 
 </div>
@@ -160,6 +158,7 @@
         </div>
 
         </div>
+
     
 
 

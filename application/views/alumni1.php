@@ -7,22 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
 
-
-
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> 
-
-    
-      
+  
      <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
     
-
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
@@ -42,14 +37,13 @@
         <nav class="navbar-fixed-top" role="navigation">
         	
 
-            <div class="bg-primary" class="box">
-                <div class="container">
-
+            <div class="bg-primary">
+                
                     <div class="header-element clearfix">
                         <div class="row">
                             <div class="col-md-4">
-                                <h1 class="navbar-brand">
-          		<a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive"  src="<?php echo base_url();?>assets/img/cstlogo2.png" style="height: 51px;width: 51px";></a></h1>
+                                <div class="navbar-brand">
+          		<a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png"></a></div>
 
                             </div>
                             <div class="col-md-8" >
@@ -67,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+            
             </div>
         </nav>
 
@@ -346,7 +340,7 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="color:#428af5;text-align: center;">About us</h2>
+                                <h3 class="title" style="color:#428af5;text-align: center;">About us</h3>
                                 <p style="font-family:georgia; color:black; font-size: 16px">"whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success" </p>
                                 <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
@@ -361,7 +355,7 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="color:#428af5;text-align: center;">Membership</h2>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Membership</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with the College by telling us the best way to get in touch and do suggest the best way be connect with eachother"</p><br>
 
                                 <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
@@ -377,7 +371,7 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="color:#428af5;text-align: center;">Donates</h2>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Donates</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p><br>
                                 <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                                 
@@ -400,7 +394,7 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="color:#428af5;text-align: center;">Events</h2>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Events</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with college by telling us the best way to get in touch and do suggest the best way be connect" </p>
                                 
                                 <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
@@ -416,7 +410,7 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="color:#428af5;text-align: center;">Faculty</h2>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Faculty</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
                                 <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
@@ -431,7 +425,7 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="color:#428af5;text-align: center;">Profile</h2>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Profile</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Support student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
                                 <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
@@ -478,34 +472,23 @@
 <!--//main-content-->
 
 <!--footer-->
-<div class="bg-primary"  >
-    <
-    <div class="container" >
-        <div class="left-w3">
-            <a href="#"></a>
-        </div>
-        <div class="right-social">
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-            <i class="fa fa-google-plus-square" aria-hidden="true"></i>
-        </div>
-        <div class="clearfix"></div>
-        <div class="footer-nav">
-             <div class="container">
+ <div class="bg-primary" class="du-newsletter">
+            <div class="bg-primary" class="du-newsletter">
+            <div class="container">
 
                
 
                 <div class="col-md-6">
 
-                    <p>&copy; 2020 Alumni Management system | Design by <p>College Of science And Technology</p></a></p>
+                    <p>@Alumni Management System</p>
 
                 </div>
 
             </div>
         </div>
-       
-    </div>
-</div>
+
+        </div>
+
 
     <!--end PRELOAD-->
 

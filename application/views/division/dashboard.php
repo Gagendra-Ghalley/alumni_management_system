@@ -28,7 +28,7 @@
  
          <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <div class="col-xs-12 col-sm-12 col-md-9 text-center">
                             <h1>Event</h1>
                             
                                 
@@ -38,7 +38,7 @@
                     <section class="du-all-event">
                     
                         <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="col-lg-4 col-md-9 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
                                 <div>
                                     <div class="badge">
                                       <span>  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                          <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="col-lg-4 col-md-9 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
                                 <div>
                                     <div class="badge">
                                         24 <span>jun</span>
@@ -100,7 +100,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
+                            <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInLeft">
                                <a href="#"><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></a>
                             </div>
                         </div>
