@@ -432,18 +432,7 @@
 
                         </div>
                     </div>
-
-
-                </div>
-            </div>
-        </div>
-        <!-- /Container -->
-        </div>
-        <!-- / Team -->
-    </section>
-
-    
-
+                    
     <div class="agile-contact" id="contact">
     <div class="left-contact">
 
@@ -468,6 +457,20 @@
     </div>
     <div class="clearfix"></div>
 </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /Container -->
+        </div>
+        <!-- / Team -->
+    </section>
+
+    
+
 <!--//contact-->
 <!--//main-content-->
 
