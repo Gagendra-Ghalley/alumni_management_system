@@ -37,7 +37,7 @@
    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" />
       <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
       <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
-       <link href="<?php echo base_url();?>assets/css/cst.css" rel="stylesheet" />
+      <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet" /> 
   
   
  
@@ -48,7 +48,7 @@
 <header class="clearfix">
           
 
-<nav class="box navbar navbar-default navbar-fixed-top" role="navigation" >
+<nav class=" navbar navbar-default navbar-fixed-top" role="navigation" >
   
    
     <div class="bg-primary" class="container">

@@ -12,6 +12,7 @@
     <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> -->
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
+    <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet" /> 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
@@ -31,7 +32,7 @@
         <nav class="navbar-fixed-top" role="navigation">
         	
 
-            <div class="bg-primary" class="box">
+            <div class="bg-primary" >
                 <div class="container">
 
                     <div class="header-element clearfix">

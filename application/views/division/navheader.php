@@ -35,7 +35,7 @@
 </br></br>
     <!--  wrapper -->
     <div id="wrapper" >
-        <nav class="box navbar navbar-default navbar-fixed-top" role="navigation"  >
+        <nav class="bg-primary navbar navbar-default navbar-fixed-top" role="navigation"  >
         <div >
         <!-- navbar top -->
         
