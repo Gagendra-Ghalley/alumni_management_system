@@ -9,30 +9,20 @@
                 <ul class="nav" id="side-menu">
                     <li>
                         <!-- user image section-->
+
                         <div class="user-section">
+
+                        <div class="bg-primary">
+
                             <div class="user-section-inner">
-                                <a style="background-color:transparent"; href="<?php echo base_url();?>index.php/Settings/profile/"> <img class="roundedimage" src="<?php echo base_url();?>assets/img/profile/<?php echo $this->session->userdata('profileImage');?>"/></a>
+                                <a href="<?php echo base_url();?>index.php/Settings/profile/"> <img class="roundedimage" src="<?php echo base_url();?>assets/img/profile/<?php echo $this->session->userdata('profileImage');?>"/></a>
                             </div>
                              <div style="margin-bottom: 50px;"class="user-info">
                                 <div></div>
                                 <div class="status" style="margin-bottom: 35px;">
                                  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/atdchangestatus" class="form-group">
                                 <div style="margin-bottom: 5px;">
-                                    <!-- <select name="status">
-                                        <option selected>
-                                            <?php $status=$this->session->userdata('status');$statusRemarks=$this->session->userdata('statusRemarks');
-                                       echo $status;?>
-                                        </option>
-                                        <?php if($status!='In Office'){?><option value="In Office">In Office</option>
-                                      <?php } ?>
-                                        <?php if($status!='Meeting'){?><option value="Meeting">Meeting</option>
-                                      <?php } ?>
-                                        <?php if($status!='Seminar'){?><option value="Seminar">Seminar</option>
-                                      <?php } ?>
-                                        <?php if($status!='Training'){?><option value="Training">Training</option>
-                                      <?php } ?>
-                                        
-                                    </select> -->
+                                    
                                </div>
                                  <div style="margin-bottom: 35px;">
                                    <!--  <input type="text" placeholder="Remarks" name="statusremarks" value="<?php echo $statusRemarks;?>"> -->

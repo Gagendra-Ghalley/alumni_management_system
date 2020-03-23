@@ -1,3 +1,4 @@
+
 <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet"/>
         <!--  page-wrapper -->
        
@@ -5,35 +6,39 @@
         <body>
         <div id="page-wrapper">
 
+
+ <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/bootstrap.min1.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+          
+           
+
             <div class="row">
-                <!-- Page Header -->
+                  <!-- Page Header -->
                 <div class="col-lg-12">
                     <h1 class="page-header">Dashboard   </h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
-                <!--End Page Header -->
-            </div>
-
-            <div class="row">
                 <!-- Welcome -->
                 <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
                     
                        <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
 
+
  
                     </div>
                 </div>
-                <!--end  Welcome -->
+                
             </div>
             
+<div class="col-lg-12">
 <div class="du-subpage-content">
-        <div class="du-event">
 
-            <!-- Begin choose us -->
-            <section class="event ptb-50">
-
-                <div class="container">
+ 
+         <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <div class="col-xs-12 col-sm-12 col-md-9 text-center">
                             <h1>Event</h1>
                             
                                 
@@ -43,7 +48,7 @@
                     <section class="du-all-event">
                     
                         <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="col-lg-4 col-md-9 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
                                 <div>
                                     <div class="badge">
                                       <span>  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
@@ -52,7 +57,7 @@
                                 <?php foreach($user->result() as $row){?>
                                 
                                 <input type="hidden"  name="cid" value="<?php echo $row->cid;?>">
-                           <input type="submit" style="height:70px;width:75px;font-size:16px;font-family:Times New Roman;" class="btn btn-info btn-lg" data-animation="animated zoomInUp" value="Join Us" >
+                           <input type="submit" style="height:70px;width:75px;font-size:16px;font-family:Times New Roman;" class="btn btn-info btn-lg" data-animation="animated zoomInUp" value="Join Now" >
                            <?php } ?>
                          
                 </form>  <table>
@@ -94,7 +99,7 @@
                             </div>
                         </div>
                          <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="col-lg-4 col-md-9 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
                                 <div>
                                     <div class="badge">
                                         24 <span>jun</span>
@@ -106,7 +111,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
+                            <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInLeft">
                                <a href="#"><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></a>
                             </div>
                         </div>
@@ -126,6 +131,7 @@
                             </div>
                  
 
+
   
             <div class="row">
                 <div class="col-lg-8">
@@ -143,15 +149,15 @@
 
             </div>
 
+ </div>
+      
+    </div><!-- /.du-subpage content -->
+
            
-
-                      
-
-
-         
 
 
         </div>
+
 
           </div>
 
@@ -181,62 +187,27 @@
  -->
                 </div>
 
+        <!-- end page-wrapper -->
+
+    </div>
+ <div class="bg-primary" class="du-newsletter">
+            <div class="container">
+
+               
+
+
                 <div class="col-md-6">
 
-                    <form id="newsletter" accept-charset="utf-8">
-                        <h2>contact us</h2>
-                        <p>02-325252
-                            <br> Rinchending,phuntsholing.Bhutan
-                            <br> CST_alumni@gmail.com
-                        </p>
-
-
-
-                    </form>
+                    <p>@Alumni Management System</p>
 
                 </div>
 
             </div>
         </div>
-    
+
+  </div>
 
 
-  
 
-
-    <!-- end wrapper -->
-
-  
- <script>
-    
-    function searchFunction(){
-        
-        var input,filter,table,tr,td,i;
-        input =document.getElementById("myInput");
-        
-        filter = input.value.replace(/  +/g, ' ').toUpperCase();
-        
-        table=document.getElementById("tablestatus");
-        tr = table.getElementsByTagName("tr");
-        
-        for(i=0;i<tr.length;i++){
-            
-            td = tr[i].getElementsByTagName("td")[1];
-            
-            if (td) {
-                td = td.innerHTML.replace(/  +/g, ' ');
-          if (td.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-    } 
-        }
-        
-    }
-    
-    
-</script>
- 
 
 </body>

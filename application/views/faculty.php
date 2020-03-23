@@ -52,10 +52,10 @@
           </div>
           <div class="col-md-8">
             <ul class="flexy-menu orange">
-              <li><a href="<?php echo base_url();?>index.php/ATD/Login/"> <i class="icon-heart"></i>Home</a></li>
-              <li><a href="about.html"><i class="icon-cogs"></i>About us</a></li>
-               <li class="active"><a href="<?php echo base_url();?>index.php/ATD/event/"><i class="icon-th"></i>Event</a></li>
-              <li><a href="faculty.html"><i class="icon-th"></i>Faculty</a></li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
+               <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Event</a></li>
+              <li  class="active"><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
               <li ><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
               <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
               
@@ -111,49 +111,26 @@
 </header>
 <!--header-->
 
-
-
-
-<div class="dream-university-subpage">
-
-	<!-- Begin breadcrumbs-->
-	<div class="du-page-header du-breadcrumbs">		
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7 col-sm-7 col-xs-12 text-left du-title">
-					<div class="du-breadcrumb-title"><h3>Faculty</h3></div>				
-				</div>
-				<div class="col-md-5 col-sm-5 col-xs-12 text-right du-breadcrumb">
-					<div class="breadcrumbs">
-					
-					</div>
-				</div>				
-			</div>
-		</div>		
-	</div>
-	<!-- End breadcrumbs-->
-	
-	
-	<!-- Begin Event -->
-	<div class="du-subpage-content">
-		<div class="du-faculty">
-
-			<!-- Begin faculty us -->
-			<section class="faculty pt-50">
+<section class="faculty pt-50">
 
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
-						
+							<h2 class="text-left">All Faculty</h2>
 							<div class="du-faculty-name">
 								<ul class="du-choose-list">
-									<li><a href="#civil-engineering"><strong>Faculty of Civil Engineering</strong></a></li>
-									<li><a href="#electronic-engineering"><strong>Faculty of Electrical and Electronic Engineering</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong>Faculty of Mechanical Engineering</strong></a></li>
+									<li><a href="#Management"><strong>MANAGEMENT</strong></a></li>
+									<li><a href="#civil-engineering"><strong>CIVIL ENGINEERING AND ENGINEERING GEOLOGY DEPARTMENT</strong></a></li>
+									<li><a href="#architecture"><strong>ARCHITECTURE DEPARTMENT</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>M.E. RENEWABLE ENERGY AND ELECTRICAL ENGINEERING DEPARTMENT</strong></a></li>
+
+									<li><a href="#civil-engineering"><strong>ELECTRONICS AND COMMUNICATION ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="#electronic-engineering"><strong>INFORMATION TECHNOLOGY DEPARTMENT</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>SCIENCE AND HUMANITIES DEPARTMENT</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>FINANCE AND ACCOUNTS SECTION ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="#electronic-engineering"><strong>ADMINISTRATION</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>LIBRARY</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong>ICT UNIT</strong></a></li>
 								</ul>
 							</div>
 							
@@ -162,163 +139,403 @@
 					</div>
 				</div>
 					
-					<section id="civil-engineering" class="civil-engineering pb-50">
+					<section id="Management" class="civil-engineering pb-50">
 						<div class="container">							
 						
 							<div class="du-civil pt-20">
 								<div class="row">
 									<div class="col-md-8 wow fadeInLeft">
-										<h3 class="text-left">Faculty of Civil Engineering</h3>
-										<p>The Faculty of Civil Engineering, Dream University &amp; Technology offers both the undergraduate and post-graduates degrees maintaining its long-standing reputation for excellence in education andresearch, both nationally and internationally. Presently, it comprises seven departments:(i) Civil Engineering, (ii) Urban and Regional Planning, (iii) BuildingEngineering &amp; Construction Management, (iv) Mathematics, (v) Chemistry,(vi) Physics and (vii) Humanities. Among these seven departments, CivilEngineering offers B.Sc. Eng. Degree since 1974, M.Sc. Eng. and Ph.D. since1994 while Urban &amp; Regional Planningoffers only BURP since 2010 and Building Engineering &amp; ConstructionManagement offers B.Sc. Eng. since 2013.Mathematics, Chemistry and Physics offers M.Phill and Ph.D. since 2000, whileHumanities does not offer any degree. The undergraduate and postgraduate curriculum have a longtradition of providing a firm ground in engineering fundamentals, design and innovative knowledge.Our faculty members are rigorously trained experienced in the respectivefields. They take teaching to heart as well as conduct advanced research. With all the existing accomplishments, faculty of civil engineering has full confidence toprovide international standard degrees to face the new and inherent challengesboth in home and abroad.</p>
+										
+									<div class="teachers">
+								<div class="container">
+									<div class="teach-head">
+										<h3>Management Team</h3><br>
+										
+									</div>
+									<div class="team-grids">
+										<div class="col-md-3 team-grid text-center">
+											<div class="team-img">
 
-										<h4>Number of Department  7	</h4>
-										<div class="du-faculty-name">
-											<ul class="du-choose-list">
-												<li><a href="#"><strong>Department of Civil Engineering</strong></a></li>
-												<li><a href="#"><strong>Department of Urban and Regional Planning</strong></a></li>
-												<li><a href="#"><strong>Department of Building Engineering &amp; Construction Management</strong></a></li>
-												<li><a href="#"><strong>Department of Mathematics</strong></a></li>
-												<li><a href="#"><strong>Department of Chemistry</strong></a></li>
-												<li><a href="#"><strong>Department of Physics</strong></a></li>
-												<li><a href="#"><strong>Department of Humanities</strong></a></li>
-											</ul>
+												<img src="<?php echo base_url();?>assets/img2/president.png" style="height:240px;width: 240px" />
+												<h3>President</h3>
+												<h4>Dr. Cheki Dorji</h4>
+												<h5>chekidorji.cst@rub(dot)edu(dot)bt</h5>
+												<h5>Contact No.# 17161635</h5>
+												
+											</div>
 										</div>
+										
+										<div class="clearfix"></div>
 									</div>
+								</div>
+							</div>
+						</div>
+
 
 		
 		
 		
-									<div class="col-md-4 wow fadeInRight">									
-										<div class="faculty-short-info">
-											<ul class="du-choose-list">
-												<li><strong>Establish : </strong>	01-03-2004</li>
-												<li><strong>Dean : </strong>Prof. Dr. Shibendra Shekher Sikder</li>
-												<li><strong>Phone : </strong>PABX: +880 41 769472 Ext. 666</li>
-												<li><strong>Fax	:</strong></li>
-												<li><strong>Email : </strong>deance@ce.kuet.ac.bd</li>
-											</ul>
-										</div>	
-									</div>
 								</div>
 							</div>						
 					</div>
 
 				</section>
-				<!-- End civil engineering -->
-
-
-				<section id="electronic-engineering" class="electronic-engineering du-section-ash ptb-50">
-						<div class="container">							
-						
-							<div class="du-civil">
-								<div class="row">
-									<div class="col-md-8 wow fadeInLeft">
-										<h3 class="text-left">Faculty of Electrical and Electronic Engineering</h3>
-										<p>Faculty of Electrical and Electronic Engineering (EEE) at Dream University &amp; Technology (KUET) offers unique opportunities for education, research and innovation to meet the increasing demand for highly educated engineering professionals. Now, the EEE faculty has grown beyond expectations and is consistently ranked among the top Engineering faculties of Bangladesh. Since its inception, the EEE faculty at KUET has been active in recruiting outstanding new faculty members to support its teaching and research activities. Every year, a number of our faculty members gets higher education and short-term scientific and research training in well reputed International universities. Our highly qualified faculty members have tremendous potential to change the traditional way of thinking about engineering education, pedagogy and research excellence. Our faculty members are conducting research in the core areas of electrical engineering, electronics, computer engineering, communication engineering and biomedical engineering, and laudable outcomes are often appraised at home and abroad. The faculty fosters future scientists and engineers and aims at developing not only the ability in students to live flexibly and aggressively in our rapidly changing society, but also at producing scientists and engineers with fundamental academic skills to advance our modern way of life. It is our mission to develop professionals with a global perspective and who take an active role in international progress. Our students already proved their merits and endeavors in home and abroad by securing the top positions in their respective fields and we hope to offer furthering its continuation. So as you browse our new web site, I hope you will discover new information, ideas, and inspiration. Scrolling through these pages you will learn about our exceptional degree and executive education programs, our distinguished faculty, and our achievements.</p>
-
-										<h4>Number of Department  4	</h4>
-										<div class="du-faculty-name">
-											<ul class="du-choose-list">
-												<li><a href="#"><strong>Department of Electrical &amp; Electronic Engineering</strong></a></li>
-												<li><a href="#"><strong>Department of Computer Science &amp; Engineering</strong></a></li>
-												<li><a href="#"><strong>Department of Electronics &amp; Communication Engineering</strong></a></li>
-												<li><a href="#"><strong>Department of Biomedical Engineering</strong></a></li>
-											</ul>
-										</div>
-									</div>
-
+				<div class="teachers">
+	<div class="container">
 		
-		
-		
-									<div class="col-md-4 wow fadeInRight">									
-										<div class="faculty-short-info">
-											<ul class="du-choose-list">
-												<li><strong>Establish : </strong>	01-03-2004</li>
-												<li><strong>Dean : </strong>Prof. Dr. Md. Nurunnabi Mollah</li>
-												<li><strong>Phone : </strong>PABX: +880 41 769472 Ext. 777</li>
-												<li><strong>Fax	:</strong></li>
-												<li><strong>Email : </strong>deaneee@eee.kuet.ac.bd</li>
-											</ul>
-										</div>	
-									</div>
-								</div>
-							</div>						
-					</div>
-
-				</section>
-				<!-- End electronic-engineering -->
-
-
-				<section id="mechanical-engineering" class="mechanical-engineering ptb-50">
-						<div class="container">							
-						
-							<div class="du-civil">
-								<div class="row">
-									<div class="col-md-8 wow fadeInLeft">
-										<h3 class="text-left">Faculty of Mechanical Engineering</h3>
-										<p>The academic departments of the university offer degree programs in different engineering, and science disciplines. All the departments except Dept. of Humanities have the postgraduate programs, while the departments of Civil Engineering, Electrical and Electronic Engineering,Mechanical Engineering, Computer Science and Engineering, Electronics Communication Engineering , Industrial Engineering and Management offer undergraduate degree programs.</p>
-
-										<h4>Number of Department  5	</h4>
-										<div class="du-faculty-name">
-											<ul class="du-choose-list">
-												<li><a href="#"><strong>Department of Mechanical Engineering</strong></a></li>
-												<li><a href="#"><strong>Department of Industrial Engineering and Management</strong></a></li>
-												<li><a href="#"><strong>Department of Leather Engineering</strong></a></li>
-												<li><a href="#"><strong>Department of Textile Engineering</strong></a></li>
-												<li><a href="#"><strong>Department of Energy  Technology</strong></a></li>
-											</ul>
-										</div>
-									</div>
-
-		
-		
-		
-									<div class="col-md-4 wow fadeInRight">									
-										<div class="faculty-short-info">
-											<ul class="du-choose-list">
-												<li><strong>Establish : </strong>	01-03-2004</li>
-												<li><strong>Dean : </strong>Prof. Dr. Md. Syed Ali Mollah</li>
-												<li><strong>Phone : </strong>PABX: +880 41 769472 Ext. 788</li>
-												<li><strong>Fax	:</strong></li>
-												<li><strong>Email : </strong>deanme@me.kuet.ac.bd</li>
-											</ul>
-										</div>	
-									</div>
-								</div>
-							</div>						
-					</div>
-
-				</section>
-				<!-- End Mechanical engineering -->				
+		<div class="team-grids">
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/1tlhendup.jpg" style="height:150px;width: 150px" /> 
 					
-				
-			</section>
-			<!-- End event -->
+						<h3>Dean, Academic Affairs</h3>
+						<h4>Dr. Tshewang Lhendup</h4>
+						<h5>tshewanglhendup.cst@rub(dot)edu(dot)bt</h5>
+						<h5>Contact No.# 16553720</h5>
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/tshetend.jpg" style="height:150px;width: 150px" alt=""/>
+						
+						<h3>Dean, Research and Industrial Linkages</h3>
+						<h4>Tsheten Dorji</h4>
+						<h5>tshetendorji.cst@rub(dot)edu(dot)bt</h5>
+						<h5>Contact No.# 17160539</h5>
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/bharat.png" style="height:150px;width: 150px" /> 
+					
+						<h3>Dean, Academic Affairs</h3>
+						<h4>Bharat Kumar Hummagai</h4>
+						<h5>bharat.cst@rub(dot)edu(dot)bt</h5>
+						<h5>Contact No.# 17161040</h5>
+				</div>
+			</div>
+			
+		
+		</div>
+	</div><br><br><br>
+
+	<section id="civil-engineering" class="civil-engineering pb-50">
+						<div class="container">							
+						
+							<div class="du-civil pt-20">
+								<div class="row">
+									<div class="col-md-8 wow fadeInLeft">
+										
+									<div class="teachers">
+								<div class="container">
+									<div class="teach-head">
+										<h3>Civil Engineering And Engineering Geology Department</h3><br>
+										
+									</div>
+									<div class="team-grids">
+										<div class="col-md-3 team-grid text-center">
+											<div class="team-img">
+
+												<img src="<?php echo base_url();?>assets/img2/president.png" style="height:200px;width: 200px" />
+												<h3>HEAD OF DEPARTMENT, CIVIL & ENGINEERING GEOLOGY (PROGRAMME LEADER)</h3>
+												<h4>Karma TempaDr</h4>
+												<h5>karmatempa.cst@rub(dot)edu(dot)bt</h5>
+												<h5>Contact No.# 17161635</h5>
+												
+											</div>
+										</div>
+										
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 
 
+		
+		
+		
+								</div>
+							</div>						
+					</div>
+
+				</section>
+				<div class="teachers">
+	<div class="container">
+		
+		<div class="team-grids">
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/omkafley.jpg" style="height:150px;width: 150px" /> 
+					
+						<h3>Asst. Professor</h3>
+						<h4>Om Kafley</h4>
+						<h5>omkafley.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/tt.jpg" style="height:150px;width: 150px" alt=""/>
+						
+						<h3>Lecturer</h3>
+						<h4>Tshering Tobgay</h4>
+						<h5>tsheringtobgyel.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/chimmiwangmo.jpg" style="height:150px;width: 150px" /> 
+					
+						<h3>Lecturer</h3>
+						<h4>Chimi Wangmo</h4>
+						<h5>chimiwangmo.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+
+			</div>
 			
 			
-		</div><!-- /.du-event -->
-	</div><!-- /.du-subpage content -->
-	<!-- End Evnet -->
+			
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		
 
+		<div class="container">
+		
+		<div class="team-grids">
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/MonikaThapa.jpg" style="height:150px;width: 150px" /> 
+					
+						<h3>Lecture</h3>
+						<h4>Monika Thapa</h4>
+						<h5>monikathapa(dot)cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/kirtan.jpg" style="height:150px;width: 150px" alt=""/>
+						
+						<h3>Asst. Lecturer</h3>
+						<h4>Kirtan Adhikari</h4>
+						<h5>adhikari.cst@rub.edu.bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/tcheki.jpg" style="height:150px;width: 150px" /> 
+					
+						<h3>Lecturer</h3>
+						<h4>Tshering Cheki</h4>
+						<h5>tsheringcheki.cst@rub.edu.bt</h5>
+						
+				</div>
+			</div>
 
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
+</section>
+<br><br><br><br>
+
+<section id="architecture" class="civil-engineering pb-50">
+						<div class="container">							
+						
+							<div class="du-civil pt-20">
+								<div class="row">
+									<div class="col-md-8 wow fadeInLeft">
+										
+									<div class="teachers">
+								<div class="container">
+									<div class="teach-head">
+										<h3>ARCHITECTURE DEPARTMENT</h3><br>
+										
+									</div>
+									<div class="team-grids">
+										<div class="col-md-3 team-grid text-center">
+											<div class="team-img">
+
+												<img src="<?php echo base_url();?>assets/img2/president.png" style="height:200px;width: 200px" />
+												<h3>PROGRAMME LEADER, ARCHITECTURE DEPT</h3>
+												<h4>Chimi</h4>
+												<h5>chimi.cst@rub(dot)edu(dot)bt</h5>
+												
+												
+											</div>
+										</div>
+										
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+		
+		
+		
+								</div>
+							</div>						
+					</div>
+
+				</section>
+				<div class="teachers">
+	<div class="container">
+		
+		<div class="team-grids">
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/schuki.jpg" style="height:150px;width: 150px" /> 
+					
+						<h3>Asst. Professor</h3>
+						<h4>Sonam Chuki</h4>
+						<h5>sonamchuki.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/sumitra.jpg" style="height:150px;width: 150px" alt=""/>
+						
+						<h3>Asst. Lecturer</h3>
+						<h4>Sumitra Ghalley</h4>
+						<h5>sumitraghalley.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/chimmiwangmo.jpg" style="height:150px;width: 150px" /> 
+					
+						<h3>Asst. Lecturer</h3>
+						<h4>Jigme Thinley</h4>
+						<h5>jigmethinley.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+
+			</div>
+			
+			
+			
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+
+		<div class="container">
+		
+		<div class="team-grids">
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/jamyang_p.dorji.jpg" style="height:150px;width: 150px" /> 
+					
+						<h3>Asst. Lecture</h3>
+						<h4>Jamyan P. Dorji</h4>
+						<h5>jamyangpdorji.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/penden_wangchuk.jpg" style="height:150px;width: 150px" alt=""/>
+						
+						<h3>Asst. Lecturer</h3>
+						<h4>Penden Wangchuk</h4>
+						<h5>pendenwangchuk.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-4 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/sebha_saleem.jpg" style="height:150px;width: 150px" /> 
+					
+						<h3>Asst. Lecturer</h3>
+						<h4>Sehba Saleem</h4>
+						<h5>sehbasaleem.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+
+			</div>
+			
+			
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+</section>
+
+
+
 <body>
 
 
 
-<!--footer-->
-<footer>
-    <div class="container">
-        Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-    </div>
-</footer>
+
+
+          <div class="bg-primary" class="du-newsletter">
+           <div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12"><br>
+							
+							<div class="du-faculty-name">
+								<ul class="du-choose-list">
+									<li><a href="#Management"><strong  style="color: #fff">MANAGEMENT</strong></a></li>
+									<li><a href="#civil-engineering"><strong  style="color: #fff">CIVIL ENGINEERING AND ENGINEERING GEOLOGY DEPARTMENT</strong></a></li>
+									<li><a href="#architecture"><strong  style="color: #fff">ARCHITECTURE DEPARTMENT</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong  style="color: #fff">M.E. RENEWABLE ENERGY AND ELECTRICAL ENGINEERING DEPARTMENT</strong></a></li>
+
+									<li><a href="#civil-engineering"><strong  style="color: #fff">ELECTRONICS AND COMMUNICATION ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="#electronic-engineering"><strong  style="color: #fff">INFORMATION TECHNOLOGY DEPARTMENT</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong  style="color: #fff">SCIENCE AND HUMANITIES DEPARTMENT</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong  style="color: #fff">FINANCE AND ACCOUNTS SECTION ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="#electronic-engineering"><strong  style="color: #fff">ADMINISTRATION</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong  style="color: #fff">LIBRARY</strong></a></li>
+									<li><a href="#mechanical-engineering"><strong  style="color: #fff">ICT UNIT</strong></a></li>
+								</ul>
+							</div>
+							
+								
+						</div>
+					</div>
+				</div>
+				 <div class="container">
+
+               
+
+                <div class="col-md-6">
+
+                    <p>@Alumni Management System</p>
+
+                </div>
+
+            </div>
+        </div>
+    
 
 
 
 
     <!-- Main jQuery & other 3rd party Library -->
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/move-top.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js1/easing.js"></script>
+	<script src="<?php echo base_url();?>assets/js1/jquery-1.11.1.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js1/modernizr.custom.js"></script>
+
      <script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>

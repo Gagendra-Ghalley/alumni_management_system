@@ -6,14 +6,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
+
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> -->
+    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> 
+  
+     <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
+     <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
+    
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
+
     <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet" /> 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
@@ -23,28 +32,34 @@
      <link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
      <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
+  
 
-<!-- 
+
     <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <header class="clearfix">
         <nav class="navbar-fixed-top" role="navigation">
         	
 
+
             <div class="bg-primary" >
                 <div class="container">
+
+
+            <div class="bg-primary">
+                
 
                     <div class="header-element clearfix">
                         <div class="row">
                             <div class="col-md-4">
-                                <h1 class="navbar-brand navbar-brand_">
-          		<a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
+                                <div class="navbar-brand">
+          		<a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png"></a></div>
 
                             </div>
                             <div class="col-md-8" >
-                                <ul class="flexy-menu orange" >
-                                    <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/alumni/"><i class="icon-heart"></i>Home</a></li>
+                                <ul style="font-style: bold" class="flexy-menu orange" >
+                                    <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
@@ -57,7 +72,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+            
             </div>
         </nav>
 
@@ -65,6 +80,9 @@
 </head>
 <br>
 <br>
+<br>
+
+
 
 <body>
     <div class="du-banner-area">
@@ -257,9 +275,12 @@
 
     </div>
 
+
     <div class="du-current-news center">
+        
+               
         <div class="container">
-            <h2 class="center">Upcoming Events </h2>
+            <h2 class="center" style="color:#428af5">Upcoming Events </h2>
 
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
@@ -267,7 +288,7 @@
                         <div class="badge"  class="bg-primary">
                              <span> <button style="height:70px;width:75px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
 
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
 
                                 </button></span>
 
@@ -303,13 +324,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12" data-wow-delay="0.2s">
-                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 240px;width:750px" alt=""></a>
+                <div class="col-lg-8 col-md-12 col-sm-12" data-wow-delay="0.2s">
+                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 260px;width:1000px" alt=""></a>
 
                 </div>
                 </figure>
             </div>
-            <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn-default du-common-property"> more events</a>
+            
 
         </div>
     </div>
@@ -330,9 +351,9 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">About us</h2>
-                                <p>whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success </p>
-                                <a href="#" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h3 class="title" style="color:#428af5;text-align: center;">About us</h3>
+                                <p style="font-family:georgia; color:black; font-size: 16px">"whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success" </p>
+                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -345,9 +366,10 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Membership</h2>
-                                <p>"Stay connected with the College by telling us the best way to get in touch "</p>
-                                <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Membership</h3>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with the College by telling us the best way to get in touch and do suggest the best way be connect with eachother"</p><br>
+
+                                <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -360,9 +382,10 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Donates</h2>
-                                <p>"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Donates</h3>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p><br>
+                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
+                                
                             </div>
 
                         </div>
@@ -382,9 +405,10 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Events</h2>
-                                <p>"Stay connected with college by telling us the best way to get in touch" </p>
-                                <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn-default du-common-property">Read More</a>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Events</h3>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with college by telling us the best way to get in touch and do suggest the best way be connect" </p>
+                                
+                                <a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -397,9 +421,9 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Faculty</h2>
-                                <p>"Support student abd our community>Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Faculty</h3>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
+                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -412,17 +436,44 @@
                             <!-- Heading -->
                             <div class="du-caption">
                                 <br>
-                                <h2 class="title" style="text-align: center;">Profile</h2>
-                                <p>"Support student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn-default du-common-property" style="text-align: center;">Read More</a>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Profile</h3>
+                                <p  style="font-family:georgia; color:black; font-size: 16px">"Support student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
+                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
                     </div>
+                    
+    <div class="agile-contact" id="contact">
+    <div class="left-contact">
+
+            <h6>contact us</h6>
+            <ul>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="0216506.cst@rub.edu.bt">Alumni management system</a></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>+77777777</li>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>college of science and technology</li>
+            </ul>
+    
+    </div>
+    <div class="right-contact">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/place/College+of+Science+and+Technology/@26.8502058,89.3918037,17z/data=!3m1!4b1!4m5!3m4!1s0x39e3cb2c210e611d:0x44c5cb2cd32b18d4!8m2!3d26.8502058!4d89.3939924?hl=en-US" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <form action="#" method="post">
+                <input placeholder="Name" name="Name" class="name" type="text" required=""><br>
+                <input placeholder="E-mail" name="Name" class="name" type="text" required=""><br>
+                <textarea placeholder="Message"></textarea><br>
+                <input type="submit" value="send message">
+            </form>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
 
 
                 </div>
             </div>
+
+
         </div>
         <!-- /Container -->
         </div>
@@ -431,140 +482,28 @@
 
     
 
-    <div class="dream-university">
+<!--//contact-->
+<!--//main-content-->
 
-        <!--Begin feature-->
-        <!-- <div class="du-feature"> 
-		<div class="container"> 
-			<div class="row">
-
-				<div class="col-lg-4 col-md-4 col-sm-4">
-					<div class="du-feature-box maxheight wow fadeIn">
-						<div class="badge"><img src="img/page1_icon1.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">About us</p>
-								<p>whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success </p>
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4">
-					<div class="du-feature-box maxheight wow fadeIn">
-						<div class="badge"><img src="img/page1_icon1.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">Membership</p>
-								<p>"Stay connected with the College by telling us the best way to get in touch "</p><br><br><br>
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-4">
-					<div class="du-feature-box maxheight wow fadeIn">
-						<div class="badge"><img src="img/page1_icon1.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption"> 
-								<p class="title">Donate</p>
-								<p>"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-
-								<p> </p>
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4">
-					<div class="du-feature-box maxheight wow fadeIn">
-						<div class="badge"><img src="img/page1_icon1.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">Events</p>
-								<p>"Stay connected with college by telling us the best way to get in touch" </p><br><br><br>
-								<a href="<?php echo base_url();?>index.php/ATD/event1/>" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.1s">
-					<div class="du-feature-box maxheight">
-						<div class="badge"><img src="img/page1_icon2.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">Faculty</p>
-								<p>"Support student abd our community>Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.2s">
-					<div class="du-feature-box maxheight">
-						<div class="badge"><img src="img/page1_icon3.png" alt=""></div>
-						<div class="du-caption-box">
-							<div class="du-caption">
-								<p class="title">Profile</p>
-								<p>"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-
-								<a href="#" class="btn-default du-common-property">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div> -->
-        <!-- End feature -->
-
-        <!--Begin newsletter -->
-        <div class="bg-primary" class="du-newsletter">
+<!--footer-->
+ <div class="bg-primary" class="du-newsletter">
+            <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
-                <div class="col-md-6">
-                    <h2 class="wow fadeInUp">newsletter sign up</h2>
-                    <p class="wow fadeInUp">Enter your email address to get the latest alumni news,spceial events and alumni activites delivered right into your inbox</p>
-
-                    <form id="newsletter" accept-charset="utf-8">
-                        <div class="success">Your subscribe request has been sent!</div>
-                        <label class="email">
-                            <input type="email" value="Enter Your E-mail:">
-                            <span class="error">*This is not a valid email address.</span>
-                        </label>
-                        <br>
-                        <a href="#" data-type="submit">Subscribe</a>
-                    </form>
-
-                </div>
+               
 
                 <div class="col-md-6">
 
-                    <form id="newsletter" accept-charset="utf-8">
-                        <h2>contact us</h2>
-                        <p>02-325252
-                            <br> Rinchending,phuntsholing.Bhutan
-                            <br> CST_alumni@gmail.com
-                        </p>
-
-
-
-                    </form>
+                    <p>@Alumni Management System</p>
 
                 </div>
 
             </div>
         </div>
-    </div>
 
-    <div id="preloader">
-        <div id="status"></div>
-    </div>
+        </div>
+
+
     <!--end PRELOAD-->
 
     <!-- Main jQuery & other 3rd party Library -->
@@ -594,6 +533,7 @@
     <!-- Custom script -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
+ 
 
 </body>
 
