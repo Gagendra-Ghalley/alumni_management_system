@@ -1,4 +1,4 @@
-
+<link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet"/>
 
 
         <!-- navbar side -->
@@ -9,7 +9,7 @@
                 <ul class="nav" id="side-menu">
                     <li>
                         <!-- user image section-->
-                        <div class="user-section" class="bg-primary">
+                        <div class="user-section">
                             <div class="user-section-inner">
                                 <a style="background-color:transparent"; href="<?php echo base_url();?>index.php/Settings/profile/"> <img class="roundedimage" src="<?php echo base_url();?>assets/img/profile/<?php echo $this->session->userdata('profileImage');?>"/></a>
                             </div>

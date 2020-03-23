@@ -12,7 +12,7 @@
       <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
       <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
        <link href="css/bootstrap.min.css" rel="stylesheet">  
-       <link href="<?php echo base_url();?>assets/css/cst.css" rel="stylesheet"/>
+       <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet"/>
    <!-- Main CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
   <!-- Animate CSS -->
@@ -31,11 +31,11 @@
 
 </head>
 
-<body onload="startTime()">
+
 </br></br>
     <!--  wrapper -->
     <div id="wrapper" >
-        <nav class="box navbar navbar-default navbar-fixed-top " role="navigation" >
+        <nav class="box navbar navbar-default navbar-fixed-top" role="navigation"  >
         <div >
         <!-- navbar top -->
         
@@ -109,4 +109,3 @@
     </div>
 
 </div>
-</body>

@@ -1,9 +1,8 @@
-
+<link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet"/>
         <!--  page-wrapper -->
-        <div id="page-wrapper">
-
-            <div class="row">
+       
         <!--  page-wrapper -->
+        <body>
         <div id="page-wrapper">
 
             <div class="row">
@@ -102,7 +101,8 @@
                                         <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
                                     </div>
                                     <div class="du-date-short-des">
-                                        <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
+                                         <h3 style="font-family:Times New Roman;"><font color="white">College Foundation Day</font></h3>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -126,106 +126,7 @@
                             </div>
                  
 
-                       <!--  <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                                <div>
-                                    <div class="badge">
-                                        24 <span>jun</span>
-                                        <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
-                                    </div>
-                                    <div class="du-date-short-des">
-                                        <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                                <figure><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></figure>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                                <div>
-                                    <div class="badge">
-                                        14 <span>jun</span>
-                                        <strong>6 <img src="<?php echo base_url();?>assets/img1/page1_icon4.png" alt=""></strong>
-                                    </div>
-                                    <div class="du-date-short-des">
-                                        <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                                <figure><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></figure>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                                <div>
-                                    <div class="badge">
-                                        20 <span>jun</span>
-                                        <strong>3 <img src="<?php echo base_url();?>assets/img1/page1_icon4.png" alt=""></strong>
-                                    </div>
-                                    <div class="du-date-short-des">
-                                        <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
-                                    </div>
-                                </div>
-                            </div> -->
-                           <!--  <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                                <figure><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></figure>
-                            </div> -->
-                        </div>
-
-
-                    </section>              
-                    
-                </div>
-            </section>
-            
-            <!-- End event -->
-
-
-            
-            
-        </div><!-- /.du-event -->
-    </div><!-- /.du-subpage content -->
-
-     <!--  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
-                
-                <div class="alert alert-info">
-                        <?php foreach($user->result() as $row){?>
-                        
-                        <input type="text"  name="cid" value="<?php echo $row->cid;?>"><?php } ?>
-                   <input type="submit" value="Join Us" class="btn-default du-common-property">
-                  </div>
-                </form> 
-           
-    <table>
-      <tbody>
-                                               <?php $count1=0; foreach($request1 as $row):?>
-                                               
-                                                <tr>
-                                                  <?php  $count1++;?>
-                                                </tr>
-                                                  
-
-                                                   
-                                                  
-                                                    
-
-                                                   
-                                                   
-                                               
-                                                <?php endforeach;?>
-                                            </tbody>
-                                        </table> 
-                                        <button style="height:100px;width:100px;font-size:15px"><?php
-                                        $a="+";
-                                        echo ($count1.=$a);
-                                        echo ("\nMembers");?></button>
- -->
-
+  
             <div class="row">
                 <div class="col-lg-8">
 
@@ -251,6 +152,14 @@
 
 
         </div>
+
+          </div>
+
+</section>
+</div>
+</section>
+</div>
+</div>
        
         
         <div class="bg-primary" class="du-newsletter">
@@ -260,7 +169,7 @@
                     <h2 class="wow fadeInUp">newsletter sign up</h2>
                     <p class="wow fadeInUp">Enter your email address to get the latest alumni news,spceial events and alumni activites delivered right into your inbox</p>
 
-                    <form id="newsletter" accept-charset="utf-8">
+                    <!-- <form id="newsletter" accept-charset="utf-8">
                         <div class="success">Your subscribe request has been sent!</div>
                         <label class="email">
                             <input type="email" value="Enter Your E-mail:">
@@ -269,7 +178,7 @@
                         <br>
                         <a href="#" data-type="submit">Subscribe</a>
                     </form>
-
+ -->
                 </div>
 
                 <div class="col-md-6">
@@ -292,7 +201,9 @@
     
 
 
-    </div>
+  
+
+
     <!-- end wrapper -->
 
   
@@ -328,3 +239,4 @@
 </script>
  
 
+</body>

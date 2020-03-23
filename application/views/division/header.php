@@ -13,5 +13,7 @@
     <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
     <!-- Page-Level CSS -->
     <link href="<?php echo base_url();?>assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/cst.css" rel="stylesheet"/>
+    <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet"/>
    </head>
+
+   <body>
