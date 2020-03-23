@@ -35,17 +35,18 @@
 
 </br></br>
     <!--  wrapper -->
-    <div id="wrapper" >
-        <nav class="bg-primary navbar navbar-default navbar-fixed-top" role="navigation"  >
-        <div >
+   
+        
 
 <body onload="startTime()">
+
+   <div id="wrapper" >
     <!--  wrapper -->
 
-    <div id="wrapper">
+ 
 
         <!-- navbar top -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+        <nav class="box navbar navbar-default navbar-fixed-top" role="navigation">
             <!-- navbar-header -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -85,7 +86,7 @@
         <!-- end navbar top -->
     </div>
 
-</div>
+
 
         <!-- end navbar top -->
 

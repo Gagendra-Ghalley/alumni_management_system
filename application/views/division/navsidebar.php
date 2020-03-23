@@ -12,7 +12,7 @@
 
                         <div class="user-section">
 
-                        <div class="bg-primary">
+                        
 
                             <div class="user-section-inner">
                                 <a href="<?php echo base_url();?>index.php/Settings/profile/"> <img class="roundedimage" src="<?php echo base_url();?>assets/img/profile/<?php echo $this->session->userdata('profileImage');?>"/></a>
