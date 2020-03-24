@@ -47,31 +47,49 @@
                         <h5><b>Workplace</b></h5>
                        
                        
-                        <p style="margin-left:60px;color: #222" id=""><b>Occupation/Position</b><i class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Occupation"></i>
+                        <p class="font-weight-bold" style="margin-left:60px;color: #222;" ><b style="size: 24px">Occupation/Position</b><i class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Occupation"></i>
                         <div id="Occupation" class="collapse">
-                            <div class="container-fluid padding">
+                           
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
+                                    <div class="col-md-6 " style="margin-left: 60px">
+                                       <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                         
-                                       <button class="bg-info">Add</button>
+                                      
                                     </div>
-                                </div>
+                            
                                 
                             </div>
                             
                         </div>
                         </p>
 
-                         
+                          
                          <p style="margin-left:60px;color: #222" id=""><b>Organization</b><i style="margin-left: 47px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Organization"></i>
                         <div id="Organization" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                         <button class="bg-info">Add</button>
+                                    <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -86,10 +104,18 @@
                         <div id="Office" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                         <button class="bg-info">Add</button>
+                                    <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -104,10 +130,18 @@
                         <div id="Email" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                        <button class="bg-info">Add</button>
+                                   <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -123,10 +157,18 @@
                         <div id="Contact" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                         <button class="bg-info">Add</button>
+                                    <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -148,10 +190,18 @@
                         <div id="Paper" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                         <button class="bg-info">Add</button>
+                                    <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -166,10 +216,18 @@
                         <div id="Journal" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                         <button class="bg-info">Add</button>
+                                    <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -184,10 +242,18 @@
                         <div id="books" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                        <button class="bg-info">Add</button>
+                                   <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -213,10 +279,18 @@
                         <div id="Education" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                         <button class="bg-info">Add</button>
+                                   <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -230,9 +304,18 @@
                         <div id="Master" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        <button class="bg-info">Add</button>
+                                   <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -245,10 +328,18 @@
                         <div id="PhD" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                   <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                        <button class="bg-info">Add</button>
+                                   <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -261,9 +352,18 @@
                         <div id="Other" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        <button class="bg-info">Add</button>
+                                   <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -283,10 +383,18 @@
                         <div id="Seminar" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                         <button class="bg-info">Add</button>
+                                    <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -302,10 +410,18 @@
                         <div id="Training" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                        < <button class="bg-info">Add</button>
+                                   <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
@@ -320,10 +436,18 @@
                         <div id="Workshop" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-8 ">
-                                        <input  type="text" name="text" value="type here">
-                                        
-                                        <button class="bg-info">Add</button>
+                                    <div class="col-md-6 " style="margin-left: 60px">
+                                        <form>
+                                      <div class="form-group">
+                                       
+                                        <input type="text" class="form-control"   placeholder="Type here">
+                                          <button class="btn btn-info btn-block" >Add</button>
+                                       
+                                      </div>
+                                     
+                                    
+                                     
+                                    </form>
                                     </div>
                                 </div>
                                 
