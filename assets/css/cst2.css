@@ -118,7 +118,6 @@ margin-bottom: 0px
 /* side menu ends here */
 
 
-
 /* Navbar color*/
 .box{
     color: #fff;
@@ -140,7 +139,13 @@ margin-bottom: 0px
 }
 
 body {
-   background-image: url("../Images1/slider4.p");
+   background-image:url("../Images1/slider4.p");
    background-attachment:fixed;
+}
+.apple{
+
+     background-image:url("../Images1/slider4.png");
+   background-attachment:fixed;
+
 }
 /*End*/

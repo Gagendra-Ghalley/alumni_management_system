@@ -187,45 +187,7 @@
 					
 
 
-			<section class="du-contact du-section-ash ptb-50 common">
-				<div class="container">				
-				
-					<div class="row">
-						<h2 class="text-center">General Information</h2>
-
-						<div class="col-md-6 wow fadeInLeft">
-							<p>
-								Aenean cursus fermentum euismod. Cras sodales nibh sed egestas adipiscing. Vestibulum sit amet eros sapien. Vestibulum quis dapibus sem. Fusce a lacinia nisl. Mauris sagittis egestas justo. Praesent tempus quis nibh nec imperdiet.
-							</p>
-
-							<div class="row pt-20">
-
-								<div class="col-md-12">
-									<h4>General Information</h4>
-									<ul class="du-choose-list">
-										<li><a href="#">Year of established : 1988</a></li>
-										<li><a href="#">No. of faculty : 10 </a></li>
-										<li><a href="#">Male Student : 2000 </a></li>
-										<li><a href="#">Female Student : 1500  </a></li>
-										<li><a href="#">Total Teacher : 100  </a></li>
-										<li><a href="#">Male Hostel Seat : 2500 </a></li>
-										<li><a href="#">Female Hostel Seat : 2000 </a></li>
-									</ul>									
-								</div>
-								
-							</div>
-						</div>
-						
-						<div class="col-md-6 wow fadeInRight">
-							 <div class="du-google-map">
-		                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3304.8335505155337!2d-84.302295!3d34.073780899999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f575af70986d89%3A0x765a219a57ed595c!2s2020+Willshire+Glen%2C+Alpharetta%2C+GA+30009%2C+USA!5e0!3m2!1sen!2sbd!4v1427483431399" width="600" height="450" frameborder="0" style="border:0"></iframe>
-		                    </div><!-- /.lan-google-map-->
-						</div>
-
-					</div>
-				</div>
-			</section>
-			<!-- End contact us -->
+			
 			
 		</div><!-- /.du-about -->
 	</div><!-- /.du-subpage content -->
