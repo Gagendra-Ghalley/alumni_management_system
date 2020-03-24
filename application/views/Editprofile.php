@@ -25,17 +25,16 @@
             
                 <div class="container">
                     <div class="col-md-9 row text-center">
-                       <h4>Profile Management</h4>
+                       <h3>Profile Management</h3>
                             <img style="height: 150px;width: 150px;border-radius: 50%" src="<?php echo base_url();?>assets/img1/membership.jpg "  alt=""/>
-                            <br>
-                            <br>
+                    <!--        
 
-                        <div >
+                        <div class="text-center ">
                           <b>Name:Choden</b><br>
                             <b>CID:113067654</b><br>
                             <b>Batch:2020</b><br>
                        </div>
-
+ -->
                     </div>
 
                  </div>
