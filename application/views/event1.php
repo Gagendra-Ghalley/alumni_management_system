@@ -163,7 +163,7 @@
 			                            <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
 			                        </div>
 			                        <div class="du-date-short-des">
-			                            <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
+			                            <p>Please join if you are interested in this event.</p>
 			                        </div>
 			                    </div>
 			                </div>
