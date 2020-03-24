@@ -48,6 +48,13 @@
                     </li>
 
                      <li>
+                       <a href="<?php echo base_url()?>index.php/Settings/Editprofile/">
+                            
+                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Profile Management </span></a>
+                    </li>
+                    
+
+                     <li>
                        <a href="<?php echo base_url()?>index.php/Settings/Profilepassword/">
                             
                       <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Change your password </span></a>

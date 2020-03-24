@@ -446,6 +446,7 @@
                     
     <div class="agile-contact" id="contact">
     <div class="left-contact">
+        
 
             <h6>contact us</h6>
             <ul>

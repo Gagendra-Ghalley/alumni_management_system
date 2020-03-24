@@ -17,169 +17,48 @@
                 </div>
                 
             </div>
-             <div class="clockwrapper">
-                <div id="clock"></div>,
-                <?php echo date('D d/M/Y');?>
-            </div>
-<div class="col-lg-12">
-<div class="du-subpage-content">
+            
+
+
 
     <div class="container emp-profile">
-            <form method="post">
+            
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="<?php echo base_url();?>assets/img1/membership.jpg" alt=""/>
-                            <div class="file btn btn-lg btn-primary">
-                                Change Photo
-                                <input type="file" name="file"/>
-                            </div>
+                    <div class="col-lg-4">
+                        <div class="profile-img ">
+                            <img style="height: 200px;width: 200px ;border-radius: 50%" src="<?php echo base_url();?>assets/img1/membership.jpg "  alt=""/>
+                            
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <br>
+                    <div class="container">
+                        <div class="row col-md-9">
                         <div class="profile-head">
-                                    <h5>
-                                        Pema Deki
-                                    </h5>
-                                    <h6>
-                                        Lecture Of College Of Science And Technology 
-                                    </h6>
-                                    
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a>Detail</a>
-                                    <div class="container">
-                                         <div class="col-md-8">
-                       
-                           
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>User Id</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>pema@12345</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>pema Deki</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>pemadeki@gmail.com</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>77777777</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Profession</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Lecture</p>
-                                            </div>
-                                        </div>
-
-                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Experience</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Hourly Rate</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>10$/hr</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Total Projects</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>230</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>English Level</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Availability</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>6 months</p>
-                                            </div>
-                                        </div>
-                                <div class="row">
-                                   
-                                </div>
-                          
-                        
-                                        
-                                    </div>
-
-                                </li>
-                                <li class="nav-item" class="bg-primary" >
-                                    
-                                    <a href="<?php echo base_url()?>index.php/Settings/Editprofile/">Edit Profile</a>
-                        
-                             
-                                </li>
-                            </ul>
+                                                       
+                                    <b>User Profile</b>
+                                <ul>   
+                                    <li><b>Name:</b> Choden</li>
+                                    <li><b>CID no:</b> 1234567897</li>
+                                    <li><b>Education:</b> College Of Science And Technology</li>
+                                    <li><b>Work Place:</b> Department Of Information Technology And<br> Telecommunication(DITT)</li>
+                                    <li><b>Publication:</b> Research Paper on Network System in CST</li>
+                                    <li><b>Conference:</b> International Conference-ICSciTec</li>
+                                </ul>
                         </div>
+                                    
+                        
+                                  
                     </div>
+                </div>
+                  
                   
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-work">
-                            <p>WORK LINK</p>
-                            <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a>
-                            <p>SKILLS</p>
-                            <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/>
-                        </div>
-                    </div>
-                   
-                </div>
-            </form>           
+              
+                  
         </div>
       
-    </div><!-- /.du-subpage content -->
-
+   
            
-
-
-        </div>
-        <!-- end page-wrapper -->
 
     </div>
  <div class="bg-primary" class="du-newsletter">

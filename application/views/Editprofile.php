@@ -1,317 +1,356 @@
  <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/bootstrap.min1.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-<div id="page-wrapper">
-
-    <div class="row" class="pace-theme-big-counter">
-        <!--   Page Header -->
-        <div class="col-lg-9">
-            <h3 class="page-header"><font size="5" color="#FFF">Edit Your Profile</font></h3>
-            <div class="clockwrapper">
-                <div id="clock"></div>,
-                <?php echo date('D d/M/Y');?>
-            </div>
-        </div>
-        <!--  End Page Header -->
-    </div>
-
-   
-
-<div class="col-sm-9">
-    
-
-    <div class="tab-content">
-        <div class="tab-pane active" id="home">
-            <hr>
-            <form class="form" action="##" method="post" id="registrationForm">
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="first_name">
-                            <h4>First name</h4></label>
-                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="last_name">
-                            <h4>Last name</h4></label>
-                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                    </div>
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="phone">
-                            <h4>Phone</h4></label>
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label for="mobile">
-                            <h4>Mobile</h4></label>
-                        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="email">
-                            <h4>Email</h4></label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="email">
-                            <h4>Location</h4></label>
-                        <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="password">
-                            <h4>Password</h4></label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="password2">
-                            <h4>Verify</h4></label>
-                        <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-12">
-                        <br>
-                        <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                        <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
-                    </div>
-                </div>
-            </form>
-
-            <hr>
-
-        </div>
-        <!--/tab-pane-->
-        <div class="tab-pane" id="messages">
-
-            <h2></h2>
-
-            <hr>
-            <form class="form" action="##" method="post" id="registrationForm">
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="first_name">
-                            <h4>First name</h4></label>
-                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="last_name">
-                            <h4>Last name</h4></label>
-                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                    </div>
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="phone">
-                            <h4>Phone</h4></label>
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label for="mobile">
-                            <h4>Mobile</h4></label>
-                        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="email">
-                            <h4>Email</h4></label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="email">
-                            <h4>Location</h4></label>
-                        <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="password">
-                            <h4>Password</h4></label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="password2">
-                            <h4>Verify</h4></label>
-                        <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-9">
-                        <br>
-                        <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                        <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
-                    </div>
-                </div>
-            </form>
-
-        </div>
-        <!--/tab-pane-->
-        <div class="tab-pane" id="settings">
-
-            <hr>
-            <form class="form" action="##" method="post" id="registrationForm">
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="first_name">
-                            <h4>First name</h4></label>
-                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="last_name">
-                            <h4>Last name</h4></label>
-                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                    </div>
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="phone">
-                            <h4>Phone</h4></label>
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label for="mobile">
-                            <h4>Mobile</h4></label>
-                        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="email">
-                            <h4>Email</h4></label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="email">
-                            <h4>Location</h4></label>
-                        <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="password">
-                            <h4>Password</h4></label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                    </div>
-                </div>
-                <div class="form-group">
-
-                    <div class="col-xs-6">
-                        <label for="password2">
-                            <h4>Verify</h4></label>
-                        <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-12">
-                        <br>
-                        <button class="btn btn-lg btn-success pull-right" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                        <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    </div>
-
-    <!--/tab-pane-->
-</div>
-
-
-    <div class="panel panel-default">
-        <div class="panel-heading"></div>
-        <div class="panel-body">
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+            <br>
            
-        </div>
-    </div>
+            <div class="row">
+                <!-- Welcome -->
+                <div class="col-md-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
 
-    </div>
- <div class="bg-primary" class="du-newsletter">
-            <div class="container">
 
-               
-
-                <div class="col-md-6">
-
-                    <p>@Alumni Management System</p>
-
+ 
+                    </div>
                 </div>
-
+                
             </div>
-        </div>
+            
 
-</div>
-<!--/tab-content-->
-<script type="text/javascript">
-    $(document).ready(function() {
 
-        var readURL = function(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
 
-                reader.onload = function(e) {
-                    $('.avatar').attr('src', e.target.result);
-                }
+    <div class="container emp-profile">
+            
+                <div class="container">
+                    <div class="col-md-9 row text-center">
+                       <h4>Profile Management</h4>
+                            <img style="height: 150px;width: 150px;border-radius: 50%" src="<?php echo base_url();?>assets/img1/membership.jpg "  alt=""/>
+                            <br>
+                            <br>
 
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+                        <div >
+                          <b>Name:Choden</b><br>
+                            <b>CID:113067654</b><br>
+                            <b>Batch:2020</b><br>
+                       </div>
 
-        $(".file-upload").on('change', function() {
-            readURL(this);
-        });
-    });
-</script>
+                    </div>
+
+                 </div>
+                 <br>
+                     
+                
+                
+                    <div class="container">
+                        <div class="row col-md-6 ">
+                        <h5><b>Workplace</b></h5>
+                       
+                       
+                        <p style="margin-left:60px;color: #222" id=""><b>Occupation/Position</b><i class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Occupation"></i>
+                        <div id="Occupation" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                       <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+                         
+                         <p style="margin-left:60px;color: #222" id=""><b>Organization</b><i style="margin-left: 47px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Organization"></i>
+                        <div id="Organization" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                         <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                       
+                         <p style="margin-left:60px;color: #222" id=""><b>Office Address</b><i style="margin-left: 35px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Office"></i>
+                        <div id="Office" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                         <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+                         
+
+                          <p style="margin-left:60px;color: #222" id=""><b>Email Address</b><i style="margin-left: 37px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Email"></i>
+                        <div id="Email" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                        <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                        
+
+                         <p style="margin-left:60px;color: #222" id=""><b>Contact Address</b><i style="margin-left: 24px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Contact"></i>
+                        <div id="Contact" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                         <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                               
+                        </div>
+                    
+                    
+                        <div class="row col-md-6 ">
+                             <h5><b>Publication</b></h5>
+                            
+
+                               <p style="margin-left:60px;color: #222" id=""><b>Research Paper</b><i class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Paper"></i>
+                        <div id="Paper" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                         <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                               
+                                <p style="margin-left:60px;color: #222" id=""><b>Journal</b><i style="margin-left: 50px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Journal"></i>
+                        <div id="Journal" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                         <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                              
+                               <p style="margin-left:60px;color: #222" id=""><b>Books</b><i style="margin-left: 57px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#books"></i>
+                        <div id="books" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                        <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                
+
+
+                                  
+                        </div>    
+              
+                  
+                      </div>
+
+                       <div class="container">
+                        <div class="row col-md-6 ">
+                        <h5><b>Education</b></h5>
+                        <p style="margin-left:60px;color: #222" id=""><b>College</b><i style="margin-left: 82px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Education"></i>
+                        <div id="Education" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                         <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+                        
+                          <p style="margin-left:60px;color: #222" id=""><b>Master</b><i style="margin-left: 87px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Master"></i>
+                        <div id="Master" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+                          
+                           <p style="margin-left:60px;color: #222" id=""><b>PhD</b><i style="margin-left: 105px"  class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#PhD"></i>
+                        <div id="PhD" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                   <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                        <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+                          
+                            <p style="margin-left:60px;color: #222" id=""><b>Other</b><i style="margin-left: 97px"  class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Other"></i>
+                        <div id="Other" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+                                  
+                </div>
+                    
+                    
+                        <div class="row col-md-6 ">
+                             <h5><b>Conference</b></h5>
+                              
+
+                               <p style="margin-left:60px;color: #222" id=""><b>Seminar</b><i style="margin-left: 50px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Seminar"></i>
+                        <div id="Seminar" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                         <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                               
+
+                                <p style="margin-left:60px;color: #222" id=""><b>Training</b><i style="margin-left: 50px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Training"></i>
+                        <div id="Training" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                        < <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                              
+                                 <p style="margin-left:60px;color: #222" id=""><b>Workshop</b><i style="margin-left: 38px" class="glyphicon glyphicon-plus-sign btn btn-defult btn-sm" data-toggle="collapse" data-target="#Workshop"></i>
+                        <div id="Workshop" class="collapse">
+                            <div class="container-fluid padding">
+                                <div class="row text-center">
+                                    <div class="col-md-8 ">
+                                        <input  type="text" name="text" value="type here">
+                                        
+                                        <button class="bg-info">Add</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        </p>
+
+
+                        
+                                  
+                        </div>    
+              
+                  
+                      </div>
+
+
+      
+   
+           
+
+    </div>
+      
+
+
+  
+
+
+
