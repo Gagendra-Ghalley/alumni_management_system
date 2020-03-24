@@ -47,37 +47,11 @@
                                     
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Detail</a>
-                                </li>
-                                <li class="nav-item" class="bg-primary" >
-                                    
-                                    <a href="<?php echo base_url()?>index.php/Settings/Editprofile/">Edit Profile</a>
-                        
-                             
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                  
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-work">
-                            <p>WORK LINK</p>
-                            <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a>
-                            <p>SKILLS</p>
-                            <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <a>Detail</a>
+                                    <div class="container">
+                                         <div class="col-md-8">
+                       
+                           
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>User Id</label>
@@ -162,15 +136,39 @@
                                 <div class="row">
                                    
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                       
-
-                               
-                            </div>
-                        </div>
+                          
                         
+                                        
+                                    </div>
+
+                                </li>
+                                <li class="nav-item" class="bg-primary" >
+                                    
+                                    <a href="<?php echo base_url()?>index.php/Settings/Editprofile/">Edit Profile</a>
+                        
+                             
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                  
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>WORK LINK</p>
+                            <a href="">Website Link</a><br/>
+                            <a href="">Bootsnipp Profile</a><br/>
+                            <a href="">Bootply Profile</a>
+                            <p>SKILLS</p>
+                            <a href="">Web Designer</a><br/>
+                            <a href="">Web Developer</a><br/>
+                            <a href="">WordPress</a><br/>
+                            <a href="">WooCommerce</a><br/>
+                            <a href="">PHP, .Net</a><br/>
+                        </div>
+                    </div>
+                   
                 </div>
             </form>           
         </div>

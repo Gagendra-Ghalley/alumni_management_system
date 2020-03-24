@@ -163,12 +163,12 @@
 			                            <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
 			                        </div>
 			                        <div class="du-date-short-des">
-			                            <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
+			                            <p>Collage Foundation Day</p>
 			                        </div>
 			                    </div>
 			                </div>
 			                <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></a>
+			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height:240px" alt=""></a>
 			                </div>
 			            </div>
 
@@ -180,12 +180,12 @@
 			                            <strong>6 <img src="<?php echo base_url();?>assets/img1/page1_icon4.png" alt=""></strong>
 			                        </div>
 			                        <div class="du-date-short-des">
-			                            <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
+			                            <p>Annual Programming Contest</p>
 			                        </div>
 			                    </div>
 			                </div>
 			                <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></a>
+			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider4.png" style="height:240px" alt=""></a>
 			                </div>
 			                </div>
 
