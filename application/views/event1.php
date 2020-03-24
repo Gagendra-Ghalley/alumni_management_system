@@ -163,7 +163,10 @@
 			                            <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
 			                        </div>
 			                        <div class="du-date-short-des">
+
 			                            <p>Collage Foundation Day</p>
+			                            <p>Please join if you are interested in this event.</p>
+
 			                        </div>
 			                    </div>
 			                </div>
