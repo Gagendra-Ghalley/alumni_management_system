@@ -114,7 +114,7 @@
 							</span><br><br>
 
 
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>3.To collaborate with stakeholders and provide expert services.</strong></span><br/>
+							<span style="font-family:georgia; color:black; font-size: 16px"><strong>3.To coommorate with stakeholders and provide expert services.</strong></span><br/>
 							<span style="font-family:georgia; color:black; font-size: 16px">To enhance industry-academia relations, the college will continuously develop linkages with stakeholder within and outside country.  provide consultancies and  training’s (including tailor made) to support industries and other organizations with technical services, and to provide expert opinions in line with the changing needs to help industries in making appropriate decisions.</span><br><br>
 
 
