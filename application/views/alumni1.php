@@ -274,19 +274,36 @@
         </div>
 
     </div>
-
-
     <div class="du-current-news center">
-        
-               
-        <div class="container">
-            <h2 class="center" style="color:#428af5">Upcoming Events </h2>
+    <div class="container  bg-dark">
+        <div class="row padding">
+            <div class="col-lg-5 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
+                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
+                        <div>
+                            
+                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days hours Minutes Second</p>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                    <div  class="bg-primary" >
-                        <div class="badge"  class="bg-primary">
-                             <span> <button style="height:70px;width:75px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+                               
+                        </div>
+                       
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12 " >
+                
+                    <div class="bg-info" >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
 
                                     <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
 
@@ -294,7 +311,7 @@
 
                             <br> 
                             <table>
-      <tbody>
+                             <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
                                                
                                                 <tr>
@@ -312,28 +329,22 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                        <p><font size="4" color="white"><?php
+                                    
+                                        <p><font size="4" color="#222"><?php
                                         // $a="+";
                                         echo ($count1);
-                                        echo (" Members are interested");?></font></p>
-                        </div>
-                        <div class="du-date-short-des">
-
-                            <h3><font color="white">College foundation day</font></h3>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-12 col-sm-12" data-wow-delay="0.2s">
-                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 260px;width:1000px" alt=""></a>
-
-                </div>
-                </figure>
+                                        echo (" Members");?></font></p>
+                    </div>      
+               
             </div>
-            
-
         </div>
+
+        
     </div>
+     </div>
+
+
+    
 
     <section class="du-teacher du-section-ash ptb-50 common">
         <!-- Team Block -->
@@ -534,6 +545,37 @@
     <!-- Custom script -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
+     <script>
+                                // Set the date we're counting down to
+                                var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+                                // Update the count down every 1 second
+                                var x = setInterval(function() {
+
+                                  // Get today's date and time
+                                  var now = new Date().getTime();
+                                    
+                                  // Find the distance between now and the count down date
+                                  var distance = countDownDate - now;
+                                    
+                                  // Time calculations for days, hours, minutes and seconds
+                                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                    
+                                  // Output the result in an element with id="demo"
+                                  document.getElementById("demo").innerHTML = days + ": " + hours + ": "
+                                  + minutes + ": " + seconds + ": ";
+                                    
+                                  // If the count down is over, write some text 
+                                  if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("demo").innerHTML = "EXPIRED";
+                                  }
+                                }, 1000);
+                                </script>
+
  
 
 </body>

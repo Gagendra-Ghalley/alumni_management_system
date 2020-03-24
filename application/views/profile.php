@@ -37,12 +37,12 @@
                                                        
                                     <b>User Profile</b>
                                 <ul>   
-                                    <li><b>Name:</b> Choden</li>
-                                    <li><b>CID no:</b> 1234567897</li>
-                                    <li><b>Education:</b> College Of Science And Technology</li>
-                                    <li><b>Work Place:</b> Department Of Information Technology And<br> Telecommunication(DITT)</li>
-                                    <li><b>Publication:</b> Research Paper on Network System in CST</li>
-                                    <li><b>Conference:</b> International Conference-ICSciTec</li>
+                                    <li style="color: #222"><b>Name:</b> Choden</li>
+                                    <li style="color: #222"><b>CID no:</b> 1234567897</li>
+                                    <li style="color: #222"><b>Education:</b> College Of Science And Technology</li>
+                                    <li style="color: #222"><b>Work Place:</b> Department Of Information Technology And<br> Telecommunication(DITT)</li>
+                                    <li style="color: #222"><b>Publication:</b> Research Paper on Network System in CST</li>
+                                    <li style="color: #222"><b>Conference:</b> International Conference-ICSciTec</li>
                                 </ul>
                         </div>
                                     

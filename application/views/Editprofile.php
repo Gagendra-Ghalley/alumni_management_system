@@ -78,7 +78,7 @@
                         <div id="Organization" class="collapse">
                             <div class="container-fluid padding">
                                 <div class="row text-center">
-                                    <div class="col-md-6 " style="margin-left: 60px">
+                                    <div class="col-md-6 " style="margin-left: 62px">
                                         <form>
                                       <div class="form-group">
                                        
