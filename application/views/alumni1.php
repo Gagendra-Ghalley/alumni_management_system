@@ -38,28 +38,22 @@
     <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <header class="clearfix">
-        <nav class="navbar-fixed-top" role="navigation">
-        	
-
-
-            <div class="bg-primary" >
-                <div class="container">
-
-
-            <div class="bg-primary">
-                
-
-                    <div class="header-element clearfix">
+   <header class="clearfix">
+   <nav class="navbar-fixed-top" role="navigation">
+          
+  <div class="bg-primary" class="box" > 
+    <div class="container">
+    
+      <div class="header-element clearfix">
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="navbar-brand">
-          		<a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png"></a></div>
+                                <h1 class="navbar-brand navbar-brand_">
+              <a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
 
                             </div>
                             <div class="col-md-8" >
-                                <ul style="font-style: bold" class="flexy-menu orange" >
-                                    <li class="active" ><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
+                                <ul class="flexy-menu orange" >
+                                    <li   class="active"><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
@@ -72,11 +66,12 @@
                             </div>
                         </div>
                     </div>
-            
-            </div>
-        </nav>
-
-    </header>
+        </div>
+      </div>
+ 
+</nav>
+  
+</header>
 </head>
 <br>
 <br>
@@ -343,7 +338,7 @@
     </div>
      </div>
 
-     
+
 
 
     
