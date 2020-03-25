@@ -89,6 +89,19 @@
 			$this->load->view('aboutUs');
 		}
 
+		public function civil_engineering(){
+		
+		
+			$this->load->view('civil_engineering');
+		}
+
+
+	public function architecture(){
+		
+		
+			$this->load->view('architecture');
+		}
+
 //  public function registration(){//cst_team
 
 	 	

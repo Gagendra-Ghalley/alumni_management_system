@@ -102,8 +102,8 @@
                         <div class="item active deepskyblue">
                             <figure><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 350px" alt=""></figure>
                             <div class="carousel-caption">
-
-                                <h1 style="text-transform: uppercase; font-style:bold">Working diligently for the benefit of all alumni</h1>
+                                
+                                <h1 class="title" style="text-transform: uppercase; font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of <br>all alumni</h1>
 
 
                                
@@ -147,7 +147,7 @@
                             <figure><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 350px" alt=""></figure>
                             <div class="carousel-caption">
 
-                                <h1 style="text-transform: uppercase; font-style: bold">Working diligently for the benefit of all alumni</h1>
+                                <h1 style="text-transform: uppercase;font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of all alumni</h1>
 
                                 <table>
                                     <tbody>
@@ -182,7 +182,7 @@
                             <figure><img src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 350px" alt=""></figure>
                             <div class="carousel-caption">
 
-                                <h1 style="text-transform: uppercase;">Working diligently for the benefit of all alumni</h1>
+                                <h1 style="text-transform: uppercase; font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of all alumni</h1>
 
                                 <table>
                                     <tbody>
@@ -218,7 +218,7 @@
                             <figure><img src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 350px" alt=""></figure>
                             <div class="carousel-caption">
 
-                                <h1 style="text-transform: uppercase;">Working diligently for the benefit of all alumni</h1>
+                                <h1 style="text-transform: uppercase;font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of all alumni</h1>
 
                                 <table>
                                     <tbody>
@@ -262,7 +262,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <!-- /.carousel -->
+              
 
             </div>
 
@@ -272,12 +272,12 @@
     <div class="du-current-news center ">
     <div class="container img-thumbnail">
         <div class="row padding">
-            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+            <div class="col-lg-7 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
                     <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12" >
+            <div class="col-lg-3 col-md-12 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title text-left bold">UP COMMING EVENT</div><br>
@@ -295,16 +295,9 @@
                   
                 </div>
             </div>
-            <div class="col-lg-2 col-md-12 col-sm-12 " >
+            <div class="col-md-2 col-sm-12 " >
                 
-                    <div class="bg-info" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
-
-                                </button></span>
-
-                            <br> 
+                   
                             <table>
                              <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
@@ -324,12 +317,18 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                    
-                                        <p><font size="4" color="#222"><?php
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
                                         // $a="+";
                                         echo ($count1);
-                                        echo (" Members");?></font></p>
-                    </div>      
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+
+                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button>   
                
             </div>
 
@@ -342,11 +341,6 @@
     </div>
      </div>
 
-
-
-
-    
-
     <section class="du-teacher du-section-ash ptb-50 common">
         <!-- Team Block -->
         <div class="team-content">
@@ -354,9 +348,9 @@
             <div class="container">
                 <div class="row">
                     <!-- <h2 class="text-center">Our Teacher</h2> -->
-                    <div class="col-md-4 col-sm-7">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <!-- Team Box -->
-                        <div class="team-box wow fadeInLeft">
+                        <div class="team-box wow fadeInLeft img-thumbnail">
                             <!-- Image -->
                             <figure><img src="<?php echo base_url();?>assets/img1/wellcome.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
@@ -370,9 +364,9 @@
 
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-7">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <!-- Team Box -->
-                        <div class="team-box wow fadeInLeft">
+                        <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/membership.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
                             <!-- Heading -->
@@ -386,9 +380,9 @@
 
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-7">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <!-- Team Box -->
-                        <div class="team-box wow fadeInLeft">
+                        <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/donate.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
                             <!-- Heading -->
@@ -409,9 +403,9 @@
                     <br>
                     <br>
 
-                    <div class="col-md-4 col-sm-7">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <!-- Team Box -->
-                        <div class="team-box wow fadeInLeft">
+                        <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/events.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
                             <!-- Heading -->
@@ -425,9 +419,9 @@
 
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-7">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <!-- Team Box -->
-                        <div class="team-box wow fadeInLeft">
+                        <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/faculty.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
                             <!-- Heading -->
@@ -440,9 +434,9 @@
 
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-7">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <!-- Team Box -->
-                        <div class="team-box wow fadeInLeft">
+                        <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/profile.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
                             <!-- Heading -->
@@ -455,9 +449,19 @@
 
                         </div>
                     </div>
-                    
-    <div class="agile-contact " id="contact">
-    <div class="left-contact">
+    
+
+
+                </div>
+            </div>
+
+
+        </div>
+      
+    </section>
+                   
+    <div class="agile-contact col-md-12">
+    <div class="left-contact col-md-6">
         
 
             <h6>contact us</h6>
@@ -482,21 +486,6 @@
     <div class="clearfix"></div>
 </div>
 
-
-                </div>
-            </div>
-
-
-        </div>
-        <!-- /Container -->
-        </div>
-        <!-- / Team -->
-    </section>
-
-    
-
-<!--//contact-->
-<!--//main-content-->
 
 <!--footer-->
  <div class="bg-primary" class="du-newsletter">
