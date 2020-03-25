@@ -332,6 +332,10 @@
                     </div>      
                
             </div>
+
+                        <div class="col-md-12">
+                        <button class="btn btn-link text-primary btn-lg"><b><a href="<?php echo base_url();?>index.php/ATD/login1/">Read more</a></b></button>
+                        </div>
         </div>
 
         
