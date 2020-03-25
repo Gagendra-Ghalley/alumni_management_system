@@ -961,7 +961,7 @@ public function reciept()
 	}
 	
 
-	public function membersearch(){
+	public function membersearch1(){
  	
 		
 		$this->load->view('template/includeheader',$this->dataheader);
