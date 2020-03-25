@@ -1,5 +1,8 @@
 
         <!--  page-wrapper -->
+         <style>
+#more {display: none;}
+</style>
         <div id="page-wrapper">
 
             <div class="row">
@@ -23,37 +26,43 @@
             </div>
             
 <div class="du-subpage-content">
-        <div class="du-event">
-
-            <!-- Begin choose us -->
-            <section class="event ptb-50">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                            <h1>Event</h1>
+    <div class="container img-thumbnail">
+        <div class="row padding">
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 500px" ></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-12 col-sm-12" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
+                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
+                        <div>
                             
-                                
+                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
+
+                               
                         </div>
+                       
                     </div>
-                    
-                    <section class="du-all-event">
-                    
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                                <div>
-                                    <div class="badge">
-                                        <span> <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
+                  
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12 " >
                 
-                           
-                                <?php foreach($user->result() as $row){?>
-                                
-                                <input type="hidden"  name="cid" value="<?php echo $row->cid;?>">
-                           <input type="submit" style="height:70px;width:75px;font-size:16px;font-family:Times New Roman;" class="btn btn-info btn-lg" data-animation="animated zoomInUp" value="Join Now" >
-                           <?php } ?>
-                         
-                </form>  <table>
-      <tbody>
+                    <div class="bg-info" >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+
+                                </button></span>
+
+                            <br> 
+                            <table>
+                             <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
                                                
                                                 <tr>
@@ -71,145 +80,43 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                        <p style="font-family:Times New Roman;"><font size="4" color="white"><?php
+                                    
+                                        <p><font size="4" color="#222"><?php
                                         // $a="+";
                                         echo ($count1);
-                                        echo (" Members are interested");?></font></p>
-</span>
-                                        
-                                    </div>
-                                    <div class="du-date-short-des">
-                                         <h3 style="font-family:Times New Roman;"><font color="white">College Rimdro</font></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                                <a href="#"><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></a>
-                            </div>
-                        </div>
-                         <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                                <div>
-                                    <div class="badge">
-                                        24 <span>jun</span>
-                                        <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
-                                    </div>
-                                    <div class="du-date-short-des">
-                                       <h3 style="font-family:Times New Roman;"><font color="white">College Foundation Day</font></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                               <a href="#"><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></a>
-                            </div>
-                        </div>
-                         <div class="col-lg-12" style="height: 100px;">
-                                <div class="blog-page-pagination">
-                                    <!-- Pagination Small -->
-                                      <ul class="pagination pagination-sm">
-                                        <li><a href="#">«</a></li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li class="disabled"><a href="#">»</a></li>
-                                      </ul>
-                                </div>
-                            </div>
-                 
-
-                       <!--  <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                                <div>
-                                    <div class="badge">
-                                        24 <span>jun</span>
-                                        <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
-                                    </div>
-                                    <div class="du-date-short-des">
-                                        <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                                <figure><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></figure>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                                <div>
-                                    <div class="badge">
-                                        14 <span>jun</span>
-                                        <strong>6 <img src="<?php echo base_url();?>assets/img1/page1_icon4.png" alt=""></strong>
-                                    </div>
-                                    <div class="du-date-short-des">
-                                        <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                                <figure><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></figure>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-                                <div>
-                                    <div class="badge">
-                                        20 <span>jun</span>
-                                        <strong>3 <img src="<?php echo base_url();?>assets/img1/page1_icon4.png" alt=""></strong>
-                                    </div>
-                                    <div class="du-date-short-des">
-                                        <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit, a commodo libero dicuij futumty pottor estibulum   egestas egestas erat et iaculis.</p>
-                                    </div>
-                                </div>
-                            </div> -->
-                           <!--  <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                                <figure><img src="<?php echo base_url();?>assets/img1/page1_pic4.jpg" alt=""></figure>
-                            </div> -->
-                             </section>
-                        </div>
-
-
-
-
-                    </section>              
-                    
-                </div>
-         
-            <!-- End event -->
-
-
-            
-            
+                                        echo (" Members");?></font></p>
+                    </div>      
+               
+            </div>
         </div>
-
-            <div class="row">
-                <div class="col-lg-8">
-
-
-
-                  
-                    
-
+ <div class="container">
+                <div class="col-md-5">
+                    <p class="text-bold"><b>Description</b></p>
                 </div>
+                <div class="col-md-5">
+                    <p class="text-bold"><b>Description</b></p>
+                </div>
+            </div>
+             <div class="container">
+                <div class="col-md-10">
+                    
+                        
+                        <p class="text-bold text-center text-justify">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
+                        
+                        <div class="col-md-10">
+                        <button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
+                        </div>
+                        
+            </div>
+        </div>
+        
+    </div>   
 
               
-
-            </div>
-
-           
-
-                      
+ </div>
 
 
-         
-
-
-
-
-        <div class="bg-primary" class="du-newsletter">
+      <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
@@ -223,10 +130,6 @@
             </div>
         </div>
 
-
-    <!-- end wrapper -->
-
-  
  <script>
     
     function searchFunction(){
@@ -257,5 +160,52 @@
     
     
 </script>
- 
+ <script>
+                                // Set the date we're counting down to
+                                var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+                                // Update the count down every 1 second
+                                var x = setInterval(function() {
+
+                                  // Get today's date and time
+                                  var now = new Date().getTime();
+                                    
+                                  // Find the distance between now and the count down date
+                                  var distance = countDownDate - now;
+                                    
+                                  // Time calculations for days, hours, minutes and seconds
+                                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                    
+                                  // Output the result in an element with id="demo"
+                                  document.getElementById("demo").innerHTML = days + ": &nbsp " + hours + ": &nbsp"
+                                  + minutes + ": &nbsp " + seconds + ": &nbsp ";
+                                    
+                                  // If the count down is over, write some text 
+                                  if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("demo").innerHTML = "EXPIRED";
+                                  }
+                                }, 1000);
+                                </script>
+ <script>
+                        function myFunction() {
+                          var dots = document.getElementById("dots");
+                          var moreText = document.getElementById("more");
+                          var btnText = document.getElementById("myBtn");
+
+                          if (dots.style.display === "none") {
+                            dots.style.display = "inline";
+                            btnText.innerHTML = "Read more"; 
+                            moreText.style.display = "none";
+                          } else {
+                            dots.style.display = "none";
+                            btnText.innerHTML = "Read less"; 
+                            moreText.style.display = "inline";
+                          }
+                        }
+                    </script>
+                    
 

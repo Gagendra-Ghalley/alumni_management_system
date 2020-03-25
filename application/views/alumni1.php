@@ -274,15 +274,15 @@
         </div>
 
     </div>
-    <div class="du-current-news center">
-    <div class="container  bg-dark">
+    <div class="du-current-news center ">
+    <div class="container img-thumbnail">
         <div class="row padding">
-            <div class="col-lg-5 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
                     <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-12 col-sm-12" >
+            <div class="col-lg-4 col-md-12 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title text-left bold">UP COMMING EVENT</div><br>
@@ -291,7 +291,7 @@
                         <div>
                             
                                 <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
-                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days hours Minutes Second</p>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
 
                                
                         </div>
@@ -342,6 +342,8 @@
         
     </div>
      </div>
+
+     
 
 
     
@@ -455,7 +457,7 @@
                         </div>
                     </div>
                     
-    <div class="agile-contact" id="contact">
+    <div class="agile-contact " id="contact">
     <div class="left-contact">
         
 
@@ -565,8 +567,8 @@
                                   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
                                     
                                   // Output the result in an element with id="demo"
-                                  document.getElementById("demo").innerHTML = days + ": " + hours + ": "
-                                  + minutes + ": " + seconds + ": ";
+                                  document.getElementById("demo").innerHTML = days + ": &nbsp " + hours + ": &nbsp"
+                                  + minutes + ": &nbsp " + seconds + ": &nbsp ";
                                     
                                   // If the count down is over, write some text 
                                   if (distance < 0) {

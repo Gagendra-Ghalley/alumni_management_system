@@ -28,7 +28,9 @@
   <!-- Font  -->
   <!-- <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
-  
+  <style>
+#more {display: none;}
+</style>
 
 </head>
   
@@ -77,51 +79,46 @@
 
 
 <div class="dream-university-subpage">
-
-	<!-- Begin breadcrumbs-->
-	<div class="du-page-header du-breadcrumbs">		
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7 col-sm-7 col-xs-12 text-left du-title">
-					<div class="du-breadcrumb-title"><h3>Event</h3></div>				
-				</div>
-						
-			</div>
-		</div>		
-	</div>
-	<!-- End breadcrumbs-->
+<br>
 	
-	
-	<!-- Begin Event -->
-	<div class="du-subpage-content">
-		<div class="du-event">
+<div class="du-current-news center bg-secondary">
+    <div class="container img-thumbnail">
+        <div class="row padding">
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 200px;width: 500px" ></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-12 col-sm-12" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
+                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
+                        <div>
+                            
+                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
 
-			<!-- Begin choose us -->
-			<section class="event ptb-50">
+                               
+                        </div>
+                       
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12 " >
+                
+                    <div class="bg-info" >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
 
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 text-center">
-							<h2>All Event</h2>
-							
-								
-						</div>
-					</div>
-					
-					<section class="du-all-event">
-					
-						<div class="row">
-			                <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-			                    <div>
-			                        <div class="badge">
-			                            <span> <button style="height:70px;width:75px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
 
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a></button></span>
-                                    <br>
+                                </button></span>
 
-			                          
+                            <br> 
                             <table>
-      <tbody>
+                             <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
                                                
                                                 <tr>
@@ -139,86 +136,301 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                        <p><font size="4" color="white"><?php
+                                    
+                                        <p><font size="4" color="#222"><?php
                                         // $a="+";
                                         echo ($count1);
-                                        echo (" Members are interested");?></font></p>
-			                        </div>
-			                        <div class="du-date-short-des">
-			                        	<h3><font color="white">College Rimdro</font></h3>
-			                           <!--  <p>Lorem ipsum dolor sit amedgit, consectetur adipscing elitsf tell. Mauris feugiat vari dghus elit</p> -->
-			                        </div>
-			                    </div>
-			                </div>
-			                <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height:240px" alt=""></a>
-			                </div>
-			            </div>
+                                        echo (" Members");?></font></p>
+                    </div>      
+               
+            </div>
+            <div class="container">
+            	<div class="col-md-6">
+            		<p class="text-bold"><b>Description</b></p>
+            	</div>
+            	<div class="col-md-6">
+            		<p class="text-bold"><b>Description</b></p>
+            	</div>
+            </div>
+            <div class="container">
+            	<div class="col-md-12">
+            		
+						
+						<p class="text-bold text-center text-justify">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.<span id="dots">...</span><span id="more">Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
+						
+						<div class="col-md-12">
+            			<button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
+            			</div>
+						
+            </div>
+        </div>
 
-			            <div class="row">
-			                <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-			                    <div>
-			                        <div class="badge">
-			                            24 <span>jun</span>
-			                            <strong>6 <img src="assets/img1/page1_icon4.png" alt=""></strong>
-			                        </div>
-			                        <div class="du-date-short-des">
+        
+    </div>
+</div>
 
-			                            <p>Collage Foundation Day</p>
-			                            <p>Please join if you are interested in this event.</p>
+     <div class="container img-thumbnail">
+        <div class="row padding">
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 200px;width: 500px" ></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-12 col-sm-12" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
+                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
+                        <div>
+                            
+                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
 
-			                        </div>
-			                    </div>
-			                </div>
-			                <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height:240px" alt=""></a>
-			                </div>
-			            </div>
+                               
+                        </div>
+                       
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12 " >
+                
+                    <div class="bg-info" >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
 
-			            <div class="row">
-			                <div class="col-lg-4 col-md-12 col-sm-12 du-news-date-box wow fadeInRight" data-wow-delay="0.2s">
-			                    <div>
-			                        <div class="badge">
-			                            14 <span>jun</span>
-			                            <strong>6 <img src="<?php echo base_url();?>assets/img1/page1_icon4.png" alt=""></strong>
-			                        </div>
-			                        <div class="du-date-short-des">
-			                            <p>Annual Programming Contest</p>
-			                        </div>
-			                    </div>
-			                </div>
-			                <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-			                    <a href="#"><img src="<?php echo base_url();?>assets/img1/slider4.png" style="height:240px" alt=""></a>
-			                </div>
-			                </div>
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
 
-			                <div class="col-md-12">
-								<div class="blog-page-pagination">
-				                	<!-- Pagination Small -->
-									  <ul class="pagination pagination-sm">
-										<li><a href="#">«</a></li>
-										<li class="active"><a href="#">1</a></li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">4</a></li>
-										<li><a href="#">5</a></li>
-										<li class="disabled"><a href="#">»</a></li>
-									  </ul>
-				                </div>
-							</div>
-			     
-					</section>				
-					
-				</div>
-			</section>
-			<!-- End event -->
+                                </button></span>
+
+                            <br> 
+                            <table>
+                             <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                    
+                                        <p><font size="4" color="#222"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members");?></font></p>
+                    </div>      
+               
+            </div>
+            <div class="container">
+            	<div class="col-md-6">
+            		<p class="text-bold"><b>Description</b></p>
+            	</div>
+            	<div class="col-md-6">
+            		<p class="text-bold"><b>Description</b></p>
+            	</div>
+            </div>
+             <div class="container">
+            	<div class="col-md-12">
+            		
+						
+						<p class="text-bold text-center text-justify">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.<span id="dots">...</span><span id="more">Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
+						
+						<div class="col-md-12">
+            			<button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
+            			</div>
+						
+            </div>
+        </div>
+        </div>
+
+        
+    </div>
+     <div class="container img-thumbnail">
+        <div class="row padding">
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 500px" ></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-12 col-sm-12" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
+                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
+                        <div>
+                            
+                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
+
+                               
+                        </div>
+                       
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12 " >
+                
+                    <div class="bg-info" >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+
+                                </button></span>
+
+                            <br> 
+                            <table>
+                             <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                    
+                                        <p><font size="4" color="#222"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members");?></font></p>
+                    </div>      
+               
+            </div>
+            <div class="container">
+            	<div class="col-md-6">
+            		<p class="text-bold"><b>Description</b></p>
+            	</div>
+            	<div class="col-md-6">
+            		<p class="text-bold"><b>Description</b></p>
+            	</div>
+            </div>
+            <div class="container">
+            	<div class="col-md-12">
+            		<p class="text-bold text-center">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology. </p>
+            	</div>
+            </div>
+            <div class="container">
+            	<div class="col-md-12">
+            		<button class="btn btn-link text-primary"><b>Read more</b></button>
+            	</div>
+            </div>
+        </div>
+
+        
+    </div>
+
+ <div class="container img-thumbnail">
+        <div class="row padding">
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px;width: 500px" ></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-12 col-sm-12" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
+                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
+                        <div>
+                            
+                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
+
+                               
+                        </div>
+                       
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-12 " >
+                
+                    <div class="bg-info" >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+
+                                </button></span>
+
+                            <br> 
+                            <table>
+                             <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                    
+                                        <p><font size="4" color="#222"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members");?></font></p>
+                    </div>      
+               
+            </div>
+        </div>
+<div class="container">
+            	<div class="col-md-6">
+            		<p class="text-bold"><b>Description</b></p>
+            	</div>
+            	<div class="col-md-6">
+            		<p class="text-bold"><b>Description</b></p>
+            	</div>
+            </div>
+            <div class="container">
+            	<div class="col-md-12">
+            		<p class="text-bold text-center">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology. </p>
+            	</div>
+            </div>
+            <div class="container">
+            	<div class="col-md-12">
+            		<button class="btn btn-link text-primary"><b>Read more</b></button>
+            	</div>
+            </div>
+        
+    </div>
 
 
-			
-			
-		</div><!-- /.du-event -->
-	</div><!-- /.du-subpage content -->
-	<!-- End Evnet -->
+    
+
+     </div>
+
+
+
 	  <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
@@ -274,5 +486,55 @@
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
 	<!-- Custom script -->
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
+	 <script>
+                                // Set the date we're counting down to
+                                var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+                                // Update the count down every 1 second
+                                var x = setInterval(function() {
+
+                                  // Get today's date and time
+                                  var now = new Date().getTime();
+                                    
+                                  // Find the distance between now and the count down date
+                                  var distance = countDownDate - now;
+                                    
+                                  // Time calculations for days, hours, minutes and seconds
+                                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                    
+                                  // Output the result in an element with id="demo"
+                                  document.getElementById("demo").innerHTML = days + ": &nbsp " + hours + ": &nbsp"
+                                  + minutes + ": &nbsp " + seconds + ": &nbsp ";
+                                    
+                                  // If the count down is over, write some text 
+                                  if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("demo").innerHTML = "EXPIRED";
+                                  }
+                                }, 1000);
+                                </script>
+
+
+						<script>
+						function myFunction() {
+						  var dots = document.getElementById("dots");
+						  var moreText = document.getElementById("more");
+						  var btnText = document.getElementById("myBtn");
+
+						  if (dots.style.display === "none") {
+						    dots.style.display = "inline";
+						    btnText.innerHTML = "Read more"; 
+						    moreText.style.display = "none";
+						  } else {
+						    dots.style.display = "none";
+						    btnText.innerHTML = "Read less"; 
+						    moreText.style.display = "inline";
+						  }
+						}
+					</script>
+					
   </body>
 </html>
