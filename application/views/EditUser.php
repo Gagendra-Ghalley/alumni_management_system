@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/cst6.css">
 <div class="row">
 	<div class="col-xs-12">
 		<div id="acknowledgement" style="display: none">

@@ -1,4 +1,5 @@
  <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/bootstrap.min1.css">
+ <link rel="stylesheet" href="<?php echo base_url();?>assets/css/cst6.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!--  page-wrapper -->
