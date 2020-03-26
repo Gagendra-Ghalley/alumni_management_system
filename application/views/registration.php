@@ -27,48 +27,46 @@
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-   <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" />
-      <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-      <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
+  <!--  <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" />
+ -->      <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
+     <!--  <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" /> -->
        <link href="css/bootstrap.min.css" rel="stylesheet"> 
-       <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet" /> 
+       <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
   
   
 
 
-
-   <header class="clearfix">
-   <nav class="navbar-fixed-top" role="navigation">
+<header class="clearfix">
+   <div id="wrapper">
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
           
-  <div class="bg-primary" class="box" > 
-    <div class="container">
+ 
+    <div class="bg-primary" class="container">
     
-      <div class="header-element clearfix">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h1 class="navbar-brand navbar-brand_">
-              <a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
-
-                            </div>
-                            <div class="col-md-8" >
-                                <ul class="flexy-menu orange" >
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
-                                    </li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
-                                    <li class="active"><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
-
-                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+      <div class="header-element clearfix"> 
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="navbar-brand navbar-brand_"><a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" style="width:55px ;height:55px"></a></h1>
+          </div>
+          <div class="col-md-8">
+            <ul class="flexy-menu orange">
+              <li ><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
+              <li><a href="about.html"><i class="icon-cogs"></i>About us</a></li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
+              </li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
+              <li class="active"><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+              
+               <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+            </ul>
+          </div>
         </div>
       </div>
- 
-</nav>
+    </div>
+    </nav>  
+    </div>
+  
   
 </header>
 
@@ -81,7 +79,7 @@
        
         <div class="row">
             <div class="col-md-4 col-md-offset-4 text-center logo-margin ">
-              <h1 id="login"><font size="6">CST Alumni Management system</font></h1>
+              <h1 class="panel-title" ><font size="6">CST Alumni Management system</font></h1>
                 </div>
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">                  

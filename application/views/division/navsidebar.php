@@ -1,4 +1,4 @@
-<link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet"/>
+<link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
 
 
         <!-- navbar side -->
@@ -44,20 +44,20 @@
                       <li>
                        <a href="<?php echo base_url()?>index.php/Settings/profile/">
                             
-                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>User Profile </span></a>
+                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>User Profile </a>
                     </li>
 
                      <li>
                        <a href="<?php echo base_url()?>index.php/Settings/Editprofile/">
                             
-                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Profile Management </span></a>
+                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Profile Management </a>
                     </li>
                     
 
                      <li>
                        <a href="<?php echo base_url()?>index.php/Settings/Profilepassword/">
                             
-                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Change your password </span></a>
+                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Change your password </a>
                     </li>
                   
                      <li>

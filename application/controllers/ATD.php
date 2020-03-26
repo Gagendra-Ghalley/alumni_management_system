@@ -323,7 +323,7 @@ public function validate_credentials1(){
 		
 		else {
 			
-			$this->login();
+			$this->login1();
 		}
 		
 		
@@ -427,7 +427,7 @@ public	function viewmember2(){
 			return false;
 				break;
 				
-			case 5 : $this->form_validation->set_message ('validate_credentials','Incorrect Username/Password');
+			case 5 : $this->form_validation->set_message ('validate_credentials','*Incorrect Username/Password');
 			return false;
 				break;
 		} 
