@@ -1,7 +1,7 @@
 /*Error message for registration and login*/
 div#errors {
-	color:darkred;
-	 padding: 0px 15px 7px 15px;
+    color:darkred;
+     padding: 0px 15px 7px 15px;
     margin-bottom:20px;
     font-size:18px;
 }
@@ -135,7 +135,7 @@ margin-bottom: 0px
 
 /*Body Background*/
 
-/*.panel-body.login {
+.panel-body.login {
     background-color: rgba(91, 192, 222, 0.4);
     
 }
@@ -143,9 +143,9 @@ margin-bottom: 0px
 
 
  body {
-   background-image: url("../img/bluriimagebnw");
+   background-image:none;
    background-attachment:fixed;
-}*/
+}
 /*End*/
 
 /* style.css */
@@ -159,10 +159,10 @@ margin-bottom: 0px
 /* ------------------------------- */
 
 
- /*body {
-   background-image: url("../img/bluriimagebnw.jpg") ;
+ body {
+   background-image:none;
    background-attachment:fixed;
-}*/
+}
 
 /* Wrappers */
 
@@ -186,8 +186,8 @@ margin-bottom: 0px
 
 
 .navbar-static-side ul li {
-    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
-    border-top: 1px solid rgba(255,255,255,0.05) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) ;
+    border-top: 1px solid rgba(255,255,255,0.05);
     transition: color .3s ease-in-out 0s;
 }
 
@@ -271,7 +271,7 @@ margin-bottom: 0px
 
 .nav-second-level li,
 .nav-third-level li {
-    border-bottom: none !important;
+    border-bottom: none ;
 }
 
 .nav-second-level li a {
@@ -496,7 +496,7 @@ table.dataTable thead .sorting:after {
     background: rgb(247, 247, 247);
 }
 .table.table-bordered.tablescroll.table-striped > tbody > tr > td, .table.table-bordered.tablescroll.table-striped>tbody>tr>th {
-    padding: 2px !important;
+    padding: 2px ;
 }
 .col-lg-3 .alert a {
     color: #a94442;
@@ -520,8 +520,8 @@ input.leave-input {
 }
 
 .tablescroll {
-    display: block !important;
-   overflow-y: auto !important;
+    display: block ;
+   overflow-y: auto ;
 }
 .center {
     text-align: center;
@@ -533,17 +533,17 @@ input.leave-input {
 }
 
 a.user-status {
-    color: #717171 !important;
-    border-bottom: 0px !important;
-    height: 30px !important;
+    color: #717171 ;
+    border-bottom: 0px;
+    height: 30px ;
 }
 
-/*.panel-body.login {
-    background-color: rgba(91, 192, 222, 0.4) ;
+.panel-body.login {
+    background-color: transparent; 
     
-}*/
+}
 .login-panel.panel.panel-default {
-    border:0px !important;
+    border:0px ;
     background: transparent ;
 }
 
@@ -565,15 +565,9 @@ h1 {
     
 }
 
-/*.body-Login-back {    
+.body-Login-back {    
   
-    background-image:url("../img/bluriimage.jpg") ;
-}*/
-div#errors {
-    color: #fff;
-    background-color: rgba(91, 192, 222, 0.4) ;
-    padding: 0px 15px 7px 15px;
-    margin-bottom:20px;
+    background-image:none;
 }
 
 .navbar-brand img {

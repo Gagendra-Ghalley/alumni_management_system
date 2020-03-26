@@ -1,4 +1,4 @@
-<link href="<?php echo base_url();?>assets/css/cst3.css" rel="stylesheet"/>
+<link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
 
 
         <!-- navbar side -->

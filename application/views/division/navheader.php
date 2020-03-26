@@ -12,7 +12,7 @@
       <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
       <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
        <link href="css/bootstrap.min.css" rel="stylesheet">  
-       <link href="<?php echo base_url();?>assets/css/cst3.css" rel="stylesheet"/>
+       <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
    <!-- Main CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
   <!-- Animate CSS -->
