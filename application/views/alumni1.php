@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!--header-->
+    <!-- css file link-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
@@ -37,7 +37,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-
+    <!-- Header-->
    <header class="clearfix">
    <nav class="navbar-fixed-top" role="navigation">
           
@@ -48,7 +48,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <h1 class="navbar-brand navbar-brand_">
-              <a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
+                                    <a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
 
                             </div>
                             <div class="col-md-8" >
@@ -77,7 +77,7 @@
 <br>
 <br>
 
-
+<!--Slider-->
 
 <body>
     <div class="du-banner-area">
@@ -96,12 +96,12 @@
                     </ol>
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
+                    <div class="carousel-inner " role="listbox">
 
                         <!-- First slide -->
                         <div class="item active deepskyblue">
                             <figure><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 350px" alt=""></figure>
-                            <div class="carousel-caption">
+                            <div class="carousel-caption ">
                                 
                                 <h1 class="title" style="text-transform: uppercase; font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of <br>all alumni</h1>
 
@@ -213,7 +213,7 @@
 									</div>
                             </div>
                         </div>
-
+                        <!--fourth slide-->
                         <div class="item darkerskyblue">
                             <figure><img src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 350px" alt=""></figure>
                             <div class="carousel-caption">
@@ -247,10 +247,10 @@
 
                             </div>
                         </div>
-                        <!-- /.item -->
+                     
 
                     </div>
-                    <!-- /.carousel-inner -->
+                    
 
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -269,12 +269,15 @@
         </div>
 
     </div>
+    <!--Upcoming event-->
     <div class="du-current-news center ">
     <div class="container img-thumbnail">
         <div class="row padding">
             <div class="col-lg-7 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
-                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
+                    
+                    <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
+                   
                 </div>
             </div>
             <div class="col-lg-3 col-md-12 col-sm-12" >
@@ -340,21 +343,21 @@
         
     </div>
      </div>
-
+     <!--body content-->
     <section class="du-teacher du-section-ash ptb-50 common">
-        <!-- Team Block -->
+        
         <div class="team-content">
-            <!-- Container -->
+            
             <div class="container">
                 <div class="row">
-                    <!-- <h2 class="text-center">Our Teacher</h2> -->
+                 
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                        <!-- Team Box -->
+                        <!-- image thumbnail -->
                         <div class="team-box wow fadeInLeft img-thumbnail">
                             <!-- Image -->
-                            <figure><img src="<?php echo base_url();?>assets/img1/wellcome.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+                            <figure><img src="<?php echo base_url();?>assets/img1/wellcome.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive img1-w3l"></figure>
 
-                            <!-- Heading -->
+                            <!-- about us -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">About us</h3>
@@ -365,11 +368,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                        <!-- Team Box -->
+                     
                         <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/membership.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
-                            <!-- Heading -->
+                            <!-- membership -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Membership</h3>
@@ -381,11 +384,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                        <!-- Team Box -->
+                      
                         <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/donate.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
-                            <!-- Heading -->
+                            <!-- Donate -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Donates</h3>
@@ -404,11 +407,11 @@
                     <br>
 
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                        <!-- Team Box -->
+                        
                         <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/events.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
-                            <!-- Heading -->
+                            <!-- Event -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Events</h3>
@@ -419,12 +422,19 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <!-- Team Box -->
-                        <div class="team-box wow fadeInLeft img-thumbnail">
-                            <figure><img src="<?php echo base_url();?>assets/img1/faculty.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
-                            <!-- Heading -->
+
+                
+
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        
+                        <div class="team-box wow fadeInLeft img-thumbnail">
+                           
+                        <figure class="view overlay zoomInUp">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img1/faculty.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive" alt="">
+                                  
+                        </figure>
+                            <!-- Faculty -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Faculty</h3>
@@ -435,11 +445,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                        <!-- Team Box -->
+                        
                         <div class="team-box wow fadeInLeft img-thumbnail">
                             <figure><img src="<?php echo base_url();?>assets/img1/profile.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
 
-                            <!-- Heading -->
+                            <!-- Profile -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Profile</h3>
@@ -447,6 +457,41 @@
                                 <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
+                        </div>
+                    </div>
+                    
+                    <div class="container img-thumbnail">
+                        <div class="col-md-4 col-sm-12 left-contact  ">
+
+                       <h3 class="title" style="color:#428af5;">Contact Us</h3>
+                        <ul>
+                            <li><i class="fa fa-envelope" ></i><a href="0216506.cst@rub.edu.bt">Alumni management system</a></li>
+                            <li><i class="fa fa-phone" ></i>+77777777</li>
+                            <li><i class="fa fa-map-marker"></i>college of science and technology</li>
+                        </ul>
+                                        
+                        </div>
+
+                          <div class="col-md-4 col-sm-12 left-contact ">
+
+                       <h3 class="title" style="color:#428af5;">Vist</h3>
+                        <ul  class="du-choose-list">
+                            <li><a href="#"><strong style="color:#428af5">College Of science And Technology</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#428af5">Royal Univerisity of Bhutan</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#428af5">VLE cst</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#428af5">Libary cst</strong></a></li>
+                            
+                        </ul>
+                                        
+                        </div>
+                        <div class="col-md-4 col-sm-12 left-contact ">
+
+                        <h3 class="title" style="color:#428af5;">Donates us </h3>
+                        <figure class="view overlay zoomInUp">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img1/donate.png" style="height: 270px;width: 100%" alt="" class="img-responsive" alt="">
+                                  
+                        </figure> 
+                                        
                         </div>
                     </div>
     
@@ -459,8 +504,8 @@
         </div>
       
     </section>
-                   
-    <div class="agile-contact col-md-12">
+    <!--contact us-->            
+    <!-- <div class="agile-contact col-md-12">
     <div class="left-contact col-md-6">
         
 
@@ -472,7 +517,8 @@
             </ul>
     
     </div>
-    <div class="right-contact">
+    <!--Location map-->
+    <!-- <div class="right-contact">
         <div class="map">
             <iframe src="https://www.google.com/maps/place/College+of+Science+and+Technology/@26.8502058,89.3918037,17z/data=!3m1!4b1!4m5!3m4!1s0x39e3cb2c210e611d:0x44c5cb2cd32b18d4!8m2!3d26.8502058!4d89.3939924?hl=en-US" frameborder="0" style="border:0" allowfullscreen></iframe>
             <form action="#" method="post">
@@ -484,7 +530,7 @@
         </div>
     </div>
     <div class="clearfix"></div>
-</div>
+</div> -->
 
 
 <!--footer-->
@@ -506,33 +552,22 @@
         </div>
 
 
-    <!--end PRELOAD-->
+  
 
-    <!-- Main jQuery & other 3rd party Library -->
+    <!-- javascript file -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>
-
-    <!-- Feature box equal height JS -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.equalheights.js"></script>
-    <!-- UI bottom to top JS -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.ui.totop.js"></script>
-    <!-- Subscription JS -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/sForm.js"></script>
-    <!-- Animation JS -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/wow.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/device.min.js"></script>
-    <!-- Menu JS -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/flexy-menu.js"></script>
-    <!-- Text rotator JS -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.simple-text-rotator.min.js"></script>
-    <!-- Smooth Scroll JS -->
     <script type="text/javascript" src="j<?php echo base_url();?>assets/js1/library/smoothscroll.js"></script>
-
-    <!-- Testimonila JS -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.cubeportfolio.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
-    <!-- Custom script -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
      <script>

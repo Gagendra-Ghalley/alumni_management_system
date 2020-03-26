@@ -107,8 +107,8 @@
 								
 					
 				
-					<div class="col-md-9 col-sm-12 col-xs-12 ">
-					<section class="civil-engineering pb-50">
+					<div class="col-md-9 col-sm-12 col-xs-12 img-thumbnail ">
+					<section class="civil-engineering pb-50 wow fadeInRight ">
 						<div class="container">							
 						
 							<div class="du-civil pt-20">
@@ -124,8 +124,10 @@
 									<div class="team-grids">
 										<div class="w3grid col-md-3 col-xs-12 col-sm-12">
 											<div class="team-img text-center">
+											
 
-												<img src="<?php echo base_url();?>assets/img2/president.png" style="height:150px;width: 150px;border-radius: 50%" class="img1-w3l"/>
+												<a  class="effect-bubba" href="#"><img src="<?php echo base_url();?>assets/img2/president.png" style="height:150px;width: 150px;border-radius: 50%" /></a>
+												
 												
 												<h4 class="text-bold">Dr. Cheki Dorji</h4>
 												<h4>President</h4>
@@ -151,7 +153,7 @@
 
 				</section>
 				<div class="teachers">
-	<div class="container">
+	<div class="container wow fadeInRight">
 		
 		<div class="team-grids ">
 			<div class="col-md-3 team-grid text-center">
