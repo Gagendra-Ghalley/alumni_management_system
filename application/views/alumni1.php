@@ -10,15 +10,15 @@
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> 
+    <!-- <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" />  -->
   
      <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
     
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
+   <!--  <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" /> -->
 
-    <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet" /> 
+    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
