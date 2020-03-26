@@ -31,8 +31,10 @@ text-shadow: none;
 
 /* side-menu section */
 #side-menu{
-    background-color: rgb(8, 148, 240);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*background-color: rgb(8, 148, 240);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    color: #fff;
+  background-color: #428bca;
 }
 
  #side-menu a {
@@ -79,7 +81,7 @@ input.green{
     font-size:22px;
     padding-bottom:10px;
     color: #fff;
-  background-color: rgb(2, 90, 140);
+   background-color:  rgb(1, 87, 130);
 }
 .user-section-inner {
     height: 100px;
@@ -118,15 +120,14 @@ margin-bottom: 0px
 /* side menu ends here */
 
 
-
 /* Navbar color*/
 .box{
     color: #fff;
-    background-color:#2196F3;
+    background-color:#428bca;
 }
-.bg-primary{
+.bg-primary {
   color: #fff;
-  background-color: #2196F3;
+  background-color: #428bca;
 }
 
 
@@ -139,8 +140,10 @@ margin-bottom: 0px
     
 }
 
-body {
-   background-image: url("../Images1/slider4.p");
+
+
+ body {
+   background-image: url("../img/bluriimagebnw");
    background-attachment:fixed;
 }
 /*End*/

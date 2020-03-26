@@ -285,13 +285,13 @@
             <div class="col-lg-4 col-md-12 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <div class="card-title text-left bold">UP COMING EVENT</div><br>
                         <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
                          <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
                         <div>
                             
                                 <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
-                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp; &nbsp; &nbsp;   hours &nbsp; &nbsp; &nbsp; Minutes &nbsp; &nbsp; Second</p>
 
                                
                         </div>

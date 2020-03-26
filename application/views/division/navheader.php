@@ -12,7 +12,7 @@
       <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
       <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
        <link href="css/bootstrap.min.css" rel="stylesheet">  
-       <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet"/>
+       <link href="<?php echo base_url();?>assets/css/cst3.css" rel="stylesheet"/>
    <!-- Main CSS -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
   <!-- Animate CSS -->
@@ -56,22 +56,23 @@
                     <span class="icon-bar"></span>
                 </button>
                  <a class="navbar-brand " href="#">
-                    <h1 class="lead"><img src="<?php echo base_url();?>assets/img/cstlogo2.png"><font size="5">CST Alumni Management System</font></h1>
+                    <h1 class="lead"><img src="<?php echo base_url();?>assets/img/cstlogo2.png"><font size="3">CST Alumni Management System</font></h1></a>
             </div>
             <!-- end navbar-header -->
             
             <ul class="nav navbar-top-links navbar-right">
               
 
-              <li class="dropdown">
+                <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-2x"></i>
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                      
-                        <li class="divider"></li>
-                        <li><a href="<?php echo base_url();?>index.php/ATD/Login"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                       <!--  <li><a href="<?php echo base_url();?>index.php/Settings/profile/"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        </li> -->
+                       <!--  <li class="divider"></li> -->
+                        <li><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
@@ -84,7 +85,7 @@
         
 
         <!-- end navbar top -->
-    </div>
+    
 
 
 

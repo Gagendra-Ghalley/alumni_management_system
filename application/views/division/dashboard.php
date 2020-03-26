@@ -36,13 +36,13 @@
             <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <div class="card-title text-left bold">UP COMING EVENT</div><br>
                         <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
                          <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
                         <div>
                             
                                 <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
-                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp; &nbsp; &nbsp;   hours &nbsp; &nbsp; &nbsp; Minutes &nbsp; &nbsp; Second</p>
 
                                
                         </div>
@@ -55,8 +55,35 @@
                 
                     <div class="bg-info" >
                              <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+                             <!--     <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
+                <input type="text" name="cid">
+                 <input type="submit" value="Join Us" class="btn-default du-common-property">
+                </form> 
+           
+    <table>
+      <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
 
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                        <button style="height:100px;width:100px;font-size:15px"><?php
+                                        $a="+";
+                                        echo ($count1.=$a);
+                                        echo ("\nMembers");?></button> -->
+                                    <a href="<?php echo base_url();?>index.php/Settings/event_validate"><font color="white" >Join Now</font> </a>
 
                                 </button></span>
 
@@ -116,12 +143,12 @@
  </div>
 
 
-      <div class="bg-primary" class="du-newsletter">
+      <div class="bg-primary" >
             <div class="container">
 
                
 
-                <div class="col-md-6">
+                <div class="col-lg-12">
 
                     <p>@Alumni Management System</p>
 
