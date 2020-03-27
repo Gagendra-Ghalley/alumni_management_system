@@ -464,9 +464,12 @@
                         <div class="col-md-4 col-sm-12 left-contact  ">
 
                        <h3 class="title" style="color:#428af5;">Contact Us</h3>
+                       <hr>
                         <ul>
                             <li><i class="fa fa-envelope" ></i><a href="0216506.cst@rub.edu.bt">Alumni management system</a></li>
+                            <hr>
                             <li><i class="fa fa-phone" ></i>+77777777</li>
+                            <hr>
                             <li><i class="fa fa-map-marker"></i>college of science and technology</li>
                         </ul>
                                         
@@ -504,33 +507,7 @@
         </div>
       
     </section>
-    <!--contact us-->            
-    <!-- <div class="agile-contact col-md-12">
-    <div class="left-contact col-md-6">
-        
-
-            <h6>contact us</h6>
-            <ul>
-                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="0216506.cst@rub.edu.bt">Alumni management system</a></li>
-                <li><i class="fa fa-phone" aria-hidden="true"></i>+77777777</li>
-                <li><i class="fa fa-map-marker" aria-hidden="true"></i>college of science and technology</li>
-            </ul>
     
-    </div>
-    <!--Location map-->
-    <!-- <div class="right-contact">
-        <div class="map">
-            <iframe src="https://www.google.com/maps/place/College+of+Science+and+Technology/@26.8502058,89.3918037,17z/data=!3m1!4b1!4m5!3m4!1s0x39e3cb2c210e611d:0x44c5cb2cd32b18d4!8m2!3d26.8502058!4d89.3939924?hl=en-US" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <form action="#" method="post">
-                <input placeholder="Name" name="Name" class="name" type="text" required=""><br>
-                <input placeholder="E-mail" name="Name" class="name" type="text" required=""><br>
-                <textarea placeholder="Message"></textarea><br>
-                <input type="submit" value="send message">
-            </form>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-</div> -->
 
 
 <!--footer-->
