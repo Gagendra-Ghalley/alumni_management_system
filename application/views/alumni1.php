@@ -298,9 +298,21 @@
                   
                 </div>
             </div>
-            <div class="col-md-2 col-sm-12 " >
-                
+           <div class="col-md-2 col-sm-6 " >
+                <br> <br>
+
+                    <div  >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+                          
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1"><font color="white" >Join Now</font> </a>
+
+                                </button></span>
+
+
+                            <br> <br>
+
                    
+
                             <table>
                              <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
@@ -322,19 +334,14 @@
                                         </table> 
                                    <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
                                         <p><font color="black"><?php
-                                        // $a="+";
+                                        
                                         echo ($count1);
                                         echo (" Members <br> Interested");?></font></p>
                                           </button><br><br>
 
-                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
-
-                                </button>   
                
             </div>
-
+        </div>
                         <div class="col-md-12">
                         <button class="btn btn-link text-primary btn-lg"><b><a href="<?php echo base_url();?>index.php/ATD/login1/">Read more</a></b></button>
                         </div>

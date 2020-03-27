@@ -604,7 +604,7 @@ public function can_log_in1($mac){
 	}
 	public function getprofile($cid){
 		
-		$profile = $this->db->query("SELECT CONCAT(p.FirstName, ' ',p.MiddleName, ' ', p.LastName) AS Name, bl.profile, p.cid, p.DateOfBirth,p.Grade, p.email,p.telephone,p.Mobile,p.roleId,p.EmpNo,a.name AS Agency,ap.name AS ParentAgency,amp.name AS MainParentAgency, mp.Description AS PositionTitle FROM bpas_user_profiles p 
+		$profile = $this->db->query("SELECT CONCAT(p.FirstName, ' ',p.MiddleName, ' ', p.LastName) AS Name, bl.profile, p.cid, p.occupation, p.organization, p.office_address, p.contact_address, p.college, p.master, p.phD, p.other, p.research_paper, p.journal, p.book, p.seminar, p.training, p.workshop, p.DateOfBirth,p.Grade, p.email,p.telephone,p.Mobile,p.roleId,p.EmpNo,a.name AS Agency,ap.name AS ParentAgency,amp.name AS MainParentAgency, mp.Description AS PositionTitle FROM bpas_user_profiles p 
 									LEFT JOIN bpas_logins bl ON bl.relatedUserId=p.cid
 									LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID
 									LEFT JOIN bpas_master_agencyparent ap ON ap.AgencyParentID=p.AgencyParentID
@@ -649,9 +649,49 @@ public function can_log_in1($mac){
 		
 	}
 	
-	public function updateContact($tel,$mob,$email){
-			$cid=$this->session->userdata('cid');
-			if($this->db->query("UPDATE bpas_user_profiles SET telephone='".$tel."', Mobile='".$mob."', email='".$email."' WHERE cid='".$cid."'")) {
+	public function updateContact($email,$occupation,$organization){
+		$cid=$this->session->userdata('cid');
+			if($this->db->query("UPDATE bpas_user_profiles SET email='".$email."', occupation='".$occupation."', organization='".$organization."' WHERE cid='".$cid."'")) {
+				
+				return true;
+			} 
+			else return false;
+			
+		
+	}
+	public function updateContact1($office_address,$contact_address,$college){
+		$cid=$this->session->userdata('cid');
+			if($this->db->query("UPDATE bpas_user_profiles SET office_address='".$office_address."', contact_address='".$contact_address."', college='".$college."' WHERE cid='".$cid."'")) {
+				
+				return true;
+			} 
+			else return false;
+			
+		
+	}
+	public function updateContact2($master,$phD,$other){
+		$cid=$this->session->userdata('cid');
+			if($this->db->query("UPDATE bpas_user_profiles SET master='".$master."', phD='".$phD."', other='".$other."' WHERE cid='".$cid."'")) {
+				
+				return true;
+			} 
+			else return false;
+			
+		
+	}
+	public function updateContact3($research_paper,$journal,$book){
+		$cid=$this->session->userdata('cid');
+			if($this->db->query("UPDATE bpas_user_profiles SET research_paper='".$research_paper."', journal='".$journal."', book='".$book."' WHERE cid='".$cid."'")) {
+				
+				return true;
+			} 
+			else return false;
+			
+		
+	}
+	public function updateContact4($seminar,$training,$workshop){
+		$cid=$this->session->userdata('cid');
+			if($this->db->query("UPDATE bpas_user_profiles SET seminar='".$seminar."', training='".$training."', workshop='".$workshop."' WHERE cid='".$cid."'")) {
 				
 				return true;
 			} 
