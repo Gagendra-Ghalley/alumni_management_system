@@ -467,44 +467,7 @@
                         </div>
                     </div>
                     
-                    <div class="container img-thumbnail">
-                        <div class="col-md-4 col-sm-12 left-contact  ">
-
-                       <h3 class="title" style="color:#428af5;">Contact Us</h3>
-                       <hr>
-                        <ul>
-                            <li><i class="fa fa-envelope" ></i><a href="0216506.cst@rub.edu.bt">Alumni management system</a></li>
-                            <hr>
-                            <li><i class="fa fa-phone" ></i>+77777777</li>
-                            <hr>
-                            <li><i class="fa fa-map-marker"></i>college of science and technology</li>
-                        </ul>
-                                        
-                        </div>
-
-                          <div class="col-md-4 col-sm-12 left-contact ">
-
-                       <h3 class="title" style="color:#428af5;">Vist</h3>
-                        <ul  class="du-choose-list">
-                            <li><a href="#"><strong style="color:#428af5">College Of science And Technology</strong></a></li>
-                            <li></i><a href="#"><strong style="color:#428af5">Royal Univerisity of Bhutan</strong></a></li>
-                            <li></i><a href="#"><strong style="color:#428af5">VLE cst</strong></a></li>
-                            <li></i><a href="#"><strong style="color:#428af5">Libary cst</strong></a></li>
-                            
-                        </ul>
-                                        
-                        </div>
-                        <div class="col-md-4 col-sm-12 left-contact ">
-
-                        <h3 class="title" style="color:#428af5;">Donates us </h3>
-                        <figure class="view overlay zoomInUp">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img1/donate.png" style="height: 270px;width: 100%" alt="" class="img-responsive" alt="">
-                                  
-                        </figure> 
-                                        
-                        </div>
-                    </div>
-    
+                    
 
 
                 </div>
@@ -514,6 +477,55 @@
         </div>
       
     </section>
+    <div class="container col-md-12 img-thumbnail bg-primary">
+                        <div class="col-md-4 col-sm-12 left-contact  ">
+
+                       <h3 class="title" style="color:#fff;">Contact Us</h3>
+                       <hr>
+                        <ul>
+                            <li><i class="fa fa-envelope" ></i><a href="0216506.cst@rub.edu.bt"><strong style="color:#fff">Alumni management system</strong></a></li>
+                            <hr>
+                            <li><i class="fa fa-phone" ></i><strong style="color:#fff">+77777777</strong></li>
+                            <hr>
+                            <li><i class="fa fa-map-marker"></i><strong style="color:#fff" >college of science and technology</strong> </li>
+                        </ul>
+                                        
+                        </div>
+
+                          <div class="col-md-4 col-sm-12 left-contact ">
+
+                       <h3 class="title" style="color:#fff">Vist</h3>
+                        <ul  class="du-choose-list">
+                            <li><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">Royal Univerisity of Bhutan</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">VLE cst</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">Libary cst</strong></a></li>
+                            
+                        </ul>
+                                        
+                        </div>
+                        <div class="col-md-4 col-sm-12 left-contact ">
+
+                        <h3 class="title" style="color:#fff;">Donates us </h3>
+                        <hr>
+                        
+
+                          <img src="<?php echo base_url();?>assets/img1/bob.png" style="height: 50px;width: 50px" ><strong style="color:#fff">Bank of Bhutan:20054656</strong>  
+                        
+                          <hr>
+                       
+                          <img src="<?php echo base_url();?>assets/img1/bnb.png"  style="height: 50px;width: 50px"><strong style="color:#fff">Bhutan National Bank:86867667</strong>
+                  
+                         <hr>
+                       
+                          <img src="<?php echo base_url();?>assets/img1/T bank.png"  style="height: 50px;width: 50px"><strong style="color:#fff">T Bank:6767654</strong> 
+                    <hr>
+            
+                                        
+                        </div>
+                        
+                    </div>
+    
     
 
 
@@ -584,6 +596,8 @@
                                   }
                                 }, 1000);
                                 </script>
+
+
 
  
 
