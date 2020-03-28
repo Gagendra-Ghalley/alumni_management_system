@@ -97,14 +97,14 @@
 
 						
 						
-						<p style="font-family:georgia; color:black; font-size: 15px">“A centre of excellence in science and technology enriched with GNH values. “</p>
+						<p style="font-family:georgia; color:black; font-size: 15px"><strong>“A centre of excellence in science and technology enriched with GNH values.</strong> “</p>
 								<h3 class="text-center" style="color:#428af5;text-align: center;">Our Mission</h3>
 
 						
 
 						
 							<span style="font-family:georgia; color:black; font-size: 15px"><strong>1.To offer internationally recognized programs in science and technology.</strong></span><br/>
-							<span style="font-family:georgia; color:black; font-size: 16px">The college will develop and offer program that are relevant and meets international standards,  adopt best practices in teaching learning and research to ensure that the graduates are equipped for employment in international market and will have increase number of students pursuing masters in international colleges.
+							<span style="font-family:georgia; color:black; font-size: 15px">The college will develop and offer program that are relevant and meets international standards,  adopt best practices in teaching learning and research to ensure that the graduates are equipped for employment in international market and will have increase number of students pursuing masters in international colleges.
 
 							In addition, there will be 5 to 10 percentage of international students and faculties and also international students and faculties will be invited to the college on exchange programmes. The mechanism to facilitate credit transfer system will also be instituted.</span><br><br>
 

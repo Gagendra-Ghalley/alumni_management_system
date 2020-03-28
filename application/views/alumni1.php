@@ -32,6 +32,7 @@
      <link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
      <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
+      <link href="<?php echo base_url();?>assets/css1/effect.css" rel="stylesheet">
   
 
 
@@ -100,7 +101,13 @@
 
                         <!-- First slide -->
                         <div class="item active deepskyblue">
-                            <figure><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 350px" alt=""></figure>
+                             <div class="hovereffect">
+                              <figure><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 350px" alt=""></figure>
+                                <div class="overlay">
+                                   
+                                </div>
+                        </div>
+                            
                             <div class="carousel-caption ">
                                 
                                 <h1 class="title" style="text-transform: uppercase; font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of <br>all alumni</h1>
@@ -273,14 +280,21 @@
     <div class="du-current-news center ">
     <div class="container img-thumbnail">
         <div class="row padding">
-            <div class="col-lg-7 col-md-12 col-sm-12"data-wow-delay="0.2s" >
-                <div class="card">
+            <div class="col-lg-7 col-md-7 col-sm-12"data-wow-delay="0.2s" >
+                
+
+                            <div class="hovereffect">
+                             <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
+                                <div class="overlay">
+                                    <h2>Upcoming Event</h2>
+                                    
+                                </div>
+                        </div>
                     
-                    <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
                    
-                </div>
+         
             </div>
-            <div class="col-lg-3 col-md-12 col-sm-12" >
+            <div class="col-lg-3 col-md-3 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title text-left bold">UP COMING EVENT</div><br>
@@ -362,14 +376,22 @@
                         <!-- image thumbnail -->
                         <div class="team-box wow fadeInLeft img-thumbnail">
                             <!-- Image -->
-                            <figure><img src="<?php echo base_url();?>assets/img1/wellcome.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive img1-w3l"></figure>
 
+                            <div class="hovereffect">
+                            <figure> <img class="img-responsive" src="<?php echo base_url();?>assets/img1/wellcome.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive img1-w3l" alt=""></figure>
+                                <div class="overlay">
+                                    <h2>About Us</h2>
+                                    
+                                </div>
+                        </div>
+                                                  
+                    
                             <!-- about us -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">About us</h3>
                                 <p style="font-family:georgia; color:black; font-size: 16px">"whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success" </p>
-                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
+                                <a href="<?php echo base_url();?>index.php/ATD/aboutUs/" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -377,7 +399,15 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                      
                         <div class="team-box wow fadeInLeft img-thumbnail">
+
+                            <div class="hovereffect">
                             <figure><img src="<?php echo base_url();?>assets/img1/membership.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>Memberships</h2>
+                                    
+                                </div>
+                        </div>
+                            
 
                             <!-- membership -->
                             <div class="du-caption">
@@ -393,7 +423,15 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                       
                         <div class="team-box wow fadeInLeft img-thumbnail">
+
+                            <div class="hovereffect">
                             <figure><img src="<?php echo base_url();?>assets/img1/donate.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>Donate us</h2>
+                                    
+                                </div>
+                        </div>
+                           
 
                             <!-- Donate -->
                             <div class="du-caption">
@@ -416,7 +454,15 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         
                         <div class="team-box wow fadeInLeft img-thumbnail">
+
+                            <div class="hovereffect">
                             <figure><img src="<?php echo base_url();?>assets/img1/events.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>See Events</h2>
+                                    
+                                </div>
+                        </div>
+                            
 
                             <!-- Event -->
                             <div class="du-caption">
@@ -436,17 +482,22 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         
                         <div class="team-box wow fadeInLeft img-thumbnail">
+
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/img1/faculty.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>Faculty</h2>
+                                    
+                                </div>
+                        </div>
                            
-                        <figure class="view overlay zoomInUp">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img1/faculty.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive" alt="">
-                                  
-                        </figure>
+                       
                             <!-- Faculty -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Faculty</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
+                                <a href="<?php echo base_url();?>index.php/ATD/faculty/" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -454,7 +505,16 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         
                         <div class="team-box wow fadeInLeft img-thumbnail">
+
+
+                            <div class="hovereffect">
                             <figure><img src="<?php echo base_url();?>assets/img1/profile.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>See Profile</h2>
+                                    
+                                </div>
+                        </div>
+                          
 
                             <!-- Profile -->
                             <div class="du-caption">
@@ -536,7 +596,7 @@
 
                
 
-                <div class="col-md-6">
+                <div class="col-md-12">
 
                     <p>@Alumni Management System</p>
 
