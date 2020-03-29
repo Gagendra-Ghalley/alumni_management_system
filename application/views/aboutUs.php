@@ -91,34 +91,34 @@
 							<img  class="img-circle" height="400" weight="400" src="<?php echo base_url();?>assets/img1/king.jpg" alt="image"> 
 						</div>
 					<div class="col-lg-9  wow fadeInRight">
-					<h2 class="text-center"  style="color:#428af5;text-align: center;">Our Vision</h2>
+					<h3 class="text-center"  style="color:#428af5;text-align: center;">Our Vision</h3>
 
 						
 
 						
 						
-						<p style="font-family:georgia; color:black; font-size: 16px">“A centre of excellence in science and technology enriched with GNH values. “</p>
-								<h2 class="text-center" style="color:#428af5;text-align: center;">Our Mission</h2>
+						<p style="font-family:georgia; color:black; font-size: 15px"><strong>“A centre of excellence in science and technology enriched with GNH values.</strong> “</p>
+								<h3 class="text-center" style="color:#428af5;text-align: center;">Our Mission</h3>
 
 						
 
 						
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>1.To offer internationally recognized programs in science and technology.</strong></span><br/>
-							<span style="font-family:georgia; color:black; font-size: 16px">The college will develop and offer program that are relevant and meets international standards,  adopt best practices in teaching learning and research to ensure that the graduates are equipped for employment in international market and will have increase number of students pursuing masters in international colleges.
+							<span style="font-family:georgia; color:black; font-size: 15px"><strong>1.To offer internationally recognized programs in science and technology.</strong></span><br/>
+							<span style="font-family:georgia; color:black; font-size: 15px">The college will develop and offer program that are relevant and meets international standards,  adopt best practices in teaching learning and research to ensure that the graduates are equipped for employment in international market and will have increase number of students pursuing masters in international colleges.
 
 							In addition, there will be 5 to 10 percentage of international students and faculties and also international students and faculties will be invited to the college on exchange programmes. The mechanism to facilitate credit transfer system will also be instituted.</span><br><br>
 
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>2.To generate new knowledge through research and innovation to fulfill the needs of the society.</strong></span><br/>
+							<span style="font-family:georgia; color:black; font-size: 15px"><strong>2.To generate new knowledge through research and innovation to fulfill the needs of the society.</strong></span><br/>
 							<span style="font-family:georgia; color:black; font-size: 16px">
 								To generate new knowledge research will be conducted in collaboration with the industries, stake holders and international partners. The finding will be disseminated to the wider communities through publication and seminars to address the issues and problem in the society and to help economy at the large.
 							</span><br><br>
 
 
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>3.To coommorate with stakeholders and provide expert services.</strong></span><br/>
+							<span style="font-family:georgia; color:black; font-size: 15px"><strong>3.To coommorate with stakeholders and provide expert services.</strong></span><br/>
 							<span style="font-family:georgia; color:black; font-size: 16px">To enhance industry-academia relations, the college will continuously develop linkages with stakeholder within and outside country.  provide consultancies and  training’s (including tailor made) to support industries and other organizations with technical services, and to provide expert opinions in line with the changing needs to help industries in making appropriate decisions.</span><br><br>
 
 
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>4.To provide community services to enhance GNH based society.</strong></span><br/>
+							<span style="font-family:georgia; color:black; font-size: 15px"><strong>4.To provide community services to enhance GNH based society.</strong></span><br/>
 							<span style="font-family:georgia; color:black; font-size: 16px">
 								To promote GNH base society college will initiate and organize awareness campaign, provide technical support and  social activities to improve the living standard of the communities. The college will institute centre for value education to promote community services.
 							</span>
@@ -132,71 +132,11 @@
 					
 				</div>
 			</section>
-			<!-- End principal message -->
-
-
-			<!-- vision-->
-			<section class="du-principal-comment ptb-50 common">
-				<!--</div class="container">					
-				
-					<div class="row">
-					<h2 class="text-center" style="color:#428af5;text-align: center;">Our Mission</h2>
-
-						<div class="principal-photo col-md-2 wow fadeInLeft">
-							<!-- <img class="img-responsive" src="img/principla.png" alt="image"> -->
-						</div>
-
-						<!--<div class="col-md-10 wow fadeInRight">
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>1.To offer internationally recognized programs in science and technology.</strong></span><br/>
-							<span style="font-family:georgia; color:black; font-size: 16px">The college will develop and offer program that are relevant and meets international standards,  adopt best practices in teaching learning and research to ensure that the graduates are equipped for employment in international market and will have increase number of students pursuing masters in international colleges.
-
-							In addition, there will be 5 to 10 percentage of international students and faculties and also international students and faculties will be invited to the college on exchange programmes. The mechanism to facilitate credit transfer system will also be instituted.</span><br><br>
-
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>2.To generate new knowledge through research and innovation to fulfill the needs of the society.</strong></span><br/>
-							<span style="font-family:georgia; color:black; font-size: 16px">
-								To generate new knowledge research will be conducted in collaboration with the industries, stake holders and international partners. The finding will be disseminated to the wider communities through publication and seminars to address the issues and problem in the society and to help economy at the large.
-							</span><br><br>
-
-
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>3.To collaborate with stakeholders and provide expert services.</strong></span><br/>
-							<span style="font-family:georgia; color:black; font-size: 16px">To enhance industry-academia relations, the college will continuously develop linkages with stakeholder within and outside country.  provide consultancies and  training’s (including tailor made) to support industries and other organizations with technical services, and to provide expert opinions in line with the changing needs to help industries in making appropriate decisions.</span><br><br>
-
-
-							<span style="font-family:georgia; color:black; font-size: 16px"><strong>4.To provide community services to enhance GNH based society.</strong></span><br/>
-							<span style="font-family:georgia; color:black; font-size: 16px">
-								To promote GNH base society college will initiate and organize awareness campaign, provide technical support and  social activities to improve the living standard of the communities. The college will institute centre for value education to promote community services.
-							</span>
-						</div>!-->
-					</div>
-				</div>
-			</section>
+			
 
 		</div>		
-	</div>
-	<!-- End breadcrumbs-->
 	
-	
-	<!-- Begin About -->
-	<div class="du-subpage-content">
-		<div class="du-about">
 
-			<!-- Begin choose us -->
-			<section class="choose-us ptb-50">
-
-				<div class="container">
-					
-
-
-			
-			
-		</div><!-- /.du-about -->
-	</div><!-- /.du-subpage content -->
-	<!-- End About -->
-
-
-</div>
-
-            </div>
             <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
@@ -212,11 +152,6 @@
         </div>
 
         </div>
-
-
-
-
-
 
 <!--footer-->
 

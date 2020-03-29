@@ -2,18 +2,18 @@
         <!--  page-wrapper -->
         <div id="page-wrapper">
 
-            <div class="row">
-                <!-- Page Header -->
+             <div class="row">
+              <!--   Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Profile</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px ">Member Search</h2> <div class="clockwrapper"><div id="clock"></div>,<?php echo date('D d/M/Y');?></div>
                 </div>
-                <!--End Page Header -->
-            </div>
+               <!--  End Page Header -->
+             </div>
 
           
             
 
-            <div class="row profile">
+            <div >
                 <div class="col-md-4">
 
 

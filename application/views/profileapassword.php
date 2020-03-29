@@ -5,7 +5,7 @@
             <div class="row">
               <!--   Page Header -->
                 <div class="col-lg-12">
-                    <h3 class="page-header"><font size="5" color="#FFF">Change Your Password</font></h3> <div class="clockwrapper"><div id="clock"></div>,<?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px ">Change Your Password</h2> <div class="clockwrapper"><div id="clock"></div>,<?php echo date('D d/M/Y');?></div>
                 </div>
                <!--  End Page Header -->
              </div> 

@@ -59,7 +59,7 @@
               <li ><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
               <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
               
-              <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+               <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
             </ul>
           </div>
         </div>
@@ -88,8 +88,8 @@
 							<h3 class="text-center"><strong style="color: #fff">Department</strong></h3>
 							
 								<ul class="du-choose-list">
-									<li class="active"><a href="<?php echo base_url();?>index.php/ATD/faculty"><i class="icon-heart"></i><strong style="color: #fff">MANAGEMENT</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/civil_engineering" ><strong style="color: #fff">CIVIL ENGINEERING AND ENGINEERING GEOLOGY DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/faculty"><strong style="color: #fff">MANAGEMENT</strong></a></li>
+									<li class="active"><a href="<?php echo base_url();?>index.php/ATD/civil_engineering" ><strong style="color: #fff">CIVIL ENGINEERING AND ENGINEERING GEOLOGY DEPARTMENT</strong></a></li>
 									<li><a href="<?php echo base_url();?>index.php/ATD/architecture"><strong style="color: #fff">ARCHITECTURE DEPARTMENT</strong></a></li>
 									<li><a href="#mechanical-engineering"><strong style="color: #fff">M.E. RENEWABLE ENERGY AND ELECTRICAL ENGINEERING DEPARTMENT</strong></a></li>
 
@@ -102,13 +102,11 @@
 									<li><a href="#mechanical-engineering"><strong style="color: #fff">ICT UNIT</strong></a></li>
 								</ul>
 							</div>
-						
 							
 								
 					
-				
-					<div class="col-md-12 col-sm-12 col-lg-9">
-					<section class="civil-engineering pb-50 wow fadeInRight ">
+				 <div class="col-md-9 wow fadeInRight">
+					<section id="architecture" class="civil-engineering pb-50">
 						<div class="container">							
 						
 							<div class="du-civil pt-20">
@@ -118,21 +116,19 @@
 									<div class="teachers">
 								<div class="container">
 									<div class="teach-head">
-										<h3>Management</h3>
+										<h3>ARCHITECTURE FACULTY</h3><br>
 										
 									</div>
 									<div class="team-grids">
-										<div class="w3grid col-md-3 col-xs-12 col-sm-12">
-											<div class="team-img text-center">
-											
+										<div class="col-md-3 team-grid text-center">
+											<div class="team-img">
 
-												<a  class="effect-bubba" href="#"><img src="<?php echo base_url();?>assets/img2/president.png" style="height:150px;width: 150px;border-radius: 50%" /></a>
+												<img src="<?php echo base_url();?>assets/img2/president.png" style="height:150px;width: 150px;border-radius: 50%" />
 												
+												<h4>Chimi</h4>
+												<h4>PROGRAMME LEADER, ARCHITECTURE DEPT</h4>
+												<h5>chimi.cst@rub(dot)edu(dot)bt</h5>
 												
-												<h4 class="text-bold">Dr. Cheki Dorji</h4>
-												<h4>President</h4>
-												<h5>chekidorji.cst@rub(dot)edu(dot)bt</h5>
-												<h5>Contact No.# 17161635</h5>
 												
 											</div>
 										</div>
@@ -151,56 +147,99 @@
 							</div>						
 					</div>
 
-				</section>
-				<div class="teachers">
-	<div class="container wow fadeInRight">
+				</section> 
+			<div class="teachers">
+	<div class="container">
 		
-		<div class="team-grids ">
+		<div class="team-grids">
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/1tlhendup.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Dr. Tshewang Lhendup</h4>
-						<h4>Dean, Academic Affairs</h4>
-						
-						<h5>tshewanglhendup.cst@rub(dot)edu(dot)bt</h5>
-						<h5>Contact No.# 16553720</h5>
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/tshetend.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
-						<h4>Tsheten Dorji</h4>
-						<h4>Dean, Research and Industrial Linkages</h4>
-						
-						<h5>tshetendorji.cst@rub(dot)edu(dot)bt</h5>
-						<h5>Contact No.# 17160539</h5>
-				</div>
-			</div>
-
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-						<img src="<?php echo base_url();?>assets/img2/bharat.png" style="height:150px;width: 150px;border-radius: 50%" /> 
+					<img src="<?php echo base_url();?>assets/img2/schuki.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
 					
-						<h4>Bharat Kumar Hummagai</h4>
-
-						<h4>Dean, Academic Affairs</h4>
-						<h5>bharat.cst@rub(dot)edu(dot)bt</h5>
-						<h5>Contact No.# 17161040</h5>
+						
+						<h4>Sonam Chuki</h4>
+						<h4>Asst. Professor</h4>
+						<h5>sonamchuki.cst@rub(dot)edu(dot)bt</h5>
+						
 				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/sumitra.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Sumitra Ghalley</h4>
+						<h4>Asst. Lecturer</h4>
+						
+						<h5>sumitraghalley.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/chimmiwangmo.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Jigme Thinley</h4>
+						<h4>Asst. Lecturer</h4>
+						
+						<h5>jigmethinley.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+
 			</div>
 			
+			
+			
+		</div> 
+		<br>
+		<br>
+		<br>
+		<br>
 		
-		</div>
-		</div>
-	</div>
-	</div>
-		</div>
-	
-	
-</section>
-<br><br><br><br>
 
-	  <div class="bg-primary" class="du-newsletter">
+		<div class="container">
+		
+		<div class="team-grids">
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/jamyang_p.dorji.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Jamyan P. Dorji</h4>
+						<h4>Asst. Lecture</h4>
+						
+						<h5>jamyangpdorji.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/penden_wangchuk.jpg" style="height:150px;width: 150px;border-radius:50% " alt=""/>
+						
+						
+						<h4>Penden Wangchuk</h4>
+						<h4>Asst. Lecturer</h4>
+						<h5>pendenwangchuk.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/sebha_saleem.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Sehba Saleem</h4>
+						<h4>Asst. Lecturer</h4>
+						
+						<h5>sehbasaleem.cst@rub(dot)edu(dot)bt</h5>
+						
+				</div>
+			</div>
+
+			</div>
+			
+			
+	</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+			 <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
@@ -213,6 +252,13 @@
 
             </div>
         </div>
+
+
+					
+
+
+
+
 
 
     <!-- Main jQuery & other 3rd party Library -->

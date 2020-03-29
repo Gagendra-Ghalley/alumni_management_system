@@ -8,7 +8,7 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard   </h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px ">Dashboard</h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -33,16 +33,16 @@
                     <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 500px" ></span>
                 </div>
             </div>
-            <div class="col-md-4 col-md-12 col-sm-12" >
+            <div class="col-md-4 col-sm-6" >
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <div class="card-title text-left bold">UP COMING EVENT</div><br>
                         <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
                          <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
                         <div>
                             
                                 <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
-                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp; &nbsp; &nbsp;   hours &nbsp; &nbsp; &nbsp; Minutes &nbsp; &nbsp; Second</p>
 
                                
                         </div>
@@ -51,16 +51,21 @@
                   
                 </div>
             </div>
-            <div class="col-lg-2 col-md-12 col-sm-12 " >
-                
-                    <div class="bg-info" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+            <div class="col-md-2 col-sm-6 " >
+                <br> <br>
 
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+                    <div  >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+                          
+                                    <a href="<?php echo base_url();?>index.php/Settings/event_validate"><font color="white" >Join Now</font> </a>
 
                                 </button></span>
 
-                            <br> 
+
+                            <br> <br>
+
+                   
+
                             <table>
                              <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
@@ -80,28 +85,27 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                    
-                                        <p><font size="4" color="#222"><?php
-                                        // $a="+";
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
+                                        
                                         echo ($count1);
-                                        echo (" Members");?></font></p>
-                    </div>      
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+
                
             </div>
         </div>
  <div class="container">
-                <div class="col-md-5">
-                    <p class="text-bold"><b>Description</b></p>
+                <div class="col-md-5 col-sm-12">
+                    <p class="text-primary"><b>Description</b></p>
                 </div>
-                <div class="col-md-5">
-                    <p class="text-bold"><b>Description</b></p>
-                </div>
+               
             </div>
              <div class="container">
-                <div class="col-md-10">
+                <div class="col-md-10 col-sm-12">
                     
                         
-                        <p class="text-bold text-center text-justify">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
+                        <p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
                         
                         <div class="col-md-10">
                         <button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
@@ -116,12 +120,16 @@
  </div>
 
 
-      <div class="bg-primary" class="du-newsletter">
+      <div class="bg-primary" >
             <div class="container">
 
                
 
-                <div class="col-md-6">
+
+                <div class="col-lg-12">
+
+                <div class="col-md-6 col-sm-12">
+
 
                     <p>@Alumni Management System</p>
 

@@ -109,14 +109,7 @@
             </div>
             <div class="col-lg-2 col-md-12 col-sm-12 " >
                 
-                    <div class="bg-info" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
-
-                                </button></span>
-
-                            <br> 
+                    
                             <table>
                              <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
@@ -136,27 +129,31 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                    
-                                        <p><font size="4" color="#222"><?php
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
                                         // $a="+";
                                         echo ($count1);
-                                        echo (" Members");?></font></p>
-                    </div>      
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+
+                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button>       
                
             </div>
             <div class="container">
-            	<div class="col-md-6">
-            		<p class="text-bold"><b>Description</b></p>
+            	<div class="col-md-9">
+            		<h5 class="text-primary"><b>Description</b></h5>
             	</div>
-            	<div class="col-md-6">
-            		<p class="text-bold"><b>Description</b></p>
-            	</div>
+            	
             </div>
             <div class="container">
             	<div class="col-md-12">
             		
 						
-						<p class="text-bold text-center text-justify">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.<span id="dots">...</span><span id="more">Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
+						<p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.<span id="dots">...</span><span id="more">Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
 						
 						<div class="col-md-12">
             			<button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
@@ -196,14 +193,7 @@
             </div>
             <div class="col-lg-2 col-md-12 col-sm-12 " >
                 
-                    <div class="bg-info" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
-
-                                </button></span>
-
-                            <br> 
+                    
                             <table>
                              <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
@@ -223,27 +213,30 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                    
-                                        <p><font size="4" color="#222"><?php
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
                                         // $a="+";
                                         echo ($count1);
-                                        echo (" Members");?></font></p>
-                    </div>      
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+
+                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button>   
                
             </div>
             <div class="container">
-            	<div class="col-md-6">
-            		<p class="text-bold"><b>Description</b></p>
-            	</div>
-            	<div class="col-md-6">
-            		<p class="text-bold"><b>Description</b></p>
+            	<div class="col-md-9">
+            		<h5 class="text-primary"><b>Description</b></h5>
             	</div>
             </div>
              <div class="container">
             	<div class="col-md-12">
             		
 						
-						<p class="text-bold text-center text-justify">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.<span id="dots">...</span><span id="more">Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
+						<p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.<span id="dots">...</span><span id="more">Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
 						
 						<div class="col-md-12">
             			<button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
@@ -282,14 +275,6 @@
             </div>
             <div class="col-lg-2 col-md-12 col-sm-12 " >
                 
-                    <div class="bg-info" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
-
-                                </button></span>
-
-                            <br> 
                             <table>
                              <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
@@ -309,35 +294,40 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                    
-                                        <p><font size="4" color="#222"><?php
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
                                         // $a="+";
                                         echo ($count1);
-                                        echo (" Members");?></font></p>
-                    </div>      
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+
+                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button>   
                
             </div>
             <div class="container">
-            	<div class="col-md-6">
-            		<p class="text-bold"><b>Description</b></p>
-            	</div>
-            	<div class="col-md-6">
-            		<p class="text-bold"><b>Description</b></p>
+            	<div class="col-md-9">
+            		<h5 class="text-primary"><b>Description</b></h5>
             	</div>
             </div>
             <div class="container">
             	<div class="col-md-12">
-            		<p class="text-bold text-center">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology. </p>
-            	</div>
-            </div>
-            <div class="container">
-            	<div class="col-md-12">
-            		<button class="btn btn-link text-primary"><b>Read more</b></button>
-            	</div>
+            		
+						
+						<p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.<span id="dots">...</span><span id="more">Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
+						
+						<div class="col-md-12">
+            			<button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
+            			</div>
+						
             </div>
         </div>
 
         
+    </div>
     </div>
 
  <div class="container img-thumbnail">
@@ -367,14 +357,7 @@
             </div>
             <div class="col-lg-2 col-md-12 col-sm-12 " >
                 
-                    <div class="bg-info" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
-
-                                </button></span>
-
-                            <br> 
+                    
                             <table>
                              <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
@@ -394,40 +377,44 @@
                                                 <?php endforeach;?>
                                             </tbody>
                                         </table> 
-                                    
-                                        <p><font size="4" color="#222"><?php
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
                                         // $a="+";
                                         echo ($count1);
-                                        echo (" Members");?></font></p>
-                    </div>      
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+
+                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button>   
                
             </div>
         </div>
 <div class="container">
-            	<div class="col-md-6">
-            		<p class="text-bold"><b>Description</b></p>
-            	</div>
-            	<div class="col-md-6">
-            		<p class="text-bold"><b>Description</b></p>
+            	<div class="col-md-9">
+            		<h5 class="text-primary"><b>Description</b></h5>
             	</div>
             </div>
             <div class="container">
             	<div class="col-md-12">
-            		<p class="text-bold text-center">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology. </p>
-            	</div>
+            		
+						
+						<p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation and community development studies (CDRR & CDS) college of science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.<span id="dots">...</span><span id="more">Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
+						
+						<div class="col-md-12">
+            			<button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
+            			</div>
+						
             </div>
-            <div class="container">
-            	<div class="col-md-12">
-            		<button class="btn btn-link text-primary"><b>Read more</b></button>
-            	</div>
-            </div>
-        
+        </div>
     </div>
 
 
     
 
-     </div>
+  </div>
 
 
 
@@ -447,14 +434,6 @@
 
 
 
-
-<!--footer-->
-
-  <!--PRELOAD-->
-<div id="preloader">
-  <div id="status"></div>
-</div>
-<!--end PRELOAD--> 
 
 
 
@@ -535,6 +514,6 @@
 						  }
 						}
 					</script>
-					
+
   </body>
 </html>
