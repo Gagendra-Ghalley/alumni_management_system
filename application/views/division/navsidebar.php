@@ -61,10 +61,6 @@
                     </li>
                   
                      <li>
-                        <a href="<?php echo base_url()?>index.php/Settings/updateDetail/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Add details</a>
-                    </li>
-
-                     <li>
                         <a href="<?php echo base_url()?>index.php/settings/membersearch1/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Member Search</a>
                     </li>
                    
@@ -78,6 +74,7 @@
             </div>
             <!-- end sidebar-collapse -->
         </nav>
+        
         
 
         <!-- end navbar side -->

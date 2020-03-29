@@ -22,61 +22,52 @@
 
 
 
-    <div class="container emp-profile">
+    <div class="container">
             
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-md-12 col-lg-11 col-sm-12 bg-info">
                         <div class="profile-img ">
                             
                              <?php foreach($user->result() as $row){?>
-        <img style="height: 200px;width: 200px ;border-radius: 50%" src="<?php echo base_url();?>assets/img/profile/<?php echo $row->profile;?>" class="img-rounded img-responsive">
+        <img style="height: 150px;width: 150px ;border-radius: 50%" src="<?php echo base_url();?>assets/img/profile/<?php echo $row->profile;?>" class="img-rounded img-responsive text-center  img-thumbnail">
+        <h3 class="text-center">User Profile</h3>
       
         <?php }?>
                             
                         </div>
                     </div>
+
+    </div>
                     <br>
                     <div class="container">
-                        <div class="row col-md-9">
-                        <div class="profile-head">
-                                                       
-                                    <h2>User Profile</h2>
-                                <ul>   
-                                   
-                                
-                                <div class="col-md-8">
+                        <div class="col-md-12 col-lg-10 col-sm-12">
+                
                     <div class="alert alert-info">
                         <?php foreach($user->result() as $row){?>
-                        <h5>Name:<?php echo $row->Name;?></h5>
-                        <h5>Occupation : <?php echo $row->occupation;?></h5>
-                        <h5>Organization: <?php echo $row->organization;?></h5>
-                        <h5>Office Addresss: <?php echo $row->office_address;?></h5>
-                        <h5>Email Address: <?php echo $row->email;?></h5>
-                        <h5>Contact Address: <?php echo $row->contact_address;?></h5>
-                        <h5>College: <?php echo $row->college;?></h5>
-                        <h5>Master: <?php echo $row->master;?></h5>
-                        <h5>PhD: <?php echo $row->phD;?></h5>
-                        <h5>Other : <?php echo $row->other;?></h5>
-                        <h5>Research Paper: <?php echo $row->research_paper;?></h5>
-                        <h5>Journal: <?php echo $row->journal;?></h5>
-                        <h5>Books:<?php echo $row->book;?></h5>
-                        <h5>Seminar: <?php echo $row->seminar;?></h5>
-                        <h5>Training: <?php echo $row->training;?></h5>
-                         <h5>Workshop: <?php echo $row->workshop;?></h5>
+                        <h4>Name:<?php echo $row->Name;?></h4>
+                        <h4>Occupation : <?php echo $row->occupation;?></h4>
+                        <h4>Organization: <?php echo $row->organization;?></h4>
+                        <h4>Office Addresss: <?php echo $row->office_address;?></h4>
+                        <h4>Email Address: <?php echo $row->email;?></h5>
+                        <h4>Contact Address: <?php echo $row->contact_address;?></h4>
+                        <h4>College: <?php echo $row->college;?></h4>
+                        <h4>Master: <?php echo $row->master;?></h4>
+                        <h4>PhD: <?php echo $row->phD;?></h4>
+                        <h4>Other : <?php echo $row->other;?></h4>
+                        <h4>Research Paper: <?php echo $row->research_paper;?></h4>
+                        <h4>Journal: <?php echo $row->journal;?></h4>
+                        <h4>Books:<?php echo $row->book;?></h4>
+                        <h4>Seminar: <?php echo $row->seminar;?></h4>
+                        <h4>Training: <?php echo $row->training;?></h4>
+                         <h4>Workshop: <?php echo $row->workshop;?></h4>
 
                         <?php } ?>
 
 
                     </div>
                         </div>
+                       
 
-                         </ul>
-                                    
-                        
-                                  
-                    </div>
-                </div>
-                  
                   
                 </div>
               
@@ -86,7 +77,6 @@
    
            
 
-    </div>
  <div class="bg-primary" class="du-newsletter">
             <div class="container">
 

@@ -52,17 +52,7 @@ class Settings extends CI_Controller {
 
 	}
 
-	public function updateDetail(){
-		$cid=$this->session->userdata('cid');
-		$data['user']=$this->sm->getprofile($cid);
-		
-		$this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('profileaddDetails',$data);
-		$this->load->view('template/includefooter');
-
-
-
-	}
+	
 
 
 
