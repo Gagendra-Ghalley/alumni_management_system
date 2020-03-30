@@ -51,12 +51,12 @@
                             </div>
                             <div class="col-md-8" >
                                 <ul class="flexy-menu orange" >
-                                    <li   class="active"><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
+                                    <li class="active"><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
                                     <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
@@ -80,9 +80,9 @@
        
         <div class="row">
             <div class="col-md-4 col-md-offset-4 text-center logo-margin ">
-              <h1 class="panel-title" ><font size="6">CST Alumni Management system</font></h1>
+             <!--  <h1 class="panel-title" ><font size="6">CST Alumni Management system</font></h1> -->
                 </div>
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-5 col-md-offset-3">
                 <div class="login-panel panel panel-default">                  
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign Up</h3>
@@ -142,6 +142,7 @@
 
   </div>
 </div>
+
 
      <!-- Core Scripts - Include with every page -->
     <script src="<?php echo base_url();?>assets/plugins/jquery-1.10.2.js"></script>
