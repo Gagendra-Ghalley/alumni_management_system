@@ -197,7 +197,7 @@
                
             </div>
         </div>
- <div class="container">
+ <div class="row">
                 <div class="col-md-5 col-sm-12">
                     <p class="text-primary"><b>Description</b></p>
                 </div>
@@ -219,6 +219,7 @@
     </div>   
 
               
+ </div>
  </div>
 
 

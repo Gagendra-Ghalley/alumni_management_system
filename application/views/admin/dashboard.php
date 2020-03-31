@@ -23,208 +23,242 @@
             </div>
 			
 
-            <div class="row">
+            <div class="row ">
                 <!--quick info section -->
-                <?php if($pendingLeave>0){?><a href="<?php echo base_url();?>index.php/Leave/approvePending/"><?php }?>
-                <div class="col-lg-3">
-                    <div class="alert alert-danger text-center">
-                        <i class="fa fa-exclamation-circle fa-3x"></i>&nbsp;<br/><b><?php echo $pendingLeave;?> </b><br/>Leave Requests Pending
+               <!--  <?php if($pendingLeave>0){?><a href="<?php echo base_url();?>index.php/Leave/approvePending/"><?php }?> -->
+                <div class="col-lg-6">
+                   <div class="panel panel-primary border">
+                    <div class="panel-body green text-center" style="height: 140px">
+                    
+                        <i class="fa fa-user fa-5x"></i>&nbsp;<br/><b><?php echo $pendingLeave;?> </b><br/>
+                        <strong>Profile</strong>
+
+                       
+                  </div>
+                  <div class="panel-footer">
+                            <span class="panel-eyecandy-title"><strong><b style=" color:green; font-size: 18px">User Profile</b></strong> 
+                            </span><i class="fa fa-plus-circle fa-1x"  style="margin-left: 430px;color: green"></i>
+                        </div>
+                </div>
+
+              </div>
+            
+             
+               <!--  <?php if($pendingLeave>0){?></a><?php }?>
+                <?php if($latecount>0){?><a href="<?php echo base_url();?>index.php/ATD/lateToday/"><?php }?> -->
+                <div class="col-lg-6">
+                    <div class="panel panel-primary border ">
+                    <div class="panel-body blue text-center" style="height: 140px">
+                        <i class="fa  fa-clock-o fa-5x"></i>&nbsp;<br/><b><?php echo $latecount;?> </b><br/><strong>Add Event</strong>
+                    </div>
+                     <div class="panel-footer">
+                            <span class="panel-eyecandy-title"><strong><b style=" color:blue; font-size: 18px">Add Event</b></strong>
+                            </span><i class="fa fa-plus-circle" style="margin-left: 440px;color: blue"></i>
+                        </div>
+                  </div>
+                </div>
+               
+
+                <div class="col-lg-6">
+                	   <div class="panel panel-primary border ">
+                    <div class="panel-body yellow text-center"style="height: 140px" >
+                       <i class="fa  fa-calendar-o fa-5x" aria-hidden="true"></i>&nbsp;<br/><b><?php echo $leavecount;?></b><br/><strong>Add User</strong>
 
                     </div>
+                    <div class="panel-footer">
+                            <span class="panel-eyecandy-title"><strong><b style="color:#97839c; font-size:18px">Add User</b></strong>
+                            </span><i class="fa fa-plus-circle"  style="margin-left: 450px;color: #97839c"></i>
+                        </div>
                 </div>
-                <?php if($pendingLeave>0){?></a><?php }?>
-                <?php if($latecount>0){?><a href="<?php echo base_url();?>index.php/ATD/lateToday/"><?php }?>
-                <div class="col-lg-3">
-                    <div class="alert alert-success text-center">
-                        <i class="fa  fa-clock-o fa-3x"></i>&nbsp;<br/><b><?php echo $latecount;?> </b><br/>Attendance after 9:00 AM  
+               </div>
+                <div class="col-lg-6">
+                   <div class="panel panel-primary border ">
+                    <div class="panel-body red text-center"style="height: 140px">
+                        <i class="fa fa-user fa-5x"></i>&nbsp;<br/><b><?php echo $notused;?></b><br/><strong>Delete User</strong>
                     </div>
-                </div>
-                <?php if($latecount>0){?></a><?php }?>
-                <?php if($leavecount>0){?><a href="<?php echo base_url();?>index.php/Leave/leaveToday/"><?php }?>
-                <div class="col-lg-3">
-                	   <div class="alert alert-info text-center">
-                       <i class="fa  fa-calendar-o fa-3x" aria-hidden="true"></i>&nbsp;<br/><b><?php echo $leavecount;?></b><br/>Officials on Leave
+                    <div class="panel-footer panel-red border">
+                            <span class="font-weight-bold"><strong><b style="color: red; font-size:18px">Delete Users</b></strong>
+                            </span><i class="fa fa-plus-circle fa-1x" style="margin-left: 420px;color: red"></i>
 
-                    </div>
-                </div>
-                <?php if($leavecount>0){?></a><?php }?>
-                <div class="col-lg-3">
-                    <div class="alert alert-warning text-center">
-                        <i class="fa fa-user fa-3x"></i>&nbsp;<br/><b><?php echo $notused;?></b><br/>Have not used LAS
-                    </div>
-                </div>
-                <!--end quick info section -->
-            </div>
-
-            <div class="row">
-                <div class="col-lg-8">
-
-
-
-                  
-                    <!--Simple table example -->
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Daily Attendance
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                      <?php $selectedDiv=$this->session->userdata('divFeed'); echo $selectedDiv;?>
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                    	
-                                    	<?php if($selectedDiv!="All"){?>
-                                    			<li><a href="<?php echo base_url();?>index.php/ATD/divfeedchange/<?php echo 'All';?>">All</a></li><?php } ?>
-                                    	<?php foreach($divisions->result() as $row) {
-                                    		 
-                                        if($selectedDiv!=$row->Agency) {?><li><a href="<?php echo base_url();?>index.php/ATD/divfeedchange/<?php echo $row->Agency;?>"><?php echo $row->Agency;?></a>
-                                        </li><?php } } ?>
-                                        
-                                        
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
 
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered table-hover table-striped tablescroll">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Name</th>
-                                                    <th>Time In</th>
-                                                    <th>Division</th>
-                                                    <th>Status</th>
-                                                    <th>Remarks</th>
-                                                    <th>Extension</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                               <?php
-                                               		$counter=1;
-                                               		foreach ($reports->result() as $row){?>
-                                               			<tr>
-                                               				<td>
-                                               					<?php echo $counter++;?>
-                                               				</td>
-                                               				<td>
-                                               					<?php echo $row->name;?>
-                                               				</td>
-                                               				<td>
-                                               					<?php if(strtotime($row->atdtime)>strtotime('09:00:00AM'))
-                                               					{
-                                               						echo "<div class='yellow center'>".$row->atdtime."</div>";
-																} elseif($row->atdtime==null)
-																{
-																	echo "<div class='red center'>Absent</div>";
-																} 
-																else {
-																	echo "<div class='green center'>".$row->atdtime."</div>";}  ?>
-                                               				</td>
-                                               				<td>
-                                               					<?php echo $row->Agency;?>
-                                               				</td>
-                                               				<td>
-                                               					<?php if($row->status=='In Office')
-                                               					{
-                                               						echo "<div class='green center'>".$row->status."</div>";
-																} elseif($row->status=='Meeting')
-																{
-																	echo "<div class='red center'>".$row->status."</div>";
-																} 
-																elseif ($row->status=='Seminar'){
-																	echo "<div class='btn-warning center'>".$row->status."</div>";} 
-																	
-																	elseif ($row->status=='Training'){
-																	echo "<div class='btn-info center'>".$row->status."</div>";}
-																	   ?>
-                                               					
-                                               				</td>
-                                               				<td>
-                                               					<?php echo $row->statusRemarks;?>
-                                               				</td>
-                                               				<td>
-                                               					<?php echo $row->telephone;?>
-                                               				</td>
-                                               			</tr>
-                                               			
-														
-														
-                                               		<?php } ?>
+                </div>
+              </div>
+             
+            </div>
 
+              
+               <div class="row">
+                <div class="col-lg-12 ">
+                                    <div class="table-responsive ">
+                                        <table class="table table-bordered table-hover table-striped">
+                                            <thead class="bg-primary">
+                                                <tr>
+                                                    <th>Users</th>
+                                                    <th>Batch</th>
+                                                    <th>Usage</th>
+                                                    <th>Registration Date</th>
+                                                    
+                                                    
+                                                   
+                                                </tr>
+
+                                            </thead>
+                                             <tbody>   
+
+                                                <tr>
+                                                
+                                                  <th>   
+                                                 <a class="effect-bubba" href="#"><img src="<?php echo base_url();?>assets/img2/president.png" style="height:50px;width: 50px;border-radius: 50%" /></a> <b>Nima Wangchuk Tamang</b>
+                                                  </th>
+                                                    <th>
+                                                      2016
+                                                    </th>
+
+                                                  <th class="effect-bubba">
+                                                    <div class="progress">
+                                                      <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 50%;height: 15px" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                  </th>
+
+                                                  <th>
+                                                    20/01/2020
+                                                  </th>
+                                                </tr>
+                                                
+                                                     
+                                    
 
                                             </tbody>
+                                             <tbody>   
+
+                                                <tr>
+                                                 
+                                                  <th>
+                                                    
+                                                 <a class="effect-bubba" href="#"><img src="<?php echo base_url();?>assets/img2/president.png" style="height:50px;width: 50px;border-radius: 50%" /></a> <b>gagendra ghalley</b>
+                                                  </th>
+                                                   <th>
+                                                    2017
+                                                    </th>
+                                                  <th class="effect-bubba">
+                                                    <div class="progress ">
+                                                      <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 70%;height: 15px" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                  </th>
+                                                  <th>
+                                                    03/02/2020
+                                                  </th>
+                                                </tr>
+                                                
+                                                     
+                                    
+
+                                            </tbody>
+                                             <tbody>   
+
+                                                <tr>
+                                                 
+                                                  <th>
+                                                    
+                                                 <a class="effect-bubba" href="#"><img src="<?php echo base_url();?>assets/img2/president.png" style="height:50px;width: 50px;border-radius: 50%" /></a> <b>Pema deki</b>
+                                                  </th>
+                                                   <th>
+                                                    2017
+                                                    </th>
+                                                  <th class="effect-bubba">
+                                                    <div class="progress ">
+                                                      <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 70%;height: 15px" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                  </th>
+                                                  <th>
+                                                    03/02/2020
+                                                  </th>
+                                                </tr>
+                                                
+                                                     
+                                    
+
+                                            </tbody>
+                                             <tbody>   
+
+                                                <tr>
+                                                 
+                                                  <th>
+                                                    
+                                                 <a class="effect-bubba" href="#"><img src="<?php echo base_url();?>assets/img2/president.png" style="height:50px;width: 50px;border-radius: 50%" /></a> <b>Leki Yangden</b>
+                                                  </th>
+                                                   <th>
+                                                    2017
+                                                    </th>
+                                                  <th class="effect-bubba">
+                                                    <div class="progress ">
+                                                      <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 70%;height: 15px" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                  </th>
+                                                  <th>
+                                                    03/02/2020
+                                                  </th>
+                                                </tr>
+                                                
+                                                     
+                                    
+
+                                            </tbody>
+                                             <tbody>   
+
+                                                <tr>
+                                                 
+                                                  <th>
+                                                    
+                                                 <a class="effect-bubba" href="#"><img src="<?php echo base_url();?>assets/img2/president.png" style="height:50px;width: 50px;border-radius: 50%" /></a> <b>gagendra ghalley</b>
+                                                  </th>
+                                                   <th>
+                                                    2017
+                                                    </th>
+                                                  <th class="effect-bubba">
+                                                    <div class="progress ">
+                                                      <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 70%;height: 15px" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                  </th>
+                                                  <th>
+                                                    03/02/2020
+                                                  </th>
+                                                </tr>
+                                                
+                                                     
+                                    
+
+                                            </tbody>
+
+                                           
                                         </table>
                                     </div>
 
                                 </div>
+                 
+               </div>
+            
+                 
 
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!--End simple table example -->
+    </div>
 
-                </div>
+    <!-- end wrapper -->
+    <div class="bg-primary" class="du-newsletter">
+            <div class="bg-primary" class="du-newsletter">
+            <div class="container">
 
-                <div class="col-lg-4">
-                    <div class="panel panel-primary no-boder">
-                        <div class="panel-body yellow"><table>
-                            <tr><td>Position Title:</td><td><b><?php echo $this->session->userdata('position');?></b></td></tr>
-                            	<tr><td>Division:</td><td><b><?php echo $this->session->userdata('divName');?></b></td></tr>
-                            	<tr><td>Dept:</td><td><b><?php echo $this->session->userdata('deptName');?></b></td></tr>
-                            	<tr><td>Ministry: </td><td><b><?php echo $this->session->userdata('minName');?></b></td></tr>
-                            	
-                            </table>
-                        </div>
-                        <div class="panel-footer">
-                            <span class="panel-eyecandy-title">User Profile
-                            </span>
-                        </div>
-                    </div>
-                   
-                    
-                    <div class="panel panel-primary text-center no-boder">
-                        <div class="panel-body red">
-                            <i class="fa fa-user fa-3x"></i>
-                            <?php $role=$this->session->userdata('role');?>
-                            <h3><?php if ($role=='1'){ echo "Super Admin";}elseif($role=='2'){echo "Secretary";}elseif($role=='3'){echo "Director";}
-							elseif($role=='4'){echo "Division Head";} elseif($role=='5'){echo "User";}elseif($role=='6'){echo "HR";}elseif($role=='7'){echo "Offtg Secretary";}elseif($role=='8'){echo "Offtg Director";}
-							elseif($role=='9'){echo "Offtg Division Head";}?></h3>
-                        </div>
-                        <div class="panel-footer">
-                            <span class="panel-eyecandy-title">Your User Role 
-                            </span>
-                        </div>
-                    </div>
+               
 
+                <div class="col-md-12">
 
-
-
-
-
+                    <p>@Alumni Management System</p>
 
                 </div>
 
             </div>
-
-           
-
-                      
-
-
-         
-
+        </div>
 
         </div>
-        <!-- end page-wrapper -->
-
-    </div>
-    <!-- end wrapper -->
-
+ 
  

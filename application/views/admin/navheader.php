@@ -12,20 +12,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
-                    <h1><img src="<?php echo base_url();?>assets/img/logoditt.png"</h1>
-                </a>
+                <a class="navbar-brand " href="#">
+                    <h1 class="lead"><img src="<?php echo base_url();?>assets/img/cstlogo2.png"><font size="3">CST Alumni Management System</font></h1></a>
+                
             </div>
             <!-- end navbar-header -->
             <!-- navbar-top-links -->
             <ul class="nav navbar-top-links navbar-right">
                 <!-- main dropdown -->
-                <li class="dropdown">
+              <!--   <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="top-label label label-danger"><?php  if($unreadm>0){echo $unreadm;}?></span><i class="fa fa-envelope fa-2x"></i>
-                    </a>
+                    </a> -->
                     <!-- dropdown-messages -->
-                    <ul class="dropdown-menu dropdown-messages">
+                    <!-- ul class="dropdown-menu dropdown-messages">
                     	<?php foreach($messages->result() as $message): ?>
                         <li>
                             <a href="<?php echo base_url();?>index.php/Messages/message/<?php echo $message->mId;?>">
@@ -46,9 +46,9 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                     <!-- end dropdown-messages -->
-                </li>
+               <!--  </li> -->
 
               <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -56,8 +56,7 @@
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="<?php echo base_url();?>index.php/Settings/profile/"><i class="fa fa-user fa-fw"></i>User Profile</a>
-                        </li>
+                        
                         <li class="divider"></li>
                         <li><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
@@ -71,3 +70,5 @@
         </nav>
         
         <!-- end navbar top -->
+    </div>
+</body>

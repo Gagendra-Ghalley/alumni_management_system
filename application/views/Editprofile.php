@@ -403,6 +403,7 @@
         <?php }?>
 
     </div>
+</div>
     <!--footer-->
  <div class="bg-primary" class="du-newsletter">
             <div class="bg-primary" class="du-newsletter">

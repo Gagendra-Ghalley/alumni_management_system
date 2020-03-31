@@ -75,7 +75,7 @@
         </div>
       
    
-           
+  </div>         
 
  <div class="bg-primary" class="du-newsletter">
             <div class="container">
