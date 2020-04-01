@@ -28,7 +28,7 @@
             <div class='input-group date'>
                 <input type='text' class="form-control" id='datetimepickerstart' placeholder="Start Date" name="startdate"/>
                 
-                </span>
+              
             </div>
             <br/>
              <div class='input-group date'>

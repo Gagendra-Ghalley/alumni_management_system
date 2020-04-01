@@ -51,12 +51,12 @@
                   
                 </div>
             </div>
-            <div class="col-md-2 col-sm-6 " >
-                
 
+<!-- <div class="col-lg-2 col-md-12 col-sm-12 " >
+                
                     <div class="bg-info" >
                              <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
-                             <!--     <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
+                                 <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
                 <input type="text" name="cid">
                  <input type="submit" value="Join Us" class="btn-default du-common-property">
                 </form> 
@@ -83,12 +83,88 @@
                                         <button style="height:100px;width:100px;font-size:15px"><?php
                                         $a="+";
                                         echo ($count1.=$a);
-                                        echo ("\nMembers");?></button> -->
+                                        echo ("\nMembers");?></button>
                                     <a href="<?php echo base_url();?>index.php/Settings/event_validate"><font color="white" >Join Now</font> </a>
 
                                 </button></span>
 
                             <br> 
+                            <table>
+                             <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                    
+                                        <p><font size="4" color="#222"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members");?></font></p>
+                    </div>      
+               
+            </div> -->
+
+
+            <div class="col-md-2 col-sm-6 " >
+<?php foreach($user->result() as $row){?>
+        
+       
+        
+              <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
+                <input type="hidden" name="cid" value="<?php echo $row->cid;?>">
+                <input type="submit" value="Join Us" style="height:37px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+                </form> 
+                 <?php } ?>
+           
+    <table>
+      <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                        <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
+                                        
+                                        echo ($count1);
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+                <!-- <br> <br>
+
+                    <div  >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+                          
+                                    <a href="<?php echo base_url();?>index.php/Settings/event_validate"><font color="white" >Join Now</font> </a>
+
+                                </button></span>
+
+
+                            <br> <br>
 
                    
 
@@ -105,20 +181,22 @@
                                         </table> 
                                    <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
                                         <p><font color="black"><?php
-                                        // $a="+";
+                                        
                                         echo ($count1);
                                         echo (" Members <br> Interested");?></font></p>
                                           </button><br><br>
-
-                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
-
-                                </button>       
+ -->
                
             </div>
         </div>
+<<<<<<< HEAD:application/views/superadmin/edit_event.php
  <div class="container">
+=======
+ <div class="row">
+                <div class="col-md-5 col-sm-12">
+                    <p class="text-primary"><b>Description</b></p>
+                </div>
+>>>>>>> 9555942de391d748067e48354d19517c351f9091:application/views/division/dashboard.php
                
              <div class="container">
                 <div class="col-md-10 col-sm-12">
@@ -168,6 +246,7 @@
     </div>   
 
               
+ </div>
  </div>
 
 

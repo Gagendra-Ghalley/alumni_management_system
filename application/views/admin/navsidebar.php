@@ -57,6 +57,7 @@
                       
                     </li>
                      <li>
+<<<<<<< HEAD
                         <a href="<?php echo base_url()?>index.php/ATD/monthlyatd/"><i class="fa fa-bar-chart-o fa-fw"></i>Add Event</a>
                     </li>
                     <li>
@@ -66,6 +67,40 @@
 					<li>
                         <a href="<?php echo base_url()?>index.php/Settings/viewHolidays/"><i class="fa fa-search fa-fw"></i>Delete User</span></a>
                         
+=======
+                       <a href="#"><i class="fa fa-edit fa-fw"></i> Event<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                           
+                            <li>
+                                <a href="<?php echo base_url()?>index.php/Leave/addevent/">Add Events</a>
+                            </li>
+                            <li>
+
+                              <a href="#">Edit Events</a>
+                            </li>
+                             <li>
+                                <a href="#">Delete Events</a>
+                            </li></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit fa-fw"></i> Users<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                           
+                            <li>
+                                <a href="#">Add Users</a>
+                            </li>
+                            <li>
+                              <a href="#">Delete Users</a>
+                            </li>
+                             </a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+					<li>
+>>>>>>> 9555942de391d748067e48354d19517c351f9091
                         
                     </li>
                     
