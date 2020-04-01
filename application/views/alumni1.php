@@ -10,15 +10,15 @@
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> 
+    <!-- <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" />  -->
   
      <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
     
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
+   <!--  <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" /> -->
 
-    <link href="<?php echo base_url();?>assets/css/cst2.css" rel="stylesheet" /> 
+    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
@@ -32,6 +32,7 @@
      <link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
      <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
      <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
+      <link href="<?php echo base_url();?>assets/css1/effect.css" rel="stylesheet">
   
 
 
@@ -46,12 +47,12 @@
     
       <div class="header-element clearfix">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <h1 class="navbar-brand navbar-brand_">
                                     <a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
 
                             </div>
-                            <div class="col-md-8" >
+                            <div class="col-md-9" >
                                 <ul class="flexy-menu orange" >
                                     <li   class="active"><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
@@ -60,6 +61,8 @@
                                     <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-envelope"></i>Profile</a></li>
 
                                     <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
@@ -100,7 +103,13 @@
 
                         <!-- First slide -->
                         <div class="item active deepskyblue">
-                            <figure><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 350px" alt=""></figure>
+                             <div class="hovereffect">
+                              <figure><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 350px" alt=""></figure>
+                                <div class="overlay">
+                                   
+                                </div>
+                        </div>
+                            
                             <div class="carousel-caption ">
                                 
                                 <h1 class="title" style="text-transform: uppercase; font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of <br>all alumni</h1>
@@ -273,14 +282,21 @@
     <div class="du-current-news center ">
     <div class="container img-thumbnail">
         <div class="row padding">
-            <div class="col-lg-7 col-md-12 col-sm-12"data-wow-delay="0.2s" >
-                <div class="card">
+            <div class="col-lg-7 col-md-7 col-sm-12"data-wow-delay="0.2s" >
+                
+
+                            <div class="hovereffect">
+                             <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
+                                <div class="overlay">
+                                    <h2>Upcoming Event</h2>
+                                    
+                                </div>
+                        </div>
                     
-                    <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
                    
-                </div>
+         
             </div>
-            <div class="col-lg-3 col-md-12 col-sm-12" >
+            <div class="col-lg-3 col-md-3 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title text-left bold">UP COMING EVENT</div><br>
@@ -298,9 +314,21 @@
                   
                 </div>
             </div>
-            <div class="col-md-2 col-sm-12 " >
-                
+           <div class="col-md-2 col-sm-6 " >
+                <br> <br>
+
+                    <div  >
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+                          
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1"><font color="white" >Join Now</font> </a>
+
+                                </button></span>
+
+
+                            <br> <br>
+
                    
+
                             <table>
                              <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
@@ -322,19 +350,14 @@
                                         </table> 
                                    <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
                                         <p><font color="black"><?php
-                                        // $a="+";
+                                        
                                         echo ($count1);
                                         echo (" Members <br> Interested");?></font></p>
                                           </button><br><br>
 
-                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
-
-                                </button>   
                
             </div>
-
+        </div>
                         <div class="col-md-12">
                         <button class="btn btn-link text-primary btn-lg"><b><a href="<?php echo base_url();?>index.php/ATD/login1/">Read more</a></b></button>
                         </div>
@@ -355,14 +378,22 @@
                         <!-- image thumbnail -->
                         <div class="team-box wow fadeInLeft img-thumbnail">
                             <!-- Image -->
-                            <figure><img src="<?php echo base_url();?>assets/img1/wellcome.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive img1-w3l"></figure>
 
+                            <div class="hovereffect">
+                            <figure> <img class="img-responsive" src="<?php echo base_url();?>assets/img1/wellcome.jpg" style="height: 250px;width: 100%" alt="" class="img-responsive img1-w3l" alt=""></figure>
+                                <div class="overlay">
+                                    <h2>About Us</h2>
+                                    
+                                </div>
+                        </div>
+                                                  
+                    
                             <!-- about us -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">About us</h3>
                                 <p style="font-family:georgia; color:black; font-size: 16px">"whether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success" </p>
-                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
+                                <a href="<?php echo base_url();?>index.php/ATD/aboutUs/" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -370,7 +401,15 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                      
                         <div class="team-box wow fadeInLeft img-thumbnail">
-                            <figure><img src="<?php echo base_url();?>assets/img1/membership.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/img1/membership.jpg" style="height: 250px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>Memberships</h2>
+                                    
+                                </div>
+                        </div>
+                            
 
                             <!-- membership -->
                             <div class="du-caption">
@@ -386,7 +425,15 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                       
                         <div class="team-box wow fadeInLeft img-thumbnail">
-                            <figure><img src="<?php echo base_url();?>assets/img1/donate.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/img1/donate.jpg" style="height: 250px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>Donate us</h2>
+                                    
+                                </div>
+                        </div>
+                           
 
                             <!-- Donate -->
                             <div class="du-caption">
@@ -409,7 +456,15 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         
                         <div class="team-box wow fadeInLeft img-thumbnail">
-                            <figure><img src="<?php echo base_url();?>assets/img1/events.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/img1/events.jpg" style="height: 250px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>See Events</h2>
+                                    
+                                </div>
+                        </div>
+                            
 
                             <!-- Event -->
                             <div class="du-caption">
@@ -429,17 +484,22 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         
                         <div class="team-box wow fadeInLeft img-thumbnail">
+
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/img1/faculty.jpg" style="height: 250px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>Faculty</h2>
+                                    
+                                </div>
+                        </div>
                            
-                        <figure class="view overlay zoomInUp">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img1/faculty.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive" alt="">
-                                  
-                        </figure>
+                       
                             <!-- Faculty -->
                             <div class="du-caption">
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Faculty</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
+                                <a href="<?php echo base_url();?>index.php/ATD/faculty/" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -447,7 +507,16 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         
                         <div class="team-box wow fadeInLeft img-thumbnail">
-                            <figure><img src="<?php echo base_url();?>assets/img1/profile.jpg" style="height: 270px;width: 100%" alt="" class="img-responsive"></figure>
+
+
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/img1/profile.jpg" style="height: 250px;width: 100%" alt="" class="img-responsive"></figure>
+                                <div class="overlay">
+                                    <h2>See Profile</h2>
+                                    
+                                </div>
+                        </div>
+                          
 
                             <!-- Profile -->
                             <div class="du-caption">
@@ -460,41 +529,7 @@
                         </div>
                     </div>
                     
-                    <div class="container img-thumbnail">
-                        <div class="col-md-4 col-sm-12 left-contact  ">
-
-                       <h3 class="title" style="color:#428af5;">Contact Us</h3>
-                        <ul>
-                            <li><i class="fa fa-envelope" ></i><a href="0216506.cst@rub.edu.bt">Alumni management system</a></li>
-                            <li><i class="fa fa-phone" ></i>+77777777</li>
-                            <li><i class="fa fa-map-marker"></i>college of science and technology</li>
-                        </ul>
-                                        
-                        </div>
-
-                          <div class="col-md-4 col-sm-12 left-contact ">
-
-                       <h3 class="title" style="color:#428af5;">Vist</h3>
-                        <ul  class="du-choose-list">
-                            <li><a href="#"><strong style="color:#428af5">College Of science And Technology</strong></a></li>
-                            <li></i><a href="#"><strong style="color:#428af5">Royal Univerisity of Bhutan</strong></a></li>
-                            <li></i><a href="#"><strong style="color:#428af5">VLE cst</strong></a></li>
-                            <li></i><a href="#"><strong style="color:#428af5">Libary cst</strong></a></li>
-                            
-                        </ul>
-                                        
-                        </div>
-                        <div class="col-md-4 col-sm-12 left-contact ">
-
-                        <h3 class="title" style="color:#428af5;">Donates us </h3>
-                        <figure class="view overlay zoomInUp">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img1/donate.png" style="height: 270px;width: 100%" alt="" class="img-responsive" alt="">
-                                  
-                        </figure> 
-                                        
-                        </div>
-                    </div>
-    
+                    
 
 
                 </div>
@@ -504,33 +539,60 @@
         </div>
       
     </section>
-    <!--contact us-->            
-    <!-- <div class="agile-contact col-md-12">
-    <div class="left-contact col-md-6">
-        
+    <div class="container col-md-12 img-thumbnail bg-primary">
+                        <div class="col-md-4 col-sm-12 left-contact  ">
 
-            <h6>contact us</h6>
-            <ul>
-                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="0216506.cst@rub.edu.bt">Alumni management system</a></li>
-                <li><i class="fa fa-phone" aria-hidden="true"></i>+77777777</li>
-                <li><i class="fa fa-map-marker" aria-hidden="true"></i>college of science and technology</li>
-            </ul>
+                       <h3 class="title" style="color:#fff;">Contact Us</h3>
+                       <hr>
+                        <ul>
+                            <li><i class="fa fa-envelope" ></i><a href="0216506.cst@rub.edu.bt"><strong style="color:#fff">Alumni management system</strong></a></li>
+                            <hr>
+                            <li><i class="fa fa-phone" ></i><strong style="color:#fff">+77777777</strong></li>
+                            <hr>
+                            <li><i class="fa fa-map-marker"></i><strong style="color:#fff" >college of science and technology</strong> </li>
+                            <hr>
+                        </ul>
+                                        
+                        </div>
+
+                          <div class="col-md-4 col-sm-12 left-contact ">
+
+                       <h3 class="title" style="color:#fff">Vist</h3>
+                       <hr>
+                        <ul  class="du-choose-list">
+                            <li><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">Royal Univerisity of Bhutan</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">VLE cst</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">Libary cst</strong></a></li>
+                        
+                           
+                        </ul>
+
+                                        
+                        </div>
+                        <div class="col-md-4 col-sm-12 left-contact ">
+
+                        <h3 class="title" style="color:#fff;">Donates us </h3>
+                        <hr>
+                        
+
+                          <img src="<?php echo base_url();?>assets/img1/bob.png" style="height: 50px;width: 50px" ><strong style="color:#fff">Bank of Bhutan:20054656</strong>  
+                        
+                          <hr>
+                       
+                          <img src="<?php echo base_url();?>assets/img1/bnb.png"  style="height: 50px;width: 50px"><strong style="color:#fff">Bhutan National Bank:86867667</strong>
+                  
+                         <hr>
+                       
+                          <img src="<?php echo base_url();?>assets/img1/T bank.png"  style="height: 50px;width: 50px"><strong style="color:#fff">T Bank:6767654</strong> 
+                    <hr>
+            
+                                        
+                        </div>
+                        
+                    </div>
     
-    </div>
-    <!--Location map-->
-    <!-- <div class="right-contact">
-        <div class="map">
-            <iframe src="https://www.google.com/maps/place/College+of+Science+and+Technology/@26.8502058,89.3918037,17z/data=!3m1!4b1!4m5!3m4!1s0x39e3cb2c210e611d:0x44c5cb2cd32b18d4!8m2!3d26.8502058!4d89.3939924?hl=en-US" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <form action="#" method="post">
-                <input placeholder="Name" name="Name" class="name" type="text" required=""><br>
-                <input placeholder="E-mail" name="Name" class="name" type="text" required=""><br>
-                <textarea placeholder="Message"></textarea><br>
-                <input type="submit" value="send message">
-            </form>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-</div> -->
+    
 
 
 <!--footer-->
@@ -540,7 +602,7 @@
 
                
 
-                <div class="col-md-6">
+                <div class="col-md-12">
 
                     <p>@Alumni Management System</p>
 
@@ -600,6 +662,8 @@
                                   }
                                 }, 1000);
                                 </script>
+
+
 
  
 

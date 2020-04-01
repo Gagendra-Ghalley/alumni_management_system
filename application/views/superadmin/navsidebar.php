@@ -51,7 +51,7 @@
                     <li>
                         <a href="<?php echo base_url()?>index.php/ATD/dashboard/"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
-                    <li>
+                   <!--  <li>
                         <a href="#"><i class="fa fa-edit fa-fw"></i> Leave<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                            
@@ -66,21 +66,21 @@
                             </li></a>
                             </li>
                         </ul>
-                        <!-- second-level-items -->
-                    </li>
+                    
+                    </li> -->
                      <li>
-                        <a href="<?php echo base_url()?>index.php/ATD/monthlyatd/"><i class="fa fa-bar-chart-o fa-fw"></i>Attendance Report</a>
+                        <a href="<?php echo base_url()?>index.php/Settings/addevents/"><i class="fa fa-bar-chart-o fa-fw"></i>Add Events</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="<?php echo base_url()?>index.php/TelDirectory/viewDirectory/"><i class="fa fa-phone fa-fw"></i>Telephone Directory</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url()?>index.php/Settings/viewHolidays/"><i class="fa fa-search fa-fw"></i>Holidays</span></a>
                         
                         
-                    </li>
+                    </li> -->
                    
-                    <li>
+                    <!-- <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Settings<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
@@ -92,9 +92,9 @@
                             <li>
                             	<a href="<?php echo base_url();?>index.php/Settings/assignParentAgencies/">Assign Dept heads</a>
                             </li>
-                            	
+                            	 -->
                             <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewRoles">View Roles</a>
+                                <a href="<?php echo base_url();?>index.php/Settings/viewevent">Edit events</a>
                             </li>
                             <li>
                                 <a href="#">Add user</a>
@@ -102,10 +102,8 @@
                                <li>
                                 <a href="#">Delete user</a>
                             </li>
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                      <li>
+                                            </li>
+                     <!--  <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Training<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
@@ -114,13 +112,13 @@
                             <li>
                                 <a href="<?php echo base_url();?>index.php/Training/addTraining/">Add training</a>
                             </li>
-
+ -->
                             
 
                            
-                        </ul>
+                      
                         <!-- second-level-items -->
-                    </li>
+                    <!-- </li>
                     <a href="#"><i class="fa fa-wrench fa-fw"></i>Dispatch_admin<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                                 <ul class="nav nav-second-level">
@@ -129,12 +127,9 @@
                             </li>
                            
 
-                            
+                             -->
 
-                           
-                        </ul>
-                   
-                </ul>
+                     
                 <!-- end side-menu -->
             </div>
             <!-- end sidebar-collapse -->

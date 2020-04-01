@@ -331,7 +331,7 @@ public function validate_credentials1(){
 
 	
 	
-	public function membersearch1(){
+	public function membersearch1(){//leki
  	
 		
 		// $this->load->view('template/includeheader',$this->dataheader);
@@ -341,7 +341,7 @@ public function validate_credentials1(){
 		
 	}
 
-public	function viewmember2(){
+public	function viewmember2(){//leki
   			$name=$this->input->post('name');
   			// $department=$this->input->post('department');
 
@@ -541,6 +541,10 @@ public	function viewmember2(){
 				$data['reports']=$this->atd->dailyAttendance();
 				$data['supervisor']=$this->sm->getSupervisor();
 				$data['pendingLeave']=$this->lm->pendingCount();
+				$data['eventdetail']=$this->db->get('event_table')->result_array();
+				// $data['date1']=$this->db->get('event_table')->result_array();
+				// $data['eventname']=$this->db->get('event_table')->result_array();
+  	
 				$this->load->view('template/includeheader',$this->dataheader);
 				$this->load->view('division/dashboard',$data);
 				$this->load->view('template/includefooter');

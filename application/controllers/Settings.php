@@ -961,7 +961,7 @@ public function reciept()
 	}
 	
 
-	public function membersearch1(){
+	public function membersearch1(){//leki
  	
 		
 		$this->load->view('template/includeheader',$this->dataheader);
@@ -973,7 +973,7 @@ public function reciept()
 
 
 
-		public	function viewmember1(){
+		public	function viewmember1(){//leki
   			$name=$this->input->post('name');
   			// $department=$this->input->post('department');
 
@@ -1022,7 +1022,51 @@ public function reciept()
 	   }
 
 
+	   public function addevents(){//leki
+	   	if($this->session->userdata('logged_in')=='1'){
+	   	$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('superadmin/add_events');
+				$this->load->view('template/includefooter');
+			}
+	
+	 }
+function addevent1(){//leki
 
+	 	$this->form_validation->set_rules('event','startdate','enddate','required');	
+
+  		$data['event']=$this->input->post('event'); 
+  		$data['eventname']=$this->input->post('event1'); 
+
+  		$data['date']=$this->input->post('date'); 
+  		$this->db->insert('event_table', $data); 
+  		echo "Successfully added";
+
+  	}
+  		
+ 
+ public function viewevent(){//leki
+ 	$data['eventdetail']=$this->db->get('event_table')->result_array();//pulls all from db
+  		$this->load->view('template/includeheader',$this->dataheader);
+  		$this->load->view('superadmin/edit_event',$data);
+  		$this->load->view('template/includefooter');
+  	
+
+
+ }
+  	public function editevent($param1=""){//leki
+//$d3= $_POST['edit'];
+//$d3=$this->input->post('edit');
+
+// $data12['event']=implode(', ', $_POST['edit']);
+// 		$data4=implode(" ",$data12);
+
+$this->db->where('event_id',$param1);
+$query['editdetail']=$this->db->get('event_table')->row();
+ $d=implode(" ", $query);
+// die($d);
+$this->load->view('superadmin/update_event',$d);
+
+  	}
 	   
 	public function updateContact() {
 		
