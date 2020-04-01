@@ -247,5 +247,16 @@
 		$this->load->view('template/includefooter');
 		
 	}	
+	public function addevent(){
+		
+		
+		
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('addevent');
+		$this->load->view('template/includefooter');
+		
+		
+		
+	}	
 	
 }
