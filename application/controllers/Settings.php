@@ -1054,6 +1054,15 @@ function addevent1(){//leki
 
  }
   	public function editevent($param1=""){//leki
+  			// $data=$_POST["edit"]; 
+  			
+		// $data=$this->input->post("edit");
+		// die($data);
+		// $data12['edit']=$_POST['edit'];
+		// $data9['issue1']=implode(' ', $_POST['issue1']);
+		// $d9=implode(" ",$data9);
+		
+
 //$d3= $_POST['edit'];
 //$d3=$this->input->post('edit');
 
@@ -1061,10 +1070,31 @@ function addevent1(){//leki
 // 		$data4=implode(" ",$data12);
 
 $this->db->where('event_id',$param1);
-$query['editdetail']=$this->db->get('event_table')->row();
- $d=implode(" ", $query);
+$query['editdetail']=$this->db->get('event_table')->result_array();
+ // $d=implode(" ", $query);
 // die($d);
-$this->load->view('superadmin/update_event',$d);
+$this->load->view('superadmin/update_event',$query);
+
+  	} 
+
+
+
+  	public function updateevent($param1=""){//leki
+  			// $data=$_POST["edit"]; 
+  			
+		 $data=$this->input->post("edit1");
+		 echo $data;
+		 die($param1);
+		 //$data=$this->input->post("edit");
+		
+$this->db->where('event_id',$param1);
+$query['editdetail1']=$this->db->get('event_table')->result_array();
+$data4=implode(" ",$query);
+$this->db->update('event_table',$data4);
+die("apple");
+ // $d=implode(" ", $query);
+// die($d);
+$this->load->view('superadmin/update_event',$query);
 
   	}
 	   

@@ -139,13 +139,12 @@
                           <h3><?php echo $row['eventname'];?><br></h3>
                           <?php echo $row['event'];?><br>
                           
-
-                          
+              
+                          <form method ="post"></form>
                           
                  <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
-                    <button name="edit" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Edit</button></a> </br> 
-
-                     <a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>" > <button name="subject" type="submit"  style="background-color:#cc0000;color:white;width:250px;height:40px;"
+                    <button name="edit" id="edit" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Edit</button></a> </br> 
+           <a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>" > <button name="delete[]" type="submit"  style="background-color:#cc0000;color:white;width:250px;height:40px;"
                     value="fav_CSS"  >Delete</button></a>
 
 

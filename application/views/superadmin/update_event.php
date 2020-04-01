@@ -56,10 +56,17 @@
                           <h3><?php echo $row['eventname'];?><br></h3>
                           <?php echo $row['event'];?><br> -->
                           
+                          <?php foreach($editdetail as $row): ?>
                          
-                         <input type="text" name="id" value="<?php echo $d;?>"/>
+                         <input type="text" name="edit1" style="height:150px;width:500px" value="<?php echo $row['date'];echo $row['eventname'];echo $row['event'];?> "/>
+
+                         <a href="<?php echo site_url();?>/Settings/updateevent/<?php echo $row['event_id'];?>" > 
+                         <button name="update" id="update" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Save</button></a> 
                          
-                          
+                         <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
+                         <button name="cancel" id="cancel" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Cancel</button></a> 
+                         
+                          <?php endforeach; ?>
                  <!-- <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
                     <button name="edit" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Edit</button></a> </br> 
 
