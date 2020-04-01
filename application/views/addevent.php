@@ -32,40 +32,26 @@
                             <div class="row">
                                <div class="col-md-12">
                                 <div class="row du-contact-form"> 
-                                  <form>
+                                  <form accept-charset="utf-8" class="form-group" id="f" action="<?php echo site_url();?>/Settings/addevent1" method="post">
 
-                                    <div class="form-group col-md-4"> 
+                                    <div class="form-group col-md-6"> 
                                       <label>Tittle</label>
-                                      <input type="text" class="form-control" placeholder="Type tittle here..."> 
+                                      <input type="text" name="event1"class="form-control" placeholder="Type tittle here..."> 
                                     </div> 
 
-                                          <div class="form-group col-md-4"> 
-                                            <label>Event type</label>
-                                            <div class="input-group">
-                                              <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">..Event types.. <span class="caret"></span></button>
-                                                <ul class="dropdown-menu">
-                                                  <li><a href="#">sport</a></li>
-                                                  <li><a href="#">workshop</a></li>
-                                                  <li><a href="#">conference</a></li>
-                                                  <li><a href="#">Collge Foundation Day</a></li>
-                                                </ul>
-                                              </div><!-- /btn-group -->
-                                              <input type="text" class="form-control" aria-label="...">
-                                                 </div><!-- /input-group -->
-                                          </div> 
+                                          
 
-                                          <div class="form-group col-md-4"> 
+                                          <div class="form-group col-md-6"> 
                                             <label>Date</label>
                                            
-                                              <input type='text' class="form-control" id='datetimepickerstart' placeholder="Date.." name="startdate"/>
+                                              <input type='date' class="form-control" id='datetimepickerstart' placeholder="Date.." name="date"/>
                                           </div>
 
 
 
                                     <div class="col-md-12"> 
                                       <label>Description</label>
-                                      <textarea class="form-control" rows="10" placeholder="Description">
+                                      <textarea class="form-control" name="event" rows="10" placeholder="Description">
                                       </textarea> 
                                      
                                     </div>
