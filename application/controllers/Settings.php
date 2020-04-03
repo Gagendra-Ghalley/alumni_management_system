@@ -1073,8 +1073,9 @@ $this->db->where('event_id',$param1);
 $query['editdetail']=$this->db->get('event_table')->result_array();
  // $d=implode(" ", $query);
 // die($d);
+$this->load->view('template/includeheader',$this->dataheader);
 $this->load->view('superadmin/update_event',$query);
-
+$this->load->view('template/includefooter');
   	} 
 
 
