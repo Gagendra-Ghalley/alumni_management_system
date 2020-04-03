@@ -1081,21 +1081,22 @@ $this->load->view('template/includefooter');
 
 
   	public function updateevent($param1=""){//leki
-  			// $data=$_POST["edit"]; 
+  		//$data=$_POST["editname"]; 
   			
-		 $data=$this->input->post("edit1");
-		 echo $data;
-		 die($param1);
+
+ 
+  		
+		 $d1=$this->input->post("editname");
+		$d2=$this->input->post("editdate");
+		$d3=$this->input->post("editevent");
+		 $data['eventname']=$this->sm->eventupdate($param1,$d1,$d2,$d3);
 		 //$data=$this->input->post("edit");
 		
-$this->db->where('event_id',$param1);
-$query['editdetail1']=$this->db->get('event_table')->result_array();
-$data4=implode(" ",$query);
-$this->db->update('event_table',$data4);
-die("apple");
- // $d=implode(" ", $query);
-// die($d);
-$this->load->view('superadmin/update_event',$query);
+// $this->db->where('event_id',$param1);
+// $this->db->update('event_table',$data);
+
+echo "successfully updated";
+
 
   	}
 	   

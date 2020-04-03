@@ -44,19 +44,22 @@
                         </div>
 
                         <div class="panel-body">
-<?php foreach($editdetail as $row): ?>
 
                          
+<?php foreach($editdetail as $row): ?>
+
+                       
                           
 
                             <div class="row">
                                <div class="col-md-12">
                                 <div class="row du-contact-form"> 
                                
-
+   <form class="form-horizontal"  id="f"  method="post" action="<?php echo site_url();?>/Settings/updateevent/<?php echo $row['event_id'];?>">
+                           
                                     <div class="form-group col-md-6"> 
                                       <label>Tittle</label>
-                                      <input type="text" name="editevent"class="form-control" value="<?php echo $row['eventname'];?>"/> 
+                                      <input type="text" name="editname"class="form-control" value="<?php echo $row['eventname'];?>"/> 
                                     </div> 
 
                                           
@@ -91,22 +94,22 @@
 
 
 
-                         <a href="<?php echo site_url();?>/Settings/updateevent/<?php echo $row['event_id'];?>" > 
-                         <button name="update" id="update" type="submit"  value="fav_CSS" class="btn-default du-common-property" >Save</button></a> 
-                         
+                        <button name="update" id="update" type="submit" form="f" value="fav_CSS" class="btn-default du-common-property" >Save</button>
+
                          <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
-                         <button name="cancel" id="cancel" type="submit" value="fav_CSS" class="btn-default du-common-property" >Cancel</button></a> 
-                         
+                         <button name="cancel" id="cancel" type="submit" value="fav_CSS" class="btn-default du-common-property" >Cancel</button> 
+                        </a></form> 
 
 
                 </div> 
               </div>
 
                             </div>
-                           
+
+                           <?php endforeach; ?>
                         </div>
 
-                      <?php endforeach; ?>
+                      
                     </div>
                     
 

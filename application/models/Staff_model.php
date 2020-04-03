@@ -191,6 +191,28 @@ public function can_log_in1($mac){
 			
 		}
 	
+
+
+
+
+
+ public function eventupdate($param1="",$param2="",$param3="",$param4=""){//leki
+		 	
+			// $param1=$event_id;
+			// $param2=$eventname;
+			// $param3=$date;
+			// $param4=$event;
+
+$existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2."',date='".$param3."',event='".$param4."' where event_id='".$param1."'"); 
+
+
+		 	
+
+				  return $existing_detail;
+	
+
+		
+	}
 	public function sessionInitiate() {
 		
 		
