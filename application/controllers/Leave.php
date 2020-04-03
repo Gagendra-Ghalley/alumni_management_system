@@ -248,11 +248,49 @@
 		
 	}	
 	public function addevent(){
-		
-		
-		
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('addevent');
+		$this->load->view('template/includefooter');
+		
+		
+		
+	}	
+
+	public function deleteevent(){
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('deleteevent');
+		$this->load->view('template/includefooter');
+		
+		
+		
+	}	
+	public function adduser(){
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('adduser');
+		$this->load->view('template/includefooter');
+		
+		
+		
+	}	
+	public function deleteuser(){
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('deleteuser');
+		$this->load->view('template/includefooter');
+		
+		
+		
+	}	
+	public function admin_profile(){
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('admin_profile');
+		$this->load->view('template/includefooter');
+		
+		
+		
+	}	
+	public function view_detail(){
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('view_detail');
 		$this->load->view('template/includefooter');
 		
 		

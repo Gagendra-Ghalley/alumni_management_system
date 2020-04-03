@@ -36,8 +36,8 @@
                        
                   </div>
                   <div class="panel-footer">
-                            <span class="panel-eyecandy-title"><strong><b style=" color:green; font-size: 18px">User Profile</b></strong> 
-                            </span><i class="fa fa-plus-circle fa-1x"  style="margin-left: 430px;color: green"></i>
+                           <a href="#"><span class="panel-eyecandy-title"><strong><b style=" color:green; font-size: 18px">User Profile</b></strong> 
+                            </span><i class="fa fa-plus-circle fa-2x"  style="margin-left: 460px;color: green"></i></a> 
                         </div>
                 </div>
 
@@ -52,8 +52,8 @@
                         <i class="fa  fa-clock-o fa-5x"></i>&nbsp;<br/><b><?php echo $latecount;?> </b><br/><strong>Add Event</strong>
                     </div>
                      <div class="panel-footer">
-                            <span class="panel-eyecandy-title"><strong><b style=" color:blue; font-size: 18px">Add Event</b></strong>
-                            </span><i class="fa fa-plus-circle" style="margin-left: 440px;color: blue"></i>
+                            <a href="<?php echo base_url()?>index.php/Leave/addevent/"><span class="panel-eyecandy-title"><strong><b style=" color:blue; font-size: 18px">Add Event</b></strong>
+                            </span><i class="fa fa-plus-circle fa-2x" style="margin-left: 460px;color: blue"></i></a>
                         </div>
                   </div>
                 </div>
@@ -66,8 +66,8 @@
 
                     </div>
                     <div class="panel-footer">
-                            <span class="panel-eyecandy-title"><strong><b style="color:#97839c; font-size:18px">Add User</b></strong>
-                            </span><i class="fa fa-plus-circle"  style="margin-left: 450px;color: #97839c"></i>
+                            <a href="<?php echo base_url()?>index.php/Leave/adduser/"><span class="panel-eyecandy-title"><strong><b style="color:#97839c; font-size:18px">Add User</b></strong>
+                            </span><i class="fa fa-plus-circle fa-2x"  style="margin-left: 460px;color: #97839c"></i></a>
                         </div>
                 </div>
                </div>
@@ -77,8 +77,8 @@
                         <i class="fa fa-user fa-5x"></i>&nbsp;<br/><b><?php echo $notused;?></b><br/><strong>Delete User</strong>
                     </div>
                     <div class="panel-footer panel-red border">
-                            <span class="font-weight-bold"><strong><b style="color: red; font-size:18px">Delete Users</b></strong>
-                            </span><i class="fa fa-plus-circle fa-1x" style="margin-left: 420px;color: red"></i>
+                           <a href="<?php echo base_url()?>index.php/Leave/deleteuser/"> <span class="font-weight-bold"><strong><b style="color: red; font-size:18px">Delete Users</b></strong>
+                            </span><i class="fa fa-plus-circle fa-2x" style="margin-left: 460px;color: red"></i></a>
 
                         </div>
 

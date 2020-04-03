@@ -52,7 +52,7 @@
                         <a href="<?php echo base_url()?>index.php/ATD/dashboard/"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-user">&nbsp</i>Profile</a>
+                        <a href="<?php echo base_url()?>index.php/Leave/admin_profile/"><i class="fa fa-user">&nbsp</i>Profile</a>
                         
                       
                     </li>
@@ -74,12 +74,9 @@
                             <li>
                                 <a href="<?php echo base_url()?>index.php/Leave/addevent/">Add Events</a>
                             </li>
-                            <li>
-
-                              <a href="#">Edit Events</a>
-                            </li>
+                          
                              <li>
-                                <a href="#">Delete Events</a>
+                                <a href="<?php echo base_url()?>index.php/Leave/deleteevent/">Delete Events</a>
                             </li></a>
                             </li>
                         </ul>
@@ -89,10 +86,10 @@
                          <ul class="nav nav-second-level">
                            
                             <li>
-                                <a href="#">Add Users</a>
+                                <a href="<?php echo base_url()?>index.php/Leave/adduser/">Add Users</a>
                             </li>
                             <li>
-                              <a href="#">Delete Users</a>
+                              <a href="<?php echo base_url()?>index.php/Leave/deleteuser/">Delete Users</a>
                             </li>
                              </a>
                             </li>
