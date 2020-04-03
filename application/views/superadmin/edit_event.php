@@ -143,9 +143,11 @@
                           <form method ="post"></form>
                           
                  <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
-                    <button name="edit" id="edit" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Edit</button></a> </br> 
-           <a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>" > <button name="delete[]" type="submit"  style="background-color:#cc0000;color:white;width:250px;height:40px;"
-                    value="fav_CSS"  >Delete</button></a>
+                    <button name="edit" id="edit" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Edit</button></a> </br> <br>
+
+
+                    <a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>"> 
+            <button name="delete"   type="submit"  style="background-color:#cc0000;color:white;width:150px;height:40px;"value="fav_CSS"  >Delete</button></a>
 
 
 
@@ -189,6 +191,27 @@
         </div>
 
  <script>
+
+
+
+  function deletefn(){
+//onclick="deletefn()"
+
+//<a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>" >
+if(confirm('Are you sure?')){
+
+<a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>">  
+
+
+  //       var option= {target: '#loadcontent',url:url,type:'POST',data: $('#fileaddformid').serialize()};
+  //       $('#fileaddformid').ajaxSubmit(option);
+}
+
+else{
+alert("Nothing");
+}
+
+  }
     
     function searchFunction(){
         

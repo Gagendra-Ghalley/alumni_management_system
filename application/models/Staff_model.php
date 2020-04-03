@@ -197,7 +197,7 @@ public function can_log_in1($mac){
 
 
  public function eventupdate($param1="",$param2="",$param3="",$param4=""){//leki
-		 	
+
 			// $param1=$event_id;
 			// $param2=$eventname;
 			// $param3=$date;
@@ -213,6 +213,16 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 
 		
 	}
+
+
+		 public function eventdelete($param2=""){
+
+		 	$delete=$this->db->query("DELETE from event_table where event_id='".$param2."'");
+
+		 echo "Successfully deleted";
+
+}
+
 	public function sessionInitiate() {
 		
 		

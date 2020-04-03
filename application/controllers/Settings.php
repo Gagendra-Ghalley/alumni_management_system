@@ -1082,10 +1082,6 @@ $this->load->view('template/includefooter');
 
   	public function updateevent($param1=""){//leki
   		//$data=$_POST["editname"]; 
-  			
-
- 
-  		
 		 $d1=$this->input->post("editname");
 		$d2=$this->input->post("editdate");
 		$d3=$this->input->post("editevent");
@@ -1096,6 +1092,14 @@ $this->load->view('template/includefooter');
 // $this->db->update('event_table',$data);
 
 echo "successfully updated";
+
+
+  	}
+
+
+  	public function deleteevent($param1="") {
+
+$data=$this->sm->eventdelete($param1);
 
 
   	}
