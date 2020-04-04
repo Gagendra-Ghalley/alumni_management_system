@@ -134,6 +134,8 @@
                  <div class="col-md-5 col-sm-12">
                     <p class="text-primary"><b>Description</b></p>
                 </div> 
+                <br>
+                <!-- <img src=<?php echo $row['image'];?>> -->
                          <b><?php echo $row['date'];?></b>
                           <br>
                           <h3><?php echo $row['eventname'];?><br></h3>

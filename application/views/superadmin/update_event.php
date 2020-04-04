@@ -84,9 +84,9 @@
                                    <div class="col-md-12">
                                   <p></p>
                                       <label>Image</label>
-                                       <input type="file" name="userfile" size="20" />
+                                       <input type="file" name="editimage" size="20" />
                                             <br />
-                                            <input type="submit" value="upload" />
+                                            <input type="submit" />
                                           
 
                             
@@ -94,11 +94,11 @@
 
 
 
-                        <button name="update" id="update" type="submit" form="f" value="fav_CSS" class="btn-default du-common-property" >Save</button>
+                        <button name="update" id="update" type="submit" form="f" value="fav_CSS" class="btn-default du-common-property" >Save</button></form> 
 
-                         <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
-                         <button name="cancel" id="cancel" type="submit" value="fav_CSS" class="btn-default du-common-property" >Cancel</button> 
-                        </a></form> 
+                         <a href="<?php echo site_url();?>/Settings/viewevent" > 
+                         <button name="cancel" id="cancel" type="cancel" value="fav_CSS" class="btn-default du-common-property" >Cancel</button> 
+                        </a>
 
 
                 </div> 
