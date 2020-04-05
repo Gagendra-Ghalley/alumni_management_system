@@ -1031,14 +1031,22 @@ public function reciept()
 	
 	 }
 function addevent1(){//leki
+	// $config['upload_path']="./images/";
+	// $config['allowed_types']='jpg|jpeg|gif|png';
+	// $this->load->library('upload',$config);
 
+	// $file_data=$this->upload->data();
+	// $data1['img']=base_url().'/images/'.$file_data['file_name'];
+	
+	//$this->load->view('superadmin/successmsg',$data1);
 	 	$this->form_validation->set_rules('event','startdate','enddate','required');	
 
   		$data['event']=$this->input->post('event'); 
   		$data['eventname']=$this->input->post('event1'); 
-
   		$data['date']=$this->input->post('date'); 
+  		//$data['image']=$this->input->post('image'); 
   		$this->db->insert('event_table', $data); 
+  		
   		echo "Successfully added";
 
   	}
@@ -1073,28 +1081,35 @@ $this->db->where('event_id',$param1);
 $query['editdetail']=$this->db->get('event_table')->result_array();
  // $d=implode(" ", $query);
 // die($d);
+$this->load->view('template/includeheader',$this->dataheader);
 $this->load->view('superadmin/update_event',$query);
-
+$this->load->view('template/includefooter');
   	} 
 
 
 
   	public function updateevent($param1=""){//leki
-  			// $data=$_POST["edit"]; 
-  			
-		 $data=$this->input->post("edit1");
-		 echo $data;
-		 die($param1);
+  		//$data=$_POST["editname"]; 
+		 $d1=$this->input->post("editname");
+		$d2=$this->input->post("editdate");
+		$d3=$this->input->post("editevent");
+		//$d4=$this->input->post("editimage");
+		 $data['eventname']=$this->sm->eventupdate($param1,$d1,$d2,$d3);
 		 //$data=$this->input->post("edit");
 		
-$this->db->where('event_id',$param1);
-$query['editdetail1']=$this->db->get('event_table')->result_array();
-$data4=implode(" ",$query);
-$this->db->update('event_table',$data4);
-die("apple");
- // $d=implode(" ", $query);
-// die($d);
-$this->load->view('superadmin/update_event',$query);
+// $this->db->where('event_id',$param1);
+// $this->db->update('event_table',$data);
+
+echo "successfully updated";
+
+
+  	}
+
+
+  	public function deleteevent($param1="") {
+
+$data=$this->sm->eventdelete($param1);
+
 
   	}
 	   
