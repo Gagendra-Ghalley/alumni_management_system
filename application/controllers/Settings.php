@@ -539,6 +539,7 @@ function addDak($param="")
  		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
  		$cid=$this->session->userdata('cid');
 		$data['user']=$this->sm->getprofilei($cid);
+		$data['eventdetail']=$this->db->get('event_table')->result_array();
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('division/dashboard',$data);
 		$this->load->view('template/includefooter');
@@ -1121,15 +1122,74 @@ $data=$this->sm->eventdelete($param1);
 	   
 	public function updateContact() {
 		
-		$tel=$this->input->post('tel');
-		$mob=$this->input->post('mob');
 		$email=$this->input->post('email');
-		if($this->sm->updateContact($tel,$mob,$email)) {
+		$occupation=$this->input->post('occupation');
+		$organization=$this->input->post('organization');
+		
+
+		if($this->sm->updateContact($email,$occupation,$organization)) {
 			
 			echo "1";
 			
 		} else echo "0";
 	}
+	public function updateContact1() {
+		
+		
+		$office_address=$this->input->post('office_address');
+		$contact_address=$this->input->post('contact_address');
+		$college=$this->input->post('college');
+		
+		
+
+		if($this->sm->updateContact1($office_address,$contact_address,$college)) {
+			
+			echo "1";
+			
+		} else echo "0";
+	}
+public function updateContact2() {
+		
+		
+		
+		$master=$this->input->post('master');
+		$phD=$this->input->post('phD');
+		$other=$this->input->post('other');
+		
+		if($this->sm->updateContact2($master,$phD,$other)) {
+			
+			echo "1";
+			
+		} else echo "0";
+	}
+public function updateContact3() {
+		
+		
+		$research_paper=$this->input->post('research_paper');
+		$journal=$this->input->post('journal');
+		$book=$this->input->post('book');
+		
+
+		if($this->sm->updateContact3($research_paper,$journal,$book)) {
+			
+			echo "1";
+			
+		} else echo "0";
+	}
+public function updateContact4() {
+		
+		
+		$seminar=$this->input->post('seminar');
+		$training=$this->input->post('training');
+		$workshop=$this->input->post('workshop');
+
+		if($this->sm->updateContact4($seminar,$training,$workshop)) {
+			
+			echo "1";
+			
+		} else echo "0";
+	}
+
 
 	public function changePassword() {
 		

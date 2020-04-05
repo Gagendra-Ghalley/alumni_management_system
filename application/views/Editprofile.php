@@ -35,29 +35,31 @@
                     <span class="text-success"> <?php if (isset($success_msg)) { echo $success_msg; } ?></span>
                     <?php echo form_close(); ?>
                         <br/>
-
+                        <?php }?>
+ 
         </div>
 
         <div class="col-md-6">
             <div class="row">
-                <?php foreach($user->result() as $row){?>
+                    <?php foreach($user->result() as $row){?> 
                     <h4>Name:<?php echo $row->Name;?></h4>
                     <h4>Email Address: <?php echo $row->email;?></h4>
 
-                    <?php } ?>
+                     <?php } ?> 
             </div>
         </div>
 
     </div>
     <div class="container emp-profile col-md-11 img-thumbnail ">
+         <?php foreach($user->result() as $row){?>
        <div class="col-md-10 ">
           <h3 class="text-center">Add Details</h3>
         </div>
       <div class="row">
-       
+      
         
         <div class="col-md-6 ">
-         <h4><b>Workplace</b>&nbsp&nbsp&nbsp&nbsp<i class="fa fa-edit"></i></h4>
+         <h4><b>Workplace</b>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-edit"></i></h4>
 
             <p style="margin-left:60px;color: #222;"><b style="font-size: 15px">Occupation/Position</b><i style="margin-left: 30px" class="fa fa-plus" data-toggle="collapse" data-target="#Occupation"></i>
                 <div id="Occupation" class="collapse">
@@ -101,6 +103,7 @@
 
                 </div>
             </p>
+
             <p style="margin-left:60px;color: #222" id=""><b style="font-size: 15px">Office Address</b><i style="margin-left: 73px" class="fa fa-plus" data-toggle="collapse" data-target="#Office"></i>
                 <div id="Office" class="collapse">
                     <div class="container-fluid padding">
@@ -122,7 +125,8 @@
 
                 </div>
             </p>
-            <p style="margin-left:60px;color: #222" id=""><b style="font-size: 15px">Contact Address</b><i style="margin-left: 59px" class="fa fa-plus" data-toggle="collapse" data-target="#Contact"></i>
+
+            <p style="margin-left:60px;color: #222" id=""><b style="font-size: 15px">Current Address</b><i style="margin-left: 59px" class="fa fa-plus" data-toggle="collapse" data-target="#Contact"></i>
                 <div id="Contact" class="collapse">
                     <div class="container-fluid padding">
                         <div class="row text-center">
@@ -164,7 +168,7 @@
             </p>
         </div>
          <div class="col-md-6 ">
-          <h4><b>Education &nbsp&nbsp&nbsp&nbsp<i class="fa fa-edit"></i></b></h4>
+          <h4><b>Education &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-edit"></i></b></h4>
           <p style="margin-left:60px;color: #222" id=""><b style="font-size: 15px">College</b><i style="margin-left: 90px" class="fa fa-plus" data-toggle="collapse" data-target="#Education"></i>
                 <div id="Education" class="collapse">
                     <div class="container-fluid padding">
@@ -256,7 +260,7 @@
       <div class="row">
           <div class="col-md-12 ">
           <div class="col-md-6 ">
-            <h4><b>Publication</b>&nbsp &nbsp <i class="fa fa-edit"></i></h4>
+            <h4><b>Publication</b>&nbsp; &nbsp; <i class="fa fa-edit"></i></h4>
             <p style="margin-left:60px;color: #222" id=""><b style="font-size: 15px">Research Paper</b><i style="margin-left: 63px"  class="fa fa-plus" data-toggle="collapse" data-target="#Paper"></i>
                     <div id="Paper" class="collapse">
                         <div class="container-fluid padding">
@@ -324,7 +328,7 @@
 
           </div>
           <div class="col-md-6 ">
-            <h4><b>Conference&nbsp&nbsp&nbsp&nbsp<i class="fa fa-edit"></i></b></h4>
+            <h4><b>Conference&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-edit"></i></b></h4>
             <p style="margin-left:60px;color: #222" id=""><b style="font-size: 15px">Seminar</b><i style="margin-left: 80px" class="fa fa-plus" data-toggle="collapse" data-target="#Seminar"></i>
                 <div id="Seminar" class="collapse">
                     <div class="container-fluid padding">
@@ -391,6 +395,7 @@
                 </div>
             </p>
 
+
           </div>
         </div>
         
@@ -398,12 +403,13 @@
     </div>
 
 
-    
+    <?php }?>
 
-        <?php }?>
+       
 
     </div>
-</div>
+
+
     <!--footer-->
  <div class="bg-primary" class="du-newsletter">
             <div class="bg-primary" class="du-newsletter">

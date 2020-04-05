@@ -30,7 +30,7 @@
         <div class="row padding">
             <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
-                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 500px" ></span>
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 400px" ></span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6" >
@@ -51,27 +51,6 @@
                   
                 </div>
             </div>
-
-
-
-
-
-
-            <div class="col-md-2 col-sm-6 " >
-<?php foreach($user->result() as $row){?>
-        
-       
-        
-              <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
-                <input type="hidden" name="cid" value="<?php echo $row->cid;?>">
-                <input type="submit" value="Join Us" style="height:37px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
-                </form> 
-                 <?php } ?>
-           
-    <table>
-      <tbody>
-
-
             <div class="col-md-2 col-sm-6 " >
                 
 
@@ -82,12 +61,12 @@
                    
 
                             <table>
-                             <tbody>
-
+                            <!--  <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
                                                
                                                 <tr>
                                                   <?php  $count1++;?>
+
 
                                                 </tr> 
                                                 <?php endforeach;?>
@@ -120,10 +99,29 @@
 
 
                                                 
+
+                                                </tr>     
+                                               
+                                                <?php endforeach;?>
+                                            </tbody> -->
+                                        </table> 
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+
+                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button>       
+x
                
             </div>
         </div>
-
+ <div class="container">
                 
              <div class="container">
                 <div class="col-md-10 col-sm-12">
@@ -146,27 +144,19 @@
                         
                     </div>
                         </div></div></div>  <?php endforeach; ?> 
-
-                     
-
-
                       <!--   <p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college of science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p> -->
                         
                        <!--  <div class="col-md-10">
                         <button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
-                        </div> -->                        
-
+                        </div> -->
+                        
             </div>
         </div>
         
- 
+    </div>   
 
               
  </div>
-
-
- </div>
-</div>
 
 
       <div class="bg-primary" >

@@ -13,7 +13,7 @@
 
               <br>
                 <div class="form-group" >
-                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 20px"> Name</label>
+                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 17px"> Name</label>
 
                     <div class="col-md-10 selectContainer">
                         <div class="input-group">
@@ -28,7 +28,7 @@
             
 
                 <div class="form-group" style="width: 660px" >
-                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 20px"> Department</label>
+                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 17px"> Department</label>
 
                     <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
 
