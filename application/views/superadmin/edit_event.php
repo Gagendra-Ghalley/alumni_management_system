@@ -135,11 +135,14 @@
                     <p class="text-primary"><b>Description</b></p>
                 </div> 
                 <br>
-<<<<<<< HEAD
+
                 <img src="<?php echo $row['image'];?>">
-=======
+
                 <!-- <img src=<?php echo $row['image'];?>> -->
->>>>>>> 827f257505a04e21d8bb2ced89290a9cc97245c1
+
+
+                <!-- <img src=<?php echo $row['image'];?>> -->
+
                          <b><?php echo $row['date'];?></b>
                           <br>
                           <h3><?php echo $row['eventname'];?><br></h3>
