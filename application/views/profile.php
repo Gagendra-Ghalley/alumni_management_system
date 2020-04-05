@@ -25,7 +25,7 @@
     <div class="container">
             
                 <div class="row">
-                    <div class="col-md-12 col-lg-11 col-sm-12 bg-info">
+                    <div class="col-md-12 col-lg-11 col-sm-12 ">
                         <div class="profile-img ">
                             
                              <?php foreach($user->result() as $row){?>
@@ -39,10 +39,10 @@
 
     </div>
                     <br>
-                    <div class="container">
-                        <div class="col-md-12 col-lg-10 col-sm-12">
+                    
+                        <div class="col-md-12 col-lg-11 col-sm-12 img-thumbnail">
                 
-                    <div class="alert alert-info">
+                    <div class="alert alert-white">
                         <?php foreach($user->result() as $row){?>
                         <h4>Name:<?php echo $row->Name;?></h4>
                         <h4>Occupation : <?php echo $row->occupation;?></h4>
@@ -75,7 +75,7 @@
         </div>
       
    
-           
+     
 
  <div class="bg-primary" class="du-newsletter">
             <div class="container">

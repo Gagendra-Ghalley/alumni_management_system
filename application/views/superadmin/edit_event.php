@@ -51,27 +51,6 @@
                   
                 </div>
             </div>
-
-
-
-
-
-
-            <div class="col-md-2 col-sm-6 " >
-<?php foreach($user->result() as $row){?>
-        
-       
-        
-              <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
-                <input type="hidden" name="cid" value="<?php echo $row->cid;?>">
-                <input type="submit" value="Join Us" style="height:37px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
-                </form> 
-                 <?php } ?>
-           
-    <table>
-      <tbody>
-
-
             <div class="col-md-2 col-sm-6 " >
                 
 
@@ -114,47 +93,15 @@
                    
 
                             <table>
-                             <tbody>
-
+                            <!--  <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
                                                
                                                 <tr>
                                                   <?php  $count1++;?>
-
-                                                </tr> 
-                                                <?php endforeach;?>
-                                            </tbody>
-                                        </table> 
-                                        <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
-                                        <p><font color="black"><?php
-                                        
-                                        echo ($count1);
-                                        echo (" Members <br> Interested");?></font></p>
-                                          </button><br><br>
-                
-            </div>
-        </div>
- <div class="row">
-                <div class="col-md-5 col-sm-12">
-                    <p class="text-primary"><b>Description</b></p>
-                </div>
-               
-            </div>
-             <div class="container">
-                <div class="col-md-10 col-sm-12">
-                    
-                        
-                        <p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college pf science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p>
-                        
-                        <div class="col-md-10">
-                        <button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
-                        </div>
-
-
                                                 </tr>     
                                                
-                                               
-                                            </tbody> 
+                                                <?php endforeach;?>
+                                            </tbody> -->
                                         </table> 
                                    <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
                                         <p><font color="black"><?php
@@ -171,8 +118,8 @@
                
             </div>
         </div>
-
-                
+ <div class="container">
+               
              <div class="container">
                 <div class="col-md-10 col-sm-12">
 
@@ -187,34 +134,51 @@
                  <div class="col-md-5 col-sm-12">
                     <p class="text-primary"><b>Description</b></p>
                 </div> 
+                <br>
+
+                <img src="<?php echo $row['image'];?>">
+
+                <!-- <img src=<?php echo $row['image'];?>> -->
+
+
+                <!-- <img src=<?php echo $row['image'];?>> -->
+
                          <b><?php echo $row['date'];?></b>
                           <br>
                           <h3><?php echo $row['eventname'];?><br></h3>
                           <?php echo $row['event'];?><br>
-                        
+                          
+              
+                          <form method ="post"></form>
+                          
+                 <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
+                    <button name="edit" id="edit" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Edit</button></a> </br> <br>
+
+
+                    <a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>"> 
+            <button name="delete"   type="submit"  style="background-color:#cc0000;color:white;width:150px;height:40px;"value="fav_CSS"  >Delete</button></a>
+
+
+
+
+
+
+
                     </div>
                         </div></div></div>  <?php endforeach; ?> 
-
-                     
-
-
                       <!--   <p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college of science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p> -->
                         
                        <!--  <div class="col-md-10">
                         <button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
-                        </div> -->                        
-
+                        </div> -->
+                        
             </div>
         </div>
         
- 
+    </div>   
 
               
  </div>
-
-
- </div>
-</div>
 
 
       <div class="bg-primary" >
@@ -236,6 +200,27 @@
         </div>
 
  <script>
+
+
+
+  function deletefn(){
+//onclick="deletefn()"
+
+//<a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>" >
+if(confirm('Are you sure?')){
+
+<a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>">  
+
+
+  //       var option= {target: '#loadcontent',url:url,type:'POST',data: $('#fileaddformid').serialize()};
+  //       $('#fileaddformid').ajaxSubmit(option);
+}
+
+else{
+alert("Nothing");
+}
+
+  }
     
     function searchFunction(){
         

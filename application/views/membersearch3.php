@@ -29,11 +29,11 @@
   
   
   <!-- Font  -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
   
 
-</head>
+
   
 
 
@@ -46,12 +46,12 @@
     
       <div class="header-element clearfix">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <h1 class="navbar-brand navbar-brand_">
-              <a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
+                                    <a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
 
                             </div>
-                            <div class="col-md-8" >
+                            <div class="col-md-9" >
                                 <ul class="flexy-menu orange" >
                                     <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
@@ -60,6 +60,8 @@
                                     <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+
+                                    <!-- <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-envelope"></i>Profile</a></li> -->
 
                                     <li class="active"><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
@@ -72,10 +74,9 @@
 </nav>
   
 </header>
-
-<!--  page-wrapper -->
-<!-- <div class="container"> -->
-  <div class="page-wrapper bg-img-1 p-t-200 p-b-120">
+</head>
+<body>
+  
 <div id="page-wrapper"  style="width: 900px; " > 
   
            
@@ -84,18 +85,15 @@
     <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/ATD/viewmember2" method="post">
     </form>
 
-    
-        <div class="col-md-10" style="background:#e6e6e6; margin-top: 150px;height: 300px">
+      
+        <div class="col-md-10 img-thumbnail" style=" margin-top: 150px;height: 300px">
+              <div class="login-panel panel panel-default">   
+                <div class="panel-heading">
+                 
+                  <h4 class="panel-title" >Member Search</h4>
 
-         
-                <!-- <h3 class="title"> Search Alumni </h3> -->
-                <!-- Search form -->
-                <div class="input-group">
-                  <span><i class="glyphicon glyphicon-search"></i></span> &nbsp;
-                  <label style="color: #8c8c8c;font-size: 20px">Member Search</label>
-<!-- <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                 -->
               </div>
+
               <br>
                 <div class="form-group" >
                     <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 20px"> Name</label>
@@ -103,7 +101,7 @@
                     <div class="col-md-10 selectContainer">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                          <!--   <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span> -->
+                         
                             <input name="name" id="cidNum" style="height: 30px; width: 250px" placeholder=" Enter Name" form="f" type="text" required />
                         </div>
                     </div>
@@ -119,7 +117,7 @@
 
                         <div class="input-group col-md-10">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-fas fa-sitemap"></i></span>
-                            <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span> -->
+                            
                             
 
                             <select name="f1" form="f" style="height: 30px; width: 250px">
@@ -138,7 +136,7 @@
                 <br>
               
 
-                <div class="form-group">
+               
                     <label class="col-sm-3 col-md-4 col-lg-2 control-label"></label>
                     <div class="col-sm-5 col-md-6 col-lg-4">
                        
@@ -146,7 +144,7 @@
 
                          <button type="reset" class="btn btn-danger">Reset <span class="glyphicon glyphicon-refresh"></span></button>
                     </div>
-                </div>
+              
 
            
 
@@ -154,9 +152,11 @@
       </div>
 
     </div>
-    </div>
+   
 
-</div>
+
+
+
         <div class="bg-primary" class="du-newsletter">
             <div class="bg-primary" class="du-newsletter">
             <div class="container">
@@ -180,27 +180,21 @@
 
        
 <script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>
-
-<!-- Feature box equal height JS -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.equalheights.js"></script>
-<!-- UI bottom to top JS -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.ui.totop.js"></script>
-<!-- Subscription JS -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/sForm.js"></script>
-<!-- Animation JS -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/wow.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/device.min.js"></script>
-<!-- Menu JS -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/flexy-menu.js"></script>
-<!-- Text rotator JS -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.simple-text-rotator.min.js"></script>
-<!-- Smooth Scroll JS -->
-<script type="text/javascript" src="j<?php echo base_url();?>assets/js1/library/smoothscroll.js"></script>
-
-<!-- Testimonila JS -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.cubeportfolio.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
-<!-- Custom script -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.equalheights.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/sForm.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/wow.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/device.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/flexy-menu.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.simple-text-rotator.min.js"></script>
+    <script type="text/javascript" src="j<?php echo base_url();?>assets/js1/library/smoothscroll.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.cubeportfolio.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
+     <script>
+  </body>
+  </html>

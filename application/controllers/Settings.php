@@ -52,7 +52,17 @@ class Settings extends CI_Controller {
 
 	}
 
-	
+	public function updateDetail(){
+		$cid=$this->session->userdata('cid');
+		$data['user']=$this->sm->getprofile($cid);
+		
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('profileaddDetails',$data);
+		$this->load->view('template/includefooter');
+
+
+
+	}
 
 
 
@@ -951,7 +961,7 @@ public function reciept()
 	}
 	
 
-	public function membersearch1(){
+	public function membersearch1(){//leki
  	
 		
 		$this->load->view('template/includeheader',$this->dataheader);
@@ -963,7 +973,7 @@ public function reciept()
 
 
 
-		public	function viewmember1(){
+		public	function viewmember1(){//leki
   			$name=$this->input->post('name');
   			// $department=$this->input->post('department');
 
@@ -1012,78 +1022,114 @@ public function reciept()
 	   }
 
 
+	   public function addevents(){//leki
+	   	if($this->session->userdata('logged_in')=='1'){
+	   	$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('superadmin/add_events');
+				$this->load->view('template/includefooter');
+			}
+	
+	 }
+function addevent1(){//leki
+	// $config['upload_path']="./images/";
+	// $config['allowed_types']='jpg|jpeg|gif|png';
+	// $this->load->library('upload',$config);
 
+	// $file_data=$this->upload->data();
+	// $data1['img']=base_url().'/images/'.$file_data['file_name'];
+	
+	//$this->load->view('superadmin/successmsg',$data1);
+	 	$this->form_validation->set_rules('event','startdate','enddate','required');	
+
+  		$data['event']=$this->input->post('event'); 
+  		$data['eventname']=$this->input->post('event1'); 
+  		$data['date']=$this->input->post('date'); 
+
+  		$data['image']=$this->input->post('image'); 
+
+  		//$data['image']=$this->input->post('image'); 
+
+  		//$data['image']=$this->input->post('image'); 
+
+  		$this->db->insert('event_table', $data); 
+  		
+  		echo "Successfully added";
+
+  	}
+  		
+ 
+ public function viewevent(){//leki
+ 	$data['eventdetail']=$this->db->get('event_table')->result_array();//pulls all from db
+  		$this->load->view('template/includeheader',$this->dataheader);
+  		$this->load->view('superadmin/edit_event',$data);
+  		$this->load->view('template/includefooter');
+  	
+
+
+ }
+  	public function editevent($param1=""){//leki
+  			// $data=$_POST["edit"]; 
+  			
+		// $data=$this->input->post("edit");
+		// die($data);
+		// $data12['edit']=$_POST['edit'];
+		// $data9['issue1']=implode(' ', $_POST['issue1']);
+		// $d9=implode(" ",$data9);
+		
+
+//$d3= $_POST['edit'];
+//$d3=$this->input->post('edit');
+
+// $data12['event']=implode(', ', $_POST['edit']);
+// 		$data4=implode(" ",$data12);
+
+$this->db->where('event_id',$param1);
+$query['editdetail']=$this->db->get('event_table')->result_array();
+ // $d=implode(" ", $query);
+// die($d);
+$this->load->view('template/includeheader',$this->dataheader);
+$this->load->view('superadmin/update_event',$query);
+$this->load->view('template/includefooter');
+  	} 
+
+
+
+  	public function updateevent($param1=""){//leki
+  		//$data=$_POST["editname"]; 
+		 $d1=$this->input->post("editname");
+		$d2=$this->input->post("editdate");
+		$d3=$this->input->post("editevent");
+		//$d4=$this->input->post("editimage");
+		 $data['eventname']=$this->sm->eventupdate($param1,$d1,$d2,$d3);
+		 //$data=$this->input->post("edit");
+		
+// $this->db->where('event_id',$param1);
+// $this->db->update('event_table',$data);
+
+echo "successfully updated";
+
+
+  	}
+
+
+  	public function deleteevent($param1="") {
+
+$data=$this->sm->eventdelete($param1);
+
+
+  	}
 	   
 	public function updateContact() {
 		
+		$tel=$this->input->post('tel');
+		$mob=$this->input->post('mob');
 		$email=$this->input->post('email');
-		$occupation=$this->input->post('occupation');
-		$organization=$this->input->post('organization');
-		
-
-		if($this->sm->updateContact($email,$occupation,$organization)) {
+		if($this->sm->updateContact($tel,$mob,$email)) {
 			
 			echo "1";
 			
 		} else echo "0";
 	}
-	public function updateContact1() {
-		
-		
-		$office_address=$this->input->post('office_address');
-		$contact_address=$this->input->post('contact_address');
-		$college=$this->input->post('college');
-		
-		
-
-		if($this->sm->updateContact1($office_address,$contact_address,$college)) {
-			
-			echo "1";
-			
-		} else echo "0";
-	}
-public function updateContact2() {
-		
-		
-		
-		$master=$this->input->post('master');
-		$phD=$this->input->post('phD');
-		$other=$this->input->post('other');
-		
-		if($this->sm->updateContact2($master,$phD,$other)) {
-			
-			echo "1";
-			
-		} else echo "0";
-	}
-public function updateContact3() {
-		
-		
-		$research_paper=$this->input->post('research_paper');
-		$journal=$this->input->post('journal');
-		$book=$this->input->post('book');
-		
-
-		if($this->sm->updateContact3($research_paper,$journal,$book)) {
-			
-			echo "1";
-			
-		} else echo "0";
-	}
-public function updateContact4() {
-		
-		
-		$seminar=$this->input->post('seminar');
-		$training=$this->input->post('training');
-		$workshop=$this->input->post('workshop');
-
-		if($this->sm->updateContact4($seminar,$training,$workshop)) {
-			
-			echo "1";
-			
-		} else echo "0";
-	}
-
 
 	public function changePassword() {
 		

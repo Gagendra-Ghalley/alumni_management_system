@@ -16,7 +16,7 @@
                             <div class="user-info">
                                 <div></div>
                                 <div class="status">
-                                 <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/atdchangestatus" class="form-group">
+                                 <!-- <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/atdchangestatus" class="form-group">
                           <div style="margin-bottom: 5px;">
                                 	<select name="status">
                                 		<option selected>
@@ -40,56 +40,55 @@
                                      <div style="margin-bottom: 5px;">
                                     <input type="submit" class="btn btn-default green" type="button" value="Update Status">
                                     </div>
-                                   </form>
+                                   </form> -->
                                     
                                 </div>
                             </div>
                         </div>
                         <!--end user image section-->
-                    </li>
+                    </li><br><br><br>
                    
                     <li>
                         <a href="<?php echo base_url()?>index.php/ATD/dashboard/"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit fa-fw"></i> Leave<span class="fa arrow"></span></a>
+                        <a href="<?php echo base_url()?>index.php/Leave/admin_profile/"><i class="fa fa-user">&nbsp</i>Profile</a>
+                        
+                      
+                    </li>
+                     <li>
+                       <a href="#"><i class="fa fa-edit fa-fw"></i> Event<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                            
                             <li>
-                                <a href="<?php echo base_url()?>index.php/Leave/requestLeave/">Request leave</a>
+                                <a href="<?php echo base_url()?>index.php/Leave/addevent/">Add Events</a>
                             </li>
-                            <li>
-                            	<a href="<?php echo base_url()?>index.php/Leave/approvePending/">Approve leave</a>
-                            </li>
+                          
                              <li>
-                                <a href="<?php echo base_url()?>index.php/Leave/approvedRecord/">Leave Record</a>
-                            </li>
-                            </a>
+                                <a href="<?php echo base_url()?>index.php/Leave/deleteevent/">Delete Events</a>
+                            </li></a>
                             </li>
                         </ul>
-                        <!-- second-level-items -->
-                    </li>
-                     <li>
-                        <a href="<?php echo base_url()?>index.php/ATD/monthlyatd/"><i class="fa fa-bar-chart-o fa-fw"></i>Attendance Report</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url()?>index.php/TelDirectory/viewDirectory/"><i class="fa fa-phone fa-fw"></i>Telephone Directory</a>
+                        <a href="#"><i class="fa fa-edit fa-fw"></i> Users<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                           
+                            <li>
+                                <a href="<?php echo base_url()?>index.php/Leave/adduser/">Add Users</a>
+                            </li>
+                            <li>
+                              <a href="<?php echo base_url()?>index.php/Leave/deleteuser/">Delete Users</a>
+                            </li>
+                             </a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url()?>index.php/Settings/viewHolidays/"><i class="fa fa-search fa-fw"></i>Holidaysssd</span></a>
-                        
-                        
-                    </li>
+                   
 					<li>
-                        <a href="<?php echo base_url()?>index.php/Settings/viewHolidays/"><i class="fa fa-search fa-fw"></i>Dispatch</span></a>
-                        
                         
                     </li>
-                     <li>
-                        <a href="<?php echo base_url()?>index.php/Settings/view_ods_dashboard/"> <i class="fas fa-folder" aria-hidden="true"  ></i>Dispatch</span></a>
-                     
-                       
-                    </li>
+                    
                    
                    
                 </ul>

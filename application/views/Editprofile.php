@@ -20,7 +20,7 @@
 
 <div class="container emp-profile  ">
 
-    <div class="col-md-11 img-thumbnail bg-info">
+    <div class="col-md-11 img-thumbnail">
         <h3>Profile Management</h3>
         <!--  <img style="height: 150px;width: 150px;border-radius: 50%" src="<?php echo base_url();?>assets/img1/membership.jpg "  alt=""/> -->
         <div class="col-md-4">
@@ -49,7 +49,7 @@
         </div>
 
     </div>
-    <div class="container emp-profile col-md-11 img-thumbnail bg-info">
+    <div class="container emp-profile col-md-11 img-thumbnail ">
        <div class="col-md-10 ">
           <h3 class="text-center">Add Details</h3>
         </div>
@@ -403,6 +403,7 @@
         <?php }?>
 
     </div>
+</div>
     <!--footer-->
  <div class="bg-primary" class="du-newsletter">
             <div class="bg-primary" class="du-newsletter">
