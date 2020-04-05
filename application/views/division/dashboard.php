@@ -114,7 +114,7 @@
                    
 
                             <table>
-                            <!--  <tbody>
+                             <tbody>
 
                                                <?php $count1=0; foreach($request1 as $row):?>
                                                
@@ -153,7 +153,7 @@
 
                                                 </tr>     
                                                
-                                                <?php endforeach;?>
+                                               
                                             </tbody> 
                                         </table> 
                                    <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
@@ -171,7 +171,7 @@
                
             </div>
         </div>
- <div class="container">
+
                 
              <div class="container">
                 <div class="col-md-10 col-sm-12">
@@ -207,14 +207,14 @@
             </div>
         </div>
         
-    </div>   
+ 
 
               
  </div>
 
 
  </div>
-
+</div>
 
 
       <div class="bg-primary" >
