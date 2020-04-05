@@ -30,7 +30,7 @@
         <div class="row padding">
             <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
-                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 500px" ></span>
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 400px" ></span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6" >

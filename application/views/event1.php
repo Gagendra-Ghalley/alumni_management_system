@@ -176,8 +176,8 @@
             <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
-                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
+                        <!-- <div class="card-title text-left bold">UP COMMING EVENT</div><br> -->
+                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Annual Rimdro</h3>
                          <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
                         <div>
                             
@@ -258,7 +258,7 @@
             <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <!-- <div class="card-title text-left bold">UP COMMING EVENT</div><br> -->
                         <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
                          <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
                         <div>
@@ -340,7 +340,7 @@
             <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+                        <!-- <div class="card-title text-left bold">UP COMMING EVENT</div> --><br>
                         <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
                          <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
                         <div>
