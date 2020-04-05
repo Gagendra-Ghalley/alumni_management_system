@@ -102,6 +102,12 @@
 			$this->load->view('architecture');
 		}
 
+	public function donate(){
+		
+		
+			$this->load->view('donate');
+		}
+
 //  public function registration(){//cst_team
 
 	 	

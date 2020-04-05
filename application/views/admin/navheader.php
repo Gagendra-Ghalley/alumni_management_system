@@ -52,52 +52,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-<<<<<<< HEAD
+
                 <a class="navbar-brand " href="#">
                     <h1 class="lead"><img src="<?php echo base_url();?>assets/img/cstlogo2.png"><font size="3">CST Alumni Management System</font></h1></a>
                 
-=======
-                 <a class="navbar-brand " href="#">
-                    <h1 class="lead"><img src="<?php echo base_url();?>assets/img/cstlogo2.png"><font size="3">CST Alumni Management System</font></h1></a>
->>>>>>> 9555942de391d748067e48354d19517c351f9091
+
+                 
             </div>
             <!-- end navbar-header -->
             
             <ul class="nav navbar-top-links navbar-right">
-<<<<<<< HEAD
-                <!-- main dropdown -->
-              <!--   <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-danger"><?php  if($unreadm>0){echo $unreadm;}?></span><i class="fa fa-envelope fa-2x"></i>
-                    </a> -->
-                    <!-- dropdown-messages -->
-                    <!-- ul class="dropdown-menu dropdown-messages">
-                    	<?php foreach($messages->result() as $message): ?>
-                        <li>
-                            <a href="<?php echo base_url();?>index.php/Messages/message/<?php echo $message->mId;?>">
-                                <div>
-                                    <strong><span class=" label label-danger"><?php echo $message->Sender;?></span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em><?php echo $message->mTimestamp;?></em>
-                                    </span>
-                                </div>
-                                <div><?php echo substr($message->mDetails, 0,40);?>...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <?php endforeach; ?>
-                        <li>
-                            <a class="text-center" href="<?php echo base_url();?>index.php/Messages/viewAll/">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul> -->
-                    <!-- end dropdown-messages -->
-               <!--  </li> -->
-=======
+
               
->>>>>>> 9555942de391d748067e48354d19517c351f9091
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -105,14 +71,9 @@
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-<<<<<<< HEAD
                         
                         <li class="divider"></li>
-=======
-                       <!--  <li><a href="<?php echo base_url();?>index.php/Settings/profile/"><i class="fa fa-user fa-fw"></i>User Profile</a>
-                        </li> -->
-                       <!--  <li class="divider"></li> -->
->>>>>>> 9555942de391d748067e48354d19517c351f9091
+
                         <li><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
@@ -123,18 +84,9 @@
             <!-- end navbar-top-links -->
 
         </nav>
-        
-<<<<<<< HEAD
+
         <!-- end navbar top -->
     </div>
 </body>
-=======
-
-        <!-- end navbar top -->
-    
 
 
-
-        <!-- end navbar top -->
-
->>>>>>> 9555942de391d748067e48354d19517c351f9091

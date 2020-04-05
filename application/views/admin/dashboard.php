@@ -36,7 +36,7 @@
                        
                   </div>
                   <div class="panel-footer">
-                           <a href="#"><span class="panel-eyecandy-title"><strong><b style=" color:green; font-size: 18px">User Profile</b></strong> 
+                           <a href="<?php echo base_url()?>index.php/Leave/admin_profile/"><span class="panel-eyecandy-title"><strong><b style=" color:green; font-size: 18px">User Profile</b></strong> 
                             </span><i class="fa fa-plus-circle fa-2x"  style="margin-left: 460px;color: green"></i></a> 
                         </div>
                 </div>
