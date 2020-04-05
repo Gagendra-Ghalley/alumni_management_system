@@ -596,9 +596,19 @@ public	function viewmember2(){
 				// $this->load->view('division/footer');
 			// }
 			} else {
+				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
 				$cid=$this->session->userdata('cid');
-				$data['user']=$this->sm->getprofile($cid);
-				$this->load->view('completedetails',$data);
+				$data['user']=$this->sm->getprofilei($cid);
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['latecount']=$this->atd->lateCount();
+				$data['notused']=$this->atd->notUsedAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$data['pendingLeave']=$this->lm->pendingCount();
+				$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('division/dashboard',$data);
+				$this->load->view('template/includefooter');
 			}
 		} else {
 			$this->login();
