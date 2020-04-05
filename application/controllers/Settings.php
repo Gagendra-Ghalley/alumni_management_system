@@ -601,6 +601,7 @@ public function updateEmployee($cid) {
  		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
  		$cid=$this->session->userdata('cid');
 		$data['user']=$this->sm->getprofilei($cid);
+		$data['eventdetail']=$this->db->get('event_table')->result_array();
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('division/dashboard',$data);
 		$this->load->view('template/includefooter');
