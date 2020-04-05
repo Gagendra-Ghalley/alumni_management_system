@@ -600,11 +600,28 @@ public	function viewmember2(){//leki
 				// $this->load->view('division/footer');
 			// }
 			} else {
+				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
 				$cid=$this->session->userdata('cid');
-				$data['user']=$this->sm->getprofile($cid);
-				$this->load->view('completedetails',$data);
+				$data['user']=$this->sm->getprofilei($cid);
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['latecount']=$this->atd->lateCount();
+				$data['notused']=$this->atd->notUsedAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$data['pendingLeave']=$this->lm->pendingCount();
+				$data['eventdetail']=$this->db->get('event_table')->result_array();
+				// $data['date1']=$this->db->get('event_table')->result_array();
+				// $data['eventname']=$this->db->get('event_table')->result_array();
+  	
+				$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('division/dashboard',$data);
+				$this->load->view('template/includefooter');
 			}
 		} else {
+
+
+			
 			$this->login();
 			
 		}
