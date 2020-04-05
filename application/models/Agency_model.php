@@ -196,11 +196,12 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 				
 			}
 		
+		
 	
 	public function getEmployees($agency){
 		
 	$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
-		p.cid AS CID, 
+		p.cid, 
 		a.name AS Agency, 
 		p.EmpNo AS EmpNo,
 		d.name AS ParentAgency, 
@@ -211,6 +212,8 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		p.telephone as Telephone,
 		p.Grade as Grade,
 		p.Gender as Gender,
+		p.year,
+		p.profileId,
 		p.Mobile
 		FROM bpas_user_profiles p 
 		LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID= p.AgencyMainParentID 
@@ -223,7 +226,6 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		
 		
 	}
-	
 	public function listFullAgencies(){
 				
 		$query="SELECT a.name AS AgencyName, a.AgencyId AS AgencyID, p.name AS AgencyParentName, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from bpas_master_agency a
@@ -310,7 +312,7 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 					
 				
 			$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
-		p.cid AS CID, 
+		p.cid, 
 		a.name AS Agency, 
 		p.EmpNo AS EmpNo,
 		d.name AS ParentAgency, 
@@ -321,17 +323,20 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		p.telephone as Telephone,
 		p.Grade as Grade,
 		p.Gender as Gender,
+		p.year,
+		p.profileId,
 		p.Mobile
 		FROM bpas_user_profiles p 
 		LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID= p.AgencyMainParentID 
 		LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID 
 		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
 		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
-		WHERE p.cid ='".$keyword."' OR p.FirstName='".$keyword."'";
+		WHERE p.cid ='".$keyword."' OR p.FirstName='".$keyword."' ";
 		$employees = $this->db->query($query);
 		return $employees;
 		
 	}
+
 	
 	public function updateSingleSupervisor($supervisor,$agency){
 		$previoussupervisor = $this->db->query("SELECT `chief` FROM bpas_master_agency WHERE AgencyId ='".$agency."'");

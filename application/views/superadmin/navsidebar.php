@@ -79,30 +79,51 @@
                         
                         
                     </li> -->
+
                    
-                    <!-- <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Settings<span class="fa arrow"></span></a>
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Manage User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers/">View users</a>
+                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers/">Manage users</a>
                             </li>
-                            <li>
+
+                             <li>
+                        
+                                 <a href="<?php echo base_url()?>index.php/Settings/membersearch1/"   ><i class="menu-icon fa fa-caret-right">
+                                
+                              </i><i class="menu-icon fa fa-caret-right"></i>Add User From CSV</a>
+                            </li>
+
+                             
+                                <li>
+                                    <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Add User</a>
+                                </li>
+
+
+                                </ul>
+
+                            </li>
+                                        <!-- <li>
                                 <a href="<?php echo base_url();?>index.php/Settings/assignAgencies/">Assign agency heads</a>
                             </li>
                             <li>
                             	<a href="<?php echo base_url();?>index.php/Settings/assignParentAgencies/">Assign Dept heads</a>
                             </li>
-                            	 -->
+                            	
                             <li>
                                 <a href="<?php echo base_url();?>index.php/Settings/viewevent">Edit events</a>
-                            </li>
-                            <li>
-                                <a href="#">Add user</a>
-                            </li>
-                               <li>
-                                <a href="#">Delete user</a>
-                            </li>
-                                            </li>
+                            </li> -->
+                            
+
+                     <!-- <li>
+                        <a href="<?php echo base_url()?>index.php/Settings/membersearch2/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Delete User</a>
+                    </li>
+ -->
+                   <!--  <li>
+                        <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Add User</a>
+                    </li> -->
+                                            <!-- </li> -->
                      <!--  <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Training<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
