@@ -78,27 +78,25 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 bg-dark img-thumbnail">
+		<div class="col-md-7 bg-dark img-thumbnail"  style="margin-left: 250px;">
 			
-            <h3 class="text-center" style="text-decoration: underline;">Donate Us</h3>
-            <p class="text-justify"  style="font-family:georgia; color:#222; font-size: 16px;margin-left: 50px">"Since you get more joy out of giving joy to others, you should put a good deal of though into the happiness that you are abke to give"</p>
-            <p class="text-right"><b>~Eleanor Roosevelt</b></p>
-
+            <h3 class="text-center" style="text-decoration: underline;">Account Details</h3>
+           
              <p  style="font-family:georgia; color:#222; font-size: 16px;margin-left: 50px">"To give away money is easy matter and in any man's power. But to decide to whom to give it, and how large and when, and for what purpose and how. is neither in every man's power nor an easy matter  "</p>
             <p class="text-right"><b>~Arisotle</b></p>
             <hr>
-            <h3 class="text-center" style="text-decoration: underline;">Account Details</h3>
+          
              			<ul class="du-choose-list">
-             			<strong style="color:#222;font-size: 18px;margin-left: 150px;text-decoration: ">&nbsp&nbsp Bank of Bhutan</strong>
-                        <li> <img src="<?php echo base_url();?>assets/img1/bob.png" class="img-thumbnail" style="height: 140px;width: 140px;margin-left: 150px;border-radius: 50%" ><strong style="color:#222;font-size: 15px">&nbsp&nbspAccount Numbe:20054656</strong></li>    
+             			<strong style="color:#222;font-size: 15px;margin-left: 150px;text-decoration: ">&nbsp&nbsp <b>Bank of Bhutan</b></strong>
+                        <li> <img src="<?php echo base_url();?>assets/img1/bob.png" class="img-thumbnail" style="height: 90px;width: 90px;margin-left: 150px;border-radius: 50%" ><strong style="color:#222;font-size: 15px">&nbsp&nbspAccount Numbe:20054656</strong></li>    
                         
                          
-                       		<strong style="color:#222;font-size: 18px;margin-left: 150px;text-decoration: ">&nbsp&nbsp Bhutan National Bank</strong>
-                         <li><img src="<?php echo base_url();?>assets/img1/bnb.png" class="img-thumbnail" style="height: 140px;width: 140px;margin-left: 150px;border-radius: 50%"><strong style="color:#222;font-size: 15px">&nbsp&nbspAccount Numbe:86867667</strong></li> 
+                       		<strong style="color:#222;font-size: 15px;margin-left: 150px;text-decoration: ">&nbsp&nbsp <b>Bhutan National Bank</b></strong>
+                         <li><img src="<?php echo base_url();?>assets/img1/bnb.png" class="img-thumbnail" style="height: 90px;width: 90px;margin-left: 150px;border-radius: 50%"><strong style="color:#222;font-size: 15px">&nbsp&nbspAccount Numbe:86867667</strong></li> 
                   
                          
-                       	<strong style="color:#222;font-size: 18px;margin-left: 150px;text-decoration: ">&nbsp&nbsp T Bank</strong>
-                         <li> <img src="<?php echo base_url();?>assets/img1/T bank.png" class="img-thumbnail"  style="height: 140px;width: 140px;margin-left: 150px;border-radius: 50%"><strong  style="color:#222;font-size: 15px;" >&nbsp&nbspAccount Number:6767654</strong> </li>
+                       	<strong style="color:#222;font-size: 15px;margin-left: 150px;text-decoration: ">&nbsp&nbsp<b> T Bank</b></strong>
+                         <li> <img src="<?php echo base_url();?>assets/img1/T bank.png" class="img-thumbnail"  style="height: 90px;width: 90px;margin-left: 150px;border-radius: 50%"><strong  style="color:#222;font-size: 15px;" >&nbsp&nbspAccount Number:6767654</strong> </li>
                    
                  </ul>
 	</div>

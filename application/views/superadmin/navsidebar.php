@@ -1,4 +1,4 @@
-<link href="<?php echo base_url();?>assets/css/cst.css" rel="stylesheet"/>
+<link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
 
 
         <!-- navbar side -->
@@ -51,6 +51,11 @@
                     <li>
                         <a href="<?php echo base_url()?>index.php/ATD/dashboard/"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url()?>index.php/Leave/admin_profile/"><i class="glyphicon glyphicon-user">&nbsp;</i>Profile</a>
+                        
+                      
+                    </li>
                    <!--  <li>
                         <a href="#"><i class="fa fa-edit fa-fw"></i> Leave<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -69,7 +74,7 @@
                     
                     </li> -->
                      <li>
-                        <a href="<?php echo base_url()?>index.php/Settings/addevents/"><i class="fa fa-bar-chart-o fa-fw"></i>Add Events</a>
+                        <a href="<?php echo base_url()?>index.php/Settings/addevents/"><i class="fa  fa-calendar-o"></i>&nbsp;Add Events</a>
                     </li>
                     <!-- <li>
                         <a href="<?php echo base_url()?>index.php/TelDirectory/viewDirectory/"><i class="fa fa-phone fa-fw"></i>Telephone Directory</a>
@@ -79,30 +84,63 @@
                         
                         
                     </li> -->
+
                    
-                    <!-- <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Settings<span class="fa arrow"></span></a>
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Manage User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers/">View users</a>
+                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers/">Manage users</a>
                             </li>
-                            <li>
+
+                             <li>
+                        
+                                 <a href="<?php echo base_url()?>index.php/Settings/membersearch1/"   ><i class="menu-icon fa fa-caret-right">
+                                
+                              </i><i class="menu-icon fa fa-caret-right"></i>Add User From CSV</a>
+                            </li>
+
+                             
+                                <li>
+                                    <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Add User</a>
+                                </li>
+
+
+                                </ul>
+
+                            </li>
+                                        <!-- <li>
                                 <a href="<?php echo base_url();?>index.php/Settings/assignAgencies/">Assign agency heads</a>
                             </li>
                             <li>
                             	<a href="<?php echo base_url();?>index.php/Settings/assignParentAgencies/">Assign Dept heads</a>
                             </li>
-                            	 -->
+                            	
                             <li>
+
                                 <a href="<?php echo base_url();?>index.php/Settings/viewevent">Edit events</a>
+                            </li> -->
+                            
+
+                     <!-- <li>
+                        <a href="<?php echo base_url()?>index.php/Settings/membersearch2/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Delete User</a>
+                    </li>
+ -->
+                   <!--  <li>
+                        <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Add User</a>
+                    </li> -->
+                                            <!-- </li> -->
+
+                                <a href="<?php echo base_url();?>index.php/Settings/viewevent"><i class="fa fa-pencil-square-o">&nbsp</i>Edit events</a>
                             </li>
                             <li>
-                                <a href="#">Add user</a>
+                                <a href="#"><i class="fa fa-user"></i>&nbsp Add user</a>
                             </li>
                                <li>
-                                <a href="#">Delete user</a>
+                                <a href="#"><i class="fa fa-trash-o">&nbsp</i>Delete user</a>
                             </li>
                                             </li>
+
                      <!--  <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Training<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

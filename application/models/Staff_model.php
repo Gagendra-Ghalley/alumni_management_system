@@ -218,7 +218,7 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 		 public function eventdelete($param1=""){
 
 		 	$delete=$this->db->query("DELETE from event_table where event_id='".$param1."'");
-
+		 	
 		 echo "Successfully deleted";
 
 }
@@ -542,7 +542,19 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 		
 		public function editFullEmployee($cid){
 						
-					$query = "SELECT * from bpas_user_profiles WHERE bpas_user_profiles.cid='".$cid."'";
+					$query = "SELECT * from bpas_user_profiles
+					
+					WHERE bpas_user_profiles.cid='".$cid."'";
+					$employee=$this->db->query($query);
+					return $employee;
+					
+				
+			
+		}
+
+		public function editFullEmployee1($cid){
+						
+					$query = "SELECT * from bpas_user_profiles WHERE bpas_user_profiles.cid='".$cid."' ";
 					$employee=$this->db->query($query);
 					return $employee;
 					
@@ -550,11 +562,12 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 			
 		}
 	
-	    public function updateEmployee($cid) {
+	     public function updateEmployee($cid) {
 	    	
-			$query = "UPDATE bpas_user_profiles SET `FirstName`='".$this->input->post('fname')."', `MiddleName`='".$this->input->post('mname')."', `LastName`='".$this->input->post('lname')."', `AgencyID`='".$this->input->post('agencyid')."', `AgencyParentID`='".$this->input->post('agencyparentid')."', `AgencyMainParentID`='".$this->input->post('agencymainparentid')."',
-			`EmpNo` ='".$this->input->post('empno')."', `Grade`='".$this->input->post('grade')."', `Gender`='".$this->input->post('Gender')."', `DateOfBirth`='".$this->input->post('dob')."', `EmployeeTypeIndex`='".$this->input->post('etype')."', `EmployeeStatus`='".$this->input->post('estatus')."', `PositionTitle`='".$this->input->post('positiontitle')."', `telephone`='".$this->input->post('telephone')."',
-			`email` ='".$this->input->post('email')."', `Mobile`='".$this->input->post('mobile')."', `AppointmentDate`='".$this->input->post('appdate')."' WHERE `cid`='".$cid."';";
+			$query = "UPDATE bpas_user_profiles SET `FirstName`='".$this->input->post('fname')."', `MiddleName`='".$this->input->post('mname')."', `LastName`='".$this->input->post('lname')."', `AgencyID`='".$this->input->post('agencyid')."',
+				`roleId`='".$this->input->post('roleId')."',
+			 `AgencyParentID`='".$this->input->post('agencyparentid')."', `AgencyMainParentID`='".$this->input->post('agencymainparentid')."'
+			 WHERE `cid`='".$cid."';";
 			
 			if($this->db->query($query)){
 				
@@ -563,6 +576,8 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 			
 			
 	    }
+	    
+	    
 	    
 	    
 		

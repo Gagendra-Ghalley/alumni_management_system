@@ -44,24 +44,24 @@
                       <li>
                        <a href="<?php echo base_url()?>index.php/Settings/profile/">
                             
-                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>User Profile </a>
+                      <i class="glyphicon glyphicon-user"></i>&nbspUser Profile </a>
                     </li>
 
                      <li>
                        <a href="<?php echo base_url()?>index.php/Settings/Editprofile/">
                             
-                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Profile Management </a>
+                      <i class="glyphicon glyphicon-user"></i>Profile Management </a>
                     </li>
                     
 
                      <li>
                        <a href="<?php echo base_url()?>index.php/Settings/Profilepassword/">
                             
-                      <i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Change your password </a>
+                      <i class="fa fa-key">&nbsp</i>Change your password </a>
                     </li>
                   
                      <li>
-                        <a href="<?php echo base_url()?>index.php/settings/membersearch1/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Member Search</a>
+                        <a href="<?php echo base_url()?>index.php/settings/membersearch1/"><i class="fa fa-search">&nbsp</i>Member Search</a>
                     </li>
                    
                    

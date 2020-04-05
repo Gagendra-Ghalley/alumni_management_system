@@ -39,6 +39,55 @@ class Settings extends CI_Controller {
 		$this->load->view('template/includefooter');
 	}
 
+// 	public function viewUsers1() {
+		
+// 		$data['parent']=$this->ag->getParentAgencyList();
+// 		$this->load->view('template/includeheader',$this->dataheader);
+// 		$this->load->library('pagination');
+
+// 		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees/';
+		
+		
+// 		$this->pagination->initialize($config);
+//     	$agency = $this->input->post('agency');
+// 		$query = $this->ag->getEmployees($agency);
+// 		$num_rows=$query->num_rows();
+// 		$config['total_rows'] = $num_rows;
+// 		$config['per_page'] = 10;
+// 		echo $this->pagination->create_links();
+// 		$counter=1;
+// 		foreach($query->result() as $row){
+			
+// 		echo "<tr>";
+// 		echo "<td>$counter</td>";
+// 		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->CID/'>$row->name</td>";
+// 		// echo "<td>$row->EmpNo</td>";
+// 		echo "<td>$row->CID</td>";
+// 		// echo "<td>$row->Agency</td>";
+// 		echo "<td>$row->ParentAgency</td>";
+// 		// echo "<td>$row->MainParentAgency</td>";
+// 		// echo "<td>$row->PositionTitle</td>";
+// 		// echo "<td>$row->Grade</td>";
+// 		// echo "<td>$row->Gender</td>";
+// 		echo "<td>$row->Email</td>";
+// 		echo "<td>$row->Agency</td>";
+// 	     echo" <td><a href='".base_url()."index.php/Settings/delete_data/$row->profileId/'>Delete</a></td>"
+// 	     ;
+// 	     echo" <td><a href='".base_url()."index.php/Settings/update_data/$row->profileId/'>Edit</td>" ; 
+		
+// 		echo "</tr>";
+// 		$counter++;
+
+// 		$this->load->view('viewusers');
+// 		$this->load->view('template/includefooter');
+// 	}
+
+// }
+
+
+
+
+
 
 	public function Profilepassword(){
 		$cid=$this->session->userdata('cid');
@@ -295,24 +344,27 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->CID/'>$row->name</td>";
-		echo "<td>$row->EmpNo</td>";
-		echo "<td>$row->CID</td>";
-		echo "<td>$row->Agency</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</td>";
+		
+		echo "<td>$row->cid</td>";
+		// echo "<td>$row->Agency</td>";
 		echo "<td>$row->ParentAgency</td>";
-		echo "<td>$row->MainParentAgency</td>";
-		echo "<td>$row->PositionTitle</td>";
-		echo "<td>$row->Grade</td>";
-		echo "<td>$row->Gender</td>";
+		// echo "<td>$row->MainParentAgency</td>";
+		// echo "<td>$row->PositionTitle</td>";
+		// echo "<td>$row->Grade</td>";
+		// echo "<td>$row->Gender</td>";
 		echo "<td>$row->Email</td>";
-		echo "<td>$row->Telephone</td>";
-		echo "<td>$row->Mobile</td>";
+		echo "<td>$row->Agency</td>";
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
+	     ;
 		echo "</tr>";
 		$counter++;
 		
 		}
 		
 	}
+
+	
 	
 	public function getAgencyEmployees() {
 		
@@ -334,20 +386,28 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->CID/'>$row->name</td>";
-		echo "<td>$row->EmpNo</td>";
-		echo "<td>$row->CID</td>";
-		echo "<td>$row->Agency</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</td>";
+		// echo "<td>$row->EmpNo</td>";
+		echo "<td>$row->cid</td>";
+		// echo "<td>$row->Agency</td>";
 		echo "<td>$row->ParentAgency</td>";
-		echo "<td>$row->MainParentAgency</td>";
-		echo "<td>$row->PositionTitle</td>";
-		echo "<td>$row->Grade</td>";
-		echo "<td>$row->Gender</td>";
+		// echo "<td>$row->MainParentAgency</td>";
+		// echo "<td>$row->PositionTitle</td>";
+		// echo "<td>$row->Grade</td>";
+		// echo "<td>$row->Gender</td>";
 		echo "<td>$row->Email</td>";
-		echo "<td>$row->Telephone</td>";
-		echo "<td>$row->Mobile</td>";
+		echo "<td>$row->Agency</td>";
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
+	     ;
+	     
+		
 		echo "</tr>";
 		$counter++;
+
+
+
+		 
+
 		}
 		
 
@@ -409,26 +469,17 @@ function addDak($param="")
 			else echo "failed";
 	}
 	
-	public function updateEmployee($cid) {
+public function updateEmployee($cid) {
 		
 		$this->form_validation->set_rules('fname','Fname','required|trim');
 		$this->form_validation->set_rules('mname','Mname','trim');
 		$this->form_validation->set_rules('lname','Lname','trim');
+		$this->form_validation->set_rules('roleId','roleId','required|trim');
 		$this->form_validation->set_rules('agencyid','Agency','required|trim');
 		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
 		$this->form_validation->set_rules('agencymainparentid','AgencyMainParent','required|trim');
-		$this->form_validation->set_rules('empno','EmpNo','required|trim');
-		$this->form_validation->set_rules('grade','Grade','required|trim');
-		$this->form_validation->set_rules('Gender','Gender','required|trim');
-		$this->form_validation->set_rules('dob','DOB','required|trim');
-		$this->form_validation->set_rules('etype','EmpType','required|trim');
-		$this->form_validation->set_rules('estatus','EmpStatus','required|trim');
-		$this->form_validation->set_rules('positiontitle','PositionTitle','required|trim');
-		$this->form_validation->set_rules('telephone','Telephone','trim');
-		$this->form_validation->set_rules('email','Email','trim');
-		$this->form_validation->set_rules('mobile','Mobile','trim');
-		$this->form_validation->set_rules('appdate','AppDate','trim');
 		
+		$this->form_validation->set_rules('email','Email','trim');
 		if($this->form_validation->run()){
 			$echo="form success";
 		if($this->sm->updateEmployee($cid)) {
@@ -436,7 +487,9 @@ function addDak($param="")
 			$data['statusupdate']="Success";
 			$this->editFullEmployee($cid);
 			
+			
 		}
+
 			
 			
 		} else {
@@ -456,7 +509,16 @@ function addDak($param="")
 			
 		
 	}
-	
+	public function editFullEmployee1($cid){
+			
+		
+					$data['employee']=$this->sm->editFullEmployee1($cid);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee1',$data);
+				    $this->load->view('template/includefooter');
+			
+		
+	}
 	public function assignAgencies() {
 		
 		$data['agencies']=$this->ag->listFullAgencies();
@@ -962,7 +1024,9 @@ public function reciept()
 	}
 	
 
-	public function membersearch1(){//leki
+	
+
+	public function membersearch(){
  	
 		
 		$this->load->view('template/includeheader',$this->dataheader);
@@ -971,6 +1035,159 @@ public function reciept()
 		
 		
 	}
+
+	public function membersearch1(){
+ 	
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->model("csv_import_model");
+		$data = $this->csv_import_model->select();
+		$this->load->view("csv_import", $data);
+		$this->load->view('template/includefooter');
+		
+		
+	}
+public function membersearch2(){
+ 	
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view("deleteuser");
+		$this->load->view('template/includefooter');
+		
+		
+	}
+
+	public function membersearch3(){
+ 	
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->model("main_model");  
+           $data["fetch_data"] = $this->main_model->fetch_data(); 
+           // $course=$this->input->post('course');
+     //       $data['employee']=$this->sm->editFullEmployee($cid);
+					// $this->load->view('template/includeheader',$this->dataheader);
+				 //    $this->load->view('editfullemployee',$data);
+				 //    $this->load->view('template/includefooter');
+           //  $year=$this->input->post('year'); 
+           // $data1["fetch_data"] = $this->main_model->fetch_data1($course,$year);
+          $this->load->view("main_view", $data);  
+		$this->load->view('template/includefooter');
+		
+		
+	}
+
+	public function membersearch4(){
+ 	
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->model("main_model");  
+           $data["fetch_data"] = $this->main_model->fetch_data1();
+          $this->load->view("main_view");  
+		$this->load->view('template/includefooter');
+		
+		
+	}
+
+
+	public function form_validation1()  
+    {  
+           //echo 'OK';  
+           // $this->load->library('form_validation');  
+    	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
+           $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
+           $this->form_validation->set_rules("MiddleName", "MiddleName", 'required|alpha'); 
+           $this->form_validation->set_rules("LastName", "LastName", 'required|alpha');
+           $this->form_validation->set_rules("AgencyMainParentID", "AgencyMainParentID", 'required|numeric');
+           $this->form_validation->set_rules("AgencyParentID", "AgencyParentID", 'required|numeric');
+           $this->form_validation->set_rules("AgencyID", "AgencyID", 
+
+           	'required|numeric');
+            
+           if($this->form_validation->run())  
+           {  
+                //true  
+                $this->load->model("main_model");  
+                $data = array(  
+                	"cid"     =>$this->input->post("cid"),
+                     "FirstName"     =>$this->input->post("FirstName"),  
+                     "MiddleName"          =>$this->input->post("MiddleName"),
+                     "LastName"     =>$this->input->post("LastName"),  
+                     "AgencyMainParentID"          =>$this->input->post("AgencyMainParentID"),  
+                     "AgencyParentID"     =>$this->input->post("AgencyParentID"),
+                     "AgencyID"     =>$this->input->post("AgencyID")  
+                         
+                );  
+               
+                 $data1 = array(  
+                	"relatedUserId"     =>$this->input->post("cid"),
+                    "password"   => md5($this->input->post("cid"))
+            );
+              
+                if($this->input->post("insert"))  
+                {  
+                     $this->main_model->insert_data($data,$data1);  
+                     redirect(base_url() . "index.php/Settings/inserted");  
+                }  
+           }  
+           else  
+           {  
+                //false  
+                $this->membersearch3();  
+           }  
+      }  
+
+     
+      public function inserted()  
+      {  
+           $this->membersearch3();  
+      }  
+     public function delete_data(){ 
+           $this->load->view('template/includeheader',$this->dataheader);
+			$id = $this->uri->segment(3); 
+			$this->load->model("main_model");  
+           $this->main_model->delete_data($id);  
+           redirect(base_url() ."index.php/Settings/deleted");  
+           $this->load->view('template/includefooter');
+      }  
+      public function deleted()  
+      {  
+      	 
+      	redirect(base_url() ."index.php/Settings/viewUsers");  
+          
+	 }
+   //    public function update_data(){  
+   //    	$this->load->view('template/includeheader',$this->dataheader);
+	 	// $user_id = $this->uri->segment(3);  
+   //         $this->load->model("main_model");  
+   //         $data["user_data"] = $this->main_model->fetch_single_data($user_id);  
+   //         $data["fetch_data"] = $this->main_model->fetch_data();  
+   //         $this->load->view("main_view", $data); 
+   //         $this->load->view('template/includefooter'); 
+   //    }  
+
+  
+      // public function updated()  
+      // {  
+      //      $this->membersearch3();  
+      // } 
+
+    //   public function fetch_data1(){  
+    //   	$this->load->view('template/includeheader',$this->dataheader);
+	  	// $this->load->model("main_model");  
+    //             $data = array(  
+                      
+    //                  "course"          =>$this->input->post("course"),  
+    //                  "year"     =>$this->input->post("year")  
+                         
+    //             );  
+    //         $user_id = $this->uri->segment(3);  
+    //        $this->load->model("main_model");  
+    //        $data["user_data"] = $this->main_model->fetch_single_data1($user_id); 
+    //        $data1["fetch_data"] = $this->main_model->fetch_data1($data);  
+    //        $this->load->view("main_view", $data1); 
+    //        $this->load->view('template/includefooter'); 
+    //   }   
+    public function updated1()  
+      {  
+           $this->membersearch4();  
+      }  
+   
 
 
 
