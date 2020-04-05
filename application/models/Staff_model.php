@@ -215,9 +215,9 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 	}
 
 
-		 public function eventdelete($param2=""){
+		 public function eventdelete($param1=""){
 
-		 	$delete=$this->db->query("DELETE from event_table where event_id='".$param2."'");
+		 	$delete=$this->db->query("DELETE from event_table where event_id='".$param1."'");
 
 		 echo "Successfully deleted";
 

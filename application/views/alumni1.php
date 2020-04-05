@@ -62,7 +62,7 @@
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-envelope"></i>Profile</a></li>
+                                    <!-- <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-envelope"></i>Profile</a></li> -->
 
                                     <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
@@ -440,7 +440,7 @@
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Donates</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p><br>
-                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
+                                <a href="<?php echo base_url();?>index.php/ATD/donate/" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                                 
                             </div>
 
@@ -523,7 +523,7 @@
                                 <br>
                                 <h3 class="title" style="color:#428af5;text-align: center;">Profile</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Support student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p>
-                                <a href="#" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
+                                <a href="<?php echo base_url();?>index.php/ATD/login1/" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -572,21 +572,20 @@
                         </div>
                         <div class="col-md-4 col-sm-12 left-contact ">
 
-                        <h3 class="title" style="color:#fff;">Donates us </h3>
+                        <h3 class="title" style="color:#fff;">Cst Address </h3>
                         <hr>
                         
 
-                          <img src="<?php echo base_url();?>assets/img1/bob.png" style="height: 50px;width: 50px" ><strong style="color:#fff">Bank of Bhutan:20054656</strong>  
+                            <ul class="du-choose-list">
+
+                            <li class="list-group"><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">Rinchending.Phuntsholing</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">PO Box:1122</strong></a></li>
+                            <li></i><a href="#"><strong style="color:#fff">Wesite:www.cst.edu.bt</strong></a></li>
+                             <li></i><a href="#"><strong style="color:#fff">E-mail:cst@edu.bt</strong></a></li>
                         
-                          <hr>
-                       
-                          <img src="<?php echo base_url();?>assets/img1/bnb.png"  style="height: 50px;width: 50px"><strong style="color:#fff">Bhutan National Bank:86867667</strong>
-                  
-                         <hr>
-                       
-                          <img src="<?php echo base_url();?>assets/img1/T bank.png"  style="height: 50px;width: 50px"><strong style="color:#fff">T Bank:6767654</strong> 
-                    <hr>
-            
+                           
+                        </ul>
                                         
                         </div>
                         

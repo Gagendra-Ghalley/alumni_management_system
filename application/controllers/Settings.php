@@ -1031,14 +1031,26 @@ public function reciept()
 	
 	 }
 function addevent1(){//leki
+	// $config['upload_path']="./images/";
+	// $config['allowed_types']='jpg|jpeg|gif|png';
+	// $this->load->library('upload',$config);
 
+	// $file_data=$this->upload->data();
+	// $data1['img']=base_url().'/images/'.$file_data['file_name'];
+	
+	//$this->load->view('superadmin/successmsg',$data1);
 	 	$this->form_validation->set_rules('event','startdate','enddate','required');	
 
   		$data['event']=$this->input->post('event'); 
   		$data['eventname']=$this->input->post('event1'); 
-
   		$data['date']=$this->input->post('date'); 
+<<<<<<< HEAD
+  		$data['image']=$this->input->post('image'); 
+=======
+  		//$data['image']=$this->input->post('image'); 
+>>>>>>> 827f257505a04e21d8bb2ced89290a9cc97245c1
   		$this->db->insert('event_table', $data); 
+  		
   		echo "Successfully added";
 
   	}
@@ -1085,6 +1097,7 @@ $this->load->view('template/includefooter');
 		 $d1=$this->input->post("editname");
 		$d2=$this->input->post("editdate");
 		$d3=$this->input->post("editevent");
+		//$d4=$this->input->post("editimage");
 		 $data['eventname']=$this->sm->eventupdate($param1,$d1,$d2,$d3);
 		 //$data=$this->input->post("edit");
 		
