@@ -54,7 +54,7 @@
             <div class="col-md-2 col-sm-6 " >
                 
 
-                    <div class="bg-info" >
+                    <div class="" >
                              <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
                              <!--     <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
                 <input type="text" name="cid">
@@ -150,13 +150,18 @@
                           
               
                           <form method ="post"></form>
-                          
+                         <!--  <button class="btn btn-link text-primary btn-lg" style="margin-left:900px"><b><a href="#">Update </a></b></button> -->
+                <div class="col-md-6">          
                  <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
-                    <button name="edit" id="edit" type="submit" style="background-color:green;color:white;width:150px;height:40px;"  value="fav_CSS"  >Edit</button></a> </br> <br>
-
+                    <button  class="btn btn-link text-primary btn-lg" name="edit" id="edit" type="submit"  value="fav_CSS"  >Edit</button></a> </br> <br>
+                  </div>
+                       <div class="col-md-6">  
 
                     <a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>"> 
-            <button name="delete"   type="submit"  style="background-color:#cc0000;color:white;width:150px;height:40px;"value="fav_CSS"  >Delete</button></a>
+                    
+
+            <button  class="btn btn-link text-primary btn-lg text-right" name="delete"   type="submit" value="fav_CSS"  >Delete</button></a>
+            </div>
 
 
 
@@ -179,9 +184,10 @@
 
               
  </div>
+</div>
 
-
-      <div class="bg-primary" >
+ <div class="bg-primary" class="du-newsletter">
+      <div class="bg-primary" class="du-newsletter" >
             <div class="container">
 
                
@@ -198,6 +204,7 @@
 
             </div>
         </div>
+      </div>
 
  <script>
 
