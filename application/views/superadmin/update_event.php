@@ -94,11 +94,11 @@
 
 
 
-                        <button name="update" id="update" type="submit" form="f" value="fav_CSS" class="btn-default du-common-property" >Save</button></form> 
+                        <button name="update" id="update" type="submit" form="f" value="fav_CSS" class="btn-default du-common-property" >Save</button>
 
-                         <a href="<?php echo site_url();?>/Settings/viewevent" > 
-                         <button name="cancel" id="cancel" type="cancel" value="fav_CSS" class="btn-default du-common-property" >Cancel</button> 
-                        </a>
+                         <a href="<?php echo site_url();?>/Settings/viewevent/<?php echo $row['event_id'];?>" > 
+                         <button name="cancel" id="cancel" type="button" value="fav_CSS" class="btn-default du-common-property" >Cancel</button> 
+                        </a></form> 
 
 
                 </div> 

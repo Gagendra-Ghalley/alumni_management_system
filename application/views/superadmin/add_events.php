@@ -62,7 +62,7 @@
                                   <p></p>
                                 
                                       <label>Image</label>
-                                       <input type="file" name="userfile" size="20" />
+                                       <input type="file" name="image" size="20" />
                                             <br />
                                             <input type="submit" value="upload" />
                                           

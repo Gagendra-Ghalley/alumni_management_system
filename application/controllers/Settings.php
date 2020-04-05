@@ -1044,7 +1044,13 @@ function addevent1(){//leki
   		$data['event']=$this->input->post('event'); 
   		$data['eventname']=$this->input->post('event1'); 
   		$data['date']=$this->input->post('date'); 
+
+  		$data['image']=$this->input->post('image'); 
+
   		//$data['image']=$this->input->post('image'); 
+
+  		//$data['image']=$this->input->post('image'); 
+
   		$this->db->insert('event_table', $data); 
   		
   		echo "Successfully added";
