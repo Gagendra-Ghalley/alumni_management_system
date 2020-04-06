@@ -1,5 +1,5 @@
 <div id="page-wrapper"  style="width: 900px; " > 
-    <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/ATD/viewmember2" method="post">
+    <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/settings/viewmember1" method="post">
     </form>
 
       
