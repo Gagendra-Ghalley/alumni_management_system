@@ -100,6 +100,7 @@
                                                   <?php  $count1++;?>
                                                 </tr>     
                                                
+                                                <?php endforeach;?>
                                             </tbody> -->
                                         </table> 
                                    <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
@@ -114,8 +115,7 @@
                                     <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
 
                                 </button>       
-
-
+                -->
             </div>
         </div>
  <div class="container">

@@ -101,10 +101,10 @@
                 <br>
                 <td><?php echo $count++;?></td><br>
                 
-                <td><?php echo $row['FirstName'];?></td><br>
+               <b>Name:</b> <td><?php echo $row['FirstName'];?></td><br>
 
-                <td><?php echo $row['department'];?></td><br>
-                <td><?php echo $row['email'];?></td>
+               <b>Department:</b> <td><?php echo $row['department'];?></td><br>
+               <b>Email:</b> <td><?php echo $row['email'];?></td>
                     <?php endforeach; ?></tr> 
                 </div>
                    
