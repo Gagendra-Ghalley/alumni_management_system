@@ -12,7 +12,7 @@
    <div id="page-wrapper">
 
             <div class="row profile">
- <div class="container">
+ 
   <h3 align="center">Importing Student's data using CSV</h3>
   <br />
 
@@ -26,7 +26,7 @@
   </form>
   <br />
   <div id="imported_csv_data"></div>
- </div>
+
 
 </div>
 </div>

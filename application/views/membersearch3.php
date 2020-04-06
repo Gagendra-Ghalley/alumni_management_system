@@ -17,6 +17,7 @@
    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
   <!-- Animate CSS -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
+  <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
   <!-- Font Awesome Css -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
   <!-- Menu -->

@@ -49,7 +49,7 @@
                         <h4>Organization: <?php echo $row->organization;?></h4>
                         <h4>Office Addresss: <?php echo $row->office_address;?></h4>
                         <h4>Email Address: <?php echo $row->email;?></h5>
-                        <h4>Contact Address: <?php echo $row->contact_address;?></h4>
+                        <h4>Current Address: <?php echo $row->contact_address;?></h4>
                         <h4>College: <?php echo $row->college;?></h4>
                         <h4>Master: <?php echo $row->master;?></h4>
                         <h4>PhD: <?php echo $row->phD;?></h4>
