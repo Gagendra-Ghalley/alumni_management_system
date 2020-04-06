@@ -15,7 +15,7 @@ class Csv_import_model extends CI_Model
 		p.email as Email,
  		p.telephone as Telephone,		p.Grade as Grade,
  		p.Gender as Gender,
- 		p.year, 		
+ 	 		
  		p.profileId,
  		p.Mobile
  		FROM bpas_user_profiles p 
