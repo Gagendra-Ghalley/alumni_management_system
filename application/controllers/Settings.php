@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -1113,7 +1114,7 @@ public function membersearch2(){
            $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
            $this->form_validation->set_rules("MiddleName", "MiddleName", 'required|alpha'); 
            $this->form_validation->set_rules("LastName", "LastName", 'required|alpha');
-           $this->form_validation->set_rules("AgencyMainParentID", "AgencyMainParentID", 'required|numeric');
+           // $this->form_validation->set_rules("AgencyMainParentID", "AgencyMainParentID", 'required|numeric');
            $this->form_validation->set_rules("AgencyParentID", "AgencyParentID", 'required|numeric');
            $this->form_validation->set_rules("AgencyID", "AgencyID", 
 
@@ -1128,7 +1129,7 @@ public function membersearch2(){
                      "FirstName"     =>$this->input->post("FirstName"),  
                      "MiddleName"          =>$this->input->post("MiddleName"),
                      "LastName"     =>$this->input->post("LastName"),  
-                     "AgencyMainParentID"          =>$this->input->post("AgencyMainParentID"),  
+                     
                      "AgencyParentID"     =>$this->input->post("AgencyParentID"),
                      "AgencyID"     =>$this->input->post("AgencyID")  
                          
