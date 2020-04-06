@@ -1030,7 +1030,7 @@ public function reciept()
  	
 		
 		$this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('membersearch2');
+		$this->load->view('membersearch');
 		$this->load->view('template/includefooter');
 		
 		
