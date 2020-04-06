@@ -126,7 +126,7 @@
 
                
 
-
+<!-- 
                 <div class="col-lg-12">
 
                 <div class="col-md-6 col-sm-12">
@@ -136,7 +136,7 @@
 
                 </div>
 
-            </div>
+            </div> -->
         </div>
       </div>
     </div>
