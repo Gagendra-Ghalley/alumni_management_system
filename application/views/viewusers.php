@@ -14,7 +14,7 @@
                 <!-- Welcome -->
                 <div class="col-lg-12">
  
-                   <div class="col-md-4">
+                   <div class="col-md-6">
             <form onSubmit="return false;">
                 <div class="input-group">
                  
@@ -32,7 +32,7 @@
                 <!--end  Welcome -->
             </div>
 
-<br/>
+
         
      
             <div class="row">
@@ -119,6 +119,26 @@
         </div>
         <!-- end page-wrapper -->
 
+    </div>
+     <div class="bg-primary" class="du-newsletter">
+      <div class="bg-primary" class="du-newsletter" >
+            <div class="container">
+
+               
+
+
+                <div class="col-lg-12">
+
+                <div class="col-md-6 col-sm-12">
+
+
+                    <p>@Alumni Management System</p>
+
+                </div>
+
+            </div>
+        </div>
+      </div>
     </div>
     <!-- end wrapper -->
 

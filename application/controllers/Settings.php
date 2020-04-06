@@ -1055,6 +1055,8 @@ public function membersearch2(){
 		
 	}
 
+	
+
 	public function membersearch3(){
  	
 		$this->load->view('template/includeheader',$this->dataheader);
@@ -1068,6 +1070,24 @@ public function membersearch2(){
            //  $year=$this->input->post('year'); 
            // $data1["fetch_data"] = $this->main_model->fetch_data1($course,$year);
           $this->load->view("main_view", $data);  
+		$this->load->view('template/includefooter');
+		
+		
+	}
+
+	public function student_detail(){
+ 	
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->model("main_model");  
+           $data["fetch_data"] = $this->main_model->fetch_data(); 
+           // $course=$this->input->post('course');
+     //       $data['employee']=$this->sm->editFullEmployee($cid);
+					// $this->load->view('template/includeheader',$this->dataheader);
+				 //    $this->load->view('editfullemployee',$data);
+				 //    $this->load->view('template/includefooter');
+           //  $year=$this->input->post('year'); 
+           // $data1["fetch_data"] = $this->main_model->fetch_data1($course,$year);
+          $this->load->view("student_detail", $data);  
 		$this->load->view('template/includefooter');
 		
 		

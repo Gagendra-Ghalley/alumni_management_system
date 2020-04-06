@@ -52,7 +52,7 @@
                         <a href="<?php echo base_url()?>index.php/ATD/dashboard/"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url()?>index.php/Leave/admin_profile/"><i class="glyphicon glyphicon-user">&nbsp;</i>Profile</a>
+                        <a href="<?php echo base_url()?>index.php/Leave/admin_profile/"><i class="glyphicon glyphicon-user"></i>&nbspProfile</a>
                         
                       
                     </li>
@@ -76,6 +76,9 @@
                      <li>
                         <a href="<?php echo base_url()?>index.php/Settings/addevents/"><i class="fa  fa-calendar-o"></i>&nbsp;Add Events</a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url();?>index.php/Settings/viewevent"><i class="fa fa-pencil-square-o">&nbsp</i>Edit events</a>
+                    </li>
                     <!-- <li>
                         <a href="<?php echo base_url()?>index.php/TelDirectory/viewDirectory/"><i class="fa fa-phone fa-fw"></i>Telephone Directory</a>
                     </li>
@@ -87,28 +90,32 @@
 
                    
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Manage User<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-file-text"></i>&nbspManage User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers/">Manage users</a>
+                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers/"><i class="fa fa-file-text"></i>&nbspManage users</a>
                             </li>
 
                              <li>
                         
-                                 <a href="<?php echo base_url()?>index.php/Settings/membersearch1/"   ><i class="menu-icon fa fa-caret-right">
+                                 <a href="<?php echo base_url()?>index.php/Settings/membersearch1/"   ><i class="fa fa-files-o">
                                 
-                              </i><i class="menu-icon fa fa-caret-right"></i>Add User From CSV</a>
+                              </i><i class="menu-icon fa fa-caret-right"></i>&nbspAdd User From CSV</a>
                             </li>
 
                              
                                 <li>
-                                    <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="menu-icon fa fa-caret-right"></i><i class="menu-icon fa fa-caret-right"></i>Add User</a>
+                                    <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="fa fa-user">&nbsp</i>Add User</a>
                                 </li>
 
 
                                 </ul>
 
                             </li>
+                              <li>
+                                    <a href="<?php echo base_url()?>index.php/Settings/student_detail/"><i class="fa fa-user">&nbsp</i>Student Details</a>
+                                </li>
+
                                         <!-- <li>
                                 <a href="<?php echo base_url();?>index.php/Settings/assignAgencies/">Assign agency heads</a>
                             </li>
@@ -131,16 +138,9 @@
                     </li> -->
                                             <!-- </li> -->
 
-                                <a href="<?php echo base_url();?>index.php/Settings/viewevent"><i class="fa fa-pencil-square-o">&nbsp</i>Edit events</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-user"></i>&nbsp Add user</a>
-                            </li>
-                               <li>
-                                <a href="#"><i class="fa fa-trash-o">&nbsp</i>Delete user</a>
-                            </li>
-                                            </li>
-
+                             
+                           
+                              
                      <!--  <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Training<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
