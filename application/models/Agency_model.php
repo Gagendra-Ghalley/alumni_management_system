@@ -212,7 +212,6 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		p.telephone as Telephone,
 		p.Grade as Grade,
 		p.Gender as Gender,
-		p.year,
 		p.profileId,
 		p.Mobile
 		FROM bpas_user_profiles p 
@@ -323,7 +322,6 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		p.telephone as Telephone,
 		p.Grade as Grade,
 		p.Gender as Gender,
-		p.year,
 		p.profileId,
 		p.Mobile
 		FROM bpas_user_profiles p 
