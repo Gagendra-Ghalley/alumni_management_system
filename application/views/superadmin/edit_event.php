@@ -30,7 +30,7 @@
         <div class="row padding">
             <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
-                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 500px" ></span>
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 430px" ></span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6" >
@@ -110,8 +110,17 @@
                                         echo (" Members <br> Interested");?></font></p>
                                           </button><br><br>
 
+<<<<<<< HEAD
                                     
                
+=======
+                               <!--  <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button>       
+                -->
+>>>>>>> 68842006aa7b85a0f47d82cf8b0c5c62423c8e17
             </div>
         </div>
  

@@ -1026,7 +1026,7 @@ public function reciept()
 
 	
 
-	public function membersearch(){
+	public function membersearch(){//leki
  	
 		
 		$this->load->view('template/includeheader',$this->dataheader);
