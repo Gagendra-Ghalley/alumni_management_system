@@ -115,18 +115,18 @@
                 <input style="width:400px;" type="text" name="LastName" class="form-control" />  
                 <span class="text-danger"><?php echo form_error("LastName"); ?></span>  
            </div>
-            <div class="form-group">  
+           <!--  <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter MainAgency</label>  
                 <input style="width:400px;" type="text" name="AgencyMainParentID" class="form-control" />  
                 <span class="text-danger"><?php echo form_error("AgencyMainParentID"); ?></span>  
-           </div>
+           </div> -->
             <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">ParentAgency</label>  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Department</label>  
                 <input style="width:400px;" type="text" name="AgencyParentID" class="form-control" />  
                 <span class="text-danger"><?php echo form_error("AgencyParentID"); ?></span>  
            </div>
            <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Agency</label>  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter year of Graduation</label>  
                 <input style="width:400px;" type="text" name="AgencyID"  class="form-control" />  
                 <span class="text-danger"><?php echo form_error("AgencyID"); ?></span>  
            </div>
