@@ -6,34 +6,7 @@
  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
- link href="<?php echo base_url();?>assets/css1/bootstrap.min.css" rel="stylesheet">  
-   <!-- Main CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
-  <!-- Animate CSS -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
-  <!-- Font Awesome Css -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
-  <!-- Menu -->
-  <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
-  <!-- Testimonial CSS -->
-  <link href="<?php echo base_url();?>assets/css/cubeportfolio.min.css" rel="stylesheet">
-  
-  
-  <!-- Font  -->
-  <link href='http://fonts1.googleapis.com/css1?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
-  <link href='http://fonts1.googleapis.com/css1?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-  
-  
-  
-    <!-- Core CSS - Include with every page -->
-    <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-<!--   <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" />  -->
-      <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-  <!--    <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />  -->
-
-      <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
+ 
     
 </head>
 <body>
