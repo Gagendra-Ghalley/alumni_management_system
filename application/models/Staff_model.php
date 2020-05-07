@@ -561,11 +561,34 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 				
 			
 		}
+
+			public function editFullEmployee2($cid){
+						
+					$query = "SELECT * from bpas_master_agency WHERE bpas_master_agency.AgencyID='".$cid."' ";
+					$employee=$this->db->query($query);
+					return $employee;
+					
+				
+			
+		}
+
+		public function editFullEmployee3($cid){
+						
+					$query = "SELECT * from bpas_master_agency
+					
+					WHERE bpas_master_agency.AgencyID='".$cid."'";
+					$employee=$this->db->query($query);
+					return $employee;
+					
+				
+			
+		}
 	
 	     public function updateEmployee($cid) {
 	    	
 			$query = "UPDATE bpas_user_profiles SET `FirstName`='".$this->input->post('fname')."', `MiddleName`='".$this->input->post('mname')."', `LastName`='".$this->input->post('lname')."', `AgencyID`='".$this->input->post('agencyid')."',
 				`roleId`='".$this->input->post('roleId')."',
+				`email`='".$this->input->post('email')."',
 			 `AgencyParentID`='".$this->input->post('agencyparentid')."', `AgencyMainParentID`='".$this->input->post('agencymainparentid')."'
 			 WHERE `cid`='".$cid."';";
 			
@@ -577,7 +600,19 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 			
 	    }
 	    
-	    
+	      public function updateEmployee1($cid) {//Tamang (for updating the year of graduation and year of graduation_id )
+	    	
+			$query = "UPDATE bpas_master_agency SET `AgencyID`='".$this->input->post('agencyid')."', `name`='".$this->input->post('agencyparentid')."'
+			WHERE `AgencyMainParentID`='".$cid."';";
+			
+			
+			if($this->db->query($query)){
+				
+				return true;
+			} else return false;
+			
+			
+	    }
 	    
 	    
 		

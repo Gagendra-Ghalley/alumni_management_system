@@ -225,6 +225,21 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		
 		
 	}
+	public function getEmployees1($agency){
+		
+	$query= "SELECT  
+		 
+		a.name AS Agency,
+		a.AgencyID
+		
+		FROM bpas_master_agency a 
+		
+		WHERE a.AgencyID ='".$agency."'";
+		$employees = $this->db->query($query);
+		return $employees;
+		
+		
+	}
 	public function listFullAgencies(){
 				
 		$query="SELECT a.name AS AgencyName, a.AgencyId AS AgencyID, p.name AS AgencyParentName, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from bpas_master_agency a
