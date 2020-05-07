@@ -72,9 +72,15 @@
            //DELETE FROM tbl_user WHERE id = $id  
       }
        function delete_data1($id){  
-          // echo "<script>alert('Are you sure?')</script>";
+         // echo "<script>alert('Are you sure you want to delete?')</script>";
            $this->db->where("AgencyID", $id);  
            $this->db->delete("bpas_master_agency");
+    }
+
+     function delete_data2($id){  
+          // echo "<script>alert('Are you sure?')</script>";
+           $this->db->where("AgencyParentID", $id);  
+           $this->db->delete("bpas_master_agencyparent");
     }
       function fetch_single_data($id)  
 

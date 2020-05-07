@@ -562,7 +562,7 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 			
 		}
 
-			public function editFullEmployee2($cid){
+			public function editFullEmployee2($cid){//Tamang (for deletion of year of graduation )
 						
 					$query = "SELECT * from bpas_master_agency WHERE bpas_master_agency.AgencyID='".$cid."' ";
 					$employee=$this->db->query($query);
@@ -583,7 +583,16 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 				
 			
 		}
-	
+	public function editFullEmployee4($cid){//Tamang(for deletion of department)
+						
+					$query = "SELECT * from bpas_master_agencyparent
+					WHERE bpas_master_agencyparent.AgencyParentID='".$cid."'";
+					$employee=$this->db->query($query);
+					return $employee;
+					
+				
+			
+		}
 	     public function updateEmployee($cid) {
 	    	
 			$query = "UPDATE bpas_user_profiles SET `FirstName`='".$this->input->post('fname')."', `MiddleName`='".$this->input->post('mname')."', `LastName`='".$this->input->post('lname')."', `AgencyID`='".$this->input->post('agencyid')."',

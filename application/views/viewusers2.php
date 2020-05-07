@@ -54,12 +54,7 @@
                                 <?php foreach($parent->result() as $row){?>
                                     <option class="searchdropdown" value="<?php echo $row->AgencyParentID;?>"><?php echo $row->name;?></option><?php }?>
                                 </select>
-                                 <label for="AgencyName">Year</label>
- <select name="Agency" id="agency" class="option3 searchdropdown" onchange="populateEmployees()">
-      <option value="">- Select Year  - </option>
-     
-      
-    </select>       
+                                
                                 
                                </form>
                             </div>
@@ -80,8 +75,8 @@
                                         
                                 
                                 
-                               <th style="width:150px">Year of Graduation(ID)</th>
-                                <th style="width:160px">Year of Graduation</th>
+                               <th style="width:150px">Department(ID)</th>
+                                <th style="width:160px">Department</th>
                                 <th style="width:160px">Delete</th>
                                 
                                                 </tr>
@@ -143,48 +138,17 @@
     <!-- end wrapper -->
 
 <script>
-// function mySearchFunction() 
-// {
-//     var search=$('#search').val();
-        
-//         $.post('<?php echo base_url();?>index.php/Settings/search/',
-//     {
-//         search:search
-        
-//         },
-//         function(data) 
-//         {
-        
-//         $('#employees').html(data);
-//         }); 
-    
-    
-// }
 
 
     function selectagency()
 {
+
+
    var parent=$('#parent').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/agencyFromParent2/',
+        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees3/',
     {
         parent:parent
-        
-        },
-        function(data) 
-        {
-        
-        $('#agency').html(data);
-        }); 
-}
-
-function populateEmployees()
-{
-   var agency=$('#agency').val();
-        
-        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees2/',
-    {
-        agency:agency
         
         },
         function(data) 
@@ -194,20 +158,8 @@ function populateEmployees()
         }); 
 }
 
- $(document).ready(function(){  
-           $('.delete_data').click(function(){  
-                var id = $(this).attr("id");  
-                if(confirm("Are you sure you want to delete this?"))  
-                {  
-                     window.location="<?php echo base_url()?>index.php/Settings/delete_data1/"+id;  
-                }  
-                else  
-                {  
-                     return false;  
-                }  
-           });  
-      });  
+
+
 
 </script>
 
- 

@@ -48,7 +48,14 @@ public function viewUsers1() {
 		$this->load->view('template/includefooter');
 	}
 
-
+public function viewUsers2() {
+		
+		$data['parent']=$this->ag->getParentAgencyList();
+		$this->load->view('template/includeheader',$this->dataheader);
+		
+		$this->load->view('viewusers2',$data);
+		$this->load->view('template/includefooter');
+	}
 
 
 
@@ -405,7 +412,7 @@ function addDak($param="")
 		
 	}
 
-	public function getAgencyEmployees2() {//Tamang(For view in department management)
+	public function getAgencyEmployees2() {//Tamang(For view in year of graduation)
 		
 		
 		$this->load->library('pagination');
@@ -428,6 +435,46 @@ function addDak($param="")
 		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee3/$row->AgencyID/'>$row->AgencyID</td>";
 		echo "<td>$row->Agency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee2/$row->AgencyID/'>Delete</a></td>"
+	     ;
+	     
+		
+		echo "</tr>";
+		$counter++;
+
+
+
+		 
+
+		}
+		
+
+	
+		
+	}
+
+	public function getAgencyEmployees3() {//Tamang(For view in department )
+		
+		
+		$this->load->library('pagination');
+
+		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees3/';
+		
+		
+		$this->pagination->initialize($config);
+    	$agency = $this->input->post('parent');
+		$query = $this->ag->getEmployees2($agency);
+		$num_rows=$query->num_rows();
+		$config['total_rows'] = $num_rows;
+		$config['per_page'] = 10;
+		echo $this->pagination->create_links();
+		$counter=1;
+		foreach($query->result() as $row){
+			
+		echo "<tr>";
+		echo "<td>$counter</td>";
+		echo "<td>$row->AgencyParentID</td>";
+		echo "<td>$row->ParentAgency</td>";
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->AgencyParentID/'>Delete</a></td>"
 	     ;
 	     
 		
@@ -643,6 +690,17 @@ public function updateEmployee($cid) {
 					$data['employee']=$this->sm->editFullEmployee3($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
 				    $this->load->view('editfullemployee3',$data);
+				    $this->load->view('template/includefooter');
+			
+		
+	}
+
+	public function editFullEmployee4($cid){//Tamang (for deleting the department)
+			
+		
+					$data['employee']=$this->sm->editFullEmployee4($cid);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee4',$data);
 				    $this->load->view('template/includefooter');
 			
 		
@@ -1420,6 +1478,21 @@ public function form_validation2()
       {  
       	 
       	redirect(base_url() ."index.php/Settings/viewUsers1");  
+          
+	 }
+
+	 public function delete_data2(){//Tamang(Deleting the year of graduation)  
+           $this->load->view('template/includeheader',$this->dataheader);
+			$id = $this->uri->segment(3); 
+			$this->load->model("main_model");  
+           $this->main_model->delete_data2($id);  
+           redirect(base_url() ."index.php/Settings/deleted2");  
+           $this->load->view('template/includefooter');
+      }  
+      public function deleted2()  
+      {  
+      	 
+      	redirect(base_url() ."index.php/Settings/viewUsers2");  
           
 	 }
    //    public function update_data(){  
