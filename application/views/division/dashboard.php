@@ -126,7 +126,7 @@
      <br>
                         <?php foreach($eventdetail as $row): ?>
 
-<div class="du-current-news center bg-secondary"> -->
+<div class="du-current-news center bg-secondary"> 
     <div class="container img-thumbnail">
         <div class="row padding">
            <div class="col-lg-12 col-md-12 col-sm-12"data-wow-delay="0.2s" >
