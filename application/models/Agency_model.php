@@ -212,7 +212,6 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		p.telephone as Telephone,
 		p.Grade as Grade,
 		p.Gender as Gender,
-		p.year,
 		p.profileId,
 		p.Mobile
 		FROM bpas_user_profiles p 
@@ -221,6 +220,37 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
 		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
 		WHERE p.AgencyID ='".$agency."'";
+		$employees = $this->db->query($query);
+		return $employees;
+		
+		
+	}
+	public function getEmployees1($agency){
+		
+	$query= "SELECT  
+		 
+		a.name AS Agency,
+		a.AgencyID
+		
+		FROM bpas_master_agency a 
+		
+		WHERE a.AgencyID ='".$agency."'";
+		$employees = $this->db->query($query);
+		return $employees;
+		
+		
+	}
+
+	public function getEmployees2($agency){
+		
+	$query= "SELECT  
+		 
+		d.name AS ParentAgency,
+		d.AgencyParentID
+		
+		FROM bpas_master_agencyparent d 
+		
+		WHERE d.AgencyParentID ='".$agency."'";
 		$employees = $this->db->query($query);
 		return $employees;
 		
@@ -323,7 +353,6 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		p.telephone as Telephone,
 		p.Grade as Grade,
 		p.Gender as Gender,
-		p.year,
 		p.profileId,
 		p.Mobile
 		FROM bpas_user_profiles p 

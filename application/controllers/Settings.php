@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -38,54 +39,23 @@ class Settings extends CI_Controller {
 		$this->load->view('viewusers',$data);
 		$this->load->view('template/includefooter');
 	}
-
-// 	public function viewUsers1() {
+public function viewUsers1() {
 		
-// 		$data['parent']=$this->ag->getParentAgencyList();
-// 		$this->load->view('template/includeheader',$this->dataheader);
-// 		$this->load->library('pagination');
-
-// 		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees/';
+		$data['parent']=$this->ag->getParentAgencyList();
+		$this->load->view('template/includeheader',$this->dataheader);
 		
+		$this->load->view('viewusers1',$data);
+		$this->load->view('template/includefooter');
+	}
+
+public function viewUsers2() {
 		
-// 		$this->pagination->initialize($config);
-//     	$agency = $this->input->post('agency');
-// 		$query = $this->ag->getEmployees($agency);
-// 		$num_rows=$query->num_rows();
-// 		$config['total_rows'] = $num_rows;
-// 		$config['per_page'] = 10;
-// 		echo $this->pagination->create_links();
-// 		$counter=1;
-// 		foreach($query->result() as $row){
-			
-// 		echo "<tr>";
-// 		echo "<td>$counter</td>";
-// 		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->CID/'>$row->name</td>";
-// 		// echo "<td>$row->EmpNo</td>";
-// 		echo "<td>$row->CID</td>";
-// 		// echo "<td>$row->Agency</td>";
-// 		echo "<td>$row->ParentAgency</td>";
-// 		// echo "<td>$row->MainParentAgency</td>";
-// 		// echo "<td>$row->PositionTitle</td>";
-// 		// echo "<td>$row->Grade</td>";
-// 		// echo "<td>$row->Gender</td>";
-// 		echo "<td>$row->Email</td>";
-// 		echo "<td>$row->Agency</td>";
-// 	     echo" <td><a href='".base_url()."index.php/Settings/delete_data/$row->profileId/'>Delete</a></td>"
-// 	     ;
-// 	     echo" <td><a href='".base_url()."index.php/Settings/update_data/$row->profileId/'>Edit</td>" ; 
+		$data['parent']=$this->ag->getParentAgencyList();
+		$this->load->view('template/includeheader',$this->dataheader);
 		
-// 		echo "</tr>";
-// 		$counter++;
-
-// 		$this->load->view('viewusers');
-// 		$this->load->view('template/includefooter');
-// 	}
-
-// }
-
-
-
+		$this->load->view('viewusers2',$data);
+		$this->load->view('template/includefooter');
+	}
 
 
 
@@ -262,7 +232,34 @@ public function validate_credentials2(){
 		
 		 $parent=$this->input->post('parent');
                 $query=$this->ag->getAgencyList();
-	        echo "<option class='searchdropdown' value='#'>Select Agency </option>";
+	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
+                foreach($query->result() as $row)
+                { 
+                 echo "<option class='searchdropdown' value='".$row->AgencyID."'>".$row->name."</option>";
+                }
+		
+	}
+
+
+	public function agencyFromParent1() {//Tamang
+		
+		 $parent=$this->input->post('parent');
+                $query=$this->ag->getAgencyList();
+	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
+                foreach($query->result() as $row)
+                { 
+                 echo "<option class='searchdropdown' value='".$row->AgencyID."'>".$row->name."</option>";
+                }
+		
+	}
+
+
+
+	public function agencyFromParent2() {//Tamang(Editing and Deleting year of graduation)
+		
+		 $parent=$this->input->post('parent');
+                $query=$this->ag->getAgencyList();
+	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
                 foreach($query->result() as $row)
                 { 
                  echo "<option class='searchdropdown' value='".$row->AgencyID."'>".$row->name."</option>";
@@ -414,7 +411,134 @@ function addDak($param="")
 	
 		
 	}
+
+	public function getAgencyEmployees2() {//Tamang(For view in year of graduation)
+		
+		
+		$this->load->library('pagination');
+
+		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees2/';
+		
+		
+		$this->pagination->initialize($config);
+    	$agency = $this->input->post('agency');
+		$query = $this->ag->getEmployees1($agency);
+		$num_rows=$query->num_rows();
+		$config['total_rows'] = $num_rows;
+		$config['per_page'] = 10;
+		echo $this->pagination->create_links();
+		$counter=1;
+		foreach($query->result() as $row){
+			
+		echo "<tr>";
+		echo "<td>$counter</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee3/$row->AgencyID/'>$row->AgencyID</td>";
+		echo "<td>$row->Agency</td>";
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee2/$row->AgencyID/'>Delete</a></td>"
+	     ;
+	     
+		
+		echo "</tr>";
+		$counter++;
+
+
+
+		 
+
+		}
+		
+
 	
+		
+	}
+
+	public function getAgencyEmployees3() {//Tamang(For view in department )
+		
+		
+		$this->load->library('pagination');
+
+		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees3/';
+		
+		
+		$this->pagination->initialize($config);
+    	$agency = $this->input->post('parent');
+		$query = $this->ag->getEmployees2($agency);
+		$num_rows=$query->num_rows();
+		$config['total_rows'] = $num_rows;
+		$config['per_page'] = 10;
+		echo $this->pagination->create_links();
+		$counter=1;
+		foreach($query->result() as $row){
+			
+		echo "<tr>";
+		echo "<td>$counter</td>";
+		echo "<td>$row->AgencyParentID</td>";
+		echo "<td>$row->ParentAgency</td>";
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->AgencyParentID/'>Delete</a></td>"
+	     ;
+	     
+		
+		echo "</tr>";
+		$counter++;
+
+
+
+		 
+
+		}
+		
+
+	
+		
+	}
+	public function getAgencyEmployees1() {
+		
+		
+		$this->load->library('pagination');
+
+		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees/';
+		
+		
+		$this->pagination->initialize($config);
+    	$agency = $this->input->post('agency');
+		$query = $this->ag->getEmployees($agency);
+		$num_rows=$query->num_rows();
+		$config['total_rows'] = $num_rows;
+		$config['per_page'] = 10;
+		echo $this->pagination->create_links();
+		$counter=1;
+		foreach($query->result() as $row){
+			
+		echo "<tr>";
+		echo "<td>$counter</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</td>";
+		// echo "<td>$row->EmpNo</td>";
+		echo "<td>$row->cid</td>";
+		// echo "<td>$row->Agency</td>";
+		echo "<td>$row->ParentAgency</td>";
+		// echo "<td>$row->MainParentAgency</td>";
+		// echo "<td>$row->PositionTitle</td>";
+		// echo "<td>$row->Grade</td>";
+		// echo "<td>$row->Gender</td>";
+		echo "<td>$row->Email</td>";
+		echo "<td>$row->Agency</td>";
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
+	     ;
+	     
+		
+		echo "</tr>";
+		$counter++;
+
+
+
+		 
+
+		}
+		
+
+	
+		
+	}
 	public function bulkimport(){
 		
 		
@@ -475,11 +599,12 @@ public function updateEmployee($cid) {
 		$this->form_validation->set_rules('mname','Mname','trim');
 		$this->form_validation->set_rules('lname','Lname','trim');
 		$this->form_validation->set_rules('roleId','roleId','required|trim');
+		$this->form_validation->set_rules('email','Email','trim');
 		$this->form_validation->set_rules('agencyid','Agency','required|trim');
 		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
 		$this->form_validation->set_rules('agencymainparentid','AgencyMainParent','required|trim');
 		
-		$this->form_validation->set_rules('email','Email','trim');
+		
 		if($this->form_validation->run()){
 			$echo="form success";
 		if($this->sm->updateEmployee($cid)) {
@@ -496,6 +621,34 @@ public function updateEmployee($cid) {
 			echo "form error";
 			echo validation_errors();
 			$this->editFullEmployee($cid);
+		}
+		
+	}
+
+	public function updateEmployee1($cid) {
+		
+		
+		$this->form_validation->set_rules('agencyid','Agency','required|trim');
+		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
+	
+		
+		
+		if($this->form_validation->run()){
+			$echo="form success";
+		if($this->sm->updateEmployee1($cid)) {
+			
+			$data['statusupdate']="Success";
+			$this->editFullEmployee3($cid);
+			
+			
+		}
+
+			
+			
+		} else {
+			echo "form error";
+			echo validation_errors();
+			$this->editFullEmployee3($cid);
 		}
 		
 	}
@@ -519,6 +672,41 @@ public function updateEmployee($cid) {
 			
 		
 	}
+
+	public function editFullEmployee2($cid){//Tamang (for deleting year of graduation) 
+			
+		
+					$data['employee']=$this->sm->editFullEmployee2($cid);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee2',$data);
+				    $this->load->view('template/includefooter');
+			
+		
+	}
+
+	public function editFullEmployee3($cid){//(Tamang for editing the year of graduation)
+			
+		
+					$data['employee']=$this->sm->editFullEmployee3($cid);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee3',$data);
+				    $this->load->view('template/includefooter');
+			
+		
+	}
+
+	public function editFullEmployee4($cid){//Tamang (for deleting the department)
+			
+		
+					$data['employee']=$this->sm->editFullEmployee4($cid);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee4',$data);
+				    $this->load->view('template/includefooter');
+			
+		
+	}
+
+
 	public function assignAgencies() {
 		
 		$data['agencies']=$this->ag->listFullAgencies();
@@ -1062,18 +1250,39 @@ public function membersearch2(){
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
            $data["fetch_data"] = $this->main_model->fetch_data(); 
-           // $course=$this->input->post('course');
-     //       $data['employee']=$this->sm->editFullEmployee($cid);
-					// $this->load->view('template/includeheader',$this->dataheader);
-				 //    $this->load->view('editfullemployee',$data);
-				 //    $this->load->view('template/includefooter');
-           //  $year=$this->input->post('year'); 
-           // $data1["fetch_data"] = $this->main_model->fetch_data1($course,$year);
+          $data['request']=$this->db->get('bpas_master_agencyparent')->result_array();
+          $data['request1']=$this->db->get('bpas_master_agency')->result_array();
           $this->load->view("main_view", $data);  
 		$this->load->view('template/includefooter');
 		
 		
 	}
+	public function membersearch5(){
+ 	
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->model("main_model");  
+           $data["fetch_data"] = $this->main_model->fetch_data(); 
+         
+          $this->load->view("main_view1", $data);  
+		$this->load->view('template/includefooter');
+		
+		
+	}
+	public function membersearch6(){
+ 	
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->model("main_model");  
+           $data["fetch_data"] = $this->main_model->fetch_data(); 
+         $data['request']=$this->db->get('bpas_master_agencyparent')->result_array();
+		$this->load->view("main_view2", $data);  
+		$this->load->view('template/includefooter');
+		
+		
+	}
+
+
+
+	
 
 	public function student_detail(){
  	
@@ -1112,10 +1321,10 @@ public function membersearch2(){
     	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
            $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
            $this->form_validation->set_rules("MiddleName", "MiddleName", 'required|alpha'); 
-           $this->form_validation->set_rules("LastName", "LastName", 'required|alpha');
-           $this->form_validation->set_rules("AgencyMainParentID", "AgencyMainParentID", 'required|numeric');
-           $this->form_validation->set_rules("AgencyParentID", "AgencyParentID", 'required|numeric');
-           $this->form_validation->set_rules("AgencyID", "AgencyID", 
+           $this->form_validation->set_rules("LastName", "LastName", 'required');
+           
+           $this->form_validation->set_rules("parent", "parent", 'required|numeric');
+           $this->form_validation->set_rules("agency", "agency", 
 
            	'required|numeric');
             
@@ -1128,9 +1337,9 @@ public function membersearch2(){
                      "FirstName"     =>$this->input->post("FirstName"),  
                      "MiddleName"          =>$this->input->post("MiddleName"),
                      "LastName"     =>$this->input->post("LastName"),  
-                     "AgencyMainParentID"          =>$this->input->post("AgencyMainParentID"),  
-                     "AgencyParentID"     =>$this->input->post("AgencyParentID"),
-                     "AgencyID"     =>$this->input->post("AgencyID")  
+                     
+                     "AgencyParentID"     =>$this->input->post("parent"),
+                     "AgencyID"     =>$this->input->post("agency")  
                          
                 );  
                
@@ -1151,11 +1360,96 @@ public function membersearch2(){
                 $this->membersearch3();  
            }  
       }  
+public function form_validation2()  
+    {  
+           //echo 'OK';  
+           // $this->load->library('form_validation');  
+    	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
+           $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
+           
+            
+           if($this->form_validation->run())  
+           {  
+                //true  
+                $this->load->model("main_model");  
+                $data = array(  
+                	"AgencyParentID"     =>$this->input->post("cid"),
+                     "name"     =>$this->input->post("FirstName"),  
+                    
+                         
+                );  
+               
+                
+              
+                if($this->input->post("insert"))  
+                {  
+                     $this->main_model->insert_data1($data);  
+                     redirect(base_url() . "index.php/Settings/inserted1");  
+                }  
+           }  
+           else  
+           {  
+                //false  
+                $this->membersearch5();  
+           }  
+      } 
+
+      public function form_validation3(){
+	
+
+			$this->form_validation->set_rules("item", "item", 'required|numeric');
+           $this->form_validation->set_rules("quantity", "quantity", 'required|numeric'); 
+           $this->form_validation->set_rules("quantity1", "quantity", 'required|numeric');
+            
+            
+            
+    	
+            
+           if($this->form_validation->run())  
+           { 
+
+                 
+                $this->load->model("main_model");  
+                $data = array(  
+                	"AgencyParentID"     =>$this->input->post("item"),
+                     "name"     =>$this->input->post("quantity"),
+                     "AgencyID"     =>$this->input->post("quantity1"),    
+                    
+                         
+                );  
+               
+                
+         
+              
+                if($this->input->post("insert"))  
+                {  
+
+                     $this->main_model->insert_data2($data);  
+                     redirect(base_url() . "index.php/Settings/inserted2");  
+                }
+               }  
+               else  
+           {  
+                //false  
+                $this->membersearch6();  
+           }  
+           
+          
+      } 
+	 
 
      
       public function inserted()  
       {  
            $this->membersearch3();  
+      }  
+       public function inserted1()  
+      {  
+           $this->membersearch5();  
+      }  
+      public function inserted2()  
+      {  
+           $this->membersearch6();  
       }  
      public function delete_data(){ 
            $this->load->view('template/includeheader',$this->dataheader);
@@ -1169,6 +1463,36 @@ public function membersearch2(){
       {  
       	 
       	redirect(base_url() ."index.php/Settings/viewUsers");  
+          
+	 }
+
+	 public function delete_data1(){//Tamang(Deleting the year of graduation)  
+           $this->load->view('template/includeheader',$this->dataheader);
+			$id = $this->uri->segment(3); 
+			$this->load->model("main_model");  
+           $this->main_model->delete_data1($id);  
+           redirect(base_url() ."index.php/Settings/deleted1");  
+           $this->load->view('template/includefooter');
+      }  
+      public function deleted1()  
+      {  
+      	 
+      	redirect(base_url() ."index.php/Settings/viewUsers1");  
+          
+	 }
+
+	 public function delete_data2(){//Tamang(Deleting the year of graduation)  
+           $this->load->view('template/includeheader',$this->dataheader);
+			$id = $this->uri->segment(3); 
+			$this->load->model("main_model");  
+           $this->main_model->delete_data2($id);  
+           redirect(base_url() ."index.php/Settings/deleted2");  
+           $this->load->view('template/includefooter');
+      }  
+      public function deleted2()  
+      {  
+      	 
+      	redirect(base_url() ."index.php/Settings/viewUsers2");  
           
 	 }
    //    public function update_data(){  

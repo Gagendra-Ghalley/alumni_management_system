@@ -1,4 +1,4 @@
-n
+
         <!--  page-wrapper -->
         <div id="page-wrapper">
 
@@ -15,7 +15,7 @@ n
                 <div class="col-lg-12">
  
                    <div class="col-md-6">
-            <form onSubmit="return false;">
+           <!--  <form onSubmit="return false;">
                 <div class="input-group">
                  
                     <input class="form-control" id="search" placeholder="Search by CID or FirstName">
@@ -23,7 +23,7 @@ n
                         <button class="btn btn-default" type="button" onclick="mySearchFunction()"><i class="fa fa-search"></i></button>
                     </span>
                 </div>
-            </form>
+            </form> -->
 
             <br><br><br>
           
@@ -74,13 +74,13 @@ n
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                  <th style="width:150px">Name</th>
+                                          <!--         <th style="width:150px">Name</th>
                                             
-                                            <th style="width:150px">CID</th>
+                                            <th style="width:150px">CID</th> -->
                                         
                                 
-                                <th style="width:150px">Department</th>
-                                <th style="width:150px">Email</th>
+                                
+                               <th style="width:150px">Year of Graduation(ID)</th>
                                 <th style="width:160px">Year of Graduation</th>
                                 <th style="width:160px">Delete</th>
                                 
@@ -143,30 +143,30 @@ n
     <!-- end wrapper -->
 
 <script>
-function mySearchFunction() 
-{
-    var search=$('#search').val();
+// function mySearchFunction() 
+// {
+//     var search=$('#search').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/search/',
-    {
-        search:search
+//         $.post('<?php echo base_url();?>index.php/Settings/search/',
+//     {
+//         search:search
         
-        },
-        function(data) 
-        {
+//         },
+//         function(data) 
+//         {
         
-        $('#employees').html(data);
-        }); 
+//         $('#employees').html(data);
+//         }); 
     
     
-}
+// }
 
 
     function selectagency()
 {
    var parent=$('#parent').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/agencyFromParent/',
+        $.post('<?php echo base_url();?>index.php/Settings/agencyFromParent2/',
     {
         parent:parent
         
@@ -182,7 +182,7 @@ function populateEmployees()
 {
    var agency=$('#agency').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees/',
+        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees2/',
     {
         agency:agency
         
@@ -199,7 +199,7 @@ function populateEmployees()
                 var id = $(this).attr("id");  
                 if(confirm("Are you sure you want to delete this?"))  
                 {  
-                     window.location="<?php echo base_url()?>index.php/Settings/delete_data/"+id;  
+                     window.location="<?php echo base_url()?>index.php/Settings/delete_data1/"+id;  
                 }  
                 else  
                 {  

@@ -32,10 +32,10 @@
             
   
       <br /><br /><br />  
-      <h2>Insert Students Data</h2><br />  
-      <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation1">  
+      <h2>Insert New Department</h2><br />  
+      <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation3">  
            <?php  
-           if($this->uri->segment(2) == "inserted")  
+           if($this->uri->segment(2) == "inserted2")  
            {  
            //base url - http://localhost/app/las04  
            //redirect url - http://localhost/app/las04/Settings/inserted/  
@@ -94,30 +94,9 @@
            else  
            {  
            ?>  
-           <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter CID</label>  
-                <input style="width:400px;" type="text" name="cid" class="form-control" />  
-                <span class="text-danger"><?php echo form_error("cid"); ?></span>  
-           </div>  
-           <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter First Name</label>  
-                <input style="width:400px;" type="text" name="FirstName" class="form-control" />  
-                <span class="text-danger"><?php echo form_error("FirstName"); ?></span>  
-           </div>
-           <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Middle Name</label>  
-                <input style="width:400px;" type="text" name="MiddleName" class="form-control" />  
-                <span class="text-danger"><?php echo form_error("MiddleName"); ?></span>  
-           </div>  
-
-            <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Last Name</label>  
-                <input style="width:400px;" type="text" name="LastName" class="form-control" />  
-                <span class="text-danger"><?php echo form_error("LastName"); ?></span>  
-           </div>
             <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Select Department</label>  
-                <select  style="width:400px;" class="option3 searchdropdown" onchange="selectagency()" id="parent"  name="parent" data-placeholder="Select Department"  required>
+                <select class="chosen-select form-control" id="place"  name="item" data-placeholder="Choose Item" class="col-xs-10 col-sm-5" required>
               <option value="">Select Department</option>
              <?php foreach($request as $key):?>
             <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
@@ -126,29 +105,23 @@
 
                 <span class="text-danger"><?php echo form_error("Department"); ?></span>  
            </div>
-              <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Select Year of graduation</label> 
-                
-                <select style="width:400px;" name="agency" id="agency" class="option3 searchdropdown" onchange="populateEmployees1()" required>
-              <option value="">- Select Year  - </option>
-              <!-- <?php foreach($request1 as $key):?>
-            <option value="<?php echo $key['AgencyID'];?>"> <?php echo $key['name']; ?></option>
-            <?php endforeach; ?> -->
-      
-              </select>        
-                <!-- <select class="chosen-select form-control" id="place"  name="AgencyID" data-placeholder="Choose Item" style="width:400px;" required>
-              <option value="">Select Year</option>
-             <?php foreach($request1 as $key):?>
-            <option value="<?php echo $key['AgencyID'];?>"> <?php echo $key['name']; ?></option>
-            <?php endforeach; ?>
-          </select> -->
 
+
+           <div class="form-group">  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Year of Graduation</label>  
+                <input type="text" id="amount" class="form-control"  name="quantity" placeholder="Year of Graduation" > 
                 <span class="text-danger"><?php echo form_error("Department"); ?></span>  
            </div>
 
            <div class="form-group">  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter ID (Year of Graduation)</label>  
+                <input type="text" id="amount" class="form-control"  name="quantity1" placeholder="Year of Graduation" > 
+                <span class="text-danger"><?php echo form_error("Department"); ?></span>  
+           </div>
+           <div class="form-group">  
                 <input type="submit" name="insert" value="Insert" class="btn btn-info" />  
-           </div>       
+           </div>
+                 
            <?php  
            }  
            ?>  
@@ -180,70 +153,3 @@
  
  </body>  
  </html>  
-<script>
-function mySearchFunction() 
-{
-    var search=$('#search').val();
-        
-        $.post('<?php echo base_url();?>index.php/Settings/search/',
-    {
-        search:search
-        
-        },
-        function(data) 
-        {
-        
-        $('#employees').html(data);
-        }); 
-    
-    
-}
-
-
-    function selectagency()
-{
-   var parent=$('#parent').val();
-        
-        $.post('<?php echo base_url();?>index.php/Settings/agencyFromParent1/',
-    {
-        parent:parent
-        
-        },
-        function(data) 
-        {
-        
-        $('#agency').html(data);
-        }); 
-}
-
-// function populateEmployees1()
-// {
-//    var agency=$('#agency').val();
-        
-//         $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees1/',
-//     {
-//         agency:agency
-        
-//         },
-//         function(data) 
-//         {
-        
-//         $('#employees').html(data);
-//         }); 
-// }
-
-//  $(document).ready(function(){  
-//            $('.delete_data').click(function(){  
-//                 var id = $(this).attr("id");  
-//                 if(confirm("Are you sure you want to delete this?"))  
-//                 {  
-//                      window.location="<?php echo base_url()?>index.php/Settings/delete_data/"+id;  
-//                 }  
-//                 else  
-//                 {  
-//                      return false;  
-//                 }  
-//            });  
-//       });  
-
-</script>
