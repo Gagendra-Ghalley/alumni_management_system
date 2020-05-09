@@ -1224,7 +1224,7 @@ public function reciept()
 		
 	}
 
-	public function membersearch1(){
+	public function membersearch1(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("csv_import_model");
@@ -1234,7 +1234,7 @@ public function reciept()
 		
 		
 	}
-public function membersearch2(){
+public function membersearch2(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view("deleteuser");
@@ -1245,7 +1245,7 @@ public function membersearch2(){
 
 	
 
-	public function membersearch3(){
+	public function membersearch3(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
@@ -1257,7 +1257,7 @@ public function membersearch2(){
 		
 		
 	}
-	public function membersearch5(){
+	public function membersearch5(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
@@ -1268,7 +1268,7 @@ public function membersearch2(){
 		
 		
 	}
-	public function membersearch6(){
+	public function membersearch6(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
@@ -1289,20 +1289,14 @@ public function membersearch2(){
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
            $data["fetch_data"] = $this->main_model->fetch_data(); 
-           // $course=$this->input->post('course');
-     //       $data['employee']=$this->sm->editFullEmployee($cid);
-					// $this->load->view('template/includeheader',$this->dataheader);
-				 //    $this->load->view('editfullemployee',$data);
-				 //    $this->load->view('template/includefooter');
-           //  $year=$this->input->post('year'); 
-           // $data1["fetch_data"] = $this->main_model->fetch_data1($course,$year);
+          
           $this->load->view("student_detail", $data);  
 		$this->load->view('template/includefooter');
 		
 		
 	}
 
-	public function membersearch4(){
+	public function membersearch4(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
@@ -1315,7 +1309,7 @@ public function membersearch2(){
 
 
 	public function form_validation1()  
-    {  
+    { //Tamang 
            //echo 'OK';  
            // $this->load->library('form_validation');  
     	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
@@ -1361,7 +1355,7 @@ public function membersearch2(){
            }  
       }  
 public function form_validation2()  
-    {  
+    {  //Tamang
            //echo 'OK';  
            // $this->load->library('form_validation');  
     	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
@@ -1394,7 +1388,7 @@ public function form_validation2()
            }  
       } 
 
-      public function form_validation3(){
+      public function form_validation3(){//Tamang
 	
 
 			$this->form_validation->set_rules("item", "item", 'required|numeric');
@@ -1440,18 +1434,18 @@ public function form_validation2()
 
      
       public function inserted()  
-      {  
+      { //Tamang 
            $this->membersearch3();  
       }  
        public function inserted1()  
-      {  
+      {  //Tamang
            $this->membersearch5();  
       }  
       public function inserted2()  
-      {  
+      {  //Tamang
            $this->membersearch6();  
       }  
-     public function delete_data(){ 
+     public function delete_data(){//Tamang 
            $this->load->view('template/includeheader',$this->dataheader);
 			$id = $this->uri->segment(3); 
 			$this->load->model("main_model");  
@@ -1460,7 +1454,7 @@ public function form_validation2()
            $this->load->view('template/includefooter');
       }  
       public function deleted()  
-      {  
+      {  //Tamang
       	 
       	redirect(base_url() ."index.php/Settings/viewUsers");  
           
@@ -1475,7 +1469,7 @@ public function form_validation2()
            $this->load->view('template/includefooter');
       }  
       public function deleted1()  
-      {  
+      {  //Tamang
       	 
       	redirect(base_url() ."index.php/Settings/viewUsers1");  
           
@@ -1490,7 +1484,7 @@ public function form_validation2()
            $this->load->view('template/includefooter');
       }  
       public function deleted2()  
-      {  
+      {  //Tamang
       	 
       	redirect(base_url() ."index.php/Settings/viewUsers2");  
           
@@ -1528,7 +1522,7 @@ public function form_validation2()
     //        $this->load->view('template/includefooter'); 
     //   }   
     public function updated1()  
-      {  
+      {  //Tamang
            $this->membersearch4();  
       }  
    
@@ -1536,6 +1530,7 @@ public function form_validation2()
 
 
 		public	function viewmember1(){//leki
+		
   			$name=$this->input->post('name');
   			// $department=$this->input->post('department');
 

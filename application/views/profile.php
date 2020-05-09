@@ -48,18 +48,18 @@
                         <h4>Occupation : <?php echo $row->occupation;?></h4>
                         <h4>Organization: <?php echo $row->organization;?></h4>
                         <h4>Office Addresss: <?php echo $row->office_address;?></h4>
-                        <h4>Email Address: <?php echo $row->email;?></h5>
+                        <h4 style="white-space:pre-line;">Email Address: <?php echo $row->email;?></h5>
                         <h4>Current Address: <?php echo $row->contact_address;?></h4>
                         <h4>College: <?php echo $row->college;?></h4>
                         <h4>Master: <?php echo $row->master;?></h4>
                         <h4>PhD: <?php echo $row->phD;?></h4>
                         <h4>Other : <?php echo $row->other;?></h4>
-                        <h4>Research Paper: <?php echo $row->research_paper;?></h4>
-                        <h4>Journal: <?php echo $row->journal;?></h4>
-                        <h4>Books:<?php echo $row->book;?></h4>
-                        <h4>Seminar: <?php echo $row->seminar;?></h4>
-                        <h4>Training: <?php echo $row->training;?></h4>
-                         <h4>Workshop: <?php echo $row->workshop;?></h4>
+                        <h4 >Research Paper:<span style="white-space:pre-line;"><?php echo $row->research_paper;?></span></h4>
+                        <h4 style="white-space:pre-line;">Journal: <?php echo $row->journal;?></h4>
+                        <h4 style="white-space:pre-line;">Books:<?php echo $row->book;?></h4>
+                        <h4 style="white-space:pre-line;">Seminar: <?php echo $row->seminar;?></h4>
+                        <h4 style="white-space:pre-line;">Training: <?php echo $row->training;?></h4>
+                         <h4 style="white-space:pre-line;">Workshop: <?php echo $row->workshop;?>&nbsp;</h4>
 
                         <?php } ?>
 
