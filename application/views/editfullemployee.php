@@ -25,13 +25,13 @@
                        
                               <div class="form-group">
                                
-                                    <div class="text-label">First Name:</div><input class="form-control" placeholder="FirstName" name="fname" type="text" value="<?php echo $row->FirstName;?>" autofocus>
+                                    <div style="color:black">First Name:</div><input class="form-control" placeholder="FirstName" name="fname" type="text" value="<?php echo $row->FirstName;?>" autofocus>
                                 </div>
                                 <div class="form-group">
-                                     <div class="text-label">Middle Name:</div><input class="form-control" placeholder="MiddleName" name="mname" type="text" value="<?php echo $row->MiddleName;?>">
+                                     <div style="color:black">Middle Name:</div><input class="form-control" placeholder="MiddleName" name="mname" type="text" value="<?php echo $row->MiddleName;?>">
                                 </div>
                               <div class="form-group">
-                                  <div class="text-label">Last Name:</div>   <input class="form-control" placeholder="LastName" name="lname" type="text" value="<?php echo $row->LastName;?>">
+                                  <div style="color:black">Last Name:</div>   <input class="form-control" placeholder="LastName" name="lname" type="text" value="<?php echo $row->LastName;?>">
                                 </div>
                                  <!-- <div class="form-group">
                                      <div class="text-label">Gender:</div><input class="form-control" placeholder="Gender" name="Gender" type="text" value="<?php echo $row->Gender;?>">
@@ -43,7 +43,7 @@
                                      <div class="text-label">Telephone:</div><input class="form-control" placeholder="Telephone" name="telephone" type="text" value="<?php echo $row->telephone;?>">
                                 </div> -->
                                  <div class="form-group">
-                                     <div class="text-label">Email:</div><input class="form-control" placeholder="Email" name="email" type="text" value="<?php echo $row->email;?>">
+                                     <div style="color:black">Email:</div><input class="form-control" placeholder="Email" name="email" type="text" value="<?php echo $row->email;?>">
                                 </div>
                                 <!--  <div class="form-group">
                                      <div class="text-label">Mobile</div><input class="form-control" placeholder="Mobile" name="mobile" type="text" value="<?php echo $row->Mobile;?>">
@@ -61,15 +61,15 @@
              <div class="panel-body login">
               <div class="form-group">
                  <div class="form-group">
-                                 <div class="text-label">RoleId:</div>    <input class="form-control" placeholder="roleId" name="roleId" type="text" value="<?php echo $row->roleId;?>">
+                                 <div style="color:black">Role:</div>    <input class="form-control" placeholder="roleId" name="roleId" type="text" value="<?php echo $row->roleId;?>">
                                 </div>
                                  <div class="form-group">
-                                     <div class="text-label">Agency ID:</div><input class="form-control" placeholder="AgencyID" name="agencyid" type="text" value="<?php echo $row->AgencyID;?>">
+                                     <div style="color:black">Year of Graduation:</div><input class="form-control" placeholder="AgencyID" name="agencyid" type="text" value="<?php echo $row->AgencyID;?>">
                                 </div>
-                                     <div class="text-label">Parent Agency ID:</div><input class="form-control" placeholder="AgencyParentID" name="agencyparentid" type="text" value="<?php echo $row->AgencyParentID;?>">
+                                     <div style="color:black">Department:</div><input class="form-control" placeholder="AgencyParentID" name="agencyparentid" type="text" value="<?php echo $row->AgencyParentID;?>">
                                 </div>
                                  <div class="form-group">
-                                    <div class="text-label">Agency Main Parent ID:</div> <input class="form-control" placeholder="AgencyMainParentID" name="agencymainparentid" type="text" value="<?php echo $row->AgencyMainParentID;?>">
+                                    <div style="color:black">Main ID:</div> <input class="form-control" placeholder="AgencyMainParentID" name="agencymainparentid" type="text" value="<?php echo $row->AgencyMainParentID;?>">
                                 </div>
                                  <!-- <div class="form-group">
                                     <div class="text-label">Grade:</div> <input class="form-control" placeholder="Grade" name="grade" type="text" value="<?php echo $row->Grade;?>">

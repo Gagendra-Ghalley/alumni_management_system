@@ -1,4 +1,4 @@
-n
+
         <!--  page-wrapper -->
         <div id="page-wrapper">
 
@@ -15,7 +15,7 @@ n
                 <div class="col-lg-12">
  
                    <div class="col-md-6">
-            <form onSubmit="return false;">
+           <!--  <form onSubmit="return false;">
                 <div class="input-group">
                  
                     <input class="form-control" id="search" placeholder="Search by CID or FirstName">
@@ -23,7 +23,7 @@ n
                         <button class="btn btn-default" type="button" onclick="mySearchFunction()"><i class="fa fa-search"></i></button>
                     </span>
                 </div>
-            </form>
+            </form> -->
 
             <br><br><br>
           
@@ -54,12 +54,7 @@ n
                                 <?php foreach($parent->result() as $row){?>
                                     <option class="searchdropdown" value="<?php echo $row->AgencyParentID;?>"><?php echo $row->name;?></option><?php }?>
                                 </select>
-                                 <label for="AgencyName">Year</label>
- <select name="Agency" id="agency" class="option3 searchdropdown" onchange="populateEmployees()">
-      <option value="">- Select Year  - </option>
-     
-      
-    </select>       
+                                
                                 
                                </form>
                             </div>
@@ -74,14 +69,14 @@ n
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                  <th style="width:150px">Name</th>
+                                          <!--         <th style="width:150px">Name</th>
                                             
-                                            <th style="width:150px">CID</th>
+                                            <th style="width:150px">CID</th> -->
                                         
                                 
-                                <th style="width:150px">Department</th>
-                                <th style="width:150px">Email</th>
-                                <th style="width:160px">Year of Graduation</th>
+                                
+                               <th style="width:150px">Department(ID)</th>
+                                <th style="width:160px">Department</th>
                                 <th style="width:160px">Delete</th>
                                 
                                                 </tr>
@@ -143,30 +138,15 @@ n
     <!-- end wrapper -->
 
 <script>
-function mySearchFunction() 
-{
-    var search=$('#search').val();
-        
-        $.post('<?php echo base_url();?>index.php/Settings/search/',
-    {
-        search:search
-        
-        },
-        function(data) 
-        {
-        
-        $('#employees').html(data);
-        }); 
-    
-    
-}
 
 
     function selectagency()
 {
+
+
    var parent=$('#parent').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/agencyFromParent/',
+        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees3/',
     {
         parent:parent
         
@@ -174,40 +154,12 @@ function mySearchFunction()
         function(data) 
         {
         
-        $('#agency').html(data);
-        }); 
-}
-
-function populateEmployees()
-{
-   var agency=$('#agency').val();
-        
-        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees/',
-    {
-        agency:agency
-        
-        },
-        function(data) 
-        {
-        
         $('#employees').html(data);
         }); 
 }
 
- $(document).ready(function(){  
-           $('.delete_data').click(function(){  
-                var id = $(this).attr("id");  
-                if(confirm("Are you sure you want to delete this?"))  
-                {  
-                     window.location="<?php echo base_url()?>index.php/Settings/delete_data/"+id;  
-                }  
-                else  
-                {  
-                     return false;  
-                }  
-           });  
-      });  
+
+
 
 </script>
 
- 

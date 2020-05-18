@@ -110,6 +110,7 @@
                                         echo (" Members <br> Interested");?></font></p>
                                           </button><br><br>
 
+
                                <!--  <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
 
                                     <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
