@@ -101,7 +101,11 @@
                 <br>
                 <td><?php echo $count++;?></td><br>
                 
-               <b>Name:</b> <td><?php echo $row['FirstName'];?></td><br>
+               <b>Name:</b> <td><?php echo $row['FirstName'];?>
+               <?php echo $row['MiddleName'];?>
+               <?php echo $row['LastName'];?>
+                 
+               </td><br>
 
                <b>Department:</b> <td><?php echo $row['department'];?></td><br>
                <b>Email:</b> <td><?php echo $row['email'];?></td>

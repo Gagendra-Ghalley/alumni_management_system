@@ -73,6 +73,7 @@
 
 	public function event1(){
 		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+		$data['editdetail']=$this->db->query("SELECT * from event_table")->result_array();
 			$this->load->view('event1',$data);
 		
 	}
@@ -368,7 +369,9 @@ public	function viewmember2(){//leki
 
  						//OR
 
-  	$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row();//to see if there is record or not in db
+  			 	$issuance=$this->sm->search1($name,$department);
+
+  	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row();//to see if there is record or not in db
   			
 
 

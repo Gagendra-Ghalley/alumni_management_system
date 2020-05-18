@@ -83,12 +83,12 @@
                                         <button style="height:100px;width:100px;font-size:15px"><?php
                                         $a="+";
                                         echo ($count1.=$a);
-                                        echo ("\nMembers");?></button> -->
-                                    <a href="<?php echo base_url();?>index.php/Settings/event_validate"><font color="white" >Join Now</font> </a>
+                                        // echo ("\nMembers");?></button> -->
+                                    <!-- <a href="<?php echo base_url();?>index.php/Settings/event_validate"><font color="white" >Join Now</font> </a>
+ -->
+                               <!--  </button></span> -->
 
-                                </button></span>
-
-                            <br> 
+                         <!--    <br>  -->
 
                    
 
@@ -123,27 +123,25 @@
                
            
   <div class="col-md-10 col-sm-12">
+      
 
      <br>
-                        <?php foreach($eventdetail as $row): ?>
+                        <?php foreach($editdetail as $row): ?>
 
-<!-- <div class="du-current-news center bg-secondary"> -->
+<div class="du-current-news center bg-secondary">
     <div class="container img-thumbnail">
         <div class="row padding">
            <div class="col-lg-12 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
                  <div class="col-md-5 col-sm-12">
+
+                  <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 400px" ></span>
+
                     <p class="text-primary"><b>Description</b></p>
                 </div> 
                 <br>
 
-                <img src="<?php echo $row['image'];?>">
-
-                <!-- <img src=<?php echo $row['image'];?>> -->
-
-
-                <!-- <img src=<?php echo $row['image'];?>> -->
-
+                
                          <b><?php echo $row['date'];?></b>
                           <br>
                           <h3><?php echo $row['eventname'];?><br></h3>

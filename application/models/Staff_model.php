@@ -191,31 +191,69 @@ public function can_log_in1($mac){
 			
 		}
 	
+public function addpic($pic,$param1,$d1,$d2,$d3){//leki
+	
+
+	$profile = array(
+		'image'=> $pic,
+		'eventname'=>$d1,
+		'date'=>$d2,
+		'event'=>$d3,
+		
+				);
+
+	if(isset($param1)){
+
+		
+		//$this->db->where('event_id',$param1);
+		 return $this->db->update('event_table',$profile);
+
+}
+}
+
+public function getcontent($param1){//leki
+
+	$this->db->select('*');
+	$this->db->from('event_table');
+	$this->db->where('event_id',$param1);
+   $re=$this->db->get();
+   return $result=$re->result();
+
+
+}
 
 
 
+public function eventupdate($pic="",$param1="",$param2="",$param3="",$param4=""){//leki
 
 
- public function eventupdate($param1="",$param2="",$param3="",$param4=""){//leki
-
-			// $param1=$event_id;
-			// $param2=$eventname;
-			// $param3=$date;
-			// $param4=$event;
-
-$existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2."',date='".$param3."',event='".$param4."' where event_id='".$param1."'"); 
-
+			
+$existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2."',date='".$param3."',event='".$param4."',image='".$pic."' where event_id='".$param1."'");
 
 		 	
 
 				  return $existing_detail;
-	
-
-		
+				
+			
 	}
 
 
-		 public function eventdelete($param1=""){
+public function eventupdate1($param1="",$pic=""){//leki
+
+
+			
+$existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' where event_id='".$param1."'");
+
+		 	
+
+				  return $existing_detail;
+				
+			
+	}
+
+
+
+		 public function eventdelete($param1=""){//leki
 
 		 	$delete=$this->db->query("DELETE from event_table where event_id='".$param1."'");
 		 	
@@ -696,6 +734,57 @@ $existing_detail = $this->db->query("UPDATE event_table set eventname='".$param2
 		
 	}
 	
+
+
+public function editevent($param1=""){//leki
+		
+		
+		$profile = $this->db->query("SELECT * from event_table WHERE event_id='".$param1."'");
+			return $profile;
+		} 
+
+
+
+public function getevent(){//leki
+		
+		
+		$d = $this->db->query("SELECT * from event_table");
+			return $d;
+		} 
+
+public function updateeventpic($pic,$param1,$data1,$data2,$data3){//leki
+		
+		
+
+	$profile = array(
+		'image'=> $pic,
+		'event'=>$data1,
+		'eventname'=>$data2,
+		'date'=>$data3
+		);
+		
+		return $this->db->insert('event_table',$profile);
+
+	
+		
+	}
+
+public function search1($name,$department){//leki
+	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row()
+					
+				
+			$query= "SELECT CONCAT(FirstName, ' ', MiddleName, ' ',LastName) AS name, 
+		department,email 	
+		FROM bpas_user_profiles  
+		WHERE FirstName ='".$name."' OR department='".$department."' ";
+		$employees = $this->db->query($query);
+		return $employees;
+		
+	}
+	
+
+
+
 	public function updateContact($email,$occupation,$organization){
 		$cid=$this->session->userdata('cid');
 			if($this->db->query("UPDATE bpas_user_profiles SET email='".$email."', occupation='".$occupation."', organization='".$organization."' WHERE cid='".$cid."'")) {
