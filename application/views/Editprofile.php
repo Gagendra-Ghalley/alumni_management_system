@@ -269,7 +269,7 @@
                                     <form>
                                         <div class="form-group">
 
-                                            <input type="text" id="research_paper" class="form-control" placeholder="Research Paper" value="<?php echo $row->research_paper;?>" />
+                                            <textarea type="text" id="research_paper" class="form-control" placeholder="Research Paper" value="<?php echo $row->research_paper;?>" /></textarea>
                                             <button class="btn btn-info btn-block" onclick="updateContact3()">Add</button>
 
                                         </div>
@@ -290,7 +290,7 @@
                                     <form>
                                         <div class="form-group">
 
-                                            <input type="text" id="journal" class="form-control" placeholder="Journal" value="<?php echo $row->journal;?>" />
+                                            <textarea type="text" id="journal" class="form-control" placeholder="Journal" value="<?php echo $row->journal;?>" ></textarea> 
                                             <button class="btn btn-info btn-block" onclick="updateContact3()">Add</button>
 
                                         </div>
@@ -312,7 +312,7 @@
                                     <form>
                                         <div class="form-group">
 
-                                            <input type="text" id="book" class="form-control" placeholder="Books" value="<?php echo $row->book;?>" />
+                                            <textarea type="text" id="book" class="form-control" placeholder="Books" value="<?php echo $row->book;?>" ></textarea>
                                             <button class="btn btn-info btn-block" onclick="updateContact3()">Add</button>
 
                                         </div>
@@ -337,7 +337,7 @@
                                 <form>
                                     <div class="form-group">
 
-                                        <input type="text" id="seminar" class="form-control" placeholder="Seminar" value="<?php echo $row->seminar;?>" />
+                                        <textarea type="text" id="seminar" class="form-control" placeholder="Seminar" value="<?php echo $row->seminar;?>" ></textarea>
                                         <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
 
                                     </div>
@@ -359,7 +359,7 @@
                                 <form>
                                     <div class="form-group">
 
-                                        <input type="text" id="training" class="form-control" placeholder="Training" value="<?php echo $row->training;?>" />
+                                        <textarea type="text" id="training" class="form-control" placeholder="Training" value="<?php echo $row->training;?>" ></textarea>
                                         <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
 
                                     </div>
@@ -381,7 +381,7 @@
                                 <form>
                                     <div class="form-group">
 
-                                        <input type="text" id="workshop" class="form-control" placeholder="workshop" value="<?php echo $row->workshop;?>" />
+                                        <textarea type="text" id="workshop" class="form-control" placeholder="workshop" value="<?php echo $row->workshop;?>" ></textarea>
                                         <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
 
                                     </div>
