@@ -45,10 +45,18 @@
 
                         <div class="panel-body">
 
+
+
+
+
+
+
                          
 <?php foreach($editdetail as $row): ?>
-
-                       
+<h5>Please Select the image</h5>
+                    <?php echo @$error; ?> 
+  <?php echo form_open_multipart('Settings/updateevent/'.$row['event_id']);?>
+  <?php echo "<input type='file' name='image' size='20' />"; ?> 
                           
 
                             <div class="row">
@@ -81,24 +89,26 @@
                                     
 
 
-                                   <div class="col-md-12">
+                                   <!-- <div class="col-md-12">
                                   <p></p>
                                       <label>Image</label>
                                        <input type="file" name="editimage" size="20" />
                                             <br />
-                                            <input type="submit" />
-                                          
-
-                            
-                                   </div>
+                                           
+                                                                      
+                                   </div> -->
 
 
+<?php echo "<input type='submit' name='update' class='btn-default du-common-property' /> ";?>
+                          <?php echo "</form>"?>
 
-                        <button name="update" id="update" type="submit" form="f" value="fav_CSS" class="btn-default du-common-property" >Save</button>
+                        
 
                          <a href="<?php echo site_url();?>/Settings/viewevent/<?php echo $row['event_id'];?>" > 
                          <button name="cancel" id="cancel" type="button" value="fav_CSS" class="btn-default du-common-property" >Cancel</button> 
-                        </a></form> 
+                        </a>
+
+                      </form> 
 
 
                 </div> 

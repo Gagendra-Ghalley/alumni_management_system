@@ -101,16 +101,15 @@
            <div class="col-lg-12 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
                  <div class="col-md-5 col-sm-12">
+
+ <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 400px" ></span>
+
+               <!--       <img style="height: 150px;width: 150px ;border-radius: 50%" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" class="img-rounded img-responsive text-center  img-thumbnail"> -->
                     <p class="text-primary"><b>Description</b></p>
                 </div> 
                 <br>
 
-                <img src="<?php echo $row['image'];?>">
-
-                <!-- <img src=<?php echo $row['image'];?>> -->
-
-
-                <!-- <img src=<?php echo $row['image'];?>> -->
+               
 
                          <b><?php echo $row['date'];?></b>
                           <br>

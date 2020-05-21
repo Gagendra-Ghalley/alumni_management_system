@@ -73,6 +73,7 @@
 
 	public function event1(){
 		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+		$data['editdetail']=$this->db->query("SELECT * from event_table")->result_array();
 			$this->load->view('event1',$data);
 		
 	}
@@ -107,6 +108,38 @@
 		
 			$this->load->view('donate');
 		}
+
+	// public function Forgetpassword(){
+	// 	$this->load->view('Forgetpassword');
+	// }
+
+
+	// public function Resetpassword(){
+	// 	$email = $this->input->post('email');
+	// 	$result=$this->db->query("select * from bpas_user_profiles where email='".$email."'")->result_array();
+
+	
+	// 	if (count($result)>0) {
+	// 		echo("success");
+	// 		$tokan = rand(1000, 9999);
+	// 		$this->db->query("update bpas_logins set password = '".$tokan."'' where email='".$email."'");
+	// 		$message="please click on password reset <br> <a href ='".base_url('reset?tokan=').$tokan."''>Resetpass<a/>";
+	// 		$this->Email($email, 'Reset password Link',$message);
+	// 		// 	
+	// 	}
+	// 	else{
+	// 		echo("not registered");
+	// 		// $this->session->set_flashdata('message',"Email not registered");
+	// 		// $this->load->view('Forgetpassword');
+	// 	}
+	// }
+
+	// public function reset(){
+	// 	echo("reset");
+	// 	$email=$this->input->get('tokan');
+	// 	$_SESSION['tokan']=$data['tokan'];
+	// 	$this->load->view('resetpass');
+	// }
 
 //  public function registration(){//cst_team
 
@@ -368,7 +401,9 @@ public	function viewmember2(){//leki
 
  						//OR
 
-  	$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row();//to see if there is record or not in db
+  			 	$issuance=$this->sm->search1($name,$department);
+
+  	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row();//to see if there is record or not in db
   			
 
 

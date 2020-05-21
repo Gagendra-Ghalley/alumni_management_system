@@ -39,6 +39,7 @@ class Settings extends CI_Controller {
 		$this->load->view('viewusers',$data);
 		$this->load->view('template/includefooter');
 	}
+
 public function viewUsers1() {
 		
 		$data['parent']=$this->ag->getParentAgencyList();
@@ -56,6 +57,7 @@ public function viewUsers2() {
 		$this->load->view('viewusers2',$data);
 		$this->load->view('template/includefooter');
 	}
+
 
 
 
@@ -82,7 +84,7 @@ public function viewUsers2() {
 
 
 	}
-
+	
 
 
 
@@ -330,7 +332,7 @@ function addDak($param="")
 }
 
 	
-	public function search() {
+	public function search() {//nima
 		
 		
 			//$this->pagination->initialize($config);
@@ -1274,7 +1276,7 @@ public function reciept()
  	
 		
 		$this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('membersearch');
+		$this->load->view('membersearch2');
 		$this->load->view('template/includefooter');
 		
 		
@@ -1625,7 +1627,7 @@ public function form_validation2()
 
  						//OR
 
-  	$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row();//to see if there is record or not in db
+  	$issuance=$this->sm->search1($name,$department);//to see if there is record or not in db
   			
 
 
@@ -1655,42 +1657,77 @@ public function form_validation2()
 
 	   public function addevents(){//leki
 	   	if($this->session->userdata('logged_in')=='1'){
+	   		//$query['editdetail']=$this->db->get('event_table')->result_array();
+	   		$data['editdetail']=$this->sm->getevent();
 	   	$this->load->view('template/includeheader',$this->dataheader);
-				$this->load->view('superadmin/add_events');
+				$this->load->view('superadmin/add_events',$data);
 				$this->load->view('template/includefooter');
 			}
 	
 	 }
-function addevent1(){//leki
-	// $config['upload_path']="./images/";
-	// $config['allowed_types']='jpg|jpeg|gif|png';
-	// $this->load->library('upload',$config);
-
-	// $file_data=$this->upload->data();
-	// $data1['img']=base_url().'/images/'.$file_data['file_name'];
+function addevent1($param1=""){//leki
 	
-	//$this->load->view('superadmin/successmsg',$data1);
 	 	$this->form_validation->set_rules('event','startdate','enddate','required');	
 
-  		$data['event']=$this->input->post('event'); 
-  		$data['eventname']=$this->input->post('event1'); 
-  		$data['date']=$this->input->post('date'); 
+  		$data1=$this->input->post('event'); 
+  		$data2=$this->input->post('event1'); 
+  		$data3=$this->input->post('date'); 
 
-  		$data['image']=$this->input->post('image'); 
-
-  		//$data['image']=$this->input->post('image'); 
-
-  		//$data['image']=$this->input->post('image'); 
-
-  		$this->db->insert('event_table', $data); 
   		
-  		echo "Successfully added";
+  		$data['getdetail']=$this->sm->getevent($param1);
+
+		$config['upload_path'] = "./assets/img/event/";
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$config['max_size']     = '1000';
+		$config['max_width'] = '8000';
+		$config['max_height'] = '5000';
+		$config['overwrite'] = true;
+		$config['file_name'] = $param1;
+		//$pic=$config['file_name'];
+		$this->load->library('upload', $config);
+		
+		if(!$this->upload->do_upload('image')){
+			
+			$data['error']=$this->upload->display_errors();
+				
+			
+		} else {
+			
+			$filedata = $this->upload->data();
+			
+			// $this->db->insert('event_table', $data); 
+			$pic=$filedata['raw_name'].$filedata['file_ext'];
+			$data['image']=$pic;
+			$data['success_msg']="Successfully uploaded";
+			if($this->sm->updateeventpic($pic,$param1,$data1,$data2,$data3)) {
+					
+				$query['editdetail']=$this->db->get('event_table')->result_array();
+				redirect('Settings/viewevent');//direct superadmin and viewing page doesnt work ,have to go settings
+				
+			}
+			$this->load->view('template/includeheader',$this->dataheader);
+			$this->load->view('edit_event',$data);
+			$this->load->view('template/includefooter');
+		}
 
   	}
   		
+
+  		 public function addevents2(){//leki
+	   	if($this->session->userdata('logged_in')=='1'){
+	   		//$query['editdetail']=$this->db->get('event_table')->result_array();
+	   		$data['editdetail']=$this->sm->getevent();
+	   	$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('superadmin/add_events2',$data);
+				$this->load->view('template/includefooter');
+			}
+	
+	 }
  
  public function viewevent(){//leki
- 	$data['eventdetail']=$this->db->get('event_table')->result_array();//pulls all from db
+ 	//$data['editdetail']=$this->sm->getevent();
+ 	$data['editdetail']=$this->db->get('event_table')->result_array();//pulls all from db
+  		//$data['user']=$this->sm->getprofile($cid);
   		$this->load->view('template/includeheader',$this->dataheader);
   		$this->load->view('superadmin/edit_event',$data);
   		$this->load->view('template/includefooter');
@@ -1716,6 +1753,8 @@ function addevent1(){//leki
 
 $this->db->where('event_id',$param1);
 $query['editdetail']=$this->db->get('event_table')->result_array();
+$data['user']=$this->sm->editevent($param1);
+
  // $d=implode(" ", $query);
 // die($d);
 $this->load->view('template/includeheader',$this->dataheader);
@@ -1726,29 +1765,104 @@ $this->load->view('template/includefooter');
 
 
   	public function updateevent($param1=""){//leki
-  		//$data=$_POST["editname"]; 
-		 $d1=$this->input->post("editname");
+  		$d1=$this->input->post("editname");
 		$d2=$this->input->post("editdate");
 		$d3=$this->input->post("editevent");
-		//$d4=$this->input->post("editimage");
-		 $data['eventname']=$this->sm->eventupdate($param1,$d1,$d2,$d3);
-		 //$data=$this->input->post("edit");
-		
-// $this->db->where('event_id',$param1);
-// $this->db->update('event_table',$data);
+		//$d4=$this->input->post("image");
+		 
+$data['getdetail']=$this->sm->getevent($param1);
 
-echo "successfully updated";
+		
+		$config['upload_path'] = "./assets/img/event/";
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$config['max_size']     = '1000';
+		$config['max_width'] = '8000';
+		$config['max_height'] = '5000';
+		$config['overwrite'] = true;
+		$config['file_name'] = $param1;
+		//$pic=$config['file_name'];
+		$this->load->library('upload', $config);
+		
+		if(!$this->upload->do_upload('image')){
+			
+			$data['error']=$this->upload->display_errors();
+				
+			
+		} else {
+			
+			$filedata = $this->upload->data();
+			$pic=$filedata['raw_name'].$filedata['file_ext'];
+			$data['image']=$pic;
+			$data['success_msg']="Successfully uploaded";
+			 
+// //$data['eventname']=$this->sm->eventupdate1($param1,$pic);
+			if($data['eventname']=$this->sm->eventupdate($pic,$param1,$d1,$d2,$d3)){
+			echo "successfully updated";	
+			}
+			
+			else{
+				echo"Not an approprite size";
+			}
+
+
+
+}
+
+// $data['eventname']=$this->sm->eventupdate($pic,$param1,$d1,$d2,$d3);
+
+
 
 
   	}
 
 
-  	public function deleteevent($param1="") {
+  	public function deleteevent($param1="") {//leki
 
 $data=$this->sm->eventdelete($param1);
 
 
   	}
+
+  	public function uploadpic1($param1=""){//leki
+
+		
+		// $cid=$this->session->userdata('cid');
+		 $data['getdetail']=$this->sm->getevent($param1);
+
+		
+		$config['upload_path'] = "./assets/img/event/";
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$config['max_size']     = '100';
+		$config['max_width'] = '8000';
+		$config['max_height'] = '5000';
+		$config['overwrite'] = true;
+		$config['file_name'] = $param1;
+		//$pic=$config['file_name'];
+		$this->load->library('upload', $config);
+		
+		if(!$this->upload->do_upload('image')){
+			
+			$data['error']=$this->upload->display_errors();
+				
+			
+		} else {
+			
+			$filedata = $this->upload->data();
+			$pic=$filedata['raw_name'].$filedata['file_ext'];
+			
+			$data['success_msg']="Successfully uploaded";
+			if($this->sm->updateeventpic($pic,$param1)) {
+					
+				$query['editdetail']=$this->db->get('event_table')->result_array();
+				redirect('Settings/addevents2');//direct superadmin and viewing page doesnt work ,have to go settings
+				
+			}
+			$this->load->view('template/includeheader',$this->dataheader);
+			$this->load->view('edit_event',$data);
+			$this->load->view('template/includefooter');
+		}
+		
+	}
 	   
 	public function updateContact() {
 		

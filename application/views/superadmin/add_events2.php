@@ -32,10 +32,10 @@
                       <br>
 
 
-<?php echo @$error; ?> 
-  <?php echo form_open_multipart('Settings/addevent1');?>
-  <?php echo "<input type='file' name='image' size='20' />"; ?>
-  
+<?php foreach($editdetail->result() as $row){?>
+                <img style="height: 150px;width: 150px;border-radius: 50%" src="<?php echo base_url();?>assets/img/event/<?php echo $row->image;?>" class="img-rounded img-responsive">
+                <br/>
+                  <?php }?>
                         <div class="panel-body">
                             <div class="row">
                                <div class="col-md-12">
@@ -68,15 +68,22 @@
 
                                    <div class="col-md-12">
                                   <p></p>
-            
+             <!--    <?php echo form_open_multipart('Settings/uploadpic1');?>
+                    <input type="file" name="userfile" size="20" />
+                    <br />
+                    <input type="submit" value="upload" />
+                        <br/> -->
+                      
+
+                                      <!-- <label>Image</label>
+                                       <input type="file" name="image" size="20" />
+                                            <br />
+                                            <input type="submit" value="upload" /> -->
+                                          
 
                             
                                    </div>
-                                   <?php echo "<input type='submit' name='Post the Event' class='btn-default du-common-property' /> ";?>
-                          <?php echo "</form>"?>
-                          <!-- to update both image and data, use input type instead of button-leki -->
-                              
-                               <!-- <a href="#"><button type="submit" class="btn-default du-common-property" >Post the Event</button> </a> -->
+                               <a href="#"><button type="submit" class="btn-default du-common-property" >Post the Event</button> </a>
                                   </form> 
 
                 </div> 
