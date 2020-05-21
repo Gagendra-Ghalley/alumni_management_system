@@ -498,7 +498,7 @@ public	function viewmember2(){//leki
 			}
 			$role = $this->session->userdata('role');
 			
-			if(($this->session->userdata('telephone')!='')&&($this->session->userdata('email')!='')&&($this->session->userdata('mobile')!='')){
+			
 			if($role=='1'){			
 				$data['leavecount']=$this->atd->leaveCountAll();
 				$data['latecount']=$this->atd->lateCount();
@@ -605,7 +605,7 @@ public	function viewmember2(){//leki
 				// $this->load->view('division/dashboard',$data);
 				// $this->load->view('division/footer');
 			// }
-			} else {
+			 else {
 				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);

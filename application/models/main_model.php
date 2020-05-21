@@ -34,7 +34,7 @@
     p.DateOfBirth as DOB,
     p.email as Email,
     p.telephone as Telephone,   p.Grade as Grade,
-    p.Gender as Gender,
+    p.gender,
         
     p.profileId,
     p.Mobile
@@ -81,6 +81,14 @@
           // echo "<script>alert('Are you sure?')</script>";
            $this->db->where("AgencyParentID", $id);  
            $this->db->delete("bpas_master_agencyparent");
+    }
+
+     function delete_data3($id){  
+          // echo "<script>alert('Are you sure?')</script>";
+           $this->db->where("AgencyID", $id);  
+           $this->db->delete("bpas_user_profiles");
+           $this->db->where("AgencyID", $id);
+           $this->db->delete("bpas_logins");
     }
       function fetch_single_data($id)  
 

@@ -68,7 +68,7 @@
 
                     </div>
                     <div class="panel-footer">
-                            <span class="panel-eyecandy-title"><strong><b style="color:#97839c; font-size:18px">Add User</b></strong>
+                            <span class="panel-eyecandy-title"><strong><b style="color:#97839c; font-size:18px"> <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="fa fa-user">&nbsp</i>Add User</a></b></strong>
                             </span><i class="fa fa-plus-circle"  style="margin-left: 450px;color: #97839c"></i>
                         </div>
                 </div>
@@ -76,10 +76,10 @@
                 <div class="col-lg-6">
                    <div class="panel panel-primary border ">
                     <div class="panel-body red text-center"style="height: 140px">
-                        <i class="fa fa-user fa-5x"></i>&nbsp;<br/><b><?php echo $notused;?></b><br/><strong>Delete User</strong>
+                        <i class="fa fa-user fa-5x"></i>&nbsp;<br/><b><?php echo $notused;?></b><br/><strong></strong>
                     </div>
                     <div class="panel-footer panel-red border">
-                            <span class="font-weight-bold"><strong><b style="color: red; font-size:18px">Delete Users</b></strong>
+                            <span class="font-weight-bold"><strong><b style="color: red; font-size:18px"><a href="<?php echo base_url();?>index.php/Settings/viewUsers/">Manage users</a></b></strong>
                             </span><i class="fa fa-plus-circle fa-1x" style="margin-left: 420px;color: red"></i>
 
                         </div>

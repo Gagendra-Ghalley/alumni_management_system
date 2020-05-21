@@ -124,7 +124,13 @@
                         <a href="#"><i class="fa fa-file-text"></i>&nbspManage Department<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             
-                             
+                             <li>
+                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers2/"><i class="fa fa-file-text"></i>&nbspManage Department</a>
+                            </li>
+
+                              <li>
+                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers1/"><i class="fa fa-file-text"></i>&nbspManage Year of Graduation</a>
+                            </li>
                                 
                                    <li>
                                     <a href="<?php echo base_url()?>index.php/Settings/membersearch5/"><i class="fa fa-user">&nbsp</i>Add Department</a>
@@ -133,13 +139,7 @@
                                     <a href="<?php echo base_url()?>index.php/Settings/membersearch6/"><i class="fa fa-user">&nbsp</i>Add Year of Graduation</a>
                                 </li>
 
-                                <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers2/"><i class="fa fa-file-text"></i>&nbspDelete Department</a>
-                            </li>
-
-                              <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers1/"><i class="fa fa-file-text"></i>&nbspDelete Year of Graduation</a>
-                            </li>
+                                
 
 
 

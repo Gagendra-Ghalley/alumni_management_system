@@ -350,14 +350,22 @@ function addDak($param="")
 		// echo "<td>$row->PositionTitle</td>";
 		// echo "<td>$row->Grade</td>";
 		// echo "<td>$row->Gender</td>";
-		echo "<td>$row->Email</td>";
+		echo "<td>$row->gender</td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
+	     echo" <td>Delete</td>"
 	     ;
+		 
+		if($counter==1 ){
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</button></a>"
+	     ;
+		}
+		
 		echo "</tr>";
 		$counter++;
 		
 		}
+
+		
 		
 	}
 
@@ -378,6 +386,7 @@ function addDak($param="")
 		$config['total_rows'] = $num_rows;
 		$config['per_page'] = 10;
 		echo $this->pagination->create_links();
+
 		$counter=1;
 		foreach($query->result() as $row){
 			
@@ -392,12 +401,14 @@ function addDak($param="")
 		// echo "<td>$row->PositionTitle</td>";
 		// echo "<td>$row->Grade</td>";
 		// echo "<td>$row->Gender</td>";
-		echo "<td>$row->Email</td>";
+		echo "<td>$row->gender</td>";
 		echo "<td>$row->Agency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
 	     ;
-	     
-		
+	     if($counter==1){
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</a></td>"
+	     ;
+		}
 		echo "</tr>";
 		$counter++;
 
@@ -472,7 +483,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td>$row->AgencyParentID</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee5/$row->AgencyParentID'>$row->AgencyParentID</a></td>";
 		echo "<td>$row->ParentAgency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->AgencyParentID/'>Delete</a></td>"
 	     ;
@@ -596,13 +607,13 @@ function addDak($param="")
 public function updateEmployee($cid) {
 		
 		$this->form_validation->set_rules('fname','Fname','required|trim');
-		$this->form_validation->set_rules('mname','Mname','trim');
-		$this->form_validation->set_rules('lname','Lname','trim');
+		// $this->form_validation->set_rules('mname','Mname','trim');
+		// $this->form_validation->set_rules('lname','Lname','trim');
 		$this->form_validation->set_rules('roleId','roleId','required|trim');
-		$this->form_validation->set_rules('email','Email','trim');
+		$this->form_validation->set_rules('gender','gender','trim');
 		$this->form_validation->set_rules('agencyid','Agency','required|trim');
 		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
-		$this->form_validation->set_rules('agencymainparentid','AgencyMainParent','required|trim');
+		// $this->form_validation->set_rules('agencymainparentid','AgencyMainParent','required|trim');
 		
 		
 		if($this->form_validation->run()){
@@ -628,7 +639,7 @@ public function updateEmployee($cid) {
 	public function updateEmployee1($cid) {
 		
 		
-		$this->form_validation->set_rules('agencyid','Agency','required|trim');
+		// $this->form_validation->set_rules('agencyid','Agency','required|trim');
 		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
 	
 		
@@ -649,6 +660,34 @@ public function updateEmployee($cid) {
 			echo "form error";
 			echo validation_errors();
 			$this->editFullEmployee3($cid);
+		}
+		
+	}
+
+	public function updateEmployee2($cid) {
+		
+		
+		// $this->form_validation->set_rules('agencyid','Agency','required|trim');
+		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
+	
+		
+		
+		if($this->form_validation->run()){
+			$echo="form success";
+		if($this->sm->updateEmployee2($cid)) {
+			
+			$data['statusupdate']="Success";
+			$this->editFullEmployee5($cid);
+			
+			
+		}
+
+			
+			
+		} else {
+			echo "form error";
+			echo validation_errors();
+			$this->editFullEmployee5($cid);
 		}
 		
 	}
@@ -705,7 +744,24 @@ public function updateEmployee($cid) {
 			
 		
 	}
-
+public function editFullEmployee5($cid){//Tamang (view for editing the department)
+			
+		
+					$data['employee']=$this->sm->editFullEmployee5($cid);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee5',$data);
+				    $this->load->view('template/includefooter');
+			
+		
+	}
+	public function editFullEmployee6($AgencyID){//Tamang (view for editing the department)
+			
+		
+					$data['employee']=$this->sm->editFullEmployee6($AgencyID);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee6',$data);
+				    $this->load->view('template/includefooter');
+	}
 
 	public function assignAgencies() {
 		
@@ -1228,7 +1284,7 @@ public function reciept()
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("csv_import_model");
-		$data = $this->csv_import_model->select();
+		$data['data'] = $this->csv_import_model->select();
 		$this->load->view("csv_import", $data);
 		$this->load->view('template/includefooter');
 		
@@ -1314,8 +1370,9 @@ public function membersearch2(){//Tamang
            // $this->load->library('form_validation');  
     	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
            $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
-           $this->form_validation->set_rules("MiddleName", "MiddleName", 'required|alpha'); 
-           $this->form_validation->set_rules("LastName", "LastName", 'required');
+           $this->form_validation->set_rules("gender", "gender", 'required|alpha');
+           // $this->form_validation->set_rules("MiddleName", "MiddleName", 'required|alpha'); 
+           // $this->form_validation->set_rules("LastName", "LastName", 'required');
            
            $this->form_validation->set_rules("parent", "parent", 'required|numeric');
            $this->form_validation->set_rules("agency", "agency", 
@@ -1329,9 +1386,9 @@ public function membersearch2(){//Tamang
                 $data = array(  
                 	"cid"     =>$this->input->post("cid"),
                      "FirstName"     =>$this->input->post("FirstName"),  
-                     "MiddleName"          =>$this->input->post("MiddleName"),
-                     "LastName"     =>$this->input->post("LastName"),  
-                     
+                     // "MiddleName"          =>$this->input->post("MiddleName"),
+                     // "LastName"     =>$this->input->post("LastName"),  
+                       "gender"     =>$this->input->post("gender"),
                      "AgencyParentID"     =>$this->input->post("parent"),
                      "AgencyID"     =>$this->input->post("agency")  
                          
@@ -1339,6 +1396,8 @@ public function membersearch2(){//Tamang
                
                  $data1 = array(  
                 	"relatedUserId"     =>$this->input->post("cid"),
+                	"AgencyParentID"     =>$this->input->post("parent"),
+                     "AgencyID"     =>$this->input->post("agency"),
                     "password"   => md5($this->input->post("cid"))
             );
               
@@ -1392,8 +1451,8 @@ public function form_validation2()
 	
 
 			$this->form_validation->set_rules("item", "item", 'required|numeric');
-           $this->form_validation->set_rules("quantity", "quantity", 'required|numeric'); 
-           $this->form_validation->set_rules("quantity1", "quantity", 'required|numeric');
+           $this->form_validation->set_rules("quantity", "quantity", 'required'); 
+           $this->form_validation->set_rules("quantity1", "quantity1", 'required|numeric');
             
             
             
@@ -1487,6 +1546,21 @@ public function form_validation2()
       {  //Tamang
       	 
       	redirect(base_url() ."index.php/Settings/viewUsers2");  
+          
+	 }
+
+	  public function delete_data3(){//Tamang(Deleting the year of graduation)  
+           $this->load->view('template/includeheader',$this->dataheader);
+			$id = $this->uri->segment(3); 
+			$this->load->model("main_model");  
+           $this->main_model->delete_data3($id);  
+           redirect(base_url() ."index.php/Settings/deleted3");  
+           $this->load->view('template/includefooter');
+      }  
+      public function deleted3()  
+      {  //Tamang
+      	 
+      	redirect(base_url() ."index.php/Settings/viewUsers");  
           
 	 }
    //    public function update_data(){  
