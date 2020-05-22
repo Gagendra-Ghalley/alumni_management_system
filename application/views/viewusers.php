@@ -1,4 +1,4 @@
-n
+
         <!--  page-wrapper -->
         <div id="page-wrapper">
 
@@ -18,7 +18,7 @@ n
             <form onSubmit="return false;">
                 <div class="input-group">
                  
-                    <input class="form-control" id="search" placeholder="Search by CID or FirstName">
+                    <input class="form-control" id="search" placeholder="Search by CID ">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button" onclick="mySearchFunction()"><i class="fa fa-search"></i></button>
                     </span>
@@ -80,10 +80,10 @@ n
                                         
                                 
                                 <th style="width:150px">Department</th>
-                                <th style="width:150px">Email</th>
+                                <th style="width:150px">Gender</th>
                                 <th style="width:160px">Year of Graduation</th>
                                 <th style="width:160px">Delete</th>
-                                
+                                <th style="width:160px">Deleteall</th>
                                                 </tr>
                                             </thead>
                                            
@@ -91,6 +91,7 @@ n
 
                                             </tbody>
                                         </table>
+                                        
                                     </div>
 
                                 </div>

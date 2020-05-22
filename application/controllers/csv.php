@@ -17,7 +17,7 @@
      
 }
 
-function load_data()
+ function load_data()
  {
 
   
@@ -91,6 +91,27 @@ function load_data()
 
   function import()
   {
+     if(!empty($_FILES["csv_file"]["name"]))  
+ {  
+
+
+          $connect = mysqli_connect("localhost", "root", "", "waste_db3");  
+      $output = '';  
+      $allowed_ext = array("csv");  
+      $extension = end(explode(".", $_FILES["csv_file"]["name"]));  
+
+
+    $file_data = fopen($_FILES["csv_file"]["tmp_name"], 'r');  
+           fgetcsv($file_data);  
+           while($row = fgetcsv($file_data))  
+           {  
+                $name = mysqli_real_escape_string($connect, $row["Name"]);  
+                $gender = mysqli_real_escape_string($connect, $row["Gender1"]);  
+                $cid = mysqli_real_escape_string($connect, $row["cid"]);  
+                $AgencyMainParentID = mysqli_real_escape_string($connect, $row["AgencyMainParentID"]);  
+                $AgencyParentID = mysqli_real_escape_string($connect, $row["AgencyParentID"]); $AgencyID = mysqli_real_escape_string($connect, $row["AgencyID"]); 
+
+                 
 
 
    $file_data = $this->csvimport->get_array($_FILES["csv_file"]["tmp_name"]);
@@ -98,7 +119,7 @@ function load_data()
    {
     $data[] = array(
      'FirstName' => $row["Name"],
-           'gender'  => $row["Gender1"],
+           'gender' => $row["Gender1"],
            'cid'   => $row["cid"],
            'AgencyMainParentID'   => $row["AgencyMainParentID"],
            'AgencyParentID'   => $row["AgencyParentID"],
@@ -107,15 +128,31 @@ function load_data()
    $data1[] = array(
     
            'relatedUserId'   => $row["cid"],
-           'AgencyParentID'   => $row["AgencyParentID"],
-           'AgencyID'   => $row["AgencyID"],
            'password'   => md5($row["cid"])
             );
+
+
+        if($row!=0){
+          $return['data']=true;
+          $return['message']="You have successfully imported the data";
           
+           $this->csv_import_model->insert($data,$data1);
+        }
+
+        else{
+         $return['data']=false;
+          $return['message']="Error";
+      }
+
+     
    }
 
-   $this->csv_import_model->insert($data,$data1);
+  
+}
+
+}
    
+
  }
 
   

@@ -115,6 +115,11 @@
                 <input style="width:400px;" type="text" name="LastName" class="form-control" />  
                 <span class="text-danger"><?php echo form_error("LastName"); ?></span>  
            </div>
+           <div class="form-group">  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Gender</label>  
+                <input style="width:400px;" placeholder="M/F" type="text" name="gender" class="form-control" />  
+                <span class="text-danger"><?php echo form_error("gender"); ?></span>  
+           </div>
             <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Select Department</label>  
                 <select  style="width:400px;" class="option3 searchdropdown" onchange="selectagency()" id="parent"  name="parent" data-placeholder="Select Department"  required>

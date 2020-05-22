@@ -55,69 +55,38 @@
                 
 
                     <div class="" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
-                             <!--     <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
-                <input type="text" name="cid">
-                 <input type="submit" value="Join Us" class="btn-default du-common-property">
+                             <span> <?php foreach($user->result() as $row){?>    
+
+                   <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
+                <input type="hidden" name="cid" value="<?php echo $row->cid;?>">
+                <input type="submit" value="Join Us" style="height:40px;font-size:15px;width: 100px" class="btn btn-primary text-left" data-animation="animated zoomInUp">
                 </form> 
-           
-    <table>
-      <tbody>
-                                               <?php $count1=0; foreach($request1 as $row):?>
+                 <?php } ?></span>
+
+                           
+                          <?php $count1=0; foreach($request1 as $row):?>
                                                
                                                 <tr>
                                                   <?php  $count1++;?>
+
                                                 </tr>
-                                                  
-
-                                                   
-                                                  
-                                                    
-
-                                                   
-                                                   
-                                               
-                                                <?php endforeach;?>
-                                            </tbody>
-                                        </table> 
-                                        <button style="height:100px;width:100px;font-size:15px"><?php
-                                        $a="+";
-                                        echo ($count1.=$a);
-                                        echo ("\nMembers");?></button> -->
-                                    <a href="<?php echo base_url();?>index.php/Settings/event_validate"><font color="white" >Join Now</font> </a>
-
-                                </button></span>
-
-                            <br> 
-
+                                        <?php endforeach;?>
                    
 
-                            <table>
-                            <!--  <tbody>
-                                               <?php $count1=0; foreach($request1 as $row):?>
-                                               
-                                                <tr>
-                                                  <?php  $count1++;?>
-                                                </tr>     
-                                               
-                                                <?php endforeach;?>
-                                            </tbody> -->
-                                        </table> 
+                        
                                    <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
                                         <p><font color="black"><?php
-                                        // $a="+";
+                                        
                                         echo ($count1);
                                         echo (" Members <br> Interested");?></font></p>
-                                          </button><br><br>
+                                          </button><br>
 
-                               <!--  <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
-
-                                </button>       
-                -->
+                              
             </div>
         </div>
+
+
+        
  <div class="container">
                
              <div class="container">

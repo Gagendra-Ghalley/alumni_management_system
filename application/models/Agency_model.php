@@ -201,7 +201,8 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 	public function getEmployees($agency){
 		
 	$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
-		p.cid, 
+		p.cid,
+		p.AgencyID, 
 		a.name AS Agency, 
 		p.EmpNo AS EmpNo,
 		d.name AS ParentAgency, 
@@ -211,7 +212,7 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		p.email as Email,
 		p.telephone as Telephone,
 		p.Grade as Grade,
-		p.Gender as Gender,
+		p.gender,
 		p.profileId,
 		p.Mobile
 		FROM bpas_user_profiles p 
@@ -342,7 +343,9 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 					
 				
 			$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
-		p.cid, 
+		p.cid,
+		p.FirstName, 
+		p.AgencyID,
 		a.name AS Agency, 
 		p.EmpNo AS EmpNo,
 		d.name AS ParentAgency, 
@@ -352,7 +355,7 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		p.email as Email,
 		p.telephone as Telephone,
 		p.Grade as Grade,
-		p.Gender as Gender,
+		p.gender,
 		p.profileId,
 		p.Mobile
 		FROM bpas_user_profiles p 
@@ -360,7 +363,7 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID 
 		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
 		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
-		WHERE p.cid ='".$keyword."' OR p.FirstName='".$keyword."' ";
+		WHERE p.cid ='".$keyword."'";
 		$employees = $this->db->query($query);
 		return $employees;
 		

@@ -32,7 +32,7 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edit User</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h1 class="page-header">Edit Department</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -40,13 +40,13 @@
           
 
  <?php $row=$employee->row(0);
-    $cid=$row->AgencyID;
+    $cid=$row->AgencyParentID;
     ?>
         
 
            
             <div class="row">
-                <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/updateEmployee1/<?php echo $cid;?>/" class="form-group">
+                <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/updateEmployee2/<?php echo $cid;?>/" class="form-group">
                          
                 <div class="col-lg-6">
  
@@ -56,7 +56,7 @@
                               <!--    <div class="form-group">
                                      <div style="color:black">Year of Graduation(ID):</div><input class="form-control" placeholder="Department ID" name="agencyid" type="text" value="<?php echo $row->AgencyID;?>">
                                 </div> -->
-                                     <div style="color:black">Year of Graduation:</div><input class="form-control" placeholder="Department" name="agencyparentid" type="text" value="<?php echo $row->name;?>">
+                                     <div style="color:black">Department:</div><input class="form-control" placeholder="Department" name="agencyparentid" type="text" value="<?php echo $row->name;?>">
                                 </div>
                               
                                  <!-- <div class="form-group">
@@ -88,7 +88,7 @@
 
            <form >
                <div class="col-lg-6">
-               <a href="<?php echo base_url();?>index.php/Settings/viewUsers1/" class="btn btn-lg btn-warning btn-block">Back</a>
+               <a href="<?php echo base_url();?>index.php/Settings/viewUsers2/" class="btn btn-lg btn-warning btn-block">Back</a>
            </div>
            </form>
              

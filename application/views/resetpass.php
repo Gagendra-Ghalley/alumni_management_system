@@ -96,24 +96,31 @@
             <div class="col-md-4 col-md-offset-4 text-center logo-margin ">
               <!-- <h1 class="panel-title"  ><font size="6">CST Alumni Management system</font></h1> -->
                 </div>
+                
+                 
+
             <div class="col-md-5 col-md-offset-3 ">
                 <div class="login-panel panel panel-default">                  
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Log In</h3>
+                        <h3 class="panel-title">Reset  your password</h3>
                     </div>
+
                     <div class="panel-body login">
-                        <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/login_validate" class="form-group">
+                        <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/Resetpassword" class="form-group">
                             
-                            	<div class="form-group">
+                              <div class="form-group">
                                
-                                    <input class="form-control" placeholder="CID" name="cid" type="text" autofocus required/>
+                             <input class="form-control" placeholder="New password" name="password" type="text" autofocus required/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" class="pass" type="password" required/>
+                               
+                             <input class="form-control" placeholder="confirm password" name="confirm password" type="text" autofocus required/>
                                 </div>
-                               <!--  <a href="<?php echo base_url();?>index.php/ATD/Forgetpassword">Forget password?</a> -->
+                               
+                               
+                                
                                  
-                                <input type="submit" value="Login" class="btn btn-lg btn-success btn-block"/>
+                                <input type="submit" value="reset your password" class="btn btn-lg btn-success btn-block"/>
                                 <br>
 
                            
@@ -126,9 +133,9 @@
         </div>
     </div>
 
-	
-	
-	
+  
+  
+  
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">

@@ -631,11 +631,31 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 				
 			
 		}
+
+		public function editFullEmployee5($cid){//Tamang(for editing of department)
+						
+					$query = "SELECT * from bpas_master_agencyparent
+					WHERE bpas_master_agencyparent.AgencyParentID='".$cid."'";
+					$employee=$this->db->query($query);
+					return $employee;
+					
+				
+			
+		}
+
+		public function editFullEmployee6($cid){//Tamang(for deleting group of students according to the year of graduation)
+					
+					$query = "SELECT * from bpas_user_profiles WHERE bpas_user_profiles.AgencyID='".$cid."' ";
+					$employee=$this->db->query($query);
+					return $employee;
+				
+			
+		}
 	     public function updateEmployee($cid) {
 	    	
 			$query = "UPDATE bpas_user_profiles SET `FirstName`='".$this->input->post('fname')."', `MiddleName`='".$this->input->post('mname')."', `LastName`='".$this->input->post('lname')."', `AgencyID`='".$this->input->post('agencyid')."',
 				`roleId`='".$this->input->post('roleId')."',
-				`email`='".$this->input->post('email')."',
+				`gender`='".$this->input->post('gender')."',
 			 `AgencyParentID`='".$this->input->post('agencyparentid')."', `AgencyMainParentID`='".$this->input->post('agencymainparentid')."'
 			 WHERE `cid`='".$cid."';";
 			
@@ -649,8 +669,8 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 	    
 	      public function updateEmployee1($cid) {//Tamang (for updating the year of graduation and year of graduation_id )
 	    	
-			$query = "UPDATE bpas_master_agency SET `AgencyID`='".$this->input->post('agencyid')."', `name`='".$this->input->post('agencyparentid')."'
-			WHERE `AgencyMainParentID`='".$cid."';";
+			$query = "UPDATE bpas_master_agency SET  `name`='".$this->input->post('agencyparentid')."'
+			WHERE `AgencyID`='".$cid."';";
 			
 			
 			if($this->db->query($query)){
@@ -660,7 +680,19 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 			
 			
 	    }
-	    
+	     public function updateEmployee2($cid) {//Tamang (for updating the department )
+	    	
+			$query = "UPDATE bpas_master_agencyparent SET  `name`='".$this->input->post('agencyparentid')."'
+			WHERE `AgencyParentID`='".$cid."';";
+			
+			
+			if($this->db->query($query)){
+				
+				return true;
+			} else return false;
+			
+			
+	    }
 	    
 		
 		public function getSadmin() {
