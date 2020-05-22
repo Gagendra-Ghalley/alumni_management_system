@@ -97,7 +97,7 @@
                     <ul class="dropdown-menu dropdown-user">
                       
                         <li class="divider"></li>
-                        <li><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                         <li   class="fa fa-angle-right"><span class="pull-right"><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a></span></li>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->

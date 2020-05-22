@@ -76,7 +76,7 @@
       $(document).ready(function(){  
            $('.delete_data').click(function(){  
                 var id = $(this).attr("id");  
-                if(confirm("Are you sure you want to delete this?"))  
+                if(confirm("Are you sure you want to delete all data?"))  
                 {  
                      window.location="<?php echo base_url()?>index.php/Settings/delete_data3/<?php $row->AgencyID?>/"+id;  
                 }  

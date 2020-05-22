@@ -36,7 +36,7 @@
         
      
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
 
     
  <div class="panel panel-primary">
@@ -62,7 +62,7 @@
 
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-10">
+                                <div class="col-lg-8">
                                     <div class="table-responsive">
                                         <table class="table tablescroll table-bordered table-hover table-striped" >
                                              <tbody id="employees">
