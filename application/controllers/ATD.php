@@ -109,72 +109,6 @@
 			$this->load->view('donate');
 		}
 
-	// public function Forgetpassword(){
-	// 	$this->load->view('Forgetpassword');
-	// }
-
-
-	// public function Resetpassword(){
-	// 	$email = $this->input->post('email');
-	// 	$result=$this->db->query("select * from bpas_user_profiles where email='".$email."'")->result_array();
-
-	
-	// 	if (count($result)>0) {
-	// 		echo("success");
-	// 		$tokan = rand(1000, 9999);
-	// 		$this->db->query("update bpas_logins set password = '".$tokan."'' where email='".$email."'");
-	// 		$message="please click on password reset <br> <a href ='".base_url('reset?tokan=').$tokan."''>Resetpass<a/>";
-	// 		$this->Email($email, 'Reset password Link',$message);
-	// 		// 	
-	// 	}
-	// 	else{
-	// 		echo("not registered");
-	// 		// $this->session->set_flashdata('message',"Email not registered");
-	// 		// $this->load->view('Forgetpassword');
-	// 	}
-	// }
-
-	// public function reset(){
-	// 	echo("reset");
-	// 	$email=$this->input->get('tokan');
-	// 	$_SESSION['tokan']=$data['tokan'];
-	// 	$this->load->view('resetpass');
-	// }
-
-//  public function registration(){//cst_team
-
-	 	
-// 	 	  		$cid=$this->input->post('relatedUserId'); 
-	 	  		
-  		
-	 		
-// 	 			$d2['s']=$this->sm->register($cid);
-// 	 			$d=implode(" ", $d2);
-				
-		
-// 				$dat['status1']='approved';
-// 			$this->db->where('relatedUserId', $d);
-//   			$this->db->update('bpas_logins',$dat);
-
-//   			if($dat=='approved'){
-
-//   			$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully registered</span> <br /><br /><br />
-// 			 	<a href="'.base_url().'index.php/Settings/view_ods_dashboard/"> <button type="button" class="btn btn-warning">
-// 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
-// 		              </button>
-// 		            </a>';
-		        
-// $this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
-// 		        }
-// 		        else{
-
-// echo "<script> alert('Your CID did not match with database')</script>";
-
-// 	$this->register();
-
-// 		        }
-
-	
 
 			
 
@@ -1039,23 +973,7 @@ public	function viewmember2(){//leki
 
 }
 	
-	public function lateToday(){
-		
-		if($this->session->userdata('logged_in')=='1'){
-		$data['late']=$this->atd->lateOfficials();
-		$header['messages'] = $this->mm->getMessages();
-		$header['unreadm']=$this->mm->getCountMessages();
-		// $this->load->view('superadmin/header');
-		// $this->load->view('superadmin/navheader',$header);
-		// $this->load->view('superadmin/navsidebar');
-		$dataheader['header']=$header;
-		$this->load->view('template/includeheader',$dataheader);
-		$this->load->view('lateofficials',$data);
-		$this->load->view('template/includefooter',$dataheader);
-		
-		} else $this->login();
-		
-	}
+	
 	
 	
 	
