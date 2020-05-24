@@ -96,7 +96,7 @@
            ?>  
             <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Select Department</label>  
-                <select class="chosen-select form-control" id="place"  name="item" data-placeholder="Choose Item" class="col-xs-10 col-sm-5" required>
+                <select style="width:400px;" class="chosen-select form-control" id="place"  name="item" data-placeholder="Choose Item" class="col-xs-10 col-sm-5" required>
               <option value="">Select Department</option>
              <?php foreach($request as $key):?>
             <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
@@ -109,17 +109,17 @@
 
            <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Year of Graduation</label>  
-                <input type="text" id="amount" class="form-control"  name="quantity" placeholder="Year of Graduation" > 
+                <input style="width:400px;" type="text" id="amount" class="form-control"  name="quantity" placeholder="Year of Graduation" > 
                 <span class="text-danger"><?php echo form_error("Department"); ?></span>  
            </div>
 
            <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter ID (Year of Graduation)</label>  
-                <input type="text" id="amount" class="form-control"  name="quantity1" placeholder="Year of Graduation" > 
+                <input  style="width:400px;" type="text" id="amount" class="form-control"  name="quantity1" placeholder="Year of Graduation" > 
                 <span class="text-danger"><?php echo form_error("Department"); ?></span>  
            </div>
            <div class="form-group">  
-                <input type="submit" name="insert" value="Insert" class="btn btn-info" />  
+                <input  type="submit" name="insert" value="Insert" class="btn btn-info" />  
            </div>
                  
            <?php  

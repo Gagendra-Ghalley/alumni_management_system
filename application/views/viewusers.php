@@ -3,13 +3,9 @@
         <div id="page-wrapper">
 
             <div class="row">
-                <!-- Page Header -->
-                <!-- <div class="col-lg-12">
-                    <h1 class="page-header">View users</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
-                </div> -->
-                <!--End Page Header -->
+             
             </div>
-
+            <br><br><br>
             <div class="row">
                 <!-- Welcome -->
                 <div class="col-lg-12">
@@ -42,7 +38,7 @@
  <div class="panel panel-primary">
                         <div class="panel-heading">
                             
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Users
+                            <i class="fa fa-bar-chart-o fa-fw"></i>
                            
                             <div class="pull-right">
                                 
@@ -74,7 +70,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                  <th style="width:150px">Name</th>
+                                                  <th style="width:300px">Name</th>
                                             
                                             <th style="width:150px">CID</th>
                                         

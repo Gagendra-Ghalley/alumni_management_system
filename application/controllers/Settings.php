@@ -109,6 +109,7 @@ public function viewUsers2() {
 
 		            $this->db->where ('relatedUserId', $cid );
   					$this->db->update('bpas_logins',$dat);
+  					$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
 
         }
         else{
@@ -116,10 +117,12 @@ public function viewUsers2() {
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
+
+		            $this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
         }
-        $this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
+        
 		
-        // $this->db->update('w_request', $data);
+   
         
 	 }
 
@@ -147,7 +150,9 @@ public function viewUsers2() {
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
-		        
+		        $this->load->view('template/includeheader',$this->dataheader);
+		
+			$this->load->view('template/includefooter');
 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
 		       
 					}
@@ -176,7 +181,9 @@ public function event_cancel($param1=""){
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
-		        
+		    $this->load->view('template/includeheader',$this->dataheader);
+		
+			$this->load->view('template/includefooter');
 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
 		       
 					}
@@ -333,7 +340,7 @@ function addDak($param="")
 }
 
 	
-	public function search() {//nima
+	public function search() {//Tamang(using CID and to delete blank data )
 		
 		
 			//$this->pagination->initialize($config);
@@ -344,7 +351,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name<i class='fa fa-edit'></i></td>";
 		
 		echo "<td>$row->cid</td>";
 		// echo "<td>$row->Agency</td>";
@@ -374,7 +381,7 @@ function addDak($param="")
 
 	
 	
-	public function getAgencyEmployees() {
+	public function getAgencyEmployees() {//Tamang(Managing user )
 		
 		
 		$this->load->library('pagination');
@@ -395,7 +402,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</a><i class='fa fa-edit'></i></td>";
 		// echo "<td>$row->EmpNo</td>";
 		echo "<td>$row->cid</td>";
 		// echo "<td>$row->Agency</td>";
@@ -408,6 +415,11 @@ function addDak($param="")
 		echo "<td>$row->Agency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
 	     ;
+
+
+
+
+
 	     if($counter==1){
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</a></td>"
 	     ;
@@ -446,7 +458,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee3/$row->AgencyID/'>$row->AgencyID</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee3/$row->AgencyID/'>$row->AgencyID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->Agency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee2/$row->AgencyID/'>Delete</a></td>"
 	     ;
@@ -486,7 +498,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee5/$row->AgencyParentID'>$row->AgencyParentID</a></td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee5/$row->AgencyParentID'>$row->AgencyParentID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->ParentAgency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->AgencyParentID/'>Delete</a></td>"
 	     ;
@@ -1373,11 +1385,9 @@ public function membersearch2(){//Tamang
            //echo 'OK';  
            // $this->load->library('form_validation');  
     	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
-           $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
+           $this->form_validation->set_rules("FirstName", "FirstName", 'required'); 
            $this->form_validation->set_rules("gender", "gender", 'required|alpha');
-           // $this->form_validation->set_rules("MiddleName", "MiddleName", 'required|alpha'); 
-           // $this->form_validation->set_rules("LastName", "LastName", 'required');
-           
+          
            $this->form_validation->set_rules("parent", "parent", 'required|numeric');
            $this->form_validation->set_rules("agency", "agency", 
 
@@ -1390,9 +1400,7 @@ public function membersearch2(){//Tamang
                 $data = array(  
                 	"cid"     =>$this->input->post("cid"),
                      "FirstName"     =>$this->input->post("FirstName"),  
-                     // "MiddleName"          =>$this->input->post("MiddleName"),
-                     // "LastName"     =>$this->input->post("LastName"),  
-                       "gender"     =>$this->input->post("gender"),
+                                           "gender"     =>$this->input->post("gender"),
                      "AgencyParentID"     =>$this->input->post("parent"),
                      "AgencyID"     =>$this->input->post("agency")  
                          

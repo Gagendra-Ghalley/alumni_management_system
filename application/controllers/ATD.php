@@ -219,12 +219,12 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
   			
 
   			$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully registered</span> <br /><br /><br />
-			 	<a href="'.base_url().'index.php/Settings/view_ods_dashboard/"> <button type="button" class="btn btn-warning">
-		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
+			 	<a href="'.base_url().'index.php/ATD/login1/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
 		              </button>
 		            </a>';
 		        
-			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
+			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data1);
 		       
 					}
 
