@@ -124,36 +124,21 @@ public function viewUsers2() {
 	 }
 
 
-	 public function event_validate(){
+	 public function event_validate($param1=""){//leki
 
-$this->form_validation->set_rules('cid','CID','required|trim|callback_validate_credentials2');
-		
-		
-				
-		if($this->form_validation->run()){
-		
-			$cid=$this->input->post('cid');
-			
-				$data = array (
-				'cid' => $cid,
-				
-				
-				
-			);
-			
-			$this->session->set_userdata($data);
-			
-			$cid=$this->input->post('cid'); 
-	 	  		
-  		
+
+
+	  		
+  		// $eventid=$this->input->post('event_id');
+  		$num1=$this->input->post('cid'); //leki
+  	
 	 		
-	 			// $d2['s']=$this->sm->register($cid);
+	 			 $d2['event1']=$this->sm->eventjoin($param1,$num1);
 	 			// $d=implode(" ", $d2);
 				
 		
-				$dat['event']='Y';
-			$this->db->where('relatedUserId', $cid);
-  			$this->db->update('bpas_logins',$dat);
+			$this->db->where('event_id', $param1);//leki
+  			$this->db->update('event_table',$d2);
 
   			
 
@@ -168,20 +153,36 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 					}
 
 		
-		else {
-			
-		 	
-  			$data1['message']='<br /><br /><br /><span class="alert alert-info">You cannot do it twice</span> <br /><br /><br />
+		
+
+
+public function event_cancel($param1=""){
+
+// $eventid=$this->input->post('event_id');
+  		$num1=$this->input->post('cid'); //leki
+  	
+	 		
+	 			 $d2['event1']=$this->sm->eventcancel($param1,$num1);
+	 			// $d=implode(" ", $d2);
+				
+		
+			$this->db->where('event_id', $param1);//leki
+  			$this->db->update('event_table',$d2);
+
+  			
+
+  			$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully cancelled the event</span> <br /><br /><br />
 			 	<a href="'.base_url().'index.php/Settings/dashboard/"> <button type="button" class="btn btn-warning">
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
 		        
 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
-		 }
+		       
+					}
 
 
-}
+
 
 public function validate_credentials2(){
 		
@@ -844,10 +845,11 @@ public function editFullEmployee5($cid){//Tamang (view for editing the departmen
  	}
 
  	public function dashboard(){
- 		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+ 		//$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
  		$cid=$this->session->userdata('cid');
 		$data['user']=$this->sm->getprofilei($cid);
 		$data['eventdetail']=$this->db->get('event_table')->result_array();
+		$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('division/dashboard',$data);
 		$this->load->view('template/includefooter');

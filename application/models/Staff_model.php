@@ -261,6 +261,45 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 
 }
 
+
+
+
+public function eventjoin($eventid="",$param2=""){//leki
+	
+
+	$query= $this->db->query("SELECT event1 FROM event_table where event_id='".$eventid."'")->row()->event1; 
+	// $query2= $this->db->query("UPDATE  event_table SET event_id='".$query."'+1 ")->row()->event1;
+	
+	if(isset($eventid,$param2)){
+		
+		$new=$query + $param2;
+	
+}
+	return $new;
+	
+
+}
+
+public function eventcancel($eventid="",$param2=""){//leki
+	
+
+	$query= $this->db->query("SELECT event1 FROM event_table where event_id='".$eventid."'")->row()->event1; 
+	// $query2= $this->db->query("UPDATE  event_table SET event_id='".$query."'+1 ")->row()->event1;
+	
+	if(isset($eventid,$param2)){
+		
+		$new=$query - $param2;
+	
+}
+	return $new;
+	
+
+}
+
+
+
+
+
 	public function sessionInitiate() {
 		
 		

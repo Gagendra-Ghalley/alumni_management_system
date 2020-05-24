@@ -51,7 +51,7 @@
                   
                 </div>
             </div>
-            <div class="col-md-2 col-sm-6 " >
+          <!--   <div class="col-md-2 col-sm-6 " >
                 
 
                     <div class="" >
@@ -84,7 +84,7 @@
                               
             </div>
         </div>
-
+ -->
 
         
  <div class="container">
@@ -94,6 +94,7 @@
 
      <br>
                         <?php foreach($eventdetail as $row): ?>
+
 
 <div class="du-current-news center bg-secondary"> 
     <div class="container img-thumbnail">
@@ -118,6 +119,37 @@
                           
               
                        
+  <div class="col-md-6 col-sm-6 " >
+                
+
+                    <div class="" >
+                               
+
+                   <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate/<?php echo $row['event_id'];?>"   class="form-group">
+                <input type="hidden" name="cid" value=1>
+                <input type="submit" value="Join Now" style="height:40px;font-size:15px;width: 100px" class="btn btn-primary text-left" data-animation="animated zoomInUp">
+                </form> 
+
+                <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_cancel/<?php echo $row['event_id'];?>"   class="form-group">
+                <input type="hidden" name="cid" value=1>
+                <input type="submit" value="Cancel" style="height:40px;font-size:15px;width: 100px" class="btn btn-primary text-left" data-animation="animated zoomInUp">
+                </form> 
+                
+
+                      
+                   
+
+                        
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black">
+                                          <?php echo $row['event1'];?>
+                                       
+                                       <b>Member(s) <br> Interested</b></font></p>
+                                          </button><br>
+
+                              
+            </div>
+        </div>
 
 
 

@@ -572,7 +572,8 @@ public	function viewmember2(){//leki
 				$this->load->view('template/includefooter');
 				
 			}  elseif($role=='4'||$role=='9'){//Division Heads
-				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+				// $data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+				 $data['request2']=$this->db->query("SELECT * from event_table")->result_array();
 				$data['eventdetail']=$this->sm->getevent();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);
