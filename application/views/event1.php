@@ -83,13 +83,14 @@
 	
 <div class="du-current-news center bg-secondary">
     <div class="container img-thumbnail">
-        <div class="row padding">
+      <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+        <!-- <div class="row padding">
             <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
                     <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 200px;width: 500px" ></span>
                 </div>
-            </div>
-            <div class="col-md-4 col-md-12 col-sm-12" >
+            </div> -->
+            <!-- <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title text-left bold">UP COMMING EVENT</div><br>
@@ -106,8 +107,8 @@
                     </div>
                   
                 </div>
-            </div>
-            <div class="col-lg-2 col-md-12 col-sm-12 " >
+            </div> -->
+            <!-- <div class="col-lg-2 col-md-12 col-sm-12 " >
                 
                     
                             <table>
@@ -142,7 +143,7 @@
 
                                 </button>       
                
-            </div>
+            </div> -->
            <div class="col-md-10 col-sm-12">
       
 
@@ -170,20 +171,34 @@
                           <h3><?php echo $row['eventname'];?><br></h3>
                           <?php echo $row['event'];?><br>
                           
-              
-                          <form method ="post"></form>
-                         <!--  <button class="btn btn-link text-primary btn-lg" style="margin-left:900px"><b><a href="#">Update </a></b></button> -->
-                <div class="col-md-6">          
-                 <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
-                    <button  class="btn btn-link text-primary btn-lg" name="edit" id="edit" type="submit"  value="fav_CSS"  >Edit</button></a> </br> <br>
-                  </div>
-                       <div class="col-md-6">  
+              <div class="col-md-7 col-sm-5 " >
+                
 
-                    <a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>"> 
-                    
+                    <div class="" >
+                               
 
-            <button  class="btn btn-link text-primary btn-lg text-right" name="delete"   type="submit" value="fav_CSS"  >Delete</button></a>
+                    <button style="height:60px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+
+                                </button> 
+                      
+                   
+
+                        
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black">
+                                          <?php echo $row['event1'];?>
+                                       
+                                       <b>Member(s) <br> Interested</b></font></p>
+                                          </button><br>
+
+                              
             </div>
+        </div>
+
+
+
 
 
 

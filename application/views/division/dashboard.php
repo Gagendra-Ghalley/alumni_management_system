@@ -24,8 +24,11 @@
                 </div>
                 <!--end  Welcome -->
             </div>
-            
-<div class="du-subpage-content">
+
+
+             <div class="card-title text-left bold">UP COMING EVENT</div><br>
+          
+<!-- <div class="du-subpage-content">
     <div class="container img-thumbnail">
         <div class="row padding">
             <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
@@ -50,7 +53,7 @@
                     </div>
                   
                 </div>
-            </div>
+            </div> -->
           <!--   <div class="col-md-2 col-sm-6 " >
                 
 
