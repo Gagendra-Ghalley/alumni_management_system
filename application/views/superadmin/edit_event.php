@@ -25,7 +25,9 @@
                 <!--end  Welcome -->
             </div>
             
-<div class="du-subpage-content">
+             <div class="card-title text-left bold">UP COMING EVENT</div><br>
+            
+<!-- <div class="du-subpage-content">
     <div class="container img-thumbnail">
         <div class="row padding">
             <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
@@ -55,7 +57,7 @@
                 
 
                     <div class="" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
+                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left"> -->
                              <!--     <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
                 <input type="text" name="cid">
                  <input type="submit" value="Join Us" class="btn-default du-common-property">
@@ -92,7 +94,7 @@
 
                    
 
-                            <table>
+                           <!--  <table> -->
                             <!--  <tbody>
                                                <?php $count1=0; foreach($request1 as $row):?>
                                                
@@ -102,13 +104,13 @@
                                                
                                                 <?php endforeach;?>
                                             </tbody> -->
-                                        </table> 
+                                        <!-- </table> 
                                    <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
                                         <p><font color="black"><?php
                                         // $a="+";
                                         echo ($count1);
                                         echo (" Members <br> Interested");?></font></p>
-                                          </button><br><br>
+                                          </button><br><br> -->
 
 
                                <!--  <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
@@ -118,10 +120,10 @@
                                 </button>       
                 -->
 
-            </div>
-        </div>
+          <!--   </div> -->
+       <!--  </div>
  
-               
+                -->
            
   <div class="col-md-10 col-sm-12">
       
@@ -166,6 +168,12 @@
 
 
 
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black">
+                                          <?php echo $row['event1'];?>
+                                       
+                                       <b>Member(s) <br> Interested</b></font></p>
+                                          </button><br>
 
 
 
