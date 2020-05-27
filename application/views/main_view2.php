@@ -32,7 +32,7 @@
             
   
       <br /><br /><br />  
-      <h2>Insert New Department</h2><br />  
+      <h2>Insert New Year of Gradution / Faculty </h2><br />  
       <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation3">  
            <?php  
            if($this->uri->segment(2) == "inserted2")  
