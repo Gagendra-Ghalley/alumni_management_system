@@ -16,6 +16,12 @@
    
      
 }
+ 
+
+
+ 
+
+  
 
 function load_data()
  {
@@ -43,10 +49,10 @@ function load_data()
           <tr>
            <th>Sl.No</th>
            <th>Name</th>
-           <th>CID</th>
+           <th>CID / Student_id</th>
            <th>Department</th>
             <th>Gender</th>
-            <th>Year of Graduation</th>
+            <th>Year of Graduation / Faculty</th>
            </tr>
    ';
    $count = 1;

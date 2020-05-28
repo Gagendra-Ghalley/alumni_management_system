@@ -72,12 +72,12 @@
                                                     <th>#</th>
                                                   <th style="width:300px">Name</th>
                                             
-                                            <th style="width:150px">CID</th>
+                                            <th style="width:150px">CID / Student_id</th>
                                         
                                 
                                 <th style="width:150px">Department</th>
                                 <th style="width:150px">Gender</th>
-                                <th style="width:160px">Year of Graduation</th>
+                                <th style="width:160px">Year of Graduation / Faculty</th>
                                 <th style="width:160px">Delete</th>
                                 <th style="width:160px">Deleteall</th>
                                                 </tr>

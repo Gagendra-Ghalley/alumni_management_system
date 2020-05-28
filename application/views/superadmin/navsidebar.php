@@ -51,11 +51,15 @@
                     <li>
                         <a href="<?php echo base_url()?>index.php/ATD/dashboard/"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
-                    <li>
+                     <li>
+                        <a href="<?php echo base_url()?>index.php/sendemail"><i class="fa  fa-envelope-o"></i>&nbsp;Send Email</a>
+                    </li>
+
+                   <!--  <li>
                         <a href="<?php echo base_url()?>index.php/Leave/admin_profile/"><i class="glyphicon glyphicon-user"></i>&nbspProfile</a>
                         
                       
-                    </li>
+                    </li> -->
                    <!--  <li>
                         <a href="#"><i class="fa fa-edit fa-fw"></i> Leave<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

@@ -1422,15 +1422,16 @@ public function membersearch2(){//Tamang
            else  
            {  
                 //false  
-                $this->membersearch3();  
+                $this->membersearch3();
+
            }  
       }  
-public function form_validation2()  
-    {  //Tamang
+public function form_validation2() //Tamang (adding new department and department_id)  
+    {  
            //echo 'OK';  
            // $this->load->library('form_validation');  
     	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
-           $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
+           $this->form_validation->set_rules("FirstName", "FirstName", 'required'); 
            
             
            if($this->form_validation->run())  
