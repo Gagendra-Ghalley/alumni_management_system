@@ -72,8 +72,10 @@
 	}
 
 	public function event1(){
-		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
-		$data['editdetail']=$this->db->query("SELECT * from event_table")->result_array();
+		//$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+		//$data['editdetail']=$this->db->query("SELECT * from event_table")->result_array();
+		$data['editdetail']=$this->sm->getevent();
+		$data['eventdetail']=$this->sm->sortevent();
 			$this->load->view('event1',$data);
 		
 	}
@@ -507,7 +509,8 @@ public	function viewmember2(){//leki
 				
 			}  elseif($role=='4'||$role=='9'){//Division Heads
 				// $data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
-				 $data['request2']=$this->db->query("SELECT * from event_table")->result_array();
+				 //$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
+				$data['editdetail']=$this->sm->sortevent();
 				$data['eventdetail']=$this->sm->getevent();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);
@@ -518,7 +521,7 @@ public	function viewmember2(){//leki
 				$data['reports']=$this->atd->dailyAttendance();
 				$data['supervisor']=$this->sm->getSupervisor();
 				$data['pendingLeave']=$this->lm->pendingCount();
-				$data['eventdetail']=$this->db->get('event_table')->result_array();
+				//$data['eventdetail']=$this->db->get('event_table')->result_array();
 				// $data['date1']=$this->db->get('event_table')->result_array();
 				// $data['eventname']=$this->db->get('event_table')->result_array();
   	

@@ -84,30 +84,55 @@
 <div class="du-current-news center bg-secondary">
     <div class="container img-thumbnail">
       <div class="card-title text-left bold">UP COMMING EVENT</div><br>
-        <!-- <div class="row padding">
+       <?php foreach($eventdetail as $row): ?>
+        <div class="row padding">
             <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
-                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 200px;width: 500px" ></span>
+                 
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
                 </div>
-            </div> -->
-            <!-- <div class="col-md-4 col-md-12 col-sm-12" >
+            </div>
+            <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">
-                    <div class="card-body">
-                        <div class="card-title text-left bold">UP COMMING EVENT</div><br>
-                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
-                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
-                        <div>
-                            
-                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
-                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp &nbsp &nbsp   hours &nbsp &nbsp &nbsp Minutes &nbsp &nbsp Second</p>
-
-                               
-                        </div>
-                       
-                    </div>
+                     <p class="text-primary"><b>Description</b></p>
+                 
+               
+<table>
+                
+                          <b><?php echo $row['date'];?></b>
+                          <br>
+                          <h3><?php echo $row['eventname'];?><br></h3>
+                          <tr><?php echo $row['event'];?><br></tr></table>
+                         
                   
                 </div>
-            </div> -->
+            </div>
+            <div class="col-md-7 col-sm-3 " >
+                
+
+                    <div class="" >
+                               
+
+                    <button style="height:60px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+
+                                </button> 
+                      
+                   
+
+                        
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black">
+                                          <?php echo $row['event1'];?>
+                                       
+                                       <b>Member(s) <br> Interested</b></font></p>
+                                          </button><br>
+
+                              
+            </div>
+        </div><?php endforeach; ?>
+
             <!-- <div class="col-lg-2 col-md-12 col-sm-12 " >
                 
                     
@@ -144,6 +169,7 @@
                                 </button>       
                
             </div> -->
+
            <div class="col-md-10 col-sm-12">
       
 
@@ -160,18 +186,19 @@
 <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
 
                   
-
-                    <p class="text-primary"><b>Description</b></p>
-                </div> 
-                <br>
-
+</div>
+                  <p class="text-primary"><b>Description</b></p>
+                 
+               
+<table>
                 
-                         <b><?php echo $row['date'];?></b>
+                          <b><?php echo $row['date'];?></b>
                           <br>
                           <h3><?php echo $row['eventname'];?><br></h3>
-                          <?php echo $row['event'];?><br>
+                          <tr><?php echo $row['event'];?><br></tr></table>
+                         
                           
-              <div class="col-md-7 col-sm-5 " >
+              <div class="col-md-7 col-sm-3 " >
                 
 
                     <div class="" >
@@ -216,6 +243,7 @@
                           
               </div>
           </div>
+
           
     </div>   
 
