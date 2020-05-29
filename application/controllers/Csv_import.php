@@ -16,9 +16,18 @@
    
      
 }
+ 
 
- function load_data()
+
+ 
+
+  
+
+function load_data()
  {
+
+  
+
   $result = $this->csv_import_model->select();
   $output = '
    <h3 align="center">Student Details</h3>
@@ -40,10 +49,10 @@
           <tr>
            <th>Sl.No</th>
            <th>Name</th>
-           <th>CID</th>
+           <th>CID / Student_id</th>
            <th>Department</th>
-            <th>Email</th>
-            <th>Year of Graduation</th>
+            <th>Gender</th>
+            <th>Year of Graduation / Faculty</th>
            </tr>
    ';
    $count = 1;
@@ -58,7 +67,7 @@
       <td>'.$row->name.'</td>
         <td>'.$row->cid.'</td>
      <td>'.$row->ParentAgency.'</td>
-    <td>'.$row->Email.'</td>
+    <td>'.$row->gender.'</td>
     <td>'.$row->Agency.'</td>
 
      
@@ -69,26 +78,33 @@
      $count++;
     }
    }
+
+
    else
    {
-   $output .= '
+    echo 'Error1';  
+    $output .= '
    <tr>
        <td colspan="5" align="center">Data not Available</td>
       </tr>
    ';
   }
   $output .= '</table></div></div></div></div></div>';
+  
   echo $output;
+
  }
 
   function import()
   {
+
+
    $file_data = $this->csvimport->get_array($_FILES["csv_file"]["tmp_name"]);
    foreach($file_data as $row)
    {
     $data[] = array(
-     'FirstName' => $row["First Name"],
-           'LastName'  => $row["Last Name"],
+     'FirstName' => $row["Name"],
+           'gender'  => $row["Gender1"],
            'cid'   => $row["cid"],
            'AgencyMainParentID'   => $row["AgencyMainParentID"],
            'AgencyParentID'   => $row["AgencyParentID"],
@@ -97,12 +113,15 @@
    $data1[] = array(
     
            'relatedUserId'   => $row["cid"],
+           'AgencyParentID'   => $row["AgencyParentID"],
+           'AgencyID'   => $row["AgencyID"],
            'password'   => md5($row["cid"])
             );
           
    }
-   $this->csv_import_model->insert($data,$data1);
 
+   $this->csv_import_model->insert($data,$data1);
+   
  }
 
   

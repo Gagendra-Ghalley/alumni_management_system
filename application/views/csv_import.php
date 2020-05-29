@@ -5,8 +5,6 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
- 
     
 </head>
 <body>
@@ -14,7 +12,7 @@
    <div id="page-wrapper">
 
             <div class="row profile">
- 
+ <div class="container">
   <h3 align="center">Importing Student's data using CSV</h3>
   <br />
 
@@ -28,7 +26,7 @@
   </form>
   <br />
   <div id="imported_csv_data"></div>
-
+ </div>
 
 </div>
 </div>
@@ -70,6 +68,18 @@ $(document).ready(function(){
     $('#import_csv_btn').attr('disabled', false);
     $('#import_csv_btn').html('Import Done');
     load_data();
+   },
+   error:function(data){
+
+     if(confirm("Error! The csv file is empty"))  
+                {  
+                     window.location="<?php echo base_url()?>index.php/Settings/membersearch1?>/";  
+                }  
+                else  
+                {  
+                     window.location="<?php echo base_url()?>index.php/Settings/membersearch1?>/";   
+                } 
+    
    }
   })
  });

@@ -109,6 +109,7 @@ public function viewUsers2() {
 
 		            $this->db->where ('relatedUserId', $cid );
   					$this->db->update('bpas_logins',$dat);
+  					$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
 
         }
         else{
@@ -116,44 +117,31 @@ public function viewUsers2() {
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
+
+		            $this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
         }
-        $this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
+        
 		
-        // $this->db->update('w_request', $data);
+   
         
 	 }
 
 
-	 public function event_validate(){
+	 public function event_validate($param1=""){//leki
 
-$this->form_validation->set_rules('cid','CID','required|trim|callback_validate_credentials2');
-		
-		
-				
-		if($this->form_validation->run()){
-		
-			$cid=$this->input->post('cid');
-			
-				$data = array (
-				'cid' => $cid,
-				
-				
-				
-			);
-			
-			$this->session->set_userdata($data);
-			
-			$cid=$this->input->post('cid'); 
-	 	  		
-  		
+
+
+	  		
+  		// $eventid=$this->input->post('event_id');
+  		$num1=$this->input->post('cid'); //leki
+  	
 	 		
-	 			// $d2['s']=$this->sm->register($cid);
+	 			 $d2['event1']=$this->sm->eventjoin($param1,$num1);
 	 			// $d=implode(" ", $d2);
 				
 		
-				$dat['event']='Y';
-			$this->db->where('relatedUserId', $cid);
-  			$this->db->update('bpas_logins',$dat);
+			$this->db->where('event_id', $param1);//leki
+  			$this->db->update('event_table',$d2);
 
   			
 
@@ -162,26 +150,46 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
-		        
+		        $this->load->view('template/includeheader',$this->dataheader);
+		
+			$this->load->view('template/includefooter');
 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
 		       
 					}
 
 		
-		else {
-			
-		 	
-  			$data1['message']='<br /><br /><br /><span class="alert alert-info">You cannot do it twice</span> <br /><br /><br />
+		
+
+
+public function event_cancel($param1=""){
+
+// $eventid=$this->input->post('event_id');
+  		$num1=$this->input->post('cid'); //leki
+  	
+	 		
+	 			 $d2['event1']=$this->sm->eventcancel($param1,$num1);
+	 			// $d=implode(" ", $d2);
+				
+		
+			$this->db->where('event_id', $param1);//leki
+  			$this->db->update('event_table',$d2);
+
+  			
+
+  			$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully cancelled the event</span> <br /><br /><br />
 			 	<a href="'.base_url().'index.php/Settings/dashboard/"> <button type="button" class="btn btn-warning">
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
-		        
+		    $this->load->view('template/includeheader',$this->dataheader);
+		
+			$this->load->view('template/includefooter');
 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
-		 }
+		       
+					}
 
 
-}
+
 
 public function validate_credentials2(){
 		
@@ -332,7 +340,7 @@ function addDak($param="")
 }
 
 	
-	public function search() {//nima
+	public function search() {//Tamang(using CID and to delete blank data )
 		
 		
 			//$this->pagination->initialize($config);
@@ -343,7 +351,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name<i class='fa fa-edit'></i></td>";
 		
 		echo "<td>$row->cid</td>";
 		// echo "<td>$row->Agency</td>";
@@ -352,20 +360,28 @@ function addDak($param="")
 		// echo "<td>$row->PositionTitle</td>";
 		// echo "<td>$row->Grade</td>";
 		// echo "<td>$row->Gender</td>";
-		echo "<td>$row->Email</td>";
+		echo "<td>$row->gender</td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
+	     echo" <td>Delete</td>"
 	     ;
+		 
+		if($counter==1 ){
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</button></a>"
+	     ;
+		}
+		
 		echo "</tr>";
 		$counter++;
 		
 		}
+
+		
 		
 	}
 
 	
 	
-	public function getAgencyEmployees() {
+	public function getAgencyEmployees() {//Tamang(Managing user )
 		
 		
 		$this->load->library('pagination');
@@ -380,12 +396,13 @@ function addDak($param="")
 		$config['total_rows'] = $num_rows;
 		$config['per_page'] = 10;
 		echo $this->pagination->create_links();
+
 		$counter=1;
 		foreach($query->result() as $row){
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</a><i class='fa fa-edit'></i></td>";
 		// echo "<td>$row->EmpNo</td>";
 		echo "<td>$row->cid</td>";
 		// echo "<td>$row->Agency</td>";
@@ -394,12 +411,19 @@ function addDak($param="")
 		// echo "<td>$row->PositionTitle</td>";
 		// echo "<td>$row->Grade</td>";
 		// echo "<td>$row->Gender</td>";
-		echo "<td>$row->Email</td>";
+		echo "<td>$row->gender</td>";
 		echo "<td>$row->Agency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
 	     ;
-	     
-		
+
+
+
+
+
+	     if($counter==1){
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</a></td>"
+	     ;
+		}
 		echo "</tr>";
 		$counter++;
 
@@ -434,7 +458,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee3/$row->AgencyID/'>$row->AgencyID</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee3/$row->AgencyID/'>$row->AgencyID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->Agency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee2/$row->AgencyID/'>Delete</a></td>"
 	     ;
@@ -474,7 +498,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td>$row->AgencyParentID</td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee5/$row->AgencyParentID'>$row->AgencyParentID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->ParentAgency</td>";
 	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->AgencyParentID/'>Delete</a></td>"
 	     ;
@@ -598,13 +622,13 @@ function addDak($param="")
 public function updateEmployee($cid) {
 		
 		$this->form_validation->set_rules('fname','Fname','required|trim');
-		$this->form_validation->set_rules('mname','Mname','trim');
-		$this->form_validation->set_rules('lname','Lname','trim');
+		// $this->form_validation->set_rules('mname','Mname','trim');
+		// $this->form_validation->set_rules('lname','Lname','trim');
 		$this->form_validation->set_rules('roleId','roleId','required|trim');
-		$this->form_validation->set_rules('email','Email','trim');
+		$this->form_validation->set_rules('gender','gender','trim');
 		$this->form_validation->set_rules('agencyid','Agency','required|trim');
 		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
-		$this->form_validation->set_rules('agencymainparentid','AgencyMainParent','required|trim');
+		// $this->form_validation->set_rules('agencymainparentid','AgencyMainParent','required|trim');
 		
 		
 		if($this->form_validation->run()){
@@ -630,7 +654,7 @@ public function updateEmployee($cid) {
 	public function updateEmployee1($cid) {
 		
 		
-		$this->form_validation->set_rules('agencyid','Agency','required|trim');
+		// $this->form_validation->set_rules('agencyid','Agency','required|trim');
 		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
 	
 		
@@ -651,6 +675,34 @@ public function updateEmployee($cid) {
 			echo "form error";
 			echo validation_errors();
 			$this->editFullEmployee3($cid);
+		}
+		
+	}
+
+	public function updateEmployee2($cid) {
+		
+		
+		// $this->form_validation->set_rules('agencyid','Agency','required|trim');
+		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
+	
+		
+		
+		if($this->form_validation->run()){
+			$echo="form success";
+		if($this->sm->updateEmployee2($cid)) {
+			
+			$data['statusupdate']="Success";
+			$this->editFullEmployee5($cid);
+			
+			
+		}
+
+			
+			
+		} else {
+			echo "form error";
+			echo validation_errors();
+			$this->editFullEmployee5($cid);
 		}
 		
 	}
@@ -707,7 +759,24 @@ public function updateEmployee($cid) {
 			
 		
 	}
-
+public function editFullEmployee5($cid){//Tamang (view for editing the department)
+			
+		
+					$data['employee']=$this->sm->editFullEmployee5($cid);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee5',$data);
+				    $this->load->view('template/includefooter');
+			
+		
+	}
+	public function editFullEmployee6($AgencyID){//Tamang (view for editing the department)
+			
+		
+					$data['employee']=$this->sm->editFullEmployee6($AgencyID);
+					$this->load->view('template/includeheader',$this->dataheader);
+				    $this->load->view('editfullemployee6',$data);
+				    $this->load->view('template/includefooter');
+	}
 
 	public function assignAgencies() {
 		
@@ -788,10 +857,11 @@ public function updateEmployee($cid) {
  	}
 
  	public function dashboard(){
- 		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+ 		//$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
  		$cid=$this->session->userdata('cid');
 		$data['user']=$this->sm->getprofilei($cid);
-		$data['eventdetail']=$this->db->get('event_table')->result_array();
+		//$data['eventdetail']=$this->db->get('event_table')->result_array();
+		//$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('division/dashboard',$data);
 		$this->load->view('template/includefooter');
@@ -1230,7 +1300,7 @@ public function reciept()
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("csv_import_model");
-		$data = $this->csv_import_model->select();
+		$data['data'] = $this->csv_import_model->select();
 		$this->load->view("csv_import", $data);
 		$this->load->view('template/includefooter');
 		
@@ -1315,10 +1385,9 @@ public function membersearch2(){//Tamang
            //echo 'OK';  
            // $this->load->library('form_validation');  
     	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
-           $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
-           $this->form_validation->set_rules("MiddleName", "MiddleName", 'required|alpha'); 
-           $this->form_validation->set_rules("LastName", "LastName", 'required');
-           
+           $this->form_validation->set_rules("FirstName", "FirstName", 'required'); 
+           $this->form_validation->set_rules("gender", "gender", 'required|alpha');
+          
            $this->form_validation->set_rules("parent", "parent", 'required|numeric');
            $this->form_validation->set_rules("agency", "agency", 
 
@@ -1331,9 +1400,7 @@ public function membersearch2(){//Tamang
                 $data = array(  
                 	"cid"     =>$this->input->post("cid"),
                      "FirstName"     =>$this->input->post("FirstName"),  
-                     "MiddleName"          =>$this->input->post("MiddleName"),
-                     "LastName"     =>$this->input->post("LastName"),  
-                     
+                                           "gender"     =>$this->input->post("gender"),
                      "AgencyParentID"     =>$this->input->post("parent"),
                      "AgencyID"     =>$this->input->post("agency")  
                          
@@ -1341,6 +1408,8 @@ public function membersearch2(){//Tamang
                
                  $data1 = array(  
                 	"relatedUserId"     =>$this->input->post("cid"),
+                	"AgencyParentID"     =>$this->input->post("parent"),
+                     "AgencyID"     =>$this->input->post("agency"),
                     "password"   => md5($this->input->post("cid"))
             );
               
@@ -1353,15 +1422,16 @@ public function membersearch2(){//Tamang
            else  
            {  
                 //false  
-                $this->membersearch3();  
+                $this->membersearch3();
+
            }  
       }  
-public function form_validation2()  
-    {  //Tamang
+public function form_validation2() //Tamang (adding new department and department_id)  
+    {  
            //echo 'OK';  
            // $this->load->library('form_validation');  
     	$this->form_validation->set_rules("cid", "cid", 'required|numeric');
-           $this->form_validation->set_rules("FirstName", "FirstName", 'required|alpha'); 
+           $this->form_validation->set_rules("FirstName", "FirstName", 'required'); 
            
             
            if($this->form_validation->run())  
@@ -1394,8 +1464,8 @@ public function form_validation2()
 	
 
 			$this->form_validation->set_rules("item", "item", 'required|numeric');
-           $this->form_validation->set_rules("quantity", "quantity", 'required|numeric'); 
-           $this->form_validation->set_rules("quantity1", "quantity", 'required|numeric');
+           $this->form_validation->set_rules("quantity", "quantity", 'required'); 
+           $this->form_validation->set_rules("quantity1", "quantity1", 'required|numeric');
             
             
             
@@ -1489,6 +1559,21 @@ public function form_validation2()
       {  //Tamang
       	 
       	redirect(base_url() ."index.php/Settings/viewUsers2");  
+          
+	 }
+
+	  public function delete_data3(){//Tamang(Deleting the year of graduation)  
+           $this->load->view('template/includeheader',$this->dataheader);
+			$id = $this->uri->segment(3); 
+			$this->load->model("main_model");  
+           $this->main_model->delete_data3($id);  
+           redirect(base_url() ."index.php/Settings/deleted3");  
+           $this->load->view('template/includefooter');
+      }  
+      public function deleted3()  
+      {  //Tamang
+      	 
+      	redirect(base_url() ."index.php/Settings/viewUsers");  
           
 	 }
    //    public function update_data(){  
@@ -1651,8 +1736,8 @@ function addevent1($param1=""){//leki
 	 }
  
  public function viewevent(){//leki
- 	//$data['editdetail']=$this->sm->getevent();
- 	$data['editdetail']=$this->db->get('event_table')->result_array();//pulls all from db
+ 	$data['editdetail']=$this->sm->getevent();
+ 	//$data['editdetail']=$this->db->get('event_table')->result_array();//pulls all from db
   		//$data['user']=$this->sm->getprofile($cid);
   		$this->load->view('template/includeheader',$this->dataheader);
   		$this->load->view('superadmin/edit_event',$data);

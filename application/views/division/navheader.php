@@ -72,7 +72,7 @@
                        <!--  <li><a href="<?php echo base_url();?>index.php/Settings/profile/"><i class="fa fa-user fa-fw"></i>User Profile</a>
                         </li> -->
                        <!--  <li class="divider"></li> -->
-                        <li><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        <li   class="fa fa-angle-right"><span class="pull-right"><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a></span>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->

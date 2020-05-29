@@ -51,11 +51,15 @@
                     <li>
                         <a href="<?php echo base_url()?>index.php/ATD/dashboard/"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
-                    <li>
+                     <li>
+                        <a href="<?php echo base_url()?>index.php/sendemail"><i class="fa  fa-envelope-o"></i>&nbsp;Send Email</a>
+                    </li>
+
+                   <!--  <li>
                         <a href="<?php echo base_url()?>index.php/Leave/admin_profile/"><i class="glyphicon glyphicon-user"></i>&nbspProfile</a>
                         
                       
-                    </li>
+                    </li> -->
                    <!--  <li>
                         <a href="#"><i class="fa fa-edit fa-fw"></i> Leave<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -124,7 +128,13 @@
                         <a href="#"><i class="fa fa-file-text"></i>&nbspManage Department<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             
-                             
+                             <li>
+                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers2/"><i class="fa fa-file-text"></i>&nbspManage Department</a>
+                            </li>
+
+                              <li>
+                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers1/"><i class="fa fa-file-text"></i>&nbspManage Year of Graduation</a>
+                            </li>
                                 
                                    <li>
                                     <a href="<?php echo base_url()?>index.php/Settings/membersearch5/"><i class="fa fa-user">&nbsp</i>Add Department</a>
@@ -133,13 +143,7 @@
                                     <a href="<?php echo base_url()?>index.php/Settings/membersearch6/"><i class="fa fa-user">&nbsp</i>Add Year of Graduation</a>
                                 </li>
 
-                                <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers2/"><i class="fa fa-file-text"></i>&nbspDelete Department</a>
-                            </li>
-
-                              <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers1/"><i class="fa fa-file-text"></i>&nbspDelete Year of Graduation</a>
-                            </li>
+                                
 
 
 

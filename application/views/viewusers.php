@@ -1,15 +1,11 @@
-n
+
         <!--  page-wrapper -->
         <div id="page-wrapper">
 
             <div class="row">
-                <!-- Page Header -->
-                <!-- <div class="col-lg-12">
-                    <h1 class="page-header">View users</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
-                </div> -->
-                <!--End Page Header -->
+             
             </div>
-
+            <br><br><br>
             <div class="row">
                 <!-- Welcome -->
                 <div class="col-lg-12">
@@ -18,7 +14,7 @@ n
             <form onSubmit="return false;">
                 <div class="input-group">
                  
-                    <input class="form-control" id="search" placeholder="Search by CID or FirstName">
+                    <input class="form-control" id="search" placeholder="Search by CID ">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button" onclick="mySearchFunction()"><i class="fa fa-search"></i></button>
                     </span>
@@ -42,7 +38,7 @@ n
  <div class="panel panel-primary">
                         <div class="panel-heading">
                             
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Users
+                            <i class="fa fa-bar-chart-o fa-fw"></i>
                            
                             <div class="pull-right">
                                 
@@ -74,16 +70,16 @@ n
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                  <th style="width:150px">Name</th>
+                                                  <th style="width:300px">Name</th>
                                             
-                                            <th style="width:150px">CID</th>
+                                            <th style="width:150px">CID / Student_id</th>
                                         
                                 
                                 <th style="width:150px">Department</th>
-                                <th style="width:150px">Email</th>
-                                <th style="width:160px">Year of Graduation</th>
+                                <th style="width:150px">Gender</th>
+                                <th style="width:160px">Year of Graduation / Faculty</th>
                                 <th style="width:160px">Delete</th>
-                                
+                                <th style="width:160px">Deleteall</th>
                                                 </tr>
                                             </thead>
                                            
@@ -91,6 +87,7 @@ n
 
                                             </tbody>
                                         </table>
+                                        
                                     </div>
 
                                 </div>

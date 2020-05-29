@@ -10,7 +10,7 @@ class Staff_model extends CI_Model {
 		
 	}
 	
-	public function can_log_in($mac){
+	public function can_log_in($mac){//required
 		
 			$default="0000";
 		    $this->db->where('relatedUserId',$this->input->post('cid'));
@@ -73,19 +73,7 @@ public function can_log_in1($mac){
 		    $this->db->where('relatedUserId',$this->input->post('cid'));
 		    $this->db->where('status1','pending');
 		   	$result = $this->db->get('bpas_logins');
-		   	//$this->db->where('status1', $pending);
-
-			// if($result->num_rows()!=1){
-
-			// 	echo "<script> alert('You have not registered')</script>";
-
-			// 	return 6;
-
-			// }
-			//$cid=$this->input->post('cid');
-			//$passwordmd=md5($this->input->post('password'));
-			//$query="SELECT * FROM `bpas_logins` WHERE `relatedUserId` = '".$cid."' AND `password`='".$passwordmd."'";
-			//$result=$this->db->query($query);
+		   	
 			if($result->num_rows()==1){
 				foreach($result->result() as $row){
 					if($row->mac1==$mac || $row->mac2==$mac){
@@ -138,17 +126,7 @@ public function can_log_in1($mac){
 		    $this->db->where('relatedUserId',$this->input->post('cid'));
 		    $this->db->where('event','N');
 			$result=$this->db->get('bpas_logins');
-			// if($result->num_rows()!=1){
-
-			// 	echo "<script> alert('You have not registered')</script>";
-
-			// 	return 6;
-
-			// }
-			//$cid=$this->input->post('cid');
-			//$passwordmd=md5($this->input->post('password'));
-			//$query="SELECT * FROM `bpas_logins` WHERE `relatedUserId` = '".$cid."' AND `password`='".$passwordmd."'";
-			//$result=$this->db->query($query);
+			
 			if($result->num_rows()==1){
 				// foreach($result->result() as $row){
 				// if($row->mac1==$mac || $row->mac2==$mac){
@@ -159,30 +137,7 @@ public function can_log_in1($mac){
 				}
 
 				
-				
-			// 	else if(($row->mac1!=$mac || $row->mac2!=$mac)&&($row->mac1!=$default && $row->mac2!=$default)){
-					
-			// 		return 2;
-					
-					
-			// 	}
-				
-			// 	else if($row->mac1==$default && $row->mac2==$default) {
-					
-			// 		return 3;
-					
-			// 	}
-				
-			// 	else if($row->mac1=$default || $row->mac2==$default) {
-					
-					
-			// 		return 4;
-			// 	}
-				
-			// }
-				
-			// }
-
+			
 			else {
 				
 
@@ -260,6 +215,45 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 		 echo "Successfully deleted";
 
 }
+
+
+
+
+public function eventjoin($eventid="",$param2=""){//leki
+	
+
+	$query= $this->db->query("SELECT event1 FROM event_table where event_id='".$eventid."'")->row()->event1; 
+	// $query2= $this->db->query("UPDATE  event_table SET event_id='".$query."'+1 ")->row()->event1;
+	
+	if(isset($eventid,$param2)){
+		
+		$new=$query + $param2;
+	
+}
+	return $new;
+	
+
+}
+
+public function eventcancel($eventid="",$param2=""){//leki
+	
+
+	$query= $this->db->query("SELECT event1 FROM event_table where event_id='".$eventid."'")->row()->event1; 
+	// $query2= $this->db->query("UPDATE  event_table SET event_id='".$query."'+1 ")->row()->event1;
+	
+	if(isset($eventid,$param2)){
+		
+		$new=$query - $param2;
+	
+}
+	return $new;
+	
+
+}
+
+
+
+
 
 	public function sessionInitiate() {
 		
@@ -345,83 +339,7 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 		
 	}
 	
-	public function weekendSession() {
-								$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
-		p.cid AS CID, 
-		p.AgencyParentID AS ParentID,
-		p.AgencyID AS AgencyID,
-		p.email,
-		p.telephone,
-		p.mobile,
-		p.disp_roleID,
-		a.name AS Agency, 
-		d.name AS ParentAgency, a.div_code, 
-		m.name AS MainParentAgency,  m.minCode, m.AgencyMainParentID,
-		p.roleId,
-		p.disp_roleID,
-		masterposition.Description AS PositionTitle,
-		bl.profile AS pImage
-		FROM bpas_user_profiles p 
-		LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID= p.AgencyMainParentID 
-		LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID 
-		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
-		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
-		LEFT JOIN bpas_logins bl ON bl.relatedUserId = p.cid
-		
-			WHERE p.cid = '".$this->session->userdata('cid')."'";
-
-				$result = $this->db->query($query);
-		
-			foreach ($result->result() as $row) {
-			$name = $row->name;
-			$cid=$row->CID;
-			$ministryId=$row->AgencyMainParentID;
-			$parentID=$row->ParentID;
-			$aid = $row->AgencyID;
-			$divName = $row->Agency;
-			$deptName = $row->ParentAgency;
-			$minName = $row->MainParentAgency;
-			$position = $row->PositionTitle;
-			$role = $row->roleId;
-			$email=$row->email;
-			$telephone =$row->telephone;
-			$mobile = $row->mobile;
-			$status = "Holiday";
-			$pImage = $row->pImage;
-			$disp_roleID=$row->disp_roleID;
-			$mincode=$row->minCode;
-			$dipcode=$row->div_code;
-
-			
-		} 
-		$data = array (
-				
-			'name' => $name,
-			'cid'=>$cid,
-			'mincode'=>$mincode,'dipcode'=>$dipcode,
-			'ministryId'=>$ministryId,
-			'parentID'=>$parentID,
-			'agencyID'=>$aid,			
-			'divName' => $divName,
-			'deptName' => $deptName,
-			'minName' => $minName,
-			'position' => $position,
-			'email'=>$email,
-			'telephone'=>$telephone,
-			'mobile'=>$mobile,
-			'role'=>$role,
-			'status' => $status,
-			'profileImage'=>$pImage,
-			'disp_roleID'=>$disp_roleID
-				);
-				
-				$this->session->set_userdata($data);
-						
-					
-				
-			
-		
-	}
+	
 	
 	
 	public function checkMac($mac){
@@ -515,19 +433,7 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 		
 		
 	}
-	// public function register($param1=""){
-
-		
-	// 	$query=$this->db->query("SELECT relatedUserId from bpas_logins WHERE relatedUserId='".$param1."'")->row()->relatedUserId;
-		
-
-	// 	if($query==$param1){
-
-	// 		return $query;
-	// 	}
-
-	// 	}
-
+	
 		
 		
 	
@@ -631,11 +537,31 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 				
 			
 		}
+
+		public function editFullEmployee5($cid){//Tamang(for editing of department)
+						
+					$query = "SELECT * from bpas_master_agencyparent
+					WHERE bpas_master_agencyparent.AgencyParentID='".$cid."'";
+					$employee=$this->db->query($query);
+					return $employee;
+					
+				
+			
+		}
+
+		public function editFullEmployee6($cid){//Tamang(for deleting group of students according to the year of graduation)
+					
+					$query = "SELECT * from bpas_user_profiles WHERE bpas_user_profiles.AgencyID='".$cid."' ";
+					$employee=$this->db->query($query);
+					return $employee;
+				
+			
+		}
 	     public function updateEmployee($cid) {
 	    	
 			$query = "UPDATE bpas_user_profiles SET `FirstName`='".$this->input->post('fname')."', `MiddleName`='".$this->input->post('mname')."', `LastName`='".$this->input->post('lname')."', `AgencyID`='".$this->input->post('agencyid')."',
 				`roleId`='".$this->input->post('roleId')."',
-				`email`='".$this->input->post('email')."',
+				`gender`='".$this->input->post('gender')."',
 			 `AgencyParentID`='".$this->input->post('agencyparentid')."', `AgencyMainParentID`='".$this->input->post('agencymainparentid')."'
 			 WHERE `cid`='".$cid."';";
 			
@@ -649,8 +575,8 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 	    
 	      public function updateEmployee1($cid) {//Tamang (for updating the year of graduation and year of graduation_id )
 	    	
-			$query = "UPDATE bpas_master_agency SET `AgencyID`='".$this->input->post('agencyid')."', `name`='".$this->input->post('agencyparentid')."'
-			WHERE `AgencyMainParentID`='".$cid."';";
+			$query = "UPDATE bpas_master_agency SET  `name`='".$this->input->post('agencyparentid')."'
+			WHERE `AgencyID`='".$cid."';";
 			
 			
 			if($this->db->query($query)){
@@ -660,7 +586,19 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 			
 			
 	    }
-	    
+	     public function updateEmployee2($cid) {//Tamang (for updating the department )
+	    	
+			$query = "UPDATE bpas_master_agencyparent SET  `name`='".$this->input->post('agencyparentid')."'
+			WHERE `AgencyParentID`='".$cid."';";
+			
+			
+			if($this->db->query($query)){
+				
+				return true;
+			} else return false;
+			
+			
+	    }
 	    
 		
 		public function getSadmin() {
@@ -792,10 +730,16 @@ public function editevent($param1=""){//leki
 public function getevent(){//leki
 		
 		
-		$d = $this->db->query("SELECT * from event_table");
+		$d = $this->db->query("SELECT * from event_table ORDER BY event_id DESC ")->result_array();//have to use result array as we are writing foreach(detail as row)
 			return $d;
 		} 
 
+public function sortevent(){//leki
+		
+		
+		$d = $this->db->query("SELECT * from event_table ORDER BY event_id DESC LIMIT 1")->result_array();//have to use result array as we are writing foreach(detail as row)
+			return $d;
+		} 
 public function updateeventpic($pic,$param1,$data1,$data2,$data3){//leki
 		
 		

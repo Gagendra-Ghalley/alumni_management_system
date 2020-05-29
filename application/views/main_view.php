@@ -100,11 +100,11 @@
                 <span class="text-danger"><?php echo form_error("cid"); ?></span>  
            </div>  
            <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter First Name</label>  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Your Name</label>  
                 <input style="width:400px;" type="text" name="FirstName" class="form-control" />  
                 <span class="text-danger"><?php echo form_error("FirstName"); ?></span>  
            </div>
-           <div class="form-group">  
+          <!--  <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Middle Name</label>  
                 <input style="width:400px;" type="text" name="MiddleName" class="form-control" />  
                 <span class="text-danger"><?php echo form_error("MiddleName"); ?></span>  
@@ -114,6 +114,11 @@
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Last Name</label>  
                 <input style="width:400px;" type="text" name="LastName" class="form-control" />  
                 <span class="text-danger"><?php echo form_error("LastName"); ?></span>  
+           </div> -->
+           <div class="form-group">  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Gender</label>  
+                <input style="width:400px;" placeholder="Male/Female" type="text" name="gender" class="form-control" />  
+                <span class="text-danger"><?php echo form_error("gender"); ?></span>  
            </div>
             <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Select Department</label>  

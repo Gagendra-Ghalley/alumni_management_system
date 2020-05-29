@@ -55,7 +55,7 @@
                      <th >Name</th>  
                      <th >CID</th>  
                      <th >Department</th>
-                     <th >Email</th>
+                     <th >Gender</th>
                      <th >Year of Graduation</th>  
                       
                 </tr>
@@ -74,7 +74,7 @@
                      <td style="width: 150px;"><?php echo $row->name; ?></td> 
                      <td style="width: 150px;"><?php echo $row->cid; ?></td> 
                      <td style="width: 150px;"><?php echo $row->ParentAgency; ?></td>
-                     <td style="width: 150px;"><?php echo $row->Email; ?></td>
+                     <td style="width: 150px;"><?php echo $row->gender; ?></td>
                      <td style="width: 150px;"><?php echo $row->Agency; ?></td> 
                     <!--  <td style="width: 150px;"><?php echo $row->year; ?></td> --> 
                      <!--  <td style="width: 150px;"><?php echo $row->course; ?></td> 
