@@ -29,9 +29,12 @@
 	}
 	
 	public function index(){
+		$data['editdetail']=$this->sm->sortevent();
+				$data['eventdetail']=$this->sm->getevent();
 
 			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
-			$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+			
+		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
        
 			
@@ -40,7 +43,8 @@
 	
 	
 	public function login(){
-
+$data['editdetail']=$this->sm->sortevent();
+				$data['eventdetail']=$this->sm->getevent();
 			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
 			$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
@@ -464,7 +468,7 @@ public	function viewmember2(){//leki
 			if($this->getattendance()==1) {
 				$this->sm->sessionInitiate();
 			} else {
-				$this->sm->weekendSession();
+				$this->sm->endSession();
 
 			}
 			$role = $this->session->userdata('role');

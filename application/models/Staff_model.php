@@ -340,7 +340,83 @@ public function eventcancel($eventid="",$param2=""){//leki
 	}
 	
 	
-	
+	public function endSession() {
+								$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
+		p.cid AS CID, 
+		p.AgencyParentID AS ParentID,
+		p.AgencyID AS AgencyID,
+		p.email,
+		p.telephone,
+		p.mobile,
+		p.disp_roleID,
+		a.name AS Agency, 
+		d.name AS ParentAgency, a.div_code, 
+		m.name AS MainParentAgency,  m.minCode, m.AgencyMainParentID,
+		p.roleId,
+		p.disp_roleID,
+		masterposition.Description AS PositionTitle,
+		bl.profile AS pImage
+		FROM bpas_user_profiles p 
+		LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID= p.AgencyMainParentID 
+		LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID 
+		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
+		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
+		LEFT JOIN bpas_logins bl ON bl.relatedUserId = p.cid
+		
+			WHERE p.cid = '".$this->session->userdata('cid')."'";
+
+				$result = $this->db->query($query);
+		
+			foreach ($result->result() as $row) {
+			$name = $row->name;
+			$cid=$row->CID;
+			$ministryId=$row->AgencyMainParentID;
+			$parentID=$row->ParentID;
+			$aid = $row->AgencyID;
+			$divName = $row->Agency;
+			$deptName = $row->ParentAgency;
+			$minName = $row->MainParentAgency;
+			$position = $row->PositionTitle;
+			$role = $row->roleId;
+			$email=$row->email;
+			$telephone =$row->telephone;
+			$mobile = $row->mobile;
+			$status = "Holiday";
+			$pImage = $row->pImage;
+			$disp_roleID=$row->disp_roleID;
+			$mincode=$row->minCode;
+			$dipcode=$row->div_code;
+
+			
+		} 
+		$data = array (
+				
+			'name' => $name,
+			'cid'=>$cid,
+			'mincode'=>$mincode,'dipcode'=>$dipcode,
+			'ministryId'=>$ministryId,
+			'parentID'=>$parentID,
+			'agencyID'=>$aid,			
+			'divName' => $divName,
+			'deptName' => $deptName,
+			'minName' => $minName,
+			'position' => $position,
+			'email'=>$email,
+			'telephone'=>$telephone,
+			'mobile'=>$mobile,
+			'role'=>$role,
+			'status' => $status,
+			'profileImage'=>$pImage,
+			'disp_roleID'=>$disp_roleID
+				);
+				
+				$this->session->set_userdata($data);
+						
+					
+				
+			
+		
+	}
 	
 	public function checkMac($mac){
 		

@@ -279,93 +279,69 @@
 
     </div>
     <!--Upcoming event-->
-    <div class="du-current-news center ">
+   
+
+<br>
+    
+<div class="du-current-news center bg-secondary">
     <div class="container img-thumbnail">
+      <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+       <?php foreach($eventdetail as $row): ?>
         <div class="row padding">
-            <div class="col-lg-7 col-md-7 col-sm-12"data-wow-delay="0.2s" >
-                
-
-                            <div class="hovereffect">
-                             <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 200px" ></span>
-                                <div class="overlay">
-                                    <h2>Upcoming Event</h2>
-                                    
-                                </div>
-                        </div>
-                    
-                   
-         
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12" >
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
-                    <div class="card-body">
-                        <div class="card-title text-left bold">UP COMING EVENT</div><br>
-                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
-                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
-                        <div>
-                            
-                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
-                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp; &nbsp; &nbsp;   hours &nbsp; &nbsp; &nbsp; Minutes &nbsp; &nbsp; Second</p>
-
-                               
-                        </div>
-                       
-                    </div>
+                 
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-12 col-sm-12" >
+                <div class="card">
+                     <p class="text-primary"><b>Description</b></p>
+                 
+               
+<table>
+                
+                          <b><?php echo $row['date'];?></b>
+                          <br>
+                          <h3><?php echo $row['eventname'];?><br></h3>
+                          <tr><?php echo $row['event'];?><br></tr></table>
+                         
                   
                 </div>
             </div>
-           <div class="col-md-2 col-sm-6 " >
-                <br> <br>
+            <div class="col-md-7 col-sm-3 " >
+                
 
-                    <div  >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left">
-                          
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1"><font color="white" >Join Now</font> </a>
+                    <div class="" >
+                               
 
-                                </button></span>
+                    <button style="height:60px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
 
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
 
-                            <br> <br>
-
+                                </button> 
+                      
                    
 
-                            <table>
-                             <tbody>
-                                               <?php $count1=0; foreach($request1 as $row):?>
-                                               
-                                                <tr>
-                                                  <?php  $count1++;?>
-                                                </tr>
-                                                  
+                        
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black">
 
-                                                   
-                                                  
-                                                    
+                                          
+                                          <?php echo $row['event1'];?>
+                                       
+                                       <b>Member(s) <br> Interested</b></font></p>
+                                          </button><br>
 
-                                                   
-                                                   
-                                               
-                                                <?php endforeach;?>
-                                            </tbody>
-                                        </table> 
-                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
-                                        <p><font color="black"><?php
-                                        
-                                        echo ($count1);
-                                        echo (" Members <br> Interested");?></font></p>
-                                          </button><br><br>
-
-               
+                              
             </div>
-        </div>
-                        <div class="col-md-12">
-                        <button class="btn btn-link text-primary btn-lg"><b><a href="<?php echo base_url();?>index.php/ATD/login1/">Read more</a></b></button>
-                        </div>
-        </div>
+        </div><?php endforeach; ?>
+   
 
         
     </div>
      </div>
+ </div>
      <!--body content-->
     <section class="du-teacher du-section-ash ptb-50 common">
         

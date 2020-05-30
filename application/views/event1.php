@@ -124,6 +124,8 @@
                         
                                    <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
                                         <p><font color="black">
+
+                                          
                                           <?php echo $row['event1'];?>
                                        
                                        <b>Member(s) <br> Interested</b></font></p>

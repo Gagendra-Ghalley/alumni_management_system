@@ -65,7 +65,7 @@ public function index()
 		    $this->email->initialize($config);
 
 		    $this->email->set_newline("\r\n");
-		    $this->email->from('nimawangchuktamang7@gmail.com');
+		    $this->email->from('0215521.cst@rub.edu.bt');
 		    $this->email->to($mails);
 		    // $this->email->to($this->input->post("email"));
 		    $this->email->subject($subject);
