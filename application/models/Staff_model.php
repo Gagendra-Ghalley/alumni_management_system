@@ -833,19 +833,25 @@ public function updateeventpic($pic,$param1,$data1,$data2,$data3){//leki
 		
 	}
 
-public function search1($name,$department){//leki
-	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row()
+// public function search1($name,$department){//leki was working too
+// 	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row()
 					
 				
-			$query= "SELECT CONCAT(FirstName, ' ', MiddleName, ' ',LastName) AS name, 
-		department,email 	
-		FROM bpas_user_profiles  
-		WHERE FirstName ='".$name."' OR department='".$department."' ";
-		$employees = $this->db->query($query);
-		return $employees;
+// 			$query= "SELECT CONCAT(FirstName, ' ', MiddleName, ' ',LastName) AS name, 
+// 		AgencyParentID,email 	
+// 		FROM bpas_user_profiles  
+// 		WHERE FirstName ='".$name."' OR AgencyParentID='".$department."' ";
+// 		$employees = $this->db->query($query);
+// 		return $employees;
+		
+// 	}
+	
+	public function search1($name,$department){//leki
+	$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'");
+					
+		return $issuance;	
 		
 	}
-	
 
 
 

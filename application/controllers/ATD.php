@@ -312,9 +312,9 @@ public function validate_credentials1(){
 	
 	public function membersearch1(){//leki
  	
-		
+		$data['item']=$this->db->get('bpas_master_agencyparent')->result_array();//for selecting department
 		// $this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('membersearch3');
+		$this->load->view('membersearch3',$data);
 		$this->load->view('template/includefooter');
 		
 		
@@ -341,9 +341,9 @@ public	function viewmember2(){//leki
 
  						//OR
 
-  			 	$issuance=$this->sm->search1($name,$department);
+  			 	// $issuance=$this->sm->search1($name,$department);
 
-  	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row();//to see if there is record or not in db
+  	 $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'")->row();//to see if there is record or not in db
   			
 
 
@@ -352,7 +352,7 @@ public	function viewmember2(){//leki
 
 	 	$data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
 		  
-		  $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('department' => $department))->result_array();
+		  $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
 		  
 
 

@@ -102,12 +102,22 @@
                 <td><?php echo $count++;?></td><br>
                 
                <b>Name:</b> <td><?php echo $row['FirstName'];?>
-               <?php echo $row['MiddleName'];?>
-               <?php echo $row['LastName'];?>
+              
                  
                </td><br>
+                <b>Department:</b>
+<td> <?php 
+                                                    $ids=explode(", ", $row['AgencyParentID']);//bpas_user_profiles
+                                                    foreach ($ids as $key => $AgencyParentID) { //id
+                                                      echo $this->db->get_where('bpas_master_agencyparent',array('AgencyParentID' =>trim($AgencyParentID)))->row()->name ;//tablename,id,name
+                                                    }
+                                                    
 
-               <b>Department:</b> <td><?php echo $row['department'];?></td><br>
+                                                   ?>
+                                                    
+                                                   
+                                                   </td> 
+              <br>
                <b>Email:</b> <td><?php echo $row['email'];?></td>
                     <?php endforeach; ?></tr> 
                 </div>
