@@ -1637,10 +1637,11 @@ public function form_validation2() //Tamang (adding new department and departmen
 		  {
 
 	 	 $data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName'=> $name))->result_array();
+
 		  
 		$data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
 		  
-	// $data['checkissue']=$this->sm->search1($name,$department)->result_array();
+
 
 		 $this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('viewmember',$data,$data1);

@@ -77,6 +77,12 @@
                         </ul>
                     
                     </li> -->
+                    <li>
+                       <a href="<?php echo base_url()?>index.php/Settings/Profilepassword/">
+                            
+                      <i class="fa fa-key">&nbsp</i>Change your password </a>
+                    </li>
+                    
                      <li>
                         <a href="<?php echo base_url()?>index.php/Settings/addevents/"><i class="fa  fa-calendar-o"></i>&nbsp;Add Events</a>
                     </li>
