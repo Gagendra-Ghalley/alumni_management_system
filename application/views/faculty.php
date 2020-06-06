@@ -107,7 +107,7 @@
 								
 					
 				
-					<div class="col-md-12 col-sm-12 col-lg-9">
+					<div class="col-md-12 col-sm-12 col-lg-8">
 					<section class="civil-engineering pb-50 wow fadeInRight ">
 						<div class="container">							
 						
