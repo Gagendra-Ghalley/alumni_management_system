@@ -24,8 +24,19 @@
                 <br>
                 <td><?php echo $count++;?></td><br>
                 
-             <b>Name:</b><td><?php echo $row['FirstName'];?> <?php echo $row['MiddleName'];?> <?php echo $row['LastName'];?></td><br>
-             <b>Department:</b><td><?php echo $row['department'];?></td><br>
+             <b>Name:</b><td><?php echo $row['FirstName'];?> <!-- <?php echo $row['MiddleName'];?> <?php echo $row['LastName'];?> --></td><br>
+             <b>Department:</b><td> <?php 
+                                                    $ids=explode(", ", $row['AgencyParentID']);//bpas_user_profiles
+                                                    foreach ($ids as $key => $AgencyParentID) { //id
+                                                      echo $this->db->get_where('bpas_master_agencyparent',array('AgencyParentID' =>trim($AgencyParentID)))->row()->name ;//tablename,id,name
+                                                    }
+                                                    
+
+                                                   ?>
+                                                    
+                                                   
+                                                   </td> 
+              <br>
              <b>Email:</b><td><?php echo $row['email'];?></td><br>
              <b>Occupation:</b><td><?php echo $row['occupation'];?></td><br>
              <b>Organization:</b><td><?php echo $row['organization'];?></td><br>

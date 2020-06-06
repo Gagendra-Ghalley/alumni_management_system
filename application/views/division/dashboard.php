@@ -62,7 +62,11 @@
                                     <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
 
                                 </button> 
-                      
+                       <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_cancel/<?php echo $row['event_id'];?>"   class="form-group">
+                <input type="hidden" name="cid" value=1>
+                <input type="submit" value="Cancel" style="height:40px;font-size:15px;width: 100px" class="btn btn-primary text-left" data-animation="animated zoomInUp">
+                </form> 
+                
                    
 
                         

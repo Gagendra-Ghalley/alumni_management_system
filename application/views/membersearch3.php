@@ -111,8 +111,8 @@
                 <br>
             
 
-                <div class="form-group" style="width: 660px" >
-                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 20px"> Department</label>
+               <div class="form-group" style="width: 660px" >
+                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 17px"> Department</label>
 
                     <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
 
@@ -122,11 +122,15 @@
                             
 
                             <select name="f1" form="f" style="height: 30px; width: 250px">
-                                <option value="" form="f">Select Department</option>
+                                <option value="" form="f">Select Item</option>
+                       <?php foreach($item as $key):?>
+                        <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
+                      <?php endforeach; ?>
+                               <!--  <option value="" >Select Department</option>
                                 <option value="Civil">Civil</option>
                                 <option value="Information Technology">Information Technology</option>
                                 <option value="Electrical">Electrical</option>
-                                <option value="Electronics and Communication">Electronics and Communication</option>
+                                <option value="Electronics and Communication">Electronics and Communication</option> -->
                             </select>
 
                         </div>

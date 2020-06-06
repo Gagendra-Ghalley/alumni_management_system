@@ -61,7 +61,7 @@
                     </li>
                   
                      <li>
-                        <a href="<?php echo base_url()?>index.php/settings/membersearch2/"><i class="fa fa-search">&nbsp</i>Member Search</a>
+                        <a href="<?php echo base_url()?>index.php/settings/membersearch/"><i class="fa fa-search">&nbsp</i>Member Search</a>
                     </li>
                    
                    
