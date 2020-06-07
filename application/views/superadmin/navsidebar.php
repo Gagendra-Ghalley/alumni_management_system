@@ -59,7 +59,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url()?>index.php/Settings/passwordemail/"><i class="fa  fa-envelope-o"></i>&nbsp;Forget password</a>
+                        <a href="<?php echo base_url()?>index.php/Settings/passwordemail/"><i class="fa fa-key"></i>&nbsp;Forget password</a>
                     </li>
 
                    <!--  <li>

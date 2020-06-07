@@ -216,9 +216,15 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 				$da=array('date' => mdate($format));
 		  		;
 
+		  		$email['email']=$this->input->post('email');
+
 		  		
 		  		$this->db->where('relatedUserId', $cid);
 		  		$this->db->update('bpas_logins',$da);
+		  		$this->db->where('relatedUserId', $cid);
+		  		$this->db->update('bpas_logins',$email);
+		  		$this->db->where('cid', $cid);
+		  		$this->db->update('bpas_user_profiles',$email);
 		  		$this->db->where('relatedUserId', $cid);
 				$this->db->update('bpas_logins',$dat);
 
@@ -529,7 +535,8 @@ public	function viewmember2(){//leki
 	public function dashboard() { 
 		
 		
-		if($this->session->userdata('logged_in')=='1'){
+		if($this->session->userdata('logged_in')=='1')
+		{
 			
 			if($this->getattendance()==1) {
 				$this->sm->sessionInitiate();
@@ -578,7 +585,7 @@ public	function viewmember2(){//leki
 				$this->load->view('template/includefooter');
 				
 			}  elseif($role=='4'||$role=='9'){//Division Heads
-				// $data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
 				 //$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
 				$data['editdetail']=$this->sm->sortevent();
 				$data['eventdetail']=$this->sm->getevent();

@@ -52,10 +52,10 @@ $cid = $this->input->post("cid");
 	         $findcid = $this->cid($cid);   	         
 	         if($findemail && $findcid){
 	         	
-	           $mail = $this->input->post("password");
+	           $email = $this->input->post("password");
 	           $cid = $this->input->post('cid'); 
         	// $email = $data['email'];
-	        $query1=$this->db->query("SELECT *  from bpas_user_profiles where email = '".$email."' and cid='".$cid."' ");
+	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."' and relatedUserId='".$cid."' ");
 	       $row=$query1->result_array(); 
 
 
@@ -64,8 +64,9 @@ $cid = $this->input->post("cid");
 	        $passwordplain  = rand(999999999,9999999999);
 	        $newpass['password'] = md5($passwordplain);
 	        $this->db->where('email', $email);
-	        $this->db->update('bpas_user_profiles', $newpass);
-	       
+	        $this->db->update('bpas_logins', $newpass);
+	        // $this->db->where('email', $email);
+	        // $this->db->update('bpas_user_profiles', $newpass);
         	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
 	      
 	        
@@ -221,7 +222,7 @@ $cid = $this->input->post("cid");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('email');
-			        $this->db->from('bpas_user_profiles'); 
+			        $this->db->from('bpas_logins'); 
 			        $this->db->where('email', $email); 
 			        $query=$this->db->get();
 			        return $query->row_array();
@@ -229,9 +230,9 @@ $cid = $this->input->post("cid");
 			function cid($cid)
 			 {
 			 		$this->load->library('email');
-			        $this->db->select('cid');
-			        $this->db->from('bpas_user_profiles'); 
-			        $this->db->where('cid', $cid); 
+			        $this->db->select('relatedUserId');
+			        $this->db->from('bpas_logins'); 
+			        $this->db->where('relatedUserId', $cid); 
 			        $query=$this->db->get();
 			        return $query->row_array();
 			 }

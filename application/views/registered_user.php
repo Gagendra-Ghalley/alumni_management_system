@@ -51,7 +51,7 @@
                                               
         <!-- <table class="table table-bordered table-hover table-striped leavetable"> -->
             <tr class="panel panel-heading bg-primary" ><th>#</th><th>Name</th><th>CID</th>
-                <th>Gender</th><th>Department</th><th>Year of Graduation/Faculty</th><th>Registration(Date/Time)</th></tr>
+                <th>Gender</th><th>Department</th><th>Year of Graduation/Faculty</th><th>Registration(Date/Time)</th><th>Email</th></tr>
             
              
 
@@ -103,6 +103,12 @@
                                                      $Date=strtotime($row['date']);   
                                                      $NewDate= date($format, $Date);
                                                      echo $NewDate;
+                                                    
+                                                    ?>
+                                                   </td>
+                                                       <td style="width:80px"> <?php 
+
+                                                    echo  $row['email'];
                                                     
                                                     ?>
                                                    </td>
