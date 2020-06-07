@@ -164,7 +164,11 @@ $cid = $this->input->post("cid");
 		     $subject = $this->input->post("name");
 			$mails = $this->input->post("email");
 		    $this->email->set_newline("\r\n");
+
 		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+
+		    $this->email->from('0215521.cst@rub.edu.bt');
+
 		    $this->email->to($mails);
 		   
 		    

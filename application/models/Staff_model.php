@@ -85,7 +85,7 @@ class Staff_model extends CI_Model {
 
 
 	
-	public function can_log_in($mac){
+	public function can_log_in($mac){//required
 		
 			$default="0000";
 		    $this->db->where('relatedUserId',$this->input->post('cid'));
@@ -148,19 +148,7 @@ public function can_log_in1($mac){
 		    $this->db->where('relatedUserId',$this->input->post('cid'));
 		    $this->db->where('status1','pending');
 		   	$result = $this->db->get('bpas_logins');
-		   	//$this->db->where('status1', $pending);
-
-			// if($result->num_rows()!=1){
-
-			// 	echo "<script> alert('You have not registered')</script>";
-
-			// 	return 6;
-
-			// }
-			//$cid=$this->input->post('cid');
-			//$passwordmd=md5($this->input->post('password'));
-			//$query="SELECT * FROM `bpas_logins` WHERE `relatedUserId` = '".$cid."' AND `password`='".$passwordmd."'";
-			//$result=$this->db->query($query);
+		   	
 			if($result->num_rows()==1){
 				foreach($result->result() as $row){
 					if($row->mac1==$mac || $row->mac2==$mac){
@@ -213,17 +201,7 @@ public function can_log_in1($mac){
 		    $this->db->where('relatedUserId',$this->input->post('cid'));
 		    $this->db->where('event','N');
 			$result=$this->db->get('bpas_logins');
-			// if($result->num_rows()!=1){
-
-			// 	echo "<script> alert('You have not registered')</script>";
-
-			// 	return 6;
-
-			// }
-			//$cid=$this->input->post('cid');
-			//$passwordmd=md5($this->input->post('password'));
-			//$query="SELECT * FROM `bpas_logins` WHERE `relatedUserId` = '".$cid."' AND `password`='".$passwordmd."'";
-			//$result=$this->db->query($query);
+			
 			if($result->num_rows()==1){
 				// foreach($result->result() as $row){
 				// if($row->mac1==$mac || $row->mac2==$mac){
@@ -234,30 +212,7 @@ public function can_log_in1($mac){
 				}
 
 				
-				
-			// 	else if(($row->mac1!=$mac || $row->mac2!=$mac)&&($row->mac1!=$default && $row->mac2!=$default)){
-					
-			// 		return 2;
-					
-					
-			// 	}
-				
-			// 	else if($row->mac1==$default && $row->mac2==$default) {
-					
-			// 		return 3;
-					
-			// 	}
-				
-			// 	else if($row->mac1=$default || $row->mac2==$default) {
-					
-					
-			// 		return 4;
-			// 	}
-				
-			// }
-				
-			// }
-
+			
 			else {
 				
 
@@ -459,7 +414,8 @@ public function eventcancel($eventid="",$param2=""){//leki
 		
 	}
 	
-	public function weekendSession() {
+	
+	public function endSession() {
 								$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
 		p.cid AS CID, 
 		p.AgencyParentID AS ParentID,
@@ -536,7 +492,6 @@ public function eventcancel($eventid="",$param2=""){//leki
 			
 		
 	}
-	
 	
 	public function checkMac($mac){
 		
@@ -629,19 +584,7 @@ public function eventcancel($eventid="",$param2=""){//leki
 		
 		
 	}
-	// public function register($param1=""){
-
-		
-	// 	$query=$this->db->query("SELECT relatedUserId from bpas_logins WHERE relatedUserId='".$param1."'")->row()->relatedUserId;
-		
-
-	// 	if($query==$param1){
-
-	// 		return $query;
-	// 	}
-
-	// 	}
-
+	
 		
 		
 	
@@ -938,10 +881,16 @@ public function editevent($param1=""){//leki
 public function getevent(){//leki
 		
 		
-		$d = $this->db->query("SELECT * from event_table");
+		$d = $this->db->query("SELECT * from event_table ORDER BY event_id DESC ")->result_array();//have to use result array as we are writing foreach(detail as row)
 			return $d;
 		} 
 
+public function sortevent(){//leki
+		
+		
+		$d = $this->db->query("SELECT * from event_table ORDER BY event_id DESC LIMIT 1")->result_array();//have to use result array as we are writing foreach(detail as row)
+			return $d;
+		} 
 public function updateeventpic($pic,$param1,$data1,$data2,$data3){//leki
 		
 		
@@ -959,19 +908,25 @@ public function updateeventpic($pic,$param1,$data1,$data2,$data3){//leki
 		
 	}
 
-public function search1($name,$department){//leki
-	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row()
+// public function search1($name,$department){//leki was working too
+// 	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row()
 					
 				
-			$query= "SELECT CONCAT(FirstName, ' ', MiddleName, ' ',LastName) AS name, 
-		department,email 	
-		FROM bpas_user_profiles  
-		WHERE FirstName ='".$name."' OR department='".$department."' ";
-		$employees = $this->db->query($query);
-		return $employees;
+// 			$query= "SELECT CONCAT(FirstName, ' ', MiddleName, ' ',LastName) AS name, 
+// 		AgencyParentID,email 	
+// 		FROM bpas_user_profiles  
+// 		WHERE FirstName ='".$name."' OR AgencyParentID='".$department."' ";
+// 		$employees = $this->db->query($query);
+// 		return $employees;
+		
+// 	}
+	
+	public function search1($name,$department){//leki
+	$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'");
+					
+		return $issuance;	
 		
 	}
-	
 
 
 

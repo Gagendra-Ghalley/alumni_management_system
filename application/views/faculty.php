@@ -107,7 +107,7 @@
 								
 					
 				
-					<div class="col-md-12 col-sm-12 col-lg-9">
+					<div class="col-md-12 col-sm-12 col-lg-8">
 					<section class="civil-engineering pb-50 wow fadeInRight ">
 						<div class="container">							
 						
@@ -175,18 +175,25 @@
 						<h5>tshetendorji.cst@rub(dot)edu(dot)bt</h5>
 						<h5>Contact No.# 17160539</h5>
 				</div>
-			</div>
+				  <div class="col-md-12">
 
+                        <button class="btn btn-link text-primary btn-lg"data-toggle="modal" data-target="#Tsheten"><b>Read more</b></button>
+                   </div>
+		
+               </div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
 						<img src="<?php echo base_url();?>assets/img2/bharat.png" style="height:150px;width: 150px;border-radius: 50%" /> 
 					
 						<h4>Bharat Kumar Hummagai</h4>
 
-						<h4>Dean, Academic Affairs</h4>
+						<h4>Dean, Academic<br> Affairs</h4>
 						<h5>bharat.cst@rub(dot)edu(dot)bt</h5>
 						<h5>Contact No.# 17161040</h5>
 				</div>
+				 <div class="col-md-12">
+                        <button class="btn btn-link text-primary btn-lg"data-toggle="modal" data-target="#bharat"><b>Read more</b></button>
+                        </div>
 			</div>
 			
 		
@@ -200,6 +207,61 @@
 </section>
 <br><br><br><br>
 
+
+<!-- Tsheten sir -->
+<div class="modal fade" id="Tsheten" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><h4><b>Details</b></h4></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p><b>Mr.Tsheten Dorji</b><br>
+		<b>17536197</b><br>
+		<b>tshetendorji.cst@rub.edu.bt</b><br><br>
+
+		<b>Mr.Tsheten Dorji is a Lecturer at college and holds Master of Science in Software Systems Engineering.He is from Information technology department.He is also interested in research works and besides teaching he is interested in Gardening.</b>
+</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bharat sir -->
+<div class="modal fade" id="bharat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><h4><b>Details</b></h4></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p><b>Mr.Bharat K Humagai</b><br>
+		<b>17161040</b><br>
+		<b>bharat.cst@rub.edu.bt<b><br><br>
+
+		<b>Mr.Bharat K Humagai is serving as a Dean of Academic affairs and is a lecturer. He is from Science and humanities department and has completed his Masters.He received a service medal for having more than 10 years of teaching experience. He has also served as provost,in exam cells,Training manager,Head of Department,IRR head,Air and water consultant and currently serving as DSA. His interest lies in Air quality studies and volunteering services like cleaning campaigns.</b>
+
+</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
 	  <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
@@ -212,6 +274,10 @@
                 </div>
 
             </div>
+        </div>
+        <!--The model-->
+        <div>
+        	
         </div>
 
 

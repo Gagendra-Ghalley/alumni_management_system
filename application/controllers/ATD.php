@@ -34,9 +34,12 @@
 	}
 	
 	public function index(){
+		$data['editdetail']=$this->sm->sortevent();
+				$data['eventdetail']=$this->sm->getevent();
 
 			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
-			$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+			
+		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
        
 			
@@ -45,7 +48,8 @@
 	
 	
 	public function login(){
-
+$data['editdetail']=$this->sm->sortevent();
+				$data['eventdetail']=$this->sm->getevent();
 			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
 			$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
@@ -77,8 +81,10 @@
 	}
 
 	public function event1(){
-		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
-		$data['editdetail']=$this->db->query("SELECT * from event_table")->result_array();
+		//$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+		//$data['editdetail']=$this->db->query("SELECT * from event_table")->result_array();
+		$data['editdetail']=$this->sm->getevent();
+		$data['eventdetail']=$this->sm->sortevent();
 			$this->load->view('event1',$data);
 		
 	}
@@ -372,9 +378,9 @@ public function validate_credentials1(){
 	
 	public function membersearch1(){//leki
  	
-		
+		$data['item']=$this->db->get('bpas_master_agencyparent')->result_array();//for selecting department
 		// $this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('membersearch3');
+		$this->load->view('membersearch3',$data);
 		$this->load->view('template/includefooter');
 		
 		
@@ -401,9 +407,9 @@ public	function viewmember2(){//leki
 
  						//OR
 
-  			 	$issuance=$this->sm->search1($name,$department);
+  			 	// $issuance=$this->sm->search1($name,$department);
 
-  	// $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' AND department='".$department."'")->row();//to see if there is record or not in db
+  	 $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'")->row();//to see if there is record or not in db
   			
 
 
@@ -412,7 +418,7 @@ public	function viewmember2(){//leki
 
 	 	$data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
 		  
-		  $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('department' => $department))->result_array();
+		  $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
 		  
 
 
@@ -528,7 +534,7 @@ public	function viewmember2(){//leki
 			if($this->getattendance()==1) {
 				$this->sm->sessionInitiate();
 			} else {
-				$this->sm->weekendSession();
+				$this->sm->endSession();
 
 			}
 			$role = $this->session->userdata('role');
@@ -573,7 +579,8 @@ public	function viewmember2(){//leki
 				
 			}  elseif($role=='4'||$role=='9'){//Division Heads
 				// $data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
-				 $data['request2']=$this->db->query("SELECT * from event_table")->result_array();
+				 //$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
+				$data['editdetail']=$this->sm->sortevent();
 				$data['eventdetail']=$this->sm->getevent();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);
@@ -584,7 +591,7 @@ public	function viewmember2(){//leki
 				$data['reports']=$this->atd->dailyAttendance();
 				$data['supervisor']=$this->sm->getSupervisor();
 				$data['pendingLeave']=$this->lm->pendingCount();
-				$data['eventdetail']=$this->db->get('event_table')->result_array();
+				//$data['eventdetail']=$this->db->get('event_table')->result_array();
 				// $data['date1']=$this->db->get('event_table')->result_array();
 				// $data['eventname']=$this->db->get('event_table')->result_array();
   	

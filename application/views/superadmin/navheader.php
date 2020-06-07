@@ -120,6 +120,15 @@
                         <i class="fa fa-user fa-2x"></i>
                     </a>
                     <!-- dropdown user-->
+<!-- 
+                    <div class="dropdown-menu dropdown-menu-small">
+                    <a class="dropdown-item" href="user-profile-lite.html">
+                      <i class="material-icons">&#xE7FD;</i> Profile</a>
+                    
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="../admin-signin.html">
+                      <i class="material-icons text-danger">&#xE879;</i> Logout </a>
+                  </div> -->
                     <ul class="dropdown-menu dropdown-user">
                       
                         <li class="divider"></li>

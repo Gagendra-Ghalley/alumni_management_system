@@ -976,8 +976,9 @@ public function editFullEmployee5($cid){//Tamang (view for editing the departmen
  		//$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
  		$cid=$this->session->userdata('cid');
 		$data['user']=$this->sm->getprofilei($cid);
-		$data['eventdetail']=$this->db->get('event_table')->result_array();
-		$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
+	$data['editdetail']=$this->sm->sortevent();
+				$data['eventdetail']=$this->sm->getevent();
+		//$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('division/dashboard',$data);
 		$this->load->view('template/includefooter');
@@ -1403,10 +1404,10 @@ public function reciept()
 	
 
 	public function membersearch(){//leki
- 	
+ 	$data['item']=$this->db->get('bpas_master_agencyparent')->result_array();//for selecting department
 		
 		$this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('membersearch2');
+		$this->load->view('membersearch2',$data);
 		$this->load->view('template/includefooter');
 		
 		
@@ -1763,33 +1764,23 @@ public function form_validation2() //Tamang (adding new department and departmen
 
   			 $department= $_POST['f1'];
   		
-		
-  	// 	$issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
-
- 		
-			// $data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
-		  
-
-
-  			// $issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
-
+	
 
   			// $issuance1= $this->db->query("SELECT department FROM bpas_user_profiles where department='".$department."'")->row()->department;
 
  						//OR
 
-  	$issuance=$this->sm->search1($name,$department);//to see if there is record or not in db
-  			
-
+  	//$issuance=$this->sm->search1($name,$department);//to see if there is record or not in db
+  			$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'")->row();
 
   			if(sizeof($issuance)>0) 
 		  {
 
-	 	$data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
-		  
-		  $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('department' => $department))->result_array();
-		  
+	 	 $data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName'=> $name))->result_array();
 
+		  
+		$data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
+		  
 
 
 		 $this->load->view('template/includeheader',$this->dataheader);
@@ -1876,8 +1867,8 @@ function addevent1($param1=""){//leki
 	 }
  
  public function viewevent(){//leki
- 	//$data['editdetail']=$this->sm->getevent();
- 	$data['editdetail']=$this->db->get('event_table')->result_array();//pulls all from db
+ 	$data['editdetail']=$this->sm->getevent();
+ 	//$data['editdetail']=$this->db->get('event_table')->result_array();//pulls all from db
   		//$data['user']=$this->sm->getprofile($cid);
   		$this->load->view('template/includeheader',$this->dataheader);
   		$this->load->view('superadmin/edit_event',$data);
