@@ -34,8 +34,22 @@
 
 
         
+        <?php  
+           if($this->uri->segment(2) == "deleted2")  
+           {  
+           
+                echo ' <div class="col-lg-8 panel-body">
+                    <b><p class="text-success">Department has been deleted successfully</p></b>
+                    </div><br><br>';
+
+            } 
+            ?> 
+             
      
             <div class="row">
+                <br>
+                <br>
+
                 <div class="col-lg-8">
 
     
@@ -45,9 +59,11 @@
                             <i class="fa fa-bar-chart-o fa-fw"></i>Users
                            
                             <div class="pull-right">
-                                
+
                                <form>
                                 
+
+         
                                  <label for="ParentAgency">Department </label>
                                  <select id="parent" name="Parent" class="option3 searchdropdown"  onchange="selectagency()">
                                 <option value="0" class="searchdropdown" selected>Select one</option>

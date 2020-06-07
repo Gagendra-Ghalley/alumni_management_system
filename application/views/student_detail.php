@@ -34,7 +34,7 @@
      
       <h2>Student Details</h2><br />
       <!-- <div class="panel-body"> -->
-      <div class="table-responsive">
+      <div >
         <div class="col-lg-10">
          
  <table class="table table-bordered ">
@@ -42,15 +42,15 @@
                 <div class="col-lg-12">
 
   
- <div class="panel panel-primary">
-                        <div class="panel-heading">
+ <div >
+                        <div >
                           
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Users
+                           <!--  <i class="fa fa-bar-chart-o fa-fw"></i>Users -->
                            
-                            <div class="pull-right">
+                            <div>
       
       
-                <tr>  
+                <tr class="panel-heading bg-primary">  
                      <th >Sl.no</th>  
                      <th >Name</th>  
                      <th >CID</th>  

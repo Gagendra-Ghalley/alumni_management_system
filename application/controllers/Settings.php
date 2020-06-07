@@ -19,6 +19,7 @@ class Settings extends CI_Controller {
 	$this->load->model('Holidays','hm');
 	$this->load->model('Messages_model','mm');
 	$this->load->model('ATD_model','atd');
+	// $this->load->CI_Controller('sendemail');
 	$this->header['messages'] = $this->mm->getMessages();
 	$this->header['unreadm']=$this->mm->getCountMessages();
 	$this->dataheader['header']=$this->header;
@@ -58,6 +59,13 @@ public function viewUsers2() {
 		$this->load->view('template/includefooter');
 	}
 
+	public function passwordemail(){
+
+		$this->load->view('template/includeheader',$this->dataheader);
+		
+		$this->load->view('forgetpasswordemail');
+		$this->load->view('template/includefooter');
+	}
 
 
 
@@ -84,8 +92,23 @@ public function viewUsers2() {
 
 
 	}
-	
 
+	 public function  registered_user(){
+	 	$this->load->view('template/includeheader',$this->dataheader);
+	 	$data['request']=$this->db->query("SELECT * from bpas_logins where status1 = 'approved'")->result_array();
+
+       		$this->load->view('registered_user',$data);
+       		$this->load->view('template/includefooter');
+	 }
+	
+	public function Forgetpasswordemail()
+	{
+		      // $this->load->view('template/includeheader',$this->dataheader);
+			
+			$this->load->view('forgetpasswordemailatd');
+			// $this->load->view('template/includefooter');
+	        		
+	}
 
 
 	 public function registration(){//cst_team
@@ -413,7 +436,7 @@ function addDak($param="")
 		// echo "<td>$row->Gender</td>";
 		echo "<td>$row->gender</td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
+	     echo" <td><a class='delete_data' id='<?php echo $row->cid' href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
 	     ;
 
 
@@ -437,6 +460,99 @@ function addDak($param="")
 	
 		
 	}
+
+
+
+	// public function Forgetpasswordemail()
+	//    {
+	//    		$this->load->view('forgetpasswordemailatd');     
+	//      }  
+	       
+// public function ForgotPassword($email)
+// 	 {
+// 	 		$this->load->library('email');
+// 	        $this->db->select('email');
+// 	        $this->db->from('bpas_user_profiles'); 
+// 	        $this->db->where('email', $email); 
+// 	        $query=$this->db->get();
+// 	        return $query->row_array();
+// 	 }
+	
+	
+	
+// 	 public function send($data)
+// 	{
+// 		$mail = $this->input->post("email");
+//         $email = $data['email'];
+// 	        $query1=$this->db->query("SELECT *  from bpas_user_profiles where email = '".$email."' ");
+// 	        $row=$query1->result_array();
+//        if ($query1->num_rows()>0)
+	      
+// 	{
+			
+// 	             $config = Array(
+// 		      	'protocol' 	=> 'smtp',
+// 		      	'smtp_host' => 'ssl://smtp.googlemail.com',
+// 		      	'smtp_port' => 465,
+// 		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
+// 		      	'smtp_pass' => 'Wangchuk_12345', 
+// 		      	'mailtype' 	=> 'html',
+// 		      	'charset' 	=> 'iso-8859-1',
+// 		      	'wordwrap' 	=> TRUE
+
+// 		    );
+// 	        $this->load->library('email', $config);     
+// 	        $email = $data['email'];
+// 			$this->email->From('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+// 			$this->email->to($mail);
+// 		       //  $passwordplain = "";
+// 	        // $passwordplain  = rand(999999999,9999999999);
+// 	        // $newpass['password'] = md5($passwordplain);
+// 	        // $this->db->where('email', $email);
+// 	        // $this->db->update('bpas_user_profiles', $newpass);
+	         
+//         	// $mail_message='Dear '.$row[0]['FirstName'].','. "\r\n";
+// 	        // $mail_message.='Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is <b>'.$passwordplain.'</b>'."\r\n";
+// 	        // $mail_message.='<br>Please Update your password.';
+// 	        // $mail_message.='<br>Thanks & Regards';
+// 	        // $mail_message.='<br>Your company name';
+        	
+// 	        // // $this->email->IsHTML(true);
+	        
+// 	        // $this->email->Subject = 'OTP from company';
+// 	        // $this->email->Body    = $mail_message;	        
+// 	        // $this->email->AltBody = $mail_message;
+	
+// 	 	if($this->email->send())
+// 	        {
+// 	        	// if(delete_files($file_data['file_path']))
+// 	        	// {
+// 	        		$this->session->set_flashdata('message', 'Message has been sent successfully!!');
+// 	        		redirect('Settings/passwordemail');
+// 	        	// }
+// 	        }
+
+// 	        else
+// 	        {
+// 	        	// if(delete_files($file_data['file_path']))
+// 	        	// {
+// 	        	echo $this->email->print_debugger();
+
+// 	        		$this->session->set_flashdata('message', 'There is an error in email send');
+// 	        		redirect('Settings/passwordemail');
+// 	        	// }
+// 	        }
+// 	        // echo $this->email->print_debugger();
+
+
+		  
+		
+
+		  
+// 	    }
+// 	}
+	    
+	 
 
 	public function getAgencyEmployees2() {//Tamang(For view in year of graduation)
 		
@@ -1417,12 +1533,18 @@ public function membersearch2(){//Tamang
                 {  
                      $this->main_model->insert_data($data,$data1);  
                      redirect(base_url() . "index.php/Settings/inserted");  
-                }  
+                }
+           //      else{
+                	 
+	        		// redirect(base_url() . "Settings/membersearch3");
+           //      }  
            }  
            else  
            {  
-                //false  
-                $this->membersearch3();
+                
+                
+	        	redirect(base_url() . "index.php/Settings/notinserted");
+               
 
            }  
       }  
@@ -1455,8 +1577,7 @@ public function form_validation2() //Tamang (adding new department and departmen
            }  
            else  
            {  
-                //false  
-                $this->membersearch5();  
+                redirect(base_url() . "index.php/Settings/notinserted1");
            }  
       } 
 
@@ -1496,8 +1617,7 @@ public function form_validation2() //Tamang (adding new department and departmen
                }  
                else  
            {  
-                //false  
-                $this->membersearch6();  
+               redirect(base_url() . "index.php/Settings/notinserted2");
            }  
            
           
@@ -1509,13 +1629,26 @@ public function form_validation2() //Tamang (adding new department and departmen
       { //Tamang 
            $this->membersearch3();  
       }  
+       public function notinserted()  
+      { //Tamang 
+           $this->membersearch3();  
+      }
        public function inserted1()  
+      {  //Tamang
+           $this->membersearch5();  
+      }  
+      public function notinserted1()  
       {  //Tamang
            $this->membersearch5();  
       }  
       public function inserted2()  
       {  //Tamang
            $this->membersearch6();  
+      }
+
+       public function notinserted2()  
+      {  //Tamang
+           $this->membersearch5();  
       }  
      public function delete_data(){//Tamang 
            $this->load->view('template/includeheader',$this->dataheader);
@@ -1528,9 +1661,16 @@ public function form_validation2() //Tamang (adding new department and departmen
       public function deleted()  
       {  //Tamang
       	 
-      	redirect(base_url() ."index.php/Settings/viewUsers");  
+      	           $this->viewUsers();   
           
 	 }
+	  public function notdeleted()  
+      {  //Tamang
+      	 
+      	           $this->viewUsers();   
+      }
+
+
 
 	 public function delete_data1(){//Tamang(Deleting the year of graduation)  
            $this->load->view('template/includeheader',$this->dataheader);
@@ -1543,7 +1683,7 @@ public function form_validation2() //Tamang (adding new department and departmen
       public function deleted1()  
       {  //Tamang
       	 
-      	redirect(base_url() ."index.php/Settings/viewUsers1");  
+      	$this->viewUsers1();  
           
 	 }
 
@@ -1558,7 +1698,7 @@ public function form_validation2() //Tamang (adding new department and departmen
       public function deleted2()  
       {  //Tamang
       	 
-      	redirect(base_url() ."index.php/Settings/viewUsers2");  
+      $this->viewUsers2();  
           
 	 }
 

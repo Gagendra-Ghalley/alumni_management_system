@@ -41,11 +41,12 @@
            //redirect url - http://localhost/app/las04/Settings/inserted/  
                 //main - segment(1)  
                 //inserted - segment(2)  
-                echo '<p class="text-success">Data Inserted</p>';  
+                echo '<p class="text-success">Data Inserted Successfully</p>';  
            }  
-           if($this->uri->segment(2) == "updated")  
+           if($this->uri->segment(2) == "notinserted")  
            {  
-                echo '<p class="text-success">Data Updated</p>';  
+                echo '<p class="text-danger">Data not inserted</p>'; 
+
            }  
            ?>  
            <?php  
@@ -96,12 +97,12 @@
            ?>  
            <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter CID</label>  
-                <input style="width:400px;" type="text" name="cid" class="form-control" />  
+                <input style="width:400px;" type="text" name="cid" class="form-control"   required />  
                 <span class="text-danger"><?php echo form_error("cid"); ?></span>  
            </div>  
            <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Your Name</label>  
-                <input style="width:400px;" type="text" name="FirstName" class="form-control" />  
+                <input style="width:400px;" type="text" name="FirstName" class="form-control"  required />  
                 <span class="text-danger"><?php echo form_error("FirstName"); ?></span>  
            </div>
           <!--  <div class="form-group">  
@@ -117,7 +118,7 @@
            </div> -->
            <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Gender</label>  
-                <input style="width:400px;" placeholder="Male/Female" type="text" name="gender" class="form-control" />  
+                <input style="width:400px;" placeholder="Male/Female" type="text" name="gender" class="form-control"  required/>  
                 <span class="text-danger"><?php echo form_error("gender"); ?></span>  
            </div>
             <div class="form-group">  
@@ -135,7 +136,7 @@
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Select Year of graduation</label> 
                 
                 <select style="width:400px;" name="agency" id="agency" class="option3 searchdropdown" onchange="populateEmployees1()" required>
-              <option value="">- Select Year  - </option>
+              <option value="" required>- Select Year  - </option>
               <!-- <?php foreach($request1 as $key):?>
             <option value="<?php echo $key['AgencyID'];?>"> <?php echo $key['name']; ?></option>
             <?php endforeach; ?> -->
@@ -152,8 +153,9 @@
            </div>
 
            <div class="form-group">  
-                <input type="submit" name="insert" value="Insert" class="btn btn-info" />  
-           </div>       
+               <input  type="submit" name="insert" value="Insert" class="pull-center btn btn-info"  />
+                &nbsp;&nbsp;&nbsp; <input type="reset" name="insert" value="Reset" class="btn btn-info " />
+           </div>      
            <?php  
            }  
            ?>  

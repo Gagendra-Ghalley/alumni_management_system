@@ -34,15 +34,135 @@ public function index()
 		$this->load->view('sendemail');
 		$this->load->view('template/includefooter');
 }
+// public function Forgetpasswordemail()
+// {
+// 			      // $this->load->view('template/includeheader',$this->dataheader);
+				
+// 				$this->load->view('forgetpasswordemailatd');
+// 				// $this->load->view('template/includefooter');
+		        		
+// }
 
 
+	
+	public function send()
+	{
+		$this->load->library('email');
+		$subject = $this->input->post("name");
+		// $programming_languages = implode(", ", $this->input->post("programming_languages"));
+		$mails = $this->input->post("email");
+		$mail = $this->input->post("password");
+		$cid = $this->input->post("cid");
 
-public function send1(){
-$this->load->library('email');
-$mail = $this->input->post("password");
-$cid = $this->input->post("cid");
+		$mailatd = $this->input->post("passwordatd");
+		$cidatd = $this->input->post("cidatd");
 
-	if($mail==$this->input->post("password")&&$cid == $this->input->post("cid")){
+			$mails1 = $this->input->post("email1");
+		$mails2 = $this->input->post("email2");
+		$file_data = $this->upload_file();
+
+			if($mailatd==$this->input->post("passwordatd") && $cidatd == $this->input->post("cidatd")){
+
+		
+	   		$this->load->library('email');
+	         $email = $this->input->post('passwordatd');
+	         $cid = $this->input->post('cidatd');      	         
+	         $findemail = $this->ForgotPasswordatd($email);
+	         $findcid = $this->cidatd($cid);   	         
+	         if($findemail && $findcid){
+	           $mail = $this->input->post("passwordatd");
+	           $cid = $this->input->post('cidatd'); 
+        	
+	        $query1=$this->db->query("SELECT *  from bpas_user_profiles where email = '".$email."' and cid='".$cid."' ");
+	       $row=$query1->result_array(); 
+
+
+	       	if ($query1->num_rows()>0){
+       		 $passwordplain = "";
+	        $passwordplain  = rand(999999999,9999999999);
+	        $newpass['password'] = md5($passwordplain);
+	        $this->db->where('email', $email);
+	        $this->db->update('bpas_user_profiles', $newpass);
+	       
+        	 $message='<h3 align="center">Password Reset</h3> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b>'. "\r\n";
+	        $message.='<br><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'."\r\n";
+	        
+        	
+			
+
+			$config = Array(
+		      	'protocol' 	=> 'smtp',
+		      	'smtp_host' => 'ssl://smtp.googlemail.com',
+		      	'smtp_port' => 465,
+		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
+		      	'smtp_pass' => 'Wangchuk_12345', 
+		      	'mailtype' 	=> 'html',
+		      	'charset' 	=> 'iso-8859-1',
+		      	'wordwrap' 	=> TRUE
+		    );
+			
+		    $this->email->initialize($config);
+
+		    $this->email->set_newline("\r\n");
+		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->to($mail);
+		    
+		    $this->email->subject('OTP from Alumni Management System');
+		    
+	        $this->email->message($message);
+
+	        // foreach ($_FILES as $key => $value) {
+	        // 	if(!empty($key['resume'])){
+	        // 		if(!$this->upload->do_upload($key)){
+	        // 				$this->session->set_flashdata('message', 'There is an error in attach file');
+	       	// 				 redirect('sendemail');
+	        // 		}
+	        // 		else{
+	        // 			$upload_data=$this->upload->data();
+	        // 			$this->email->attach($upload_data['full_path']);
+	        // 		}
+	        // 	}
+	        // }
+
+	      
+	        if($this->email->send())
+	        {
+	        	
+	        		$this->session->set_flashdata('message', 'Password has been sent successfully to your email!!');
+	        		redirect('ATD/Forgetpasswordemail');
+	        	
+	        }
+
+	        else
+	        {
+	        	
+	        		$this->session->set_flashdata('message', 'There is an error in email send');
+	        		redirect('ATD/Forgetpasswordemail');
+	        	
+	        }       	          
+	           
+	           }
+
+	            }
+
+	           else{
+
+	          $this->session->set_flashdata('message', 'Email/CID did not match');
+	        		redirect('ATD/Forgetpasswordemail');	      
+	      	}
+
+	 
+	       
+		 
+       
+	        
+	        echo $this->email->print_debugger();
+	    }
+
+	
+
+
+		if($mail==$this->input->post("password")&&$cid == $this->input->post("cid")){
 
 		
 	   		$this->load->library('email');
@@ -51,7 +171,6 @@ $cid = $this->input->post("cid");
 	         $findemail = $this->ForgotPassword($email);
 	         $findcid = $this->cid($cid);   	         
 	         if($findemail && $findcid){
-	         	
 	           $mail = $this->input->post("password");
 	           $cid = $this->input->post('cid'); 
         	// $email = $data['email'];
@@ -66,8 +185,8 @@ $cid = $this->input->post("cid");
 	        $this->db->where('email', $email);
 	        $this->db->update('bpas_user_profiles', $newpass);
 	       
-        	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
-	      
+        	 $message='<h3 align="center">Password Reset</h3> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b>'. "\r\n";
+	        $message.='<br><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'."\r\n";
 	        
         	
 			
@@ -113,28 +232,27 @@ $cid = $this->input->post("cid");
 	           
 	           }
 
-	            
-
 	            }
-	              else{
+
+	           else{
 
 	          $this->session->set_flashdata('message', 'Email/CID did not match');
 	        		redirect('Settings/passwordemail');	      
-	      		}
+	      	}
 
-	 		echo $this->email->print_debugger();
-
+	 
+	       
+		 
+       
 	        
+	        echo $this->email->print_debugger();
 	    }
 
-	   }
-
 	
-	public function send()
-	{
-		$this->load->library('email');
-		
-	$file_data = $this->upload_file();
+
+	 
+
+
 		if(is_array($file_data))
 		{
 			$message = '
@@ -161,12 +279,12 @@ $cid = $this->input->post("cid");
 		    );
 			
 		    $this->email->initialize($config);
-		     $subject = $this->input->post("name");
-			$mails = $this->input->post("email");
+
 		    $this->email->set_newline("\r\n");
 		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
 		    $this->email->to($mails);
-		   
+		    $this->email->cc($mails1);
+		    $this->email->bcc($mails2);
 		    
 		    $this->email->subject($subject);
 	        $this->email->message($message);

@@ -1,6 +1,7 @@
 <?php
 
-
+// include_once(APPPATH.'libraries/email.php');
+// include_once(APPPATH.'libraries/sendemail.php');
  class ATD extends CI_Controller {
 	
 	protected $header;
@@ -15,11 +16,15 @@
 		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->load->model('Staff_model','sm');
+		$this->load->library('email');
+		$this->load->library('encrypt');
 		$this->load->model('ATD_model','atd');
 		$this->load->model('Agency_model','ag');
 		$this->load->model('Leave_model','lm');
 		$this->load->model('Holidays','hm');
 		$this->load->model('Messages_model','mm');
+		// $this->load->model('Sendemail','s');
+		// $this->load->library('../controllers/sendemail.php');
 		$this->header['messages'] = $this->mm->getMessages();
 		$this->header['unreadm']=$this->mm->getCountMessages();
 		$this->dataheader['header']=$this->header;
@@ -110,15 +115,70 @@
 		}
 
 
+
+
+	
+
+
 			
-
-        		
-        	
-
-
-        	
-	 // }
+ public function Forgetpasswordemail()
+{
+	      // $this->load->view('template/includeheader',$this->dataheader);
 		
+		$this->load->view('forgetpasswordemailatd');
+		// $this->load->view('template/includefooter');
+        		
+}
+
+
+
+
+public function send()
+	{
+
+		
+		$this->load->library('email');
+		$mailatd = $this->input->post("passwordatd");
+		$cidatd = $this->input->post("cidatd");
+		
+
+	
+		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->to($mailatd);
+		    
+		
+
+			$config = Array(
+		      	'protocol' 	=> 'smtp',
+		      	'smtp_host' => 'ssl://smtp.googlemail.com',
+		      	'smtp_port' => 465,
+		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
+		      	'smtp_pass' => 'Wangchuk_12345', 
+		      	'mailtype' 	=> 'html',
+		      	'charset' 	=> 'iso-8859-1',
+		      	'wordwrap' 	=> TRUE
+		    );
+			
+		    
+		
+	      	
+	      
+	        if($this->email->send())
+	         {
+	        	
+	         		$this->session->set_flashdata('message', 'Password has been sent successfully to your email!!');
+	        		redirect('ATD/Forgetpasswordemail');
+	        	
+	         }
+
+	       else
+      			{
+	  		$this->session->set_flashdata('message', 'There is an error in email send');
+       		redirect('ATD/Forgetpasswordemail');
+	           }       	          
+	           
+	           }
+	     
 
 public function register_validate(){
 
@@ -137,18 +197,24 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 			);
 			
 			$this->session->set_userdata($data);
-			
+			$this->load->helper('date');
 			$cid=$this->input->post('cid'); 
 	 	  		
   		
 	 		
-	 			// $d2['s']=$this->sm->register($cid);
-	 			// $d=implode(" ", $d2);
 				
 		
 				$dat['status1']='approved';
-			$this->db->where('relatedUserId', $cid);
-  			$this->db->update('bpas_logins',$dat);
+				// $date= new DateTime('19:24:15 06/13/2013')
+				$format = "%Y-%m-%d %h:%m:%s %p";
+				$da=array('date' => mdate($format));
+		  		;
+
+		  		
+		  		$this->db->where('relatedUserId', $cid);
+		  		$this->db->update('bpas_logins',$da);
+		  		$this->db->where('relatedUserId', $cid);
+				$this->db->update('bpas_logins',$dat);
 
   			
 

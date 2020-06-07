@@ -9,6 +9,81 @@ class Staff_model extends CI_Model {
 		
 		
 	}
+
+
+
+	// public function ForgotPassword($email)
+	//  {
+	//         $this->db->select('email');
+	//         $this->db->from('bpas_user_profiles'); 
+	//         $this->db->where('email', $email); 
+	//         $query=$this->db->get();
+	//         return $query->row_array();
+	//  }
+	
+	
+	
+	//  public function sendpassword($data)
+	// {
+	
+ //        $email = $data['email'];
+	//         $query1=$this->db->query("SELECT *  from bpas_user_profiles where email = '".$email."' ");
+	//         $row=$query1->result_array();
+ //       if ($query1->num_rows()>0)
+	      
+	// {
+	//         $passwordplain = "";
+	//         $passwordplain  = rand(999999999,9999999999);
+	//         $newpass['password'] = md5($passwordplain);
+	//         $this->db->where('email', $email);
+	//         $this->db->update('bpas_user_profiles', $newpass);
+	//         $this->load->library('email'); 
+ //        	$mail_message='Dear '.$row[0]['FirstName'].','. "\r\n";
+	//         $mail_message.='Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is <b>'.$passwordplain.'</b>'."\r\n";
+	//         $mail_message.='<br>Please Update your password.';
+	//         $mail_message.='<br>Thanks & Regards';
+	//         $mail_message.='<br>Your company name';        
+		  
+		
+
+	// 	       $config = Array(
+	// 	      	'protocol' 	=> 'smtp',
+	// 	      	'smtp_host' => 'ssl://smtp.googlemail.com',
+	// 	      	'smtp_port' => 465,
+	// 	      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
+	// 	      	'smtp_pass' => 'Wangchuk_12345', 
+	// 	      	'mailtype' 	=> 'html',
+	// 	      	'charset' 	=> 'iso-8859-1',
+	// 	      	'wordwrap' 	=> TRUE
+
+	// 	    );
+			
+	// 	    $this->email->initialize($config);
+	// 	    $this->email->From('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+
+	// 	    $this->email->to($email);
+		   
+        	
+	//         // $this->email->IsHTML(true);
+	        
+	//         $this->email->Subject = 'OTP from company';
+	//         $this->email->Body    = $mail_message;	        
+	//         $this->email->AltBody = $mail_message;
+	
+	// if (!$this->email->send()) {
+	//      $this->session->set_flashdata('msg','Failed to send password, please try again!');
+	// } else {
+	//    $this->session->set_flashdata('msg','Password sent to your email!');
+	// }
+	//   redirect(base_url().'index.php/Settings/passwordemail','refresh');        
+	
+	// }
+	// else
+	// {  
+	//  $this->session->set_flashdata('msg','Email not found try again!');	 redirect(base_url().'index.php/Settings/passwordemail','refresh');	}
+	// }
+
+
 	
 	public function can_log_in($mac){
 		

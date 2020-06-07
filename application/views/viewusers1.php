@@ -36,6 +36,17 @@
         
      
             <div class="row">
+
+                <?php
+                 if($this->uri->segment(2) == "deleted1")  
+           {  
+           
+                echo ' <div class="col-lg-8 panel-body">
+                    <b><p class="text-success">Year of graduation/faculty has been deleted successfully</p></b>
+                    </div><br><br>';
+
+            } 
+            ?> 
                 <div class="col-lg-8">
 
     

@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 
-$config['base_url'] = 'http://localhost:8080/final/alumni_management_system/';
+$config['base_url'] = 'http://localhost/Alumni_System/alumni_management_system/';
 
 
 
@@ -320,7 +320,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'thu23456789#[n';
 
 /*
 |--------------------------------------------------------------------------

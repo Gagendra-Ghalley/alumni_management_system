@@ -75,19 +75,19 @@ class Sendemail extends CI_Controller {
       $data = array();
 
       // Count total files
-      $countfiles = count($_FILES['files']['name']);
+      $countfiles = count($_FILES['resume']['name']);
  
       // Looping all files
       for($i=0;$i<$countfiles;$i++){
  
-        if(!empty($_FILES['files']['name'][$i])){
+        if(!empty($_FILES['resume']['name'][$i])){
  
           // Define new $_FILES array - $_FILES['file']
-          $_FILES['file']['name'] = $_FILES['files']['name'][$i];
-          $_FILES['file']['type'] = $_FILES['files']['type'][$i];
-          $_FILES['file']['tmp_name'] = $_FILES['files']['tmp_name'][$i];
-          $_FILES['file']['error'] = $_FILES['files']['error'][$i];
-          $_FILES['file']['size'] = $_FILES['files']['size'][$i];
+          $_FILES['resume']['name'] = $_FILES['files']['name'][$i];
+          $_FILES['resume']['type'] = $_FILES['files']['type'][$i];
+          $_FILES['resume']['tmp_name'] = $_FILES['files']['tmp_name'][$i];
+          $_FILES['resume']['error'] = $_FILES['files']['error'][$i];
+          $_FILES['resume']['size'] = $_FILES['files']['size'][$i];
 
           // Set preference
           // $config['upload_path'] = 'uploads/'; 
