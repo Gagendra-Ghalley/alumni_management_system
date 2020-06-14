@@ -5,7 +5,6 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
-    <!-- Core CSS - Include with every page -->
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
@@ -47,8 +46,7 @@
         <div class="row">
           <div class="col-md-4">
           	<h1 class="navbar-brand navbar-brand_"><a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
-            
-            <!-- <h1 style="position:relative;right:5%;"><font size="4">CST Alumni Management System</font></h1> -->
+         
           </div>
           <div class="col-md-8">
             <ul class="flexy-menu orange">
@@ -106,7 +104,7 @@
 								
 					
 				 <div class="col-md-9 wow fadeInRight">
-					<section id="architecture" class="civil-engineering pb-50">
+					<section class="civil-engineering pb-50">
 						<div class="container">							
 						
 							<div class="du-civil pt-20">
@@ -116,19 +114,20 @@
 									<div class="teachers">
 								<div class="container">
 									<div class="teach-head">
-										<h3>ARCHITECTURE FACULTY</h3><br>
+										<h3>Civil Engineering And Engineering Geology Faculty</h3><br>
 										
 									</div>
 									<div class="team-grids">
 										<div class="col-md-3 team-grid text-center">
 											<div class="team-img">
 
-												<img src="<?php echo base_url();?>assets/img2/president.png" style="height:150px;width: 150px;border-radius: 50%" />
-												
-												<h4>Chimi</h4>
-												<h4>PROGRAMME LEADER, ARCHITECTURE DEPT</h4>
-												<h5>chimi.cst@rub(dot)edu(dot)bt</h5>
-												
+												<img src="<?php echo base_url();?>assets/img2/pc.png" style="height:150px;width: 150px;border-radius: 50%" alt="coming soon"
+												/>
+													<h4>Pema Choezom</h4>
+												<h4>HEAD OF DEPARTMENT, SCIENCE AND HUMANITIES</h4>
+											
+												<h5>pemachoezom(dot)cst@rub(dot)edu(dot)bt</h5>
+												<h5>Contact No.# +975-16553410 (O) /17900521</h5>
 												
 											</div>
 										</div>
@@ -147,99 +146,282 @@
 							</div>						
 					</div>
 
-				</section> 
-			<div class="teachers">
-	<div class="container">
+				</section>
+		<div class="teachers">
+	 <div class="container">
 		
 		<div class="team-grids">
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/schuki.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+					
+					<img src="<?php echo base_url();?>assets/img2/bp.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Basant Pradhan</h4>
+						<h4>Lecturer</h4>
+						
+						<h5>basantpradhan(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b style="color: red">ON STUDY LEAVE</b>
+						
+				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/dukpa.jpg" style="height:150px;width: 150px;border-radius: 50%"/>
+						<h4>Nima Dukpa</h4>
+						<h4>Asst. Professor</h4>
+						
+						<h5>nima(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17888992</b>
+						
+				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/rs.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+			
+						<h4>Rajesh Subedi</h4>
+						<h4>Lecturer</h4>
+						<h5>rajeshsubedi(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17793019</b>
+						
+				</div>
+			</div>
+
+			</div>
+			
+			
+			
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+
+		 
+		<div class="container">
+				<div class="team-grids">
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/kdorji.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Kelzang Dorji</h4>
+						<h4> Lecturer</h4>
+						
+						<h5>kelzangdorji(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b> Contact No.# +975-17666628</b>
+						
+				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/vj	.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>V Jayachandran</h4>
+						<h4>Asst. Professor</h4>
+						
+						<h5>jayachandran(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17657020</b>
+						
+				</div>
+			</div>
+			
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/st.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>S.T. Venkatesan</h4>
+						<h4>Asst. Professor</h4>
+					
+						<h5>venkatesan(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17914178</b>
+						
+				</div>
+			</div>
+
+
+	
+			
+			
+		</div>
+	</div>
+	<br>
+		<br>
+		<br>
+		<br>
+
+	<div class="container">
+				<div class="team-grids">
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/jl.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Jyothi Lakshmi</h4>
+						<h4>Lecturer</h4>
+						
+						<h5>jyothilakshmi(dot)cst@rub(dot)edu(dot)bt</h5>
 					
 						
-						<h4>Sonam Chuki</h4>
-						<h4>Asst. Professor</h4>
-						<h5>sonamchuki.cst@rub(dot)edu(dot)bt</h5>
+				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/kumbu.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Kumbu Dorji</h4>
+						<h4>Asst. Lecturer</h4>
+						
+						<h5>kumbudorji(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b style="color: red">ON STUDY LEAVE</b>
+						
+				</div>
+			</div>
+			
+	
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/tc.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Tenzin Choden Gyeltshen</h4>
+						<h4>Asst. Lecturer</h4>
+						
+						<h5>tenzinchoden(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b >Contact No.# +975-17291668</b>
+						
+				</div>
+			</div>
+			
+		</div>
+	</div> <br>
+			<br>
+			<br>
+			<div class="container">
+				<div class="team-grids">
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/td.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Tshering Denka</h4>
+						<h4>Associate Lecturer</h4>
+						
+						<h5>tsheringdenka(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17410561</b>
+					
 						
 				</div>
 			</div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/sumitra.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
-						<h4>Sumitra Ghalley</h4>
+					<img src="<?php echo base_url();?>assets/img2/gg.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Ganapati Ghimiray</h4>
+						<h4>Lecturer</h4>
+						
+						<h5>ganapatighimiray(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17280587</b>
+						
+				</div>
+			</div>
+			
+	
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/jn.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Jigme Namgyal</h4>
 						<h4>Asst. Lecturer</h4>
 						
-						<h5>sumitraghalley.cst@rub(dot)edu(dot)bt</h5>
+						<h5>jigmenamgyal(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b style="color: red">ON STUDY LEAVE</b>
+						
+				</div>
+			</div>
+			
+		</div>
+	</div> <br>
+			<br>
+			<br>
+				
+			<div class="container">
+				<div class="team-grids">
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/nz.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Ngawang Zepa</h4>
+						<h4>Asst. Lecturer</h4>
+						
+						<h5>ngawangzepa(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b style="color: red">ON STUDY LEAVE</b>
+					
 						
 				</div>
 			</div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-						<img src="<?php echo base_url();?>assets/img2/chimmiwangmo.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Jigme Thinley</h4>
-						<h4>Asst. Lecturer</h4>
+					<img src="<?php echo base_url();?>assets/img2/ky.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Karma Yangdon</h4>
+						<h4>Lecturer</h4>
 						
-						<h5>jigmethinley.cst@rub(dot)edu(dot)bt</h5>
+						<h5>karmayangdon(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17548548</b>
 						
 				</div>
 			</div>
+			
+	
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+					<img src="<?php echo base_url();?>assets/img2/py.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Pema Youden</h4>
+						<h4>Asst. Lecturer</h4>
+						
+						<h5>pemayouden(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17311881</b>
+						
+				</div>
+			</div>
+			
+		</div>
+	</div> <br>
+			<br>
+			<br>
+				
+					<h3 style="text-align: center">Supporting Staff</h3>
 
-			</div>
-			
-			
-			
-		</div> 
-		<br>
-		<br>
-		<br>
-		<br>
-		
+
 
 		<div class="container">
-		
-		<div class="team-grids">
+			<div class="team-grids">
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/jamyang_p.dorji.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Jamyan P. Dorji</h4>
-						<h4>Asst. Lecture</h4>
+					<img src="<?php echo base_url();?>assets/img2/kc.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Karma Chophel</h4>
+						<h4>Lab. Assistant</h4>
 						
-						<h5>jamyangpdorji.cst@rub(dot)edu(dot)bt</h5>
+						<h5>karmachophel(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17907190</b>
 						
 				</div>
 			</div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/penden_wangchuk.jpg" style="height:150px;width: 150px;border-radius:50% " alt=""/>
+					<img src="<?php echo base_url();?>assets/img2/gt.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Gembo Tshering</h4>
+						<h4>Lab. Assistant</h4>
 						
-						
-						<h4>Penden Wangchuk</h4>
-						<h4>Asst. Lecturer</h4>
-						<h5>pendenwangchuk.cst@rub(dot)edu(dot)bt</h5>
-						
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-						<img src="<?php echo base_url();?>assets/img2/sebha_saleem.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Sehba Saleem</h4>
-						<h4>Asst. Lecturer</h4>
-						
-						<h5>sehbasaleem.cst@rub(dot)edu(dot)bt</h5>
+						<h5>gembotshering(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17721020</b>
 						
 				</div>
 			</div>
+			
 
-			</div>
+	
 			
 			
+		</div>
 	</div>
+	
+</div> 
 </div>
-</div>
-</div>
-</div>
+
+	
+	
+</div> 
 </section>
-			 <div class="bg-primary" class="du-newsletter">
+<br>
+<br>
+ <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
@@ -252,12 +434,6 @@
 
             </div>
         </div>
-
-
-					
-
-
-
 
 
 

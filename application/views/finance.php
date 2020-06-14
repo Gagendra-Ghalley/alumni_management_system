@@ -5,7 +5,6 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
-    <!-- Core CSS - Include with every page -->
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
@@ -47,8 +46,7 @@
         <div class="row">
           <div class="col-md-4">
           	<h1 class="navbar-brand navbar-brand_"><a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
-            
-            <!-- <h1 style="position:relative;right:5%;"><font size="4">CST Alumni Management System</font></h1> -->
+         
           </div>
           <div class="col-md-8">
             <ul class="flexy-menu orange">
@@ -106,140 +104,51 @@
 								
 					
 				 <div class="col-md-9 wow fadeInRight">
-					<section id="architecture" class="civil-engineering pb-50">
-						<div class="container">							
-						
-							<div class="du-civil pt-20">
-								<div class="row">
-									<div class="col-md-8">
-										
-									<div class="teachers">
-								<div class="container">
-									<div class="teach-head">
-										<h3>ARCHITECTURE FACULTY</h3><br>
-										
-									</div>
-									<div class="team-grids">
-										<div class="col-md-3 team-grid text-center">
-											<div class="team-img">
-
-												<img src="<?php echo base_url();?>assets/img2/president.png" style="height:150px;width: 150px;border-radius: 50%" />
-												
-												<h4>Chimi</h4>
-												<h4>PROGRAMME LEADER, ARCHITECTURE DEPT</h4>
-												<h5>chimi.cst@rub(dot)edu(dot)bt</h5>
-												
-												
-											</div>
-										</div>
-										
-										<div class="clearfix"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-		
-		
-		
-								</div>
-							</div>						
-					</div>
-
-				</section> 
-			<div class="teachers">
-	<div class="container">
-		
-		<div class="team-grids">
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/schuki.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
 					
-						
-						<h4>Sonam Chuki</h4>
-						<h4>Asst. Professor</h4>
-						<h5>sonamchuki.cst@rub(dot)edu(dot)bt</h5>
-						
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/sumitra.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
-						<h4>Sumitra Ghalley</h4>
-						<h4>Asst. Lecturer</h4>
-						
-						<h5>sumitraghalley.cst@rub(dot)edu(dot)bt</h5>
-						
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-						<img src="<?php echo base_url();?>assets/img2/chimmiwangmo.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Jigme Thinley</h4>
-						<h4>Asst. Lecturer</h4>
-						
-						<h5>jigmethinley.cst@rub(dot)edu(dot)bt</h5>
-						
-				</div>
-			</div>
-
-			</div>
-			
-			
-			
-		</div> 
-		<br>
-		<br>
-		<br>
-		<br>
-		
-
-		<div class="container">
+		<div class="teachers">
+	 <div class="container">
 		
 		<div class="team-grids">
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/jamyang_p.dorji.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Jamyan P. Dorji</h4>
-						<h4>Asst. Lecture</h4>
+					
+					<img src="<?php echo base_url();?>assets/img2/sc.png" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Sangay Choden</h4>
+						<h4>ASSISTANT FINANCE OFFICERr</h4>
 						
-						<h5>jamyangpdorji.cst@rub(dot)edu(dot)bt</h5>
-						
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/penden_wangchuk.jpg" style="height:150px;width: 150px;border-radius:50% " alt=""/>
-						
-						
-						<h4>Penden Wangchuk</h4>
-						<h4>Asst. Lecturer</h4>
-						<h5>pendenwangchuk.cst@rub(dot)edu(dot)bt</h5>
+						<h5>sangaychoden(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b> Contact No.# +975-16553402(O)/17366608E</b>
 						
 				</div>
 			</div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-						<img src="<?php echo base_url();?>assets/img2/sebha_saleem.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Sehba Saleem</h4>
-						<h4>Asst. Lecturer</h4>
+					<img src="<?php echo base_url();?>assets/img2/ks.png" style="height:150px;width: 150px;border-radius: 50%"/>
+						<h4>Khem Sharma</h4>
+						<h4>Accountant</h4>
 						
-						<h5>sehbasaleem.cst@rub(dot)edu(dot)bt</h5>
+						<h5>khemsharma(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-16553402(O)/17604769</b>
 						
 				</div>
 			</div>
-
-			</div>
+			
+	
 			
 			
+		</div>
 	</div>
+	
+</div> 
 </div>
-</div>
-</div>
-</div>
+
+	
+	
+</div> 
 </section>
-			 <div class="bg-primary" class="du-newsletter">
+<br>
+<br>
+ <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
@@ -252,12 +161,6 @@
 
             </div>
         </div>
-
-
-					
-
-
-
 
 
 

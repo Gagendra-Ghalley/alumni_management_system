@@ -10,32 +10,22 @@
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <!-- <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" />  -->
-  
-     <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
-     <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
-    
+    <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-   <!--  <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" /> -->
-
     <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
     <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css1/cubeportfolio.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css1/slider.css" rel="stylesheet">
-     <link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
-     <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
-     <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
-      <link href="<?php echo base_url();?>assets/css1/effect.css" rel="stylesheet">
-  
-
-
+    <link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
+    <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css1/effect.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <!-- Header-->
@@ -98,10 +88,10 @@
                         <li data-target="#carousel-example-generic" data-slide-to="3"></li>
                     </ol>
 
-                    <!-- Wrapper for slides -->
+                
                     <div class="carousel-inner " role="listbox">
 
-                        <!-- First slide -->
+                   
                         <div class="item active deepskyblue">
                              <div class="hovereffect">
                               <figure><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 350px" alt=""></figure>
