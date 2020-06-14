@@ -41,12 +41,13 @@
            //redirect url - http://localhost/app/las04/Settings/inserted/  
                 //main - segment(1)  
                 //inserted - segment(2)  
-                echo '<p class="text-success">Data Inserted</p>';  
+                echo '<p class="text-success">Data inserted successfully</p>';  
            }  
-           if($this->uri->segment(2) == "updated")  
+            if($this->uri->segment(2) == "notinserted2")  
            {  
-                echo '<p class="text-success">Data Updated</p>';  
-           }  
+                echo '<p class="text-danger">Data not inserted</p>'; 
+
+           }   
            ?>  
            <?php  
            if(isset($user_data))  
@@ -108,18 +109,20 @@
 
 
            <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Year of Graduation</label>  
-                <input style="width:400px;" type="text" id="amount" class="form-control"  name="quantity" placeholder="Year of Graduation" > 
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Year of Graduation / Faculty</label>  
+                <input style="width:400px;" type="text" id="amount" class="form-control"  name="quantity" placeholder="Eg:2020" required/> 
                 <span class="text-danger"><?php echo form_error("Department"); ?></span>  
            </div>
 
            <div class="form-group">  
                 <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter ID (Year of Graduation)</label>  
-                <input  style="width:400px;" type="text" id="amount" class="form-control"  name="quantity1" placeholder="Year of Graduation" > 
+                <input  style="width:400px;" type="text" id="amount" class="form-control col-sm-3 col-md-4 col-lg-2 control-label"  name="quantity1" placeholder="4108" required/> 
                 <span class="text-danger"><?php echo form_error("Department"); ?></span>  
            </div>
+           <br><br><br>
            <div class="form-group">  
-                <input  type="submit" name="insert" value="Insert" class="btn btn-info" />  
+                <input  type="submit" name="insert" value="Insert" class="btn btn-info  pull-center" />
+                &nbsp;&nbsp;&nbsp; <input type="reset" name="insert" value="Reset" class="btn btn-info " />  
            </div>
                  
            <?php  

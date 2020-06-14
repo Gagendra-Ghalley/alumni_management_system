@@ -47,42 +47,45 @@
             <div class="row">
             	  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/delete_data/<?php $row->cid;?>/" class="form-group">
                          
-              
+           
           
            
            <div class="col-lg-6">
           
 
-          <a href="#" class="delete_data btn btn-lg btn-danger btn-block" id="<?php echo $row->cid; ?>">Delete</a> 
+          <input type="hidden" href="#" class="delete_data btn btn-lg btn-danger btn-block" id="<?php echo $row->cid; ?>"> 
            
           </div>
           <br><br><br><br><br><br>
            </form>
 
-           <form >
+       <!--     <form >
                <div class="col-lg-6">
                <a href="<?php echo base_url();?>index.php/Settings/viewUsers/" class="btn btn-lg btn-info btn-block">Back</a>
            </div>
-           </form>
+           </form> -->
            
     </div>
 
 </div>
    
       <script>  
-      $(document).ready(function(){  
-           $('.delete_data').click(function(){  
-                var id = $(this).attr("id");  
+      // $(document).ready(function(){ 
+      window.onload= function(){
+       document.forms[0].submit(id="<?php echo $row->cid; ?>");
+           
                 if(confirm("Are you sure you want to delete this?"))  
                 {  
                      window.location="<?php echo base_url()?>index.php/Settings/delete_data/<?php $row->cid?>/"+id;  
                 }  
                 else  
                 {  
+                     
                      return false;  
                 }  
-           });  
-      });  
+         
+           }  
+      
       </script>
 
       </html>  

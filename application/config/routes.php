@@ -51,4 +51,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'ATD/index';
 $route['404_override'] = '';
+// $route['send'] = 'index.php/sendmail/send';
 $route['translate_uri_dashes'] = FALSE;

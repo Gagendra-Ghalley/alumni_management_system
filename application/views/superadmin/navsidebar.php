@@ -51,8 +51,15 @@
                     <li>
                         <a href="<?php echo base_url()?>index.php/ATD/dashboard/"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
+                      <li>
+                                    <a href="<?php echo base_url()?>index.php/Settings/Registered_user/"><i class="fa fa-user">&nbsp</i>Registered Users</a>
+                                </li>
                      <li>
-                        <a href="<?php echo base_url()?>index.php/sendemail"><i class="fa  fa-envelope-o"></i>&nbsp;Send Email</a>
+                        <a href="<?php echo base_url()?>index.php/sendemail/"><i class="fa  fa-envelope-o"></i>&nbsp;Send Email</a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo base_url()?>index.php/Settings/passwordemail/"><i class="fa fa-key"></i>&nbsp;Forget password</a>
                     </li>
 
                    <!--  <li>
@@ -77,6 +84,12 @@
                         </ul>
                     
                     </li> -->
+                    <li>
+                       <a href="<?php echo base_url()?>index.php/Settings/Profilepassword/">
+                            
+                      <i class="fa fa-key">&nbsp</i>Change your password </a>
+                    </li>
+                    
                      <li>
                         <a href="<?php echo base_url()?>index.php/Settings/addevents/"><i class="fa  fa-calendar-o"></i>&nbsp;Add Events</a>
                     </li>
@@ -153,6 +166,9 @@
                               <li>
                                     <a href="<?php echo base_url()?>index.php/Settings/student_detail/"><i class="fa fa-user">&nbsp</i>Student Details</a>
                                 </li>
+
+                                
+
 
                                         <!-- <li>
                                 <a href="<?php echo base_url();?>index.php/Settings/assignAgencies/">Assign agency heads</a>

@@ -1,8 +1,5 @@
- <!DOCTYPE html>
-<html>
-
-
-<head>
+	 <html>  
+ <head>
  
    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +37,8 @@
 
       <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
   
-  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
   
 
@@ -87,42 +85,76 @@
 
 </head>
 
-
-<body class="body-Login-back" >
-
-    <div class="container">
-       
+ 
+ 
+ 	
+  <body class="body-Login-back">
+     <br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br>
+    
+  <!-- </body> -->
+<div class="container">
+     
         <div class="row">
             <div class="col-md-4 col-md-offset-4 text-center logo-margin ">
               <!-- <h1 class="panel-title"  ><font size="6">CST Alumni Management system</font></h1> -->
                 </div>
             <div class="col-md-5 col-md-offset-3 ">
+                
+      <div class="row">
+        <div class="col-md-8" style="margin:0 auto; float:center;">
+         
+          <br />
+          <?php
+
+          if($this->session->flashdata("message"))
+          {
+            echo "
+            <div class='alert alert-success'>
+              ".$this->session->flashdata("message")."
+            </div>
+            ";
+          }
+          ?>
+        
+        </div>
+      </div>
+    
                 <div class="login-panel panel panel-default">                  
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Log In</h3>
+                        <h3 class="panel-title">Password Reset</h3>
                     </div>
                     <div class="panel-body login">
-                        <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/login_validate" class="form-group">
+                        <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/send/" class="form-group">
                             
-                            	<div class="form-group">
+                              <div class="form-group">
                                
-                                    <input class="form-control" placeholder="CID" name="cid" type="text" autofocus required/>
-                                </div>
+                                    <label>Enter Registered cid/Student_no</label>
+                        <input type="text" name="cid" class="form-control" placeholder="Enter registered cid" required /><br>
+                 
+
+                  
+                             </div>
+
+             
+              
+            
+                                      
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" class="pass" type="password" required/>
-                                </div>
-                               <!--  <a href="<?php echo base_url();?>index.php/ATD/Forgetpassword">Forget password?</a> -->
+                                     <label>Enter Registered email</label>
+                          <input type="email" name="password" class="form-control" placeholder="Enter registered email" required />
+                                        </div>
+                             
                                  
-                                <input type="submit" value="Login" class="btn btn-lg btn-success btn-block"/>
+                                
+                            
+                              <input type="submit" name="submit" value="Send" class="btn btn-success" />
+                         
                                
                               
 
                            
                         </form>
-                        <form accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/Forgetpasswordemail">
-                        <input type="submit" value="Forgot password?" class="btn btn-lg btn-warning btn-block"/>
-                        <br>
-                       </form>
+                        
                     </div>
                     <div id="errors"><?php echo validation_errors();?></div>
                 </div>
@@ -130,46 +162,6 @@
         </div>
     </div>
 
-	
-	
-	
-
-  <!--footer-->
-
-
-     <!-- Core Scripts - Include with every page -->
-    <script src="<?php echo base_url();?>assets/plugins/jquery-1.10.2.js"></script>
-    <script src="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="<?php echo base_url();?>assets/plugins/metisMenu/jquery.metisMenu.js"></script>
-     <!-- Main jQuery & other 3rd party Library -->
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>
-  
-  <!-- Feature box equal height JS -->
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.equalheights.js"></script>  
-  <!-- UI bottom to top JS -->
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.ui.totop.js"></script>
-  <!-- Subscription JS -->
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/sForm.js"></script>  
-  <!-- Animation JS -->
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/wow.js"></script>
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/device.min.js"></script>
-  <!-- Menu JS -->
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/flexy-menu.js"></script>
-  <!-- Text rotator JS -->
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.simple-text-rotator.min.js"></script>
-  <!-- Smooth Scroll JS -->
-  <script type="text/javascript" src="j<?php echo base_url();?>assets/js1/library/smoothscroll.js"></script>
-  
-  <!-- Testimonila JS -->
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.cubeportfolio.min.js"></script>
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
-  <!-- Custom script -->
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
-  <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
- 
-</body>
-
 </html>
+
 

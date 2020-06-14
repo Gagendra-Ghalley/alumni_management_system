@@ -8,10 +8,25 @@
             <br><br><br>
             <div class="row">
                 <!-- Welcome -->
-                <div class="col-lg-12">
+                <div class="col-lg-10">
  
                    <div class="col-md-6">
             <form onSubmit="return false;">
+
+                <div>
+                     <?php  
+           if($this->uri->segment(2) == "deleted")  
+           {  
+           
+                echo ' <div class="col-lg-12 panel-body">
+                    <b><p class="text-success">User has been deleted successfully</p></b>
+                    </div><br><br>';
+
+            }  
+           
+           ?> </div>
+           <br><br>
+           
                 <div class="input-group">
                  
                     <input class="form-control" id="search" placeholder="Search by CID ">
@@ -32,13 +47,13 @@
         
      
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-11">
 
     
  <div class="panel panel-primary">
                         <div class="panel-heading">
                             
-                            <i class="fa fa-bar-chart-o fa-fw"></i>
+                            <i class="fa fa-bar-chart-o"></i> 
                            
                             <div class="pull-right">
                                 

@@ -94,7 +94,7 @@
                    
                         <div class="item active deepskyblue">
                              <div class="hovereffect">
-                              <figure><img src="<?php echo base_url();?>assets/img1/slider1.png" style="height: 350px" alt=""></figure>
+                              <figure><img src="<?php echo base_url();?>assets/Images1/slider1.png" style="height: 350px" alt=""></figure>
                                 <div class="overlay">
                                    
                                 </div>
@@ -143,7 +143,12 @@
 
                         <!-- Second slide -->
                         <div class="item skyblue">
-                            <figure><img src="<?php echo base_url();?>assets/img1/slider2.png" style="height: 350px" alt=""></figure>
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/Images1/slider2.png" style="height: 350px" alt=""></figure>
+                            <div class="overlay">
+                                   
+                                </div>
+                            </div>
                             <div class="carousel-caption">
 
                                 <h1 style="text-transform: uppercase;font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of all alumni</h1>
@@ -178,7 +183,12 @@
 
                         <!-- Third slide -->
                         <div class="item darkerskyblue">
-                            <figure><img src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 350px" alt=""></figure>
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/Images1/slider3.png" style="height: 350px" alt=""></figure>
+                            <div class="overlay">
+                                   
+                                </div>
+                            </div>
                             <div class="carousel-caption">
 
                                 <h1 style="text-transform: uppercase; font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of all alumni</h1>
@@ -214,7 +224,12 @@
                         </div>
                         <!--fourth slide-->
                         <div class="item darkerskyblue">
-                            <figure><img src="<?php echo base_url();?>assets/img1/slider4.png" style="height: 350px" alt=""></figure>
+                            <div class="hovereffect">
+                            <figure><img src="<?php echo base_url();?>assets/Images1/slider4.png" style="height: 350px" alt=""></figure>
+                            <div class="overlay">
+                                   
+                                </div>
+                            </div>
                             <div class="carousel-caption">
 
                                 <h1 style="text-transform: uppercase;font-family:bold;text-shadow: 1px 1px 1px #66ccff">Working diligently for the benefit of all alumni</h1>
@@ -250,8 +265,7 @@
 
                     </div>
                     
-
-                    <!-- Controls -->
+                         <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -259,7 +273,8 @@
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
-                    </a>
+                    </a>  
+                   
                 </div>
               
 
@@ -278,11 +293,27 @@
       <div class="card-title text-left bold">UP COMMING EVENT</div><br>
        <?php foreach($eventdetail as $row): ?>
         <div class="row padding">
+
+            <div class="col-lg-7 col-md-7 col-sm-12"data-wow-delay="0.2s" >
+                
+
+                            <div class="hovereffect">
+                             <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/Images1/slider4.png" style="height: 200px" ></span>
+                                <div class="overlay">
+                                    <h2>Upcoming Event</h2>
+                                    
+                                </div>
+                        </div>
+                    
+                   
+         
+
             <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
                  
                     <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
                 </div>
+
             </div>
             <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">

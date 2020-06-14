@@ -11,7 +11,8 @@ class Email_Model extends CI_Model {
 		
 		parent::__Construct();
 	//$config['protocol'] = 'smtp';
-    	$config['protocol'] = 'mail';
+		$this->load->library('email');
+    	$config['protocol'] = 'smtp';
 	$config['smtp_crypto'] = 'ssl';
     	$config['smtp_host'] = 'smtp.gmail.com';
     	$config['smtp_port'] = 465;
@@ -22,7 +23,7 @@ class Email_Model extends CI_Model {
     	$config['newline'] = "\r\n";
     	$config['wordwrap'] = TRUE;
     	$config['smtp_timeout'] = 30;
-	$this->load->library('email');
+	
     	/*$this->email->initialize($config);
     	$this->email->from('las@moic.gov.bt', 'LAS admin');
     	$this->email->to('dthapa@dit.gov.bt');

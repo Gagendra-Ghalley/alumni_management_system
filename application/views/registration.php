@@ -101,10 +101,10 @@
                                
                                     <input class="form-control" placeholder="CID" name="cid" type="text" autofocus required/>
                                 </div>
-                                <!-- <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter email" name="email" type="email" autofocus required>
                                 </div>
-                               -->
+                              
                                 
                                 <input type="submit" value="Register" class="btn btn-lg btn-success btn-block"/>
                                 <br>
