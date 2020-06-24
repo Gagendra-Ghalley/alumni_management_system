@@ -22,13 +22,13 @@
           
            	
 
-          <div class="row profile">
+          <div id="page-wrapper" style="margin-left: 0px">
             
 				
 				
-				<div class="col-md-8"style=";border: 5px solid #f6f6f6;margin-top: 10px;background-color: #e0dede">
+				<div class="col-lg-12"style=";border: 5px solid #f6f6f6;margin-top: 10px;background-color: #e0dede">
 					<div class="panel-heading" style="background-color: #0a97b0">
-		              <i class="fa fa-bar-chart-o fa-fw"></i> <span style="color: #fff" >Change Your Password</span>
+		              <i class="fa fa-bar-chart-o fa-fw" style="color: #fff"></i> <span style="color: #fff" >Change Your Password</span>
 		            </div>
 					<br>
 					<!-- <div class="form-group col-md-5"> -->
@@ -97,8 +97,7 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
+<div class="bg-primary" style="margin-top: 96px;">
             <div class="container">
 
                
@@ -109,14 +108,13 @@
                 <div class="col-md-6 col-sm-12">
 
 
-                    <p>@Alumni Management System</p>
+                    <p>Alumni Management System@2020</p>
 
                 </div>
 
             </div>
         </div>
       </div>
-    </div>
 <script type="text/javascript">
 	
 	function updateContact() {

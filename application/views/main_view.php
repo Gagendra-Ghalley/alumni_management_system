@@ -21,14 +21,14 @@
  
                     </div>
                 </div>
-          <div class="row profile">
+          <div id="page-wrapper" style="margin-left: 0px;">
             
 
             
   
       <br /><br /><br />  
       <div class="panel-heading" style="background-color: #0a97b0">
-              <i class="fa fa-bar-chart-o fa-fw"></i> <span style="color: #fff" >Insert student data</span>
+              <i class="fa fa-bar-chart-o fa-fw" style="color: #fff"></i> <span style="color: #fff" ><b>Insert student data</b></span>
             </div><br>
       <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation1">  
            <?php  
@@ -150,7 +150,7 @@
            </div>
 
            <div class="form-group">  
-               <input  type="submit" name="insert" value="Insert" class="pull-center btn btn-info"  />
+               <input  type="submit" name="insert" value="Insert" class=" btn btn-info"  />
                 &nbsp;&nbsp;&nbsp; <input type="reset" name="insert" value="Reset" class="btn btn-info " />
            </div>      
            <?php  
@@ -161,8 +161,7 @@
   </div>
 
   </div>
-   <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
+  <div class="bg-primary" style="margin-top: 100px;">
             <div class="container">
 
                
@@ -173,14 +172,13 @@
                 <div class="col-md-6 col-sm-12">
 
 
-                    <p>@Alumni Management System</p>
+                    <p>Alumni Management System@2020</p>
 
                 </div>
 
             </div>
         </div>
       </div>
-    </div>
  
    
 <script>

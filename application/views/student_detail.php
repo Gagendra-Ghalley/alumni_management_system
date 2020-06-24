@@ -1,38 +1,32 @@
 
-<html>  
- <head>  
-    <title>Insert</title>   
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />  
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
 
-   
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />   -->
-   <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-   
-    <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-   
-    <!-- Page-Level CSS -->
-    <link href="<?php echo base_url();?>assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
-
- </head>  
-  
- 
- 
  <body>  
          <div id="page-wrapper">
 
-          
+           <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                </div>
+                <!--End Page Header -->
+            </div>
+             <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
+
+ 
+                    </div>
+                </div>
+ 
           <div class="row profile">
             
 
             
 
      
-      <h2>Student Details</h2><br />
+      <h3 style="margin-left: 20px">Student Details</h3><br />
       <!-- <div class="panel-body"> -->
       <div >
         <div class="col-lg-10">
@@ -100,27 +94,5 @@
     </div>
   </div>
 </div>
- <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
-            <div class="container">
-
-               
-
-
-                <div class="col-lg-12">
-
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>@Alumni Management System</p>
-
-                </div>
-
-            </div>
-        </div>
-      </div>
-    </div>
+ 
   
-
- </body>  
- </html>  
