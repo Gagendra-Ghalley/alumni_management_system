@@ -212,9 +212,9 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 		
 				$dat['status1']='approved';
 				// $date= new DateTime('19:24:15 06/13/2013')
-				$format = "%Y-%m-%d %h:%m:%s %p";
-				$da=array('date' => mdate($format));
-		  		;
+				// $format = "%Y-%m-%d %h:%m:%s %p";
+				// $da=array('date' => mdate($format));
+		  // 		;
 
 		  		$email['email']=$this->input->post('email');
 
