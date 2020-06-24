@@ -32,9 +32,9 @@
                       <br>
 
 
-<?php echo @$error; ?> 
-  <?php echo form_open_multipart('Settings/addevent1');?>
-  <?php echo "<input type='file' name='image' size='20' />"; ?>
+                    <?php echo @$error; ?> 
+                      <?php echo form_open_multipart('Settings/addevent1');?>
+                      <?php echo "<input type='file' name='image' size='20' />"; ?>
   
                         <div class="panel-body">
                             <div class="row">
@@ -69,10 +69,10 @@
                                    <div class="col-md-12">
                                   <p></p>
             
-
+                                             
                             
                                    </div>
-                                   <?php echo "<input type='submit' name='Post the Event' class='btn-default du-common-property' /> ";?>
+                                   <?php echo "<input type='submit' name='Post the Event' class='btn btn-info' /> ";?>
                           <?php echo "</form>"?>
                           <!-- to update both image and data, use input type instead of button-leki -->
                               

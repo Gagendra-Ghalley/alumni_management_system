@@ -5,7 +5,6 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
-    <!-- Core CSS - Include with every page -->
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
@@ -47,8 +46,7 @@
         <div class="row">
           <div class="col-md-4">
           	<h1 class="navbar-brand navbar-brand_"><a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
-            
-            <!-- <h1 style="position:relative;right:5%;"><font size="4">CST Alumni Management System</font></h1> -->
+         
           </div>
           <div class="col-md-8">
             <ul class="flexy-menu orange">
@@ -91,15 +89,15 @@
 									<li><a href="<?php echo base_url();?>index.php/ATD/faculty"><strong style="color: #fff">MANAGEMENT</strong></a></li>
 									<li class="active"><a href="<?php echo base_url();?>index.php/ATD/civil_engineering" ><strong style="color: #fff">CIVIL ENGINEERING AND ENGINEERING GEOLOGY DEPARTMENT</strong></a></li>
 									<li><a href="<?php echo base_url();?>index.php/ATD/architecture"><strong style="color: #fff">ARCHITECTURE DEPARTMENT</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">M.E. RENEWABLE ENERGY AND ELECTRICAL ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/electrical"><strong style="color: #fff">M.E. RENEWABLE ENERGY AND ELECTRICAL ENGINEERING DEPARTMENT</strong></a></li>
 
-									<li><a href="#civil-engineering"><strong style="color: #fff">ELECTRONICS AND COMMUNICATION ENGINEERING DEPARTMENT</strong></a></li>
-									<li><a href="#electronic-engineering"><strong style="color: #fff">INFORMATION TECHNOLOGY DEPARTMENT</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">SCIENCE AND HUMANITIES DEPARTMENT</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">FINANCE AND ACCOUNTS SECTION ENGINEERING DEPARTMENT</strong></a></li>
-									<li><a href="#electronic-engineering"><strong style="color: #fff">ADMINISTRATION</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">LIBRARY</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">ICT UNIT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/electronic"><strong style="color: #fff">ELECTRONICS AND COMMUNICATION ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/it"><strong style="color: #fff">INFORMATION TECHNOLOGY DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/science"><strong style="color: #fff">SCIENCE AND HUMANITIES DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/finance"><strong style="color: #fff">FINANCE AND ACCOUNTS SECTION ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/admin"><strong style="color: #fff">ADMINISTRATION</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/lib"><strong style="color: #fff">LIBRARY</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/ict"><strong style="color: #fff">ICT UNIT</strong></a></li>
 								</ul>
 							</div>
 							
@@ -154,7 +152,8 @@
 		<div class="team-grids">
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/omkafley.jpg" style="height:150px;width: 150px;border-radius: 50%"/> 
+					
+					<img src="<?php echo base_url();?>assets/img2/omkafley.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
 						<h4>Om Kafley</h4>
 						<h4>Asst. Professor</h4>
 						
@@ -164,7 +163,7 @@
 			</div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/tt.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+					<img src="<?php echo base_url();?>assets/img2/tt.jpg" style="height:150px;width: 150px;border-radius: 50%"/>
 						<h4>Tshering Tobgay</h4>
 						<h4>Lecturer</h4>
 						

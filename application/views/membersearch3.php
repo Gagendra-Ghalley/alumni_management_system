@@ -5,28 +5,20 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
-    <!-- Core CSS - Include with every page -->
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-  <!--  <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> -->
-      <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-      <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
-       <link href="css/bootstrap.min.css" rel="stylesheet">  
-   <!-- Main CSS -->
-   <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
-  <!-- Animate CSS -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
-  <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
-  <!-- Font Awesome Css -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
-  <!-- Menu -->
-  <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
-  <!-- Testimonial CSS -->
-  <link href="<?php echo base_url();?>assets/css1/cubeportfolio.min.css" rel="stylesheet">
-  
-     <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
-     <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
+    <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
+    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
+    <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css1/cubeportfolio.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
+   <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
   
   
   <!-- Font  -->
@@ -87,11 +79,11 @@
     </form>
 
       
-        <div class="col-md-10 img-thumbnail" style=" margin-top: 150px;height: 300px">
-              <div class="login-panel panel panel-default">   
-                <div class="panel-heading">
+        <div class="col-md-10 img-thumbnail" style=" margin-top: 100px;height: 300px;color: #fff">
+               
+                <div class="panel-heading" style="background: #00aaff;">
                  
-                  <h4 class="panel-title" >Member Search</h4>
+                  <h4 class="panel-title "  >Member Search</h4>
 
               </div>
 
@@ -121,7 +113,7 @@
                             
                             
 
-                            <select name="f1" form="f" style="height: 30px; width: 250px">
+                            <select name="f1" form="f" style="height: 30px; width: 250px;color: #111">
                                 <option value="" form="f">Select Item</option>
                        <?php foreach($item as $key):?>
                         <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
@@ -153,17 +145,14 @@
 
            
 
-        </div>
-      </div>
+            </div>
 
     </div>
    
 
 
 
-
-        <div class="bg-primary" class="du-newsletter">
-            <div class="bg-primary" class="du-newsletter">
+  <!-- <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
@@ -175,10 +164,7 @@
                 </div>
 
             </div>
-        </div>
-
-        </div>
-
+        </div> -->
     
 
 

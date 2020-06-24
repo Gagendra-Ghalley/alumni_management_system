@@ -88,18 +88,18 @@
 							<h3 class="text-center"><strong style="color: #fff">Department</strong></h3>
 							
 								<ul class="du-choose-list">
-									<li class="active"><a href="<?php echo base_url();?>index.php/ATD/faculty"><i class="icon-heart"></i><strong style="color: #fff">MANAGEMENT</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/civil_engineering" ><strong style="color: #fff">CIVIL ENGINEERING AND ENGINEERING GEOLOGY DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/faculty"><strong style="color: #fff">MANAGEMENT</strong></a></li>
+									<li class="active"><a href="<?php echo base_url();?>index.php/ATD/civil_engineering" ><strong style="color: #fff">CIVIL ENGINEERING AND ENGINEERING GEOLOGY DEPARTMENT</strong></a></li>
 									<li><a href="<?php echo base_url();?>index.php/ATD/architecture"><strong style="color: #fff">ARCHITECTURE DEPARTMENT</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">M.E. RENEWABLE ENERGY AND ELECTRICAL ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/electrical"><strong style="color: #fff">M.E. RENEWABLE ENERGY AND ELECTRICAL ENGINEERING DEPARTMENT</strong></a></li>
 
-									<li><a href="#civil-engineering"><strong style="color: #fff">ELECTRONICS AND COMMUNICATION ENGINEERING DEPARTMENT</strong></a></li>
-									<li><a href="#electronic-engineering"><strong style="color: #fff">INFORMATION TECHNOLOGY DEPARTMENT</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">SCIENCE AND HUMANITIES DEPARTMENT</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">FINANCE AND ACCOUNTS SECTION ENGINEERING DEPARTMENT</strong></a></li>
-									<li><a href="#electronic-engineering"><strong style="color: #fff">ADMINISTRATION</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">LIBRARY</strong></a></li>
-									<li><a href="#mechanical-engineering"><strong style="color: #fff">ICT UNIT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/electronic"><strong style="color: #fff">ELECTRONICS AND COMMUNICATION ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/it"><strong style="color: #fff">INFORMATION TECHNOLOGY DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/science"><strong style="color: #fff">SCIENCE AND HUMANITIES DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/finance"><strong style="color: #fff">FINANCE AND ACCOUNTS SECTION ENGINEERING DEPARTMENT</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/admin"><strong style="color: #fff">ADMINISTRATION</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/lib"><strong style="color: #fff">LIBRARY</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/ict"><strong style="color: #fff">ICT UNIT</strong></a></li>
 								</ul>
 							</div>
 						

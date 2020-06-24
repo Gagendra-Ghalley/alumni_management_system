@@ -117,7 +117,8 @@
 
               <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-2x"></i>
+                   
+                        <i class="fa fa-user fa-3x"></i>
                     </a>
                     <!-- dropdown user-->
 <!-- 

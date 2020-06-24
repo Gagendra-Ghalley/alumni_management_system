@@ -3,12 +3,21 @@
         <div id="page-wrapper">
 
             <div class="row">
-              <!--   Page Header -->
+                <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px ">Change Your Password</h2> <div class="clockwrapper"><div id="clock"></div>,<?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
-               <!--  End Page Header -->
-             </div> 
+                <!--End Page Header -->
+            </div>
+             <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
+
+ 
+                    </div>
+                </div>
 
           
            	
@@ -17,8 +26,11 @@
             
 				
 				
-				<div class="col-md-5">
-					
+				<div class="col-md-8"style=";border: 5px solid #f6f6f6;margin-top: 10px;background-color: #e0dede">
+					<div class="panel-heading" style="background-color: #0a97b0">
+		              <i class="fa fa-bar-chart-o fa-fw"></i> <span style="color: #fff" >Change Your Password</span>
+		            </div>
+					<br>
 					<!-- <div class="form-group col-md-5"> -->
 						<!-- <h3>Change your password</h3><br/> -->
 						<label>Enter Old password</label><br/>
@@ -28,7 +40,7 @@
 						<label>Confirm New password</label><br/>
 						<input type="password" class="form-control" id="newconfirm"/>
 						<br/>
-						<button class="btn btn-warning" onclick="changePassword()">Change password</button>
+						<button class="btn btn-info" onclick="changePassword()">Change password</button>
 					<!-- </div> -->
            </div>
               
@@ -85,7 +97,26 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="bg-primary" class="du-newsletter">
+      <div class="bg-primary" class="du-newsletter" >
+            <div class="container">
 
+               
+
+
+                <div class="col-lg-12">
+
+                <div class="col-md-6 col-sm-12">
+
+
+                    <p>@Alumni Management System</p>
+
+                </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
 <script type="text/javascript">
 	
 	function updateContact() {

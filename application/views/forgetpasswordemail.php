@@ -1,43 +1,28 @@
-	 <html>  
- <head>  
-    <title>Insert</title>   
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />  
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
+	 
+ <div id="page-wrapper">
 
-   
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />   -->
-   <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-   
-    <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-   
-    <!-- Page-Level CSS -->
-    <link href="<?php echo base_url();?>assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
+<div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                </div>
+                <!--End Page Header -->
+            </div>
+             <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
 
- </head>  
-  
  
- 
- <body>  
-
- 	<!DOCTYPE html>
-<html>
-  <head>
-    <title>Email with Attachment </title>
+                    </div>
+                </div>
     
-   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <br /> <br /> <br /> 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8" style="margin:0 auto; float:none;">
-          <h3 align="center">Alumni Management System</h3>
+
+      <div class="row ">
+         
+        <div class="col-md-8" style=" float:none;border: 5px solid #f6f6f6;margin-top: 60px;background-color: #e0dede;margin-left: 20px;">
+         
           <br />
           <?php
 
@@ -50,8 +35,14 @@
             ";
           }
           ?>
-          <h4 align="center">Password Reset</h4>
-          <br />          
+          
+            <div class="panel-heading" style="background-color: #0a97b0">
+              <i class="fa fa-bar-chart-o fa-fw"></i> <span style="color: #fff" >Password Reset</span>
+            </div>
+                       
+        
+          <br />
+            <br />          
           <form method="post" method="post" action="<?php echo base_url(); ?>index.php/sendemail/send1" enctype="multipart/form-data">
             <div class="row">
               <div class="col-md-6">
@@ -69,13 +60,38 @@
               </div>
             </div>
             <div class="form-group" align="center">
-              <input type="submit" name="submit" value="Send Message" class="btn btn-info" />
+              <input type="submit" name="submit" value="Reset password" class="btn btn-info" />
             </div>
           </form>
+
+        </div>
+     
+   
+  </div>
+
+  </div>
+  <div class="bg-primary" class="du-newsletter">
+      <div class="bg-primary" class="du-newsletter" >
+            <div class="container">
+
+               
+
+
+                <div class="col-lg-12">
+
+                <div class="col-md-6 col-sm-12">
+
+
+                    <p>@Alumni Management System</p>
+
+                </div>
+
+            </div>
         </div>
       </div>
     </div>
-  </body>
-</html>
 
+   
+
+ 
 

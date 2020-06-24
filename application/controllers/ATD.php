@@ -114,6 +114,43 @@ $data['editdetail']=$this->sm->sortevent();
 			$this->load->view('architecture');
 		}
 
+
+	public function electrical(){
+		
+		
+			$this->load->view('electrical_engineering');
+		}
+		public function electronic(){
+		
+		
+			$this->load->view('electronic_engineering');
+		}
+		public function it(){
+		
+		
+			$this->load->view('information_technology');
+		}
+
+
+public function science(){
+		
+		
+			$this->load->view('science_humanity');
+		}
+
+		public function finance(){
+		
+		
+			$this->load->view('finance');
+		}
+
+		public function admin(){
+		
+		
+			$this->load->view('administration');
+		}
+
+
 	public function donate(){
 		
 		
