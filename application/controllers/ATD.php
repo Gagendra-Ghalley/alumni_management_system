@@ -13,6 +13,7 @@
 		
 		parent::__Construct();
 		date_default_timezone_set("Asia/Thimphu");
+		$this->load->helper(array('form', 'url'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->load->model('Staff_model','sm');
@@ -23,7 +24,7 @@
 		$this->load->model('Leave_model','lm');
 		$this->load->model('Holidays','hm');
 		$this->load->model('Messages_model','mm');
-		// $this->load->model('Sendemail','s');
+		// // $this->load->model('Sendemail','s');
 		// $this->load->library('../controllers/sendemail.php');
 		$this->header['messages'] = $this->mm->getMessages();
 		$this->header['unreadm']=$this->mm->getCountMessages();
@@ -176,24 +177,45 @@ public function science(){
 
 
 
-public function send()
-	{
+public function send(){
+$this->load->library('email');
+$mail = $this->input->post("password");
+$cid = $this->input->post("cid");
+
+	if($mail==$this->input->post("password")&&$cid == $this->input->post("cid")){
 
 		
-		$this->load->library('email');
-		$mailatd = $this->input->post("passwordatd");
-		$cidatd = $this->input->post("cidatd");
-		
+	   		$this->load->library('email');
+	         $email = $this->input->post('password');
+	         $cid = $this->input->post('cid');      	         
+	         $findemail = $this->ForgotPassword($email);
+	         $findcid = $this->cid($cid);   	         
+	         if($findemail && $findcid){
+	         	
+	           $email = $this->input->post("password");
+	           $cid = $this->input->post('cid'); 
+        	// $email = $data['email'];
+	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."' and relatedUserId='".$cid."' ");
+	       $row=$query1->result_array(); 
 
-	
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
-		    $this->email->to($mailatd);
-		    
-		
+
+	       	if ($query1->num_rows()>0){
+       		 $passwordplain = "";
+	        $passwordplain  = rand(999999999,9999999999);
+	        $newpass['password'] = md5($passwordplain);
+	        $this->db->where('email', $email);
+	        $this->db->update('bpas_logins', $newpass);
+	        // $this->db->where('email', $email);
+	        // $this->db->update('bpas_user_profiles', $newpass);
+        	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
+	      
+	        
+        	
+			
 
 			$config = Array(
 		      	'protocol' 	=> 'smtp',
-		      	'smtp_host' => 'ssl://smtp.googlemail.com',
+		      	'smtp_host' => 'smtp.googlemail.com',
 		      	'smtp_port' => 465,
 		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
 		      	'smtp_pass' => 'Wangchuk_12345', 
@@ -202,25 +224,70 @@ public function send()
 		      	'wordwrap' 	=> TRUE
 		    );
 			
-		    
-		
-	      	
+		    $this->email->initialize($config);
+
+		    $this->email->set_newline("\r\n");
+		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->to($mail);
+		   
+		    $this->email->subject('OTP from Alumni Management System');
+		   
+	        $this->email->message($message);
+
+	     
 	      
 	        if($this->email->send())
-	         {
+	        {
 	        	
-	         		$this->session->set_flashdata('message', 'Password has been sent successfully to your email!!');
+	        		$this->session->set_flashdata('message', 'Password has been sent successfully to your email!!');
 	        		redirect('ATD/Forgetpasswordemail');
 	        	
-	         }
+	        }
 
-	       else
-      			{
-	  		$this->session->set_flashdata('message', 'There is an error in email send');
-       		redirect('ATD/Forgetpasswordemail');
-	           }       	          
+	        else
+	        {
+	        	
+	        		$this->session->set_flashdata('message', 'There is an error in email send');
+	        		redirect('ATD/Forgetpasswordemail');
+	        	
+	        }       	          
 	           
 	           }
+
+	            
+
+	            }
+	              else{
+
+	          $this->session->set_flashdata('message', 'Email/CID did not match');
+	        		redirect('ATD/Forgetpasswordemail');	      
+	      		}
+
+	 		echo $this->email->print_debugger();
+
+	        
+	    }
+
+	   }
+
+	   function ForgotPassword($email)
+			 {
+			 		$this->load->library('email');
+			        $this->db->select('email');
+			        $this->db->from('bpas_logins'); 
+			        $this->db->where('email', $email); 
+			        $query=$this->db->get();
+			        return $query->row_array();
+			 }
+			function cid($cid)
+			 {
+			 		$this->load->library('email');
+			        $this->db->select('relatedUserId');
+			        $this->db->from('bpas_logins'); 
+			        $this->db->where('relatedUserId', $cid); 
+			        $query=$this->db->get();
+			        return $query->row_array();
+			 }
 	     
 
 public function register_validate(){
@@ -251,23 +318,65 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 				// $date= new DateTime('19:24:15 06/13/2013')
 				// $format = "%Y-%m-%d %h:%m:%s %p";
 				// $da=array('date' => mdate($format));
-		  // 		;
-
-		  		$email['email']=$this->input->post('email');
-
-		  		
-		  		$this->db->where('relatedUserId', $cid);
-		  		$this->db->update('bpas_logins',$da);
-		  		$this->db->where('relatedUserId', $cid);
-		  		$this->db->update('bpas_logins',$email);
+		  // 	$this->load->library('email');
+				$mail['email'] = $this->input->post("email");
+				$cid = $this->input->post("cid");	;
+				$this->db->where('relatedUserId', $cid);
+		  		$this->db->update('bpas_logins',$mail);
 		  		$this->db->where('cid', $cid);
-		  		$this->db->update('bpas_user_profiles',$email);
+		  		$this->db->update('bpas_user_profiles',$mail);
 		  		$this->db->where('relatedUserId', $cid);
 				$this->db->update('bpas_logins',$dat);
 
-  			
+				
+			$findcid = $this->cid($cid);   	         
+	         if($findcid){
+	         $mail = $this->input->post("email");
+	          $cid = $this->input->post("cid");
+	        $query1=$this->db->query("SELECT *  from bpas_logins where relatedUserId='".$cid."' ");
+	       $row=$query1->result_array(); 
 
-  			$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully registered</span> <br /><br /><br />
+
+	       	if ($query1->num_rows()>0){
+       		 
+        	$mail = $this->input->post("email");
+	
+        	 $message='<h3 align="center">Registration Successful</h3><br> Dear '.$row[0]['FirstName'].', Thank you for registration.<br>Please Update your profile after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
+	      
+	        
+        	
+			
+
+			$config = Array(
+		      	'protocol' 	=> 'smtp',
+		      	'smtp_host' => 'smtp.googlemail.com',
+		      	'smtp_port' => 465,
+		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
+		      	'smtp_pass' => 'Wangchuk_12345', 
+		      	'mailtype' 	=> 'html',
+		      	'charset' 	=> 'iso-8859-1',
+		      	'wordwrap' 	=> TRUE
+		    );
+			
+		    $this->email->initialize($config);
+
+		    $this->email->set_newline("\r\n");
+		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->to($mail);
+		   
+		    $this->email->subject('OTP from Alumni Management System');
+		   
+	        $this->email->message($message);
+
+	     // $this->db->where('relatedUserId', $cid);
+		  		// $this->db->update('bpas_logins',$da);
+		  		
+
+	      
+	        if($this->email->send())
+	        {
+	        	
+	        		$data1['message']='<br /><br /><br /><span class="alert alert-info">You have successfully registered</span> <br /><br /><br />
 			 	<a href="'.base_url().'index.php/ATD/login1/"> <button type="button" class="btn btn-warning">
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
 		              </button>
@@ -275,32 +384,45 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 		        
 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data1);
 		       
-					}
+					
 
+	        	
+	        }
+	          else
+	        {
+	        	
+	        		$data1['message']='<br /><br /><br /><span class="alert alert-info">Registration Fail</span> <br /><br /><br />
+			 	<a href="'.base_url().'index.php/ATD/login1/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
+		              </button>
+		            </a>';
+		        
+			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data1);
+		       
+					
 
+	        	
+	        }
+	    }
+	}
 
-		// 	elseif($this->session->userdata('logged_in')==2){
-		// 	$cid=$this->input->post('cid');
-			
-		// 		$data = array (
-		// 		'cid' => $cid,
-							
-		// 	);
-			
-		// 	$this->session->set_userdata($data);
-		// 	$this->load->view('regmac');
-			
-			
-		// } 
+	    }
+
+	     
 		
 		else {
 			
 			
 			
-			 if($this->session->userdata('logged_in')!='1'){
-				$this->load->view('registration');
+			$data1['message']='<br /><br /><br /><span class="alert alert-info">Registration Fail</span> <br /><br /><br />
+			 	<a href="'.base_url().'index.php/ATD/registration/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
+		              </button>
+		            </a>';
+		        
+			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data1);
 
-		}
+		
 
 
 }

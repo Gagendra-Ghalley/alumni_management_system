@@ -12,6 +12,7 @@ class Settings extends CI_Controller {
 	public function __construct() { 
 	
 	parent::__Construct();
+	date_default_timezone_set("Asia/Thimphu");
 	$this->load->helper(array('form', 'url'));
 	$this->load->library('form_validation');
 	$this->load->model('Staff_model','sm');
@@ -19,7 +20,7 @@ class Settings extends CI_Controller {
 	$this->load->model('Holidays','hm');
 	$this->load->model('Messages_model','mm');
 	$this->load->model('ATD_model','atd');
-	// $this->load->CI_Controller('sendemail');
+	$this->load->model('csv_import_model');
 	$this->header['messages'] = $this->mm->getMessages();
 	$this->header['unreadm']=$this->mm->getCountMessages();
 	$this->dataheader['header']=$this->header;
@@ -40,6 +41,12 @@ class Settings extends CI_Controller {
 		$this->load->view('viewusers',$data);
 		$this->load->view('template/includefooter');
 	}
+public function sendemail()
+	{
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('superadmin/sendemail');
+		$this->load->view('template/includefooter');
+}
 
 public function viewUsers1() {
 		
@@ -1418,7 +1425,7 @@ public function reciept()
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("csv_import_model");
 		$data['data'] = $this->csv_import_model->select();
-		$this->load->view("csv_import", $data);
+		$this->load->view("superadmin/csv_import", $data);
 		$this->load->view('template/includefooter');
 		
 		

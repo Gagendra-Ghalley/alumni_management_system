@@ -55,7 +55,7 @@
                                     <a href="<?php echo base_url()?>index.php/Settings/Registered_user/"><i class="fa fa-user">&nbsp</i>Registered Users</a>
                                 </li>
                      <li>
-                        <a href="<?php echo base_url()?>index.php/sendemail/"><i class="fa  fa-envelope-o"></i>&nbsp;Send Email</a>
+                        <a href="<?php echo base_url()?>index.php/Settings/sendemail/"><i class="fa  fa-envelope-o"></i>&nbsp;Send Email</a>
                     </li>
 
                     <li>
