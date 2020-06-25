@@ -1,10 +1,24 @@
 
         <!--  page-wrapper -->
         <div id="page-wrapper">
-
-            <div class="row">
-             
+             <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                </div>
+                <!--End Page Header -->
             </div>
+             <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
+
+ 
+                    </div>
+                </div>
+ 
+            
             <br><br><br>
             <div class="row">
                 <!-- Welcome -->
@@ -25,7 +39,7 @@
             }  
            
            ?> </div>
-           <br><br>
+          
            
                 <div class="input-group">
                  
@@ -36,21 +50,21 @@
                 </div>
             </form>
 
-            <br><br><br>
+            <br>
           
         </div>
-                </div>
+                
                 <!--end  Welcome -->
             </div>
 
 
         
      
-            <div class="row">
-                <div class="col-lg-11">
+            <div id="page-wrapper" style="margin-left: 0px">
+                <div class="col-lg-12">
 
     
- <div class="panel panel-primary">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             
                             <i class="fa fa-bar-chart-o"></i> 

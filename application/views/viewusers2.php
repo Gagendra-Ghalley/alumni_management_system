@@ -1,36 +1,24 @@
 
         <!--  page-wrapper -->
         <div id="page-wrapper">
-
             <div class="row">
                 <!-- Page Header -->
-                <!-- <div class="col-lg-12">
-                    <h1 class="page-header">View users</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
-                </div> -->
+                <div class="col-lg-12">
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                </div>
                 <!--End Page Header -->
             </div>
-
-            <div class="row">
+             <div class="row">
                 <!-- Welcome -->
-                <div class="col-lg-12">
- 
-                   <div class="col-md-6">
-           <!--  <form onSubmit="return false;">
-                <div class="input-group">
-                 
-                    <input class="form-control" id="search" placeholder="Search by CID or FirstName">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" onclick="mySearchFunction()"><i class="fa fa-search"></i></button>
-                    </span>
-                </div>
-            </form> -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
 
-            <br><br><br>
-          
-        </div>
+ 
+                    </div>
                 </div>
-                <!--end  Welcome -->
-            </div>
+ 
+         
 
 
         
@@ -46,11 +34,11 @@
             ?> 
              
      
-            <div class="row">
+            <div id="page-wrapper" style="margin-left: 0px">
                 <br>
                 <br>
 
-                <div class="col-lg-8">
+                <div class="col-lg-12">
 
     
  <div class="panel panel-primary">
@@ -129,29 +117,26 @@
 
         </div>
         <!-- end page-wrapper -->
-
-    </div>
-     <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
+        
+      <div class="bg-primary" style="margin-top: 100px;">
             <div class="container">
 
                
 
-<!-- 
+
                 <div class="col-lg-12">
 
                 <div class="col-md-6 col-sm-12">
 
 
-                    <p>@Alumni Management System</p>
+                    <p>Alumni Management System@2020</p>
 
                 </div>
 
-            </div> -->
+            </div>
         </div>
       </div>
-    </div>
-    <!-- end wrapper -->
+ 
 
 <script>
 

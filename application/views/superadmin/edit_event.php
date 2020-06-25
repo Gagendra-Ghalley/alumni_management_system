@@ -194,26 +194,7 @@
  </div>
 </div>
 
- <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
-            <div class="container">
-
-               
-
-
-                <div class="col-lg-12">
-
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>@Alumni Management System</p>
-
-                </div>
-
-            </div>
-        </div>
-      </div>
-    </div>
+ 
 
  <script>
 
