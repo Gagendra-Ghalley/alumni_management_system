@@ -1,11 +1,28 @@
-<div id="page-wrapper"  style="width: 900px; " > 
+
+<div id="page-wrapper"  style="width: 900px; " >
+          <div class="row">
+                
+                <div class="col-lg-12">
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                </div>
+               
+            </div>
+             <div class="row">
+               
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
+
+ 
+                    </div>
+                </div> 
     <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/settings/viewmember1" method="post">
     </form>
 
       
-        <div class="col-md-10" style="height: 300px">
-              <div class="login-panel panel panel-default">   
-                <div class="panel-heading">
+        <div class="col-md-12 img-thumbnail" style="height: 300px; " >
+                 
+                <div class="panel-heading bg-primary">
                  
                   <h4 class="panel-title" >Member Search</h4>
 
@@ -25,9 +42,10 @@
                 </div>
                 <br>
                 <br>
+                
             
 
-                <div class="form-group" style="width: 660px" >
+                <div class="form-group" >
                     <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 17px"> Department</label>
 
                     <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
@@ -69,27 +87,27 @@
 
            
 
-        </div>
       </div>
   </div>
-</div>
 
-    </div>
-     <div class="bg-primary" class="du-newsletter">
-            <div class="bg-primary" class="du-newsletter">
+
+  
+       <div class="bg-primary" style="margin-top: 100px;">
             <div class="container">
 
                
 
-                <div class="col-md-6">
 
-                    <p>@Alumni Management System</p>
+                <div class="col-lg-12">
+
+                <div class="col-md-12 col-sm-12">
+
+
+                    <p>Alumni Management System@2020</p>
 
                 </div>
 
             </div>
         </div>
-
-        </div>
-
+      </div>
    

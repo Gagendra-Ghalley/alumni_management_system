@@ -27,7 +27,7 @@
 				
 				
 				<div class="col-lg-12"style=";border: 5px solid #f6f6f6;margin-top: 10px;background-color: #e0dede">
-					<div class="panel-heading" style="background-color: #0a97b0">
+					<div class="panel-heading bg-primary" >
 		              <i class="fa fa-bar-chart-o fa-fw" style="color: #fff"></i> <span style="color: #fff" >Change Your Password</span>
 		            </div>
 					<br>
