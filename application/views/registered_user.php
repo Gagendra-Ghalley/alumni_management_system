@@ -20,24 +20,14 @@
   <div class="row profile">
       <h4 style="margin-left: 20px"><b>Registered Users</b></h4>
       <!-- <div class="panel-body"> -->
-      
-        <div class="col-lg-10">
-         
- <table class="panel panel-primary table table-bordered ">
-         <div class="row">
-                <div class="col-lg-10">
-
-  
- <div >
-                        <div >
-                          
-                          <!--   <i class="fa fa-bar-chart-o fa-fw"></i>Users -->
-                           
-                            <!-- <div class="pull-right"> -->
-
-                                              
-        <!-- <table class="table table-bordered table-hover table-striped leavetable"> -->
-            <tr class="panel panel-heading bg-primary" ><th>#</th><th>Name</th><th>CID</th>
+      <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-11">
+                                    <div class="table-responsive">
+                                        <table class="table tablescroll table-bordered table-hover table-striped" >
+                                             
+                                            <thead>
+                                                <tr class="panel panel-heading bg-primary" ><th>#</th><th>Name</th><th>CID</th>
                 <th>Gender</th><th>Department</th><th>Year of Graduation/Faculty</th><th>Registration(Date/Time)</th><th>Email</th></tr>
             
              
@@ -103,14 +93,21 @@
                    
                 
 <?php endforeach; ?>  </tr> 
+                                            </thead>
+                                           
+                                          
 
-</div>
-</div>
-</div>
-</div>
-</div>
+                                            
+                                        </table>
+                                        
+                                    </div>
 
- </table> 
+                                </div>
+
+                            </div>
+                            <!-- /.row -->
+                        </div>
+        
   <div class="bg-primary" style="margin-top: 100px;">
             <div class="container">
 

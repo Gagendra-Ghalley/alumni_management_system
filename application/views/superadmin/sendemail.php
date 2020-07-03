@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Alumni Management System</title>
-    
-   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <br /> <br /> <br /> 
-    <div class="container">
+
+    <div id="page-wrapper">
       <div class="row">
-        <div class="col-md-8" style="margin:0 auto; float:none;">
-          <h3 align="center">Alumni Management System</h3>
-          <br />
+               <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                </div>
+                <!--End Page Header -->
+            </div>
+             <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
+
+ 
+                    </div>
+                </div>
+      <div class="row" style="margin-left: 15px">
+        <div class="col-lg-10 "style="background-color: #e0dede" >
+          
           <?php
 
           if($this->session->flashdata("message"))
@@ -25,7 +30,9 @@
             ";
           }
           ?>
-          <h4 align="center">Email</h4>
+          <div class="panel-heading" style="background-color: #0a97b0">
+              <span style="color: #fff" ><b>Email</b></span>
+            </div><br>
           <br />          
           <form method="post" action="<?php echo base_url(); ?>index.php/sendemail/send" enctype="multipart/form-data">
             <div class="row">
@@ -69,13 +76,29 @@
                 </div>
               </div>
             </div>
-            <div class="form-group" align="center">
-              <input type="submit" name="submit" value="Send Message" class="btn btn-info" />
+            <div class="form-group" align="left">
+              <input type="submit" name="submit" value="Send mail" class="btn btn-info" />
             </div>
           </form>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  <!-- <div class="bg-primary">
+            <div class="row">
 
+               
+
+
+                <div class="col-lg-12">
+
+                <div class="col-md-6 col-sm-12">
+
+
+                    <p>Alumni Management System@2020</p>
+
+                </div>
+
+            </div>
+        </div>
+      </div>
+ -->

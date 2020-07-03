@@ -67,7 +67,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             
-                            <i class="fa fa-bar-chart-o"></i> 
+                            <i>!</i> 
                            
                             <div class="pull-right">
                                 
