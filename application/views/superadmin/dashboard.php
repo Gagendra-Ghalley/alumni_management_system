@@ -5,21 +5,19 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
-
-            <div class="row">
+             <div class="row">
                 <!-- Welcome -->
                 <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
                     
-                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
 
  
                     </div>
                 </div>
-                <!--end  Welcome -->
             </div>
       
 
@@ -37,7 +35,7 @@
                   </div>
                   <div class="panel-footer">
                             <span class="panel-eyecandy-title"><strong><b style=" color:green; font-size: 18px">Add event</b></strong> 
-                            </span><i class="fa fa-plus-circle fa-1x"  style="margin-left: 430px;color: green"></i></a>
+                            </span><i class="fa fa-plus-circle fa-2x"  style="margin-left: 470px;color: green"></i></a>
                         </div>
                 </div>
 
@@ -55,7 +53,7 @@
                      <div class="panel-footer">
                       
                             <span class="panel-eyecandy-title"><strong><b style=" color:blue; font-size: 18px">Edit Event</b></strong>
-                            </span><i class="fa fa-plus-circle" style="margin-left: 440px;color: blue"></i></a>
+                            </span><i class="fa fa-plus-circle fa-2x" style="margin-left: 470px;color: blue"></i></a>
                         </div>
                   </div>
                 </div>
@@ -69,7 +67,7 @@
                     </div>
                     <div class="panel-footer">
                             <span class="panel-eyecandy-title"><strong><b style="color:#97839c; font-size:18px"> <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="fa fa-user">&nbsp</i>Add User</a></b></strong>
-                            </span><i class="fa fa-plus-circle"  style="margin-left: 450px;color: #97839c"></i>
+                            </span><i class="fa fa-plus-circle fa-2x"  style="margin-left: 470px;color: #97839c"></i>
                         </div>
                 </div>
                </div>
@@ -80,7 +78,7 @@
                     </div>
                     <div class="panel-footer panel-red border">
                             <span class="font-weight-bold"><strong><b style="color: red; font-size:18px"><a href="<?php echo base_url();?>index.php/Settings/viewUsers/">Manage users</a></b></strong>
-                            </span><i class="fa fa-plus-circle fa-1x" style="margin-left: 420px;color: red"></i>
+                            </span><i class="fa fa-plus-circle fa-2x" style="margin-left: 470px;color: red"></i>
 
                         </div>
 
@@ -97,8 +95,8 @@
     
 
     <!-- end wrapper -->
-    <div class="bg-primary" class="du-newsletter">
-            <div class="bg-primary" class="du-newsletter">
+    <div class="bg-primary" style="margin-top: 130px;">
+           
             <div class="container">
 
                
@@ -112,6 +110,5 @@
             </div>
         </div>
 
-        </div>
  
  

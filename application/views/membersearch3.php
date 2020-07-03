@@ -5,25 +5,7 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
-    <!-- <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">  
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
-    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
-    <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css1/cubeportfolio.min.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
-   <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
-  
-  
- <!-Font  -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+    
    
 <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -127,7 +109,7 @@
       
         <div class="col-md-10 img-thumbnail" style=" margin-top: 100px;height: 300px;color: #fff">
                
-                <div class="panel-heading" style="background: #00aaff;">
+                <div class="panel-heading bg-primary" >
                  
                   <h4 class="panel-title "  >Member Search</h4>
 
@@ -198,7 +180,7 @@
 
 
 
-  <<div class="container col-md-12 img-thumbnail bg-primary">
+  <div class="container col-md-12 img-thumbnail bg-primary">
                         <div class="col-md-4 col-sm-12 left-contact  ">
 
                        <h3 class="title" style="color:#fff;">Contact Us</h3>
@@ -254,7 +236,7 @@
 
 
 <!--footer-->
- <div class="bg-primary" class="du-newsletter">
+ 
             <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
@@ -269,37 +251,7 @@
             </div>
         </div>
 
-        </div>
 
-
-  
-
-
-
-  
-
-
-    
-
-
-
-       
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.equalheights.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.ui.totop.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/sForm.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/wow.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/device.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/flexy-menu.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.simple-text-rotator.min.js"></script>
-    <script type="text/javascript" src="j<?php echo base_url();?>assets/js1/library/smoothscroll.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.cubeportfolio.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
-     <script>
+ 
   </body>
   </html>

@@ -64,8 +64,8 @@
     </div>
 
 </div>
-        <div class="bg-primary" class="du-newsletter">
-           <div class="bg-primary" class="du-newsletter">
+        
+           <div class="bg-primary">
             <div class="container">
 
                
@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        </div>
+
     
 
 

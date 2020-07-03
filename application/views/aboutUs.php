@@ -210,26 +210,6 @@
         </div>
 
 
-  
-
-
-
-  
-
-   
-
-
-        </div>
-
-<!--footer-->
-
-  <!--PRELOAD-->
-<div id="preloader">
-  <div id="status"></div>
-</div>
-<!--end PRELOAD--> 
-
-
 
 
 

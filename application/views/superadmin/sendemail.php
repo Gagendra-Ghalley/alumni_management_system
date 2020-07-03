@@ -1,7 +1,13 @@
 
+
     <div id="page-wrapper">
       <div class="row">
                <!-- Page Header -->
+
+  <div id="page-wrapper">
+    <div class="row">
+                <!-- Page Header -->
+
                 <div class="col-lg-12">
                     <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
@@ -16,9 +22,18 @@
  
                     </div>
                 </div>
+
       <div class="row" style="margin-left: 15px">
         <div class="col-lg-10 "style="background-color: #e0dede" >
           
+
+            </div>
+    <div class="container img-thumbnail" style="background-color: #f5f5f5">
+     
+        <div class="col-md-12 col-lg-12 col-sm-12" >
+          <h3 align="left">Send Email</h3>
+          <br />
+
           <?php
 
           if($this->session->flashdata("message"))
@@ -30,13 +45,15 @@
             ";
           }
           ?>
+
           <div class="panel-heading" style="background-color: #0a97b0">
               <span style="color: #fff" ><b>Email</b></span>
             </div><br>
+
           <br />          
           <form method="post" action="<?php echo base_url(); ?>index.php/sendemail/send" enctype="multipart/form-data">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-7" style="margin-left: 30px;">
                 <div class="form-group">
                   <label>Enter subject</label>
                   <input type="text" name="name" placeholder="Enter subject" class="form-control" required />
@@ -76,13 +93,20 @@
                 </div>
               </div>
             </div>
+
             <div class="form-group" align="left">
               <input type="submit" name="submit" value="Send mail" class="btn btn-info" />
+
+            <div class="form-group" align="center">
+              <input type="submit" name="submit" value="Send Mail" class="btn btn-info" />
+
             </div>
           </form>
-        </div>
+       
       </div>
+
     </div>
+
   <!-- <div class="bg-primary">
             <div class="row">
 
@@ -102,3 +126,15 @@
         </div>
       </div>
  -->
+
+
+      <div class="bg-primary">
+         <div class="container">
+            <div class="col-md-6">
+               <p>@Alumni Management System</p>
+            </div>
+         </div>
+      </div>
+  
+ 
+
