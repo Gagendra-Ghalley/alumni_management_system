@@ -28,12 +28,12 @@ class Sendemail extends CI_Controller {
 				// $this->load->view('template/includefooter');
 		        		
 		}
-// public function index()
-// 	{
-// 		$this->load->view('template/includeheader',$this->dataheader);
-// 		$this->load->view('superadmin/sendemail');
-// 		$this->load->view('template/includefooter');
-// }
+public function index()
+	{
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('superadmin/sendemail');
+		$this->load->view('template/includefooter');
+}
 
 
 
@@ -77,8 +77,8 @@ $cid = $this->input->post("cid");
 		      	'protocol' 	=> 'smtp',
 		      	'smtp_host' => 'ssl://smtp.googlemail.com',
 		      	'smtp_port' => 465,
-		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-		      	'smtp_pass' => 'Wangchuk_12345', 
+		      	'smtp_user' => '0216518.cst@rub.edu.bt', 
+		      	'smtp_pass' => 'Wangchuk_123', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
@@ -87,7 +87,7 @@ $cid = $this->input->post("cid");
 		    $this->email->initialize($config);
 
 		    $this->email->set_newline("\r\n");
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->from('0216518.cst@rub.edu.bt', 'Alumni Management System');
 		    $this->email->to($mail);
 		   
 		    $this->email->subject('OTP from Alumni Management System');
@@ -247,8 +247,8 @@ $cid = $this->input->post("cid");
 		      	'protocol' 	=> 'smtp',
 		      	'smtp_host' => 'ssl://smtp.googlemail.com',
 		      	'smtp_port' => 465,
-		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-		      	'smtp_pass' => 'Wangchuk_12345', 
+		      	'smtp_user' => '0216518.cst@rub.edu.bt', 
+		      	'smtp_pass' => 'Wangchuk_123', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
@@ -259,9 +259,9 @@ $cid = $this->input->post("cid");
 			$mails = $this->input->post("email");
 		    $this->email->set_newline("\r\n");
 
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->from('0216518.cst@rub.edu.bt', 'Alumni Management System');
 
-		    $this->email->from('0215521.cst@rub.edu.bt');
+		    
 
 		    $this->email->to($mails);
 		   

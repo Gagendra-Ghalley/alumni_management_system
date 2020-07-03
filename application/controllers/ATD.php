@@ -217,8 +217,8 @@ $cid = $this->input->post("cid");
 		      	'protocol' 	=> 'smtp',
 		      	'smtp_host' => 'smtp.googlemail.com',
 		      	'smtp_port' => 465,
-		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-		      	'smtp_pass' => 'Wangchuk_12345', 
+		      'smtp_user' => '0216518.cst@rub.edu.bt', 
+		      	'smtp_pass' => 'Wangchuk_123', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
@@ -227,7 +227,7 @@ $cid = $this->input->post("cid");
 		    $this->email->initialize($config);
 
 		    $this->email->set_newline("\r\n");
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->from('0216518.cst@rub.edu.bt', 'Alumni Management System');
 		    $this->email->to($mail);
 		   
 		    $this->email->subject('OTP from Alumni Management System');
@@ -351,8 +351,8 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 		      	'protocol' 	=> 'smtp',
 		      	'smtp_host' => 'smtp.googlemail.com',
 		      	'smtp_port' => 465,
-		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-		      	'smtp_pass' => 'Wangchuk_12345', 
+		      	'smtp_user' => '0216518.cst@rub.edu.bt', 
+		      	'smtp_pass' => 'Wangchuk_123', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
@@ -361,7 +361,7 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 		    $this->email->initialize($config);
 
 		    $this->email->set_newline("\r\n");
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->from('0216518.cst@rub.edu.bt', 'Alumni Management System');
 		    $this->email->to($mail);
 		   
 		    $this->email->subject('OTP from Alumni Management System');
