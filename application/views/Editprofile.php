@@ -1,6 +1,6 @@
 <div id="page-wrapper">
 
-   <div class="row">
+            <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
                     <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
@@ -16,7 +16,7 @@
  
                     </div>
                 </div>
-   <div class="container emp-profile"  >
+     <div class="container emp-profile"  >
       <div class="col-md-11 col-sm-11 col-lg-11 img-thumbnail" style="background-color: #e0dede">
          <h3>Profile Management</h3>
          <!--  <img style="height: 150px;width: 150px;border-radius: 50%" src="<?php echo base_url();?>assets/img1/membership.jpg "  alt=""/> -->
@@ -43,7 +43,8 @@
             </div>
          </div>
       </div>
-      <div class="container emp-profile col-md-11 img-thumbnail ">
+  </div>
+      <div class="container emp-profile col-lg-11 img-thumbnail" style="margin-left:30px;">
          <?php foreach($user->result() as $row){?>
          <div class="col-md-10 ">
             <h3 class="text-center">Add Details</h3>
@@ -198,6 +199,7 @@
                </p>
             </div>
          </div>
+
          <div class="row">
             <div class="col-md-12 ">
                <div class="col-md-6 ">
