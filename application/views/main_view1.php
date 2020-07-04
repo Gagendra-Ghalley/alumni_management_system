@@ -1,38 +1,34 @@
 
-<html>  
- <head>  
-    <title>Insert</title>   
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />  
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
-
-   
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />   -->
-   <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-   
-    <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-   
-    <!-- Page-Level CSS -->
-    <link href="<?php echo base_url();?>assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
-
- </head>  
   
+  <div id="page-wrapper">
+
+           <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                </div>
+                <!--End Page Header -->
+            </div>
+             <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
+
  
+                    </div>
+                </div>
  
- <body>  
-         <div id="page-wrapper">
+  
+         <div id="page-wrapper" style="margin-left: 0px;border: 0px solid #111;">
 
-
-          <div class="row profile">
-            
-
-            
+           <div class="panel-heading" style="background-color: #0a97b0;">
+              <i class="fa fa-bar-chart-o fa-fw"style="color: #fff"></i> <span style="color: #fff;size: 25px" ><b>Insert new department</b></span>
+            </div><br>
+          <div class="row profile" style="background-color: #e0dede">  
   
       <br /><br /><br />  
-      <h2>Insert New Department</h2><br />  
+      
       <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation2">  
            <?php  
            if($this->uri->segment(2) == "inserted1")  
@@ -97,12 +93,12 @@
            ?>  
 
              <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter Department</label>  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label"><b>Enter Department</b></label>  
                 <input style="width:400px;" placeholder="Eg: B.E Information Technology" type="text" name="FirstName" class="form-control" required/>  
                 <span class="text-danger"><?php echo form_error("Department"); ?></span>  
            </div>
            <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter ID(Department)</label>  
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label"><b>Enter ID(Department)</b></label>  
                 <input style="width:400px;" placeholder="Eg: 410" type="text" name="cid" class="form-control" required />  
                 <span class="text-danger"><?php echo form_error("id"); ?></span>  
            </div>  
@@ -120,8 +116,7 @@
   </div>
 
   </div>
-   <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
+   <div class="bg-primary" style="margin-top: 100px;">
             <div class="container">
 
                
@@ -132,14 +127,12 @@
                 <div class="col-md-6 col-sm-12">
 
 
-                    <p>@Alumni Management System</p>
+                    <p>Alumni Management System@2020</p>
 
                 </div>
 
             </div>
         </div>
       </div>
-    </div>
  
- </body>  
- </html>  
+ 

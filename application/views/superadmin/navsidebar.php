@@ -55,7 +55,7 @@
                                     <a href="<?php echo base_url()?>index.php/Settings/Registered_user/"><i class="fa fa-user">&nbsp</i>Registered Users</a>
                                 </li>
                      <li>
-                        <a href="<?php echo base_url()?>index.php/sendemail/"><i class="fa  fa-envelope-o"></i>&nbsp;Send Email</a>
+                        <a href="<?php echo base_url()?>index.php/Settings/sendemail/"><i class="fa  fa-envelope-o"></i>&nbsp;Send Email</a>
                     </li>
 
                     <li>
@@ -115,7 +115,7 @@
 
                              <li>
                         
-                                 <a href="<?php echo base_url()?>index.php/Settings/membersearch1/"   ><i class="fa fa-files-o">
+                                 <a href="<?php echo base_url()?>index.php/Settings/csv/"   ><i class="fa fa-files-o">
                                 
                               </i><i class="menu-icon fa fa-caret-right"></i>&nbspAdd User From CSV</a>
                             </li>

@@ -55,7 +55,7 @@ function load_data()
          
  <table class="table-responsive table table-bordered ">
          <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-12">
 
   
  
@@ -65,7 +65,7 @@ function load_data()
                            
                             
                            
-          <tr class="panel panel-primary bg-primary">
+          <tr class="panel panel-primary panel-heading ">
            <th>Sl.No</th>
            <th>Name</th>
            <th>CID / Student_id</th>

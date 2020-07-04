@@ -18,9 +18,9 @@
     />
     <link href="<?php echo base_url();?>assets/css/cst.css" rel="stylesheet"/>
 
-     <meta charset="utf-8">
+    <!--  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CST Alumni Management System</title>
+    <title>CST Alumni Management System</title> -->
     <!-- Core CSS - Include with every page -->
     <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />

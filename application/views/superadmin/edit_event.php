@@ -8,7 +8,7 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px ">Dashboard</h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -194,26 +194,7 @@
  </div>
 </div>
 
- <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
-            <div class="container">
-
-               
-
-
-                <div class="col-lg-12">
-
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>@Alumni Management System</p>
-
-                </div>
-
-            </div>
-        </div>
-      </div>
-    </div>
+ 
 
  <script>
 

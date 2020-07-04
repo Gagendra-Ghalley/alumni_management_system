@@ -1,38 +1,35 @@
 
-<html>  
- <head>  
-    <title>Insert</title>   
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />  
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
 
-   
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />   -->
-   <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-   
-    <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-   
-    <!-- Page-Level CSS -->
-    <link href="<?php echo base_url();?>assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
-
- </head>  
-  
  
- 
+       
  <body>  
          <div id="page-wrapper">
 
+           <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                </div>
+                <!--End Page Header -->
+            </div>
+             <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
 
-          <div class="row profile">
+ 
+                    </div>
+                </div>
+          <div id="page-wrapper" style="margin-left: 0px;">
             
 
             
   
       <br /><br /><br />  
-      <h2>Insert Students Data</h2><br />  
+      <div class="panel-heading" style="background-color: #0a97b0">
+              <i class="fa fa-bar-chart-o fa-fw" style="color: #fff"></i> <span style="color: #fff" ><b>Insert student data</b></span>
+            </div><br>
       <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation1">  
            <?php  
            if($this->uri->segment(2) == "inserted")  
@@ -153,7 +150,7 @@
            </div>
 
            <div class="form-group">  
-               <input  type="submit" name="insert" value="Insert" class="pull-center btn btn-info"  />
+               <input  type="submit" name="insert" value="Insert" class=" btn btn-info"  />
                 &nbsp;&nbsp;&nbsp; <input type="reset" name="insert" value="Reset" class="btn btn-info " />
            </div>      
            <?php  
@@ -164,8 +161,7 @@
   </div>
 
   </div>
-   <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
+  <div class="bg-primary" style="margin-top: 100px;">
             <div class="container">
 
                
@@ -176,17 +172,15 @@
                 <div class="col-md-6 col-sm-12">
 
 
-                    <p>@Alumni Management System</p>
+                    <p>Alumni Management System@2020</p>
 
                 </div>
 
             </div>
         </div>
       </div>
-    </div>
  
- </body>  
- </html>  
+   
 <script>
 function mySearchFunction() 
 {

@@ -12,6 +12,7 @@ class Settings extends CI_Controller {
 	public function __construct() { 
 	
 	parent::__Construct();
+	date_default_timezone_set("Asia/Thimphu");
 	$this->load->helper(array('form', 'url'));
 	$this->load->library('form_validation');
 	$this->load->model('Staff_model','sm');
@@ -19,7 +20,7 @@ class Settings extends CI_Controller {
 	$this->load->model('Holidays','hm');
 	$this->load->model('Messages_model','mm');
 	$this->load->model('ATD_model','atd');
-	// $this->load->CI_Controller('sendemail');
+	$this->load->model('csv_import_model');
 	$this->header['messages'] = $this->mm->getMessages();
 	$this->header['unreadm']=$this->mm->getCountMessages();
 	$this->dataheader['header']=$this->header;
@@ -40,6 +41,12 @@ class Settings extends CI_Controller {
 		$this->load->view('viewusers',$data);
 		$this->load->view('template/includefooter');
 	}
+public function sendemail()
+	{
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('superadmin/sendemail');
+		$this->load->view('template/includefooter');
+}
 
 public function viewUsers1() {
 		
@@ -389,7 +396,7 @@ function addDak($param="")
 	     ;
 		 
 		if($counter==1 ){
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</button></a>"
+	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->AgencyID/'>DeleteAll</button></a>"
 	     ;
 		}
 		
@@ -436,7 +443,7 @@ function addDak($param="")
 		// echo "<td>$row->Gender</td>";
 		echo "<td>$row->gender</td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a class='delete_data' id='<?php echo $row->cid' href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
+	     echo" <td><a class='delete_data' id='<?php echo $row->cid' href='".base_url()."index.php/Settings/deleteuser/$row->cid/'>Delete</a></td>"
 	     ;
 
 
@@ -444,7 +451,7 @@ function addDak($param="")
 
 
 	     if($counter==1){
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->AgencyID/'>DeleteAll</a></td>"
 	     ;
 		}
 		echo "</tr>";
@@ -832,12 +839,12 @@ public function updateEmployee($cid) {
 			
 		
 	}
-	public function editFullEmployee1($cid){
+	public function delete($cid){//Tamang(Deleting user)
 			
 		
 					$data['employee']=$this->sm->editFullEmployee1($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee1',$data);
+				    $this->load->view('delete',$data);
 				    $this->load->view('template/includefooter');
 			
 		
@@ -885,12 +892,12 @@ public function editFullEmployee5($cid){//Tamang (view for editing the departmen
 			
 		
 	}
-	public function editFullEmployee6($AgencyID){//Tamang (view for editing the department)
+	public function deleteall($AgencyID){//Tamang (view for editing the department)
 			
 		
 					$data['employee']=$this->sm->editFullEmployee6($AgencyID);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee6',$data);
+				    $this->load->view('deleteall',$data);
 				    $this->load->view('template/includefooter');
 	}
 
@@ -1413,12 +1420,13 @@ public function reciept()
 		
 	}
 
-	public function membersearch1(){//Tamang
+	public function csv(){//Tamang
  	
-		$this->load->view('template/includeheader',$this->dataheader);
+		
 		$this->load->model("csv_import_model");
 		$data['data'] = $this->csv_import_model->select();
-		$this->load->view("csv_import", $data);
+		$this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view("superadmin/csv_import", $data);
 		$this->load->view('template/includefooter');
 		
 		

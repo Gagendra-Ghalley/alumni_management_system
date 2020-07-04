@@ -6,16 +6,26 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Profile</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
+             <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                    
+                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
+
+ 
+                    </div>
+                </div>
 
           
             
 
-            <div class="row profile">
-                <div class="col-md-4">
+            <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
 
 
                  <?php $count=1; foreach($checkissue as $row): ?>
@@ -51,13 +61,34 @@
              <b>Book:</b><td><?php echo $row['book'];?></td><br>
              <b>Journal:</b><td><?php echo $row['journal'];?></td><br>
                     <?php endforeach; ?></tr> 
+
                 </div>
                    
               
 
             </div>
-
+          
+<br>
           
 
+        </div> <br>
+    </div>
+        <div class="bg-primary">
+            <div class="container">
+
+               
+
+
+                <div class="col-lg-12">
+
+                <div class="col-md-6 col-sm-12">
+
+
+                    <p>Alumni Management System@2020</p>
+
+                </div>
+
+            </div>
         </div>
+      </div>
       
