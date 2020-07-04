@@ -23,8 +23,10 @@
                     </div>
                 </div>
                 <!--end  Welcome -->
-            </div>
-
+            
+            <div id="page-wrapper" style="margin-left: 0px">
+     
+            <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #e0dede">
 
              <div class="card-title text-left bold">UP COMING EVENT</div><br>
 
@@ -228,27 +230,20 @@
               
  </div>
 </div>
+</div>
+</div>
+</div>
+</div>
 
- <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
-            <div class="container">
-
-               
-
-
-                <div class="col-lg-12">
-
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>@Alumni Management System</p>
-
-                </div>
-
-            </div>
-        </div>
+ <div class="bg-primary">
+   <div class="container">
+      <div class="col-lg-12">
+         <div class="col-md-6 col-sm-12">
+            <p>Alumni Management System@2020</p>
+         </div>
       </div>
-    </div>
+   </div>
+</div>
 
  <script>
 

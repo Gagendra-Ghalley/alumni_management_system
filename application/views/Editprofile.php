@@ -16,8 +16,9 @@
  
                     </div>
                 </div>
-     <div class="container emp-profile"  >
-      <div class="col-md-11 col-sm-11 col-lg-11 img-thumbnail" style="background-color: #e0dede">
+      <div id="page-wrapper" style="margin-left: 0px">
+     
+      <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #e0dede">
          <h3>Profile Management</h3>
          <!--  <img style="height: 150px;width: 150px;border-radius: 50%" src="<?php echo base_url();?>assets/img1/membership.jpg "  alt=""/> -->
          <div class="col-md-5">
@@ -43,8 +44,8 @@
             </div>
          </div>
       </div>
-  </div>
-      <div class="container emp-profile col-lg-11 img-thumbnail" style="margin-left:30px;">
+  
+      <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
          <?php foreach($user->result() as $row){?>
          <div class="col-md-10 ">
             <h3 class="text-center">Add Details</h3>
@@ -309,17 +310,19 @@
       </div>
       <?php }?>
    </div>
+</div>
+</div>
    <!--footer-->
-   <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter">
+  
+      <div class="bg-primary">
          <div class="container">
             <div class="col-md-6">
                <p>@Alumni Management System</p>
             </div>
          </div>
       </div>
-   </div>
-</div>
+   
+
 <script type="text/javascript">
    function updateContact() {
    

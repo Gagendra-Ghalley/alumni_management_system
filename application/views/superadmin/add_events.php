@@ -41,9 +41,9 @@
                       <?php echo form_open_multipart('Settings/addevent1');?>
                       <?php echo "<input type='file' name='image' size='20' />"; ?>
   
-                        <div class="panel-body">
+                        <div class="panel-body" style="background-color: #f5f5f5">
                             <div class="row">
-                               <div class="col-md-12">
+                               <div class="col-md-12" >
                                 <div class="row du-contact-form"> 
                                   <form accept-charset="utf-8" class="form-group" id="f" action="<?php echo site_url();?>/Settings/addevent1" method="post">
 

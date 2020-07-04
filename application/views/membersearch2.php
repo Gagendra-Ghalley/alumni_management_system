@@ -1,5 +1,5 @@
 
-<div id="page-wrapper"  style="width: 900px; " >
+<div id="page-wrapper" >
           <div class="row">
                 
                 <div class="col-lg-12">
@@ -19,8 +19,9 @@
     <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/settings/viewmember1" method="post">
     </form>
 
-      
-        <div class="col-md-12 img-thumbnail" style="height: 300px; " >
+        
+         <div id="page-wrapper" style="margin-left: 0px;height: 300px;">
+          <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5;">
                  
                 <div class="panel-heading bg-primary">
                  
@@ -90,9 +91,10 @@
       </div>
   </div>
 
-
+</div>
+</div>
   
-       <div class="bg-primary" style="margin-top: 10px;">
+       <div class="bg-primary" >
             <div class="container">
                 <div class="col-md-12 col-sm-12">
 
