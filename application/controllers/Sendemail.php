@@ -268,6 +268,7 @@ $cid = $this->input->post("cid");
 		    
 		    $this->email->subject($subject);
 	        $this->email->message($message);
+	       $this->email->attach($file_data['full_path']);
 
 	        // foreach ($_FILES as $key => $value) {
 	        // 	if(!empty($key['resume'])){
@@ -295,6 +296,7 @@ $cid = $this->input->post("cid");
 	        {
 	        	if(delete_files($file_data['file_path']))
 	        	{
+	        		echo $this->email->print_debugger();
 	        		$this->session->set_flashdata('message', 'There is an error in email send');
 	        		redirect('sendemail');
 	        	}
@@ -354,8 +356,8 @@ $cid = $this->input->post("cid");
 	{
 		$config['upload_path'] = 'uploads/';
 		$config['allowed_types'] = 'xls|doc|docx|pdf|gif|jpg|png|jpeg';
-		$this->load->library('upload');
-		$this->upload->initialize($config);
+		$this->load->library('upload',$config);
+		
 		
 		
 		if($this->upload->do_upload('resume'))

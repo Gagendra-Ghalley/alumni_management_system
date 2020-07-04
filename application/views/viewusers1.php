@@ -40,11 +40,11 @@
  <div class="panel panel-primary">
                         <div class="panel-heading">
                             
-                            <i class="fa fa-bar-chart-o fa-fw"></i>
+                            <i>!</i>
                            
                             <div class="pull-right">
                                 
-                               <form>
+                               <form >
                                 
                                  <label for="ParentAgency">Department </label>
                                  <select id="parent" name="Parent" class="option3 searchdropdown"  onchange="selectagency()">
@@ -65,21 +65,21 @@
 
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-8">
+                                <div class="col-lg-10">
                                     <div class="table-responsive">
                                         <table class="table tablescroll table-bordered table-hover table-striped" >
                                              <tbody id="employees">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
+                                                    <th style="width:50px">#</th>
                                           <!--         <th style="width:150px">Name</th>
                                             
                                             <th style="width:150px">CID</th> -->
                                         
                                 
                                 
-                               <th style="width:150px">Year of Graduation(ID)</th>
-                                <th style="width:160px">Year of Graduation</th>
+                               <th style="width:350px">Year of Graduation(ID)</th>
+                                <th style="width:300px">Year of Graduation</th>
                                 <th style="width:160px">Delete</th>
                                 
                                                 </tr>

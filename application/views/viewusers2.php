@@ -38,7 +38,7 @@
                 <br>
                 <br>
 
-                <div class="col-lg-12">
+                <div class="col-lg-10">
 
     
  <div class="panel panel-primary">
@@ -48,7 +48,7 @@
                            
                             <div class="pull-right">
 
-                               <form>
+                               <form >
                                 
 
          

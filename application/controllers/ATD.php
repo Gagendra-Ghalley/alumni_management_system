@@ -167,10 +167,9 @@ public function science(){
 			
  public function Forgetpasswordemail()
 {
-	      // $this->load->view('template/includeheader',$this->dataheader);
+	      
+$this->load->view('forgetpasswordemailatd');
 		
-		$this->load->view('forgetpasswordemailatd');
-		// $this->load->view('template/includefooter');
         		
 }
 

@@ -32,13 +32,7 @@
         <!--  page-wrapper -->
         <div id="page-wrapper">
 
-            <div class="row">
-                <!-- Page Header -->
-                <div class="col-lg-12">
-                    <h1 class="page-header">Delete User</h1> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
-                </div>
-                <!--End Page Header -->
-            </div>
+            
 
           
 
@@ -53,39 +47,41 @@
               
           
            
-           <div class="col-lg-6">
+           <!-- <div class="col-lg-6">
           
 
           <a href="#" class="delete_data btn btn-lg btn-danger btn-block" id="<?php echo $row->AgencyID; ?>">Delete</a> 
            
           </div>
-          <br><br><br><br><br><br>
+          <br><br><br><br><br><br> -->
            </form>
 
-           <form >
+          <!--  <form >
                <div class="col-lg-6">
                <a href="<?php echo base_url();?>index.php/Settings/viewUsers/" class="btn btn-lg btn-info btn-block">Back</a>
            </div>
-           </form>
+           </form> -->
            
     </div>
 
 </div>
    
       <script>  
-      $(document).ready(function(){  
-           $('.delete_data').click(function(){  
-                var id = $(this).attr("id");  
-                if(confirm("Are you sure you want to delete all data?"))  
+       window.onload= function(){
+       document.forms[0].submit(id="<?php echo $row->AgencyID; ?>");
+           
+                if(confirm("Are you sure you want to delete this?"))  
                 {  
-                     window.location="<?php echo base_url()?>index.php/Settings/delete_data3/<?php $row->AgencyID?>/"+id;  
+                     window.location="<?php echo base_url()?>index.php/Settings/delete_data/<?php $row->AgencyID?>/"+id;  
                 }  
                 else  
                 {  
+                     
                      return false;  
                 }  
-           });  
-      });  
+         
+           }  
+      
       </script>
 
       </html>  
