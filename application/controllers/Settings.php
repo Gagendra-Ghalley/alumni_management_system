@@ -2021,6 +2021,7 @@ $data=$this->sm->eventdelete($param1);
 	public function updateContact() {
 		
 		$email=$this->input->post('email');
+		die("apple");
 		$occupation=$this->input->post('occupation');
 		$organization=$this->input->post('organization');
 		
