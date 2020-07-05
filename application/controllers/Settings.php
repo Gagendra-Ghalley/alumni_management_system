@@ -1779,7 +1779,11 @@ public function form_validation2() //Tamang (adding new department and departmen
  						//OR
 
   	//$issuance=$this->sm->search1($name,$department);//to see if there is record or not in db
+
   			$issuance= $this->db->query("SELECT * FROM user_profiles where FirstName='".$name."' OR department_ID='".$department."'")->row();
+
+  			$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName CONTAINS '".$name."' OR AgencyParentID='".$department."'")->row();
+
 
   			if(sizeof($issuance)>0) 
 		  {
@@ -1828,7 +1832,7 @@ function addevent1($param1=""){//leki
 
 		$config['upload_path'] = "./assets/img/event/";
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
-		$config['max_size']     = '1000';
+		$config['max_size']     = '8000';
 		$config['max_width'] = '8000';
 		$config['max_height'] = '5000';
 		$config['overwrite'] = true;
@@ -2106,7 +2110,7 @@ public function updateContact4() {
 		
 		$config['upload_path'] = "./assets/img/profile/";
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
-		$config['max_size']     = '100';
+		$config['max_size']     = '8000';
 		$config['max_width'] = '8000';
 		$config['max_height'] = '5000';
 		$config['overwrite'] = true;

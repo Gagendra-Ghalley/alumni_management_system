@@ -16,8 +16,9 @@
  
                     </div>
                 </div>
-
-   <div class="container" style="background-color: #e0dede">
+              
+    <div id="page-wrapper" style="margin-left: 0px">
+   <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #e0dede">
       <div class="row">
          <div class="col-md-12 col-lg-12 col-sm-12 center">
             <div class="profile-img ">
@@ -54,7 +55,11 @@
       </div>
    </div>
 </div>
-<div class="bg-primary" style="margin-top: 100px;">
+</div>
+</div>
+
+
+<div class="bg-primary">
    <div class="container">
       <div class="col-lg-12">
          <div class="col-md-6 col-sm-12">

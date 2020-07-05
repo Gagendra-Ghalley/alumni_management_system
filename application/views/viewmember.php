@@ -23,8 +23,9 @@
           
             
 
-            <div class="row profile">
-                <div class="col-md-4">
+            <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
 
 
                  <?php $count=1; foreach($checkissue as $row): ?>
@@ -60,17 +61,19 @@
              <b>Book:</b><td><?php echo $row['book'];?></td><br>
              <b>Journal:</b><td><?php echo $row['journal'];?></td><br>
                     <?php endforeach; ?></tr> 
+
                 </div>
                    
               
 
             </div>
-            <hr>
-
+          
+<br>
           
 
-        </div>
-        <div class="bg-primary" style="margin-top: 100px;">
+        </div> <br>
+    </div>
+        <div class="bg-primary">
             <div class="container">
 
                
