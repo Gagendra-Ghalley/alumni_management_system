@@ -43,9 +43,9 @@ class Email_Model extends CI_Model {
 		
 		$query=$this->db->query("SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) as name, l.userId AS cid, lm.ltitle AS LeaveType, a.name AS Agency, l.startDate, l.endDate, l.remarks 
 		FROM `bpas_leave_record` l 
-		LEFT JOIN bpas_user_profiles p ON p.cid = l.userId
+		LEFT JOIN user_profiles p ON p.cid = l.userId
 		LEFT JOIN bpas_leave_master lm ON lm.lid = l.leaveType
-		LEFT JOIN bpas_master_agency a ON a.AgencyID = l.AgencyID
+		LEFT JOIN batch a ON a.batch_ID = l.batch_ID
 		WHERE endDate = '".date('Y/m/d')."'");
 		
 		$this->leaveEndReminderUsers($query);
@@ -59,7 +59,7 @@ class Email_Model extends CI_Model {
 		
 			$subject= "End of Leave";
 			foreach($result->result() as $row){
-			$email=$this->db->query("SELECT email from bpas_user_profiles WHERE cid='".$row->cid."'");
+			$email=$this->db->query("SELECT email from user_profiles WHERE cid='".$row->cid."'");
 			
 			$this->email->from($this->sender, $this->senderName);
 	        $this->email->to($email->row()->email);
@@ -79,19 +79,19 @@ class Email_Model extends CI_Model {
 		$subject= "Officials end of leave";
 		
 		
-		$agencies = $this->db->query("SELECT DISTINCT(AgencyID) AS AgencyID from bpas_leave_record WHERE endDate='".date(Y/m/d)."'");
+		$agencies = $this->db->query("SELECT DISTINCT(batch_ID) AS batch_ID from bpas_leave_record WHERE endDate='".date(Y/m/d)."'");
 		
 			foreach($agencies->result() as $agency){
 			
 			$query=$this->db->query("SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) as name, l.userId AS cid, lm.ltitle AS LeaveType, a.name AS Agency, l.startDate, l.endDate, l.remarks 
 			FROM `bpas_leave_record` l 
-			LEFT JOIN bpas_user_profiles p ON p.cid = l.userId
+			LEFT JOIN user_profiles p ON p.cid = l.userId
 			LEFT JOIN bpas_leave_master lm ON lm.lid = l.leaveType
-			LEFT JOIN bpas_master_agency a ON a.AgencyID = l.AgencyID
-			WHERE endDate = '".date('Y/m/d')."' AND l.AgencyID = '".$agency->AgencyID."'");
+			LEFT JOIN batch a ON a.batch_ID = l.batch_ID
+			WHERE endDate = '".date('Y/m/d')."' AND l.batch_ID = '".$agency->batch_ID."'");
 			
 			
-			$email=$this->db->query("SELECT email from bpas_user_profiles WHERE cid='".$agency->cid."'");
+			$email=$this->db->query("SELECT email from user_profiles WHERE cid='".$agency->cid."'");
 			$this->email->from($this->sender, $this->senderName);
 	        $this->email->to($agency->email);
 	        $this->email->subject($subject);
@@ -108,7 +108,7 @@ class Email_Model extends CI_Model {
 		
 		
 		$query = $this->db->query("SELECT u.cid, u.email
-					FROM bpas_user_profiles u 
+					FROM user_profiles u 
 					LEFT OUTER JOIN bpas_attendance_log a ON u.cid=a.userid AND a.date = '".date("Y/m/d")."'"."
 					WHERE  a.userid is NULL");
 		$subject = "LAS login pending for today";
@@ -130,7 +130,7 @@ class Email_Model extends CI_Model {
 	
 	public function sendEmail($message,$subject,$cid) {
 			
-		$query=$this->db->query("SELECT email from bpas_user_profiles WHERE cid='".$cid."'");
+		$query=$this->db->query("SELECT email from user_profiles WHERE cid='".$cid."'");
 		foreach($query->result() as $row){
 			$email = $row->email;
 		}
@@ -144,20 +144,20 @@ class Email_Model extends CI_Model {
 		
 	}
 	
-	public function notifyLeaveSupervisor($agencyid,$cid,$role){
+	public function notifyLeaveSupervisor($batch_ID,$cid,$role){
 		
 		$subject = "Leave Request in LAS";
 		$message = "There is a leave request pending in LAS from userid :".$cid.". Please visit http://las.moic.gov.bt/las to approve.";
 	 	if($role=='4'||$role=='9') {
 
-			$query = $this->db->query("SELECT email FROM bpas_user_profiles u 
-		LEFT JOIN bpas_master_agencyparent a ON (a.director = u.cid) OR (a.offtg = u.cid)
-		WHERE a.AgencyParentID = (SELECT AgencyParentID FROM bpas_master_agency WHERE AgencyID= '".$agencyid."'");
+			$query = $this->db->query("SELECT email FROM user_profiles u 
+		LEFT JOIN department a ON (a.director = u.cid) OR (a.offtg = u.cid)
+		WHERE a.department_ID = (SELECT department_ID FROM batch WHERE batch_ID= '".$batch_ID."'");
 		}
 		elseif($role=='3'||$role=='8') {
-			$query = $this->db->query("SELECT email FROM bpas_user_profiles u WHERE u.roleId='2'||u.roleId='7'");
+			$query = $this->db->query("SELECT email FROM user_profiles u WHERE u.roleId='2'||u.roleId='7'");
 		} else {
-			$query = $this->db->query("SELECT email FROM bpas_user_profiles u LEFT JOIN bpas_master_agency a ON (a.chief = u.cid) OR (a.offtg = u.cid) WHERE a.AgencyID = '".$agencyid."'");
+			$query = $this->db->query("SELECT email FROM user_profiles u LEFT JOIN batch a ON (a.chief = u.cid) OR (a.offtg = u.cid) WHERE a.batch_ID = '".$batch_ID."'");
 		}
 		
 

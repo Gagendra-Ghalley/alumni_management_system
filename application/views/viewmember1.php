@@ -39,7 +39,7 @@
 <td> <?php 
                                                     $ids=explode(", ", $row['AgencyParentID']);//bpas_user_profiles
                                                     foreach ($ids as $key => $AgencyParentID) { //id
-                                                      echo $this->db->get_where('bpas_master_agencyparent',array('AgencyParentID' =>trim($AgencyParentID)))->row()->name ;//tablename,id,name
+                                                      echo $this->db->get_where('department',array('AgencyParentID' =>trim($AgencyParentID)))->row()->name ;//tablename,id,name
                                                     }
                                                     
 

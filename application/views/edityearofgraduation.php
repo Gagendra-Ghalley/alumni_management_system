@@ -40,7 +40,7 @@
           
 
  <?php $row=$employee->row(0);
-    $cid=$row->AgencyID;
+    $cid=$row->batch_ID;
     ?>
         
 

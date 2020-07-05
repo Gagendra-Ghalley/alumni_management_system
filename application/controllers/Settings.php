@@ -17,7 +17,7 @@ class Settings extends CI_Controller {
 	$this->load->library('form_validation');
 	$this->load->model('Staff_model','sm');
 	$this->load->model('Agency_model','ag');
-	$this->load->model('Holidays','hm');
+	
 	$this->load->model('Messages_model','mm');
 	$this->load->model('ATD_model','atd');
 	$this->load->model('csv_import_model');
@@ -31,7 +31,7 @@ class Settings extends CI_Controller {
 	
 	public function viewUsers() {
 		
-		$data['parent']=$this->ag->getParentAgencyList();
+		$data['parent']=$this->ag->yearofgraduation();
 		$this->load->view('template/includeheader',$this->dataheader);
 		// if($this->role!='1') {
 		// $this->load->view('viewusers',$data);
@@ -48,21 +48,21 @@ public function sendemail()
 		$this->load->view('template/includefooter');
 }
 
-public function viewUsers1() {
+public function yearofgraduation() {//Tamang(viewing the year of graduation ID)
 		
-		$data['parent']=$this->ag->getParentAgencyList();
+		$data['parent']=$this->ag->yearofgraduation();
 		$this->load->view('template/includeheader',$this->dataheader);
 		
-		$this->load->view('viewusers1',$data);
+		$this->load->view('yearofgraduation',$data);
 		$this->load->view('template/includefooter');
 	}
 
-public function viewUsers2() {
+public function managedepartment() {//Tamang(viewing the department_ID)
 		
-		$data['parent']=$this->ag->getParentAgencyList();
+		$data['parent']=$this->ag->yearofgraduation();
 		$this->load->view('template/includeheader',$this->dataheader);
 		
-		$this->load->view('viewusers2',$data);
+		$this->load->view('managedepartment',$data);
 		$this->load->view('template/includefooter');
 	}
 
@@ -102,7 +102,7 @@ public function viewUsers2() {
 
 	 public function  registered_user(){
 	 	$this->load->view('template/includeheader',$this->dataheader);
-	 	$data['request']=$this->db->query("SELECT * from bpas_logins where status1 = 'approved'")->result_array();
+	 	$data['request']=$this->db->query("SELECT * from login where status1 = 'approved'")->result_array();
 
        		$this->load->view('registered_user',$data);
        		$this->load->view('template/includefooter');
@@ -138,7 +138,7 @@ public function viewUsers2() {
 
 
 		            $this->db->where ('relatedUserId', $cid );
-  					$this->db->update('bpas_logins',$dat);
+  					$this->db->update('login',$dat);
   					$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
 
         }
@@ -275,7 +275,7 @@ public function validate_credentials2(){
 	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
                 foreach($query->result() as $row)
                 { 
-                 echo "<option class='searchdropdown' value='".$row->AgencyID."'>".$row->name."</option>";
+                 echo "<option class='searchdropdown' value='".$row->batch_ID."'>".$row->name."</option>";
                 }
 		
 	}
@@ -288,7 +288,7 @@ public function validate_credentials2(){
 	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
                 foreach($query->result() as $row)
                 { 
-                 echo "<option class='searchdropdown' value='".$row->AgencyID."'>".$row->name."</option>";
+                 echo "<option class='searchdropdown' value='".$row->batch_ID."'>".$row->name."</option>";
                 }
 		
 	}
@@ -302,7 +302,7 @@ public function validate_credentials2(){
 	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
                 foreach($query->result() as $row)
                 { 
-                 echo "<option class='searchdropdown' value='".$row->AgencyID."'>".$row->name."</option>";
+                 echo "<option class='searchdropdown' value='".$row->batch_ID."'>".$row->name."</option>";
                 }
 		
 	}
@@ -396,7 +396,7 @@ function addDak($param="")
 	     ;
 		 
 		if($counter==1 ){
-	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->AgencyID/'>DeleteAll</button></a>"
+	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->batch_ID/'>DeleteAll</button></a>"
 	     ;
 		}
 		
@@ -432,7 +432,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</a><i class='fa fa-edit'></i></td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editalumni/$row->cid/'>$row->name</a><i class='fa fa-edit'></i></td>";
 		// echo "<td>$row->EmpNo</td>";
 		echo "<td>$row->cid</td>";
 		// echo "<td>$row->Agency</td>";
@@ -451,7 +451,7 @@ function addDak($param="")
 
 
 	     if($counter==1){
-	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->AgencyID/'>DeleteAll</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->batch_ID/'>DeleteAll</a></td>"
 	     ;
 		}
 		echo "</tr>";
@@ -479,7 +479,7 @@ function addDak($param="")
 // 	 {
 // 	 		$this->load->library('email');
 // 	        $this->db->select('email');
-// 	        $this->db->from('bpas_user_profiles'); 
+// 	        $this->db->from('user_profiles'); 
 // 	        $this->db->where('email', $email); 
 // 	        $query=$this->db->get();
 // 	        return $query->row_array();
@@ -491,7 +491,7 @@ function addDak($param="")
 // 	{
 // 		$mail = $this->input->post("email");
 //         $email = $data['email'];
-// 	        $query1=$this->db->query("SELECT *  from bpas_user_profiles where email = '".$email."' ");
+// 	        $query1=$this->db->query("SELECT *  from user_profiles where email = '".$email."' ");
 // 	        $row=$query1->result_array();
 //        if ($query1->num_rows()>0)
 	      
@@ -516,7 +516,7 @@ function addDak($param="")
 // 	        // $passwordplain  = rand(999999999,9999999999);
 // 	        // $newpass['password'] = md5($passwordplain);
 // 	        // $this->db->where('email', $email);
-// 	        // $this->db->update('bpas_user_profiles', $newpass);
+// 	        // $this->db->update('user_profiles', $newpass);
 	         
 //         	// $mail_message='Dear '.$row[0]['FirstName'].','. "\r\n";
 // 	        // $mail_message.='Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is <b>'.$passwordplain.'</b>'."\r\n";
@@ -581,9 +581,9 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee3/$row->AgencyID/'>$row->AgencyID</a><i class='fa fa-edit'></i></td>";
+		echo "<td><a href='".base_url()."index.php/Settings/edityearofgraduation/$row->batch_ID/'>$row->batch_ID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee2/$row->AgencyID/'>Delete</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee2/$row->batch_ID/'>Delete</a></td>"
 	     ;
 	     
 		
@@ -621,9 +621,9 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee5/$row->AgencyParentID'>$row->AgencyParentID</a><i class='fa fa-edit'></i></td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editdepartment/$row->department_ID'>$row->department_ID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->ParentAgency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->AgencyParentID/'>Delete</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->department_ID/'>Delete</a></td>"
 	     ;
 	     
 		
@@ -749,9 +749,9 @@ public function updateEmployee($cid) {
 		// $this->form_validation->set_rules('lname','Lname','trim');
 		$this->form_validation->set_rules('roleId','roleId','required|trim');
 		$this->form_validation->set_rules('gender','gender','trim');
-		$this->form_validation->set_rules('agencyid','Agency','required|trim');
-		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
-		// $this->form_validation->set_rules('agencymainparentid','AgencyMainParent','required|trim');
+		$this->form_validation->set_rules('batch_ID','Agency','required|trim');
+		$this->form_validation->set_rules('department_ID','AgencyParent','required|trim');
+		// $this->form_validation->set_rules('departmentParent_ID','AgencyMainParent','required|trim');
 		
 		
 		if($this->form_validation->run()){
@@ -777,8 +777,8 @@ public function updateEmployee($cid) {
 	public function updateEmployee1($cid) {
 		
 		
-		// $this->form_validation->set_rules('agencyid','Agency','required|trim');
-		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
+		// $this->form_validation->set_rules('batch_ID','Agency','required|trim');
+		$this->form_validation->set_rules('department_ID','AgencyParent','required|trim');
 	
 		
 		
@@ -787,7 +787,7 @@ public function updateEmployee($cid) {
 		if($this->sm->updateEmployee1($cid)) {
 			
 			$data['statusupdate']="Success";
-			$this->editFullEmployee3($cid);
+			$this->edityearofgraduation($cid);
 			
 			
 		}
@@ -797,7 +797,7 @@ public function updateEmployee($cid) {
 		} else {
 			echo "form error";
 			echo validation_errors();
-			$this->editFullEmployee3($cid);
+			$this->edityearofgraduation($cid);
 		}
 		
 	}
@@ -805,8 +805,8 @@ public function updateEmployee($cid) {
 	public function updateEmployee2($cid) {
 		
 		
-		// $this->form_validation->set_rules('agencyid','Agency','required|trim');
-		$this->form_validation->set_rules('agencyparentid','AgencyParent','required|trim');
+		// $this->form_validation->set_rules('batch_ID','Agency','required|trim');
+		$this->form_validation->set_rules('department_ID','AgencyParent','required|trim');
 	
 		
 		
@@ -829,12 +829,12 @@ public function updateEmployee($cid) {
 		}
 		
 	}
-	public function editFullEmployee($cid){
+	public function editalumni($cid){
 			
 		
-					$data['employee']=$this->sm->editFullEmployee($cid);
+					$data['employee']=$this->sm->editalumni($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee',$data);
+				    $this->load->view('editalumni',$data);
 				    $this->load->view('template/includefooter');
 			
 		
@@ -861,12 +861,12 @@ public function updateEmployee($cid) {
 		
 	}
 
-	public function editFullEmployee3($cid){//(Tamang for editing the year of graduation)
+	public function edityearofgraduation($cid){//(Tamang for editing the year of graduation)
 			
 		
-					$data['employee']=$this->sm->editFullEmployee3($cid);
+					$data['employee']=$this->sm->edityearofgraduation($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee3',$data);
+				    $this->load->view('edityearofgraduation',$data);
 				    $this->load->view('template/includefooter');
 			
 		
@@ -882,20 +882,20 @@ public function updateEmployee($cid) {
 			
 		
 	}
-public function editFullEmployee5($cid){//Tamang (view for editing the department)
+public function editdepartment($cid){//Tamang (view for editing the department)
 			
 		
-					$data['employee']=$this->sm->editFullEmployee5($cid);
+					$data['employee']=$this->sm->editdepartment($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee5',$data);
+				    $this->load->view('editdepartment',$data);
 				    $this->load->view('template/includefooter');
 			
 		
 	}
-	public function deleteall($AgencyID){//Tamang (view for editing the department)
+	public function deleteall($batch_ID){//Tamang (view for editing the department)
 			
 		
-					$data['employee']=$this->sm->editFullEmployee6($AgencyID);
+					$data['employee']=$this->sm->editFullEmployee6($batch_ID);
 					$this->load->view('template/includeheader',$this->dataheader);
 				    $this->load->view('deleteall',$data);
 				    $this->load->view('template/includefooter');
@@ -980,7 +980,7 @@ public function editFullEmployee5($cid){//Tamang (view for editing the departmen
  	}
 
  	public function dashboard(){
- 		//$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+ 		//$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
  		$cid=$this->session->userdata('cid');
 		$data['user']=$this->sm->getprofilei($cid);
 	$data['editdetail']=$this->sm->sortevent();
@@ -997,14 +997,14 @@ public function editFullEmployee5($cid){//Tamang (view for editing the departmen
 
  		  $agenciesimplemented="16,218,2614,293,3220,3665,378,410,412,414,420,439,442,443,444,445,446,460,461,463,466,5050,5733,5773";
 
-              // $result['absent_count'] = $this->db->query("SELECT COUNT(*) as count FROM bpas_user_profiles p
-              // LEFT JOIN bpas_attendance_log a ON p.cid = a.userid AND a.date='".date('Y/m/d')."' WHERE a.Late IS NULL AND AgencyID IN (".$agenciesimplemented.")");  
+              // $result['absent_count'] = $this->db->query("SELECT COUNT(*) as count FROM user_profiles p
+              // LEFT JOIN bpas_attendance_log a ON p.cid = a.userid AND a.date='".date('Y/m/d')."' WHERE a.Late IS NULL AND batch_ID IN (".$agenciesimplemented.")");  
 
-                $result['absent_detail'] = $this->db->query("SELECT* FROM bpas_user_profiles p
-                        LEFT JOIN bpas_attendance_log a ON p.cid = a.userid WHERE a.Late IS NULL AND AgencyID IN (".$agenciesimplemented.")")->result_array();
+                $result['absent_detail'] = $this->db->query("SELECT* FROM user_profiles p
+                        LEFT JOIN bpas_attendance_log a ON p.cid = a.userid WHERE a.Late IS NULL AND batch_ID IN (".$agenciesimplemented.")")->result_array();
 
-                // $result['late'] = $this->db->query("SELECT* FROM bpas_user_profiles p
-                //         LEFT JOIN bpas_attendance_log a ON p.cid = a.$cid AND a.date='".date('Y/m/d')."' WHERE a.Late > 9 AND AgencyID IN (".$agenciesimplemented.")")->result_array();
+                // $result['late'] = $this->db->query("SELECT* FROM user_profiles p
+                //         LEFT JOIN bpas_attendance_log a ON p.cid = a.$cid AND a.date='".date('Y/m/d')."' WHERE a.Late > 9 AND batch_ID IN (".$agenciesimplemented.")")->result_array();
 
 
 
@@ -1029,8 +1029,8 @@ public function editFullEmployee5($cid){//Tamang (view for editing the departmen
  	   	//echo  $parma1 ;
       $result['absent_detail']='';  
       $agenciesimplemented="16,218,2614,293,3220,3665,378,410,412,414,420,439,442,443,444,445,446,460,461,463,466,5050,5733,5773"; 
-       $result['absent_detail'] = $this->db->query("SELECT* FROM bpas_user_profiles p
-                       LEFT JOIN bpas_attendance_log a ON p.cid =a.userid  AND p.cid='".$param1."'  WHERE a.Late IS NULL AND AgencyID IN (".$agenciesimplemented.")")->result_array();
+       $result['absent_detail'] = $this->db->query("SELECT* FROM user_profiles p
+                       LEFT JOIN bpas_attendance_log a ON p.cid =a.userid  AND p.cid='".$param1."'  WHERE a.Late IS NULL AND batch_ID IN (".$agenciesimplemented.")")->result_array();
 
        $this->load->view('userManagement/absent1',$result);
          }
@@ -1288,9 +1288,9 @@ public function editFullEmployee5($cid){//Tamang (view for editing the departmen
     	
 
 		$data['message']=$param1;
-		$data['ministryList']=$this->db->get('bpas_master_agencymainparent')->result_array();
-		$data['division']=$this->db->get('bpas_master_agency')->result_array();
-		$data['departmentList']=$this->db->get('bpas_master_agencyparent')->result_array();
+		$data['ministryList']=$this->db->get('batchmainparent')->result_array();
+		$data['division']=$this->db->get('batch')->result_array();
+		$data['departmentList']=$this->db->get('department')->result_array();
 		$data['slNo']=$this->db->get('st_dispatch_sequence_no')->row()->last_sequence_no;
     	//$data['file']=$this->atd->fileName($file_name,$division_name,$department_name);
 
@@ -1411,7 +1411,7 @@ public function reciept()
 	
 
 	public function membersearch(){//leki
- 	$data['item']=$this->db->get('bpas_master_agencyparent')->result_array();//for selecting department
+ 	$data['item']=$this->db->get('department')->result_array();//for selecting department
 		
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view('membersearch2',$data);
@@ -1442,36 +1442,36 @@ public function membersearch2(){//Tamang
 
 	
 
-	public function membersearch3(){//Tamang
+	public function add_user(){//Tamang(adding user individually)
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
            $data["fetch_data"] = $this->main_model->fetch_data(); 
-          $data['request']=$this->db->get('bpas_master_agencyparent')->result_array();
-          $data['request1']=$this->db->get('bpas_master_agency')->result_array();
-          $this->load->view("main_view", $data);  
+          $data['request']=$this->db->get('department')->result_array();
+          $data['request1']=$this->db->get('batch')->result_array();
+          $this->load->view("add_user", $data);  
 		$this->load->view('template/includefooter');
 		
 		
 	}
-	public function membersearch5(){//Tamang
+	public function add_department(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
            $data["fetch_data"] = $this->main_model->fetch_data(); 
          
-          $this->load->view("main_view1", $data);  
+          $this->load->view("add_department", $data);  
 		$this->load->view('template/includefooter');
 		
 		
 	}
-	public function membersearch6(){//Tamang
+	public function add_batch(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
            $data["fetch_data"] = $this->main_model->fetch_data(); 
-         $data['request']=$this->db->get('bpas_master_agencyparent')->result_array();
-		$this->load->view("main_view2", $data);  
+         $data['request']=$this->db->get('department')->result_array();
+		$this->load->view("add_batch", $data);  
 		$this->load->view('template/includefooter');
 		
 		
@@ -1526,15 +1526,15 @@ public function membersearch2(){//Tamang
                 	"cid"     =>$this->input->post("cid"),
                      "FirstName"     =>$this->input->post("FirstName"),  
                                            "gender"     =>$this->input->post("gender"),
-                     "AgencyParentID"     =>$this->input->post("parent"),
-                     "AgencyID"     =>$this->input->post("agency")  
+                     "department_ID"     =>$this->input->post("parent"),
+                     "batch_ID"     =>$this->input->post("agency")  
                          
                 );  
                
                  $data1 = array(  
                 	"relatedUserId"     =>$this->input->post("cid"),
-                	"AgencyParentID"     =>$this->input->post("parent"),
-                     "AgencyID"     =>$this->input->post("agency"),
+                	"department_ID"     =>$this->input->post("parent"),
+                     "batch_ID"     =>$this->input->post("agency"),
                     "password"   => md5($this->input->post("cid"))
             );
               
@@ -1570,7 +1570,7 @@ public function form_validation2() //Tamang (adding new department and departmen
                 //true  
                 $this->load->model("main_model");  
                 $data = array(  
-                	"AgencyParentID"     =>$this->input->post("cid"),
+                	"department_ID"     =>$this->input->post("cid"),
                      "name"     =>$this->input->post("FirstName"),  
                     
                          
@@ -1607,9 +1607,9 @@ public function form_validation2() //Tamang (adding new department and departmen
                  
                 $this->load->model("main_model");  
                 $data = array(  
-                	"AgencyParentID"     =>$this->input->post("item"),
+                	"department_ID"     =>$this->input->post("item"),
                      "name"     =>$this->input->post("quantity"),
-                     "AgencyID"     =>$this->input->post("quantity1"),    
+                     "batch_ID"     =>$this->input->post("quantity1"),    
                     
                          
                 );  
@@ -1644,20 +1644,20 @@ public function form_validation2() //Tamang (adding new department and departmen
       }
        public function inserted1()  
       {  //Tamang
-           $this->membersearch5();  
+           $this->add_department();  
       }  
       public function notinserted1()  
       {  //Tamang
-           $this->membersearch5();  
+           $this->add_department();  
       }  
       public function inserted2()  
       {  //Tamang
-           $this->membersearch6();  
+           $this->add_batch();  
       }
 
        public function notinserted2()  
       {  //Tamang
-           $this->membersearch5();  
+           $this->add_batch();  
       }  
      public function delete_data(){//Tamang 
            $this->load->view('template/includeheader',$this->dataheader);
@@ -1774,20 +1774,20 @@ public function form_validation2() //Tamang (adding new department and departmen
   		
 	
 
-  			// $issuance1= $this->db->query("SELECT department FROM bpas_user_profiles where department='".$department."'")->row()->department;
+  			// $issuance1= $this->db->query("SELECT department FROM user_profiles where department='".$department."'")->row()->department;
 
  						//OR
 
   	//$issuance=$this->sm->search1($name,$department);//to see if there is record or not in db
-  			$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'")->row();
+  			$issuance= $this->db->query("SELECT * FROM user_profiles where FirstName='".$name."' OR department_ID='".$department."'")->row();
 
   			if(sizeof($issuance)>0) 
 		  {
 
-	 	 $data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName'=> $name))->result_array();
+	 	 $data['checkissue']=$this->db->get_where('user_profiles', array('FirstName'=> $name))->result_array();
 
 		  
-		$data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
+		$data1['checkissue']=$this->db->get_where('user_profiles', array('department_ID' => $department))->result_array();
 		  
 
 
@@ -2147,7 +2147,7 @@ public function updateContact4() {
 		$query = "SELECT * FROM st_message WHERE RecieverId LIKE '%".$this->session->userdata('cid')."%' AND ReadStatus='N'";
 		$data['messages']=$this->db->query($query)->result_array();
 		//$this->db->get_where('st_message',array('RecieverId' =>$this->session->userdata('cid'),'ReadStatus'=>'N'))->result_array();
-		$data['userlist']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
+		$data['userlist']=$this->db->get_where('user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
 		$this->load->view('stmessage',$data); 
 	}
 
@@ -2277,7 +2277,7 @@ public function updateContact4() {
             $cids=explode(", ", $Updatedata['RecieverId']);
               foreach ($cids as $key => $cid) {
                  if(trim($cid)!=""){
-            $Updatedata['RecieverName']=$this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->FirstName. ' '.$this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->MiddleName.' '.$this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->LastName .', ';
+            $Updatedata['RecieverName']=$this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->FirstName. ' '.$this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->MiddleName.' '.$this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->LastName .', ';
 
                                                         }  }
 
@@ -2405,7 +2405,7 @@ function completeprocess1($param='', $param1=''){
 	
 	}
 	function initiatemessage(){
-		$data['userlist']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
+		$data['userlist']=$this->db->get_where('user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
 		$this->load->view('initiatemessage',$data);
 	}
 	function initiatemessagesubmit(){
@@ -2464,7 +2464,7 @@ function completeprocess1($param='', $param1=''){
 		$cids=explode(", ", $data['RecieverId']);
          foreach ($cids as $key => $cid) {
           if(trim($cid)!=""){
-         $data['RecieverName']=$this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->FirstName. ' '.$this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->MiddleName.' '.$this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->LastName .', ';
+         $data['RecieverName']=$this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->FirstName. ' '.$this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->MiddleName.' '.$this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->LastName .', ';
 
                                                         } }
 
@@ -2534,7 +2534,7 @@ function completeprocess1($param='', $param1=''){
 		//die($query);
 	
 		//$this->db->get_where('st_message',array('RecieverId' =>$this->session->userdata('cid'),'ReadStatus'=>'N'))->result_array();
-		$data['userlist']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
+		$data['userlist']=$this->db->get_where('user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
 		$data['messages']='';
 		$this->load->view('stmessage1',$data); 
 	}
@@ -2618,7 +2618,7 @@ function msg1($param='', $param1=''){
 		//die($query);
 	
 		//$this->db->get_where('st_message',array('RecieverId' =>$this->session->userdata('cid'),'ReadStatus'=>'N'))->result_array();
-		$data['userlist']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
+		$data['userlist']=$this->db->get_where('user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
 		$data['messages']='';
 		$this->load->view('stmessage1',$data); 
 	}
@@ -2632,7 +2632,7 @@ function msg1($param='', $param1=''){
 	  	 {
 	  	 	// if $message['completeStatus']== 'N';
 
-	  	 	$data['namelist']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
+	  	 	$data['namelist']=$this->db->get_where('user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
 	  	 	if ($message['SenderName']==$data['namelist'])
 
 	  	 	{
@@ -2660,7 +2660,7 @@ function msg1($param='', $param1=''){
 		$query = "SELECT * FROM st_forward WHERE RecieverId LIKE '%".$this->session->userdata('cid')."%' AND ReadStatus='N'";
 		$data['messages']=$this->db->query($query)->result_array();
 		//$this->db->get_where('st_message',array('RecieverId' =>$this->session->userdata('cid'),'ReadStatus'=>'N'))->result_array();
-		$data['userlist']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
+		$data['userlist']=$this->db->get_where('user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
 		$this->load->view('stmessage1',$data); 
 	}
 	//sonam Tshering
@@ -2691,7 +2691,7 @@ function msg1($param='', $param1=''){
 		// // $query = "SELECT * FROM st_forward WHERE RecieverId LIKE '%".$this->session->userdata('cid')."%' AND ReadStatus='Y'";
 		// // $data['messages']=$this->db->query($query)->result_array();
 		// //$this->db->get_where('st_message',array('RecieverId' =>$this->session->userdata('cid'),'ReadStatus'=>'N'))->result_array();
-		// // $data['userlist']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
+		// // $data['userlist']=$this->db->get_where('user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
 		$this->load->view('allmessages1',$data); 
 		 }
 		 else{

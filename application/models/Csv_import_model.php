@@ -1,7 +1,7 @@
 <?php
 class Csv_import_model extends CI_Model
 {
- function select()//$AgencyID
+ function select()//$batch_ID
  {
 
  	 $query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
@@ -18,18 +18,18 @@ class Csv_import_model extends CI_Model
  	 		
  		p.profileId,
  		p.Mobile
- 		FROM bpas_user_profiles p 
- 		LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID= p.AgencyMainParentID 	LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
+ 		FROM user_profiles p 
+ 		LEFT JOIN departmentParent m ON m.departmentParent_ID= p.departmentParent_ID 	LEFT JOIN department d ON d.department_ID=p.department_ID LEFT JOIN batch a ON a.batch_ID=p.batch_ID 
 		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
 		ORDER BY  p.profileId  DESC";
-		// where p.AgencyID='".$AgencyID."'
+		// where p.batch_ID='".$batch_ID."'
  	
  		$employees = $this->db->query($query);
 		return $employees;
 
  
   $this->db->order_by('profileId','DESC');
-  $query1 = $this->db->get('bpas_user_profiles');
+  $query1 = $this->db->get('user_profiles');
   // return $query;
   return $query1;
  }
@@ -38,8 +38,8 @@ class Csv_import_model extends CI_Model
  {
 
  	
-  $this->db->insert_batch('bpas_user_profiles', $data);
-  $this->db->insert_batch('bpas_logins', $data1);
+  $this->db->insert_batch('user_profiles', $data);
+  $this->db->insert_batch('login', $data1);
 
  }
 }
