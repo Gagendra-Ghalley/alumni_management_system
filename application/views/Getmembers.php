@@ -83,9 +83,9 @@
                                     </li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
-                                    <li class="active"><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
-                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+                                    <li class="active"><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -105,47 +105,81 @@
 
 <body class="body-Login-back" >
 
-    <div class="container" style="margin-left: 56px;">
-       
-        <div class="row">
-           
-            <div class="col-md-7 col-md-offset-3 text-center">
-                <div class="login-panel panel panel-default">                  
-                    <div class="panel-heading">
-                        <h5 class="panel-title">Please Log In</h5>
-                    </div>
-                    <div class="panel-body login">
-                        <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/login_validate" class="form-group">
-                            
-                            	<div class="form-group">
-                               
-                                    <input class="form-control" placeholder="CID" name="cid" type="text" autofocus required/>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" class="pass" type="password" required/>
-                                </div>
-                               <!--  <a href="<?php echo base_url();?>index.php/ATD/Forgetpassword">Forget password?</a> -->
-                                 
-                                <input type="submit" value="Login" class="btn btn-lg btn-success btn-block"/>
-                               
-                              
 
-                           
-                        </form>
-                        <form accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/Forgetpasswordemail">
-                        <input type="submit" value="Forgot password?" class="btn btn-lg btn-warning btn-block"/>
-                        <br>
-                       </form>
+            <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/ATD/viewmember2" method="post">
+    </form>
+
+      <div id="page-wrapper" style="margin-right: 48px;">
+        <div class="col-md-8 col-md-offset-1 text-center" >
+               <div class="login-panel panel panel-default center" style="height: 330px">
+                <div class="panel-heading">
+                        <h5 class="panel-title">Member search</h5>
                     </div>
-                    <div id="errors"><?php echo validation_errors();?></div>
-                </div>
+
+               <div class="panel-body login" style="height: 100%">
+                <div class="form-group" >
+                    <label class="col-sm-12 col-md-4 col-lg-3 control-label" style="color: black;font-size: 17px"> Name</label>
+
+                    
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                         
+                            <input class="form-control" name="name" id="cidNum" style="height: 30px; width: 100%" placeholder=" Enter Name" form="f" type="text" required />
+                        </div>
+                    </div>
+              
+                
+            
+
+               <div class="form-group"  >
+                    <label class="col-sm-3 col-md-4 col-lg-3 control-label" style="color: black;font-size: 17px"> Department</label>
+
+                   
+
+                        <div class="input-group col-md-9">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-fas fa-sitemap"></i></span>
+                            
+                            
+
+                            <select class="form-control" name="f1" form="f" style="height: 30px; width: 100%;color: #111">
+                                <option value="" form="f">Select Department</option>
+                       <?php foreach($item as $key):?>
+                        <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
+                      <?php endforeach; ?>
+                               <!--  <option value="" >Select Department</option>
+                                <option value="Civil">Civil</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Electrical">Electrical</option>
+                                <option value="Electronics and Communication">Electronics and Communication</option> -->
+                            </select>
+
+                        </div>
+                    
+                
+
+
+                <br>
+                <br>
+                
+              
+
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                       
+                        <input type="submit" class="btn btn-lg btn-success btn-block" form="f" value="Get Details" id="getbtn"><span class="glyphicon glyphicon"></span>
+
+                         <button type="reset" class="btn btn-lg btn-danger btn-block">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+                    </div>
+            
+                    </div>
+           </div>
+         </div>
             </div>
         </div>
-    </div>
+  
 
-	
-	
-	
+  
+  
+  
  <div class="container col-md-12 img-thumbnail bg-primary">
                         <div class="col-md-4 col-sm-12 left-contact  ">
 

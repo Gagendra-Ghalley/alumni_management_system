@@ -20,14 +20,16 @@
                 </div>
  
   
-         <div id="page-wrapper" style="margin-left: 0px;border: 0px solid #111;">
+         <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
 
            <div class="panel-heading" style="background-color: #0a97b0;">
               <i class="fa fa-bar-chart-o fa-fw"style="color: #fff"></i> <span style="color: #fff;size: 25px" ><b>Insert new department</b></span>
             </div><br>
-          <div class="row profile" style="background-color: #e0dede">  
+          <div class="row profile">  
   
-      <br /><br /><br />  
+       
       
       <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation2">  
            <?php  
@@ -114,9 +116,11 @@
       </form> 
      
   </div>
-
+</div>
+</div>
+</div>
   </div>
-   <div class="bg-primary" style="margin-top: 100px;">
+   <div class="bg-primary" style="margin-top: 147px;">
             <div class="container">
 
                

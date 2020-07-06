@@ -294,11 +294,11 @@
        <?php foreach($eventdetail as $row): ?>
         <div class="row padding">
 
-            <div class="col-lg-7 col-md-7 col-sm-12"data-wow-delay="0.2s" >
+            <div class="col-lg-5 col-md-7 col-sm-12"data-wow-delay="0.2s" >
                 
 
                             <div class="hovereffect">
-                             <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/Images1/slider4.png" style="height: 200px" ></span>
+                             <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
                                 <div class="overlay">
                                     <h2>Upcoming Event</h2>
                                     
@@ -307,15 +307,9 @@
                     
                    
          
-
-            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
-                <div class="card">
-                 
-                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
-                </div>
-
             </div>
-            <div class="col-md-4 col-md-12 col-sm-12" >
+            
+            <div class="col-lg-5 col-md-7 col-sm-12 img-thumbnail" style="height: 210px;" >
                 <div class="card">
                      <p class="text-primary"><b>Description</b></p>
                  
@@ -330,10 +324,10 @@
                   
                 </div>
             </div>
-            <div class="col-md-7 col-sm-3 " >
+            <div class="col-md-2 col-sm-12  " style="height: 210px;" >
                 
 
-                    <div class="" >
+                    
                                
 
                     <button style="height:60px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
@@ -355,7 +349,7 @@
                                           </button><br>
 
                               
-            </div>
+          
         </div><?php endforeach; ?>
    
 

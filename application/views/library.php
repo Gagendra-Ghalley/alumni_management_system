@@ -96,7 +96,7 @@
 									<li><a href="<?php echo base_url();?>index.php/ATD/science"><strong style="color: #fff">SCIENCE AND HUMANITIES DEPARTMENT</strong></a></li>
 									<li><a href="<?php echo base_url();?>index.php/ATD/finance"><strong style="color: #fff">FINANCE AND ACCOUNTS SECTION ENGINEERING DEPARTMENT</strong></a></li>
 									<li><a href="<?php echo base_url();?>index.php/ATD/admin"><strong style="color: #fff">ADMINISTRATION</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/libray"><strong style="color: #fff">LIBRARY</strong></a></li>
+									<li><a href="<?php echo base_url();?>index.php/ATD/lib"><strong style="color: #fff">LIBRARY</strong></a></li>
 									<li><a href="<?php echo base_url();?>index.php/ATD/ict"><strong style="color: #fff">ICT UNIT</strong></a></li>
 								</ul>
 							</div>
@@ -114,20 +114,20 @@
 									<div class="teachers">
 								<div class="container">
 									<div class="teach-head">
-										<h3>ADMINISTRATION</h3><br>
+										<h3>LIBRARY</h3><br>
 										
 									</div>
 									<div class="team-grids">
 										<div class="col-md-3 team-grid text-center">
 											<div class="team-img">
 
-												<img src="<?php echo base_url();?>assets/img2/kn.png" style="height:150px;width: 150px;border-radius: 50%" alt="coming soon"
+												<img src="<?php echo base_url();?>assets/img2/tsheringyangchen.jpg" style="height:150px;width: 150px;border-radius: 50%" alt="coming soon"
 												/>
-													<h4>Kinzang Namgay</h4>
-												<h4>ASSISTANT ADM OFFICER</h4>
+													<h4>Tshering Yangchen</h4>
+												<h4>Library In-Charge</h4>
 											
-												<h5>kinzangnamgay(dot)cst@rub(dot)edu(dot)bt</h5>
-												<h5>Contact No.# +975-17160538(O)/17977363</h5>
+												<h5>tsheringyangchen(dot)cst@rub(dot)edu(dot)bt</h5>
+												<h5>Contact No.# +975-16553316(O)/16912132</h5>
 												
 											</div>
 										</div>
@@ -154,34 +154,34 @@
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
 					
-					<img src="<?php echo base_url();?>assets/img2/tw.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Tshering Wangmo</h4>
-						<h4>Senior ADM Assistant</h4>
+					<img src="<?php echo base_url();?>assets/img2/tula.png" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Tularam Ghalley</h4>
+						<h4>Library Asst.</h4>
 						
-						<h5>tsheringwangmo(dot)cst@rub(dot)edu(dot)btt</h5>
-						<b> Contact No.# +975-17160538(O)/17755313</b>
-						
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/TenzinDorji.jpg" style="height:150px;width: 150px;border-radius: 50%"/>
-						<h4>Tenzing Dorji</h4>
-						<h4>Store Incharge</h4>
-						
-						<h5>tenzingdorji(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b>Contact No.# +975-16551467(O)/17649668</b>
+						<h5>tularamghalley(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17647339</b>
 						
 				</div>
 			</div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-						<img src="<?php echo base_url();?>assets/img2/rg.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+					<img src="<?php echo base_url();?>assets/img2/KrishnaMayaSharma.jpg" style="height:150px;width: 150px;border-radius: 50%"/>
+						<h4>Krishna Maya Sharma</h4>
+						<h4>Library Asst.</h4>
+						
+						<h5>krishnamayasharma(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17448881</b>
+						
+				</div>
+			</div>
+			<div class="col-md-3 team-grid text-center">
+				<div class="team-img">
+						<img src="<?php echo base_url();?>assets/img2/PemaChoden.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
 			
-						<h4>Reeta Gurung</h4>
-						<h4>Estate Manager</h4>
-						<h5>reetagurung(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b>Contact No.# +975-17408232</b>
+						<h4>Pema Choden</h4>
+						<h4>Library Asst.</h4>
+						<h5>pemachoden(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17683119</b>
 						
 				</div>
 			</div>
@@ -202,124 +202,34 @@
 				<div class="team-grids">
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/id.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
-						<h4>Inchu Dorji</h4>
-						<h4> Student Service Officer</h4>
+					<img src="<?php echo base_url();?>assets/img2/TsheringYangdon.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
+						<h4>Tshering Yangdon</h4>
+						<h4> Library Asst.</h4>
 						
-						<h5>inchudorji(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b> Contact No.# +975-17734846</b>
+						<h5>tsheringyangdon(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b> Contact No.# +975-17379739</b>
 						
 				</div>
 			</div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/jg.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Jashman Gurung</h4>
-						<h4>Health Assistant / Student Service Officer</h4>
+					<img src="<?php echo base_url();?>assets/img2/PhubDem.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
+						<h4>Phub Dem</h4>
+						<h4>Library Asst.</h4>
 						
-						<h5>jashmangurung(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b>Contact No.# +975-17623675/77623675</b>
-						
-				</div>
-			</div>
-			
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-						<img src="<?php echo base_url();?>assets/img2/cd.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Chimi Dem</h4>
-						<h4>Student Service Officer</h4>
-					
-						<h5>chimidem(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b>Contact No.# +975-17379976</b>
+						<h5>phubdem(dot)cst@rub(dot)edu(dot)bt</h5>
+						<b>Contact No.# +975-17719512</b>
 						
 				</div>
 			</div>
-
+		
 
 	
 			
 			
 		</div>
 	</div>
-	<br>
-		<br>
-		<br>
-		<br>
-
-	<div class="container">
-				<div class="team-grids">
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/pd.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Passang Dema</h4>
-						<h4>ADM Assistant</h4>
-						
-						<h5>passangdema(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b>Contact No.# +975-17652414</b>
-					
-						
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/sd.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
-						<h4>Sonam Deki</h4>
-						<h4>Research Officer</h4>
-						
-						<h5>sonamdeki(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b>Contact No.# +975-17588973</b>
-						
-				</div>
-			</div>
-			
 	
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/icon.png" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
-						<h4>Partiman Singer</h4>
-						<h4>Carpenter</h4>
-						
-						<h5>partiman(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b >Contact No.# +975-17291668</b>
-						
-				</div>
-			</div>
-			
-		</div>
-	</div> <br>
-			<br>
-			<br>
-			<div class="container">
-				<div class="team-grids">
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/tp.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Tshewang Penjor</h4>
-						<h4>Electrician</h4>
-						
-						<h5>tshewangpenjor(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b>Contact No.# +975-17863563</b>
-					
-						
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/Sunita.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
-						<h4>Sunita Tamang</h4>
-						<h4>Personal Assistant</h4>
-						
-						<h5>sunitatamang(dot)cst@rub(dot)edu(dot)bt</h5>
-						<b>Contact No.# +975-17916168</b>
-						
-				</div>
-			</div>
-			
-	
-			
-			
-		</div>
-	</div>
 </div> 
 </div>
 

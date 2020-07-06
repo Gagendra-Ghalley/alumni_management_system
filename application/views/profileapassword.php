@@ -56,6 +56,17 @@
 
     </div>
     <!-- end wrapper -->
+
+   
+<div class="bg-primary" style="margin-top: 147px;">
+            <div class="container">
+                <div class="col-lg-12">
+                <div class="col-md-6 col-sm-12">
+                    <p>Alumni Management System @ 2020</p>
+                </div>
+            </div>
+        </div>
+
     
    <div class="modal fade" id="incomplete">
   <div class="modal-dialog">
@@ -88,6 +99,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="confirmPassword()">Yes</button>
+
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

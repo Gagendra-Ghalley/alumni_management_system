@@ -21,7 +21,9 @@
                     </div>
                 </div>
 
-          <div id="page-wrapper" style="margin-left: 0px"><br><br><br><br>
+          <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
             
 
          
@@ -29,7 +31,7 @@
               <i class="fa fa-bar-chart-o fa-fw"style="color: #fff"></i> <span style="color: #fff;size: 25px" ><b>Insert New Year of Gradution</b></span>
             </div><br><br>
       
-      <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation3"  style="background-color: #e0dede"> <br>
+      <form method="post" action="<?php echo base_url()?>index.php/Settings/form_validation3"  > 
            <?php  
            if($this->uri->segment(2) == "inserted2")  
            {  
@@ -129,8 +131,9 @@
   </div>
 
   </div>
-   
- <div class="bg-primary" style="margin-top: 100px;">
+   </div>
+ </div>
+ <div class="bg-primary" style="margin-top: 147px;">
             <div class="container">
 
                

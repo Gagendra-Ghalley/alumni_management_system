@@ -1,9 +1,5 @@
 
 
-    <div id="page-wrapper">
-      <div class="row">
-               <!-- Page Header -->
-
   <div id="page-wrapper">
     <div class="row">
                 <!-- Page Header -->
@@ -23,14 +19,13 @@
                     </div>
                 </div>
 
-      <div class="row" style="margin-left: 15px">
-        <div class="col-lg-10 "style="background-color: #e0dede" >
-          
-
-            </div>
-    <div class="container img-thumbnail" style="background-color: #f5f5f5">
      
-        <div class="col-md-12 col-lg-12 col-sm-12" >
+
+            
+     <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
+          
           <h3 align="left">Send Email</h3>
           <br />
 
@@ -81,10 +76,14 @@
 
                   <textarea type="email" name="email" class="form-control" placeholder="Eg: 0216518.cst@rub.edu.bt, 0216506.cst@rub.edu.bt (For multiple email address use comma , )" class="form-control"  rows="4"></textarea>
                 </div>  -->
-          <div class="form-group">
+        <!--   <div class="form-group">
                   <label>Attachment<i class="fa fa-paperclip fa-2x"></i></label>
                   <input type="file" name="resume"  accept=".doc, .docx, .pdf, .xls, .gif, .jpg, .png, .jpeg" required />
+
+                </div> -->
+
                 </div>
+
                 
             
                 <div class="form-group">
@@ -94,8 +93,7 @@
               </div>
             </div>
 
-            <div class="form-group" align="left">
-              <input type="submit" name="submit" value="Send mail" class="btn btn-info" />
+            
 
             <div class="form-group" align="center">
               <input type="submit" name="submit" value="Send Mail" class="btn btn-info" />
@@ -106,29 +104,12 @@
       </div>
 
     </div>
-
-  <!-- <div class="bg-primary">
-            <div class="row">
-
-               
+  </div>
+  </div>
 
 
-                <div class="col-lg-12">
 
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>Alumni Management System@2020</p>
-
-                </div>
-
-            </div>
-        </div>
-      </div>
- -->
-
-
-      <div class="bg-primary">
+      <div class="bg-primary" style="margin-top: 50px;">
          <div class="container">
             <div class="col-md-6">
                <p>@Alumni Management System</p>
