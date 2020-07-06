@@ -460,7 +460,7 @@ function addDak($param="")
 
 	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->batch_ID/'>DeleteAll</a></td>"
 
-	     
+	     ;
 		}
 		echo "</tr>";
 		$counter++;
