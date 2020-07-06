@@ -545,7 +545,7 @@ public function validate_credentials1(){
 		$data['item']=$this->db->get('department')->result_array();//for selecting department
 		// $this->load->view('template/includeheader',$this->dataheader);
 
-		$data['item']=$this->db->get('bpas_master_agencyparent')->result_array();
+		$data['item']=$this->db->get('department')->result_array();
 
 		$this->load->view('membersearch3',$data);
 		
