@@ -21,7 +21,11 @@
             </div>
       
 
-            <div class="row ">
+           <div id="page-wrapper" style="margin-left: 0px">
+            
+        
+        
+        <div class="col-lg-12"style="margin-top: 10px;">
                 <!--quick info section -->
                <!--  <?php if($pendingLeave>0){?><a href="<?php echo base_url();?>index.php/Leave/approvePending/"><?php }?> -->
                 <div class="col-lg-6">
@@ -90,7 +94,8 @@
               
            
             
-                 
+           </div>
+           </div>      
 
     
 

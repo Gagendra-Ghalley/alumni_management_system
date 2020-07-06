@@ -19,9 +19,9 @@
                 </div>
     
 
-      <div id="page-wrapper" style="margin-left: 0px" >
-         
-        <div class="col-lg-12" style=" float:none;border: 5px solid #f6f6f6;margin-top: 60px;background-color: #e0dede;">
+     <div id="page-wrapper" style="margin-left: 0px" style="background-color: #f5f5f5">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
          
           <br />
           <?php
@@ -70,9 +70,10 @@
   </div>
 
   </div>
+</div>
 
 
-      <div class="bg-primary" style="margin-top: 40px;">
+      <div class="bg-primary" style="margin-top: 150px;">
             <div class="container">
 
                

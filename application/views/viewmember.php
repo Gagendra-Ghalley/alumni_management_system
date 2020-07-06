@@ -32,7 +32,7 @@
 
             <tr>
                 <br>
-                <td><?php echo $count++;?></td><br>
+                <td><button class="btn bg-primary" style="border-radius: 50%"><?php echo $count++;?></td></button><br>
                 
              <b>Name:</b><td><?php echo $row['FirstName'];?> <!-- <?php echo $row['MiddleName'];?> <?php echo $row['LastName'];?> --></td><br>
              <b>Department:</b><td> <?php 

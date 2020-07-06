@@ -151,6 +151,17 @@ public function science(){
 			$this->load->view('administration');
 		}
 
+		public function Libray(){
+		
+		
+			$this->load->view('library');
+		}
+		public function ict(){
+		
+		
+			$this->load->view('ict');
+		}
+
 
 	public function donate(){
 		
@@ -167,9 +178,10 @@ public function science(){
 			
  public function Forgetpasswordemail()
 {
-	      
-$this->load->view('forgetpasswordemailatd');
+	      // $this->load->view('template/includeheader',$this->dataheader);
 		
+		$this->load->view('forgetpasswordemailatd');
+		// $this->load->view('template/includefooter');
         		
 }
 
@@ -543,7 +555,8 @@ public function validate_credentials1(){
 	public function membersearch1(){//leki
  	
 		$data['item']=$this->db->get('bpas_master_agencyparent')->result_array();
-		$this->load->view('membersearch3',$data);
+		$this->load->view('Getmembers',$data);
+		
 		
 		
 		
@@ -586,14 +599,15 @@ public	function viewmember2(){//leki
 
 
 
-		 // $this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('viewmember1',$data,$data1);
-		$this->load->view('template/includefooter');
+		
+		$this->load->view('search_result',$data,$data1);
+		
 	}
 	 else{
+	 	$this->load->view('no_result');
 	  	 $data['message']="There is no record of Alumni";
 	 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data);
-	 // 
+	 
 	   }
 
 

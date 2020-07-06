@@ -61,7 +61,8 @@
         
      
             <div id="page-wrapper" style="margin-left: 0px">
-                <div class="col-lg-12">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
 
     
                     <div class="panel panel-primary">
@@ -133,40 +134,31 @@
                 </div>
 
             </div>
-
-           
-
-                      
-
-
-         
-
+        </div>
+    </div>
 
         </div>
         <!-- end page-wrapper -->
 
     </div>
-     <div class="bg-primary" class="du-newsletter">
-      <div class="bg-primary" class="du-newsletter" >
+    <div class="bg-primary" style="margin-top: 94px;">
             <div class="container">
 
                
 
-<!-- 
+
                 <div class="col-lg-12">
 
                 <div class="col-md-6 col-sm-12">
 
 
-                    <p>@Alumni Management System</p>
+                    <p>Alumni Management System@2020</p>
 
                 </div>
 
-            </div> -->
+            </div>
         </div>
       </div>
-    </div>
-    <!-- end wrapper -->
 
 <script>
 function mySearchFunction() 

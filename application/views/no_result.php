@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-   <!--header-->
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CST Alumni Management System</title>
-    
+ <!DOCTYPE html>
+<html>
+
+
+<head>
+ 
    
-<link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CST Alumni Management System</title>
+    <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
   <!--   <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet"> -->
-     <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +59,7 @@
  
   
 
-
+  
 <!--header-->
 <header class="clearfix">
    <nav class="navbar-fixed-top" role="navigation">
@@ -65,14 +67,15 @@
   <div class="bg-primary" class="box" > 
     <div class="container">
     
+
       <div class="header-element clearfix">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <h1 class="navbar-brand navbar-brand_">
                                     <a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
 
                             </div>
-                            <div class="col-md-9" >
+                            <div class="col-md-8" >
                                 <ul class="flexy-menu orange" >
                                     <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
@@ -80,107 +83,61 @@
                                     </li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
-
-                                    <!-- <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-envelope"></i>Profile</a></li> -->
+                                    <li ><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
                                     <li class="active"><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-        </div>
-      </div>
+
+
+     
  
 </nav>
   
 </header>
+<!--header-->
+  
+
 </head>
-<body>
-  
-<div id="page-wrapper"  style="width: 900px; " > 
-  
+
+
+<body class="body-Login-back" >
+
+    
+       <div class="container">
+        <div class="row">
            
+            <div class="col-md-8 col-md-offset-2 " >
+                <div class="login-panel panel" style="background-color: #f5f5f5"> 
+                <div class="panel-heading">
+                        <h5 class="panel-title">Message</h5>
+                    </div>     
+                    <div class="panel-body login">
+                       <h5><b>There is no record of Alumni</b></h5>
+                      <div class="modal-footer">
 
-
-    <form class="form-horizontal" id="f" action="<?php echo base_url();?>index.php/ATD/viewmember2" method="post">
-    </form>
-
-      
-        <div class="col-md-10 img-thumbnail" style=" margin-top: 100px;height: 300px;color: #fff">
-               
-                <div class="panel-heading bg-primary" >
-                 
-                  <h4 class="panel-title "  >Member Search</h4>
-
-              </div>
-
-              <br>
-                <div class="form-group" >
-                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 20px"> Name</label>
-
-                    <div class="col-md-10 selectContainer">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                         
-                            <input name="name" id="cidNum" style="height: 30px; width: 250px" placeholder=" Enter Name" form="f" type="text" required />
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-            
-
-               <div class="form-group" style="width: 660px" >
-                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 17px"> Department</label>
-
-                    <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
-
-                        <div class="input-group col-md-10">
-                          <span class="input-group-addon"><i class="glyphicon glyphicon-fas fa-sitemap"></i></span>
-                            
-                            
-
-                            <select name="f1" form="f" style="height: 30px; width: 250px;color: #111">
-                                <option value="" form="f">Select Item</option>
-                       <?php foreach($item as $key):?>
-                        <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
-                      <?php endforeach; ?>
-                               <!--  <option value="" >Select Department</option>
-                                <option value="Civil">Civil</option>
-                                <option value="Information Technology">Information Technology</option>
-                                <option value="Electrical">Electrical</option>
-                                <option value="Electronics and Communication">Electronics and Communication</option> -->
-                            </select>
-
-                        </div>
-                    </div>
-                </div>
-
-                <br>
-                <br>
-              
-
-               
-                    <label class="col-sm-3 col-md-4 col-lg-2 control-label"></label>
-                    <div class="col-sm-5 col-md-6 col-lg-4">
+                           <a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><button type="button" class="btn btn-success">Close</button></a>
+       
+                          </div>
                        
-                        <input type="submit" class="btn btn-success" form="f" value="Get Details" id="getbtn"><span class="glyphicon glyphicon"></span>
-
-                         <button type="reset" class="btn btn-danger">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+                        
                     </div>
-              
 
-           
-
+                    
+                </div>
             </div>
 
-    </div>
-   
+        </div>
+      </div>
 
+    
 
-
-  <div class="container col-md-12 img-thumbnail bg-primary">
+  
+  
+  
+ <div class="container col-md-12 img-thumbnail bg-primary">
                         <div class="col-md-4 col-sm-12 left-contact  ">
 
                        <h3 class="title" style="color:#fff;">Contact Us</h3>
@@ -236,7 +193,7 @@
 
 
 <!--footer-->
- 
+ <div class="bg-primary" class="du-newsletter">
             <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
@@ -251,7 +208,48 @@
             </div>
         </div>
 
+        </div>
 
+
+  
+
+
+  
+
+   
+     <!-- Core Scripts - Include with every page -->
+    <script src="<?php echo base_url();?>assets/plugins/jquery-1.10.2.js"></script>
+    <script src="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+     <!-- Main jQuery & other 3rd party Library -->
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>
+  
+  <!-- Feature box equal height JS -->
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.equalheights.js"></script>  
+  <!-- UI bottom to top JS -->
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.ui.totop.js"></script>
+  <!-- Subscription JS -->
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/sForm.js"></script>  
+  <!-- Animation JS -->
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/wow.js"></script>
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/device.min.js"></script>
+  <!-- Menu JS -->
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/flexy-menu.js"></script>
+  <!-- Text rotator JS -->
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.simple-text-rotator.min.js"></script>
+  <!-- Smooth Scroll JS -->
+  <script type="text/javascript" src="j<?php echo base_url();?>assets/js1/library/smoothscroll.js"></script>
+  
+  <!-- Testimonila JS -->
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.cubeportfolio.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
+  <!-- Custom script -->
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
+  <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
  
-  </body>
-  </html>
+</body>
+
+</html>
+

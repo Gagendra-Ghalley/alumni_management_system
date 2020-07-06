@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-$config['base_url'] = 'http://localhost:/Alumni_System/alumni_management_system/';
+$config['base_url'] = 'http://localhost:8080/final/alumni_management_system/';
 
 
 

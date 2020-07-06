@@ -228,9 +228,9 @@ $cid = $this->input->post("cid");
 	{
 		$this->load->library('email');
 		
-	$file_data = $this->upload_file();
-		if(is_array($file_data))
-		{
+	// $file_data = $this->upload_file();
+	// 	if(is_array($file_data))
+	// 	{
 			$message = '
 			<h3 align="center">Alumni Management System</h3>
 				<table  width="100%" cellpadding="5">
@@ -268,7 +268,7 @@ $cid = $this->input->post("cid");
 		    
 		    $this->email->subject($subject);
 	        $this->email->message($message);
-	       $this->email->attach($file_data['full_path']);
+	       // $this->email->attach($file_data['full_path']);
 
 	        // foreach ($_FILES as $key => $value) {
 	        // 	if(!empty($key['resume'])){
@@ -285,29 +285,29 @@ $cid = $this->input->post("cid");
 	      
 	        if($this->email->send())
 	        {
-	        	if(delete_files($file_data['file_path']))
-	        	{
+	        	// if(delete_files($file_data['file_path']))
+	        	// {
 	        		$this->session->set_flashdata('message', 'Message has been sent successfully!!');
 	        		redirect('sendemail');
-	        	}
+	        	// }
 	        }
 
 	        else
 	        {
-	        	if(delete_files($file_data['file_path']))
-	        	{
+	        	// if(delete_files($file_data['file_path']))
+	        	// {
 	        		echo $this->email->print_debugger();
 	        		$this->session->set_flashdata('message', 'There is an error in email send');
 	        		redirect('sendemail');
-	        	}
+	        	// }
 	        }
-	        echo $this->email->print_debugger();
-	    }
-	    else
-	    {
-	    	$this->session->set_flashdata('message', 'There is an error in attach file');
-	        redirect('sendemail');
-	    }
+	    //     echo $this->email->print_debugger();
+	    // }
+	    // else
+	    // {
+	    // 	$this->session->set_flashdata('message', 'There is an error in attach file');
+	    //     redirect('sendemail');
+	    // }
 	}
 	
 
@@ -352,24 +352,24 @@ $cid = $this->input->post("cid");
 			 }
 		
 
-	function upload_file()
-	{
-		$config['upload_path'] = 'uploads/';
-		$config['allowed_types'] = 'xls|doc|docx|pdf|gif|jpg|png|jpeg';
-		$this->load->library('upload',$config);
+	// function upload_file()
+	// {
+	// 	$config['upload_path'] = 'uploads/';
+	// 	$config['allowed_types'] = 'xls|doc|docx|pdf|gif|jpg|png|jpeg';
+	// 	$this->load->library('upload',$config);
 		
 		
 		
-		if($this->upload->do_upload('resume'))
-		{
-			return $this->upload->data();
+	// 	if($this->upload->do_upload('resume'))
+	// 	{
+	// 		return $this->upload->data();
 
-		}
-		else
-		{
-			return $this->upload->display_errors();
-		}
-	}
+	// 	}
+	// 	else
+	// 	{
+	// 		return $this->upload->display_errors();
+	// 	}
+	// }
 
 	
 }

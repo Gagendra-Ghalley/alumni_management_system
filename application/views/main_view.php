@@ -21,12 +21,11 @@
  
                     </div>
                 </div>
-          <div id="page-wrapper" style="margin-left: 0px;">
-            
-
-            
+          <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
   
-      <br /><br /><br />  
+      
       <div class="panel-heading" style="background-color: #0a97b0">
               <i class="fa fa-bar-chart-o fa-fw" style="color: #fff"></i> <span style="color: #fff" ><b>Insert student data</b></span>
             </div><br>
@@ -161,7 +160,9 @@
   </div>
 
   </div>
-  <div class="bg-primary" style="margin-top: 100px;">
+</div>
+</div>
+  <div class="bg-primary" style="margin-top: 150px;">
             <div class="container">
 
                

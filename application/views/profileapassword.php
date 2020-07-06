@@ -51,7 +51,7 @@
 </div>
     <!-- end wrapper -->
    
-<div class="bg-primary">
+<div class="bg-primary" style="margin-top: 147px;">
             <div class="container">
                 <div class="col-lg-12">
                 <div class="col-md-6 col-sm-12">

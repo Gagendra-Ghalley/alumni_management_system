@@ -48,8 +48,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
-                    <h1><img src="<?php echo base_url();?>assets/img/cstlogo2.png"><font size="4">CST Alumni Management System</font></h1>
+                <a class="navbar-brand" href="#" style="margin-left: 30px;margin-top: -10px">
+                    <h1><img src="<?php echo base_url();?>assets/img/cstlogo2.png">&nbsp;<font size="4">CST Alumni Management System/Admin</font></h1>
                 </a>
             </div>
             
@@ -96,20 +96,11 @@
                    
                         <i class="fa fa-user fa-2x"></i>
                     </a>
-                    <!-- dropdown user-->
-<!-- 
-                    <div class="dropdown-menu dropdown-menu-small">
-                    <a class="dropdown-item" href="user-profile-lite.html">
-                      <i class="material-icons">&#xE7FD;</i> Profile</a>
                     
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="../admin-signin.html">
-                      <i class="material-icons text-danger">&#xE879;</i> Logout </a>
-                  </div> -->
                     <ul class="dropdown-menu dropdown-user">
                       
                         <li class="divider"></li>
-                         <li   class="fa fa-angle-right"><span class="pull-right"><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a></span></li>
+                         <li   class="fa fa-user"><span class="pull-right"><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out"></i>Logout</a></span></li>
                         
                     </ul>
                     <!-- end dropdown-user -->

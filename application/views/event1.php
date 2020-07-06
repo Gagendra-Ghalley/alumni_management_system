@@ -84,13 +84,13 @@
       <div class="card-title text-left bold">UP COMMING EVENT</div><br>
        <?php foreach($eventdetail as $row): ?>
         <div class="row padding">
-            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+            <div class="col-lg-5 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
                  
                     <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
                 </div>
             </div>
-            <div class="col-md-4 col-md-12 col-sm-12" >
+            <div class="col-md-5 col-md-12 col-sm-12 img-thumbnail" style="height: 210px;" >
                 <div class="card">
                      <p class="text-primary"><b>Description</b></p>
                  
@@ -105,7 +105,7 @@
                   
                 </div>
             </div>
-            <div class="col-md-7 col-sm-3 " >
+            <div class="col-md-2 col-sm-3 " >
                 
 
                     <div class="" >
@@ -119,8 +119,8 @@
                       
                    
 
-                        
-                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                      
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;">  
                                         <p><font color="black">
 
                                           
@@ -176,65 +176,7 @@
      <br>
                         <?php foreach($editdetail as $row): ?>
 
-<!-- <div class="du-current-news center bg-secondary"> -->
-    <div class="container img-thumbnail">
-        <div class="row padding">
-           <div class="col-lg-12 col-md-12 col-sm-12"data-wow-delay="0.2s" >
-                <div class="card">
-                 <div class="col-md-5 col-sm-12">
-
-<span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
-
-                  
-</div>
-                  <p class="text-primary"><b>Description</b></p>
-                 
-               
-<table>
-                
-                          <b><?php echo $row['date'];?></b>
-                          <br>
-                          <h3><?php echo $row['eventname'];?><br></h3>
-                          <tr><?php echo $row['event'];?><br></tr></table>
-                         
-                          
-              <div class="col-md-7 col-sm-3 " >
-                
-
-                    <div class="" >
-                               
-
-                    <button style="height:60px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
-
-                                </button> 
-                      
-                   
-
-                        
-                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
-                                        <p><font color="black">
-                                          <?php echo $row['event1'];?>
-                                       
-                                       <b>Member(s) <br> Interested</b></font></p>
-                                          </button><br>
-
-                              
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-                    </div>
-                        </div></div></div>  <?php endforeach; ?> 
+ <?php endforeach; ?> 
                         <!--   <p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college of science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p> -->
                           
                          <!--  <div class="col-md-10">
