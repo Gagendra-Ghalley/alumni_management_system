@@ -76,13 +76,13 @@
 
                   <textarea type="email" name="email" class="form-control" placeholder="Eg: 0216518.cst@rub.edu.bt, 0216506.cst@rub.edu.bt (For multiple email address use comma , )" class="form-control"  rows="4"></textarea>
                 </div>  -->
-        <!--   <div class="form-group">
+          <div class="form-group">
                   <label>Attachment<i class="fa fa-paperclip fa-2x"></i></label>
                   <input type="file" name="resume"  accept=".doc, .docx, .pdf, .xls, .gif, .jpg, .png, .jpeg" required />
 
-                </div> -->
-
                 </div>
+
+                <!-- </div> -->
 
                 
             
