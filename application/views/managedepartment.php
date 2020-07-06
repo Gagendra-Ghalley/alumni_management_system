@@ -22,8 +22,10 @@
 
 
         
-        <?php  
-           if($this->uri->segment(2) == "deleted2")  
+       
+     <div id="page-wrapper" style="margin-left: 0px">
+      <?php  
+           if($this->uri->segment(2) == "delete_department1")  
            {  
            
                 echo ' <div class="col-lg-8 panel-body">
@@ -32,9 +34,16 @@
 
             } 
             ?> 
-             
-     <div id="page-wrapper" style="margin-left: 0px">
-     
+              <?php  
+           if($this->uri->segment(2) == "notdelete_department1")  
+           {  
+           
+                echo ' <div class="col-lg-8 panel-body">
+                    <b><p class="text-danger">Department not deleted</p></b>
+                    </div><br><br>';
+
+            } 
+            ?> 
 
              <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
 
@@ -49,7 +58,7 @@
  <div class="panel panel-primary">
                         <div class="panel-heading">
                             
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Manage Department
+                            <i class="fa fa-bar-chart-o fa-fw"></i>
                            
                             <div class="pull-right">
 
@@ -153,7 +162,7 @@
 
    var parent=$('#parent').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees3/',
+        $.post('<?php echo base_url();?>index.php/Settings/department_dropdownlist/',
     {
         parent:parent
         

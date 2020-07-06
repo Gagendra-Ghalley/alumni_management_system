@@ -7,20 +7,20 @@ class Csv_import_model extends CI_Model
  	 $query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
  		p.cid, 
  		a.name AS Agency, 
-		p.EmpNo AS EmpNo,
+		
  		d.name AS ParentAgency, 
 		m.name AS MainParentAgency,  		
-		masterposition.Description AS PositionTitle, 
-		p.DateOfBirth as DOB,
+		
+		
 		p.email as Email,
- 		p.telephone as Telephone,		p.Grade as Grade,
+ 		p.telephone as Telephone,		
  		p.gender,
  	 		
  		p.profileId,
  		p.Mobile
  		FROM user_profiles p 
  		LEFT JOIN departmentParent m ON m.departmentParent_ID= p.departmentParent_ID 	LEFT JOIN department d ON d.department_ID=p.department_ID LEFT JOIN batch a ON a.batch_ID=p.batch_ID 
-		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
+		-- LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
 		ORDER BY  p.profileId  DESC";
 		// where p.batch_ID='".$batch_ID."'
  	

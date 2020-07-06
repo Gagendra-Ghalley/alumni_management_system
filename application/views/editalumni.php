@@ -73,9 +73,9 @@
                                  <div style="color:black">Role:</div>    <input class="form-control" placeholder="roleId" name="roleId" type="text" value="<?php echo $row->roleId;?>">
                                 </div>
                                  <div class="form-group">
-                                     <div style="color:black">Year of Graduation:</div><input class="form-control" placeholder="batch_ID" name="agencyid" type="text" value="<?php echo $row->batch_ID;?>">
+                                     <div style="color:black">Year of Graduation:</div><input class="form-control" placeholder="batch_ID" name="batch_ID" type="text" value="<?php echo $row->batch_ID;?>">
                                 </div>
-                                     <div style="color:black">Department:</div><input class="form-control" placeholder="department_ID" name="agencyparentid" type="text" value="<?php echo $row->department_ID;?>">
+                                     <div style="color:black">Department:</div><input class="form-control" placeholder="department_ID" name="department_ID" type="text" value="<?php echo $row->department_ID;?>">
                                 </div>
                                  <div class="form-group">
                                     <div style="color:black"></div> <input class="form-control" placeholder="departmentParent_ID" name="agencymainparentid" type="hidden" value="<?php echo $row->departmentParent_ID;?>">

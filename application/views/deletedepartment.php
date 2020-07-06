@@ -40,12 +40,12 @@
           
 
  <?php $row=$employee->row(0);
-  	$cid=$row->AgencyID;
+  	$cid=$row->department_ID;
   	?>
         
 
             <div class="row">
-            	  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/delete_data1/<?php $row->AgencyID;?>/" class="form-group">
+            	  <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/delete_data1/<?php $row->department_ID;?>/" class="form-group">
                          
               
           
@@ -53,15 +53,15 @@
            <div class="col-lg-6">
           
 
-          <input type="hidden" class="delete_data btn btn-lg btn-danger btn-block" id="<?php echo $row->AgencyID; ?>"> 
+          <input type="hidden" class="delete_data btn btn-lg btn-danger btn-block" id="<?php echo $row->department_ID; ?>"> 
            
           </div>
           <br><br><br><br><br><br>
            </form>
 
-           <!-- <form >
+         <!--   <form >
                <div class="col-lg-6">
-               <a href="<?php echo base_url();?>index.php/Settings/viewUsers1/" class="btn btn-lg btn-info btn-block">Back</a>
+               <a href="<?php echo base_url();?>index.php/Settings/viewUsers2/" class="btn btn-lg btn-info btn-block">Back</a>
            </div>
            </form> -->
            
@@ -69,38 +69,41 @@
 
 </div>
    
-      <script>  
+      <script> 
 
 
-         window.onload= function(){
-       document.forms[0].submit(id="<?php echo $row->AgencyID; ?>");
+
+       // window.onload= function(){
+       // document.forms[0].submit(id="<?php echo $row->department_ID; ?>");
+           
+       //          if(confirm("Are you sure you want to delete this?"))  
+       //          {  
+       //               window.location="<?php echo base_url()?>index.php/Settings/delete_data2/<?php $row->department_ID?>/"+id;  
+       //          }  
+       //          else  
+       //          {  
+                     
+       //               return false;  
+       //               // redirect(base_url() ."index.php/Settings/viewUsers/");
+                    
+       //          }  
+         
+       //     }   
+           window.onload= function(){
+       document.forms[0].submit(id="<?php echo $row->department_ID; ?>");
            
                 if(confirm("Are you sure you want to delete this?"))  
                 {  
-                     window.location="<?php echo base_url()?>index.php/Settings/delete_data1/<?php $row->AgencyID?>/"+id;
+                     window.location="<?php echo base_url()?>index.php/Settings/delete_data2/<?php $row->department_ID?>/"+id;  
                 }  
                 else  
                 {  
                      
                      return false;  
-                     // redirect(base_url() ."index.php/Settings/viewUsers/");
-                    
                 }  
          
            }  
-      // $(document).ready(function(){  
-      //      $('.delete_data').click(function(){  
-      //           var id = $(this).attr("id");  
-      //           if(confirm("Are you sure you want to delete this?"))  
-      //           {  
-      //                window.location="<?php echo base_url()?>index.php/Settings/delete_data1/<?php $row->AgencyID?>/"+id;  
-      //           }  
-      //           else  
-      //           {  
-      //                return false;  
-      //           }  
-      //      });  
-      // });  
+  
       </script>
 
       </html>  

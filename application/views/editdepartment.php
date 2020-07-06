@@ -42,7 +42,7 @@
                               <!--    <div class="form-group">
                                      <div style="color:black">Year of Graduation(ID):</div><input class="form-control" placeholder="Department ID" name="agencyid" type="text" value="<?php echo $row->AgencyID;?>">
                                 </div> -->
-                                     <div style="color:black"><h3>Department:</h3></div><input class="form-control" placeholder="Department" name="agencyparentid" type="text" value="<?php echo $row->name;?>">
+                                     <div style="color:black"><h3>Department:</h3></div><input class="form-control" placeholder="Department" name="department_ID" type="text" value="<?php echo $row->name;?>">
                                 </div>
                               
                                  <!-- <div class="form-group">

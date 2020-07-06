@@ -23,11 +23,8 @@
         
      
             <div id="page-wrapper" style="margin-left: 0px">
-     
-             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
-
-                <?php
-                 if($this->uri->segment(2) == "deleted1")  
+               <?php
+                 if($this->uri->segment(2) == "delete_batch1")  
            {  
            
                 echo ' <div class="col-lg-8 panel-body">
@@ -35,7 +32,19 @@
                     </div><br><br>';
 
             } 
+
+                   if($this->uri->segment(2) == "notdelete_batch1")  
+           {  
+           
+                echo ' <div class="col-lg-8 panel-body">
+                    <b><p class="text-danger">Year of graduation/faculty not deleted</p></b>
+                    </div><br><br>';
+
+            } 
             ?> 
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
+
+               
                 <div class="col-md-12 col-lg-12 col-sm-12">
 
     
@@ -82,7 +91,7 @@
                                 
                                <th style="width:350px">Year of Graduation(ID)</th>
                                 <th style="width:300px">Year of Graduation</th>
-                                <th style="width:160px">Delete</th>
+                                <th style="width:300px">Delete</th>
                                 
                                                 </tr>
                                             </thead>
@@ -172,7 +181,7 @@ function populateEmployees()
 {
    var agency=$('#agency').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees2/',
+        $.post('<?php echo base_url();?>index.php/Settings/yearofgraduation_dropdownlist/',
     {
         agency:agency
         

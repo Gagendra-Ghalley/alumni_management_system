@@ -198,7 +198,7 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 		
 		
 	
-	public function getEmployees($agency){
+	public function manageuser_dropdownlist($agency){
 		
 	$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
 		p.cid,
@@ -226,7 +226,7 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 		
 		
 	}
-	public function getEmployees1($agency){
+	public function yearofgraduation_dropdownlist($agency){
 		
 	$query= "SELECT  
 		 
@@ -242,7 +242,7 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 		
 	}
 
-	public function getEmployees2($agency){
+	public function department_dropdownlist($agency){
 		
 	$query= "SELECT  
 		 

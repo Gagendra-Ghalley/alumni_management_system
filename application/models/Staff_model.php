@@ -642,7 +642,7 @@ public function eventcancel($eventid="",$param2=""){//leki
 			
 		}
 
-		public function editFullEmployee1($cid){
+		public function delete_user($cid){
 						
 					$query = "SELECT * from user_profiles WHERE user_profiles.cid='".$cid."' ";
 					$employee=$this->db->query($query);

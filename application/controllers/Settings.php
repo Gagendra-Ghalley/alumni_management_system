@@ -17,7 +17,6 @@ class Settings extends CI_Controller {
 	$this->load->library('form_validation');
 	$this->load->model('Staff_model','sm');
 	$this->load->model('Agency_model','ag');
-	
 	$this->load->model('Messages_model','mm');
 	$this->load->model('ATD_model','atd');
 	$this->load->model('csv_import_model');
@@ -415,17 +414,17 @@ function addDak($param="")
 
 	
 	
-	public function getAgencyEmployees() {//Tamang(Managing user )
+	public function manageuser_dropdownlist() {//Tamang(Managing user )
 		
 		
 		$this->load->library('pagination');
 
-		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees/';
+		$config['base_url'] = base_url().'/index.php/Settings/manageuser_dropdownlist/';
 		
 		
 		$this->pagination->initialize($config);
     	$agency = $this->input->post('agency');
-		$query = $this->ag->getEmployees($agency);
+		$query = $this->ag->manageuser_dropdownlist($agency);
 		$num_rows=$query->num_rows();
 		$config['total_rows'] = $num_rows;
 		$config['per_page'] = 10;
@@ -447,7 +446,7 @@ function addDak($param="")
 		// echo "<td>$row->Gender</td>";
 		echo "<td>$row->gender</td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a class='delete_data' id='<?php echo $row->cid' href='".base_url()."index.php/Settings/editFullEmployee1/$row->cid/'>Delete</a></td>"
+	     echo" <td><a class='delete_data' id='<?php echo $row->cid' href='".base_url()."index.php/Settings/delete_user/$row->cid/'>Delete</a></td>"
 	     ;
 
 
@@ -478,108 +477,18 @@ function addDak($param="")
 
 
 
-	// public function Forgetpasswordemail()
-	//    {
-	//    		$this->load->view('forgetpasswordemailatd');     
-	//      }  
-	       
-// public function ForgotPassword($email)
-// 	 {
-// 	 		$this->load->library('email');
-// 	        $this->db->select('email');
-// 	        $this->db->from('user_profiles'); 
-// 	        $this->db->where('email', $email); 
-// 	        $query=$this->db->get();
-// 	        return $query->row_array();
-// 	 }
-	
-	
-	
-// 	 public function send($data)
-// 	{
-// 		$mail = $this->input->post("email");
-//         $email = $data['email'];
-// 	        $query1=$this->db->query("SELECT *  from user_profiles where email = '".$email."' ");
-// 	        $row=$query1->result_array();
-//        if ($query1->num_rows()>0)
-	      
-// 	{
-			
-// 	             $config = Array(
-// 		      	'protocol' 	=> 'smtp',
-// 		      	'smtp_host' => 'ssl://smtp.googlemail.com',
-// 		      	'smtp_port' => 465,
-// 		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-// 		      	'smtp_pass' => 'Wangchuk_12345', 
-// 		      	'mailtype' 	=> 'html',
-// 		      	'charset' 	=> 'iso-8859-1',
-// 		      	'wordwrap' 	=> TRUE
 
-// 		    );
-// 	        $this->load->library('email', $config);     
-// 	        $email = $data['email'];
-// 			$this->email->From('nimawangchuktamang7@gmail.com', 'Alumni Management System');
-// 			$this->email->to($mail);
-// 		       //  $passwordplain = "";
-// 	        // $passwordplain  = rand(999999999,9999999999);
-// 	        // $newpass['password'] = md5($passwordplain);
-// 	        // $this->db->where('email', $email);
-// 	        // $this->db->update('user_profiles', $newpass);
-	         
-//         	// $mail_message='Dear '.$row[0]['FirstName'].','. "\r\n";
-// 	        // $mail_message.='Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is <b>'.$passwordplain.'</b>'."\r\n";
-// 	        // $mail_message.='<br>Please Update your password.';
-// 	        // $mail_message.='<br>Thanks & Regards';
-// 	        // $mail_message.='<br>Your company name';
-        	
-// 	        // // $this->email->IsHTML(true);
-	        
-// 	        // $this->email->Subject = 'OTP from company';
-// 	        // $this->email->Body    = $mail_message;	        
-// 	        // $this->email->AltBody = $mail_message;
-	
-// 	 	if($this->email->send())
-// 	        {
-// 	        	// if(delete_files($file_data['file_path']))
-// 	        	// {
-// 	        		$this->session->set_flashdata('message', 'Message has been sent successfully!!');
-// 	        		redirect('Settings/passwordemail');
-// 	        	// }
-// 	        }
-
-// 	        else
-// 	        {
-// 	        	// if(delete_files($file_data['file_path']))
-// 	        	// {
-// 	        	echo $this->email->print_debugger();
-
-// 	        		$this->session->set_flashdata('message', 'There is an error in email send');
-// 	        		redirect('Settings/passwordemail');
-// 	        	// }
-// 	        }
-// 	        // echo $this->email->print_debugger();
-
-
-		  
-		
-
-		  
-// 	    }
-// 	}
-	    
-	 
-
-	public function getAgencyEmployees2() {//Tamang(For view in year of graduation)
+	public function yearofgraduation_dropdownlist() {//Tamang(For view in year of graduation)
 		
 		
 		$this->load->library('pagination');
 
-		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees2/';
+		$config['base_url'] = base_url().'/index.php/Settings/yearofgraduation_dropdownlist/';
 		
 		
 		$this->pagination->initialize($config);
     	$agency = $this->input->post('agency');
-		$query = $this->ag->getEmployees1($agency);
+		$query = $this->ag->yearofgraduation_dropdownlist($agency);
 		$num_rows=$query->num_rows();
 		$config['total_rows'] = $num_rows;
 		$config['per_page'] = 10;
@@ -591,7 +500,7 @@ function addDak($param="")
 		echo "<td>$counter</td>";
 		echo "<td><a href='".base_url()."index.php/Settings/edityearofgraduation/$row->batch_ID/'>$row->batch_ID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee2/$row->batch_ID/'>Delete</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/delete_batch/$row->batch_ID/'>Delete</a></td>"
 	     ;
 	     
 		
@@ -609,17 +518,17 @@ function addDak($param="")
 		
 	}
 
-	public function getAgencyEmployees3() {//Tamang(For view in department )
+	public function department_dropdownlist() {//Tamang(For view in department )
 		
 		
 		$this->load->library('pagination');
 
-		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees3/';
+		$config['base_url'] = base_url().'/index.php/Settings/department_dropdownlist/';
 		
 		
 		$this->pagination->initialize($config);
     	$agency = $this->input->post('parent');
-		$query = $this->ag->getEmployees2($agency);
+		$query = $this->ag->department_dropdownlist($agency);
 		$num_rows=$query->num_rows();
 		$config['total_rows'] = $num_rows;
 		$config['per_page'] = 10;
@@ -631,7 +540,7 @@ function addDak($param="")
 		echo "<td>$counter</td>";
 		echo "<td><a href='".base_url()."index.php/Settings/editdepartment/$row->department_ID'>$row->department_ID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->ParentAgency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->department_ID/'>Delete</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/delete_department/$row->department_ID/'>Delete</a></td>"
 	     ;
 	     
 		
@@ -757,8 +666,8 @@ public function updateEmployee($cid) {
 		// $this->form_validation->set_rules('lname','Lname','trim');
 		$this->form_validation->set_rules('roleId','roleId','required|trim');
 		$this->form_validation->set_rules('gender','gender','trim');
-		$this->form_validation->set_rules('batch_ID','Agency','required|trim');
-		$this->form_validation->set_rules('department_ID','AgencyParent','required|trim');
+		$this->form_validation->set_rules('batch_ID','batch_ID','required|trim');
+		$this->form_validation->set_rules('department_ID','department_ID','required|trim');
 		// $this->form_validation->set_rules('departmentParent_ID','AgencyMainParent','required|trim');
 		
 		
@@ -767,7 +676,7 @@ public function updateEmployee($cid) {
 		if($this->sm->updateEmployee($cid)) {
 			
 			$data['statusupdate']="Success";
-			$this->editFullEmployee($cid);
+			$this->editalumni($cid);
 			
 			
 		}
@@ -777,7 +686,7 @@ public function updateEmployee($cid) {
 		} else {
 			echo "form error";
 			echo validation_errors();
-			$this->editFullEmployee($cid);
+			$this->editalumni($cid);
 		}
 		
 	}
@@ -814,7 +723,7 @@ public function updateEmployee($cid) {
 		
 		
 		// $this->form_validation->set_rules('batch_ID','Agency','required|trim');
-		$this->form_validation->set_rules('department_ID','AgencyParent','required|trim');
+		$this->form_validation->set_rules('department_ID','department_ID','required|trim');
 	
 		
 		
@@ -823,7 +732,7 @@ public function updateEmployee($cid) {
 		if($this->sm->updateEmployee2($cid)) {
 			
 			$data['statusupdate']="Success";
-			$this->editFullEmployee5($cid);
+			$this->managedepartment($cid);
 			
 			
 		}
@@ -833,7 +742,7 @@ public function updateEmployee($cid) {
 		} else {
 			echo "form error";
 			echo validation_errors();
-			$this->editFullEmployee5($cid);
+			$this->managedepartment($cid);
 		}
 		
 	}
@@ -847,23 +756,23 @@ public function updateEmployee($cid) {
 			
 		
 	}
-	public function editFullEmployee1($cid){
+	public function delete_user($cid){
 			
 		
-					$data['employee']=$this->sm->editFullEmployee1($cid);
+					$data['employee']=$this->sm->delete_user($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee1',$data);
+				    $this->load->view('delete_user',$data);
 				    $this->load->view('template/includefooter');
 			
 		
 	}
 
-	public function editFullEmployee2($cid){//Tamang (for deleting year of graduation) 
+	public function deletebatch($cid){//Tamang (for deleting year of graduation) 
 			
 		
 					$data['employee']=$this->sm->editFullEmployee2($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee2',$data);
+				    $this->load->view('deletebatch',$data);
 				    $this->load->view('template/includefooter');
 			
 		
@@ -880,12 +789,12 @@ public function updateEmployee($cid) {
 		
 	}
 
-	public function editFullEmployee4($cid){//Tamang (for deleting the department)
+	public function deletedepartment($cid){//Tamang (for deleting the department)
 			
 		
 					$data['employee']=$this->sm->editFullEmployee4($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee4',$data);
+				    $this->load->view('deletedepartment',$data);
 				    $this->load->view('template/includefooter');
 			
 		
@@ -909,7 +818,7 @@ public function editdepartment($cid){//Tamang (view for editing the department)
 		
 					$data['employee']=$this->sm->editFullEmployee6($batch_ID);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee6',$data);
+				    $this->load->view('deleteall',$data);
 				    $this->load->view('template/includefooter');
 	}
 
@@ -1432,7 +1341,7 @@ public function reciept()
 		
 	}
 
-	public function membersearch1(){//Tamang
+	public function csv(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("csv_import_model");
@@ -1442,10 +1351,10 @@ public function reciept()
 		
 		
 	}
-public function membersearch2(){//Tamang
+public function deleteuser(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view("deleteuser");
+		$this->load->view("delete");
 		$this->load->view('template/includefooter');
 		
 		
@@ -1552,7 +1461,9 @@ public function membersearch2(){//Tamang
                 if($this->input->post("insert"))  
                 {  
                      $this->main_model->insert_data($data,$data1);  
-                     redirect(base_url() . "index.php/Settings/inserted");  
+                     // $this->session->set_flashdata('message', 'There is an error in attach file');
+	        	redirect('Settings/inserted');
+                       
                 }
            //      else{
                 	 
@@ -1563,7 +1474,7 @@ public function membersearch2(){//Tamang
            {  
                 
                 
-	        	redirect(base_url() . "index.php/Settings/notinserted");
+	        	redirect('Settings/notinserted');
                
 
            }  
@@ -1592,12 +1503,12 @@ public function form_validation2() //Tamang (adding new department and departmen
                 if($this->input->post("insert"))  
                 {  
                      $this->main_model->insert_data1($data);  
-                     redirect(base_url() . "index.php/Settings/inserted1");  
+                     redirect('Settings/inserted1');  
                 }  
            }  
            else  
            {  
-                redirect(base_url() . "index.php/Settings/notinserted1");
+                redirect('Settings/notinserted1');
            }  
       } 
 
@@ -1632,12 +1543,12 @@ public function form_validation2() //Tamang (adding new department and departmen
                 {  
 
                      $this->main_model->insert_data2($data);  
-                     redirect(base_url() . "index.php/Settings/inserted2");  
+                     redirect('Settings/inserted2');  
                 }
                }  
                else  
            {  
-               redirect(base_url() . "index.php/Settings/notinserted2");
+               redirect('Settings/notinserted2');
            }  
            
           
@@ -1647,11 +1558,11 @@ public function form_validation2() //Tamang (adding new department and departmen
      
       public function inserted()  
       { //Tamang 
-           $this->membersearch3();  
+           $this->add_user();  
       }  
        public function notinserted()  
       { //Tamang 
-           $this->membersearch3();  
+           $this->add_user();  
       }
        public function inserted1()  
       {  //Tamang
@@ -1672,10 +1583,15 @@ public function form_validation2() //Tamang (adding new department and departmen
       }  
      public function delete_data(){//Tamang 
            $this->load->view('template/includeheader',$this->dataheader);
-			$id = $this->uri->segment(3); 
-			$this->load->model("main_model");  
+           $id = $this->uri->segment(3); 
+			$this->load->model("main_model"); 
+			echo "<script type='text/javascript>
+    alert('Region already added');
+</script>";
+
+
            $this->main_model->delete_data($id);  
-           redirect(base_url() ."index.php/Settings/deleted");  
+           redirect('Settings/deleted');  
            $this->load->view('template/includefooter');
       }  
       public function deleted()  
@@ -1692,33 +1608,46 @@ public function form_validation2() //Tamang (adding new department and departmen
 
 
 
-	 public function delete_data1(){//Tamang(Deleting the year of graduation)  
+	 public function delete_batch(){//Tamang(Deleting the year of graduation)  
            $this->load->view('template/includeheader',$this->dataheader);
 			$id = $this->uri->segment(3); 
+			
 			$this->load->model("main_model");  
-           $this->main_model->delete_data1($id);  
-           redirect(base_url() ."index.php/Settings/deleted1");  
+           $this->main_model->delete_batch($id);  
+           redirect('Settings/delete_batch1');  
            $this->load->view('template/includefooter');
       }  
-      public function deleted1()  
+      public function delete_batch1()  
       {  //Tamang
       	 
-      	$this->viewUsers1();  
+      	$this->yearofgraduation();  
+          
+	 }
+	  public function notdelete_batch1()  
+      {  //Tamang
+      	 
+      	$this->yearofgraduation();  
           
 	 }
 
-	 public function delete_data2(){//Tamang(Deleting the year of graduation)  
+	 public function delete_department(){//Tamang(Deleting the year of graduation)  
            $this->load->view('template/includeheader',$this->dataheader);
 			$id = $this->uri->segment(3); 
 			$this->load->model("main_model");  
-           $this->main_model->delete_data2($id);  
-           redirect(base_url() ."index.php/Settings/deleted2");  
+           $this->main_model->delete_department($id);  
+           redirect('Settings/delete_department1');  
            $this->load->view('template/includefooter');
       }  
-      public function deleted2()  
+      public function delete_department1()  
       {  //Tamang
       	 
-      $this->viewUsers2();  
+      $this->managedepartment();  
+          
+	 }
+	   public function notdelete_department1()  
+      {  //Tamang
+      	 
+      $this->managedepartment();  
           
 	 }
 
@@ -1727,7 +1656,7 @@ public function form_validation2() //Tamang (adding new department and departmen
 			$id = $this->uri->segment(3); 
 			$this->load->model("main_model");  
            $this->main_model->delete_data3($id);  
-           redirect(base_url() ."index.php/Settings/deleted3");  
+           redirect('Settings/deleted3');  
            $this->load->view('template/includefooter');
       }  
       public function deleted3()  

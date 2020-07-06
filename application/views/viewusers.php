@@ -37,6 +37,14 @@
                     </div><br><br>';
 
             }  
+             if($this->uri->segment(2) == "notdeleted")  
+           {  
+           
+                echo ' <div class="col-lg-12 panel-body">
+                    <b><p class="text-danger">User not deleted</p></b>
+                    </div><br><br>';
+
+            } 
            
            ?> </div>
           
@@ -200,7 +208,7 @@ function populateEmployees()
 {
    var agency=$('#agency').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees/',
+        $.post('<?php echo base_url();?>index.php/Settings/manageuser_dropdownlist/',
     {
         agency:agency
         
