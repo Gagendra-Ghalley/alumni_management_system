@@ -397,7 +397,7 @@ function addDak($param="")
 		 
 		if($counter==1 ){
 
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</button></a>"
+	  
 
 	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->batch_ID/'>DeleteAll</button></a>"
 
@@ -456,7 +456,7 @@ function addDak($param="")
 
 	     if($counter==1){
 
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee6/$row->AgencyID/'>DeleteAll</a></td>"
+	    
 
 	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->batch_ID/'>DeleteAll</a></td>"
 
@@ -901,7 +901,7 @@ public function editdepartment($cid){//Tamang (view for editing the department)
 		
 	}
 
-	public function editFullEmployee6($AgencyID){//Tamang (view for editing the department)
+	
 
 	public function deleteall($batch_ID){//Tamang (view for editing the department)
 
