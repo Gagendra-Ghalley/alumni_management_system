@@ -394,8 +394,12 @@ public function eventcancel($eventid="",$param2=""){//leki
 			'deptName' => $deptName,
 			'minName' => $minName,
 			'atd_time' =>$atdtime,
+
+						'status' => $status,
+
 			// 'position' => $position,
 			'status' => $status,
+
 			'statusRemarks'=> $statusRemarks,
 			'email'=>$email,
 			'telephone'=>$telephone,
