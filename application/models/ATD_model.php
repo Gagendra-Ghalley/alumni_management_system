@@ -47,67 +47,67 @@ class ATD_model extends CI_Model {
 		}
 	}
 	
-	public function dailyAttendance() {
+	// public function dailyAttendance() {
 		
-		$divisionSelected = $this->session->userdata('divFeed');
-		   //echo "$this->session->userdata('divFeed')";
-		if($divisionSelected==null){
+	// 	$divisionSelected = $this->session->userdata('divFeed');
+	// 	   //echo "$this->session->userdata('divFeed')";
+	// 	if($divisionSelected==null){
 			
-			$divisionSelected=$this->session->userdata('divName');
-			$data = array (
-			'divFeed' => $divisionSelected
-			);
-			$this->session->set_userdata($data);
-			$query="SELECT 
+	// 		$divisionSelected=$this->session->userdata('divName');
+	// 		$data = array (
+	// 		'divFeed' => $divisionSelected
+	// 		);
+	// 		$this->session->set_userdata($data);
+	// 		$query="SELECT 
 	
-		CONCAT(bpas_user_profiles.FirstName,' ',bpas_user_profiles.MiddleName,' ', bpas_user_profiles.LastName) AS name, 
-		bpas_master_agency.name AS Agency,
-		bpas_attendance_log.atdtime,
-		bpas_attendance_log.status,
-		bpas_attendance_log.statusRemarks,
-		bpas_user_profiles.telephone
-		FROM bpas_user_profiles
-		LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=bpas_user_profiles.cid  AND bpas_attendance_log.date='".date('Y/m/d')."'
-		LEFT JOIN bpas_master_agency ON bpas_master_agency.AgencyID=bpas_user_profiles.AgencyID
-		WHERE bpas_master_agency.name='".$this->session->userdata('divFeed')."'
-		ORDER BY FIELD(bpas_user_profiles.Grade,'EX1','EX2','EX3','P1','P2','P3','P4','P5','S1','S2','S3','S4','S5','SS1','SS2','SS3','SS4','O1','O2','O3','O4','GSP1','GSP2','ESP') ";
+	// 	CONCAT(user_profiles.FirstName,' ',user_profiles.MiddleName,' ', user_profiles.LastName) AS name, 
+	// 	batch.name AS Agency,
+	// 	bpas_attendance_log.atdtime,
+	// 	bpas_attendance_log.status,
+	// 	bpas_attendance_log.statusRemarks,
+	// 	user_profiles.telephone
+	// 	FROM user_profiles
+	// 	LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=user_profiles.cid  AND bpas_attendance_log.date='".date('Y/m/d')."'
+	// 	LEFT JOIN batch ON batch.batch_ID=user_profiles.batch_ID
+	// 	WHERE batch.name='".$this->session->userdata('divFeed')."'
+	// 	ORDER BY FIELD(user_profiles.Grade,'EX1','EX2','EX3','P1','P2','P3','P4','P5','S1','S2','S3','S4','S5','SS1','SS2','SS3','SS4','O1','O2','O3','O4','GSP1','GSP2','ESP') ";
 
-		$result = $this->db->query($query);
-		return $result;
-		} elseif($divisionSelected=="All"){
+	// 	$result = $this->db->query($query);
+	// 	return $result;
+	// 	} elseif($divisionSelected=="All"){
 			
-			$query="SELECT CONCAT(bpas_user_profiles.FirstName,' ',bpas_user_profiles.MiddleName,' ', bpas_user_profiles.LastName) AS name, 
-			bpas_master_agency.name AS Agency, bpas_attendance_log.atdtime, bpas_attendance_log.status,bpas_attendance_log.statusRemarks, bpas_user_profiles.telephone 
-			FROM bpas_user_profiles 
-			LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=bpas_user_profiles.cid AND bpas_attendance_log.date='".date('Y/m/d')."' 
-			LEFT JOIN bpas_master_agency ON bpas_master_agency.AgencyID=bpas_user_profiles.AgencyID 
-			ORDER BY FIELD(bpas_user_profiles.Grade,'EX1','EX2','EX3','P1','P2','P3','P4','P5','S1','S2','S3','S4','S5','SS1','SS2','SS3','SS4','O1','O2','O3','O4','GSP1','GSP2','ESP')";
+	// 		$query="SELECT CONCAT(user_profiles.FirstName,' ',user_profiles.MiddleName,' ', user_profiles.LastName) AS name, 
+	// 		batch.name AS Agency, bpas_attendance_log.atdtime, bpas_attendance_log.status,bpas_attendance_log.statusRemarks, user_profiles.telephone 
+	// 		FROM user_profiles 
+	// 		LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=user_profiles.cid AND bpas_attendance_log.date='".date('Y/m/d')."' 
+	// 		LEFT JOIN batch ON batch.batch_ID=user_profiles.batch_ID 
+	// 		ORDER BY FIELD(user_profiles.Grade,'EX1','EX2','EX3','P1','P2','P3','P4','P5','S1','S2','S3','S4','S5','SS1','SS2','SS3','SS4','O1','O2','O3','O4','GSP1','GSP2','ESP')";
 
-		$result = $this->db->query($query);
-		return $result;
+	// 	$result = $this->db->query($query);
+	// 	return $result;
 			
 			
-		} else {
+	// 	} else {
 		
-		$query="SELECT 
+	// 	$query="SELECT 
 	
-		CONCAT(bpas_user_profiles.FirstName,' ',bpas_user_profiles.MiddleName,' ', bpas_user_profiles.LastName) AS name, 
-		bpas_master_agency.name AS Agency,
-		bpas_attendance_log.atdtime,
-		bpas_attendance_log.status,
-		bpas_attendance_log.statusRemarks,
-		bpas_user_profiles.telephone
-		FROM bpas_user_profiles
-		LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=bpas_user_profiles.cid  AND bpas_attendance_log.date='".date('Y/m/d')."'
-		LEFT JOIN bpas_master_agency ON bpas_master_agency.AgencyID=bpas_user_profiles.AgencyID
-		WHERE bpas_master_agency.name='".$this->session->userdata('divFeed')."' 
-		ORDER BY FIELD(bpas_user_profiles.Grade,'EX1','EX2','EX3','P1','P2','P3','P4','P5','S1','S2','S3','S4','S5','SS1','SS2','SS3','SS4','O1','O2','O3','O4','GSP1','GSP2','ESP')";
-		$result = $this->db->query($query);
-		return $result;
-		}
+	// 	CONCAT(user_profiles.FirstName,' ',user_profiles.MiddleName,' ', user_profiles.LastName) AS name, 
+	// 	batch.name AS Agency,
+	// 	bpas_attendance_log.atdtime,
+	// 	bpas_attendance_log.status,
+	// 	bpas_attendance_log.statusRemarks,
+	// 	user_profiles.telephone
+	// 	FROM user_profiles
+	// 	LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=user_profiles.cid  AND bpas_attendance_log.date='".date('Y/m/d')."'
+	// 	LEFT JOIN batch ON batch.batch_ID=user_profiles.batch_ID
+	// 	WHERE batch.name='".$this->session->userdata('divFeed')."' 
+	// 	ORDER BY FIELD(user_profiles.Grade,'EX1','EX2','EX3','P1','P2','P3','P4','P5','S1','S2','S3','S4','S5','SS1','SS2','SS3','SS4','O1','O2','O3','O4','GSP1','GSP2','ESP')";
+	// 	$result = $this->db->query($query);
+	// 	return $result;
+	// 	}
 		
 		
-	}
+	// }
 	
 	
 		
@@ -215,13 +215,13 @@ $query=$this->db->insert('st_dispatch_files', $data);
 		for($i=$starttime;$i<$endtime;$i+=86400) {
 			$e=1;
 			//$days=1;
-				$query=$this->db->query("SELECT CONCAT(bpas_user_profiles.FirstName,' ',bpas_user_profiles.MiddleName,' ', bpas_user_profiles.LastName) AS name, 
-				bpas_master_agency.name AS Agency, 
+				$query=$this->db->query("SELECT CONCAT(user_profiles.FirstName,' ',user_profiles.MiddleName,' ', user_profiles.LastName) AS name, 
+				batch.name AS Agency, 
 				bpas_attendance_log.Late, 
-				bpas_user_profiles.telephone FROM bpas_user_profiles 
-				LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=bpas_user_profiles.cid AND bpas_attendance_log.date='".date('Y/m/d',$i)."' 
-				LEFT JOIN bpas_master_agency ON bpas_master_agency.AgencyID=bpas_user_profiles.AgencyID WHERE bpas_master_agency.AgencyID='".$agency."'
-				ORDER BY bpas_user_profiles.profileId");
+				user_profiles.telephone FROM user_profiles 
+				LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=user_profiles.cid AND bpas_attendance_log.date='".date('Y/m/d',$i)."' 
+				LEFT JOIN batch ON batch.batch_ID=user_profiles.batch_ID WHERE batch.batch_ID='".$agency."'
+				ORDER BY user_profiles.profileId");
 			
 			//$result[$d]=$query;
 			//return $query;
@@ -250,13 +250,13 @@ public function monthreportall($month,$year){
 		for($i=$starttime;$i<$endtime;$i+=86400) {
 			$e=1;
 			//$days=1;
-				$query=$this->db->query("SELECT CONCAT(bpas_user_profiles.FirstName,' ',bpas_user_profiles.MiddleName,' ', bpas_user_profiles.LastName) AS name, 
-				bpas_master_agency.name AS Agency, 
+				$query=$this->db->query("SELECT CONCAT(user_profiles.FirstName,' ',user_profiles.MiddleName,' ', user_profiles.LastName) AS name, 
+				batch.name AS Agency, 
 				bpas_attendance_log.Late, 
-				bpas_user_profiles.telephone FROM bpas_user_profiles 
-				LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=bpas_user_profiles.cid AND bpas_attendance_log.date='".date('Y/m/d',$i)."' 
-				LEFT JOIN bpas_master_agency ON bpas_master_agency.AgencyID=bpas_user_profiles.AgencyID
-				ORDER BY bpas_user_profiles.profileId");
+				user_profiles.telephone FROM user_profiles 
+				LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=user_profiles.cid AND bpas_attendance_log.date='".date('Y/m/d',$i)."' 
+				LEFT JOIN batch ON batch.batch_ID=user_profiles.batch_ID
+				ORDER BY user_profiles.profileId");
 			
 			//$result[$d]=$query;
 			//return $query;
@@ -284,13 +284,13 @@ public function monthreportsingle($month,$year,$cid){
 		for($i=$starttime;$i<$endtime;$i+=86400) {
 			$e=1;
 			//$days=1;
-				$query=$this->db->query("SELECT CONCAT(bpas_user_profiles.FirstName,' ',bpas_user_profiles.MiddleName,' ', bpas_user_profiles.LastName) AS name, 
-				bpas_master_agency.name AS Agency, 
+				$query=$this->db->query("SELECT CONCAT(user_profiles.FirstName,' ',user_profiles.MiddleName,' ', user_profiles.LastName) AS name, 
+				batch.name AS Agency, 
 				bpas_attendance_log.Late, 
-				bpas_user_profiles.telephone FROM bpas_user_profiles 
-				LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=bpas_user_profiles.cid AND bpas_attendance_log.date='".date('Y/m/d',$i)."' 
-				LEFT JOIN bpas_master_agency ON bpas_master_agency.AgencyID=bpas_user_profiles.AgencyID 
-				WHERE bpas_user_profiles.cid='".$cid."'");
+				user_profiles.telephone FROM user_profiles 
+				LEFT JOIN bpas_attendance_log ON bpas_attendance_log.userid=user_profiles.cid AND bpas_attendance_log.date='".date('Y/m/d',$i)."' 
+				LEFT JOIN batch ON batch.batch_ID=user_profiles.batch_ID 
+				WHERE user_profiles.cid='".$cid."'");
 			
 			//$result[$d]=$query;
 			//return $query;
@@ -327,8 +327,8 @@ public function monthreportsingle($month,$year,$cid){
 			
 		} elseif($role=='3'){
 			$result = $this->db->query("SELECT COUNT(*) as count FROM bpas_attendance_log WHERE date='".date('Y/m/d')."' 
-			AND late='1' AND userId IN ( SELECT e.cid from bpas_user_profiles e
-							LEFT JOIN bpas_master_agencyparent p ON p.AgencyParentID = e.AgencyParentID
+			AND late='1' AND userId IN ( SELECT e.cid from user_profiles e
+							LEFT JOIN department p ON p.department_ID = e.department_ID
 							WHERE (p.director = '".$cid."' OR p.offtg= '".$cid."'))");
 			foreach($result->result() as $row){
 			
@@ -337,8 +337,8 @@ public function monthreportsingle($month,$year,$cid){
 			
 		} elseif($role=='4'){
 			$result = $this->db->query("SELECT COUNT(*) as count FROM bpas_attendance_log WHERE date='".date('Y/m/d')."' 
-			AND late='1' AND userId IN ( SELECT e.cid from bpas_user_profiles e 
-							LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
+			AND late='1' AND userId IN ( SELECT e.cid from user_profiles e 
+							LEFT JOIN batch a ON a.batch_ID = e.batch_ID
 							WHERE (a.chief = '".$cid."' OR a.offtg='".$cid."'))");
 			foreach($result->result() as $row){
 			
@@ -355,12 +355,12 @@ public function monthreportsingle($month,$year,$cid){
 			
 		} elseif($role=='8'){
 					$result = $this->db->query("SELECT COUNT(*) as count FROM bpas_attendance_log WHERE date='".date('Y/m/d')."' 
-			AND late='1' AND userId IN ( 							SELECT e.cid from bpas_user_profiles e
-							LEFT JOIN bpas_master_agencyparent p ON p.AgencyParentID = e.AgencyParentID
+			AND late='1' AND userId IN ( 							SELECT e.cid from user_profiles e
+							LEFT JOIN department p ON p.department_ID = e.department_ID
 							WHERE (p.director = '".$cid."' OR p.offtg='".$cid."') AND e.roleId='4' 
 							UNION ALL
-							SELECT e.cid from bpas_user_profiles e 
-							LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
+							SELECT e.cid from user_profiles e 
+							LEFT JOIN batch a ON a.batch_ID = e.batch_ID
 							WHERE (a.chief = '".$cid."' OR a.offtg='".$cid."'))");
 			foreach($result->result() as $row){
 			
@@ -370,8 +370,8 @@ public function monthreportsingle($month,$year,$cid){
 			
 		} elseif($role=='9'){
 					$result = $this->db->query("SELECT COUNT(*) as count FROM bpas_attendance_log WHERE date='".date('Y/m/d')."' 
-			AND late='1' AND userId IN ( SELECT e.cid from bpas_user_profiles e 
-							LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
+			AND late='1' AND userId IN ( SELECT e.cid from user_profiles e 
+							LEFT JOIN batch a ON a.batch_ID = e.batch_ID
 							WHERE (a.chief = '".$cid."' OR a.offtg='".$cid."') )");
 			foreach($result->result() as $row){
 			
@@ -383,53 +383,54 @@ public function monthreportsingle($month,$year,$cid){
 		return $count;
 	
 	}
-	public function lateOfficials(){
+	// public function lateOfficials(){
 				
-			$cid=$this->session->userdata('cid');
-			$role=$this->session->userdata('role');
-			if($role=='1'){				
-			$result = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName,' ',e.LastName) AS Name,l.atdtime, a.name AS AgencyName, p.name AS ParentAgencyName, e.Grade, mp.Description AS PositionTitle FROM bpas_user_profiles e
-			LEFT JOIN bpas_attendance_log l ON e.cid = l.userid
-			LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
-			LEFT JOIN bpas_master_agencyparent p ON e.AgencyParentID = p.AgencyParentID
-			LEFT JOIN masterposition mp ON mp.PositionID = e.PositionTitle
-			WHERE l.date='".date('Y/m/d')."' AND l.Late = '1'");
-			} elseif($role=='2'|| $role=='7'){
-					$result = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName,' ',e.LastName) AS Name,l.atdtime, a.name AS AgencyName, p.name AS ParentAgencyName, e.Grade, mp.Description AS PositionTitle FROM bpas_user_profiles e
-						LEFT JOIN bpas_attendance_log l ON e.cid = l.userid
-						LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
-						LEFT JOIN bpas_master_agencyparent p ON e.AgencyParentID = p.AgencyParentID
-						LEFT JOIN masterposition mp ON mp.PositionID = e.PositionTitle
-						WHERE l.date='".date('Y/m/d')."' AND l.Late = '1'");
+	// 		$cid=$this->session->userdata('cid');
+	// 		$role=$this->session->userdata('role');
+	// 		if($role=='1'){				
+	// 		$result = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName,' ',e.LastName) AS Name,l.atdtime, a.name AS AgencyName, p.name AS ParentAgencyName,  FROM user_profiles e
+	// 		LEFT JOIN bpas_attendance_log l ON e.cid = l.userid
+	// 		LEFT JOIN batch a ON a.batch_ID = e.batch_ID
+	// 		LEFT JOIN department p ON e.department_ID = p.department_ID
+	// 		WHERE l.date='".date('Y/m/d')."' AND l.Late = '1'");
+	// 		} 
+	// 		//elseif($role=='2'|| $role=='7'){
+	// 		// 		$result = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName,' ',e.LastName) AS Name,l.atdtime, a.name AS AgencyName, p.name AS ParentAgencyName, e.Grade, mp.Description AS PositionTitle FROM user_profiles e
+	// 		// 			LEFT JOIN bpas_attendance_log l ON e.cid = l.userid
+	// 		// 			LEFT JOIN batch a ON a.batch_ID = e.batch_ID
+	// 		// 			LEFT JOIN department p ON e.department_ID = p.department_ID
+	// 		// 			LEFT JOIN masterposition mp ON mp.PositionID = e.PositionTitle
+	// 		// 			WHERE l.date='".date('Y/m/d')."' AND l.Late = '1'");
 				
-			} elseif($role=='3'|| $role=='8'){
-					$result = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName,' ',e.LastName) AS Name,l.atdtime, a.name AS AgencyName, p.name AS ParentAgencyName, e.Grade, mp.Description AS PositionTitle FROM bpas_user_profiles e
-						LEFT JOIN bpas_attendance_log l ON e.cid = l.userid
-						LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
-						LEFT JOIN bpas_master_agencyparent p ON e.AgencyParentID = p.AgencyParentID
-						LEFT JOIN masterposition mp ON mp.PositionID = e.PositionTitle
-						WHERE l.date='".date('Y/m/d')."' AND l.Late = '1' AND l.userId IN ( SELECT e.cid from bpas_user_profiles e
-							LEFT JOIN bpas_master_agencyparent p ON p.AgencyParentID = e.AgencyParentID
-							WHERE (p.director = '".$cid."' OR p.offtg='".$cid."')
-							UNION ALL
-							SELECT e.cid from bpas_user_profiles e 
-							LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
-							WHERE (a.chief ='".$cid."' OR a.offtg='".$cid."'))");
+	// 		// // } elseif($role=='3'|| $role=='8'){
+	// 		// 		$result = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName,' ',e.LastName) AS Name,l.atdtime, a.name AS AgencyName, p.name AS ParentAgencyName, e.Grade, mp.Description AS PositionTitle FROM user_profiles e
+	// 		// 			LEFT JOIN bpas_attendance_log l ON e.cid = l.userid
+	// 		// 			LEFT JOIN batch a ON a.batch_ID = e.batch_ID
+	// 		// 			LEFT JOIN department p ON e.department_ID = p.department_ID
+	// 		// 			LEFT JOIN masterposition mp ON mp.PositionID = e.PositionTitle
+	// 		// 			WHERE l.date='".date('Y/m/d')."' AND l.Late = '1' AND l.userId IN ( SELECT e.cid from user_profiles e
+	// 		// 				LEFT JOIN department p ON p.department_ID = e.department_ID
+	// 		// 				WHERE (p.director = '".$cid."' OR p.offtg='".$cid."')
+	// 		// 				UNION ALL
+	// 		// 				SELECT e.cid from user_profiles e 
+	// 		// 				LEFT JOIN batch a ON a.batch_ID = e.batch_ID
+	// 		// 				WHERE (a.chief ='".$cid."' OR a.offtg='".$cid."'))");
 				
-			} elseif($role=='4' || $role=='9'){
-					$result = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName,' ',e.LastName) AS Name,l.atdtime, a.name AS AgencyName, p.name AS ParentAgencyName, e.Grade, mp.Description AS PositionTitle FROM bpas_user_profiles e
-						LEFT JOIN bpas_attendance_log l ON e.cid = l.userid
-						LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
-						LEFT JOIN bpas_master_agencyparent p ON e.AgencyParentID = p.AgencyParentID
-						LEFT JOIN masterposition mp ON mp.PositionID = e.PositionTitle
-						WHERE l.date='".date('Y/m/d')."' AND l.Late = '1' AND l.userId IN ( SELECT e.cid from bpas_user_profiles e 
-							LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID
-							WHERE (a.chief = '".$cid."' OR a.offtg='".$cid."'))");
+	// 		// } 
+	// 				elseif($role=='4' || $role=='9'){
+	// 				$result = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName,' ',e.LastName) AS Name,l.atdtime, a.name AS AgencyName, p.name AS ParentAgencyName, e mp.Descriptio AS PositionTitle FROM user_profiles e
+	// 					LEFT JOIN bpas_attendance_log l ON e.cid = l.userid
+	// 					LEFT JOIN batch a ON a.batch_ID = e.batch_ID
+	// 					LEFT JOIN department p ON e.department_ID = p.department_ID
+	// 					-
+	// 					WHERE l.date='".date('Y/m/d')."' AND l.Late = '1' AND l.userId IN ( SELECT e.cid from user_profiles e 
+	// 						LEFT JOIN batch a ON a.batch_ID = e.batch_ID
+	// 						WHERE (a.chief = '".$cid."' OR a.offtg='".$cid."'))");
 				
-			}
-			return $result;
+	// 		}
+	// 		return $result;
 		
-	}
+	// }
 	
 	
 	public function leaveCountAll(){
@@ -441,23 +442,23 @@ public function monthreportsingle($month,$year,$cid){
 		
 	}
  // for not logging in
-	public function notUsedAll(){
-			 $agenciesimplemented="2698,2702,2705,2698,2707,2712,2713, 6887,6889,6890,6917,6920,6921,6922,6929,6930,6931,6934,6935,6936";
-                        $result = $this->db->query("SELECT COUNT(*) as count FROM bpas_user_profiles p
-                        LEFT JOIN bpas_attendance_log a ON p.cid = a.userid AND a.date='".date('Y/m/d')."' WHERE a.status='Absent' AND AgencyID IN (".$agenciesimplemented.")");
-                        foreach ($result->result() as $row){
-                        $count = $row->count;
-                }
-                        return $count;
+	// public function notUsedAll(){
+	// 		 $agenciesimplemented="2698,2702,2705,2698,2707,2712,2713, 6887,6889,6890,6917,6920,6921,6922,6929,6930,6931,6934,6935,6936";
+ //                        $result = $this->db->query("SELECT COUNT(*) as count FROM user_profiles p
+ //                        LEFT JOIN bpas_attendance_log a ON p.cid = a.userid AND a.date='".date('Y/m/d')."' WHERE a.status='Absent' AND batch_ID IN (".$agenciesimplemented.")");
+ //                        foreach ($result->result() as $row){
+ //                        $count = $row->count;
+ //                }
+ //                        return $count;
 
 		
-	}
+	// }
 // sonam tshering
 	public function notUseatdall() {
 
 	$agenciesimplemented="16,218,2614,293,3220,3665,378,410,412,414,420,439,442,443,444,445,446,460,461,463,466,5050,5733,5773";
-	$result = $this->db->query("SELECT COUNT(*) as count FROM bpas_user_profiles p
-                        LEFT JOIN bpas_attendance_log a ON p.cid = a.userid AND a.date='".date('Y/m/d')."' WHERE a.Late IS NULL AND AgencyID IN (".$agenciesimplemented.")");
+	$result = $this->db->query("SELECT COUNT(*) as count FROM user_profiles p
+                        LEFT JOIN bpas_attendance_log a ON p.cid = a.userid AND a.date='".date('Y/m/d')."' WHERE a.Late IS NULL AND batch_ID IN (".$agenciesimplemented.")");
                         foreach ($result->result() as $row){
                         $count = $row->count;
                 }

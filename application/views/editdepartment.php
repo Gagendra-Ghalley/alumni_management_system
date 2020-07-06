@@ -40,7 +40,7 @@
           
 
  <?php $row=$employee->row(0);
-    $cid=$row->AgencyParentID;
+    $cid=$row->department_ID;
     ?>
         
 
@@ -88,7 +88,7 @@
 
            <form >
                <div class="col-lg-6">
-               <a href="<?php echo base_url();?>index.php/Settings/viewUsers2/" class="btn btn-lg btn-warning btn-block">Back</a>
+               <a href="<?php echo base_url();?>index.php/Settings/managedepartment/" class="btn btn-lg btn-warning btn-block">Back</a>
            </div>
            </form>
              

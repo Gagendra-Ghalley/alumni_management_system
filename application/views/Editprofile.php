@@ -122,7 +122,7 @@
                         <div class="col-sm-12 col-md-12 col-lg-9" style="margin-left: 43px">
                            <form>
                               <div class="form-group">
-                                 <input type="text" class="form-control" id="email" placeholder="Your email" value="<?php echo $row->email;?>" />
+                                 <input type="text" class="form-control" id="email" name="email" placeholder="Your email" value="<?php echo $row->email;?>" />
                                  <button class="btn btn-info btn-block" onclick="updateContact()">Add</button>
                               </div>
                            </form>
@@ -263,7 +263,7 @@
                            <div class="col-sm-12 col-md-12 col-lg-9" style="margin-left: 43px">
                               <form>
                                  <div class="form-group">
-                                    <textarea type="text" id="seminar" class="form-control" placeholder="Seminar" value="<?php echo $row->seminar;?>" ></textarea>
+                                    <textarea type="text" id="seminar" name="seminar" class="form-control" placeholder="Seminar" value="<?php echo $row->seminar;?>" ></textarea>
                                     <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
                                  </div>
                               </form>
@@ -279,7 +279,7 @@
                            <div class="col-sm-12 col-md-12 col-lg-9" style="margin-left: 43px">
                               <form>
                                  <div class="form-group">
-                                    <textarea type="text" id="training" class="form-control" placeholder="Training" value="<?php echo $row->training;?>" ></textarea>
+                                    <textarea type="text" id="training" name="training" class="form-control" placeholder="Training" value="<?php echo $row->training;?>" ></textarea>
                                     <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
                                  </div>
                               </form>
@@ -295,7 +295,7 @@
                            <div class="col-sm-12 col-md-12 col-lg-9" style="margin-left: 43px">
                               <form>
                                  <div class="form-group">
-                                    <textarea type="text" id="workshop" class="form-control" placeholder="workshop" value="<?php echo $row->workshop;?>" ></textarea>
+                                    <textarea type="text" id="workshop" name="workshop" class="form-control" placeholder="workshop" value="<?php echo $row->workshop;?>" ></textarea>
                                     <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
                                  </div>
                               </form>
@@ -331,7 +331,7 @@
        var organization = $('#organization').val();
    
        $.post('<?php echo base_url();?>index.php/Settings/updateContact/', {
-   
+      
            email: email,
            occupation: occupation,
            organization: organization
@@ -348,7 +348,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -381,7 +381,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -404,6 +404,7 @@
    
        }, function(data) {
            //$('#result').html(data);
+
            if (data == "1") {
                if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
@@ -414,7 +415,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -447,7 +448,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -480,7 +481,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -527,7 +528,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('Error changing password')) {
+               if (!alert('Password changed successfully')) {
                    window.location.reload();
                }
            }

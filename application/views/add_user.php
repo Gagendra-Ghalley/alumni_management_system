@@ -123,7 +123,7 @@
                 <select  style="width:400px;" class="option3 searchdropdown" onchange="selectagency()" id="parent"  name="parent" data-placeholder="Select Department"  required>
               <option value="">Select Department</option>
              <?php foreach($request as $key):?>
-            <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
+            <option value="<?php echo $key['department_ID'];?>"> <?php echo $key['name']; ?></option>
             <?php endforeach; ?>
           </select>
 

@@ -9,7 +9,7 @@ class Messages_model extends CI_Model {
 		$cid=$this->session->userdata('cid');
 		
 		$messages=$this->db->query("SELECT m.mId, CONCAT(p.FirstName, ' ',p.MiddleName,' ',p.LastName) AS Sender, m.mSubject, m.mDetails, mTimestamp FROM bpas_messages m 
-		LEFT JOIN bpas_user_profiles p ON m.senderId=p.cid
+		LEFT JOIN user_profiles p ON m.senderId=p.cid
 		WHERE receiverId ='".$cid."' ORDER BY mTimestamp DESC LIMIT 3");
 		
 		return $messages;
@@ -20,7 +20,7 @@ class Messages_model extends CI_Model {
 			$cid=$this->session->userdata('cid');
 		
 		$messages=$this->db->query("SELECT COUNT(*) AS count FROM bpas_messages m 
-		LEFT JOIN bpas_user_profiles p ON m.senderId=p.cid
+		LEFT JOIN user_profiles p ON m.senderId=p.cid
 		WHERE receiverId ='".$cid."' AND flag='1'");
 		foreach($messages->result() as $message){
 			
@@ -34,7 +34,7 @@ class Messages_model extends CI_Model {
 		
 		
 		$message=$this->db->query("SELECT m.mId, CONCAT(p.FirstName, ' ',p.MiddleName,' ',p.LastName) AS Sender, m.mSubject AS subject, m.mDetails AS message, mTimestamp AS time FROM bpas_messages m 
-		LEFT JOIN bpas_user_profiles p ON m.senderId=p.cid
+		LEFT JOIN user_profiles p ON m.senderId=p.cid
 		WHERE m.mId='".$messageId."'");
 		$this->flagMessage($messageId);
 		return $message;
@@ -52,7 +52,7 @@ class Messages_model extends CI_Model {
 		
 		$cid=$this->session->userdata('cid');
 		$messages= $this->db->query("SELECT m.mId, CONCAT(p.FirstName, ' ',p.MiddleName,' ',p.LastName) AS Sender, m.mSubject AS subject, m.mDetails AS message, mTimestamp AS time FROM bpas_messages m 
-		LEFT JOIN bpas_user_profiles p ON m.senderId=p.cid
+		LEFT JOIN user_profiles p ON m.senderId=p.cid
 		WHERE receiverId='".$cid."'");
 		foreach($messages->result() as $message){
 			

@@ -122,7 +122,7 @@
 
                              
                                 <li>
-                                    <a href="<?php echo base_url()?>index.php/Settings/membersearch3/"><i class="fa fa-user">&nbsp</i>Add User</a>
+                                    <a href="<?php echo base_url()?>index.php/Settings/add_user/"><i class="fa fa-user">&nbsp</i>Add User</a>
                                 </li>
                                <!--     <li>
                                     <a href="<?php echo base_url()?>index.php/Settings/membersearch5/"><i class="fa fa-user">&nbsp</i>Add Department</a>
@@ -142,18 +142,18 @@
                         <ul class="nav nav-second-level">
                             
                              <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers2/"><i class="fa fa-file-text"></i>&nbspManage Department</a>
+                                <a href="<?php echo base_url();?>index.php/Settings/managedepartment/"><i class="fa fa-file-text"></i>&nbspManage Department</a>
                             </li>
 
                               <li>
-                                <a href="<?php echo base_url();?>index.php/Settings/viewUsers1/"><i class="fa fa-file-text"></i>&nbspManage Year of Graduation</a>
+                                <a href="<?php echo base_url();?>index.php/Settings/yearofgraduation/"><i class="fa fa-file-text"></i>&nbspManage Year of Graduation</a>
                             </li>
                                 
                                    <li>
-                                    <a href="<?php echo base_url()?>index.php/Settings/membersearch5/"><i class="fa fa-user">&nbsp</i>Add Department</a>
+                                    <a href="<?php echo base_url()?>index.php/Settings/add_department/"><i class="fa fa-user">&nbsp</i>Add Department</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url()?>index.php/Settings/membersearch6/"><i class="fa fa-user">&nbsp</i>Add Year of Graduation</a>
+                                    <a href="<?php echo base_url()?>index.php/Settings/add_batch/"><i class="fa fa-user">&nbsp</i>Add Year of Graduation</a>
                                 </li>
 
                                 

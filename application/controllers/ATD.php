@@ -21,9 +21,8 @@
 		$this->load->library('encrypt');
 		$this->load->model('ATD_model','atd');
 		$this->load->model('Agency_model','ag');
-		$this->load->model('Leave_model','lm');
-		$this->load->model('Holidays','hm');
 		$this->load->model('Messages_model','mm');
+		
 		// // $this->load->model('Sendemail','s');
 		// $this->load->library('../controllers/sendemail.php');
 		$this->header['messages'] = $this->mm->getMessages();
@@ -38,9 +37,9 @@
 		$data['editdetail']=$this->sm->sortevent();
 				$data['eventdetail']=$this->sm->getevent();
 
-			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
+			$data['request']=$this->db->query("SELECT * from login where status1='approved'")->result_array();
 			
-		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+		$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
        
 			
@@ -51,8 +50,8 @@
 	public function login(){
 $data['editdetail']=$this->sm->sortevent();
 				$data['eventdetail']=$this->sm->getevent();
-			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
-			$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+			$data['request']=$this->db->query("SELECT * from login where status1='approved'")->result_array();
+			$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
 		
 	}
@@ -82,7 +81,7 @@ $data['editdetail']=$this->sm->sortevent();
 	}
 
 	public function event1(){
-		//$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+		//$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
 		//$data['editdetail']=$this->db->query("SELECT * from event_table")->result_array();
 		$data['editdetail']=$this->sm->getevent();
 		$data['eventdetail']=$this->sm->sortevent();
@@ -194,7 +193,7 @@ $cid = $this->input->post("cid");
 	           $email = $this->input->post("password");
 	           $cid = $this->input->post('cid'); 
         	// $email = $data['email'];
-	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."' and relatedUserId='".$cid."' ");
+	        $query1=$this->db->query("SELECT *  from login where email = '".$email."' and relatedUserId='".$cid."' ");
 	       $row=$query1->result_array(); 
 
 
@@ -203,9 +202,9 @@ $cid = $this->input->post("cid");
 	        $passwordplain  = rand(999999999,9999999999);
 	        $newpass['password'] = md5($passwordplain);
 	        $this->db->where('email', $email);
-	        $this->db->update('bpas_logins', $newpass);
+	        $this->db->update('login', $newpass);
 	        // $this->db->where('email', $email);
-	        // $this->db->update('bpas_user_profiles', $newpass);
+	        // $this->db->update('user_profiles', $newpass);
         	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
 	      
 	        
@@ -273,7 +272,7 @@ $cid = $this->input->post("cid");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('email');
-			        $this->db->from('bpas_logins'); 
+			        $this->db->from('login'); 
 			        $this->db->where('email', $email); 
 			        $query=$this->db->get();
 			        return $query->row_array();
@@ -282,7 +281,7 @@ $cid = $this->input->post("cid");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('relatedUserId');
-			        $this->db->from('bpas_logins'); 
+			        $this->db->from('login'); 
 			        $this->db->where('relatedUserId', $cid); 
 			        $query=$this->db->get();
 			        return $query->row_array();
@@ -321,18 +320,18 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 				$mail['email'] = $this->input->post("email");
 				$cid = $this->input->post("cid");	;
 				$this->db->where('relatedUserId', $cid);
-		  		$this->db->update('bpas_logins',$mail);
+		  		$this->db->update('login',$mail);
 		  		$this->db->where('cid', $cid);
-		  		$this->db->update('bpas_user_profiles',$mail);
+		  		$this->db->update('user_profiles',$mail);
 		  		$this->db->where('relatedUserId', $cid);
-				$this->db->update('bpas_logins',$dat);
+				$this->db->update('login',$dat);
 
 				
 			$findcid = $this->cid($cid);   	         
 	         if($findcid){
 	         $mail = $this->input->post("email");
 	          $cid = $this->input->post("cid");
-	        $query1=$this->db->query("SELECT *  from bpas_logins where relatedUserId='".$cid."' ");
+	        $query1=$this->db->query("SELECT *  from login where relatedUserId='".$cid."' ");
 	       $row=$query1->result_array(); 
 
 
@@ -368,7 +367,7 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 	        $this->email->message($message);
 
 	     // $this->db->where('relatedUserId', $cid);
-		  		// $this->db->update('bpas_logins',$da);
+		  		// $this->db->update('login',$da);
 		  		
 
 	      
@@ -471,7 +470,7 @@ public function validate_credentials1(){
 
 			$this->db->where('relatedUserId',$this->input->post('cid'));
 		    $this->db->where('status1','approved');
-		   	$result = $this->db->get('bpas_logins');
+		   	$result = $this->db->get('login');
 
 		   	if($result->num_rows()==1){
 				foreach($result->result() as $row){
@@ -542,7 +541,12 @@ public function validate_credentials1(){
 	
 	public function membersearch1(){//leki
  	
+
+		$data['item']=$this->db->get('department')->result_array();//for selecting department
+		// $this->load->view('template/includeheader',$this->dataheader);
+
 		$data['item']=$this->db->get('bpas_master_agencyparent')->result_array();
+
 		$this->load->view('membersearch3',$data);
 		
 		
@@ -556,32 +560,32 @@ public	function viewmember2(){//leki
   			 $department= $_POST['f1'];
   		
 		
-  	// 	$issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
+  	// 	$issuance= $this->db->query("SELECT FirstName FROM user_profiles where FirstName='".$name."'")->row()->FirstName;
 
  		
-			// $data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
+			// $data['checkissue']=$this->db->get_where('user_profiles', array('FirstName' => $name))->result_array();
 		  
 
 
-  			// $issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
+  			// $issuance= $this->db->query("SELECT FirstName FROM user_profiles where FirstName='".$name."'")->row()->FirstName;
 
 
-  			// $issuance1= $this->db->query("SELECT department FROM bpas_user_profiles where department='".$department."'")->row()->department;
+  			// $issuance1= $this->db->query("SELECT department FROM user_profiles where department='".$department."'")->row()->department;
 
  						//OR
 
   			 	// $issuance=$this->sm->search1($name,$department);
 
-  	 $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'")->row();//to see if there is record or not in db
+  	 $issuance= $this->db->query("SELECT * FROM user_profiles where FirstName='".$name."' OR department_ID='".$department."'")->row();//to see if there is record or not in db
   			
 
 
   			if(sizeof($issuance)>0) 
 		  {
 
-	 	$data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
+	 	$data['checkissue']=$this->db->get_where('user_profiles', array('FirstName' => $name))->result_array();
 		  
-		  $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
+		  $data1['checkissue']=$this->db->get_where('user_profiles', array('department_ID' => $department))->result_array();
 		  
 
 
@@ -705,56 +709,57 @@ public	function viewmember2(){//leki
 			
 			
 			if($role=='1'){			
-				$data['leavecount']=$this->atd->leaveCountAll();
-				$data['latecount']=$this->atd->lateCount();
-				$data['notused']=$this->atd->notUsedAll();
-				$data['divisions']=$this->ag->listDivisions();
-				$data['reports']=$this->atd->dailyAttendance();
-				$data['supervisor']=$this->sm->getSupervisor();
-				$data['pendingLeave']=$this->lm->pendingCount();
+				// $data['leavecount']=$this->atd->leaveCountAll();
+				// $data['latecount']=$this->atd->lateCount();
+				// $data['notused']=$this->atd->notUsedAll();
+				 $data['divisions']=$this->ag->listDivisions();
+				// $data['reports']=$this->atd->dailyAttendance();
+				// $data['supervisor']=$this->sm->getSupervisor();
+				// $data['pendingLeave']=$this->lm->pendingCount();
 				$this->load->view('template/includeheader',$this->dataheader);
 				$this->load->view('superadmin/dashboard',$data);
 				$this->load->view('template/includefooter');
-			} elseif ($role=='2'||$role=='7') {//Secretary
+			// } elseif ($role=='2'||$role=='7') {//Secretary
 				
-				$data['leavecount']=$this->atd->leaveCountAll();
-				$data['latecount']=$this->atd->lateCount();
-				$data['notused']=$this->atd->notUsedAll();
-				$data['divisions']=$this->ag->listDivisions();
-				$data['reports']=$this->atd->dailyAttendance();
-				$data['supervisor']=$this->sm->getSupervisor();
-				$data['pendingLeave']=$this->lm->pendingCount();
-				$this->load->view('template/includeheader',$this->dataheader);
-				$this->load->view('admin/dashboard',$data);
-				$this->load->view('template/includefooter');
+			// 	$data['leavecount']=$this->atd->leaveCountAll();
+			// 	$data['latecount']=$this->atd->lateCount();
+			// 	$data['notused']=$this->atd->notUsedAll();
+			// 	$data['divisions']=$this->ag->listDivisions();
+			// 	$data['reports']=$this->atd->dailyAttendance();
+			// 	$data['supervisor']=$this->sm->getSupervisor();
+			// 	$data['pendingLeave']=$this->lm->pendingCount();
+			// 	$this->load->view('template/includeheader',$this->dataheader);
+			// 	$this->load->view('admin/dashboard',$data);
+			// 	$this->load->view('template/includefooter');
 				
-			} elseif($role=='3'||$role=='8'){//Director
+			// } elseif($role=='3'||$role=='8'){//Director
 				
-				$data['leavecount']=$this->atd->leaveCountAll();
-				$data['latecount']=$this->atd->lateCount();
-				$data['notused']=$this->atd->notUsedAll();
-				$data['divisions']=$this->ag->listDivisions();
-				$data['reports']=$this->atd->dailyAttendance();
-				$data['supervisor']=$this->sm->getSupervisor();
-				$data['pendingLeave']=$this->lm->pendingCount();
-				$this->load->view('template/includeheader',$this->dataheader);
-				$this->load->view('agency/dashboard',$data);
-				$this->load->view('template/includefooter');
+			// 	$data['leavecount']=$this->atd->leaveCountAll();
+			// 	$data['latecount']=$this->atd->lateCount();
+			// 	$data['notused']=$this->atd->notUsedAll();
+			// 	$data['divisions']=$this->ag->listDivisions();
+			// 	$data['reports']=$this->atd->dailyAttendance();
+			// 	$data['supervisor']=$this->sm->getSupervisor();
+			// 	$data['pendingLeave']=$this->lm->pendingCount();
+			// 	$this->load->view('template/includeheader',$this->dataheader);
+			// 	$this->load->view('agency/dashboard',$data);
+			// 	$this->load->view('template/includefooter');
 				
-			}  elseif($role=='4'||$role=='9'){//Division Heads
-				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+			 }  
+			 elseif($role=='4'||$role=='9'){//Division Heads
+				$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
 				 //$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
 				$data['editdetail']=$this->sm->sortevent();
 				$data['eventdetail']=$this->sm->getevent();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);
-				$data['leavecount']=$this->atd->leaveCountAll();
-				$data['latecount']=$this->atd->lateCount();
-				$data['notused']=$this->atd->notUsedAll();
-				$data['divisions']=$this->ag->listDivisions();
-				$data['reports']=$this->atd->dailyAttendance();
-				$data['supervisor']=$this->sm->getSupervisor();
-				$data['pendingLeave']=$this->lm->pendingCount();
+				// $data['leavecount']=$this->atd->leaveCountAll();
+				// $data['latecount']=$this->atd->lateCount();
+				// $data['notused']=$this->atd->notUsedAll();
+				 $data['divisions']=$this->ag->listDivisions();
+				// $data['reports']=$this->atd->dailyAttendance();
+				// $data['supervisor']=$this->sm->getSupervisor();
+				// $data['pendingLeave']=$this->lm->pendingCount();
 				//$data['eventdetail']=$this->db->get('event_table')->result_array();
 				// $data['date1']=$this->db->get('event_table')->result_array();
 				// $data['eventname']=$this->db->get('event_table')->result_array();
@@ -762,29 +767,8 @@ public	function viewmember2(){//leki
 				$this->load->view('template/includeheader',$this->dataheader);
 				$this->load->view('division/dashboard',$data);
 				$this->load->view('template/includefooter');
-			} elseif($role=='5'){//Users
-				$data['leavecount']=$this->atd->leaveCountAll();
-				$data['divisions']=$this->ag->listDivisions();
-				$data['reports']=$this->atd->dailyAttendance();
-				$data['supervisor']=$this->sm->getSupervisor();
-				$this->load->view('template/includeheader',$this->dataheader);
-				$this->load->view('user/dashboard',$data);
-				$this->load->view('template/includefooter');
-				
-			} elseif ($role=='6') { //HR
-				
-				$data['leavecount']=$this->atd->leaveCountAll();
-				$data['latecount']=$this->atd->lateCount();
-				$data['notused']=$this->atd->notUsedAll();
-				$data['divisions']=$this->ag->listDivisions();
-				$data['reports']=$this->atd->dailyAttendance();
-				$data['supervisor']=$this->sm->getSupervisor();
-				$data['pendingLeave']=$this->lm->pendingCount();
-				$this->load->view('template/includeheader',$this->dataheader);
-				$this->load->view('superadmin/dashboard',$data);
-				$this->load->view('template/includefooter');
-				}
-			// } elseif($role=='8'){//Offtg Director
+			 } 
+						// } elseif($role=='8'){//Offtg Director
 // 				
 				// $data['leavecount']=$this->am->leaveCountAll();
 				// $data['latecount']=$this->am->lateCount();
@@ -814,16 +798,16 @@ public	function viewmember2(){//leki
 				// $this->load->view('division/footer');
 			// }
 			 else {
-				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
+				$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);
-				$data['leavecount']=$this->atd->leaveCountAll();
-				$data['latecount']=$this->atd->lateCount();
-				$data['notused']=$this->atd->notUsedAll();
-				$data['divisions']=$this->ag->listDivisions();
-				$data['reports']=$this->atd->dailyAttendance();
-				$data['supervisor']=$this->sm->getSupervisor();
-				$data['pendingLeave']=$this->lm->pendingCount();
+				// $data['leavecount']=$this->atd->leaveCountAll();
+				// $data['latecount']=$this->atd->lateCount();
+				// $data['notused']=$this->atd->notUsedAll();
+				 $data['divisions']=$this->ag->listDivisions();
+				// $data['reports']=$this->atd->dailyAttendance();
+				// $data['supervisor']=$this->sm->getSupervisor();
+				// $data['pendingLeave']=$this->lm->pendingCount();
 
 
 				$data['eventdetail']=$this->db->get('event_table')->result_array();
