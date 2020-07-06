@@ -799,6 +799,9 @@ public	function viewmember2(){//leki
 			// }
 			 else {
 				$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
+				 //$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
+				$data['editdetail']=$this->sm->sortevent();
+				$data['eventdetail']=$this->sm->getevent();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);
 				// $data['leavecount']=$this->atd->leaveCountAll();
@@ -808,13 +811,10 @@ public	function viewmember2(){//leki
 				// $data['reports']=$this->atd->dailyAttendance();
 				// $data['supervisor']=$this->sm->getSupervisor();
 				// $data['pendingLeave']=$this->lm->pendingCount();
-
-
-				$data['eventdetail']=$this->db->get('event_table')->result_array();
+				//$data['eventdetail']=$this->db->get('event_table')->result_array();
 				// $data['date1']=$this->db->get('event_table')->result_array();
 				// $data['eventname']=$this->db->get('event_table')->result_array();
   	
-
 				$this->load->view('template/includeheader',$this->dataheader);
 				$this->load->view('division/dashboard',$data);
 				$this->load->view('template/includefooter');
