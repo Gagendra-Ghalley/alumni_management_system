@@ -79,7 +79,11 @@
         <!--   <div class="form-group">
                   <label>Attachment<i class="fa fa-paperclip fa-2x"></i></label>
                   <input type="file" name="resume"  accept=".doc, .docx, .pdf, .xls, .gif, .jpg, .png, .jpeg" required />
+
                 </div> -->
+
+                </div>
+
                 
             
                 <div class="form-group">

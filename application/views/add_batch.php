@@ -98,7 +98,7 @@
                 <select style="width:400px;" class="chosen-select form-control" id="place"  name="item" data-placeholder="Choose Item" class="col-xs-10 col-sm-5" required>
               <option value="">Select Department</option>
              <?php foreach($request as $key):?>
-            <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
+            <option value="<?php echo $key['department_ID'];?>"> <?php echo $key['name']; ?></option>
             <?php endforeach; ?>
           </select>
 
@@ -113,8 +113,8 @@
            </div>
 
            <div class="form-group">  
-                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter ID (Year of Graduation)</label>  
-                <input  style="width:400px;" type="text" id="amount" class="form-control col-sm-3 col-md-4 col-lg-2 control-label"  name="quantity1" placeholder="4108" required/> 
+                <label class="col-sm-3 col-md-4 col-lg-2 control-label">Enter batch_ID</label>  
+                <input  style="width:400px;" type="text" id="amount" class="form-control col-sm-3 col-md-4 col-lg-2 control-label"  name="quantity1" placeholder="Eg:4108" required/> 
                 <span class="text-danger"><?php echo form_error("Department"); ?></span>  
            </div>
            <br><br><br>

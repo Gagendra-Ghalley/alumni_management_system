@@ -78,7 +78,7 @@
                                  <select id="parent" name="Parent" class="option3 searchdropdown"  onchange="selectagency()">
                                 <option value="0" class="searchdropdown" selected>Select one</option>
                                 <?php foreach($parent->result() as $row){?>
-                                    <option class="searchdropdown" value="<?php echo $row->AgencyParentID;?>"><?php echo $row->name;?></option><?php }?>
+                                    <option class="searchdropdown" value="<?php echo $row->department_ID;?>"><?php echo $row->name;?></option><?php }?>
                                 </select>
                                  <label for="AgencyName">Year</label>
  <select name="Agency" id="agency" class="option3 searchdropdown" onchange="populateEmployees()">

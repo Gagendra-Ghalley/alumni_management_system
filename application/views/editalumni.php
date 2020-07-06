@@ -73,12 +73,12 @@
                                  <div style="color:black">Role:</div>    <input class="form-control" placeholder="roleId" name="roleId" type="text" value="<?php echo $row->roleId;?>">
                                 </div>
                                  <div class="form-group">
-                                     <div style="color:black">Year of Graduation:</div><input class="form-control" placeholder="AgencyID" name="agencyid" type="text" value="<?php echo $row->AgencyID;?>">
+                                     <div style="color:black">Year of Graduation:</div><input class="form-control" placeholder="batch_ID" name="agencyid" type="text" value="<?php echo $row->batch_ID;?>">
                                 </div>
-                                     <div style="color:black">Department:</div><input class="form-control" placeholder="AgencyParentID" name="agencyparentid" type="text" value="<?php echo $row->AgencyParentID;?>">
+                                     <div style="color:black">Department:</div><input class="form-control" placeholder="department_ID" name="agencyparentid" type="text" value="<?php echo $row->department_ID;?>">
                                 </div>
                                  <div class="form-group">
-                                    <div style="color:black"></div> <input class="form-control" placeholder="AgencyMainParentID" name="agencymainparentid" type="hidden" value="<?php echo $row->AgencyMainParentID;?>">
+                                    <div style="color:black"></div> <input class="form-control" placeholder="departmentParent_ID" name="agencymainparentid" type="hidden" value="<?php echo $row->departmentParent_ID;?>">
                                 </div>
                                  <!-- <div class="form-group">
                                     <div class="text-label">Grade:</div> <input class="form-control" placeholder="Grade" name="grade" type="text" value="<?php echo $row->Grade;?>">
