@@ -22,9 +22,9 @@
         
 
 
-            <div class="row">
-                <div class="col-lg-11" style="margin-left: 30px;">
-                    <!--Simple table example -->
+            <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i> <span>Add Event</span>
@@ -91,8 +91,11 @@
                            
                         </div>
                       </div>
-
-               <div class="bg-primary" style="margin-top: 95px;">
+                    </div>
+                  </div>
+                  </div>
+                </div>
+               <div class="bg-primary" style="margin-top: 120px;">
             <div class="container">
 
                

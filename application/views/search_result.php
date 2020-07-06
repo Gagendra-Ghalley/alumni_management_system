@@ -83,9 +83,9 @@
                                     </li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
-                                    <li class="active"><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
+                                    <li ><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
-                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+                                    <li class="active"><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -105,47 +105,51 @@
 
 <body class="body-Login-back" >
 
-    <div class="container" style="margin-left: 56px;">
+    <div class="container" >
        
         <div class="row">
            
-            <div class="col-md-7 col-md-offset-3 text-center">
-                <div class="login-panel panel panel-default">                  
-                    <div class="panel-heading">
-                        <h5 class="panel-title">Please Log In</h5>
-                    </div>
+            <div class="col-md-10 col-md-offset-1 " >
+                <div class="login-panel panel panel-default" style="height:100%;background-color: #f5f5f5">                  
+                    <!-- <div class="panel-heading">
+                        <h5 class="panel-title">Details</h5>
+                    </div> -->
                     <div class="panel-body login">
-                        <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/login_validate" class="form-group">
-                            
-                            	<div class="form-group">
-                               
-                                    <input class="form-control" placeholder="CID" name="cid" type="text" autofocus required/>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" class="pass" type="password" required/>
-                                </div>
-                               <!--  <a href="<?php echo base_url();?>index.php/ATD/Forgetpassword">Forget password?</a> -->
-                                 
-                                <input type="submit" value="Login" class="btn btn-lg btn-success btn-block"/>
-                               
-                              
+                        <?php $count=1; foreach($checkissue as $row): ?>
 
-                           
-                        </form>
-                        <form accept-charset="utf-8" action="<?php echo base_url();?>index.php/ATD/Forgetpasswordemail">
-                        <input type="submit" value="Forgot password?" class="btn btn-lg btn-warning btn-block"/>
-                        <br>
-                       </form>
+            <tr>
+                <br>
+                <button class="btn bg-primary" style="border-radius: 50%"><td><?php echo $count++;?></td></button><br>
+                
+               <b>Name:</b> <td><?php echo $row['FirstName'];?>
+              
+                 
+               </td><br>
+                <b>Department:</b>
+<td> <?php 
+                                                    $ids=explode(", ", $row['AgencyParentID']);//bpas_user_profiles
+                                                    foreach ($ids as $key => $AgencyParentID) { //id
+                                                      echo $this->db->get_where('bpas_master_agencyparent',array('AgencyParentID' =>trim($AgencyParentID)))->row()->name ;//tablename,id,name
+                                                    }
+                                                    
+
+                                                   ?>
+                                                    
+                                                   
+                                                   </td> 
+              <br>
+               <b>Email:</b> <td><?php echo $row['email'];?></td><hr>
+                    <?php endforeach; ?></tr> 
                     </div>
-                    <div id="errors"><?php echo validation_errors();?></div>
+                    
                 </div>
             </div>
         </div>
     </div>
 
-	
-	
-	
+  
+  
+  
  <div class="container col-md-12 img-thumbnail bg-primary">
                         <div class="col-md-4 col-sm-12 left-contact  ">
 

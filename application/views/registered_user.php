@@ -17,12 +17,15 @@
  
                     </div>
                 </div>        
-  <div class="row profile">
+   <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12">
+
       <h4 style="margin-left: 20px"><b>Registered Users</b></h4>
       <!-- <div class="panel-body"> -->
       <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-11">
+                                <div class="col-md-12 col-lg-12 col-sm-12">
                                     <div class="table-responsive">
                                         <table class="table tablescroll table-bordered table-hover table-striped" >
                                              
@@ -107,8 +110,15 @@
                             </div>
                             <!-- /.row -->
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+
+
         
-  <div class="bg-primary" style="margin-top: 100px;">
+  <div class="bg-primary" style="margin-top: 147px;">
             <div class="container">
 
                
