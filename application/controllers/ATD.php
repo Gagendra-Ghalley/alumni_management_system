@@ -559,10 +559,10 @@ public function validate_credentials1(){
 
 		$data['item']=$this->db->get('department')->result_array();
 
-		$this->load->view('Getmembers',$data);
+		$this->load->view('search_result',$data);
 		
 
-		$this->load->view('membersearch3',$data);
+		
 
 		
 		

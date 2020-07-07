@@ -1335,13 +1335,13 @@ public function reciept()
  	$data['item']=$this->db->get('department')->result_array();//for selecting department
 		
 		$this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('membersearch2',$data);
+		$this->load->view('viewmember',$data);
 		$this->load->view('template/includefooter');
 		
 		
 	}
 
-	
+
 
 	public function csv(){//Tamang
  	
