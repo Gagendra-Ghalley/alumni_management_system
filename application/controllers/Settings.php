@@ -1341,6 +1341,8 @@ public function reciept()
 		
 	}
 
+	
+
 	public function csv(){//Tamang
  	
 		$this->load->view('template/includeheader',$this->dataheader);
