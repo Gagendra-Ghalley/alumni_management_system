@@ -562,7 +562,9 @@ public function validate_credentials1(){
 		$this->load->view('search_result',$data);
 		
 
+
 		
+
 
 		
 		
