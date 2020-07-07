@@ -1724,7 +1724,7 @@ public function form_validation2() //Tamang (adding new department and departmen
 
   			$issuance= $this->db->query("SELECT * FROM user_profiles where FirstName='".$name."' OR department_ID='".$department."'")->row();
 
-  			$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName CONTAINS '".$name."' OR AgencyParentID='".$department."'")->row();
+  			$issuance= $this->db->query("SELECT * FROM user_profiles where FirstName='".$name."' OR department_ID='".$department."'")->row();
 
 
   			if(sizeof($issuance)>0) 

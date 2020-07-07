@@ -36,9 +36,9 @@
                 
              <b>Name:</b><td><?php echo $row['FirstName'];?> <!-- <?php echo $row['MiddleName'];?> <?php echo $row['LastName'];?> --></td><br>
              <b>Department:</b><td> <?php 
-                                                    $ids=explode(", ", $row['AgencyParentID']);//bpas_user_profiles
-                                                    foreach ($ids as $key => $AgencyParentID) { //id
-                                                      echo $this->db->get_where('department',array('AgencyParentID' =>trim($AgencyParentID)))->row()->name ;//tablename,id,name
+                                                    $ids=explode(", ", $row['department_ID']);//bpas_user_profiles
+                                                    foreach ($ids as $key => $department_ID) { //id
+                                                      echo $this->db->get_where('department',array('department_ID' =>trim($department_ID)))->row()->name ;//tablename,id,name
                                                     }
                                                     
 

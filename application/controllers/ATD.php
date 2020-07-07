@@ -562,7 +562,7 @@ public function validate_credentials1(){
 		$this->load->view('Getmembers',$data);
 		
 
-		$this->load->view('membersearch3',$data);
+		// $this->load->view('membersearch3',$data);
 
 		
 		

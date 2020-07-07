@@ -59,7 +59,7 @@
                             <select class="form-control" name="f1" form="f" style="height: 30px; width: 400px">
                                 <option value="" form="f">Select Item</option>
                        <?php foreach($item as $key):?>
-                        <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
+                        <option value="<?php echo $key['department_ID'];?>"> <?php echo $key['name']; ?></option>
                       <?php endforeach; ?>
                                <!--  <option value="" >Select Department</option>
                                 <option value="Civil">Civil</option>
