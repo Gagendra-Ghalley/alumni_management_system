@@ -3,7 +3,7 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -317,7 +317,7 @@
       <div class="bg-primary">
          <div class="container">
             <div class="col-md-6">
-               <p>@Alumni Management System</p>
+               <p>&copy Alumni Management System</p>
             </div>
          </div>
       </div>
@@ -348,7 +348,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -381,7 +381,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -414,7 +414,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -447,7 +447,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }
@@ -480,7 +480,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('No response')) {
+               if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
                }
            }

@@ -187,7 +187,16 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
       
            }
 				
-			public function getAgencyList() {
+			public function get_dropdownlistforuser_selectyear() {//Tamang(dropdown list for select year for user)
+				
+				 $parent=$this->input->post("parent");
+            $query="select distinct name, AgencyID from bpas_master_agency WHERE bpas_master_agency.AgencyParentID ='$parent' ";
+            $agency_info=$this->db->query($query);
+            return $agency_info;
+				
+			}
+
+				public function get_dropdownlistforbatch_selectyear() {//Tamang(dropdown list for select year for batch)
 				
 				 $parent=$this->input->post("parent");
             $query="select distinct name, AgencyID from bpas_master_agency WHERE bpas_master_agency.AgencyParentID ='$parent' ";
@@ -198,7 +207,7 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		
 		
 	
-	public function getEmployees($agency){
+	public function get_dropdownlistforuser($department){
 		
 	$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
 		p.cid,
@@ -220,13 +229,13 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID 
 		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
 		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
-		WHERE p.AgencyID ='".$agency."'";
+		WHERE p.AgencyID ='".$department."'";
 		$employees = $this->db->query($query);
 		return $employees;
 		
 		
 	}
-	public function getEmployees1($agency){
+	public function get_dropdownlistforbatch($agency){//Tamang(Dropdown list for batch)
 		
 	$query= "SELECT  
 		 
@@ -242,7 +251,7 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		
 	}
 
-	public function getEmployees2($agency){
+	public function get_dropdownlistfordepartment($department){
 		
 	$query= "SELECT  
 		 
@@ -251,7 +260,7 @@ LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = 
 		
 		FROM bpas_master_agencyparent d 
 		
-		WHERE d.AgencyParentID ='".$agency."'";
+		WHERE d.AgencyParentID ='".$department."'";
 		$employees = $this->db->query($query);
 		return $employees;
 		

@@ -5,56 +5,36 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST Alumni Management System</title>
-    
-   
-<link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <!-- Core CSS - Include with every page -->
+    <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-  <!--   <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet"> -->
-     <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
-    <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css1/cubeportfolio.min.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css1/slider.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>css/pop.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css/main-style1.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css1/effect.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-     <!-- Main CSS -->
-   <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css"> 
+  <!--  <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" /> -->
+      <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
+      <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
+       <link href="css/bootstrap.min.css" rel="stylesheet">  
+   <!-- Main CSS -->
+   <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/style.css">
   <!-- Animate CSS -->
- <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css"> 
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/css1/animate.css">
+  <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet"/>
   <!-- Font Awesome Css -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css"> 
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts1/font-awesome.css">
   <!-- Menu -->
   <link href="<?php echo base_url();?>assets/css1/flexy-menu.css" rel="stylesheet">
   <!-- Testimonial CSS -->
   <link href="<?php echo base_url();?>assets/css1/cubeportfolio.min.css" rel="stylesheet">
   
+     <link href="<?php echo base_url();?>assets/footer2css" rel="stylesheet">
+     <link href="<?php echo base_url();?>assets/footer3.css" rel="stylesheet">
+  
   
   <!-- Font  -->
-  <link href='http://fonts1.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
-  <link href='http://fonts1.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link href="<?php echo base_url();?>assets/css/cst.css" rel="stylesheet" />
-    <!-- Core CSS - Include with every page -->
-    <!-- <link href="<?php echo base_url();?>assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" /> -->
-    <!-- <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" /> -->
-    <link href="<?php echo base_url();?>assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-  <!--  <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" />
- -->      <link href="<?php echo base_url();?>assets/css/main-style.css" rel="stylesheet" />
-     <!--  <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" /> -->
-      <!--  <link href="css/bootstrap.min.css" rel="stylesheet">  -->
-       <link href="<?php echo base_url();?>assets/css/cst6.css" rel="stylesheet" /> 
+  <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  
 
- 
+
   
 
 
@@ -107,11 +87,11 @@
     </form>
 
       
-        <div class="col-md-10 img-thumbnail" style=" margin-top: 100px;height: 300px;color: #fff">
-               
-                <div class="panel-heading bg-primary" >
+        <div class="col-md-10 img-thumbnail" style=" margin-top: 150px;height: 300px">
+              <div class="login-panel panel panel-default">   
+                <div class="panel-heading">
                  
-                  <h4 class="panel-title "  >Member Search</h4>
+                  <h4 class="panel-title" >Member Search</h4>
 
               </div>
 
@@ -131,8 +111,8 @@
                 <br>
             
 
-               <div class="form-group" style="width: 660px" >
-                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 17px"> Department</label>
+                <div class="form-group" style="width: 660px" >
+                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 20px"> Department</label>
 
                     <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
 
@@ -141,16 +121,12 @@
                             
                             
 
-                            <select name="f1" form="f" style="height: 30px; width: 250px;color: #111">
-                                <option value="" form="f">Select Item</option>
-                       <?php foreach($item as $key):?>
-                        <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
-                      <?php endforeach; ?>
-                               <!--  <option value="" >Select Department</option>
+                            <select name="f1" form="f" style="height: 30px; width: 250px">
+                                <option value="" form="f">Select Department</option>
                                 <option value="Civil">Civil</option>
                                 <option value="Information Technology">Information Technology</option>
                                 <option value="Electrical">Electrical</option>
-                                <option value="Electronics and Communication">Electronics and Communication</option> -->
+                                <option value="Electronics and Communication">Electronics and Communication</option>
                             </select>
 
                         </div>
@@ -173,76 +149,22 @@
 
            
 
-            </div>
+        </div>
+      </div>
 
     </div>
    
 
 
 
-  <div class="container col-md-12 img-thumbnail bg-primary">
-                        <div class="col-md-4 col-sm-12 left-contact  ">
 
-                       <h3 class="title" style="color:#fff;">Contact Us</h3>
-                       <hr>
-                        <ul>
-                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff">Alumni management system</strong></a></li>
-                            <hr>
-                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff">+77777777</strong></li>
-                            <hr>
-                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff" >college of science and technology</strong> </li>
-                            <hr>
-                        </ul>
-                                        
-                        </div>
-
-                          <div class="col-md-4 col-sm-12 left-contact">
-
-                       <h3 class="title" style="color:#fff">Visit</h3>
-                       <hr>
-                        <ul class="du-choose-list">
-                            <li><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Royal Univerisity of Bhutan</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">VLE cst</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Libary cst</strong></a></li>
-                        
-                           
-                        </ul>
-
-                                        
-                        </div>
-                        <div class="col-md-4 col-sm-12 left-contact ">
-
-                        <h3 class="title" style="color:#fff;">Cst Address </h3>
-                        <hr>
-                        
-
-                            <ul class="du-choose-list">
-
-                            <li class="list-group"><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Rinchending,Phuntsholing</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">POST Box:1122</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Website:www.cst.edu.bt</strong></a></li>
-                             <li><a href="#"><strong style="color:#fff">Email:cst@edu.bt</strong></a></li>
-                        
-                           
-                        </ul>
-                                        
-                        </div>
-                        
-                    </div>
-    
-    
-
-
-<!--footer-->
- 
+        <div class="bg-primary" class="du-newsletter">
             <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
 
-                <div class="col-md-12">
+                <div class="col-md-6">
 
                     <p>@Alumni Management System</p>
 
@@ -251,7 +173,29 @@
             </div>
         </div>
 
+        </div>
 
- 
+    
+
+
+
+       
+<script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js1/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.equalheights.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/sForm.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/wow.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/device.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/flexy-menu.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.simple-text-rotator.min.js"></script>
+    <script type="text/javascript" src="j<?php echo base_url();?>assets/js1/library/smoothscroll.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/jquery.cubeportfolio.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/slider.js"></script>
+     <script>
   </body>
   </html>

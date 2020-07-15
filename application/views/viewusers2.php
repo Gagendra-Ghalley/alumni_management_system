@@ -33,18 +33,15 @@
             } 
             ?> 
              
+     <div id="page-wrapper" style="margin-left: 0px">
      
-            <div id="page-wrapper" style="margin-left: 0px">
-                <br>
-                <br>
-
-                <div class="col-lg-10">
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
 
     
  <div class="panel panel-primary">
                         <div class="panel-heading">
                             
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Users
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Manage Department
                            
                             <div class="pull-right">
 
@@ -114,28 +111,11 @@
 
          
 
+        </div>
 
         </div>
         <!-- end page-wrapper -->
-        
-      <div class="bg-primary" style="margin-top: 100px;">
-            <div class="container">
-
-               
-
-
-                <div class="col-lg-12">
-
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>Alumni Management System@2020</p>
-
-                </div>
-
-            </div>
-        </div>
-      </div>
+     
  
 
 <script>

@@ -4,7 +4,7 @@
   <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -17,12 +17,15 @@
  
                     </div>
                 </div>        
-  <div class="row profile">
+   <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12">
+
       <h4 style="margin-left: 20px"><b>Registered Users</b></h4>
       <!-- <div class="panel-body"> -->
       <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-11">
+                                <div class="col-md-12 col-lg-12 col-sm-12">
                                     <div class="table-responsive">
                                         <table class="table tablescroll table-bordered table-hover table-striped" >
                                              
@@ -107,25 +110,15 @@
                             </div>
                             <!-- /.row -->
                         </div>
-        
-  <div class="bg-primary" style="margin-top: 100px;">
-            <div class="container">
-
-               
-
-
-                <div class="col-lg-12">
-
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>Alumni Management System@2020</p>
-
+                      </div>
+                    </div>
+                  </div>
                 </div>
+            
 
-            </div>
-        </div>
-      </div> 
+
+        
+ 
 
 
     <script type="text/javascript">

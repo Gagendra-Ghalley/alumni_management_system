@@ -1,15 +1,11 @@
 
 
-    <div id="page-wrapper">
-      <div class="row">
-               <!-- Page Header -->
-
   <div id="page-wrapper">
     <div class="row">
                 <!-- Page Header -->
 
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -23,15 +19,14 @@
                     </div>
                 </div>
 
-      <div class="row" style="margin-left: 15px">
-        <div class="col-lg-10 "style="background-color: #e0dede" >
-          
-
-            </div>
-    <div class="container img-thumbnail" style="background-color: #f5f5f5">
      
-        <div class="col-md-12 col-lg-12 col-sm-12" >
-          <h3 align="left">Send Email</h3>
+
+            
+     <div id="page-wrapper" style="margin-left: 0px">
+     
+             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
+          
+         
           <br />
 
           <?php
@@ -46,7 +41,7 @@
           }
           ?>
 
-          <div class="panel-heading" style="background-color: #0a97b0">
+          <div class="panel-heading bg-primary col-md-12">
               <span style="color: #fff" ><b>Email</b></span>
             </div><br>
 
@@ -69,23 +64,7 @@
                   <textarea type="email" name="email" class="form-control" placeholder="Eg: 0216518.cst@rub.edu.bt, 0216506.cst@rub.edu.bt (For multiple email address use comma , )" class="form-control" required rows="4"></textarea>
                 </div>
 
-               <!--  <div class="form-group">
-                  <label>CC</label>
-                 
-
-                  <textarea type="email" name="email2" class="form-control" placeholder="Eg: 0216518.cst@rub.edu.bt, 0216506.cst@rub.edu.bt (For multiple email address use comma , )" class="form-control"  rows="4"></textarea>
-                </div>
-                <div class="form-group">
-                  <label>BCC</label>
-            
-
-                  <textarea type="email" name="email" class="form-control" placeholder="Eg: 0216518.cst@rub.edu.bt, 0216506.cst@rub.edu.bt (For multiple email address use comma , )" class="form-control"  rows="4"></textarea>
-                </div>  -->
-          <div class="form-group">
-                  <label>Attachment<i class="fa fa-paperclip fa-2x"></i></label>
-                  <input type="file" name="resume"  accept=".doc,.docx, .pdf, .xls, .gif, .jpg, .png, .jpeg" required />
-                </div>
-                
+              
             
                 <div class="form-group">
                   <label>Message</label>
@@ -94,11 +73,10 @@
               </div>
             </div>
 
-            <div class="form-group" align="left">
-              <input type="submit" name="submit" value="Send mail" class="btn btn-info" />
+            
 
             <div class="form-group" align="center">
-              <input type="submit" name="submit" value="Send Mail" class="btn btn-info" />
+              <input type="submit" name="submit" value="Send Mail" class="btn btn-info btn-lg" />
 
             </div>
           </form>
@@ -106,35 +84,10 @@
       </div>
 
     </div>
-
-  <!-- <div class="bg-primary">
-            <div class="row">
-
-               
+  </div>
+  </div>
 
 
-                <div class="col-lg-12">
 
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>Alumni Management System@2020</p>
-
-                </div>
-
-            </div>
-        </div>
-      </div>
- -->
-
-
-      <div class="bg-primary">
-         <div class="container">
-            <div class="col-md-6">
-               <p>@Alumni Management System</p>
-            </div>
-         </div>
-      </div>
-  
- 
+      
 

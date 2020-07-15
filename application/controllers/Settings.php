@@ -48,21 +48,21 @@ public function sendemail()
 		$this->load->view('template/includefooter');
 }
 
-public function viewUsers1() {
+public function managebatch() {//Tamang(Managing batch)
 		
 		$data['parent']=$this->ag->getParentAgencyList();
 		$this->load->view('template/includeheader',$this->dataheader);
 		
-		$this->load->view('viewusers1',$data);
+		$this->load->view('managebatch',$data);
 		$this->load->view('template/includefooter');
 	}
 
-public function viewUsers2() {
+public function managedepartment() {//Tamang(Managing department)
 		
 		$data['parent']=$this->ag->getParentAgencyList();
 		$this->load->view('template/includeheader',$this->dataheader);
 		
-		$this->load->view('viewusers2',$data);
+		$this->load->view('managedepartment',$data);
 		$this->load->view('template/includefooter');
 	}
 
@@ -87,6 +87,15 @@ public function viewUsers2() {
 
 
 	}
+
+	public function faculty(){
+		$this->load->view('template/includeheader',$this->dataheader);
+		
+		$this->load->view('faculty');
+		$this->load->view('template/includefooter');
+	}
+
+
 
 	public function updateDetail(){
 		$cid=$this->session->userdata('cid');
@@ -190,7 +199,6 @@ public function viewUsers2() {
 		
 		
 
-
 public function event_cancel($param1=""){
 
 // $eventid=$this->input->post('event_id');
@@ -200,6 +208,7 @@ public function event_cancel($param1=""){
 	 			 $d2['event1']=$this->sm->eventcancel($param1,$num1);
 	 			// $d=implode(" ", $d2);
 				
+				if($d2>0){
 		
 			$this->db->where('event_id', $param1);//leki
   			$this->db->update('event_table',$d2);
@@ -211,12 +220,24 @@ public function event_cancel($param1=""){
 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
 		              </button>
 		            </a>';
+
+		           }
+		           else{
+$data1['message']='<br /><br /><br /><span class="alert alert-info">You cant cancel twice</span> <br /><br /><br />
+			 	<a href="'.base_url().'index.php/Settings/dashboard/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;Dashboad</span>
+		              </button>
+		            </a>';
+
+		           }
 		    $this->load->view('template/includeheader',$this->dataheader);
 		
 			$this->load->view('template/includefooter');
 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data1);
 		       
 					}
+
+
 
 
 
@@ -268,10 +289,10 @@ public function validate_credentials2(){
 	
 		
 	
-	public function agencyFromParent() {
+	public function get_dropdownlistforuser_selectyear() {//Tamang(drop down for manage user for select year)
 		
 		 $parent=$this->input->post('parent');
-                $query=$this->ag->getAgencyList();
+                $query=$this->ag->get_dropdownlistforuser_selectyear();
 	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
                 foreach($query->result() as $row)
                 { 
@@ -281,10 +302,10 @@ public function validate_credentials2(){
 	}
 
 
-	public function agencyFromParent1() {//Tamang
+	public function get_dropdownlistforbatch_selectyear() {//Tamang(drop down for manage batch for select year)
 		
 		 $parent=$this->input->post('parent');
-                $query=$this->ag->getAgencyList();
+                $query=$this->ag->get_dropdownlistforbatch_selectyear();
 	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
                 foreach($query->result() as $row)
                 { 
@@ -295,17 +316,17 @@ public function validate_credentials2(){
 
 
 
-	public function agencyFromParent2() {//Tamang(Editing and Deleting year of graduation)
+	// public function agencyFromParent2() {//Tamang(Editing and Deleting year of graduation)
 		
-		 $parent=$this->input->post('parent');
-                $query=$this->ag->getAgencyList();
-	        echo "<option class='searchdropdown' value='#'>Select Year</option>";
-                foreach($query->result() as $row)
-                { 
-                 echo "<option class='searchdropdown' value='".$row->AgencyID."'>".$row->name."</option>";
-                }
+	// 	 $parent=$this->input->post('parent');
+ //                $query=$this->ag->getAgencyList();
+	//         echo "<option class='searchdropdown' value='#'>Select Year</option>";
+ //                foreach($query->result() as $row)
+ //                { 
+ //                 echo "<option class='searchdropdown' value='".$row->AgencyID."'>".$row->name."</option>";
+ //                }
 		
-	}
+	// }
 	//sonamm Tshering
 	public function dakgen()
 {
@@ -396,7 +417,7 @@ function addDak($param="")
 	     ;
 		 
 		if($counter==1 ){
-	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->AgencyID/'>DeleteAll</button></a>"
+	     echo" <td><a href='".base_url()."index.php/Settings/delete_data3/$row->AgencyID/'>DeleteAll</button></a>"
 	     ;
 		}
 		
@@ -411,17 +432,17 @@ function addDak($param="")
 
 	
 	
-	public function getAgencyEmployees() {//Tamang(Managing user )
+	public function get_dropdownlistforuser() {//Tamang(dropdown list for user )
 		
 		
 		$this->load->library('pagination');
 
-		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees/';
+		$config['base_url'] = base_url().'/index.php/Settings/get_dropdownlistforuser/';
 		
 		
 		$this->pagination->initialize($config);
-    	$agency = $this->input->post('agency');
-		$query = $this->ag->getEmployees($agency);
+    	$department = $this->input->post('agency');
+		$query = $this->ag->get_dropdownlistforuser($department);
 		$num_rows=$query->num_rows();
 		$config['total_rows'] = $num_rows;
 		$config['per_page'] = 10;
@@ -432,7 +453,7 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee/$row->cid/'>$row->name</a><i class='fa fa-edit'></i></td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editalumni/$row->cid/'>$row->name</a><i class='fa fa-edit'></i></td>";
 		// echo "<td>$row->EmpNo</td>";
 		echo "<td>$row->cid</td>";
 		// echo "<td>$row->Agency</td>";
@@ -443,7 +464,7 @@ function addDak($param="")
 		// echo "<td>$row->Gender</td>";
 		echo "<td>$row->gender</td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a class='delete_data' id='<?php echo $row->cid' href='".base_url()."index.php/Settings/deleteuser/$row->cid/'>Delete</a></td>"
+	     echo" <td><a class='delete_data' id='<?php echo $row->cid' href='".base_url()."index.php/Settings/delete_data/$row->cid/'>Delete</a></td>"
 	     ;
 
 
@@ -451,7 +472,7 @@ function addDak($param="")
 
 
 	     if($counter==1){
-	     echo" <td><a href='".base_url()."index.php/Settings/deleteall/$row->AgencyID/'>DeleteAll</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/delete_data3/$row->AgencyID/'>DeleteAll</a></td>"
 	     ;
 		}
 		echo "</tr>";
@@ -561,17 +582,17 @@ function addDak($param="")
 	    
 	 
 
-	public function getAgencyEmployees2() {//Tamang(For view in year of graduation)
+	public function get_dropdownlistforbatch() {//Tamang(For dropdown list view and year of graduation)
 		
 		
 		$this->load->library('pagination');
 
-		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees2/';
+		$config['base_url'] = base_url().'/index.php/Settings/get_dropdownlistforbatch/';
 		
 		
 		$this->pagination->initialize($config);
-    	$agency = $this->input->post('agency');
-		$query = $this->ag->getEmployees1($agency);
+    	$department = $this->input->post('agency');
+		$query = $this->ag->get_dropdownlistforbatch($department);
 		$num_rows=$query->num_rows();
 		$config['total_rows'] = $num_rows;
 		$config['per_page'] = 10;
@@ -581,9 +602,9 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee3/$row->AgencyID/'>$row->AgencyID</a><i class='fa fa-edit'></i></td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editbatch/$row->AgencyID/'>$row->AgencyID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->Agency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee2/$row->AgencyID/'>Delete</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/delete_data1/$row->AgencyID/'>Delete</a></td>"
 	     ;
 	     
 		
@@ -601,17 +622,17 @@ function addDak($param="")
 		
 	}
 
-	public function getAgencyEmployees3() {//Tamang(For view in department )
+	public function get_dropdownlistfordepartment() {//Tamang(dropdown list for department)
 		
 		
 		$this->load->library('pagination');
 
-		$config['base_url'] = base_url().'/index.php/Settings/getAgencyEmployees3/';
+		$config['base_url'] = base_url().'/index.php/Settings/get_dropdownlistfordepartment/';
 		
 		
 		$this->pagination->initialize($config);
-    	$agency = $this->input->post('parent');
-		$query = $this->ag->getEmployees2($agency);
+    	$department = $this->input->post('parent');
+		$query = $this->ag->get_dropdownlistfordepartment($department);
 		$num_rows=$query->num_rows();
 		$config['total_rows'] = $num_rows;
 		$config['per_page'] = 10;
@@ -621,9 +642,9 @@ function addDak($param="")
 			
 		echo "<tr>";
 		echo "<td>$counter</td>";
-		echo "<td><a href='".base_url()."index.php/Settings/editFullEmployee5/$row->AgencyParentID'>$row->AgencyParentID</a><i class='fa fa-edit'></i></td>";
+		echo "<td><a href='".base_url()."index.php/Settings/editdepartment/$row->AgencyParentID'>$row->AgencyParentID</a><i class='fa fa-edit'></i></td>";
 		echo "<td>$row->ParentAgency</td>";
-	     echo" <td><a href='".base_url()."index.php/Settings/editFullEmployee4/$row->AgencyParentID/'>Delete</a></td>"
+	     echo" <td><a href='".base_url()."index.php/Settings/delete_data2/$row->AgencyParentID/'>Delete</a></td>"
 	     ;
 	     
 		
@@ -742,7 +763,7 @@ function addDak($param="")
 			else echo "failed";
 	}
 	
-public function updateEmployee($cid) {
+public function updatealumni($cid) {
 		
 		$this->form_validation->set_rules('fname','Fname','required|trim');
 		// $this->form_validation->set_rules('mname','Mname','trim');
@@ -756,25 +777,33 @@ public function updateEmployee($cid) {
 		
 		if($this->form_validation->run()){
 			$echo="form success";
-		if($this->sm->updateEmployee($cid)) {
+		if($this->sm->updatealumni($cid)) {
 			
 			$data['statusupdate']="Success";
-			$this->editFullEmployee($cid);
+			$this->editalumni($cid);
 			
-			
+			redirect(base_url() . "index.php/Settings/updated");  
+              
+              
 		}
 
 			
 			
 		} else {
-			echo "form error";
-			echo validation_errors();
-			$this->editFullEmployee($cid);
+			 redirect(base_url() . "index.php/Settings/notupdated");
 		}
 		
 	}
+public function updated() {
+$this->viewUsers();
+}
+public function notupdated() {
 
-	public function updateEmployee1($cid) {
+$this->viewUsers();
+}
+
+
+	public function updatebatch($cid) {
 		
 		
 		// $this->form_validation->set_rules('agencyid','Agency','required|trim');
@@ -784,25 +813,35 @@ public function updateEmployee($cid) {
 		
 		if($this->form_validation->run()){
 			$echo="form success";
-		if($this->sm->updateEmployee1($cid)) {
+		if($this->sm->updatebatch($cid)) {
 			
 			$data['statusupdate']="Success";
-			$this->editFullEmployee3($cid);
-			
-			
+			$this->editbatch($cid);
+			redirect(base_url() . "index.php/Settings/updated_batch");  
+              
+              
 		}
 
 			
 			
-		} else {
-			echo "form error";
-			echo validation_errors();
-			$this->editFullEmployee3($cid);
+		else {
+			 redirect(base_url() . "index.php/Settings/notupdated_batch");
 		}
-		
+
 	}
+}
+		
 
-	public function updateEmployee2($cid) {
+public function updated_batch() {//Tamang
+
+$this->managebatch();
+}
+public function notupdated_batch() {//Tamang
+
+$this->managebatch();
+}
+
+	public function updatedepartment($cid) {
 		
 		
 		// $this->form_validation->set_rules('agencyid','Agency','required|trim');
@@ -812,39 +851,54 @@ public function updateEmployee($cid) {
 		
 		if($this->form_validation->run()){
 			$echo="form success";
-		if($this->sm->updateEmployee2($cid)) {
+		if($this->sm->updatedepartment($cid)) {
 			
 			$data['statusupdate']="Success";
-			$this->editFullEmployee5($cid);
-			
-			
+			$this->editdepartment($cid);
+		redirect(base_url() . "index.php/Settings/updated_department");  
+              
+              
 		}
 
 			
 			
-		} else {
-			echo "form error";
-			echo validation_errors();
-			$this->editFullEmployee5($cid);
+		else {
+			 redirect(base_url() . "index.php/Settings/notupdated_department");
 		}
 		
 	}
-	public function editFullEmployee($cid){
+
+
+	
+      
+		
+	}
+
+	public function updated_department() {
+ //Tamang 
+           $this->managedepartment();  
+      }  
+
+      public function notupdated_department() {
+ //Tamang 
+           $this->managedepartment();  
+      } 
+	public function editalumni($cid){//Tamang (editing the alumni)
 			
 		
 					$data['employee']=$this->sm->editFullEmployee($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee',$data);
+				    $this->load->view('editalumni',$data);
 				    $this->load->view('template/includefooter');
 			
 		
 	}
-	public function delete($cid){//Tamang(Deleting user)
+	public function editFullEmployee1($cid){
 			
 		
 					$data['employee']=$this->sm->editFullEmployee1($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('delete',$data);
+				    $this->load->view('editfullemployee1',$data);
 				    $this->load->view('template/includefooter');
 			
 		
@@ -861,12 +915,12 @@ public function updateEmployee($cid) {
 		
 	}
 
-	public function editFullEmployee3($cid){//(Tamang for editing the year of graduation)
+	public function editbatch($cid){//(for editing the year of graduation)
 			
 		
-					$data['employee']=$this->sm->editFullEmployee3($cid);
+					$data['employee']=$this->sm->editbatch($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee3',$data);
+				    $this->load->view('editbatch',$data);
 				    $this->load->view('template/includefooter');
 			
 		
@@ -882,22 +936,22 @@ public function updateEmployee($cid) {
 			
 		
 	}
-public function editFullEmployee5($cid){//Tamang (view for editing the department)
+public function editdepartment($cid){//Tamang (editing the department)
 			
 		
-					$data['employee']=$this->sm->editFullEmployee5($cid);
+					$data['employee']=$this->sm->editdepartment($cid);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('editfullemployee5',$data);
+				    $this->load->view('editdepartment',$data);
 				    $this->load->view('template/includefooter');
 			
 		
 	}
-	public function deleteall($AgencyID){//Tamang (view for editing the department)
+	public function editFullEmployee6($AgencyID){//Tamang (view for editing the department)
 			
 		
 					$data['employee']=$this->sm->editFullEmployee6($AgencyID);
 					$this->load->view('template/includeheader',$this->dataheader);
-				    $this->load->view('deleteall',$data);
+				    $this->load->view('editfullemployee6',$data);
 				    $this->load->view('template/includefooter');
 	}
 
@@ -1422,10 +1476,9 @@ public function reciept()
 
 	public function csv(){//Tamang
  	
-		
+		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("csv_import_model");
 		$data['data'] = $this->csv_import_model->select();
-		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->view("superadmin/csv_import", $data);
 		$this->load->view('template/includefooter');
 		
@@ -1442,36 +1495,36 @@ public function membersearch2(){//Tamang
 
 	
 
-	public function membersearch3(){//Tamang
+	public function add_user(){//Tamang(adding user individually)
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
            $data["fetch_data"] = $this->main_model->fetch_data(); 
           $data['request']=$this->db->get('bpas_master_agencyparent')->result_array();
           $data['request1']=$this->db->get('bpas_master_agency')->result_array();
-          $this->load->view("main_view", $data);  
+          $this->load->view("add_user", $data);  
 		$this->load->view('template/includefooter');
 		
 		
 	}
-	public function membersearch5(){//Tamang
+	public function add_department(){//Tamang(Adding new department and its id)
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
            $data["fetch_data"] = $this->main_model->fetch_data(); 
          
-          $this->load->view("main_view1", $data);  
+          $this->load->view("add_department", $data);  
 		$this->load->view('template/includefooter');
 		
 		
 	}
-	public function membersearch6(){//Tamang
+	public function add_batch(){//Tamang(Adding new batch/faculty for department and its id)
  	
 		$this->load->view('template/includeheader',$this->dataheader);
 		$this->load->model("main_model");  
            $data["fetch_data"] = $this->main_model->fetch_data(); 
          $data['request']=$this->db->get('bpas_master_agencyparent')->result_array();
-		$this->load->view("main_view2", $data);  
+		$this->load->view("add_batch", $data);  
 		$this->load->view('template/includefooter');
 		
 		
@@ -1505,7 +1558,7 @@ public function membersearch2(){//Tamang
 	}
 
 
-	public function form_validation1()  
+	public function form_validation_add_user()  
     { //Tamang 
            //echo 'OK';  
            // $this->load->library('form_validation');  
@@ -1557,7 +1610,7 @@ public function membersearch2(){//Tamang
 
            }  
       }  
-public function form_validation2() //Tamang (adding new department and department_id)  
+public function form_validation_add_department() //Tamang (adding new department and department_id)  
     {  
            //echo 'OK';  
            // $this->load->library('form_validation');  
@@ -1581,16 +1634,16 @@ public function form_validation2() //Tamang (adding new department and departmen
                 if($this->input->post("insert"))  
                 {  
                      $this->main_model->insert_data1($data);  
-                     redirect(base_url() . "index.php/Settings/inserted1");  
+                     redirect(base_url() . "index.php/Settings/inserted_department");  
                 }  
            }  
            else  
            {  
-                redirect(base_url() . "index.php/Settings/notinserted1");
+                redirect(base_url() . "index.php/Settings/notinserted_department");
            }  
       } 
 
-      public function form_validation3(){//Tamang
+      public function form_validation_add_batch(){//Tamang
 	
 
 			$this->form_validation->set_rules("item", "item", 'required|numeric');
@@ -1621,12 +1674,12 @@ public function form_validation2() //Tamang (adding new department and departmen
                 {  
 
                      $this->main_model->insert_data2($data);  
-                     redirect(base_url() . "index.php/Settings/inserted2");  
+                     redirect(base_url() . "index.php/Settings/inserted_batch");  
                 }
                }  
                else  
            {  
-               redirect(base_url() . "index.php/Settings/notinserted2");
+               redirect(base_url() . "index.php/Settings/notinserted_batch");
            }  
            
           
@@ -1636,28 +1689,28 @@ public function form_validation2() //Tamang (adding new department and departmen
      
       public function inserted()  
       { //Tamang 
-           $this->membersearch3();  
+           $this->add_user();  
       }  
        public function notinserted()  
       { //Tamang 
-           $this->membersearch3();  
+           $this->add_user();  
       }
-       public function inserted1()  
+       public function inserted_department()  
       {  //Tamang
-           $this->membersearch5();  
+           $this->add_department();  
       }  
-      public function notinserted1()  
+      public function notinserted_department()  
       {  //Tamang
-           $this->membersearch5();  
+           $this->add_department();  
       }  
-      public function inserted2()  
+      public function inserted_batch()  
       {  //Tamang
-           $this->membersearch6();  
+           $this->add_batch();  
       }
 
-       public function notinserted2()  
+       public function notinserted_batch()  
       {  //Tamang
-           $this->membersearch5();  
+           $this->add_batch();  
       }  
      public function delete_data(){//Tamang 
            $this->load->view('template/includeheader',$this->dataheader);
@@ -1692,7 +1745,7 @@ public function form_validation2() //Tamang (adding new department and departmen
       public function deleted1()  
       {  //Tamang
       	 
-      	$this->viewUsers1();  
+      	$this->managebatch();  
           
 	 }
 
@@ -1707,7 +1760,7 @@ public function form_validation2() //Tamang (adding new department and departmen
       public function deleted2()  
       {  //Tamang
       	 
-      $this->viewUsers2();  
+      $this->managedepartment();  
           
 	 }
 
@@ -1722,8 +1775,7 @@ public function form_validation2() //Tamang (adding new department and departmen
       public function deleted3()  
       {  //Tamang
       	 
-      	redirect(base_url() ."index.php/Settings/viewUsers");  
-          
+ 		$this->viewUsers();           
 	 }
    //    public function update_data(){  
    //    	$this->load->view('template/includeheader',$this->dataheader);
@@ -1770,7 +1822,7 @@ public function form_validation2() //Tamang (adding new department and departmen
   			$name=$this->input->post('name');
   			// $department=$this->input->post('department');
 
-  			 $department= $_POST['f1'];
+  			 // $department= $_POST['f1'];
   		
 	
 
@@ -1779,7 +1831,7 @@ public function form_validation2() //Tamang (adding new department and departmen
  						//OR
 
   	//$issuance=$this->sm->search1($name,$department);//to see if there is record or not in db
-  			$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'")->row();
+  			$issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' ")->row();
 
   			if(sizeof($issuance)>0) 
 		  {
@@ -1787,17 +1839,18 @@ public function form_validation2() //Tamang (adding new department and departmen
 	 	 $data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName'=> $name))->result_array();
 
 		  
-		$data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
-		  
+		
 
 
 		 $this->load->view('template/includeheader',$this->dataheader);
-		$this->load->view('viewmember',$data,$data1);
+		$this->load->view('viewmember',$data);
 		$this->load->view('template/includefooter');
 	}
 	 else{
-	  	 $data['message']="There is no record of Alumni";
-	 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data);
+	 	$this->load->view('template/includeheader',$this->dataheader);
+	 	$this->load->view('no_result1');
+	 	$this->load->view('template/includefooter');
+	  	 
 	 // 
 	   }
 
@@ -1822,7 +1875,65 @@ function addevent1($param1=""){//leki
   		$data1=$this->input->post('event'); 
   		$data2=$this->input->post('event1'); 
   		$data3=$this->input->post('date'); 
+  		$config = Array(
+		      	'protocol' 	=> 'smtp',
+		      	'smtp_host' => 'ssl://smtp.googlemail.com',
+		      	'smtp_port' => 465,
+		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
+		      	'smtp_pass' => 'Choewangchuk@!_123', 
+		      	'mailtype' 	=> 'html',
+		      	'charset' 	=> 'iso-8859-1',
+		      	'wordwrap' 	=> TRUE
+		    );
+			
+		    $this->email->initialize($config);
+		     // $subject = $this->input->post("name");
+			// $mails = $this->input->post("email");
+		    $this->email->set_newline("\r\n");
 
+		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->to('0216506.cst@rub.edu.bt');
+		   
+		    $this->email->subject($data2);
+		   	
+	        $this->email->message($data3);
+	        $this->email->message($data1);
+
+	     // $this->db->where('relatedUserId', $cid);
+		  		// $this->db->update('bpas_logins',$da);
+		  		
+
+	      
+	        if($this->email->send())
+	        {
+	        	
+	        		$data5['message']='<br /><br /><br /><span class="alert alert-info">You have successfully added event</span> <br /><br /><br />
+			 	<a href="'.base_url().'index.php/Settings/addevent1/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
+		              </button>
+		            </a>';
+		        
+			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data5);
+		       
+					
+
+	        	
+	        }
+	          else
+	        {
+	        	
+	        		$data5['message']='<br /><br /><br /><span class="alert alert-info">Adding event fail</span> <br /><br /><br />
+			 	<a href="'.base_url().'index.php/Settings/addevent1/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
+		              </button>
+		            </a>';
+		        
+			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data5);
+		       
+					
+
+	        	
+	        }
   		
   		$data['getdetail']=$this->sm->getevent($param1);
 
@@ -1852,7 +1963,21 @@ function addevent1($param1=""){//leki
 			if($this->sm->updateeventpic($pic,$param1,$data1,$data2,$data3)) {
 					
 				$query['editdetail']=$this->db->get('event_table')->result_array();
-				redirect('Settings/viewevent');//direct superadmin and viewing page doesnt work ,have to go settings
+				redirect(base_url() . "index.php/Settings/inserted_event");  
+                }
+                
+               else  
+           {  
+               redirect(base_url() . "index.php/Settings/notinserted_event");
+           }  
+           
+          
+      
+	 
+
+     
+     
+				
 				
 			}
 			$this->load->view('template/includeheader',$this->dataheader);
@@ -1860,7 +1985,16 @@ function addevent1($param1=""){//leki
 			$this->load->view('template/includefooter');
 		}
 
-  	}
+  	
+
+  	 public function inserted_event()  
+      { //Tamang 
+           $this->viewevent();  
+      }  
+       public function notinserted_event()  
+      { //Tamang 
+           $this->viewevent();  
+      }
   		
 
   		 public function addevents2(){//leki
@@ -1947,12 +2081,13 @@ $data['getdetail']=$this->sm->getevent($param1);
 			 
 // //$data['eventname']=$this->sm->eventupdate1($param1,$pic);
 			if($data['eventname']=$this->sm->eventupdate($pic,$param1,$d1,$d2,$d3)){
-			echo "successfully updated";	
-			}
-			
-			else{
-				echo"Not an approprite size";
-			}
+			redirect(base_url() . "index.php/Settings/updated_event");  
+                }
+                
+               else  
+           {  
+               redirect(base_url() . "index.php/Settings/notupdated_event");
+           }  
 
 
 
@@ -1966,12 +2101,39 @@ $data['getdetail']=$this->sm->getevent($param1);
   	}
 
 
+  	 public function updated_event()  
+      { //Tamang 
+           $this->viewevent();  
+      }  
+       public function notupdated_event()  
+      { //Tamang 
+           $this->viewevent();  
+      }
+
   	public function deleteevent($param1="") {//leki
+  		$data=$this->sm->eventdelete($param1);
 
-$data=$this->sm->eventdelete($param1);
-
-
+if($data){
+			redirect(base_url() . "index.php/Settings/notdeleted_event");
+           }  
+			 
+                
+                
+               else  
+           {  
+           	redirect(base_url() . "index.php/Settings/deleted_event"); 
+               
   	}
+  }
+
+  	public function deleted_event()  
+      { //Tamang 
+           $this->viewevent();  
+      }  
+       public function notdeleted_event()  
+      { //Tamang 
+           $this->viewevent();  
+      }
 
   	public function uploadpic1($param1=""){//leki
 

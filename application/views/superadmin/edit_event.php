@@ -8,7 +8,7 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -25,107 +25,72 @@
                 <!--end  Welcome -->
             </div>
             
-             <div class="card-title text-left bold">UP COMING EVENT</div><br>
+              <?php  
+           if($this->uri->segment(2) == "inserted_event")  
+           {  
+           //base url - http://localhost/app/las04  
+           //redirect url - http://localhost/app/las04/Settings/inserted/  
+                //main - segment(1)  
+                //inserted - segment(2)  
+            echo ' <div class="col-lg-10 panel-body">
+                    <b><p class="text-success">Event added successfully</p></b>
+                    </div><br><br>';
+               
+           }  
+           if($this->uri->segment(2) == "notinserted_event")  
+           {  
+                echo ' <div class="col-lg-10 panel-body">
+                    <b><p class="text-danger">Event not added</p></b>
+                    </div><br><br>';
+
+           }  
+
+
+            if($this->uri->segment(2) == "updated_event")  
+           {  
+           //base url - http://localhost/app/las04  
+           //redirect url - http://localhost/app/las04/Settings/inserted/  
+                //main - segment(1)  
+                //inserted - segment(2)  
+            echo ' <div class="col-lg-10 panel-body">
+                    <b><p class="text-success">Event updated successfully</p></b>
+                    </div><br><br>';
+               
+           }  
+           if($this->uri->segment(2) == "notupdated_event")  
+           {  
+                echo ' <div class="col-lg-10 panel-body">
+                    <b><p class="text-danger">Event not updated</p></b>
+                    </div><br><br>';
+
+           }  
+
+
+
+             if($this->uri->segment(2) == "deleted_event")  
+           {  
+           //base url - http://localhost/app/las04  
+           //redirect url - http://localhost/app/las04/Settings/inserted/  
+                //main - segment(1)  
+                //inserted - segment(2)  
+            echo ' <div class="col-lg-10 panel-body">
+                    <b><p class="text-success">Event deleted successfully</p></b>
+                    </div><br><br>';
+               
+           }  
+           if($this->uri->segment(2) == "notdeleted_event")  
+           {  
+                echo ' <div class="col-lg-10 panel-body">
+                    <b><p class="text-danger">Event not deleted</p></b>
+                    </div><br><br>';
+
+           }  
+           ?>
             
-<!-- <div class="du-subpage-content">
-    <div class="container img-thumbnail">
-        <div class="row padding">
-            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
-                <div class="card">
-                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 430px" ></span>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6" >
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title text-left bold">UP COMING EVENT</div><br>
-                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
-                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
-                        <div>
-                            
-                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
-                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp; &nbsp; &nbsp;   hours &nbsp; &nbsp; &nbsp; Minutes &nbsp; &nbsp; Second</p>
+            
 
-                               
-                        </div>
-                       
-                    </div>
-                  
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-6 " >
-                
-
-                    <div class="" >
-                             <span> <button style="height:30px;font-size:15px;width: 100px" class="btn btn-primary text-left"> -->
-                             <!--     <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
-                <input type="text" name="cid">
-                 <input type="submit" value="Join Us" class="btn-default du-common-property">
-                </form> 
            
-    <table>
-      <tbody>
-                                               <?php $count1=0; foreach($request1 as $row):?>
-                                               
-                                                <tr>
-                                                  <?php  $count1++;?>
-                                                </tr>
-                                                  
-
-                                                   
-                                                  
-                                                    
-
-                                                   
-                                                   
-                                               
-                                                <?php endforeach;?>
-                                            </tbody>
-                                        </table> 
-                                        <button style="height:100px;width:100px;font-size:15px"><?php
-                                        $a="+";
-                                        echo ($count1.=$a);
-                                        // echo ("\nMembers");?></button> -->
-                                    <!-- <a href="<?php echo base_url();?>index.php/Settings/event_validate"><font color="white" >Join Now</font> </a>
- -->
-                               <!--  </button></span> -->
-
-                         <!--    <br>  -->
-
-                   
-
-                           <!--  <table> -->
-                            <!--  <tbody>
-                                               <?php $count1=0; foreach($request1 as $row):?>
-                                               
-                                                <tr>
-                                                  <?php  $count1++;?>
-                                                </tr>     
-                                               
-                                                <?php endforeach;?>
-                                            </tbody> -->
-                                        <!-- </table> 
-                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
-                                        <p><font color="black"><?php
-                                        // $a="+";
-                                        echo ($count1);
-                                        echo (" Members <br> Interested");?></font></p>
-                                          </button><br><br> -->
-
-
-                               <!--  <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
-
-                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
-
-                                </button>       
-                -->
-
-          <!--   </div> -->
-       <!--  </div>
- 
-                -->
-           
-  <div class="col-md-10 col-sm-12">
+  <div class="col-md-12 col-sm-12">
       
 
      <br>
@@ -136,40 +101,52 @@
         <div class="row padding">
            <div class="col-lg-12 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
-                 <div class="col-md-5 col-sm-12">
+                 <div class="col-md-4 col-sm-12">
 
-                  <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 400px" ></span>
-
-                    <p class="text-primary"><b>Description</b></p>
+                  <div class="hovereffect">
+                            <figure> <img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 230px;width:100%;" ></figure>
+                                
+                        </div>
+                    
                 </div> 
                 <br>
-
+<div class="col-lg-6 col-md-6 col-sm-6 " style="height:100%;text-align: justify;font-family:georgia; color:black; font-size: 15px" >
+                 
+                    
+                 
+               
+<table>
+                          <h3 class="title" style="color:#428af5;margin-left: 100px"><?php echo $row['eventname'];?><br></h3>
+                          <b style="margin-left: 100px;"><?php echo $row['date'];?></b>
+                          <br><br>
+                          
+                          <tr><?php echo $row['event'];?><br></tr></table>
+                         <br>
+                  
                 
-                         <b><?php echo $row['date'];?></b>
-                          <br>
-                          <h3><?php echo $row['eventname'];?><br></h3>
-                          <?php echo $row['event'];?><br>
+            </div><br><br>
+            
                           
               
                           <form method ="post"></form>
                          <!--  <button class="btn btn-link text-primary btn-lg" style="margin-left:900px"><b><a href="#">Update </a></b></button> -->
-                <div class="col-md-6">          
+                <div class="col-md-1">          
                  <a href="<?php echo site_url();?>/Settings/editevent/<?php echo $row['event_id'];?>" > 
-                    <button  class="btn btn-link text-primary btn-lg" name="edit" id="edit" type="submit"  value="fav_CSS"  >Edit</button></a> </br> <br>
+                    <button  class="btn btn-primary" name="edit" id="edit" type="submit"  value="fav_CSS"  >Edit</button></a> </br> <br>
                   </div>
-                       <div class="col-md-6">  
+                       <div class="col-md-1">  
 
                     <a href="<?php echo site_url();?>/Settings/deleteevent/<?php echo $row['event_id'];?>"> 
                     
 
-            <button  class="btn btn-link text-primary btn-lg text-right" name="delete"   type="submit" value="fav_CSS"  >Delete</button></a>
+            <button  class="btn btn-danger" name="delete"   type="submit" value="fav_CSS"  >Delete</button></a>
             </div>
 
 
 
 
-                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
-                                        <p><font color="black">
+                                   <button class="btn btn-primary" style="height:70px;width:130px;font-size:15px;font-family:georgia;">  
+                                        <p><font color="#fff">
                                           <?php echo $row['event1'];?>
                                        
                                        <b>Member(s) <br> Interested</b></font></p>
@@ -179,11 +156,7 @@
 
                     </div>
                         </div></div></div>  <?php endforeach; ?> 
-                        <!--   <p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college of science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p> -->
-                          
-                         <!--  <div class="col-md-10">
-                          <button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
-                          </div> -->
+                        
                           
               </div>
           </div>
@@ -194,7 +167,6 @@
  </div>
 </div>
 
- 
 
  <script>
 
