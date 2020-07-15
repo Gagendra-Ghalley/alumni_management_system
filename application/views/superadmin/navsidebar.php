@@ -114,14 +114,22 @@
                             </li>
 
                               <li>
+<<<<<<< HEAD
                                 <a href="<?php echo base_url();?>index.php/Settings/managebatch/"><i class="fa fa-file-text"></i>&nbspManage Batch</a>
+=======
+                                <a href="<?php echo base_url();?>index.php/Settings/yearofgraduation/"><i class="fa fa-file-text"></i>&nbspManage Year of Graduation</a>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                             </li>
                                 
                                    <li>
                                     <a href="<?php echo base_url()?>index.php/Settings/add_department/"><i class="fa fa-user">&nbsp</i>Add Department</a>
                                 </li>
                                 <li>
+<<<<<<< HEAD
                                     <a href="<?php echo base_url()?>index.php/Settings/add_batch/"><i class="fa fa-user">&nbsp</i>Add Batch</a>
+=======
+                                    <a href="<?php echo base_url()?>index.php/Settings/add_batch/"><i class="fa fa-user">&nbsp</i>Add Year of Graduation</a>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                                 </li>
 
                                 

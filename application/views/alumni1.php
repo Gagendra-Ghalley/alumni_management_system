@@ -294,11 +294,19 @@
        <?php foreach($editdetail as $row): ?>
        
 
+<<<<<<< HEAD
             <div class="col-lg-12 col-md-12 col-sm-12 ">
                 <div class="col-lg-5 col-md-5 col-sm-5 ">
                 
                         <div class="hovereffect">
                             <figure> <img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 230px;width: 500px" ></figure>
+=======
+            <div class="col-lg-5 col-md-7 col-sm-12"data-wow-delay="0.2s" >
+                
+
+                            <div class="hovereffect">
+                             <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                                 <div class="overlay">
                                     <h2>Events</h2>
                                     
@@ -311,10 +319,18 @@
                     
                    
          
+<<<<<<< HEAD
          
             
             <div class="col-lg-5 col-md-6 col-sm-5 " style="height:100%;text-align: justify;font-family:georgia; color:black; font-size: 15px" >
                      <!-- <p class="text-primary"><b>Description</b></p> -->
+=======
+            </div>
+            
+            <div class="col-lg-5 col-md-7 col-sm-12 img-thumbnail" style="height: 210px;" >
+                <div class="card">
+                     <p class="text-primary"><b>Description</b></p>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                  
                
 <table>
@@ -327,7 +343,11 @@
                          
                   
                 </div>
+<<<<<<< HEAD
          
+=======
+            </div>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
             <div class="col-md-2 col-sm-12  " style="height: 210px;" >
                 
 

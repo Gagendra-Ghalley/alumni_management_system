@@ -26,12 +26,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
+<<<<<<< HEAD
 $config['base_url'] = 'http://localhost:8080/alumni_management_system/';
 
 
 
 
+=======
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
+$config['base_url'] = 'http://localhost:8080/final/alumni_management_system/';
 
 
 

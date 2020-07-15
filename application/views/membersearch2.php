@@ -34,7 +34,11 @@
                         <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                          
+<<<<<<< HEAD
                             <input class="form-control" name="name" id="cidNum" style="height: 30px; width: 90%" placeholder=" Enter Name" form="f" type="text" required />
+=======
+                            <input class="form-control" name="name" id="cidNum" style="height: 30px; width: 400px" placeholder=" Enter Name" form="f" type="text" required />
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                         </div>
                     </div>
                 </div>
@@ -56,7 +60,7 @@
                             <select class="form-control" name="f1" form="f" style="height: 30px; width: 400px">
                                 <option value="" form="f">Select Item</option>
                        <?php foreach($item as $key):?>
-                        <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
+                        <option value="<?php echo $key['department_ID'];?>"> <?php echo $key['name']; ?></option>
                       <?php endforeach; ?>
                                <!--  <option value="" >Select Department</option>
                                 <option value="Civil">Civil</option>

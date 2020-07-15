@@ -55,7 +55,11 @@ $mail = $this->input->post("password");
 	           $email = $this->input->post("password");
 	           $cid = $this->input->post('cid'); 
         	// $email = $data['email'];
+<<<<<<< HEAD
 	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."' ");
+=======
+	        $query1=$this->db->query("SELECT *  from login where email = '".$email."' and relatedUserId='".$cid."' ");
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 	       $row=$query1->result_array(); 
 
 
@@ -64,10 +68,14 @@ $mail = $this->input->post("password");
 	        $passwordplain  = rand(999999999,9999999999);
 	        $newpass['password'] = md5($passwordplain);
 	        $this->db->where('email', $email);
-	        $this->db->update('bpas_logins', $newpass);
+	        $this->db->update('login', $newpass);
 	        // $this->db->where('email', $email);
 	        // $this->db->update('user_profiles', $newpass);
+<<<<<<< HEAD
         	  $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> your <b>password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please update your password after signing in <br>Thanks & regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
+=======
+        	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 	      
 	        
         	
@@ -160,7 +168,11 @@ $cid = $this->input->post("cid");
 	        $this->db->update('login', $newpass);
 	        // $this->db->where('email', $email);
 	        // $this->db->update('user_profiles', $newpass);
+<<<<<<< HEAD
         	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
+=======
+        	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 	      
 	        
         	
@@ -171,7 +183,11 @@ $cid = $this->input->post("cid");
 		      	'smtp_host' => 'ssl://smtp.googlemail.com',
 		      	'smtp_port' => 465,
 		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
+<<<<<<< HEAD
 		      	'smtp_pass' => 'Choewangchuk@!_123',  
+=======
+		      	'smtp_pass' => 'Choewangchuk@!_123', 
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
@@ -328,7 +344,7 @@ $cid = $this->input->post("cid");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('email');
-			        $this->db->from('bpas_logins'); 
+			        $this->db->from('login'); 
 			        $this->db->where('email', $email); 
 			        $query=$this->db->get();
 			        return $query->row_array();
@@ -337,7 +353,7 @@ $cid = $this->input->post("cid");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('relatedUserId');
-			        $this->db->from('bpas_logins'); 
+			        $this->db->from('login'); 
 			        $this->db->where('relatedUserId', $cid); 
 			        $query=$this->db->get();
 			        return $query->row_array();
@@ -347,7 +363,7 @@ $cid = $this->input->post("cid");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('email');
-			        $this->db->from('bpas_user_profiles'); 
+			        $this->db->from('user_profiles'); 
 			        $this->db->where('email', $email); 
 			        $query=$this->db->get();
 			        return $query->row_array();
@@ -356,7 +372,7 @@ $cid = $this->input->post("cid");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('cid');
-			        $this->db->from('bpas_user_profiles'); 
+			        $this->db->from('user_profiles'); 
 			        $this->db->where('cid', $cid); 
 			        $query=$this->db->get();
 			        return $query->row_array();

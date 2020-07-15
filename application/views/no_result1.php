@@ -3,7 +3,11 @@
           <div class="row">
                 
                 <div class="col-lg-12">
+<<<<<<< HEAD
                     <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+=======
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                 </div>
                
             </div>
@@ -42,6 +46,7 @@
         </div>
       </div>
                 
+<<<<<<< HEAD
     <div class="bg-primary">
    <div class="container">
       <div class="col-lg-12">
@@ -51,3 +56,20 @@
       </div>
    </div>
 </div>
+=======
+    
+  
+       <div class="bg-primary" >
+            <div class="container">
+                <div class="col-md-12 col-sm-12">
+
+
+                    <p>Alumni Management System@2020</p>
+
+              
+
+            </div>
+        </div>
+      </div>
+   
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9

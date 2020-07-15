@@ -36,6 +36,7 @@
                     </div><br><br>';
 
             }  
+<<<<<<< HEAD
 
              if($this->uri->segment(2) == "deleted3")  
            {  
@@ -66,6 +67,16 @@
 
            }  
          
+=======
+             if($this->uri->segment(2) == "notdeleted")  
+           {  
+           
+                echo ' <div class="col-lg-12 panel-body">
+                    <b><p class="text-danger">User not deleted</p></b>
+                    </div><br><br>';
+
+            } 
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
            
            ?> </div>
          
@@ -109,7 +120,7 @@
                                  <select id="parent" name="Parent" class="option3 searchdropdown"  onchange="selectdepartment()">
                                 <option value="0" class="searchdropdown" selected>Select one</option>
                                 <?php foreach($parent->result() as $row){?>
-                                    <option class="searchdropdown" value="<?php echo $row->AgencyParentID;?>"><?php echo $row->name;?></option><?php }?>
+                                    <option class="searchdropdown" value="<?php echo $row->department_ID;?>"><?php echo $row->name;?></option><?php }?>
                                 </select>
                                  <label for="AgencyName">Year</label>
  <select name="Agency" id="agency" class="option3 searchdropdown" onchange="selectbatch()">
@@ -165,11 +176,38 @@
                 </div>
 
             </div>
+<<<<<<< HEAD
+=======
         </div>
     </div>
 
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+        </div>
+    </div>
+<<<<<<< HEAD
+
         </div>
         <!-- end page-wrapper -->
+=======
+    <div class="bg-primary" style="margin-top: 94px;">
+            <div class="container">
+
+               
+
+
+                <div class="col-lg-12">
+
+                <div class="col-md-6 col-sm-12">
+
+
+                    <p>Alumni Management System@2020</p>
+
+                </div>
+
+            </div>
+        </div>
+      </div>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
     </div>
    
@@ -213,7 +251,11 @@ function selectbatch()
 {
    var agency=$('#agency').val();
         
+<<<<<<< HEAD
         $.post('<?php echo base_url();?>index.php/Settings/get_dropdownlistforuser/',
+=======
+        $.post('<?php echo base_url();?>index.php/Settings/manageuser_dropdownlist/',
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
     {
         agency:agency
         

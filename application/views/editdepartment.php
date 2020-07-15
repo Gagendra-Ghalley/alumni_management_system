@@ -23,7 +23,11 @@
           
 
  <?php $row=$employee->row(0);
+<<<<<<< HEAD
     $cid=$row->AgencyParentID;
+=======
+    $cid=$row->department_ID;
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
     ?>
         
           <div id="page-wrapper" style="margin-left: 0px">
@@ -32,7 +36,11 @@
 
            
             <div class="row">
+<<<<<<< HEAD
                 <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/updatedepartment/<?php echo $cid;?>/" class="form-group">
+=======
+                <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/updateEmployee2/<?php echo $cid;?>/" class="form-group">
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                          
                 <div class="col-md-12 col-lg-12 col-sm-12">
  
@@ -42,7 +50,15 @@
                               <!--    <div class="form-group">
                                      <div style="color:black">Year of Graduation(ID):</div><input class="form-control" placeholder="Department ID" name="agencyid" type="text" value="<?php echo $row->AgencyID;?>">
                                 </div> -->
+<<<<<<< HEAD
                                      <div style="color:black"><h3>Department:</h3></div><input class="form-control" placeholder="Department" name="agencyparentid" type="text" value="<?php echo $row->name;?>">
+=======
+<<<<<<<< HEAD:application/views/editdepartment.php
+                                     <div style="color:black"><h3>Department:</h3></div><input class="form-control" placeholder="Department" name="department_ID" type="text" value="<?php echo $row->name;?>">
+========
+                                     <div style="color:black"><h3>Department:</h3></div><input class="form-control" placeholder="Department" name="agencyparentid" type="text" value="<?php echo $row->name;?>">
+>>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9:application/views/editfullemployee5.php
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                                 </div>
                               
                                  <!-- <div class="form-group">

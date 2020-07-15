@@ -81,11 +81,19 @@
   
 <div class="du-current-news center bg-secondary">
     <div class="container img-thumbnail">
+<<<<<<< HEAD
      <!--  <div class="card-title text-left bold">UP COMMING EVENT</div><br> -->
        <?php foreach($editdetail as $row): ?>
         
             <div class="col-lg-12 col-md-12 col-sm-12 ">
                 <div class="col-lg-5 col-md-5 col-sm-4 img-responsive" >
+=======
+      <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+       <?php foreach($eventdetail as $row): ?>
+        <div class="row padding">
+            <div class="col-lg-5 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                  
                     
                         <div class="hovereffect">
@@ -96,10 +104,17 @@
                                 </div>
                         </div>
                 </div>
+<<<<<<< HEAD
            
             <div class="col-lg-6 col-md-6 col-sm-6 " style="height:100%;text-align: justify;font-family:georgia; color:black; font-size: 15px" >
                  
                     
+=======
+            </div>
+            <div class="col-md-5 col-md-12 col-sm-12 img-thumbnail" style="height: 210px;" >
+                <div class="card">
+                     <p class="text-primary"><b>Description</b></p>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                  
                
 <table>
@@ -110,9 +125,15 @@
                           <tr><?php echo $row['event'];?><br></tr></table>
                          <br>
                   
+<<<<<<< HEAD
                 
             </div><br><br>
             
+=======
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 " >
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                 
 
                     <div class="col-lg-1 col-md-1 col-sm-1">
@@ -127,8 +148,13 @@
                    
 
                                       
+<<<<<<< HEAD
                                    <button class="btn btn-default btn-lg" style="height:60px;width:107px;font-size:15px;margin-top: 20px;">  
                                         <p><font color="#111">
+=======
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;">  
+                                        <p><font color="black">
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
                                           
                                           <?php echo $row['event1'];?>
@@ -137,12 +163,71 @@
                                           </button><br>
 
                               
+<<<<<<< HEAD
             </div><br><br>
         <?php endforeach; ?>
 
             
 
    
+=======
+            </div>
+        </div><?php endforeach; ?>
+
+            <!-- <div class="col-lg-2 col-md-12 col-sm-12 " >
+                
+                    
+                            <table>
+                             <tbody>
+                                               <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+                                                </tr>
+                                                  
+
+                                                   
+                                                  
+                                                    
+
+                                                   
+                                                   
+                                               
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table> 
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
+                                        // $a="+";
+                                        echo ($count1);
+                                        echo (" Members <br> Interested");?></font></p>
+                                          </button><br><br>
+
+                                <button style="height:70px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Us</font> </a>
+
+                                </button>       
+               
+            </div> -->
+
+           <div class="col-md-10 col-sm-12">
+      
+
+     <br>
+                        <?php foreach($editdetail as $row): ?>
+
+ <?php endforeach; ?> 
+                        <!--   <p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college of science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p> -->
+                          
+                         <!--  <div class="col-md-10">
+                          <button class="btn btn-link text-primary" onclick="myFunction()" id="myBtn"><b>Read more</b></button>
+                          </div> -->
+                          
+              </div>
+          </div>
+
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
           
     </div> 
     </div>

@@ -37,12 +37,12 @@
           
 
  <?php $row=$employee->row(0);
-    $cid=$row->AgencyID;
+    $cid=$row->batch_ID;
     ?>
         
 
             <div class="row">
-                <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/delete_data3/<?php $row->AgencyID;?>/" class="form-group">
+                <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/delete_data3/<?php $row->batch_ID;?>/" class="form-group">
                          
               
           
@@ -68,11 +68,15 @@
    
       <script>  
        window.onload= function(){
-       document.forms[0].submit(id="<?php echo $row->AgencyID; ?>");
+       document.forms[0].submit(id="<?php echo $row->batch_ID; ?>");
            
                 if(confirm("Are you sure you want to delete this?"))  
                 {  
+<<<<<<< HEAD
                      window.location="<?php echo base_url()?>index.php/Settings/delete_data3/<?php $row->AgencyID?>/"+id;  
+=======
+                     window.location="<?php echo base_url()?>index.php/Settings/delete_data3/<?php $row->batch_ID?>/"+id;  
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                 }  
                 else  
                 {  

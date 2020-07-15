@@ -31,9 +31,15 @@
                 <div class="col-lg-6">
                    <div class="panel panel-primary border">
                     <div class="panel-body green text-center" style="height: 140px">
+<<<<<<< HEAD
                     <a href="<?php echo base_url()?>index.php/Settings/passwordemail/">
                         <i class="fa fa-key fa-5x" aria-hidden="true"></i>&nbsp;<br/><br/>
                         <strong>Password Reset</strong>
+=======
+                    <a href="<?php echo base_url()?>index.php/Settings/addevents/">
+                        <i class="fa fa-user fa-5x"></i>&nbsp;<br/><b><!-- <?php echo $pendingLeave;?> --> </b><br/>
+                        <strong>Add event</strong>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
                        
                   </div>
@@ -51,8 +57,13 @@
                 <div class="col-lg-6">
                     <div class="panel panel-primary border ">
                     <div class="panel-body blue text-center" style="height: 140px">
+<<<<<<< HEAD
                       <a href="<?php echo base_url()?>index.php/Settings/addevents/">
                         <i class="fa fa-calendar fa-5x" aria-hidden="true"></i>&nbsp;<br/><br/><strong>Manage Event</strong>
+=======
+                      <a href="<?php echo base_url()?>index.php/Settings/viewevent/">
+                        <i class="fa  fa-clock-o fa-5x"></i>&nbsp;<br/><b><!-- <?php echo $latecount;?> --> </b><br/><strong>Edit Event</strong>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                     </div>
                      <div class="panel-footer">
                       
@@ -66,7 +77,11 @@
                 <div class="col-lg-6">
                      <div class="panel panel-primary border ">
                     <div class="panel-body yellow text-center"style="height: 140px" >
+<<<<<<< HEAD
                        <i class= "fa fa-user fa-5x"aria-hidden="true"></i>&nbsp;<br/><br/><strong>Manage User</strong>
+=======
+                       <i class="fa  fa-calendar-o fa-5x" aria-hidden="true"></i>&nbsp;<br/><b><!-- <?php echo $leavecount;?> --></b><br/><strong>Add User</strong>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
                     </div>
                     <div class="panel-footer">
@@ -77,8 +92,13 @@
                </div>
                 <div class="col-lg-6">
                    <div class="panel panel-primary border ">
+<<<<<<< HEAD
                     <div class="panel-body green text-center"style="height: 140px">
                         <i class="fa fa-user fa-5x"></i>&nbsp;<br/><br/><strong>Manage Department</strong>
+=======
+                    <div class="panel-body red text-center"style="height: 140px">
+                        <i class="fa fa-user fa-5x"></i>&nbsp;<br/><b><!-- <?php echo $notused;?> --></b><br/><strong></strong>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                     </div>
                     <div class="panel-footer panel-red border">
                             <span class="font-weight-bold"><strong><b style="color: red; font-size:18px"><a href="<?php echo base_url();?>index.php/Settings/managedepartment/">Manage Department</a></b></strong>

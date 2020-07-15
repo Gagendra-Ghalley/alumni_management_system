@@ -166,7 +166,28 @@
               
  </div>
 </div>
+<div class="bg-primary" style="margin-top: 190px;">
+            <div class="container">
 
+<<<<<<< HEAD
+=======
+               
+
+
+                <div class="col-lg-12">
+
+                <div class="col-md-6 col-sm-12">
+
+
+                    <p>Alumni Management System@2020</p>
+
+                </div>
+
+            </div>
+        </div>
+      </div>
+ 
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
  <script>
 

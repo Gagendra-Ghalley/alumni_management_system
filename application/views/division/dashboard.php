@@ -8,7 +8,11 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
+<<<<<<< HEAD
                     <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+=======
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                 </div>
                 <!--End Page Header -->
             </div>
@@ -25,6 +29,7 @@
                 <!--end  Welcome -->
             <div class="container">
             <div id="page-wrapper" style="margin-left: 0px">
+<<<<<<< HEAD
              <?php foreach($eventdetail as $row): ?>
                <div class="col-md-12 col-lg-12 col-sm-12"  >
                <div class="col-lg-5 col-md-5 col-sm-12 img-responsive" >
@@ -37,6 +42,26 @@
                 </div>
             <div class="col-md-5 col-md-5 col-sm-12 " style="height:100%;text-align: justify;font-family:georgia; color:black; font-size: 15px" >
                 
+=======
+     
+            <div class="col-md-12 col-lg-12 col-sm-12 img-thumbnail " style="background-color: ">
+
+             <div class="card-title text-left bold">UP COMING EVENT</div><br>
+
+             <?php foreach($editdetail as $row): ?>
+        <div class="row padding">
+            <div class="col-lg-5 col-md-12 col-sm-12 "data-wow-delay="0.2s" >
+                <div class="card">
+                 
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 400px" ></span>
+                </div>
+            </div>
+            <div class="col-md-5 col-md-12 col-sm-12 img-thumbnail" style="height: 210px;" >
+                <div class="card">
+                     <p class="text-primary"><b>Description</b></p>
+                 
+               
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 <table>
                 
                           
@@ -47,6 +72,7 @@
                           <tr><?php echo $row['event'];?><br></tr></table>
                          <br>
                   
+<<<<<<< HEAD
                          
                   
               
@@ -73,10 +99,98 @@
                                           <?php echo $row['event1'];?>
                                        
                                        <b>Member(s) <br> Interested</b></font></p>
+=======
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 img-thumbnail" style="height: 210px;">
+                
+
+                    
+
+                    <button style="height:60px;width:120px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+
+                                </button> 
+                       <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_cancel/<?php echo $row['event_id'];?>"   class="form-group">
+                <input type="hidden" name="cid" value=1>
+                <input type="submit" value="Cancel" style="height:40px;font-size:15px;width: 120px" class="btn btn-primary text-left" data-animation="animated zoomInUp">
+                </form> 
+                
+                   
+
+                        
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black">
+                                          <?php echo $row['event1'];?>
+                                       
+                                       <b>Member(s) <br> Interested</b></font></p>
                                           </button><br>
 
                               
             </div>
+        </div><?php endforeach; ?>
+          
+<!-- <div class="du-subpage-content">
+    <div class="container img-thumbnail">
+        <div class="row padding">
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img1/slider3.png" style="height: 200px;width: 430px" ></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-left bold">UP COMING EVENT</div><br>
+                        <h3 class="text-left" style="text-shadow: 1px 1px 2px ">College Foundation Day</h3>
+                         <p class="text-left glyphicon glyphicon-map-marker" style="margin-right: 500px">CST,Rinchending,phuntsholing</p>
+                        <div>
+                            
+                                <h2 id="demo" class="text-left" style="text-shadow: 1px 1px 2px"></h2>
+                                <p class="text-left bold text-dark" style="text-shadow: 1px 1px 1px">Days &nbsp; &nbsp; &nbsp;   hours &nbsp; &nbsp; &nbsp; Minutes &nbsp; &nbsp; Second</p>
+
+                               
+                        </div>
+                       
+                    </div>
+                  
+                </div>
+            </div> -->
+          <!--   <div class="col-md-2 col-sm-6 " >
+                
+
+                    <div class="" >
+                             <span> <?php foreach($user->result() as $row){?>    
+
+                   <form method="post" accept-charset="utf-8" action="<?php echo base_url();?>index.php/Settings/event_validate"   class="form-group">
+                <input type="hidden" name="cid" value="<?php echo $row->cid;?>">
+                <input type="submit" value="Join Us" style="height:40px;font-size:15px;width: 100px" class="btn btn-primary text-left" data-animation="animated zoomInUp">
+                </form> 
+                 <?php } ?></span>
+
+                           
+                          <?php $count1=0; foreach($request1 as $row):?>
+                                               
+                                                <tr>
+                                                  <?php  $count1++;?>
+
+                                                </tr>
+                                        <?php endforeach;?>
+                   
+
+                        
+                                   <button class="btn btn-default" style="height:70px;width:100px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black"><?php
+                                        
+                                        echo ($count1);
+                                        echo (" Members <br> Interested");?></font></p>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+                                          </button><br>
+
+                              
+            </div>
+<<<<<<< HEAD
         </div><?php endforeach; ?><br>
  
         </div>
@@ -87,6 +201,18 @@
               
  </div><br>
 
+=======
+        </div>
+ -->
+
+        </div>
+        
+    </div>   
+
+              
+ </div>
+</div>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
 
 

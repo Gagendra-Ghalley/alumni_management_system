@@ -26,7 +26,11 @@
      
              <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
           
+<<<<<<< HEAD
          
+=======
+          <h3 align="left">Send Email</h3>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
           <br />
 
           <?php
@@ -64,7 +68,31 @@
                   <textarea type="email" name="email" class="form-control" placeholder="Eg: 0216518.cst@rub.edu.bt, 0216506.cst@rub.edu.bt (For multiple email address use comma , )" class="form-control" required rows="4"></textarea>
                 </div>
 
+<<<<<<< HEAD
               
+=======
+               <!--  <div class="form-group">
+                  <label>CC</label>
+                 
+
+                  <textarea type="email" name="email2" class="form-control" placeholder="Eg: 0216518.cst@rub.edu.bt, 0216506.cst@rub.edu.bt (For multiple email address use comma , )" class="form-control"  rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                  <label>BCC</label>
+            
+
+                  <textarea type="email" name="email" class="form-control" placeholder="Eg: 0216518.cst@rub.edu.bt, 0216506.cst@rub.edu.bt (For multiple email address use comma , )" class="form-control"  rows="4"></textarea>
+                </div>  -->
+          <div class="form-group">
+                  <label>Attachment<i class="fa fa-paperclip fa-2x"></i></label>
+                  <input type="file" name="resume"  accept=".doc, .docx, .pdf, .xls, .gif, .jpg, .png, .jpeg" required />
+
+                </div>
+
+                <!-- </div> -->
+
+                
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
             
                 <div class="form-group">
                   <label>Message</label>
@@ -89,5 +117,17 @@
 
 
 
+<<<<<<< HEAD
       
+=======
+      <div class="bg-primary" style="margin-top: 50px;">
+         <div class="container">
+            <div class="col-md-6">
+               <p>@Alumni Management System</p>
+            </div>
+         </div>
+      </div>
+  
+ 
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 

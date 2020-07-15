@@ -3,13 +3,19 @@
         <div id="page-wrapper">
 
             <div class="row">
-                <!-- Page Header -->
+              <!--   Page Header -->
                 <div class="col-lg-12">
+<<<<<<< HEAD
                     <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+=======
+                    <h3 class="page-header"><font size="5" color="#FFF">Change Your Password</font></h3> <div class="clockwrapper"><div id="clock"></div>,<?php echo date('D d/M/Y');?></div>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                 </div>
-                <!--End Page Header -->
-            </div>
-             <div class="row">
+               <!--  End Page Header -->
+             </div> 
+
+          
+           	<div class="row">
                 <!-- Welcome -->
                 <div class="col-lg-12">
                     
@@ -23,7 +29,11 @@
             
 				 
 				
+<<<<<<< HEAD
 				<div class="col-md-8">
+=======
+				<div class="col-md-5">
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 					<div class="panel-heading bg-primary" >
 		              <i class="fa fa-bar-chart-o fa-fw" style="color: #fff"></i> <span style="color: #fff" >Change Your Password</span>
 		            </div>
@@ -34,7 +44,11 @@
 						<label>Confirm New password</label><br/>
 						<input type="password" class="form-control" id="newconfirm"/>
 						<br/>
+<<<<<<< HEAD
 						<button class="btn btn-success" onclick="changePassword()">Change password</button>
+=======
+						<button class="btn btn-warning" onclick="changePassword()">Change password</button>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 					<!-- </div> -->
            </div>
               
@@ -53,12 +67,24 @@
         <!-- end page-wrapper -->
 
     </div>
-</div>
     <!-- end wrapper -->
+<<<<<<< HEAD
      
 
    
 
+=======
+
+   
+<div class="bg-primary" style="margin-top: 147px;">
+            <div class="container">
+                <div class="col-lg-12">
+                <div class="col-md-6 col-sm-12">
+                    <p>Alumni Management System @ 2020</p>
+                </div>
+            </div>
+        </div>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
     
    <div class="modal fade" id="incomplete">

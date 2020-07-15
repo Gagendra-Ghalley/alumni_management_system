@@ -111,14 +111,22 @@
 
       <div id="page-wrapper" style="margin-right: 48px;">
         <div class="col-md-8 col-md-offset-1 text-center" >
+<<<<<<< HEAD
                <div class="login-panel panel panel-default center" style="height: 100%">
+=======
+               <div class="login-panel panel panel-default center" style="height: 330px">
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                 <div class="panel-heading">
                         <h5 class="panel-title">Member search</h5>
                     </div>
 
                <div class="panel-body login" style="height: 100%">
                 <div class="form-group" >
+<<<<<<< HEAD
                     <label class="col-sm-12 col-md-3 col-lg-2 control-label" style="font-family:georgia;font-size: 17px"> Name</label>
+=======
+                    <label class="col-sm-12 col-md-4 col-lg-3 control-label" style="color: black;font-size: 17px"> Name</label>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
                     
                         <div class="input-group">
@@ -132,10 +140,17 @@
             
 
                <div class="form-group"  >
+<<<<<<< HEAD
                     <!-- <label class="col-sm-3 col-md-4 col-lg-3 control-label" style="color: black;font-size: 17px"> Department</label> -->
 
                    
 <!-- 
+=======
+                    <label class="col-sm-3 col-md-4 col-lg-3 control-label" style="color: black;font-size: 17px"> Department</label>
+
+                   
+
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                         <div class="input-group col-md-9">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-fas fa-sitemap"></i></span>
                             
@@ -144,13 +159,20 @@
                             <select class="form-control" name="f1" form="f" style="height: 30px; width: 100%;color: #111">
                                 <option value="" form="f">Select Department</option>
                        <?php foreach($item as $key):?>
+<<<<<<< HEAD
                         <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
                       <?php endforeach; ?>
                                <!  <option value="" >Select Department</option>
+=======
+                        <option value="<?php echo $key['department_ID'];?>"> <?php echo $key['name']; ?></option>
+                      <?php endforeach; ?>
+                               <!--  <option value="" >Select Department</option>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                                 <option value="Civil">Civil</option>
                                 <option value="Information Technology">Information Technology</option>
                                 <option value="Electrical">Electrical</option>
                                 <option value="Electronics and Communication">Electronics and Communication</option> -->
+<<<<<<< HEAD
                           <!--   </select>
 
                         </div> -->
@@ -159,14 +181,31 @@
 
 
                
+=======
+                            </select>
+
+                        </div>
+                    
+                
+
+
+                <br>
+                <br>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                 
               
 
                     <div class="col-sm-12 col-md-12 col-lg-12">
                        
+<<<<<<< HEAD
                         <input type="submit" class="btn btn-lg btn-success btn-block"class="btn btn-success " form="f" value="Get Details" id="getbtn"><span class="glyphicon glyphicon"></span><br>
 
                          <button type="reset" form="f" class="btn btn-lg btn-warning btn-block">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+=======
+                        <input type="submit" class="btn btn-lg btn-success btn-block" form="f" value="Get Details" id="getbtn"><span class="glyphicon glyphicon"></span>
+
+                         <button type="reset" class="btn btn-lg btn-danger btn-block">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+>>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                     </div>
             
                     </div>
