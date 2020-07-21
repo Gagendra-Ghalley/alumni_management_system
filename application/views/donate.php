@@ -55,11 +55,11 @@
               <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
               <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Event</a></li>
-              <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
+              <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>organogram</a></li>
               <li ><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
               <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
               
-              <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+             
             </ul>
           </div>
         </div>
@@ -69,7 +69,7 @@
 </nav>
   
 </header>
-  <br><br><br><br><br><br>
+  <br><br><br><br><br>
 
 
  <body>
@@ -91,33 +91,87 @@
                         <li> <img src="<?php echo base_url();?>assets/img1/bob.png" class="img-thumbnail" style="height: 90px;width: 90px;margin-left: 150px;border-radius: 50%" ><strong style="color:#222;font-size: 15px">&nbsp&nbspAccount Numbe:20054656</strong></li>    
                         
                          
-                       		<strong style="color:#222;font-size: 15px;margin-left: 150px;text-decoration: ">&nbsp&nbsp <b>Bhutan National Bank</b></strong>
-                         <li><img src="<?php echo base_url();?>assets/img1/bnb.png" class="img-thumbnail" style="height: 90px;width: 90px;margin-left: 150px;border-radius: 50%"><strong style="color:#222;font-size: 15px">&nbsp&nbspAccount Numbe:86867667</strong></li> 
-                  
-                         
-                       	<strong style="color:#222;font-size: 15px;margin-left: 150px;text-decoration: ">&nbsp&nbsp<b> T Bank</b></strong>
-                         <li> <img src="<?php echo base_url();?>assets/img1/T bank.png" class="img-thumbnail"  style="height: 90px;width: 90px;margin-left: 150px;border-radius: 50%"><strong  style="color:#222;font-size: 15px;" >&nbsp&nbspAccount Number:6767654</strong> </li>
+                       		
                    
                  </ul>
 	</div>
 </div>
 
 </div>
+<br>
+</body>
 				
-<br><br><br><br>
+  <div class="container col-md-12  bg-primary">
+                        <div class="col-md-4 col-sm-12 ">
 
-	  <div class="bg-primary" class="du-newsletter">
+                       <h3 class="title" style="color:#fff;">Contact Us</h3>
+                       <hr>
+                        <ul>
+                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff;font-size: 15px">Alumni management system</strong></a></li>
+                            <hr>
+                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px">+77777777</strong></li>
+                            <hr>
+                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px" >college of science and technology</strong> </li>
+                            <hr>
+                        </ul>
+                                        
+                        </div>
+
+                          <div class="col-md-4 col-sm-12 ">
+
+                       <h3 class="title" style="color:#fff">Visit</h3>
+                       <hr>
+                        <ul class="du-choose-list">
+                            <li><a href="https://cst.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
+                            <li><a href="https://www.rub.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">Royal Univerisity of Bhutan</strong></a></li>
+                            <li><a href="https://vle.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">VLE cst</strong></a></li>
+                            <li><a href="https://lib.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">Libary cst</strong></a></li>
+                        
+                           
+                        </ul>
+
+                                        
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+
+                        <h3 class="title" style="color:#fff;">Cst Address </h3>
+                        <hr>
+                        
+
+                            <ul class="du-choose-list">
+
+                            <li class="list-group"><a href="#"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff;font-size: 15px">Rinchending,Phuntsholing</strong></a></li>
+                    
+                            
+                             <li><a href="alumni.cst@rub.edu.bt"><strong style="color:#fff;font-size: 15px">alumni.cst@rub.edu.bt</strong></a></li>
+                        
+                           
+                        </ul>
+                                        
+                        </div>
+                        
+                    </div>
+    
+    
+
+
+<!--footer-->
+ <div class="bg-primary">
+            <div class="bg-primary" class="du-newsletter">
             <div class="container">
 
                
 
-                <div class="col-md-6">
+                <div class="col-md-12">
 
                     <p>@Alumni Management System</p>
 
                 </div>
 
             </div>
+        </div>
+
         </div>
 
 
@@ -152,5 +206,3 @@
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js1/library/testimonials.js"></script>
 	<!-- Custom script -->
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js1/main.js"></script>
-  </body>
-</html>

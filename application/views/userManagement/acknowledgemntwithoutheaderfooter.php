@@ -1,7 +1,6 @@
-<div class="container">
-    <!-- use this id to load all page content here! -->
-        <div class="main-content-inner">
-            <div id="displaycontent">
+
+
+
             	<div id="page-wrapper">
 
             		
@@ -9,12 +8,11 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px ">Dashboard</h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
-
-            <div class="row">
+             <div class="row">
                 <!-- Welcome -->
                 <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
                     
@@ -23,6 +21,7 @@
  
                     </div>
                 </div>
+ 
                 <!--end  Welcome -->
             </div>
             
@@ -31,13 +30,7 @@
  
 
 
-            		 <div class="row">
-                <!-- Page Header -->
-                <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px ">Dashboard</h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
-                </div>
-                <!--End Page Header -->
-            </div>
+            
 
             	<div class="row profile">
             
@@ -49,6 +42,3 @@
              </div>
          </div>
      </div>
-            </div>
-    </div>
-</div>

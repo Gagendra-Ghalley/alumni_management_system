@@ -72,7 +72,7 @@
            
                 if(confirm("Are you sure you want to delete this?"))  
                 {  
-                     window.location="<?php echo base_url()?>index.php/Settings/delete_data/<?php $row->AgencyID?>/"+id;  
+                     window.location="<?php echo base_url()?>index.php/Settings/delete_data3/<?php $row->AgencyID?>/"+id;  
                 }  
                 else  
                 {  

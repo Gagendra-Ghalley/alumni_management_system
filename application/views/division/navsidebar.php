@@ -59,6 +59,11 @@
                             
                       <i class="fa fa-key">&nbsp</i>Change your password </a>
                     </li>
+                    <!-- <li>
+                       <a href="<?php echo base_url()?>index.php/Settings/faculty/">
+                            
+                      <i class="fa fa-key">&nbsp</i>Faculty </a> -->
+                    </li>
                   
                      <li>
                         <a href="<?php echo base_url()?>index.php/settings/membersearch/"><i class="fa fa-search">&nbsp</i>Member Search</a>

@@ -6,15 +6,14 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
              <div class="row">
                 <!-- Welcome -->
-                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
+                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('')) {echo "<div class='alert alert-success'>";}else {echo "<div class='alert alert-success'>";}?>
                     
-                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
 
  
                     </div>
@@ -26,13 +25,13 @@
             <div id="page-wrapper" style="margin-left: 0px">
      
              <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
-
+                    
 
                  <?php $count=1; foreach($checkissue as $row): ?>
 
             <tr>
                 <br>
-                <td><?php echo $count++;?></td><br>
+                <td><button class="btn bg-primary" style="border-radius: 50%"><?php echo $count++;?></td></button><br>
                 
              <b>Name:</b><td><?php echo $row['FirstName'];?> <!-- <?php echo $row['MiddleName'];?> <?php echo $row['LastName'];?> --></td><br>
              <b>Department:</b><td> <?php 
@@ -73,22 +72,12 @@
 
         </div> <br>
     </div>
-        <div class="bg-primary">
-            <div class="container">
-
-               
-
-
-                <div class="col-lg-12">
-
-                <div class="col-md-6 col-sm-12">
-
-
-                    <p>Alumni Management System@2020</p>
-
-                </div>
-
-            </div>
-        </div>
+       <div class="bg-primary">
+   <div class="container">
+      <div class="col-lg-12">
+         <div class="col-md-6 col-sm-12">
+            <p>&copy Alumni Management System</p>
+         </div>
       </div>
-      
+   </div>
+</div>

@@ -287,7 +287,7 @@ $existing_detail = $this->db->query("UPDATE event_table set image='".$pic."' whe
 
 		 	$delete=$this->db->query("DELETE from event_table where event_id='".$param1."'");
 		 	
-		 echo "Successfully deleted";
+		
 
 }
 
@@ -316,16 +316,21 @@ public function eventcancel($eventid="",$param2=""){//leki
 	$query= $this->db->query("SELECT event1 FROM event_table where event_id='".$eventid."'")->row()->event1; 
 	// $query2= $this->db->query("UPDATE  event_table SET event_id='".$query."'+1 ")->row()->event1;
 	
-	if(isset($eventid,$param2)){
+	
+		if($query>0){
 		
 		$new=$query - $param2;
 	
-}
+
+
 	return $new;
-	
-
 }
 
+else{
+	return $query;
+}	
+
+}
 
 
 
@@ -667,7 +672,7 @@ public function eventcancel($eventid="",$param2=""){//leki
 			
 		}
 
-		public function editFullEmployee3($cid){
+		public function editbatch($cid){//Tamang(for editing the batch)
 						
 					$query = "SELECT * from bpas_master_agency
 					
@@ -689,7 +694,7 @@ public function eventcancel($eventid="",$param2=""){//leki
 			
 		}
 
-		public function editFullEmployee5($cid){//Tamang(for editing of department)
+		public function editdepartment($cid){//Tamang(for editing of department)
 						
 					$query = "SELECT * from bpas_master_agencyparent
 					WHERE bpas_master_agencyparent.AgencyParentID='".$cid."'";
@@ -708,7 +713,7 @@ public function eventcancel($eventid="",$param2=""){//leki
 				
 			
 		}
-	     public function updateEmployee($cid) {
+	     public function updatealumni($cid) {
 	    	
 			$query = "UPDATE bpas_user_profiles SET `FirstName`='".$this->input->post('fname')."', `MiddleName`='".$this->input->post('mname')."', `LastName`='".$this->input->post('lname')."', `AgencyID`='".$this->input->post('agencyid')."',
 				`roleId`='".$this->input->post('roleId')."',
@@ -724,7 +729,7 @@ public function eventcancel($eventid="",$param2=""){//leki
 			
 	    }
 	    
-	      public function updateEmployee1($cid) {//Tamang (for updating the year of graduation and year of graduation_id )
+	      public function updatebatch($cid) {//Tamang (for updating the year of graduation and year of graduation_id )
 	    	
 			$query = "UPDATE bpas_master_agency SET  `name`='".$this->input->post('agencyparentid')."'
 			WHERE `AgencyID`='".$cid."';";
@@ -737,7 +742,7 @@ public function eventcancel($eventid="",$param2=""){//leki
 			
 			
 	    }
-	     public function updateEmployee2($cid) {//Tamang (for updating the department )
+	     public function updatedepartment($cid) {//Tamang (for updating the department )
 	    	
 			$query = "UPDATE bpas_master_agencyparent SET  `name`='".$this->input->post('agencyparentid')."'
 			WHERE `AgencyParentID`='".$cid."';";
@@ -890,6 +895,13 @@ public function sortevent(){//leki
 		
 		$d = $this->db->query("SELECT * from event_table ORDER BY event_id DESC LIMIT 1")->result_array();//have to use result array as we are writing foreach(detail as row)
 			return $d;
+		} 
+
+public function sortnews(){//gagen
+		
+		
+		$data = $this->db->query("SELECT * from post_news ORDER BY id DESC LIMIT 1")->result_array();//have to use result array as we are writing foreach(detail as row)
+			return $data;
 		} 
 public function updateeventpic($pic,$param1,$data1,$data2,$data3){//leki
 		

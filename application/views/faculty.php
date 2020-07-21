@@ -78,11 +78,11 @@
               <li><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
               <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Event</a></li>
-              <li  class="active"><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
+              <li  class="active"><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>organogram</a></li>
               <li ><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
               <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
               
-              <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+              <!-- <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li> -->
             </ul>
           </div>
         </div>
@@ -93,235 +93,135 @@
   
 </header>
   
-<!--header-->
+<section class="civil-engineering pb-50">
+            <br><br>             
+            
+              
+                 
+                  <div class="team-grids text-center">
+                    <div class="col-md-12 team-grid text-center"><br><br>
+                       <div class="teach-head">
+                    <h3 class="text-center">ORGANAGRAM</h3><br>
+                    
+                  </div>
+                      <div class="team-img text-center">
 
- <body>
-  
-  
+                        <img src="<?php echo base_url();?>assets/img2/icon.png" style="height:150px;width: 150px;border-radius: 50%" alt="coming soon"
+                        />
+                          <h4>Mr. Kaka Dawa</h4>
+                        <h4>President</h4>
+                      
+                        
+                        
+                      </div>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                  </div>
+               
+           
 
-
-<!--header-->
-
-<section class="faculty pt-50">
-	
-
-			<div class="container ">
-					<div class="row"><br>
-						<div class="col-md-3 col-sm-12 col-xs-12 img-thumbnail bg-primary">
-							<h3 class="text-center"><strong style="color: #fff">Department</strong></h3>
-							
-								<ul class="du-choose-list">
-									<li><a href="<?php echo base_url();?>index.php/ATD/faculty"><strong style="color: #fff">MANAGEMENT</strong></a></li>
-									<li class="active"><a href="<?php echo base_url();?>index.php/ATD/civil_engineering" ><strong style="color: #fff">CIVIL ENGINEERING AND ENGINEERING GEOLOGY DEPARTMENT</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/architecture"><strong style="color: #fff">ARCHITECTURE DEPARTMENT</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/electrical"><strong style="color: #fff">M.E. RENEWABLE ENERGY AND ELECTRICAL ENGINEERING DEPARTMENT</strong></a></li>
-
-									<li><a href="<?php echo base_url();?>index.php/ATD/electronic"><strong style="color: #fff">ELECTRONICS AND COMMUNICATION ENGINEERING DEPARTMENT</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/it"><strong style="color: #fff">INFORMATION TECHNOLOGY DEPARTMENT</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/science"><strong style="color: #fff">SCIENCE AND HUMANITIES DEPARTMENT</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/finance"><strong style="color: #fff">FINANCE AND ACCOUNTS SECTION ENGINEERING DEPARTMENT</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/admin"><strong style="color: #fff">ADMINISTRATION</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/lib"><strong style="color: #fff">LIBRARY</strong></a></li>
-									<li><a href="<?php echo base_url();?>index.php/ATD/ict"><strong style="color: #fff">ICT UNIT</strong></a></li>
-								</ul>
-							</div>
-						
-							
-								
-					
-				
-					<div class="col-md-12 col-sm-12 col-lg-8">
-					<section class="civil-engineering pb-50 wow fadeInRight ">
-						<div class="container">							
-						
-							<div class="du-civil pt-20">
-								<div class="row">
-									<div class="col-md-8">
-										
-									<div class="teachers">
-								<div class="container">
-									<div class="teach-head">
-										<h3>Management</h3>
-										
-									</div>
-									<div class="team-grids">
-										<div class="col-md-3 col-xs-12 col-sm-12">
-											<div class="team-img text-center">
-											
-
-												<a  class="effect-bubba" href="#"><img src="<?php echo base_url();?>assets/img2/president.png" style="height:150px;width: 150px;border-radius: 50%" /></a>
-												
-												
-												<h4 class="text-bold">Dr. Cheki Dorji</h4>
-												<h4>President</h4>
-												<h5>chekidorji.cst@rub(dot)edu(dot)bt</h5>
-												<h5>Contact No.# 17161635</h5>
-												
-											</div>
-										</div>
-										
-										<div class="clearfix"></div>
-									</div>
-								</div>
-							</div>
-						</div>
+        
 
 
-		
-		
-		
-								</div>
-							</div>						
-					</div>
+      
+                <div class="team-grids text-center">
+                    <div class="col-md-4 team-grid text-center">
+                      <div class="team-img text-center">
 
-				</section>
-				<div class="teachers">
-	<div class="container wow fadeInRight">
-		
-		<div class="team-grids ">
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/1tlhendup.jpg" style="height:150px;width: 150px;border-radius: 50%" /> 
-						<h4>Dr. Tshewang Lhendup</h4>
-						<h4>Dean, Academic Affairs</h4>
-						
-						<h5>tshewanglhendup.cst@rub(dot)edu(dot)bt</h5>
-						<h5>Contact No.# 16553720</h5>
-				</div>
-			</div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-					<img src="<?php echo base_url();?>assets/img2/tshetend.jpg" style="height:150px;width: 150px;border-radius: 50%" alt=""/>
-						<h4>Tsheten Dorji</h4>
-						<h4>Dean, Research and Industrial Linkages</h4>
-						
-						<h5>tshetendorji.cst@rub(dot)edu(dot)bt</h5>
-						<h5>Contact No.# 17160539</h5>
-				</div>
-				  <div class="col-md-12">
+                        <img src="<?php echo base_url();?>assets/img2/sangeypasang.jpg" style="height:150px;width: 150px;border-radius: 50%" alt="coming soon"
+                        />
+                          <h4>Mr. Sangey Pasang (CST)</h4>
+                        <h4>Secretary</h4>
+                      
+                        
+                        
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+               
+           
 
-                        <button class="btn btn-link text-primary btn-lg"data-toggle="modal" data-target="#Tsheten"><b>Read more</b></button>
-                   </div>
-		
-               </div>
-			<div class="col-md-3 team-grid text-center">
-				<div class="team-img">
-						<img src="<?php echo base_url();?>assets/img2/bharat.png" style="height:150px;width: 150px;border-radius: 50%" /> 
-					
-						<h4>Bharat Kumar Hummagai</h4>
+      
 
-						<h4>Dean, Academic<br> Affairs</h4>
-						<h5>bharat.cst@rub(dot)edu(dot)bt</h5>
-						<h5>Contact No.# 17161040</h5>
-				</div>
-				 <div class="col-md-12">
-                        <button class="btn btn-link text-primary btn-lg"data-toggle="modal" data-target="#bharat"><b>Read more</b></button>
-                        </div>
-			</div>
-			
-		
-		</div>
-		</div>
-	</div>
-	</div>
-		</div>
-	
-	
+
+        
+                <div class="team-grids text-center">
+                    <div class="col-md-4 team-grid text-center">
+                      <div class="team-img text-center">
+
+                        <img src="<?php echo base_url();?>assets/img2/sd.jpg" style="height:150px;width: 150px;border-radius: 50%" alt="coming soon"
+                        />
+                          <h4>Ms. Sonam Deki (CST)</h4>
+                        <h4>Treasurer</h4>
+                      
+                        
+                        
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+               
+               <div class="team-grids text-center">
+                    <div class="col-md-4 team-grid text-center">
+                      <div class="team-img text-center">
+
+                        <img src="<?php echo base_url();?>assets/img2/icon.png" style="height:150px;width: 150px;border-radius: 50%" alt="coming soon"
+                        />
+                          <h4>Event Managers</h4>
+                        
+                      
+                        
+                        
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+               
+
+              
+               
+           
+
+     
 </section>
-<br><br><br><br>
 
-
-<!-- Tsheten sir -->
-<div class="modal fade" id="Tsheten" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><h4><b>Details</b></h4></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <p><b>Mr.Tsheten Dorji</b><br>
-		<b>17536197</b><br>
-		<b>tshetendorji.cst@rub.edu.bt</b><br><br>
-
-		<b>Mr.Tsheten Dorji is a Lecturer at college and holds Master of Science in Software Systems Engineering.He is from Information technology department.He is also interested in research works and besides teaching he is interested in Gardening.</b>
-</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Bharat sir -->
-<div class="modal fade" id="bharat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"><h4><b>Details</b></h4></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <p><b>Mr.Bharat K Humagai</b><br>
-		<b>17161040</b><br>
-		<b>bharat.cst@rub.edu.bt<b><br><br>
-
-		<b>Mr.Bharat K Humagai is serving as a Dean of Academic affairs and is a lecturer. He is from Science and humanities department and has completed his Masters.He received a service medal for having more than 10 years of teaching experience. He has also served as provost,in exam cells,Training manager,Head of Department,IRR head,Air and water consultant and currently serving as DSA. His interest lies in Air quality studies and volunteering services like cleaning campaigns.</b>
-
-</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       
-      </div>
-    </div>
-  </div>
-</div>
-
-
-	 
-        <div>
-        	
-        </div>
-
- <div class="container col-md-12 img-thumbnail bg-primary">
-                        <div class="col-md-4 col-sm-12 left-contact  ">
+ <div class="container col-md-12  bg-primary">
+                        <div class="col-md-4 col-sm-12 ">
 
                        <h3 class="title" style="color:#fff;">Contact Us</h3>
                        <hr>
                         <ul>
-                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff">Alumni management system</strong></a></li>
+                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff;font-size: 15px">Alumni management system</strong></a></li>
                             <hr>
-                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff">+77777777</strong></li>
+                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px">+77777777</strong></li>
                             <hr>
-                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff" >college of science and technology</strong> </li>
+                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px" >college of science and technology</strong> </li>
                             <hr>
                         </ul>
                                         
                         </div>
 
-                          <div class="col-md-4 col-sm-12 left-contact">
+                          <div class="col-md-4 col-sm-12 ">
 
                        <h3 class="title" style="color:#fff">Visit</h3>
                        <hr>
                         <ul class="du-choose-list">
-                            <li><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Royal Univerisity of Bhutan</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">VLE cst</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Libary cst</strong></a></li>
+                            <li><a href="https://cst.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
+                            <li><a href="https://www.rub.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">Royal Univerisity of Bhutan</strong></a></li>
+                            <li><a href="https://vle.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">VLE cst</strong></a></li>
+                            <li><a href="https://lib.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">Libary cst</strong></a></li>
                         
                            
                         </ul>
 
                                         
                         </div>
-                        <div class="col-md-4 col-sm-12 left-contact ">
+                        <div class="col-md-4 col-sm-12">
 
                         <h3 class="title" style="color:#fff;">Cst Address </h3>
                         <hr>
@@ -329,11 +229,11 @@
 
                             <ul class="du-choose-list">
 
-                            <li class="list-group"><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Rinchending,Phuntsholing</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">POST Box:1122</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Website:www.cst.edu.bt</strong></a></li>
-                             <li><a href="#"><strong style="color:#fff">Email:cst@edu.bt</strong></a></li>
+                            <li class="list-group"><a href="#"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff;font-size: 15px">Rinchending,Phuntsholing</strong></a></li>
+                    
+                            
+                             <li><a href="#"><strong style="color:#fff;font-size: 15px">Email:cst@edu.bt</strong></a></li>
                         
                            
                         </ul>
@@ -346,25 +246,7 @@
 
 
 <!--footer-->
- <div class="bg-primary" class="du-newsletter">
-            <div class="bg-primary" class="du-newsletter">
-            <div class="container">
 
-               
-
-                <div class="col-md-12">
-
-                    <p>@Alumni Management System</p>
-
-                </div>
-
-            </div>
-        </div>
-
-        </div>
-
-
-  
 
 
 

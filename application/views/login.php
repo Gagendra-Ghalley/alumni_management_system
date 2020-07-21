@@ -81,11 +81,11 @@
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Organogram</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li class="active"><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
-                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
+                                   <!--  <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -105,13 +105,11 @@
 
 <body class="body-Login-back" >
 
-    <div class="container">
+    <div class="container" style="margin-left: 56px;">
        
         <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center logo-margin ">
-              <!-- <h1 class="panel-title"  ><font size="6">CST Alumni Management system</font></h1> -->
-                </div>
-            <div class="col-md-5 col-md-offset-3 ">
+           
+            <div class="col-md-7 col-md-offset-3 text-center">
                 <div class="login-panel panel panel-default">                  
                     <div class="panel-heading">
                         <h5 class="panel-title">Please Log In</h5>
@@ -148,38 +146,38 @@
 	
 	
 	
- <div class="container col-md-12 img-thumbnail bg-primary">
-                        <div class="col-md-4 col-sm-12 left-contact  ">
+  <div class="container col-md-12  bg-primary">
+                        <div class="col-md-4 col-sm-12 ">
 
                        <h3 class="title" style="color:#fff;">Contact Us</h3>
                        <hr>
                         <ul>
-                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff">Alumni management system</strong></a></li>
+                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff;font-size: 15px">Alumni management system</strong></a></li>
                             <hr>
-                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff">+77777777</strong></li>
+                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px">+77777777</strong></li>
                             <hr>
-                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff" >college of science and technology</strong> </li>
+                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px" >college of science and technology</strong> </li>
                             <hr>
                         </ul>
                                         
                         </div>
 
-                          <div class="col-md-4 col-sm-12 left-contact">
+                          <div class="col-md-4 col-sm-12 ">
 
                        <h3 class="title" style="color:#fff">Visit</h3>
                        <hr>
                         <ul class="du-choose-list">
-                            <li><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Royal Univerisity of Bhutan</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">VLE cst</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Libary cst</strong></a></li>
+                            <li><a href="https://cst.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
+                            <li><a href="https://www.rub.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">Royal Univerisity of Bhutan</strong></a></li>
+                            <li><a href="https://vle.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">VLE cst</strong></a></li>
+                            <li><a href="https://lib.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">Libary cst</strong></a></li>
                         
                            
                         </ul>
 
                                         
                         </div>
-                        <div class="col-md-4 col-sm-12 left-contact ">
+                        <div class="col-md-4 col-sm-12">
 
                         <h3 class="title" style="color:#fff;">Cst Address </h3>
                         <hr>
@@ -187,11 +185,11 @@
 
                             <ul class="du-choose-list">
 
-                            <li class="list-group"><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Rinchending,Phuntsholing</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">POST Box:1122</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff">Website:www.cst.edu.bt</strong></a></li>
-                             <li><a href="#"><strong style="color:#fff">Email:cst@edu.bt</strong></a></li>
+                            <li class="list-group"><a href="#"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff;font-size: 15px">Rinchending,Phuntsholing</strong></a></li>
+                    
+                            
+                             <li><a href="#"><strong style="color:#fff;font-size: 15px">Email:cst@edu.bt</strong></a></li>
                         
                            
                         </ul>
@@ -220,7 +218,6 @@
         </div>
 
         </div>
-
 
   
 
