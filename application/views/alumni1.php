@@ -540,7 +540,7 @@
         <div class="du-current-news center" style="background-color: #f5f5f5">
             <h3 class="title" style="color:#428af5;text-align: center;">News</h3>
         <div class="container img-thumbnail"> 
-            <div style="font-family:georgia; color:#111; font-size: 15px;text-align: justify;">
+            <div style="font-family:georgia; color:#111; font-size: 16px;text-align: justify;">
             
            <?php
                  
