@@ -3,7 +3,7 @@
           <div class="row">
                 
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px; "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                
             </div>
@@ -20,25 +20,24 @@
     </form>
 
         
-         <div id="page-wrapper" style="margin-left: 0px;height:100%;">
-          <div class="col-md-10 col-lg-10 col-sm-12" style="background-color: #f5f5f5;">
-               <div class="panel-heading bg-primary" >
-                  <i class="fa fa-bar-chart-o fa-fw" style="color: #fff"></i> <span style="color: #fff" >Member search</span>
-                </div>  
-                
+         <div id="page-wrapper" style="margin-left: 0px;height: 300px;">
+          <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5;">
+                 
+                <div class="panel-heading bg-primary">
+                 
+                  <h4 class="panel-title" >Member Search</h4>
+
+              </div>
+
               <br>
                 <div class="form-group" >
-                    <label class="col-sm-2 col-md-3 col-lg-2 control-label" style="font-size: 17px"> Name</label>
+                    <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 17px"> Name</label>
 
                     <div class="col-md-10 selectContainer">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                          
-<<<<<<< HEAD
-                            <input class="form-control" name="name" id="cidNum" style="height: 30px; width: 90%" placeholder=" Enter Name" form="f" type="text" required />
-=======
-                            <input class="form-control" name="name" id="cidNum" style="height: 30px; width: 400px" placeholder=" Enter Name" form="f" type="text" required />
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+                            <input name="name" id="cidNum" style="height: 30px; width: 250px" placeholder=" Enter Name" form="f" type="text" required />
                         </div>
                     </div>
                 </div>
@@ -47,7 +46,7 @@
                 
             
 
-              <!--   <div class="form-group" >
+                <div class="form-group" >
                     <label class="col-sm-3 col-md-4 col-lg-2 control-label" style="color: black;font-size: 17px"> Department</label>
 
                     <div class="col-sm-7 col-md-6 col-lg-4 selectContainer">
@@ -57,22 +56,24 @@
                             
                             
 
-                            <select class="form-control" name="f1" form="f" style="height: 30px; width: 400px">
+                            <select name="f1" form="f" style="height: 30px; width: 250px">
                                 <option value="" form="f">Select Item</option>
                        <?php foreach($item as $key):?>
-                        <option value="<?php echo $key['department_ID'];?>"> <?php echo $key['name']; ?></option>
+                        <option value="<?php echo $key['AgencyParentID'];?>"> <?php echo $key['name']; ?></option>
                       <?php endforeach; ?>
                                <!--  <option value="" >Select Department</option>
                                 <option value="Civil">Civil</option>
                                 <option value="Information Technology">Information Technology</option>
                                 <option value="Electrical">Electrical</option>
                                 <option value="Electronics and Communication">Electronics and Communication</option> -->
-                     <!--        </select>
+                            </select>
 
                         </div>
                     </div>
-                </div>  -->
+                </div>
 
+                <br>
+                <br>
               
 
                
@@ -81,7 +82,7 @@
                        
                         <input type="submit" class="btn btn-success" form="f" value="Get Details" id="getbtn"><span class="glyphicon glyphicon"></span>
 
-                         <button type="reset" form="f" class="btn btn-danger">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+                         <button type="reset" class="btn btn-danger">Reset <span class="glyphicon glyphicon-refresh"></span></button>
                     </div>
               
 
@@ -93,13 +94,16 @@
 </div>
 </div>
   
-      <div class="bg-primary">
-   <div class="container">
-      <div class="col-lg-12">
-         <div class="col-md-6 col-sm-12">
-            <p>&copy Alumni Management System</p>
-         </div>
+       <div class="bg-primary" >
+            <div class="container">
+                <div class="col-md-12 col-sm-12">
+
+
+                    <p>Alumni Management System@2020</p>
+
+              
+
+            </div>
+        </div>
       </div>
-   </div>
-</div>
    

@@ -1,0 +1,13 @@
+<?php
+
+
+
+class ATD_model extends CI_Model {
+
+	public function()
+
+	 {
+
+	 }
+
+	}

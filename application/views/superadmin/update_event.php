@@ -20,21 +20,9 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h1 class="page-header"></h1> <div class="clockwrapper"></div>
                 </div>
                 <!--End Page Header -->
-            </div>
-
-            <div class="row">
-                <!-- Welcome -->
-                <div class="col-lg-12"><?php if(strtotime($this->session->userdata('atd_time'))>strtotime('09:00:00AM')) {echo "<div class='alert alert-danger'>";}else {echo "<div class='alert alert-success'>";}?>
-                    
-                       <b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('name');?></b>
-
- 
-                    </div>
-                </div>
-                <!--end  Welcome -->
             </div>
 
         
@@ -92,7 +80,7 @@
 
 
 
-                                    <div class="col-md-12" style="text-align: justify;"> 
+                                    <div class="col-md-12"> 
                                       <label>Description</label>
                                      <input type="text" class="form-control" name="editevent" rows="10" id="input" value="<?php echo $row['event'];?>"/> 
                                       
@@ -101,16 +89,23 @@
                                     
 
 
-                                   
+                                   <!-- <div class="col-md-12">
+                                  <p></p>
+                                      <label>Image</label>
+                                       <input type="file" name="editimage" size="20" />
+                                            <br />
+                                           
+                                                                      
+                                   </div> -->
 
 
-<?php echo "<input type='submit' name='update' class='btn-primary du-common-property btn-lg' /> ";?>
+<?php echo "<input type='submit' name='update' class='btn-default du-common-property' /> ";?>
                           <?php echo "</form>"?>
 
                         
 
                          <a href="<?php echo site_url();?>/Settings/viewevent/<?php echo $row['event_id'];?>" > 
-                         <button name="cancel" id="cancel" type="button" value="fav_CSS" class="btn-success du-common-property btn-lg " >Cancel</button> 
+                         <button name="cancel" id="cancel" type="button" value="fav_CSS" class="btn-default du-common-property" >Cancel</button> 
                         </a>
 
                       </form> 

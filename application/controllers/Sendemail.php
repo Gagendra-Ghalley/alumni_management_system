@@ -11,7 +11,7 @@ class Sendemail extends CI_Controller {
 	$this->load->library('form_validation');
 	$this->load->model('Staff_model','sm');
 	$this->load->model('Agency_model','ag');
-
+	$this->load->model('Holidays','hm');
 	$this->load->model('Messages_model','mm');
 	$this->load->model('ATD_model','atd');
 	$this->header['messages'] = $this->mm->getMessages();
@@ -40,26 +40,22 @@ public function index()
 public function send1(){
 $this->load->library('email');
 $mail = $this->input->post("password");
-// $cid = $this->input->post("cid");
+$cid = $this->input->post("cid");
 
-	if($mail==$this->input->post("password")){
+	if($mail==$this->input->post("password")&&$cid == $this->input->post("cid")){
 
 		
 	   		$this->load->library('email');
 	         $email = $this->input->post('password');
-	         // $cid = $this->input->post('cid');      	         
+	         $cid = $this->input->post('cid');      	         
 	         $findemail = $this->ForgotPassword($email);
-	         // $findcid = $this->cid($cid);   	         
-	         if($findemail ){
+	         $findcid = $this->cid($cid);   	         
+	         if($findemail && $findcid){
 	         	
 	           $email = $this->input->post("password");
 	           $cid = $this->input->post('cid'); 
         	// $email = $data['email'];
-<<<<<<< HEAD
-	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."' ");
-=======
-	        $query1=$this->db->query("SELECT *  from login where email = '".$email."' and relatedUserId='".$cid."' ");
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."' and relatedUserId='".$cid."' ");
 	       $row=$query1->result_array(); 
 
 
@@ -68,14 +64,10 @@ $mail = $this->input->post("password");
 	        $passwordplain  = rand(999999999,9999999999);
 	        $newpass['password'] = md5($passwordplain);
 	        $this->db->where('email', $email);
-	        $this->db->update('login', $newpass);
+	        $this->db->update('bpas_logins', $newpass);
 	        // $this->db->where('email', $email);
-	        // $this->db->update('user_profiles', $newpass);
-<<<<<<< HEAD
-        	  $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> your <b>password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please update your password after signing in <br>Thanks & regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
-=======
+	        // $this->db->update('bpas_user_profiles', $newpass);
         	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 	      
 	        
         	
@@ -85,8 +77,8 @@ $mail = $this->input->post("password");
 		      	'protocol' 	=> 'smtp',
 		      	'smtp_host' => 'ssl://smtp.googlemail.com',
 		      	'smtp_port' => 465,
-		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-		      	'smtp_pass' => 'Choewangchuk@!_123', 
+		      	'smtp_user' => '0216518.cst@rub.edu.bt', 
+		      	'smtp_pass' => 'Wangchuk_123', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
@@ -95,7 +87,7 @@ $mail = $this->input->post("password");
 		    $this->email->initialize($config);
 
 		    $this->email->set_newline("\r\n");
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->from('0216518.cst@rub.edu.bt', 'Alumni Management System');
 		    $this->email->to($mail);
 		   
 		    $this->email->subject('OTP from Alumni Management System');
@@ -127,7 +119,7 @@ $mail = $this->input->post("password");
 	            }
 	              else{
 
-	          $this->session->set_flashdata('message', 'Email did not match');
+	          $this->session->set_flashdata('message', 'Email/CID did not match');
 	        		redirect('Settings/passwordemail');	      
 	      		}
 
@@ -156,7 +148,7 @@ $cid = $this->input->post("cid");
 	           $email = $this->input->post("password");
 	           $cid = $this->input->post('cid'); 
         	// $email = $data['email'];
-	        $query1=$this->db->query("SELECT *  from login where email = '".$email."' and relatedUserId='".$cid."' ");
+	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."' and relatedUserId='".$cid."' ");
 	       $row=$query1->result_array(); 
 
 
@@ -165,14 +157,10 @@ $cid = $this->input->post("cid");
 	        $passwordplain  = rand(999999999,9999999999);
 	        $newpass['password'] = md5($passwordplain);
 	        $this->db->where('email', $email);
-	        $this->db->update('login', $newpass);
+	        $this->db->update('bpas_logins', $newpass);
 	        // $this->db->where('email', $email);
-	        // $this->db->update('user_profiles', $newpass);
-<<<<<<< HEAD
-        	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
-=======
+	        // $this->db->update('bpas_user_profiles', $newpass);
         	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 	      
 	        
         	
@@ -183,11 +171,7 @@ $cid = $this->input->post("cid");
 		      	'smtp_host' => 'ssl://smtp.googlemail.com',
 		      	'smtp_port' => 465,
 		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-<<<<<<< HEAD
-		      	'smtp_pass' => 'Choewangchuk@!_123',  
-=======
-		      	'smtp_pass' => 'Choewangchuk@!_123', 
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+		      	'smtp_pass' => 'Wangchuk_12345', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
@@ -228,7 +212,7 @@ $cid = $this->input->post("cid");
 	            }
 	              else{
 
-	          $this->session->set_flashdata('message', 'Email did not match');
+	          $this->session->set_flashdata('message', 'Email/CID did not match');
 	        		redirect('Settings/passwordemail');	      
 	      		}
 
@@ -245,7 +229,7 @@ $cid = $this->input->post("cid");
 		$this->load->library('email');
 		
 	$file_data = $this->upload_file();
-		if($file_data)
+		if(is_array($file_data))
 		{
 			$message = '
 			<h3 align="center">Alumni Management System</h3>
@@ -263,20 +247,26 @@ $cid = $this->input->post("cid");
 		      	'protocol' 	=> 'smtp',
 		      	'smtp_host' => 'ssl://smtp.googlemail.com',
 		      	'smtp_port' => 465,
-		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-		      	'smtp_pass' => 'Choewangchuk@!_123', 
+		      	'smtp_user' => '0216518.cst@rub.edu.bt', 
+		      	'smtp_pass' => 'Wangchuk_123', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
 		    );
 			
 		    $this->email->initialize($config);
-		    $this->email->set_newline("\r\n");
-		    $subject = $this->input->post("name");
+		     $subject = $this->input->post("name");
 			$mails = $this->input->post("email");
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
-			$this->email->to($mails);
-		   	$this->email->subject($subject);
+		    $this->email->set_newline("\r\n");
+
+		    $this->email->from('0216518.cst@rub.edu.bt', 'Alumni Management System');
+
+		    
+
+		    $this->email->to($mails);
+		   
+		    
+		    $this->email->subject($subject);
 	        $this->email->message($message);
 	       $this->email->attach($file_data['full_path']);
 
@@ -295,37 +285,81 @@ $cid = $this->input->post("cid");
 	      
 	        if($this->email->send())
 	        {
-	        	// if(delete_files($file_data['file_path']))
-	        	// {
-	        		$this->session->set_flashdata('message', 'Mail has been sent successfully!!');
+	        	if(delete_files($file_data['file_path']))
+	        	{
+	        		$this->session->set_flashdata('message', 'Message has been sent successfully!!');
 	        		redirect('sendemail');
-	        	// }
+	        	}
 	        }
 
 	        else
 	        {
-	        	// if(delete_files($file_data['file_path']))
-	        	// {
+	        	if(delete_files($file_data['file_path']))
+	        	{
 	        		echo $this->email->print_debugger();
 	        		$this->session->set_flashdata('message', 'There is an error in email send');
 	        		redirect('sendemail');
-	        	// }
+	        	}
 	        }
 	        echo $this->email->print_debugger();
 	    }
 	    else
 	    {
-	    	$this->session->set_flashdata('message', 'There is an error in email send');
+	    	$this->session->set_flashdata('message', 'There is an error in attach file');
 	        redirect('sendemail');
 	    }
 	}
+	
+
+
+
+ 		function ForgotPassword($email)
+			 {
+			 		$this->load->library('email');
+			        $this->db->select('email');
+			        $this->db->from('bpas_logins'); 
+			        $this->db->where('email', $email); 
+			        $query=$this->db->get();
+			        return $query->row_array();
+			 }
+			function cid($cid)
+			 {
+			 		$this->load->library('email');
+			        $this->db->select('relatedUserId');
+			        $this->db->from('bpas_logins'); 
+			        $this->db->where('relatedUserId', $cid); 
+			        $query=$this->db->get();
+			        return $query->row_array();
+			 }
+
+			 function ForgotPasswordatd($email)
+			 {
+			 		$this->load->library('email');
+			        $this->db->select('email');
+			        $this->db->from('bpas_user_profiles'); 
+			        $this->db->where('email', $email); 
+			        $query=$this->db->get();
+			        return $query->row_array();
+			 }
+			function cidatd($cid)
+			 {
+			 		$this->load->library('email');
+			        $this->db->select('cid');
+			        $this->db->from('bpas_user_profiles'); 
+			        $this->db->where('cid', $cid); 
+			        $query=$this->db->get();
+			        return $query->row_array();
+			 }
+		
 
 	function upload_file()
 	{
 		$config['upload_path'] = 'uploads/';
 		$config['allowed_types'] = 'xls|doc|docx|pdf|gif|jpg|png|jpeg';
-		$this->load->library('upload');
-		$this->load->initialize($config);
+		$this->load->library('upload',$config);
+		
+		
+		
 		if($this->upload->do_upload('resume'))
 		{
 			return $this->upload->data();
@@ -336,50 +370,6 @@ $cid = $this->input->post("cid");
 			return $this->upload->display_errors();
 		}
 	}
-	
-
-
-
- 		function ForgotPassword($email)
-			 {
-			 		$this->load->library('email');
-			        $this->db->select('email');
-			        $this->db->from('login'); 
-			        $this->db->where('email', $email); 
-			        $query=$this->db->get();
-			        return $query->row_array();
-			 }
-			function cid($cid)
-			 {
-			 		$this->load->library('email');
-			        $this->db->select('relatedUserId');
-			        $this->db->from('login'); 
-			        $this->db->where('relatedUserId', $cid); 
-			        $query=$this->db->get();
-			        return $query->row_array();
-			 }
-
-			 function ForgotPasswordatd($email)
-			 {
-			 		$this->load->library('email');
-			        $this->db->select('email');
-			        $this->db->from('user_profiles'); 
-			        $this->db->where('email', $email); 
-			        $query=$this->db->get();
-			        return $query->row_array();
-			 }
-			function cidatd($cid)
-			 {
-			 		$this->load->library('email');
-			        $this->db->select('cid');
-			        $this->db->from('user_profiles'); 
-			        $this->db->where('cid', $cid); 
-			        $query=$this->db->get();
-			        return $query->row_array();
-			 }
-		
-
-	
 
 	
 }

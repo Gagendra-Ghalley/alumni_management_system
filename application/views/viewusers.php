@@ -4,7 +4,7 @@
              <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -19,15 +19,16 @@
                 </div>
  
             
-            <br>
+            <br><br><br>
             <div class="row">
-               
+                <!-- Welcome -->
+                <div class="col-lg-10">
  
-                  
+                   <div class="col-md-6">
             <form onSubmit="return false;">
 
-                <div class="col-md-8" style="margin-top: 10px; margin-left: 40px">
-                    <?php  
+                <div>
+                     <?php  
            if($this->uri->segment(2) == "deleted")  
            {  
            
@@ -36,51 +37,9 @@
                     </div><br><br>';
 
             }  
-<<<<<<< HEAD
-
-             if($this->uri->segment(2) == "deleted3")  
-           {  
-           
-                echo ' <div class="col-lg-12 panel-body">
-                    <b><p class="text-success">Selected batch user deleted successfully</p></b>
-                    </div><br><br>';
-
-            }  
-
-
-           if($this->uri->segment(2) == "updated")  
-           {  
-           //base url - http://localhost/app/las04  
-           //redirect url - http://localhost/app/las04/Settings/inserted/  
-                //main - segment(1)  
-                //inserted - segment(2)  
-            echo ' <div class="col-lg-10 panel-body">
-                    <b><p class="text-success">User updated successfully</p></b>
-                    </div><br><br>';
-               
-           }  
-           if($this->uri->segment(2) == "notupdated")  
-           {  
-                echo ' <div class="col-lg-10 panel-body">
-                    <b><p class="text-danger">User not updated</p></b>
-                    </div><br><br>';
-
-           }  
-         
-=======
-             if($this->uri->segment(2) == "notdeleted")  
-           {  
-           
-                echo ' <div class="col-lg-12 panel-body">
-                    <b><p class="text-danger">User not deleted</p></b>
-                    </div><br><br>';
-
-            } 
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
            
            ?> </div>
-         
-                <div class="col-md-6 pull-center" style="margin-top: 10px; margin-left: 40px">
+          
            
                 <div class="input-group">
                  
@@ -89,22 +48,20 @@
                         <button class="btn btn-default" type="button" onclick="mySearchFunction()"><i class="fa fa-search"></i></button>
                     </span>
                 </div>
-              </div>
             </form>
 
-           
+            <br>
           
         </div>
                 
-               
-            </div><br>
+                <!--end  Welcome -->
+            </div>
 
 
         
      
             <div id="page-wrapper" style="margin-left: 0px">
-     
-             <div class="col-md-12 col-lg-12 col-sm-12" style="background-color: #f5f5f5">
+                <div class="col-lg-12">
 
     
                     <div class="panel panel-primary">
@@ -117,13 +74,13 @@
                                <form>
                                 
                                  <label for="ParentAgency">Department </label>
-                                 <select id="parent" name="Parent" class="option3 searchdropdown"  onchange="selectdepartment()">
+                                 <select id="parent" name="Parent" class="option3 searchdropdown"  onchange="selectagency()">
                                 <option value="0" class="searchdropdown" selected>Select one</option>
                                 <?php foreach($parent->result() as $row){?>
-                                    <option class="searchdropdown" value="<?php echo $row->department_ID;?>"><?php echo $row->name;?></option><?php }?>
+                                    <option class="searchdropdown" value="<?php echo $row->AgencyParentID;?>"><?php echo $row->name;?></option><?php }?>
                                 </select>
                                  <label for="AgencyName">Year</label>
- <select name="Agency" id="agency" class="option3 searchdropdown" onchange="selectbatch()">
+ <select name="Agency" id="agency" class="option3 searchdropdown" onchange="populateEmployees()">
       <option value="">- Select Year  - </option>
      
       
@@ -135,7 +92,7 @@
 
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-10">
                                     <div class="table-responsive">
                                         <table class="table tablescroll table-bordered table-hover table-striped" >
                                              <tbody id="employees">
@@ -176,41 +133,41 @@
                 </div>
 
             </div>
-<<<<<<< HEAD
-=======
-        </div>
-    </div>
 
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
-        </div>
-    </div>
-<<<<<<< HEAD
+           
+
+                      
+
+
+         
+
 
         </div>
         <!-- end page-wrapper -->
-=======
-    <div class="bg-primary" style="margin-top: 94px;">
+
+    </div>
+     <div class="bg-primary" class="du-newsletter">
+      <div class="bg-primary" class="du-newsletter" >
             <div class="container">
 
                
 
-
+<!-- 
                 <div class="col-lg-12">
 
                 <div class="col-md-6 col-sm-12">
 
 
-                    <p>Alumni Management System@2020</p>
+                    <p>@Alumni Management System</p>
 
                 </div>
 
-            </div>
+            </div> -->
         </div>
       </div>
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
-
     </div>
-   
+    <!-- end wrapper -->
+
 <script>
 function mySearchFunction() 
 {
@@ -231,11 +188,11 @@ function mySearchFunction()
 }
 
 
-    function selectdepartment()
+    function selectagency()
 {
    var parent=$('#parent').val();
         
-        $.post('<?php echo base_url();?>index.php/Settings/get_dropdownlistforuser_selectyear/',
+        $.post('<?php echo base_url();?>index.php/Settings/agencyFromParent/',
     {
         parent:parent
         
@@ -247,15 +204,11 @@ function mySearchFunction()
         }); 
 }
 
-function selectbatch()
+function populateEmployees()
 {
    var agency=$('#agency').val();
         
-<<<<<<< HEAD
-        $.post('<?php echo base_url();?>index.php/Settings/get_dropdownlistforuser/',
-=======
-        $.post('<?php echo base_url();?>index.php/Settings/manageuser_dropdownlist/',
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+        $.post('<?php echo base_url();?>index.php/Settings/getAgencyEmployees/',
     {
         agency:agency
         

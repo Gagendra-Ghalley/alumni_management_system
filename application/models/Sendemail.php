@@ -47,7 +47,7 @@ class Sendemail extends CI_Model {
 	 //           $mail = $this->input->post("passwordatd");
 	 //           $cid = $this->input->post('cidatd'); 
         	
-	 //        $query1=$this->db->query("SELECT *  from user_profiles where email = '".$email."' and cid='".$cid."' ");
+	 //        $query1=$this->db->query("SELECT *  from bpas_user_profiles where email = '".$email."' and cid='".$cid."' ");
 	 //       $row=$query1->result_array(); 
 
 
@@ -56,7 +56,7 @@ class Sendemail extends CI_Model {
 	        // $passwordplain  = rand(999999999,9999999999);
 	        // $newpass['password'] = md5($passwordplain);
 	        // $this->db->where('email', $email);
-	        // $this->db->update('user_profiles', $newpass);
+	        // $this->db->update('bpas_user_profiles', $newpass);
 	       
         	//  $message='<h3 align="center">Password Reset</h3> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b>'. "\r\n";
 	        // $message.='<br><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'."\r\n";
@@ -135,7 +135,7 @@ class Sendemail extends CI_Model {
 	// 		 {
 	// 		 		$this->load->library('email');
 	// 		        $this->db->select('email');
-	// 		        $this->db->from('user_profiles'); 
+	// 		        $this->db->from('bpas_user_profiles'); 
 	// 		        $this->db->where('email', $email); 
 	// 		        $query=$this->db->get();
 	// 		        return $query->row_array();
@@ -144,7 +144,7 @@ class Sendemail extends CI_Model {
 	// 		 {
 	// 		 		$this->load->library('email');
 	// 		        $this->db->select('cid');
-	// 		        $this->db->from('user_profiles'); 
+	// 		        $this->db->from('bpas_user_profiles'); 
 	// 		        $this->db->where('cid', $cid); 
 	// 		        $query=$this->db->get();
 	// 		        return $query->row_array();

@@ -37,24 +37,24 @@
     
       <div class="header-element clearfix">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <h1 class="navbar-brand navbar-brand_">
                                     <a href="<?php echo base_url();?>index.php/ATD/Login/"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
 
                             </div>
-                            <div class="col-md-8" >
+                            <div class="col-md-9" >
                                 <ul class="flexy-menu orange" >
                                     <li   class="active"><a href="<?php echo base_url();?>index.php/ATD/Login/"><i class="icon-heart"></i>Home</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Organogram</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
                                     <!-- <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-envelope"></i>Profile</a></li> -->
 
-                                    <!-- <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li> -->
+                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -287,84 +287,66 @@
    
 
 <br>
-    <div class="du-current-news center ">
+    
+<div class="du-current-news center bg-secondary">
     <div class="container img-thumbnail">
-         <h4 class="title" style="color:#111;text-align: center;">UP COMMING EVENT</h4>
-     <!--  <div class="card-title text-left bold"><b></b></div><br> -->
-       <?php foreach($editdetail as $row): ?>
-       
+      <div class="card-title text-left bold">UP COMMING EVENT</div><br>
+       <?php foreach($eventdetail as $row): ?>
+        <div class="row padding">
 
-<<<<<<< HEAD
-            <div class="col-lg-12 col-md-12 col-sm-12 ">
-                <div class="col-lg-5 col-md-5 col-sm-5 ">
-                
-                        <div class="hovereffect">
-                            <figure> <img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 230px;width: 500px" ></figure>
-=======
-            <div class="col-lg-5 col-md-7 col-sm-12"data-wow-delay="0.2s" >
+            <div class="col-lg-7 col-md-7 col-sm-12"data-wow-delay="0.2s" >
                 
 
                             <div class="hovereffect">
-                             <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+                             <span class="img-thumbnail"><img class="card-imd-top-top img1-w3l" src="<?php echo base_url();?>assets/Images1/slider4.png" style="height: 200px" ></span>
                                 <div class="overlay">
-                                    <h2>Events</h2>
+                                    <h2>Upcoming Event</h2>
                                     
                                 </div>
-                        </div>
-                            
-                            
-                                
                         </div>
                     
                    
          
-<<<<<<< HEAD
-         
-            
-            <div class="col-lg-5 col-md-6 col-sm-5 " style="height:100%;text-align: justify;font-family:georgia; color:black; font-size: 15px" >
-                     <!-- <p class="text-primary"><b>Description</b></p> -->
-=======
+
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                 
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
+                </div>
+
             </div>
-            
-            <div class="col-lg-5 col-md-7 col-sm-12 img-thumbnail" style="height: 210px;" >
+            <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">
                      <p class="text-primary"><b>Description</b></p>
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                  
                
 <table>
-                          <h3 class="title" style="color:#428af5;;margin-left: 100px"><?php echo $row['eventname'];?><br></h3>
-                          <b style="margin-left: 100px;"><?php echo $row['date'];?></b>
-                          <br><br>
-                          
-                          
+                
+                          <b><?php echo $row['date'];?></b>
+                          <br>
+                          <h3><?php echo $row['eventname'];?><br></h3>
                           <tr><?php echo $row['event'];?><br></tr></table>
                          
                   
                 </div>
-<<<<<<< HEAD
-         
-=======
             </div>
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
-            <div class="col-md-2 col-sm-12  " style="height: 210px;" >
+            <div class="col-md-7 col-sm-3 " >
                 
 
-                    
+                    <div class="" >
                                
 
-                    <button style="height:60px;width:100px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+                    <button style="height:60px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
 
                                     <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
 
-                                </button><br>
+                                </button> 
                       
                    
 
                         
-                                   <button class="btn btn-default btn-lg" style="height:60px;width:110px;margin-top:10px;font-size:15px;">  
-                                        <p><font color="#111">
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black">
 
                                           
                                           <?php echo $row['event1'];?>
@@ -373,7 +355,7 @@
                                           </button><br>
 
                               
-          
+            </div>
         </div><?php endforeach; ?>
    
 
@@ -381,7 +363,6 @@
     </div>
      </div>
  </div>
-
      <!--body content-->
     <section class="du-teacher du-section-ash ptb-50 common">
         
@@ -433,7 +414,7 @@
                                 <h3 class="title" style="color:#428af5;text-align: center;">Membership</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Stay connected with the College by telling us the best way to get in touch and do suggest the best way be connect with eachother"</p><br>
 
-                                <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">SIGN IN</a>
+                                <a href="<?php echo base_url();?>index.php/ATD/login1/>" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                             </div>
 
                         </div>
@@ -454,9 +435,9 @@
                             <!-- Donate -->
                             <div class="du-caption">
                                 <br>
-                                <h3 class="title" style="color:#428af5;text-align: center;">Donates Us</h3>
+                                <h3 class="title" style="color:#428af5;text-align: center;">Donates</h3>
                                 <p  style="font-family:georgia; color:black; font-size: 16px">"Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College"</p><br>
-                                <a href="<?php echo base_url();?>index.php/ATD/donate/" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">DONATE</a>
+                                <a href="<?php echo base_url();?>index.php/ATD/donate/" class="btn btn-default btn-lg btn-block" style="color:#428af5;text-align: center; ">READ MORE</a>
                                 
                             </div>
 
@@ -552,43 +533,41 @@
             </div>
 
 
-       
+        </div>
       
     </section>
-
-    
-     <div class="container col-md-12  bg-primary">
-                        <div class="col-md-4 col-sm-12 ">
+    <div class="container col-md-12 img-thumbnail bg-primary">
+                        <div class="col-md-4 col-sm-12 left-contact  ">
 
                        <h3 class="title" style="color:#fff;">Contact Us</h3>
                        <hr>
                         <ul>
-                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff;font-size: 15px">Alumni management system</strong></a></li>
+                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff">Alumni management system</strong></a></li>
                             <hr>
-                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px">+77777777</strong></li>
+                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff">+77777777</strong></li>
                             <hr>
-                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px" >college of science and technology</strong> </li>
+                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff" >college of science and technology</strong> </li>
                             <hr>
                         </ul>
                                         
                         </div>
 
-                          <div class="col-md-4 col-sm-12 ">
+                          <div class="col-md-4 col-sm-12 left-contact">
 
                        <h3 class="title" style="color:#fff">Visit</h3>
                        <hr>
                         <ul class="du-choose-list">
-                            <li><a href="https://cst.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
-                            <li><a href="https://www.rub.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">Royal Univerisity of Bhutan</strong></a></li>
-                            <li><a href="https://vle.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">VLE cst</strong></a></li>
-                            <li><a href="https://lib.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">Libary cst</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">Royal Univerisity of Bhutan</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">VLE cst</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">Libary cst</strong></a></li>
                         
                            
                         </ul>
 
                                         
                         </div>
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-md-4 col-sm-12 left-contact ">
 
                         <h3 class="title" style="color:#fff;">Cst Address </h3>
                         <hr>
@@ -596,11 +575,11 @@
 
                             <ul class="du-choose-list">
 
-                            <li class="list-group"><a href="#"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff;font-size: 15px">Rinchending,Phuntsholing</strong></a></li>
-                    
-                            
-                             <li><a href="#"><strong style="color:#fff;font-size: 15px">Email:cst@edu.bt</strong></a></li>
+                            <li class="list-group"><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">Rinchending,Phuntsholing</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">POST Box:1122</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">Website:www.cst.edu.bt</strong></a></li>
+                             <li><a href="#"><strong style="color:#fff">Email:cst@edu.bt</strong></a></li>
                         
                            
                         </ul>
@@ -613,7 +592,7 @@
 
 
 <!--footer-->
- <div class="bg-primary">
+ <div class="bg-primary" class="du-newsletter">
             <div class="bg-primary" class="du-newsletter">
             <div class="container">
 

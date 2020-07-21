@@ -12,7 +12,7 @@
   $this->load->library('form_validation');
   $this->load->model('Staff_model','sm');
   $this->load->model('Agency_model','ag');
-  
+  $this->load->model('Holidays','hm');
   $this->load->model('Messages_model','mm');
   $this->load->model('ATD_model','atd');
   $this->load->model('csv_import_model');
@@ -125,15 +125,15 @@ function load_data()
      'FirstName' => $row["Name"],
            'gender'  => $row["Gender1"],
            'cid'   => $row["cid"],
-           'departmentParent_ID'   => $row["departmentParent_ID"],
-           'department_ID'   => $row["department_ID"],
-           'batch_ID'   => $row["batch_ID"]
+           'AgencyMainParentID'   => $row["AgencyMainParentID"],
+           'AgencyParentID'   => $row["AgencyParentID"],
+           'AgencyID'   => $row["AgencyID"]
     );
    $data1[] = array(
     
            'relatedUserId'   => $row["cid"],
-           'department_ID'   => $row["department_ID"],
-           'batch_ID'   => $row["batch_ID"],
+           'AgencyParentID'   => $row["AgencyParentID"],
+           'AgencyID'   => $row["AgencyID"],
            'password'   => md5($row["cid"])
             );
           

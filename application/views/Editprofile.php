@@ -3,7 +3,7 @@
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -122,7 +122,7 @@
                         <div class="col-sm-12 col-md-12 col-lg-9" style="margin-left: 43px">
                            <form>
                               <div class="form-group">
-                                 <input type="text" class="form-control" id="email" name="email" placeholder="Your email" value="<?php echo $row->email;?>" />
+                                 <input type="text" class="form-control" id="email" placeholder="Your email" value="<?php echo $row->email;?>" />
                                  <button class="btn btn-info btn-block" onclick="updateContact()">Add</button>
                               </div>
                            </form>
@@ -263,7 +263,7 @@
                            <div class="col-sm-12 col-md-12 col-lg-9" style="margin-left: 43px">
                               <form>
                                  <div class="form-group">
-                                    <textarea type="text" id="seminar" name="seminar" class="form-control" placeholder="Seminar" value="<?php echo $row->seminar;?>" ></textarea>
+                                    <textarea type="text" id="seminar" class="form-control" placeholder="Seminar" value="<?php echo $row->seminar;?>" ></textarea>
                                     <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
                                  </div>
                               </form>
@@ -279,7 +279,7 @@
                            <div class="col-sm-12 col-md-12 col-lg-9" style="margin-left: 43px">
                               <form>
                                  <div class="form-group">
-                                    <textarea type="text" id="training" name="training" class="form-control" placeholder="Training" value="<?php echo $row->training;?>" ></textarea>
+                                    <textarea type="text" id="training" class="form-control" placeholder="Training" value="<?php echo $row->training;?>" ></textarea>
                                     <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
                                  </div>
                               </form>
@@ -295,7 +295,7 @@
                            <div class="col-sm-12 col-md-12 col-lg-9" style="margin-left: 43px">
                               <form>
                                  <div class="form-group">
-                                    <textarea type="text" id="workshop" name="workshop" class="form-control" placeholder="workshop" value="<?php echo $row->workshop;?>" ></textarea>
+                                    <textarea type="text" id="workshop" class="form-control" placeholder="workshop" value="<?php echo $row->workshop;?>" ></textarea>
                                     <button class="btn btn-info btn-block" onclick="updateContact4()">Add</button>
                                  </div>
                               </form>
@@ -317,7 +317,7 @@
       <div class="bg-primary">
          <div class="container">
             <div class="col-md-6">
-               <p>&copy Alumni Management System</p>
+               <p>@Alumni Management System</p>
             </div>
          </div>
       </div>
@@ -331,7 +331,7 @@
        var organization = $('#organization').val();
    
        $.post('<?php echo base_url();?>index.php/Settings/updateContact/', {
-      
+   
            email: email,
            occupation: occupation,
            organization: organization
@@ -348,7 +348,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('Your profile details successfully updated')) {
+               if (!alert('No response')) {
                    window.location.reload();
                }
            }
@@ -381,7 +381,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('Your profile details successfully updated')) {
+               if (!alert('No response')) {
                    window.location.reload();
                }
            }
@@ -404,7 +404,6 @@
    
        }, function(data) {
            //$('#result').html(data);
-
            if (data == "1") {
                if (!alert('Your profile details successfully updated')) {
                    window.location.reload();
@@ -415,7 +414,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('Your profile details successfully updated')) {
+               if (!alert('No response')) {
                    window.location.reload();
                }
            }
@@ -448,7 +447,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('Your profile details successfully updated')) {
+               if (!alert('No response')) {
                    window.location.reload();
                }
            }
@@ -481,7 +480,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('Your profile details successfully updated')) {
+               if (!alert('No response')) {
                    window.location.reload();
                }
            }
@@ -528,7 +527,7 @@
                    window.location.reload();
                }
            } else {
-               if (!alert('Password changed successfully')) {
+               if (!alert('Error changing password')) {
                    window.location.reload();
                }
            }

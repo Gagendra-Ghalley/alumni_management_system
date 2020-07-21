@@ -22,7 +22,9 @@
  
           <div class="row profile">
             
-    
+
+            
+
      
       <h3 style="margin-left: 20px">Student Details</h3><br />
       <!-- <div class="panel-body"> -->

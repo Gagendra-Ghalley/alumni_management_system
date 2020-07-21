@@ -131,10 +131,6 @@
 												
 											</div>
 										</div>
-										<div class="col-md-12">
-
-				                        <button class="btn btn-link text-primary btn-lg"data-toggle="modal" data-target="#yeshi"><b>Read more</b></button>
-				                   		</div>
 										
 										<div class="clearfix"></div>
 									</div>
@@ -166,13 +162,7 @@
 						<b>Contact No.# +975-17258323</b>
 						
 				</div>
-				<div class="col-md-12">
-
-                        <button class="btn btn-link text-primary btn-lg"data-toggle="modal" data-target="#Tandin"><b>Read more</b></button>
-                   </div>
-		
 			</div>
-
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
 					<img src="<?php echo base_url();?>assets/img2/Parshu.jpg" style="height:150px;width: 150px;border-radius: 50%"/>
@@ -183,10 +173,6 @@
 						<b>Contact No.# +975-17696363</b>
 						
 				</div>
-				<div class="col-md-12">
-
-                        <button class="btn btn-link text-primary btn-lg"data-toggle="modal" data-target="#Parshu"><b>Read more</b></button>
-                   </div>
 			</div>
 			<div class="col-md-3 team-grid text-center">
 				<div class="team-img">
@@ -296,12 +282,7 @@
 						<b style="color: red">ON STUDY LEAVE</b>
 						
 				</div>
-				<div class="col-md-12">
-
-                        <button class="btn btn-link text-primary btn-lg"data-toggle="modal" data-target="#karma"><b>Read more</b></button>
-                   </div>
 			</div>
-			
 			
 		</div>
 	</div> <br>
@@ -396,115 +377,6 @@
 
             </div>
         </div>
-        <!-- tandin wangchuk -->
-        <div class="modal fade" id="Tandin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle"><h4><b>Details</b></h4></h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-			       <p><b>Mr.Tandin Wangchuk</b><br>
-					<b>17258323</b><br>
-					<b>tandinwangchuk.cst@rub.edu.bt</b><br><br>
-
-					<b>Mr.Tandin Wangchuk is a lecturer and hold a Master of IT in Network Computing. He is from Information and techlogy department at college and he has great interest in CanSat,Cryptology, Block chain, Network Security, Computer Networking and Programming Languages .</b>
-			</p>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			       
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Karma wangchuk -->
-<div class="modal fade" id="karma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle"><h4><b>Details</b></h4></h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-			       <p><b>Mr.Karma Wangchuk</b><br>
-
-					<b>17328880</b><br>
-					<b>karma.cst@rub.edu.bt</b><br><br>
-
-					<b>Mr.Karma Wangchuk is an Assistant Lecturer at college and holds Master of Engineering in Computer Engineering ( Pursuing) Bachelor of Engineering in Information Technology.
-					 He is from Information technology department. He has successfully completed his research on “Clustering CST Telephone Bills Using SOM Algorithm” ,”Automatic Answer Evaluation: NLP Approach  and Electronic Device Games: An Implication on Academic Performance of Students in CST On going research: Bhutanese Sign Language Recognition System”. He is also interested in learning Image Processing, Machine learning and Big Data
-					.</b>
-			</p>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			       
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- yeshi wangchuk -->
-<div class="modal fade" id="yeshi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle"><h4><b>Details</b></h4></h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-			       <p><b>Mr.Yeshi Wangchuk</b><br>
-					<b>17581442</b><br>
-					<b>yeshiwangchuk.cst@rub.edu.bt</b><br><br>
-
-					<b>Mr.Yeshi Wangchuk is a Lecturer at college and has MSc in Computer Technology.He is from Information technology department. He has also served  teaching in schools and Chiphen Rigphel Project, Manson and also did Carpentery works. Besides teaching, he is also interested in Archery, Gardening and Badminton and volunteering services which includes Community Gonpa Construction, Covid-19 Control Center Support member, Other community services.
-					.</b>
-			</p>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			       
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- yeshi wangchuk -->
-<div class="modal fade" id="Parshu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle"><h4><b>Details</b></h4></h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-			       <p><b>Mr.Parshu Ram Dhungyel</b><br>
-					<b>17696363</b><br>
-					<b>parshuram.cst@rub.edu.bt</b><br><br>
-
-					<b>Mr.Parshu Ram Dhungyel is a Associate Lecturer and holds MSc in Computer System 
-						Information technology.He has keen interest in IoT and  NLP. 
-
-					.</b>
-			</p>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			       
-      </div>
-    </div>
-  </div>
-</div>
 
 
 

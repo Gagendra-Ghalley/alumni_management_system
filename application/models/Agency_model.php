@@ -8,9 +8,9 @@ class Agency_model extends CI_Model {
 	public function listDivisions() {
 		
 		
-		$query = "SELECT batch.name AS Agency FROM batch 
-LEFT JOIN department ON department.department_ID = batch.department_ID 
-		WHERE department.name = '".$this->session->userdata('deptName')."'";
+		$query = "SELECT bpas_master_agency.name AS Agency FROM bpas_master_agency 
+LEFT JOIN bpas_master_agencyparent ON bpas_master_agencyparent.AgencyParentID = bpas_master_agency.AgencyParentID 
+		WHERE bpas_master_agencyparent.name = '".$this->session->userdata('deptName')."'";
 		
 		$result = $this->db->query($query);
 		return $result;
@@ -22,21 +22,21 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	public function updateMainParentAgency() {
 		
 		
-		$query ="SELECT distinct t.departmentParent_ID, a.name FROM user_profiles t 
-				LEFT JOIN masteragency a on a.batch_ID = t.departmentParent_ID
-				WHERE t.departmentParent_ID <> '0' ";
+		$query ="SELECT distinct t.AgencyMainParentID, a.name FROM bpas_user_profiles t 
+				LEFT JOIN masteragency a on a.AgencyID = t.AgencyMainParentID
+				WHERE t.AgencyMainParentID <> '0' ";
 				
 		$selectresult=$this->db->query($query);
 			
 			
 			foreach($selectresult->result() as $row){
 				
-				$checkquery = $this->db->query("SELECT departmentParent_ID FROM departmentParent WHERE `departmentParent_ID` = '".$row->departmentParent_ID."'");
+				$checkquery = $this->db->query("SELECT AgencyMainParentID FROM bpas_master_agencymainparent WHERE `AgencyMainParentID` = '".$row->AgencyMainParentID."'");
 				
 				if($checkquery->num_rows()>0) {
-					echo "Duplicate Entry".$row->departmentParent_ID;		
+					echo "Duplicate Entry".$row->AgencyMainParentID;		
 															} else {
-					$insertquery = "INSERT INTO departmentParent (departmentParent_ID, name) VALUES ('".$row->departmentParent_ID."', '".$row->name."')";												
+					$insertquery = "INSERT INTO bpas_master_agencymainparent (AgencyMainParentID, name) VALUES ('".$row->AgencyMainParentID."', '".$row->name."')";												
 																	
 					if($this->db->query($insertquery)) {
 									
@@ -55,21 +55,21 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	public function updateParentAgency() {
 		
 		
-				$query= "SELECT distinct t.department_ID, a.name, t.departmentParent_ID FROM user_profiles t 
-						LEFT JOIN masteragency a on a.batch_ID = t.department_ID
-						WHERE t.department_ID <> '0' ";
+				$query= "SELECT distinct t.AgencyParentID, a.name, t.AgencyMainParentID FROM bpas_user_profiles t 
+						LEFT JOIN masteragency a on a.AgencyID = t.AgencyParentID
+						WHERE t.AgencyParentID <> '0' ";
 						
 				$selectresult=$this->db->query($query);
 			
 			
 			foreach($selectresult->result() as $row){
 				
-				$checkquery = $this->db->query("SELECT department_ID FROM department WHERE `department_ID` = '".$row->department_ID."'");
+				$checkquery = $this->db->query("SELECT AgencyParentID FROM bpas_master_agencyparent WHERE `AgencyParentID` = '".$row->AgencyParentID."'");
 				
 				if($checkquery->num_rows()>0) {
-					echo "Duplicate Entry".$row->department_ID;		
+					echo "Duplicate Entry".$row->AgencyParentID;		
 															} else {
-					$insertquery = "INSERT INTO department (department_ID, name, departmentParent_ID) VALUES ('".$row->department_ID."', '".$row->name."', '".$row->departmentParent_ID."')";												
+					$insertquery = "INSERT INTO bpas_master_agencyparent (AgencyParentID, name, AgencyMainParentID) VALUES ('".$row->AgencyParentID."', '".$row->name."', '".$row->AgencyMainParentID."')";												
 					
 					$this->db->query($insertquery);												
 					/*if($this->db->query($insertquery)) {
@@ -87,20 +87,20 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	
 	public function updateAgency() {
 		
-				$query = "SELECT distinct t.batch_ID, a.name,t.department_ID, t.departmentParent_ID FROM user_profiles t 
-						LEFT JOIN masteragency a on a.batch_ID = t.batch_ID
-						WHERE t.departmentParent_ID <> '0'";
+				$query = "SELECT distinct t.AgencyID, a.name,t.AgencyParentID, t.AgencyMainParentID FROM bpas_user_profiles t 
+						LEFT JOIN masteragency a on a.AgencyID = t.AgencyID
+						WHERE t.AgencyMainParentID <> '0'";
 						
 				$selectresult=$this->db->query($query);
 					
 			foreach($selectresult->result() as $row){
 				
-				$checkquery = $this->db->query("SELECT batch_ID FROM batch WHERE `batch_ID` = '".$row->batch_ID."'");
+				$checkquery = $this->db->query("SELECT AgencyID FROM bpas_master_agency WHERE `AgencyID` = '".$row->AgencyID."'");
 				
 				if($checkquery->num_rows()>0) {
-					echo "Duplicate Entry".$row->batch_ID;		
+					echo "Duplicate Entry".$row->AgencyID;		
 															} else {
-					$insertquery = "INSERT INTO batch (batch_ID, name, department_ID, departmentParent_ID) VALUES ('".$row->batch_ID."', '".$row->name."', '".$row->department_ID."', '".$row->departmentParent_ID."')";												
+					$insertquery = "INSERT INTO bpas_master_agency (AgencyID, name, AgencyParentID, AgencyMainParentID) VALUES ('".$row->AgencyID."', '".$row->name."', '".$row->AgencyParentID."', '".$row->AgencyMainParentID."')";												
 																	
 					$this->db->query($insertquery);							
 																
@@ -115,17 +115,17 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	
 	public function updateSupervisorAgency() {
 		
-		$query = "SELECT DISTINCT u.batch_ID, a.Name AS Agency,u.cid, u.Grade FROM user_profiles u 
-				LEFT JOIN batch a ON u.batch_ID = a.batch_ID
+		$query = "SELECT DISTINCT u.AgencyID, a.Name AS Agency,u.cid, u.Grade FROM bpas_user_profiles u 
+				LEFT JOIN bpas_master_agency a ON u.AgencyID = a.AgencyID
 				WHERE u.Grade = 'P1'";
 				$success=0;
 		$chieflist = $this->db->query($query);
 		foreach($chieflist->result() as $chief) {
 			
-			$updatechief = "UPDATE batch SET chief = '".$chief->cid."' WHERE batch.batch_ID = '".$chief->batch_ID."'";
+			$updatechief = "UPDATE bpas_master_agency SET chief = '".$chief->cid."' WHERE bpas_master_agency.AgencyID = '".$chief->AgencyID."'";
 			if($this->db->query($updatechief)){
 		
-						$updaterole = $this->db->query("UPDATE user_profiles SET roleId='4' WHERE cid='".$chief->cid."'");		
+						$updaterole = $this->db->query("UPDATE bpas_user_profiles SET roleId='4' WHERE cid='".$chief->cid."'");		
 				
 			
 			}
@@ -138,16 +138,16 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	public function updateSupervisorParentAgency() {
 		
 		
-		$query = "SELECT DISTINCT u.department_ID, a.Name AS Agency,u.cid, u.Grade FROM user_profiles u 
-				LEFT JOIN department a ON u.department_ID = a.department_ID
+		$query = "SELECT DISTINCT u.AgencyParentID, a.Name AS Agency,u.cid, u.Grade FROM bpas_user_profiles u 
+				LEFT JOIN bpas_master_agencyparent a ON u.AgencyParentID = a.AgencyParentID
 				WHERE u.Grade = 'EX3' OR u.Grade='EX2'";
 				$success=0;
 		$directorlist = $this->db->query($query);
 		foreach($directorlist->result() as $director) {
 			
-			$updatedirector = "UPDATE department SET director = '".$director->cid."' WHERE department.department_ID = '".$director->department_ID."'";
+			$updatedirector = "UPDATE bpas_master_agencyparent SET director = '".$director->cid."' WHERE bpas_master_agencyparent.AgencyParentID = '".$director->AgencyParentID."'";
 			if($this->db->query($updatedirector)){
-						$updaterole = $this->db->query("UPDATE user_profiles SET roleId='3' WHERE cid='".$director->cid."'");		
+						$updaterole = $this->db->query("UPDATE bpas_user_profiles SET roleId='3' WHERE cid='".$director->cid."'");		
 				$success=1;
 			}
 			
@@ -158,17 +158,17 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	
 	public function updateSupervisorMainParentAgency() {
 					
-				$query = "SELECT DISTINCT u.departmentParent_ID, a.Name AS Agency,u.cid, u.Grade FROM user_profiles u 
-				LEFT JOIN departmentParent a ON u.departmentParent_ID = a.departmentParent_ID
+				$query = "SELECT DISTINCT u.AgencyMainParentID, a.Name AS Agency,u.cid, u.Grade FROM bpas_user_profiles u 
+				LEFT JOIN bpas_master_agencymainparent a ON u.AgencyMainParentID = a.AgencyMainParentID
 				WHERE u.Grade = 'EX1'";
 				$success=0;
 		$secretarylist = $this->db->query($query);
 		foreach($secretarylist->result() as $secretary) {
 			
-			$updatesecretary = "UPDATE departmentParent SET minSecretary = '".$secretary->cid."' WHERE departmentParent.departmentParent_ID = '".$secretary->departmentParent_ID."'";
+			$updatesecretary = "UPDATE bpas_master_agencymainparent SET minSecretary = '".$secretary->cid."' WHERE bpas_master_agencymainparent.AgencyMainParentID = '".$secretary->AgencyMainParentID."'";
 			if($this->db->query($updatesecretary)){
 				
-						$updaterole = $this->db->query("UPDATE user_profiles SET roleId='2' WHERE cid='".$secretary->cid."'");		
+						$updaterole = $this->db->query("UPDATE bpas_user_profiles SET roleId='2' WHERE cid='".$secretary->cid."'");		
 				$success=1;
 						}
 			
@@ -179,15 +179,15 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 		
 	}
 	
-	public function yearofgraduation() {//Tamang (Pulling the dropdown lists for year of graduation and department)
+	public function getParentAgencyList() {
 					
-                $query="select distinct name, department_ID from department";
+                $query="select distinct name, AgencyParentID from bpas_master_agencyparent";
                 $parentagency=$this->db->query($query);
                 return $parentagency;
       
            }
 				
-			public function get_dropdownlistforuser_selectyear() {//Tamang(dropdown list for select year for user)
+			public function getAgencyList() {
 				
 				 $parent=$this->input->post("parent");
             $query="select distinct name, AgencyID from bpas_master_agency WHERE bpas_master_agency.AgencyParentID ='$parent' ";
@@ -195,97 +195,63 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
             return $agency_info;
 				
 			}
-
-				public function get_dropdownlistforbatch_selectyear() {//Tamang(dropdown list for select year for batch)
-				
-				 $parent=$this->input->post("parent");
-            $query="select distinct name, batch_ID from batch WHERE batch.department_ID ='$parent' ";
-            $agency_info=$this->db->query($query);
-            return $agency_info;
-				
-			}
 		
 		
 	
-<<<<<<< HEAD
-	public function get_dropdownlistforuser($department){
-=======
-	public function manageuser_dropdownlist($agency){
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+	public function getEmployees($agency){
 		
 	$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
 		p.cid,
-		p.batch_ID, 
+		p.AgencyID, 
 		a.name AS Agency, 
-		
+		p.EmpNo AS EmpNo,
 		d.name AS ParentAgency, 
 		m.name AS MainParentAgency, 
-		
-		
+		masterposition.Description AS PositionTitle,
+		p.DateOfBirth as DOB,
 		p.email as Email,
 		p.telephone as Telephone,
-		
+		p.Grade as Grade,
 		p.gender,
 		p.profileId,
 		p.Mobile
-<<<<<<< HEAD
 		FROM bpas_user_profiles p 
 		LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID= p.AgencyMainParentID 
 		LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID 
 		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
 		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
-		WHERE p.AgencyID ='".$department."'";
-=======
-		FROM user_profiles p 
-		LEFT JOIN departmentParent m ON m.departmentParent_ID= p.departmentParent_ID 
-		LEFT JOIN department d ON d.department_ID=p.department_ID 
-		LEFT JOIN batch a ON a.batch_ID=p.batch_ID 
-		
-		WHERE p.batch_ID ='".$agency."'";
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+		WHERE p.AgencyID ='".$agency."'";
 		$employees = $this->db->query($query);
 		return $employees;
 		
 		
 	}
-<<<<<<< HEAD
-	public function get_dropdownlistforbatch($agency){//Tamang(Dropdown list for batch)
-=======
-	public function yearofgraduation_dropdownlist($agency){
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+	public function getEmployees1($agency){
 		
 	$query= "SELECT  
 		 
 		a.name AS Agency,
-		a.batch_ID
+		a.AgencyID
 		
-		FROM batch a 
+		FROM bpas_master_agency a 
 		
-		WHERE a.batch_ID ='".$agency."'";
+		WHERE a.AgencyID ='".$agency."'";
 		$employees = $this->db->query($query);
 		return $employees;
 		
 		
 	}
 
-<<<<<<< HEAD
-	public function get_dropdownlistfordepartment($department){
-=======
-	public function department_dropdownlist($agency){
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+	public function getEmployees2($agency){
 		
 	$query= "SELECT  
 		 
 		d.name AS ParentAgency,
-		d.department_ID
+		d.AgencyParentID
 		
-		FROM department d 
+		FROM bpas_master_agencyparent d 
 		
-<<<<<<< HEAD
-		WHERE d.AgencyParentID ='".$department."'";
-=======
-		WHERE d.department_ID ='".$agency."'";
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+		WHERE d.AgencyParentID ='".$agency."'";
 		$employees = $this->db->query($query);
 		return $employees;
 		
@@ -293,10 +259,10 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	}
 	public function listFullAgencies(){
 				
-		$query="SELECT a.name AS AgencyName, a.batch_ID AS batch_ID, p.name AS AgencyParentName, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from batch a
-					LEFT JOIN department p ON p.department_ID = a.department_ID
-					LEFT JOIN departmentParent m ON m.departmentParent_ID = a.departmentParent_ID
-					LEFT JOIN user_profiles e ON e.cid = a.chief";
+		$query="SELECT a.name AS AgencyName, a.AgencyId AS AgencyID, p.name AS AgencyParentName, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from bpas_master_agency a
+					LEFT JOIN bpas_master_agencyparent p ON p.AgencyparentID = a.AgencyParentID
+					LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID = a.AgencyMainParentID
+					LEFT JOIN bpas_user_profiles e ON e.cid = a.chief";
 		$agencydetails=$this->db->query($query);
 		return $agencydetails;
 		
@@ -304,40 +270,40 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	}
 	public function listSingleAgency($agency) {
 				
-			$query="SELECT a.name AS AgencyName, a.batch_ID AS batch_ID, p.name AS AgencyParentName, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from batch a
-					LEFT JOIN department p ON p.department_ID = a.department_ID
-					LEFT JOIN batch m ON m.departmentParent_ID = a.departmentParent_ID
-					LEFT JOIN user_profiles e ON e.cid = a.chief 
-					WHERE a.batch_ID='".$agency."'";
+			$query="SELECT a.name AS AgencyName, a.AgencyId AS AgencyID, p.name AS AgencyParentName, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from bpas_master_agency a
+					LEFT JOIN bpas_master_agencyparent p ON p.AgencyparentID = a.AgencyParentID
+					LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID = a.AgencyMainParentID
+					LEFT JOIN bpas_user_profiles e ON e.cid = a.chief 
+					WHERE a.AgencyId='".$agency."'";
 		$agencydetails=$this->db->query($query);
 		return $agencydetails;
 		
 	}
 	public function listFullParentAgencies(){
 				
-			$sql="SELECT a.name AS AgencyParentName, a.department_ID as department_ID, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from department a
+			$sql="SELECT a.name AS AgencyParentName, a.AgencyParentID as AgencyParentID, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from bpas_master_agencyparent a
 					
-					LEFT JOIN departmentParent m ON m.departmentParent_ID = a.departmentParent_ID
-					LEFT JOIN user_profiles e ON e.cid = a.director";
+					LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID = a.AgencyMainParentID
+					LEFT JOIN bpas_user_profiles e ON e.cid = a.director";
 			$parentagencies=$this->db->query($sql);
 			return $parentagencies;
 		
 	}
 	
 	public function listSingleParentAgency($pagency){
-			$result = $this->db->query("SELECT a.name AS AgencyParentName, a.department_ID as department_ID, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from department a
+			$result = $this->db->query("SELECT a.name AS AgencyParentName, a.AgencyParentID as AgencyParentID, m.name AS AgencyMainParentName, CONCAT(e.FirstName,' ',e.MiddleName,' ', e.Lastname) as Supervisor from bpas_master_agencyparent a
 					
-					LEFT JOIN departmentParent m ON m.departmentParent_ID = a.departmentParent_ID
-					LEFT JOIN user_profiles e ON e.cid = a.director
-					WHERE a.department_ID='".$pagency."'");
+					LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID = a.AgencyMainParentID
+					LEFT JOIN bpas_user_profiles e ON e.cid = a.director
+					WHERE a.AgencyParentID='".$pagency."'");
 					return $result;
 		
 	}
 	public function listSupervisors($agency){
 				
-			$query = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid, a.name AS AgencyName FROM user_profiles e
-			LEFT JOIN batch a ON a.batch_ID = e.batch_ID 
-			WHERE e.batch_ID='".$agency."' AND (e.Grade='P5' OR e.Grade='P4' OR e.Grade = 'P3' OR e.Grade = 'P2' OR e.Grade = 'P1' OR e.Grade = 'EX1' OR e.Grade = 'EX2' OR e.Grade = 'EX3')");
+			$query = $this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid, a.name AS AgencyName FROM bpas_user_profiles e
+			LEFT JOIN bpas_master_agency a ON a.AgencyID = e.AgencyID 
+			WHERE e.AgencyID='".$agency."' AND (e.Grade='P5' OR e.Grade='P4' OR e.Grade = 'P3' OR e.Grade = 'P2' OR e.Grade = 'P1' OR e.Grade = 'EX1' OR e.Grade = 'EX2' OR e.Grade = 'EX3')");
 			return $query;
 			
 		
@@ -345,31 +311,31 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	
 	public function listParentSupervisors($pagency){
 		
-		$result=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid, a.name AS AgencyParentName FROM user_profiles e
-			LEFT JOIN department a ON a.department_ID = e.department_ID 
-			WHERE a.department_ID='".$pagency."' AND (e.Grade = 'P2' OR e.Grade = 'P1' OR e.Grade = 'EX1' OR e.Grade = 'EX2' OR e.Grade = 'EX3')");
+		$result=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid, a.name AS AgencyParentName FROM bpas_user_profiles e
+			LEFT JOIN bpas_master_agencyparent a ON a.AgencyParentID = e.AgencyParentID 
+			WHERE a.AgencyParentID='".$pagency."' AND (e.Grade = 'P2' OR e.Grade = 'P1' OR e.Grade = 'EX1' OR e.Grade = 'EX2' OR e.Grade = 'EX3')");
 			
 			return $result;
 			
 	} 
 	public function listofftgMain(){
 		
-		$result=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid FROM user_profiles e
+		$result=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid FROM bpas_user_profiles e
 						 WHERE e.roleId='3'");
 		return $result;
 		
 	}
 	public function listofftgParent($pagency){
 		
-		$result=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid FROM user_profiles e
-						 WHERE e.roleId='4' AND e.department_ID='".$pagency."'");
+		$result=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid FROM bpas_user_profiles e
+						 WHERE e.roleId='4' AND e.AgencyParentID='".$pagency."'");
 		return $result;
 		
 	}
 	
 	public function listofftgAgency($agency){
-		$result=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid FROM user_profiles e
-						 WHERE e.batch_ID='".$agency."'");
+		$result=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ', e. Lastname) as name, e.cid AS cid FROM bpas_user_profiles e
+						 WHERE e.AgencyID='".$agency."'");
 		return $result;
 		
 	}
@@ -378,24 +344,25 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 				
 			$query= "SELECT CONCAT(p.FirstName, ' ', p.MiddleName, ' ', p.LastName) AS name, 
 		p.cid,
-		p.batch_ID, 
+		p.FirstName, 
+		p.AgencyID,
 		a.name AS Agency, 
-		
+		p.EmpNo AS EmpNo,
 		d.name AS ParentAgency, 
 		m.name AS MainParentAgency, 
-		
-		
+		masterposition.Description AS PositionTitle,
+		p.DateOfBirth as DOB,
 		p.email as Email,
 		p.telephone as Telephone,
-		
+		p.Grade as Grade,
 		p.gender,
 		p.profileId,
 		p.Mobile
-		FROM user_profiles p 
-		LEFT JOIN departmentParent m ON m.departmentParent_ID= p.departmentParent_ID 
-		LEFT JOIN department d ON d.department_ID=p.department_ID 
-		LEFT JOIN batch a ON a.batch_ID=p.batch_ID 
-		
+		FROM bpas_user_profiles p 
+		LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID= p.AgencyMainParentID 
+		LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID 
+		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
+		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
 		WHERE p.cid ='".$keyword."'";
 		$employees = $this->db->query($query);
 		return $employees;
@@ -405,12 +372,12 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 
 	
 	public function updateSingleSupervisor($supervisor,$agency){
-		$previoussupervisor = $this->db->query("SELECT `chief` FROM batch WHERE batch_ID ='".$agency."'");
+		$previoussupervisor = $this->db->query("SELECT `chief` FROM bpas_master_agency WHERE AgencyId ='".$agency."'");
 		foreach($previoussupervisor->result() as $row){
 				
-			$this->db->query("UPDATE user_profiles SET `roleId`='5' WHERE `cid`='".$row->chief."' AND `roleId`='4'");
-			if($this->db->query("UPDATE batch SET `chief`='".$supervisor."' WHERE batch_ID='".$agency."'")){
-				$this->db->query("UPDATE user_profiles SET `roleId`='4' WHERE `cid`='".$supervisor."' AND `roleId`='5'");
+			$this->db->query("UPDATE bpas_user_profiles SET `roleId`='5' WHERE `cid`='".$row->chief."' AND `roleId`='4'");
+			if($this->db->query("UPDATE bpas_master_agency SET `chief`='".$supervisor."' WHERE AgencyID='".$agency."'")){
+				$this->db->query("UPDATE bpas_user_profiles SET `roleId`='4' WHERE `cid`='".$supervisor."' AND `roleId`='5'");
 				return true;
 				} else return false;
 		}
@@ -425,21 +392,22 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
 	    p.MiddleName AS MiddleName,
 		p.LastName As LastName,
 		p.cid AS CID, 
-		a.name AS Agency, a.batch_ID,
-		
-		d.name AS Department, d.department_ID,
-		m.departmentParent_ID,
-		
+		a.name AS Agency, a.AgencyID,
+		p.EmpNo AS EmpNo,
+		d.name AS Department, d.AgencyParentID,
+		m.name AS Ministry, m.AgencyMainParentID,
+		masterposition.Description AS PositionTitle,masterposition.PositionID,
+		p.DateOfBirth as DOB,
 		p.email as Email,
 		p.telephone as Telephone,
-		
+		p.Grade as Grade,
 		p.Gender as Gender,
 		p.Mobile as Mobileno
-		FROM user_profiles p 
-		LEFT JOIN departmentParent m ON m.departmentParent_ID= p.departmentParent_ID 
-		LEFT JOIN department d ON d.department_ID=p.department_ID 
-		LEFT JOIN batch a ON a.batch_ID=p.batch_ID 
-		
+		FROM bpas_user_profiles p 
+		LEFT JOIN bpas_master_agencymainparent m ON m.AgencyMainParentID= p.AgencyMainParentID 
+		LEFT JOIN bpas_master_agencyparent d ON d.AgencyParentID=p.AgencyParentID 
+		LEFT JOIN bpas_master_agency a ON a.AgencyID=p.AgencyID 
+		LEFT JOIN masterposition ON masterposition.PositionID = p.PositionTitle
 		WHERE p.cid ='".$cid."' ";
 		$ciddetails = $this->db->query($query)->row();
 		return $ciddetails;
@@ -496,7 +464,7 @@ LEFT JOIN department ON department.department_ID = batch.department_ID
       		 {
       		 	if ($row['dakLetterNo']!=$letterno)
       		 	{
-      		 		echo ' match  found';
+      		 		echo ' match not found';
       		 	}
 
       		 	else {
@@ -544,7 +512,7 @@ public function name($Rcid)
 {
            
 
-            $query=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ',e.Lastname) as RecieverName,  FROM user_profiles e
+            $query=$this->db->query("SELECT CONCAT(e.FirstName, ' ',e.MiddleName, ' ',e.Lastname) as RecieverName,  FROM bpas_user_profiles e
 						 WHERE e.cid='".$Rcid."'");
 		// return $query;
 
@@ -573,23 +541,23 @@ public function name($Rcid)
 
 // echo $param.'this inside function name';
 
-// $data['RecieverName']=$this->db->get_where('user_profiles', array('cid' => $Rcid))->row();
+// $data['RecieverName']=$this->db->get_where('bpas_user_profiles', array('cid' => $Rcid))->row();
 // foreach($RecieverName as $Name)
 
 
 
-		 //     $query = "SELECT DISTINCT  FirstName,MiddleName,LastName AS Name FROM user_profiles 
+		 //     $query = "SELECT DISTINCT  FirstName,MiddleName,LastName AS Name FROM bpas_user_profiles 
 			// 	WHERE cid='".$param."'";
 				
 		 //        $names = $this->db->query($query);
 		 //      foreach($names->result() as $name) {
 			
-			// $RecieverName = "UPDATE user_profiles  SET RecieverName = '".$name->Name."' WHERE cid = '".$param."'";
+			// $RecieverName = "UPDATE bpas_user_profiles  SET RecieverName = '".$name->Name."' WHERE cid = '".$param."'";
 
 			// return $RecieverName;
 			
 // {
-// $data['userlist']=$this->db->get_where('user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'cid'=>$Rcid,'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
+// $data['userlist']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'cid'=>$Rcid,'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
 
 
 
@@ -599,7 +567,7 @@ public function name($Rcid)
                                               
          
 				
-// 				$checkquery = $this->db->query("SELECT FirstName,MiddleName,LastName  As Name FROM user_profiles WHERE `cid` = '".$row->cid."' ");
+// 				$checkquery = $this->db->query("SELECT FirstName,MiddleName,LastName  As Name FROM bpas_user_profiles WHERE `cid` = '".$row->cid."' ");
 
 // 				return $checkquery ;
 

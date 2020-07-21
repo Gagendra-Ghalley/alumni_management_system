@@ -25,7 +25,7 @@ class UsermanagementController extends CI_Controller {
 		$data1['identifier']="";
 		if($param1=="adduser" || $param2=="2"){
 			$data1['ministryList']=$this->db->get('bpas_master_agencymainparent')->result_array();
-			$data1['departmentList']=$this->db->get('department')->result_array();
+			$data1['departmentList']=$this->db->get('bpas_master_agencyparent')->result_array();
 			$data1['divisionList']=$this->db->get('bpas_master_agency')->result_array();
 			$data1['dzongkhagList']=$this->db->get('st_dzongkhag_master')->result_array();
 			$data1['bapasRole']=$this->db->get('bpas_master_roles')->result_array();
@@ -57,9 +57,9 @@ class UsermanagementController extends CI_Controller {
 		$data['FirstName']=$this->input->post('FirstName');
 		$data['MiddleName']=$this->input->post('MiddleName');
 		$data['LastName']=$this->input->post('LastName');
-		$data['departmentParent_ID']=$this->input->post('Ministry');
-		$data['department_ID']=$this->input->post('Department');
-		$data['batch_ID']=$this->input->post('Agency');
+		$data['AgencyMainParentID']=$this->input->post('Ministry');
+		$data['AgencyParentID']=$this->input->post('Department');
+		$data['AgencyID']=$this->input->post('Agency');
 		$data['Grade']=$this->input->post('Grade');
 		$data['Gender']=$this->input->post('Gender');
 		$data['PositionTitle']=$this->input->post('designation');
@@ -96,9 +96,9 @@ function update()
 		$data['FirstName']=$this->input->post('FirstName');
 		$data['MiddleName']=$this->input->post('MiddleName');
 		$data['LastName']=$this->input->post('LastName');
-		$data['departmentParent_ID']=$this->input->post('Ministry');
-		$data['department_ID']=$this->input->post('Department');
-		$data['batch_ID']=$this->input->post('Agency');
+		$data['AgencyMainParentID']=$this->input->post('Ministry');
+		$data['AgencyParentID']=$this->input->post('Department');
+		$data['AgencyID']=$this->input->post('Agency');
 		$data['Grade']=$this->input->post('Grade');
 		$data['Gender']=$this->input->post('Gender');
 		$data['PositionTitle']=$this->input->post('designation');
@@ -188,7 +188,7 @@ function update()
 	function Dak(){
 		
             $data1['ministryList']=$this->db->get('bpas_master_agencymainparent')->result_array();
-			$data1['departmentList']=$this->db->get('department')->result_array();
+			$data1['departmentList']=$this->db->get('bpas_master_agencyparent')->result_array();
 			$data1['divisionList']=$this->db->get('bpas_master_agency')->result_array();
 		
 		$this->load->view('userManagement/dak1',$data1);
@@ -318,7 +318,7 @@ function getDaksequenceNo(){
 // 	$this->load->view('track1',$data1);
 // }
 // else{
-// 	$data1['name']=$this->db->get_where('bpas_user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
+// 	$data1['name']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
 
 // $data1['userdeatils']=$this->ag->tracks($param.'/'.$param2); 
 // $this->load->view('userManagement/forward2', $data1);
@@ -346,7 +346,7 @@ function getDaksequenceNo(){
 				$this->load->view('track1',$data1); 
 			}
 			else{
-				$data1['name']=$this->db->get_where('bpas_user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
+				$data1['name']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
 
 			$data1['userdeatils']=$this->ag->tracks($param.'/'.$param2); 
 			$this->load->view('userManagement/forward2', $data1);	
@@ -374,7 +374,7 @@ function getDaksequenceNo(){
 				$this->load->view('track1',$data1); 
 			}
 			else{
-				$data1['name']=$this->db->get_where('bpas_user_profiles',array('departmentParent_ID' =>$this->session->userdata('ministryId'),'department_ID'=>$this->session->userdata('parentID'),'batch_ID'=>$this->session->userdata('batch_ID')))->result_array();
+				$data1['name']=$this->db->get_where('bpas_user_profiles',array('AgencyMainParentID' =>$this->session->userdata('ministryId'),'AgencyParentID'=>$this->session->userdata('parentID'),'AgencyID'=>$this->session->userdata('agencyID')))->result_array();
 
 			$data1['userdeatils']=$this->ag->tracks($param); 
 			$this->load->view('userManagement/forward2', $data1);	

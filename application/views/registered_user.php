@@ -4,7 +4,7 @@
   <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper" style="color: #111"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
+                    <h2 class="text-left" style="text-shadow: 1px 1px 2px "></h2> <div class="clockwrapper"><div id="clock"></div>, <?php echo date('D d/M/Y');?></div>
                 </div>
                 <!--End Page Header -->
             </div>
@@ -17,15 +17,12 @@
  
                     </div>
                 </div>        
-   <div id="page-wrapper" style="margin-left: 0px">
-     
-             <div class="col-md-12 col-lg-12 col-sm-12">
-
+  <div class="row profile">
       <h4 style="margin-left: 20px"><b>Registered Users</b></h4>
       <!-- <div class="panel-body"> -->
       <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-12 col-lg-12 col-sm-12">
+                                <div class="col-lg-11">
                                     <div class="table-responsive">
                                         <table class="table tablescroll table-bordered table-hover table-striped" >
                                              
@@ -42,7 +39,7 @@
                     <td> <?php 
                                                     $cids=explode(", ", $row['relatedUserId']);
                                                     foreach ($cids as $key => $cid) {
-                                                      echo $this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->FirstName. ' '.$this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->MiddleName.' '.$this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->LastName .'';
+                                                      echo $this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->FirstName. ' '.$this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->MiddleName.' '.$this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->LastName .'';
                                                     }
                                                     ?>
                                                    </td> 
@@ -54,15 +51,15 @@
                                                       <td> <?php 
                                                     $cids=explode(", ", $row['relatedUserId']);
                                                     foreach ($cids as $key => $cid) {
-                                                      echo $this->db->get_where('user_profiles',array('cid' =>trim($cid)))->row()->gender. ' ';
+                                                      echo $this->db->get_where('bpas_user_profiles',array('cid' =>trim($cid)))->row()->gender. ' ';
                                                     }
                                                     ?>
                                                    </td> 
 
                                                      <td> <?php 
-                                                    $cids=explode(", ", $row['department_ID']);
+                                                    $cids=explode(", ", $row['AgencyParentID']);
                                                     foreach ($cids as $key => $cid) {
-                                                      echo $this->db->get_where('department',array('department_ID' =>trim($cid)))->row()->name. ' ';
+                                                      echo $this->db->get_where('bpas_master_agencyparent',array('AgencyParentID' =>trim($cid)))->row()->name. ' ';
                                                     }
                                                     ?>
                                                    </td>
@@ -71,9 +68,9 @@
                                                    
 
                                                      <td> <?php 
-                                                    $cids=explode(", ", $row['batch_ID']);
+                                                    $cids=explode(", ", $row['AgencyID']);
                                                     foreach ($cids as $key => $cid) {
-                                                      echo $this->db->get_where('batch',array('batch_ID' =>trim($cid)))->row()->name. ' ';
+                                                      echo $this->db->get_where('bpas_master_agency',array('AgencyID' =>trim($cid)))->row()->name. ' ';
                                                     }
                                                     ?>
                                                    </td> 
@@ -110,17 +107,8 @@
                             </div>
                             <!-- /.row -->
                         </div>
-                      </div>
-                    </div>
-                  </div>
-<<<<<<< HEAD
-=======
-                </div>
-            
-
-
         
-  <div class="bg-primary" style="margin-top: 147px;">
+  <div class="bg-primary" style="margin-top: 100px;">
             <div class="container">
 
                
@@ -133,13 +121,11 @@
 
                     <p>Alumni Management System@2020</p>
 
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                 </div>
-            
 
-
-        
- 
+            </div>
+        </div>
+      </div> 
 
 
     <script type="text/javascript">

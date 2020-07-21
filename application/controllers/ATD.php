@@ -21,8 +21,9 @@
 		$this->load->library('encrypt');
 		$this->load->model('ATD_model','atd');
 		$this->load->model('Agency_model','ag');
+		$this->load->model('Leave_model','lm');
+		$this->load->model('Holidays','hm');
 		$this->load->model('Messages_model','mm');
-		
 		// // $this->load->model('Sendemail','s');
 		// $this->load->library('../controllers/sendemail.php');
 		$this->header['messages'] = $this->mm->getMessages();
@@ -35,11 +36,11 @@
 	
 	public function index(){
 		$data['editdetail']=$this->sm->sortevent();
-				// $data['eventdetail']=$this->sm->getevent();
+				$data['eventdetail']=$this->sm->getevent();
 
-			$data['request']=$this->db->query("SELECT * from login where status1='approved'")->result_array();
+			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
 			
-		$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
+		$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
        	$this->load->view('alumni1',$data);
        
 			
@@ -49,15 +50,9 @@
 	
 	public function login(){
 $data['editdetail']=$this->sm->sortevent();
-<<<<<<< HEAD
-				// $data['eventdetail']=$this->sm->getevent();
+				$data['eventdetail']=$this->sm->getevent();
 			$data['request']=$this->db->query("SELECT * from bpas_logins where status1='approved'")->result_array();
 			$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
-=======
-				$data['eventdetail']=$this->sm->getevent();
-			$data['request']=$this->db->query("SELECT * from login where status1='approved'")->result_array();
-			$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
        	$this->load->view('alumni1',$data);
 		
 	}
@@ -87,10 +82,10 @@ $data['editdetail']=$this->sm->sortevent();
 	}
 
 	public function event1(){
-		//$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
+		//$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
 		//$data['editdetail']=$this->db->query("SELECT * from event_table")->result_array();
 		$data['editdetail']=$this->sm->getevent();
-		// $data['eventdetail']=$this->sm->sortevent();
+		$data['eventdetail']=$this->sm->sortevent();
 			$this->load->view('event1',$data);
 		
 	}
@@ -156,17 +151,6 @@ public function science(){
 			$this->load->view('administration');
 		}
 
-		public function Libray(){
-		
-		
-			$this->load->view('library');
-		}
-		public function ict(){
-		
-		
-			$this->load->view('ict');
-		}
-
 
 	public function donate(){
 		
@@ -183,10 +167,9 @@ public function science(){
 			
  public function Forgetpasswordemail()
 {
-	      // $this->load->view('template/includeheader',$this->dataheader);
+	      
+$this->load->view('forgetpasswordemailatd');
 		
-		$this->load->view('forgetpasswordemailatd');
-		// $this->load->view('template/includefooter');
         		
 }
 
@@ -196,45 +179,34 @@ public function science(){
 public function send(){
 $this->load->library('email');
 $mail = $this->input->post("password");
-// $cid = $this->input->post("cid");
+$cid = $this->input->post("cid");
 
-	if($mail==$this->input->post("password")){
+	if($mail==$this->input->post("password")&&$cid == $this->input->post("cid")){
 
 		
 	   		$this->load->library('email');
 	         $email = $this->input->post('password');
-	               	         
+	         $cid = $this->input->post('cid');      	         
 	         $findemail = $this->ForgotPassword($email);
-	           	         
-	         if($findemail){
+	         $findcid = $this->cid($cid);   	         
+	         if($findemail && $findcid){
 	         	
 	           $email = $this->input->post("password");
-	           // $cid = $this->input->post('cid'); 
+	           $cid = $this->input->post('cid'); 
         	// $email = $data['email'];
-<<<<<<< HEAD
-	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."'");
-=======
-	        $query1=$this->db->query("SELECT *  from login where email = '".$email."' and relatedUserId='".$cid."' ");
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+	        $query1=$this->db->query("SELECT *  from bpas_logins where email = '".$email."' and relatedUserId='".$cid."' ");
 	       $row=$query1->result_array(); 
 
 
 	       	if ($query1->num_rows()>0){
-	       	$email = $this->input->post("password");
-
        		 $passwordplain = "";
 	        $passwordplain  = rand(999999999,9999999999);
 	        $newpass['password'] = md5($passwordplain);
 	        $this->db->where('email', $email);
-	        $this->db->update('login', $newpass);
+	        $this->db->update('bpas_logins', $newpass);
 	        // $this->db->where('email', $email);
-<<<<<<< HEAD
 	        // $this->db->update('bpas_user_profiles', $newpass);
-        	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> your <b>password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please update your password after signing in <br>Thanks & regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
-=======
-	        // $this->db->update('user_profiles', $newpass);
         	 $message='<h3 align="center">Password Reset</h3><br> Dear '.$row[0]['FirstName'].', Thanks for contacting regarding to forgot password,<br> Your <b>Password</b> is randomly reset to <b>'.$passwordplain.'</b><br>Please Update your password after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 	      
 	        
         	
@@ -244,20 +216,18 @@ $mail = $this->input->post("password");
 		      	'protocol' 	=> 'smtp',
 		      	'smtp_host' => 'smtp.googlemail.com',
 		      	'smtp_port' => 465,
-		        'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-		      	'smtp_pass' => 'Choewangchuk@!_123', 
+		      'smtp_user' => '0216518.cst@rub.edu.bt', 
+		      	'smtp_pass' => 'Wangchuk_123', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
 		    );
 			
 		    $this->email->initialize($config);
-		     $subject = $this->input->post("name");
-			$mails = $this->input->post("email");
-		    $this->email->set_newline("\r\n");
 
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
-		    $this->email->to($email);
+		    $this->email->set_newline("\r\n");
+		    $this->email->from('0216518.cst@rub.edu.bt', 'Alumni Management System');
+		    $this->email->to($mail);
 		   
 		    $this->email->subject('OTP from Alumni Management System');
 		   
@@ -288,7 +258,7 @@ $mail = $this->input->post("password");
 	            }
 	              else{
 
-	          $this->session->set_flashdata('message', 'Email did not match');
+	          $this->session->set_flashdata('message', 'Email/CID did not match');
 	        		redirect('ATD/Forgetpasswordemail');	      
 	      		}
 
@@ -303,7 +273,7 @@ $mail = $this->input->post("password");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('email');
-			        $this->db->from('login'); 
+			        $this->db->from('bpas_logins'); 
 			        $this->db->where('email', $email); 
 			        $query=$this->db->get();
 			        return $query->row_array();
@@ -312,7 +282,7 @@ $mail = $this->input->post("password");
 			 {
 			 		$this->load->library('email');
 			        $this->db->select('relatedUserId');
-			        $this->db->from('login'); 
+			        $this->db->from('bpas_logins'); 
 			        $this->db->where('relatedUserId', $cid); 
 			        $query=$this->db->get();
 			        return $query->row_array();
@@ -351,30 +321,26 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 				$mail['email'] = $this->input->post("email");
 				$cid = $this->input->post("cid");	;
 				$this->db->where('relatedUserId', $cid);
-		  		$this->db->update('login',$mail);
+		  		$this->db->update('bpas_logins',$mail);
 		  		$this->db->where('cid', $cid);
-		  		$this->db->update('user_profiles',$mail);
+		  		$this->db->update('bpas_user_profiles',$mail);
 		  		$this->db->where('relatedUserId', $cid);
-				$this->db->update('login',$dat);
+				$this->db->update('bpas_logins',$dat);
 
 				
 			$findcid = $this->cid($cid);   	         
 	         if($findcid){
 	         $mail = $this->input->post("email");
 	          $cid = $this->input->post("cid");
-	        $query1=$this->db->query("SELECT *  from login where relatedUserId='".$cid."' ");
+	        $query1=$this->db->query("SELECT *  from bpas_logins where relatedUserId='".$cid."' ");
 	       $row=$query1->result_array(); 
 
 
 	       	if ($query1->num_rows()>0){
        		 
         	$mail = $this->input->post("email");
-        	$passwordplain = $this->db->query("SELECT relatedUserId  from bpas_logins where relatedUserId='".$cid."'")->row()->relatedUserId;
-	        
-	      
-	        
 	
-        	 $message='<h3 align="center">Registration Successful</h3><br> Dear '.$row[0]['FirstName'].', thank you for registration.<br><br> Your both <b>username</b> and <b>password</b> is <b>'.$passwordplain.'</b><br>Please update your profile after signing in.<br><br>Thanks & regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
+        	 $message='<h3 align="center">Registration Successful</h3><br> Dear '.$row[0]['FirstName'].', Thank you for registration.<br>Please Update your profile after signing in <br>Thanks & Regards <br>  <h3> Alumni Management System</h3>'. "\r\n";
 	      
 	        
         	
@@ -384,19 +350,17 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 		      	'protocol' 	=> 'smtp',
 		      	'smtp_host' => 'smtp.googlemail.com',
 		      	'smtp_port' => 465,
-		      	'smtp_user' => 'nimawangchuktamang7@gmail.com', 
-		      	'smtp_pass' => 'Choewangchuk@!_123', 
+		      	'smtp_user' => '0216518.cst@rub.edu.bt', 
+		      	'smtp_pass' => 'Wangchuk_123', 
 		      	'mailtype' 	=> 'html',
 		      	'charset' 	=> 'iso-8859-1',
 		      	'wordwrap' 	=> TRUE
 		    );
 			
 		    $this->email->initialize($config);
-		     $subject = $this->input->post("name");
-			$mails = $this->input->post("email");
-		    $this->email->set_newline("\r\n");
 
-		    $this->email->from('nimawangchuktamang7@gmail.com', 'Alumni Management System');
+		    $this->email->set_newline("\r\n");
+		    $this->email->from('0216518.cst@rub.edu.bt', 'Alumni Management System');
 		    $this->email->to($mail);
 		   
 		    $this->email->subject('OTP from Alumni Management System');
@@ -404,7 +368,7 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 	        $this->email->message($message);
 
 	     // $this->db->where('relatedUserId', $cid);
-		  		// $this->db->update('login',$da);
+		  		// $this->db->update('bpas_logins',$da);
 		  		
 
 	      
@@ -445,22 +409,22 @@ $this->form_validation->set_rules('cid','CID','required|trim|callback_validate_c
 
 	     
 		
-// 		else {
+		else {
 			
 			
 			
-// 			$data1['message']='<br /><br /><br /><span class="alert alert-info">Registration Fail</span> <br /><br /><br />
-// 			 	<a href="'.base_url().'index.php/ATD/registration/"> <button type="button" class="btn btn-warning">
-// 		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
-// 		              </button>
-// 		            </a>';
+			$data1['message']='<br /><br /><br /><span class="alert alert-info">Registration Fail</span> <br /><br /><br />
+			 	<a href="'.base_url().'index.php/ATD/registration/"> <button type="button" class="btn btn-warning">
+		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
+		              </button>
+		            </a>';
 		        
-// 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data1);
+			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data1);
 
 		
 
 
-// }
+}
 
 }
 
@@ -507,33 +471,16 @@ public function validate_credentials1(){
 
 			$this->db->where('relatedUserId',$this->input->post('cid'));
 		    $this->db->where('status1','approved');
-		   	$result = $this->db->get('login');
+		   	$result = $this->db->get('bpas_logins');
 
 		   	if($result->num_rows()==1){
 				foreach($result->result() as $row){
-				// $this->form_validation->set_message ('validate_credentials1','*You are already registered ');
-
-
-
-			$data1['message']='<br /><br /><br /><span class="alert alert-info">You are already registered</span> <br /><br /><br />
-			 	<a href="'.base_url().'index.php/ATD/login1/"> <button type="button" class="btn btn-warning">
-		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
-		              </button>
-		            </a>';
-		            	$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data1);
-
+				$this->form_validation->set_message ('validate_credentials1','*You are already registered ');
 			}
 		}
 		else{
-			// $this->form_validation->set_message ('validate_credentials1','*You are not alumni of the college ');
-$data1['message']='<br /><br /><br /><span class="alert alert-info">You are not alumni of the college </span> <br /><br /><br />
-			 	<a href="'.base_url().'index.php/ATD/login1/"> <button type="button" class="btn btn-warning">
-		              <i class="fa fa-dashboard" aria-hidden="true"  ></i>&nbsp;&nbsp;&nbsp;OK</span>
-		              </button>
-		            </a>';
+			$this->form_validation->set_message ('validate_credentials1','*You are not alumni of the college ');
 
-
-	$this->load->view('userManagement/acknowledgemntwithoutheaderfooter1',$data1);
 		}
 			return false;
 				break;
@@ -595,25 +542,8 @@ $data1['message']='<br /><br /><br /><span class="alert alert-info">You are not 
 	
 	public function membersearch1(){//leki
  	
-<<<<<<< HEAD
 		$data['item']=$this->db->get('bpas_master_agencyparent')->result_array();
-		$this->load->view('Getmembers',$data);
-		
-=======
-
-		$data['item']=$this->db->get('department')->result_array();//for selecting department
-		// $this->load->view('template/includeheader',$this->dataheader);
-
-		$data['item']=$this->db->get('department')->result_array();
-
-		$this->load->view('search_result',$data);
-		
-
-
-		
-
-
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+		$this->load->view('membersearch3',$data);
 		
 		
 		
@@ -623,60 +553,47 @@ public	function viewmember2(){//leki
   			$name=$this->input->post('name');
   			// $department=$this->input->post('department');
 
-  			 // $department= $_POST['f1'];
+  			 $department= $_POST['f1'];
   		
 		
-  	// 	$issuance= $this->db->query("SELECT FirstName FROM user_profiles where FirstName='".$name."'")->row()->FirstName;
+  	// 	$issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
 
  		
-			// $data['checkissue']=$this->db->get_where('user_profiles', array('FirstName' => $name))->result_array();
+			// $data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
 		  
 
 
-  			// $issuance= $this->db->query("SELECT FirstName FROM user_profiles where FirstName='".$name."'")->row()->FirstName;
+  			// $issuance= $this->db->query("SELECT FirstName FROM bpas_user_profiles where FirstName='".$name."'")->row()->FirstName;
 
 
-  			// $issuance1= $this->db->query("SELECT department FROM user_profiles where department='".$department."'")->row()->department;
+  			// $issuance1= $this->db->query("SELECT department FROM bpas_user_profiles where department='".$department."'")->row()->department;
 
  						//OR
 
   			 	// $issuance=$this->sm->search1($name,$department);
 
-<<<<<<< HEAD
-  	 $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' ")->row();//to see if there is record or not in db
-=======
-  	 $issuance= $this->db->query("SELECT * FROM user_profiles where FirstName='".$name."' OR department_ID='".$department."'")->row();//to see if there is record or not in db
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+  	 $issuance= $this->db->query("SELECT * FROM bpas_user_profiles where FirstName='".$name."' OR AgencyParentID='".$department."'")->row();//to see if there is record or not in db
   			
 
 
   			if(sizeof($issuance)>0) 
 		  {
 
-	 	$data['checkissue']=$this->db->get_where('user_profiles', array('FirstName' => $name))->result_array();
+	 	$data['checkissue']=$this->db->get_where('bpas_user_profiles', array('FirstName' => $name))->result_array();
 		  
-<<<<<<< HEAD
-		  // $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
-=======
-		  $data1['checkissue']=$this->db->get_where('user_profiles', array('department_ID' => $department))->result_array();
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+		  $data1['checkissue']=$this->db->get_where('bpas_user_profiles', array('AgencyParentID' => $department))->result_array();
 		  
 
 
 
-		
-<<<<<<< HEAD
-		$this->load->view('search_result',$data);
-=======
-		$this->load->view('search_result',$data,$data1);
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
-		
+		 // $this->load->view('template/includeheader',$this->dataheader);
+		$this->load->view('viewmember1',$data,$data1);
+		$this->load->view('template/includefooter');
 	}
 	 else{
-	 	$this->load->view('no_result');
 	  	 $data['message']="There is no record of Alumni";
 	 			$this->load->view('userManagement/acknowledgemntwithoutheaderfooter',$data);
-	 
+	 // 
 	   }
 
 
@@ -788,57 +705,56 @@ public	function viewmember2(){//leki
 			
 			
 			if($role=='1'){			
-				// $data['leavecount']=$this->atd->leaveCountAll();
-				// $data['latecount']=$this->atd->lateCount();
-				// $data['notused']=$this->atd->notUsedAll();
-				 $data['divisions']=$this->ag->listDivisions();
-				// $data['reports']=$this->atd->dailyAttendance();
-				// $data['supervisor']=$this->sm->getSupervisor();
-				// $data['pendingLeave']=$this->lm->pendingCount();
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['latecount']=$this->atd->lateCount();
+				$data['notused']=$this->atd->notUsedAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$data['pendingLeave']=$this->lm->pendingCount();
 				$this->load->view('template/includeheader',$this->dataheader);
 				$this->load->view('superadmin/dashboard',$data);
 				$this->load->view('template/includefooter');
-			// } elseif ($role=='2'||$role=='7') {//Secretary
+			} elseif ($role=='2'||$role=='7') {//Secretary
 				
-			// 	$data['leavecount']=$this->atd->leaveCountAll();
-			// 	$data['latecount']=$this->atd->lateCount();
-			// 	$data['notused']=$this->atd->notUsedAll();
-			// 	$data['divisions']=$this->ag->listDivisions();
-			// 	$data['reports']=$this->atd->dailyAttendance();
-			// 	$data['supervisor']=$this->sm->getSupervisor();
-			// 	$data['pendingLeave']=$this->lm->pendingCount();
-			// 	$this->load->view('template/includeheader',$this->dataheader);
-			// 	$this->load->view('admin/dashboard',$data);
-			// 	$this->load->view('template/includefooter');
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['latecount']=$this->atd->lateCount();
+				$data['notused']=$this->atd->notUsedAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$data['pendingLeave']=$this->lm->pendingCount();
+				$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('admin/dashboard',$data);
+				$this->load->view('template/includefooter');
 				
-			// } elseif($role=='3'||$role=='8'){//Director
+			} elseif($role=='3'||$role=='8'){//Director
 				
-			// 	$data['leavecount']=$this->atd->leaveCountAll();
-			// 	$data['latecount']=$this->atd->lateCount();
-			// 	$data['notused']=$this->atd->notUsedAll();
-			// 	$data['divisions']=$this->ag->listDivisions();
-			// 	$data['reports']=$this->atd->dailyAttendance();
-			// 	$data['supervisor']=$this->sm->getSupervisor();
-			// 	$data['pendingLeave']=$this->lm->pendingCount();
-			// 	$this->load->view('template/includeheader',$this->dataheader);
-			// 	$this->load->view('agency/dashboard',$data);
-			// 	$this->load->view('template/includefooter');
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['latecount']=$this->atd->lateCount();
+				$data['notused']=$this->atd->notUsedAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$data['pendingLeave']=$this->lm->pendingCount();
+				$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('agency/dashboard',$data);
+				$this->load->view('template/includefooter');
 				
-			 }  
-			 elseif($role=='4'||$role=='9'){//Division Heads
-				$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
+			}  elseif($role=='4'||$role=='9'){//Division Heads
+				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
 				 //$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
-				//$data['editdetail']=$this->sm->sortevent();
+				$data['editdetail']=$this->sm->sortevent();
 				$data['eventdetail']=$this->sm->getevent();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);
-				// $data['leavecount']=$this->atd->leaveCountAll();
-				// $data['latecount']=$this->atd->lateCount();
-				// $data['notused']=$this->atd->notUsedAll();
-				 $data['divisions']=$this->ag->listDivisions();
-				// $data['reports']=$this->atd->dailyAttendance();
-				// $data['supervisor']=$this->sm->getSupervisor();
-				// $data['pendingLeave']=$this->lm->pendingCount();
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['latecount']=$this->atd->lateCount();
+				$data['notused']=$this->atd->notUsedAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$data['pendingLeave']=$this->lm->pendingCount();
 				//$data['eventdetail']=$this->db->get('event_table')->result_array();
 				// $data['date1']=$this->db->get('event_table')->result_array();
 				// $data['eventname']=$this->db->get('event_table')->result_array();
@@ -846,8 +762,29 @@ public	function viewmember2(){//leki
 				$this->load->view('template/includeheader',$this->dataheader);
 				$this->load->view('division/dashboard',$data);
 				$this->load->view('template/includefooter');
-			 } 
-						// } elseif($role=='8'){//Offtg Director
+			} elseif($role=='5'){//Users
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('user/dashboard',$data);
+				$this->load->view('template/includefooter');
+				
+			} elseif ($role=='6') { //HR
+				
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['latecount']=$this->atd->lateCount();
+				$data['notused']=$this->atd->notUsedAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$data['pendingLeave']=$this->lm->pendingCount();
+				$this->load->view('template/includeheader',$this->dataheader);
+				$this->load->view('superadmin/dashboard',$data);
+				$this->load->view('template/includefooter');
+				}
+			// } elseif($role=='8'){//Offtg Director
 // 				
 				// $data['leavecount']=$this->am->leaveCountAll();
 				// $data['latecount']=$this->am->lateCount();
@@ -877,23 +814,23 @@ public	function viewmember2(){//leki
 				// $this->load->view('division/footer');
 			// }
 			 else {
-				$data['request1']=$this->db->query("SELECT * from login where event='Y'")->result_array();
-				 //$data['request2']=$this->db->query("SELECT * from event_table")->result_array();
-				$data['editdetail']=$this->sm->sortevent();
-				$data['eventdetail']=$this->sm->getevent();
+				$data['request1']=$this->db->query("SELECT * from bpas_logins where event='Y'")->result_array();
 				$cid=$this->session->userdata('cid');
 				$data['user']=$this->sm->getprofilei($cid);
-				// $data['leavecount']=$this->atd->leaveCountAll();
-				// $data['latecount']=$this->atd->lateCount();
-				// $data['notused']=$this->atd->notUsedAll();
-				 $data['divisions']=$this->ag->listDivisions();
-				// $data['reports']=$this->atd->dailyAttendance();
-				// $data['supervisor']=$this->sm->getSupervisor();
-				// $data['pendingLeave']=$this->lm->pendingCount();
-				//$data['eventdetail']=$this->db->get('event_table')->result_array();
+				$data['leavecount']=$this->atd->leaveCountAll();
+				$data['latecount']=$this->atd->lateCount();
+				$data['notused']=$this->atd->notUsedAll();
+				$data['divisions']=$this->ag->listDivisions();
+				$data['reports']=$this->atd->dailyAttendance();
+				$data['supervisor']=$this->sm->getSupervisor();
+				$data['pendingLeave']=$this->lm->pendingCount();
+
+
+				$data['eventdetail']=$this->db->get('event_table')->result_array();
 				// $data['date1']=$this->db->get('event_table')->result_array();
 				// $data['eventname']=$this->db->get('event_table')->result_array();
   	
+
 				$this->load->view('template/includeheader',$this->dataheader);
 				$this->load->view('division/dashboard',$data);
 				$this->load->view('template/includefooter');

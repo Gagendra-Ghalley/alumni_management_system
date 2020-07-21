@@ -36,16 +36,16 @@
 
 <!--header-->
 <header class="clearfix">
-   <nav class="navbar-fixed-top" role="navigation">
+	 <nav class="navbar-fixed-top" role="navigation">
           
-  <div class="bg-primary" class="box" > 
+	<div class="bg-primary" class="box" > 
     <div class="container">
     
       <div class="header-element clearfix">
                         <div class="row">
                             <div class="col-md-4">
                                 <h1 class="navbar-brand navbar-brand_">
-              <a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
+          		<a href="index.html"><img class="img-responsive" src="<?php echo base_url();?>assets/img/cstlogo2.png" ></a></h1>
 
                             </div>
                             <div class="col-md-8" >
@@ -54,11 +54,11 @@
                                     <li><a href="<?php echo base_url();?>index.php/ATD/aboutUs/"><i class="icon-cogs"></i>About us</a></li>
                                     <li  class="active"><a href="<?php echo base_url();?>index.php/ATD/event1/"><i class="icon-th"></i>Events</a>
                                     </li>
-                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Organogram</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/ATD/faculty/"><i class="icon-th"></i>Faculty</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/register/"><i class="icon-th"></i>Register</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/ATD/login1/"><i class="icon-th"></i>Login</a></li>
 
-                                    <!-- <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li> -->
+                                    <li><a href="<?php echo base_url()?>index.php/ATD/membersearch1/"><i class="icon-envelope"></i>Members</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -77,66 +77,38 @@
 
 
 <div class="dream-university-subpage">
-
-  
+<br>
+	
 <div class="du-current-news center bg-secondary">
     <div class="container img-thumbnail">
-<<<<<<< HEAD
-     <!--  <div class="card-title text-left bold">UP COMMING EVENT</div><br> -->
-       <?php foreach($editdetail as $row): ?>
-        
-            <div class="col-lg-12 col-md-12 col-sm-12 ">
-                <div class="col-lg-5 col-md-5 col-sm-4 img-responsive" >
-=======
       <div class="card-title text-left bold">UP COMMING EVENT</div><br>
        <?php foreach($eventdetail as $row): ?>
         <div class="row padding">
-            <div class="col-lg-5 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+            <div class="col-lg-6 col-md-12 col-sm-12"data-wow-delay="0.2s" >
                 <div class="card">
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                  
-                    
-                        <div class="hovereffect">
-                            <figure> <img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 230px;width:100%;" ></figure>
-                                <div class="overlay">
-                                    <h2>Events</h2>
-                                    
-                                </div>
-                        </div>
+                    <span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
                 </div>
-<<<<<<< HEAD
-           
-            <div class="col-lg-6 col-md-6 col-sm-6 " style="height:100%;text-align: justify;font-family:georgia; color:black; font-size: 15px" >
-                 
-                    
-=======
             </div>
-            <div class="col-md-5 col-md-12 col-sm-12 img-thumbnail" style="height: 210px;" >
+            <div class="col-md-4 col-md-12 col-sm-12" >
                 <div class="card">
                      <p class="text-primary"><b>Description</b></p>
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
                  
                
 <table>
-                          <h3 class="title" style="color:#428af5;;margin-left: 100px"><?php echo $row['eventname'];?><br></h3>
-                          <b style="margin-left: 100px;"><?php echo $row['date'];?></b>
-                          <br><br>
-                          
-                          <tr><?php echo $row['event'];?><br></tr></table>
-                         <br>
-                  
-<<<<<<< HEAD
                 
-            </div><br><br>
-            
-=======
+                          <b><?php echo $row['date'];?></b>
+                          <br>
+                          <h3><?php echo $row['eventname'];?><br></h3>
+                          <tr><?php echo $row['event'];?><br></tr></table>
+                         
+                  
                 </div>
             </div>
-            <div class="col-md-2 col-sm-3 " >
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
+            <div class="col-md-7 col-sm-3 " >
                 
 
-                    <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="" >
                                
 
                     <button style="height:60px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
@@ -147,14 +119,9 @@
                       
                    
 
-                                      
-<<<<<<< HEAD
-                                   <button class="btn btn-default btn-lg" style="height:60px;width:107px;font-size:15px;margin-top: 20px;">  
-                                        <p><font color="#111">
-=======
-                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;">  
+                        
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
                                         <p><font color="black">
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
 
                                           
                                           <?php echo $row['event1'];?>
@@ -163,14 +130,6 @@
                                           </button><br>
 
                               
-<<<<<<< HEAD
-            </div><br><br>
-        <?php endforeach; ?>
-
-            
-
-   
-=======
             </div>
         </div><?php endforeach; ?>
 
@@ -217,7 +176,65 @@
      <br>
                         <?php foreach($editdetail as $row): ?>
 
- <?php endforeach; ?> 
+<!-- <div class="du-current-news center bg-secondary"> -->
+    <div class="container img-thumbnail">
+        <div class="row padding">
+           <div class="col-lg-12 col-md-12 col-sm-12"data-wow-delay="0.2s" >
+                <div class="card">
+                 <div class="col-md-5 col-sm-12">
+
+<span class="img-thumbnail"><img class="card-imd-top-top" src="<?php echo base_url();?>assets/img/event/<?php echo $row['image'];?>" style="height: 200px;width: 500px" ></span>
+
+                  
+</div>
+                  <p class="text-primary"><b>Description</b></p>
+                 
+               
+<table>
+                
+                          <b><?php echo $row['date'];?></b>
+                          <br>
+                          <h3><?php echo $row['eventname'];?><br></h3>
+                          <tr><?php echo $row['event'];?><br></tr></table>
+                         
+                          
+              <div class="col-md-7 col-sm-3 " >
+                
+
+                    <div class="" >
+                               
+
+                    <button style="height:60px;width:95px;font-size:15px;" class="btn btn-primary btn-lg" data-animation="animated zoomInUp">
+
+                                    <a href="<?php echo base_url();?>index.php/ATD/login1/"><font color="white" >Join Now</font> </a>
+
+                                </button> 
+                      
+                   
+
+                        
+                                   <button class="btn btn-default" style="height:70px;width:120px;font-size:15px;font-family:georgia;text-shadow: 1px 1px 1px #111">  
+                                        <p><font color="black">
+                                          <?php echo $row['event1'];?>
+                                       
+                                       <b>Member(s) <br> Interested</b></font></p>
+                                          </button><br>
+
+                              
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                        </div></div></div>  <?php endforeach; ?> 
                         <!--   <p class="text-bold text-center text-justify" style="font-family:georgia; color:black; font-size: 15px">Faculty Development program cum workshop on climate Across the curriculum. Educational Resource for Teacher's organized by center for Disater Risk Reducation<span id="dots">...</span> <span id="more"> and community development studies (CDRR & CDS) college of science and Technology, Royal University of Bhutan and Commission of Education and outreach, international association of seismology.Support student abd our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College, awhether you just graduated and started new job or contiue with your higher education, your alumni association is here for you. Let us be a partner in your success. ISupport student abd our community, Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College.upport student and our community Even a small gift can make a big impact on generations so come and change lives. Give to CST College</span></p> -->
                           
                          <!--  <div class="col-md-10">
@@ -227,50 +244,45 @@
               </div>
           </div>
 
->>>>>>> 75afe1f37e6560b511ae03c8f8e5ce4b192350a9
           
-    </div> 
-    </div>
+    </div>   
+
               
  </div>
 </div>
-</div>
-</div>
 
-
-
-  <div class="container col-md-12  bg-primary">
-                        <div class="col-md-4 col-sm-12 ">
+ <div class="container col-md-12 img-thumbnail bg-primary">
+                        <div class="col-md-4 col-sm-12 left-contact  ">
 
                        <h3 class="title" style="color:#fff;">Contact Us</h3>
                        <hr>
                         <ul>
-                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff;font-size: 15px">Alumni management system</strong></a></li>
+                            <li><i class="fa fa-envelope" ></i>&nbsp;&nbsp;<a href="0216506.cst@rub.edu.bt"><strong style="color:#fff">Alumni management system</strong></a></li>
                             <hr>
-                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px">+77777777</strong></li>
+                            <li><i class="fa fa-phone" ></i>&nbsp;&nbsp;<strong style="color:#fff">+77777777</strong></li>
                             <hr>
-                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff;font-size: 15px" >college of science and technology</strong> </li>
+                            <li><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong style="color:#fff" >college of science and technology</strong> </li>
                             <hr>
                         </ul>
                                         
                         </div>
 
-                          <div class="col-md-4 col-sm-12 ">
+                          <div class="col-md-4 col-sm-12 left-contact">
 
                        <h3 class="title" style="color:#fff">Visit</h3>
                        <hr>
                         <ul class="du-choose-list">
-                            <li><a href="https://cst.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
-                            <li><a href="https://www.rub.edu.bt/index.php/en/"><strong style="color:#fff;font-size: 15px">Royal Univerisity of Bhutan</strong></a></li>
-                            <li><a href="https://vle.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">VLE cst</strong></a></li>
-                            <li><a href="https://lib.cst.edu.bt/"><strong style="color:#fff;font-size: 15px">Libary cst</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">Royal Univerisity of Bhutan</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">VLE cst</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">Libary cst</strong></a></li>
                         
                            
                         </ul>
 
                                         
                         </div>
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-md-4 col-sm-12 left-contact ">
 
                         <h3 class="title" style="color:#fff;">Cst Address </h3>
                         <hr>
@@ -278,11 +290,11 @@
 
                             <ul class="du-choose-list">
 
-                            <li class="list-group"><a href="#"><strong style="color:#fff;font-size: 15px">College Of science And Technology</strong></a></li>
-                            <li><a href="#"><strong style="color:#fff;font-size: 15px">Rinchending,Phuntsholing</strong></a></li>
-                    
-                            
-                             <li><a href="#"><strong style="color:#fff;font-size: 15px">Email:cst@edu.bt</strong></a></li>
+                            <li class="list-group"><a href="#"><strong style="color:#fff">College Of science And Technology</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">Rinchending,Phuntsholing</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">POST Box:1122</strong></a></li>
+                            <li><a href="#"><strong style="color:#fff">Website:www.cst.edu.bt</strong></a></li>
+                             <li><a href="#"><strong style="color:#fff">Email:cst@edu.bt</strong></a></li>
                         
                            
                         </ul>
@@ -312,11 +324,6 @@
 
         </div>
 
-    
-
-
-<!--footer-->
- 
 
   
 

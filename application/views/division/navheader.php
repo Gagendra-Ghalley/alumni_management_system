@@ -55,7 +55,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <a class="navbar-brand " href="#"  style="margin-left: 30px;margin-top: -10px">
+                 <a class="navbar-brand " href="#">
                     <h1 class="lead"><img src="<?php echo base_url();?>assets/img/cstlogo2.png"><font size="3">CST Alumni Management System</font></h1></a>
             </div>
             <!-- end navbar-header -->
@@ -72,7 +72,7 @@
                        <!--  <li><a href="<?php echo base_url();?>index.php/Settings/profile/"><i class="fa fa-user fa-fw"></i>User Profile</a>
                         </li> -->
                        <!--  <li class="divider"></li> -->
-                        <li   class="fa fa-user"><span class="pull-right"><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out"></i>Logout</a></span>
+                        <li   class="fa fa-angle-right"><span class="pull-right"><a href="<?php echo base_url();?>index.php/ATD/logout"><i class="fa fa-sign-out fa-fw"></i>Logout</a></span>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
