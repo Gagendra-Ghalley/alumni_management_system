@@ -6,6 +6,7 @@ class Multiple_delete extends CI_Controller {
  {
   parent::__construct();
   $this->load->model('multiple_delete_model');
+  
  }
 
  function index()
